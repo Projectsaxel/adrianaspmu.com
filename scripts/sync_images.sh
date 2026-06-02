@@ -34,8 +34,40 @@ done
 
 cp "$UP/2025/11/100-hours.jpg" "$DEST/academy/pmu-100h.jpg" 2>/dev/null || true
 cp "$UP/2025/11/Apprenticeship-Program.jpg" "$DEST/academy/apprenticeship.jpg" 2>/dev/null || true
+cp "$UP/2025/07/Academy-Capa.webp" "$DEST/academy/hero.webp" 2>/dev/null || true
+cp "$UP/2025/07/Photo-Adriana-Academy.jpg" "$DEST/academy/adriana.jpg" 2>/dev/null || true
+cp "$UP/2025/07/In-Person-Class.jpg" "$DEST/academy/in-person-class.jpg" 2>/dev/null || true
+cp "$UP/2025/08/Academy-Classrom.jpg" "$DEST/academy/classroom.jpg" 2>/dev/null || true
+cp "$UP/2025/06/SELO-AAM.png" "$DEST/academy/aam-seal.png" 2>/dev/null || true
+mkdir -p "$DEST/academy"/{gallery,slides,students}
+for f in "$UP/2025/07"/CRRSS-Academy-*.jpg; do
+  [[ -f "$f" ]] || continue
+  case "$f" in *-*x*) continue ;; esac
+  n=$(basename "$f" .jpg | sed 's/CRRSS-Academy-/academy-/')
+  cp "$f" "$DEST/academy/gallery/${n}.jpg"
+done
+for f in "$UP/2025/07/"*SLIDE.jpg; do
+  [[ -f "$f" ]] || continue
+  case "$f" in *-*x*) continue ;; esac
+  num=$(basename "$f" .jpg | sed 's/SLIDE//')
+  cp "$f" "$DEST/academy/slides/slide-${num}.jpg"
+done
+python3 -c "
+import shutil
+from pathlib import Path
+src = Path('$UP') / 'elementor/thumbs'
+dest = Path('$DEST/academy/students')
+dest.mkdir(parents=True, exist_ok=True)
+for i, f in enumerate(sorted(src.glob('Avatar-Aluna-*.jpg'))[:6], 1):
+    shutil.copy(f, dest / f'student-{i:02d}.jpg')
+" 2>/dev/null || true
 cp "$UP/2025/10/Portfolio-Adriana-Eyebrows-023.jpg" "$DEST/about-adriana.jpg" 2>/dev/null || true
 
 find "$UP/2025/10" -maxdepth 1 -name 'Portfolio-*.jpg' ! -name '*-*x*' -exec cp {} "$DEST/portfolio/" \;
+
+SITE_ROOT="$(dirname "$(dirname "$UP")")"
+if [[ -f "$SITE_ROOT/index.html" ]]; then
+  python3 "$(dirname "$0")/extract_logo.py" "$SITE_ROOT/index.html" "$DEST/logo.svg"
+fi
 
 echo "Images synced to $DEST"

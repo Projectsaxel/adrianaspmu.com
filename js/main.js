@@ -23,8 +23,16 @@
           return `<li><a href="${resolvePath(c.href)}">${c.label}</a></li>`;
         })
         .join("");
+      const parent = item.href
+        ? `<a href="${resolvePath(item.href)}" class="nav-parent">${item.label}</a>`
+        : `<span class="nav-parent nav-parent--static">${item.label}</span>`;
       return `<li class="has-submenu">
-        <button type="button" aria-expanded="false">${item.label}</button>
+        <div class="nav-item-row">
+          ${parent}
+          <button type="button" class="submenu-toggle" aria-expanded="false" aria-label="Show ${item.label} submenu">
+            <span class="submenu-chevron" aria-hidden="true"></span>
+          </button>
+        </div>
         <ul class="submenu">${sub}</ul>
       </li>`;
     }
@@ -37,6 +45,7 @@
 
     const navItems = NAV.map(renderNavItem).join("");
     const home = resolvePath("/");
+    const logoSrc = resolvePath((typeof SITE !== "undefined" && SITE.logo) || "/assets/images/logo.svg");
 
     el.innerHTML = `
       <div class="promo-banner">
@@ -45,7 +54,9 @@
       </div>
       <header class="site-header">
         <div class="container header-inner">
-          <a class="logo" href="${home}" aria-label="Adriana's PMU Home">Adriana's <span>PMU</span></a>
+          <a class="logo" href="${home}" aria-label="Adriana's PMU Home">
+            <img class="logo-img" src="${logoSrc}" alt="Adriana's Permanent Makeup" width="254" height="66" decoding="async">
+          </a>
           <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
           <nav class="main-nav" aria-label="Main navigation">
             <ul>${navItems}</ul>
@@ -63,12 +74,25 @@
       toggle.setAttribute("aria-expanded", open);
     });
 
-    el.querySelectorAll(".has-submenu > button").forEach((btn) => {
-      btn.addEventListener("click", () => {
+    el.querySelectorAll(".submenu-toggle").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
         if (window.innerWidth > 900) return;
-        const li = btn.parentElement;
-        li.classList.toggle("is-expanded");
-        btn.setAttribute("aria-expanded", li.classList.contains("is-expanded"));
+        const li = btn.closest(".has-submenu");
+        if (!li) return;
+        const expanded = !li.classList.contains("is-expanded");
+        el.querySelectorAll(".has-submenu.is-expanded").forEach((other) => {
+          other.classList.remove("is-expanded");
+          other.querySelector(".submenu-toggle")?.setAttribute("aria-expanded", "false");
+        });
+        if (expanded) {
+          li.classList.add("is-expanded");
+          btn.setAttribute("aria-expanded", "true");
+        } else {
+          li.classList.remove("is-expanded");
+          btn.setAttribute("aria-expanded", "false");
+        }
       });
     });
 
@@ -103,7 +127,7 @@
                 <li><a href="${resolvePath("/services/lips/")}">Lip PMU</a></li>
                 <li><a href="${resolvePath("/services/eyeliner/")}">Eyeliner PMU</a></li>
                 <li><a href="${resolvePath("/services/combos/")}">Combo Packages</a></li>
-                <li><a href="${resolvePath("/academy/")}">PMU Academy</a></li>
+                <li><a href="${resolvePath("/training/")}">PMU Academy</a></li>
               </ul>
             </div>
             <div>
@@ -172,11 +196,94 @@
     });
   }
 
+  function initPortfolioLightbox() {
+    const triggers = document.querySelectorAll(".portfolio-item");
+    if (!triggers.length) return;
+
+    let overlay = document.getElementById("portfolio-lightbox");
+    if (!overlay) {
+      overlay = document.createElement("div");
+      overlay.id = "portfolio-lightbox";
+      overlay.className = "portfolio-lightbox";
+      overlay.hidden = true;
+      overlay.innerHTML = `
+        <div class="portfolio-lightbox-backdrop" data-lightbox-close></div>
+        <div class="portfolio-lightbox-dialog" role="dialog" aria-modal="true" aria-label="Portfolio image preview">
+          <button type="button" class="portfolio-lightbox-close" aria-label="Close">&times;</button>
+          <button type="button" class="portfolio-lightbox-nav portfolio-lightbox-prev" aria-label="Previous image">&#8249;</button>
+          <figure class="portfolio-lightbox-figure">
+            <img class="portfolio-lightbox-img" src="" alt="">
+            <figcaption class="portfolio-lightbox-caption"></figcaption>
+          </figure>
+          <button type="button" class="portfolio-lightbox-nav portfolio-lightbox-next" aria-label="Next image">&#8250;</button>
+        </div>`;
+      document.body.appendChild(overlay);
+    }
+
+    const lightboxImg = overlay.querySelector(".portfolio-lightbox-img");
+    const caption = overlay.querySelector(".portfolio-lightbox-caption");
+    const items = [];
+
+    triggers.forEach((item) => {
+      const thumb = item.querySelector("img");
+      if (!thumb) return;
+      const idx = items.length;
+      items.push({ src: thumb.src, alt: thumb.alt });
+      item.addEventListener("click", () => openAt(idx));
+    });
+
+    if (!items.length) return;
+
+    let index = 0;
+    let lastFocus = null;
+
+    function openAt(i) {
+      index = i;
+      lastFocus = document.activeElement;
+      show();
+    }
+
+    function show() {
+      const current = items[index];
+      lightboxImg.src = current.src;
+      lightboxImg.alt = current.alt;
+      caption.textContent = current.alt;
+      overlay.hidden = false;
+      document.body.classList.add("portfolio-lightbox-open");
+      overlay.querySelector(".portfolio-lightbox-close")?.focus();
+    }
+
+    function close() {
+      overlay.hidden = true;
+      document.body.classList.remove("portfolio-lightbox-open");
+      lightboxImg.removeAttribute("src");
+      lastFocus?.focus();
+    }
+
+    function step(delta) {
+      index = (index + delta + items.length) % items.length;
+      show();
+    }
+
+    overlay.querySelector("[data-lightbox-close]")?.addEventListener("click", close);
+    overlay.querySelector(".portfolio-lightbox-close")?.addEventListener("click", close);
+    overlay.querySelector(".portfolio-lightbox-prev")?.addEventListener("click", () => step(-1));
+    overlay.querySelector(".portfolio-lightbox-next")?.addEventListener("click", () => step(1));
+
+    document.addEventListener("keydown", (e) => {
+      if (overlay.hidden) return;
+      if (e.key === "Escape") close();
+      if (e.key === "ArrowLeft") step(-1);
+      if (e.key === "ArrowRight") step(1);
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     renderHeader();
     renderFooter();
     initFaq();
     initReviewsNav();
     initContactForm();
+    initPortfolioLightbox();
   });
 })();

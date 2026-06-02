@@ -3,12 +3,26 @@ const SITE = {
   name: "Adriana's Permanent Makeup",
   legalName: "Adriana Beauty Services, Inc.",
   url: "https://adrianaspmu.com",
+  logo: "/assets/images/logo.svg",
   lang: "en-US",
   phoneWilmington: "(781) 853-8063",
   phoneSalem: "(978) 223-7496",
   email: "info@adrianaspmu.com",
   fresha: "https://www.fresha.com/a/adrianas-permanent-makeup-wilmington-ma-wilmington-211-lowell-street-jalpqett",
+  freshaBookNow:
+    "https://www.fresha.com/book-now/adrianas-permanent-makeup-zeaseit5/all-offer?share=true&pId=727586",
+  freshaServiceUrls: {
+    "yearly-touch-up":
+      "https://www.fresha.com/book-now/adrianas-permanent-makeup-zeaseit5/services?oiid=sv%3A18160395&share=true&pId=727586",
+    "flash-sale":
+      "https://www.fresha.com/book-now/adrianas-permanent-makeup-zeaseit5/services?oiid=sv%3A19707327&share=true&pId=727586",
+  },
+  freshaReviews:
+    "https://www.fresha.com/a/adrianas-permanent-makeup-wilmington-ma-wilmington-211-lowell-street-jalpqett#modal-reviews",
   gbp: "https://maps.app.goo.gl/oJRNewzwwWACAera6",
+  googleReviews:
+    "https://www.google.com/maps/place/Adriana's+Permanent+Makeup/@42.5388138,-71.1485431,17z/data=!4m8!3m7!1s0x89e30b1334f8bef9:0xe7fa0014b608ddc6!8m2!3d42.5388138!4d-71.1485431!9m1!1b1!16s%2Fg%2F11tm_909cb",
+  trustindexLoader: "https://cdn.trustindex.io/loader.js?a8b99d8541280410986623737af",
   facebook: "https://www.facebook.com/adrianaspmu",
   instagram: "https://www.instagram.com/adrianas_pmu/",
   locations: {
@@ -51,23 +65,22 @@ const SITE = {
 
 const NAV = [
   { label: "Home", href: "/" },
-  { label: "Flash Sale", href: "/services/eyebrows/nano-brows/" },
-  { label: "Payment Plan", href: "/payment-plan.html" },
   { label: "Services", href: "/services/" },
   { label: "Portfolio", href: "/portfolio.html" },
   {
     label: "Training",
+    href: "/training/",
     children: [
       { label: "100-Hour Fundamental", href: "/academy/pmu-100h-fundamental.html" },
       { label: "Apprenticeship", href: "/academy/pmu-apprenticeship.html" },
       { label: "VIP Masterclass", href: "/academy/vip-masterclass.html" },
     ],
   },
+  { label: "About", href: "/about.html" },
+  { label: "Contact", href: "/contact.html" },
   {
     label: "More",
     children: [
-      { label: "About", href: "/about.html" },
-      { label: "Contact", href: "/contact.html" },
       { label: "FAQ", href: "/faq.html" },
     ],
   },

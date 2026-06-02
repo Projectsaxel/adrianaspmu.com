@@ -1,9 +1,41 @@
 #!/usr/bin/env python3
 """Generate static HTML pages from semantic architecture PDF."""
 import os
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "scripts"))
+from academy_content import academy_body  # noqa: E402
+from service_content.nano_brows import nano_brows_sections  # noqa: E402
+from service_content.microblading import microblading_sections  # noqa: E402
+from service_content.powder_brows import powder_brows_sections  # noqa: E402
+from service_content.lip_blush import lip_blush_sections  # noqa: E402
+from service_content.dark_lip_neutralization import dark_lip_neutralization_sections  # noqa: E402
+from service_content.combination_brows import combination_brows_sections  # noqa: E402
+from service_content.nano_combo_brows import nano_combo_brows_sections  # noqa: E402
+from service_content.top_eyeliner import top_eyeliner_sections  # noqa: E402
+from service_content.smokey_eyeliner import smokey_eyeliner_sections  # noqa: E402
+from service_content.bottom_eyeliner import bottom_eyeliner_sections  # noqa: E402
+from service_content.eyeliner_combo import eyeliner_combo_sections  # noqa: E402
+from service_content.eyebrows_lips_combo import eyebrows_lips_combo_sections  # noqa: E402
+from service_content.yearly_touch_up import yearly_touch_up_sections  # noqa: E402
+
+RICH_SERVICE_SECTIONS = {
+    "nano-brows": nano_brows_sections,
+    "microblading": microblading_sections,
+    "powder-brows": powder_brows_sections,
+    "lip-blush": lip_blush_sections,
+    "dark-lip-neutralization": dark_lip_neutralization_sections,
+    "combination-brows": combination_brows_sections,
+    "nano-combo": nano_combo_brows_sections,
+    "top-eyeliner": top_eyeliner_sections,
+    "smokey-eyeliner": smokey_eyeliner_sections,
+    "bottom-eyeliner": bottom_eyeliner_sections,
+    "eyeliner-combo": eyeliner_combo_sections,
+    "eyebrows-lips-combo": eyebrows_lips_combo_sections,
+    "yearly-touch-up": yearly_touch_up_sections,
+}
 
 ORG_SCHEMA = """{
   "@context": "https://schema.org",
@@ -54,7 +86,7 @@ ORG_SCHEMA = """{
   ]
 }"""
 
-FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">'
+FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">'
 
 
 def depth_to_base(depth: int) -> str:
@@ -100,10 +132,11 @@ def portfolio_gallery_html(depth: int, limit=None) -> str:
         return "<p>Portfolio images loading soon.</p>"
     items = []
     for fn in files:
+        alt = portfolio_alt(fn)
         items.append(
-            f'<figure class="portfolio-item">'
-            f'{img_tag(f"portfolio/{fn}", portfolio_alt(fn), depth, "portfolio-img")}'
-            f"</figure>"
+            f'<button type="button" class="portfolio-item" aria-label="View larger: {alt}">'
+            f'{img_tag(f"portfolio/{fn}", alt, depth, "portfolio-img")}'
+            f"</button>"
         )
     return f'<div class="portfolio-grid">{"".join(items)}</div>'
 
@@ -115,7 +148,7 @@ FAVICON = """
 """
 
 
-def shell(title, desc, h1, body, depth=0, extra_schema="", breadcrumbs=None):
+def shell(title, desc, h1, body, depth=0, extra_schema="", breadcrumbs=None, body_class="beauty-site", head_extra=""):
     base = depth_to_base(depth)
     css = f"{base}css/styles.css"
     favicon = FAVICON.format(base=base)
@@ -142,9 +175,10 @@ def shell(title, desc, h1, body, depth=0, extra_schema="", breadcrumbs=None):
   <link rel="stylesheet" href="{css}">
   {favicon}
   {FONTS}
+  {head_extra}
   {schema_block}
 </head>
-<body class="beauty-site">
+<body class="{body_class}">
   <a class="skip-link" href="#main">Skip to content</a>
   <div id="site-header"></div>
   {bc}
@@ -167,17 +201,11 @@ def write(rel_path, content):
 
 # --- HOME ---
 def home_body():
-    hero_cards = ""
-    for slug, href, label in [
-        ("nano-brows", "services/eyebrows/nano-brows/", "Nano Brows"),
-        ("microblading", "services/eyebrows/microblading/", "Microblading"),
-        ("powder-brows", "services/eyebrows/powder-brows/", "Powder Brows"),
-        ("lip-blush", "services/lips/lip-blush/", "Lip Blush"),
-    ]:
-        hero_cards += f"""<article class="card card-has-img">
-        <a href="{href}" class="card-img-link">{img_tag(service_image_path(slug), label, 0, "card-thumb")}</a>
-        <h3><a href="{href}">{label}</a></h3>
-      </article>"""
+    service_cards = "".join(
+        home_service_card(slug)
+        for _cat, _title, slugs in CATEGORY_ORDER
+        for slug in slugs
+    )
     return f"""
 <section class="hero hero--premium">
   <div class="hero-bg-accent" aria-hidden="true"></div>
@@ -217,6 +245,15 @@ def home_body():
   </div>
 </section>
 
+<section class="section section--cta" id="flash-sale">
+  <div class="container cta-panel">
+    <p class="section-label section-label--center">Limited Time</p>
+    <h2 class="heading-centered">Holiday Flash Sale — Brows or Lips for $349</h2>
+    <p>Limited slots at our Wilmington MA and Salem NH studios. Book yours before they fill up!</p>
+    <a class="btn btn-primary" href="flash-sale/">View Flash Sale</a>
+  </div>
+</section>
+
 <section class="section section--elegant" id="what-is-pmu">
   <div class="container container--narrow">
     <p class="section-label section-label--center">The Art of Effortless Beauty</p>
@@ -231,19 +268,7 @@ def home_body():
     <p class="section-label section-label--center">Treatments</p>
     <h2 class="heading-centered">What Permanent Makeup Services Do You Offer?</h2>
     <p class="direct-answer">We specialize in permanent makeup for brows, lips, and eyeliner, plus combo packages and yearly touch-ups for existing clients.</p>
-    <div class="card-grid">{hero_cards}
-      <article class="card card-has-img">
-        <a href="services/eyeliner/top-eyeliner/" class="card-img-link">{img_tag(service_image_path("top-eyeliner"), "Permanent eyeliner PMU", 0, "card-thumb")}</a>
-        <h3><a href="services/eyeliner/">Eyeliner PMU</a></h3>
-        <p>Top, Smokey, Bottom, and full eyeliner combo packages</p>
-      </article>
-      <article class="card card-has-img">
-        <a href="services/combos/eyebrows-lips-combo/" class="card-img-link">{img_tag(service_image_path("eyebrows-lips-combo"), "Brows and lips combo PMU", 0, "card-thumb")}</a>
-        <h3><a href="services/combos/">Combo Packages</a></h3>
-        <p class="price">From $850</p>
-        <a class="btn btn-secondary" href="services/combos/eyebrows-lips-combo/">Brows + Lips Combo</a>
-      </article>
-    </div>
+    <div class="card-grid">{service_cards}</div>
   </div>
 </section>
 
@@ -286,13 +311,28 @@ def home_body():
 <section class="section section--elegant" id="reviews">
   <div class="container">
     <p class="section-label section-label--center">Testimonials</p>
-    <h2 class="heading-centered">What Do Clients Say About Adriana's PMU?</h2>
-    <div class="reviews-track">
-      <article class="review-card"><div class="review-stars">★★★★★</div><p>"Natural brows that look like my own hair. Adriana listened to exactly what I wanted."</p><cite>— Client, Wilmington MA</cite></article>
-      <article class="review-card"><div class="review-stars">★★★★★</div><p>"Professional, clean studio and beautiful lip blush results. Worth every penny."</p><cite>— Client, North Shore MA</cite></article>
-      <article class="review-card"><div class="review-stars">★★★★★</div><p>"20 years of experience shows. Custom shape and color—not a template."</p><cite>— Client, Andover MA</cite></article>
+    <h2 class="heading-centered">What Our Clients<br>Are Saying</h2>
+    <p class="direct-answer heading-centered">We are proud to be a <strong>5-star service</strong> — see verified Google reviews from clients in Wilmington MA, Salem NH, and across New England.</p>
+    <div class="reviews-trustindex" id="google-reviews-widget">
+      <script defer async src="https://cdn.trustindex.io/loader.js?a8b99d8541280410986623737af"></script>
     </div>
-    <p style="margin-top:1.5rem"><a href="https://maps.app.goo.gl/oJRNewzwwWACAera6" rel="noopener">Read 174+ Google reviews</a> · <a href="portfolio.html">View full portfolio</a></p>
+    <noscript>
+      <div class="reviews-track">
+        <article class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>This was my first time doing a Nano brow treatment. Adriana was incredible! She was meticulous and made sure I was happy with every step.</p><cite>— Karen G., Google review</cite></article>
+        <article class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>Adriana is so professional — she really takes the time and makes sure you are happy with her work.</p><cite>— Josie G., Google review</cite></article>
+        <article class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>Excellent! Adriana is so precise and takes a lot of care and pride in the finished results of her clients.</p><cite>— Brenda C., Google review</cite></article>
+        <article class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>Livy is wonderful! She did a great job and I am extremely happy with the result.</p><cite>— Julie L., Google review</cite></article>
+      </div>
+    </noscript>
+    <div class="reviews-cta">
+      <a class="btn btn-secondary" href="https://www.fresha.com/a/adrianas-permanent-makeup-wilmington-ma-wilmington-211-lowell-street-jalpqett#modal-reviews" target="_blank" rel="noopener noreferrer">Check our reviews on Fresha</a>
+      <a class="btn btn-secondary reviews-cta-google" href="https://www.google.com/maps/place/Adriana's+Permanent+Makeup/@42.5388138,-71.1485431,17z/data=!4m8!3m7!1s0x89e30b1334f8bef9:0xe7fa0014b608ddc6!8m2!3d42.5388138!4d-71.1485431!9m1!1b1!16s%2Fg%2F11tm_909cb" target="_blank" rel="noopener noreferrer">
+        <span class="reviews-cta-google-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 48 48" fill="currentColor"><path d="M43.48 22.14c-.1-1.02-.96-1.78-1.98-1.78H26.4c-1.1 0-2 .9-2 2v3.42c0 1.1.9 2 2 2h9.02c-.22 1.84-1.42 4.62-4.08 6.48-1.7 1.18-4.02 1.93-6.98 1.93-.14 0-.26 0-.4-.02-5.1-.16-9.42-3.58-10.98-8.28-.42-1.26-.66-2.58-.66-3.94 0-1.36.24-2.7.64-3.94.12-.36.26-.72.42-1.06 1.84-4.14 5.86-7.06 10.58-7.2.12-.02.26-.02.4-.02 2.86 0 5 1.14 6.5 2.18.78.54 1.82.42 2.5-.24l2.78-2.72c.88-.86.8-2.32-.2-3.04-3.18-2.34-7.06-3.72-11.58-3.72-.14 0-.28 0-.4.02-8.66.14-15.24 4.58-18.46 11-.68 2.72-1.46 5.76-1.46 9 0 3.22.78 6.26 2.14 8.98h.02c3.22 6.42 9.8 10.86 17.44 11 .14.02.28.02.4.02 5.4 0 9.94-1.78 13.24-4.84 3.78-3.5 5.96-8.62 5.96-14.72 0-.86-.04-1.6-.12-2.3zM24 11.76c2.12 0 3.74.55 4.64 1.52.98.98 1.32 2.66.82 4.65-.88.96-2.03 1.43-3.46 1.43-2.82 0-4.72-1.74-4.72-4.6 0-2.35 1.34-3.7 3.25-4.47.58-.23 1.26-.35 1.97-.35z"/></svg>
+        </span>
+        Check more reviews on Google
+      </a>
+    </div>
   </div>
 </section>
 
@@ -317,65 +357,239 @@ def home_body():
 """
 
 
-write("index.html", shell(
-    "Permanent Makeup Studio & Academy | Wilmington MA & Salem NH | Adriana's PMU",
-    "Master PMU Artist with 20+ years, 5,000+ procedures. Nano Brows, Microblading, Lip Blush in Wilmington MA & Salem NH. Book consultation.",
-    "Permanent Makeup Studio and Academy in Wilmington, MA & Salem, NH",
-    home_body(), 0))
-
 # Service definitions for generator
 SERVICES = {
     "nano-brows": {"cat": "eyebrows", "name": "Nano Brows", "price": 650,
-        "h1": "Nano Brows in Massachusetts & New Hampshire",
-        "desc": "Hyperrealistic hair-like strokes. $650 by Master PMU Artist in Wilmington MA & Salem NH.",
-        "answer": "Nano Brows is a permanent makeup technique that uses an ultra-fine needle to create hyperrealistic, hair-like strokes for natural eyebrows. Results last 1 to 3 years.",
+        "title": "Nano Brows in Wilmington MA & Salem NH | Adriana Beauty Services",
+        "h1": "Nano Brows in Wilmington, MA & Salem, NH",
+        "desc": "Get natural-looking, long-lasting eyebrows with Nano Brows in Wilmington, MA and Salem, NH. Customized permanent makeup services by Adriana Beauty Services.",
+        "answer": "Nano Brows uses an ultra-fine needle and digital machine to create realistic, hair-like strokes for fuller, natural-looking eyebrows that last 1 to 3 years.",
+        "rich_content": True,
+        "cta_heading": "Book Your Nano Brows Appointment Today",
+        "cta_body": "Ready to enjoy beautifully defined brows without the hassle of daily makeup? Schedule your Nano Brows consultation with Adriana Beauty Services – Permanent Makeup and discover how natural, customized brows can enhance your confidence every day.",
         "faqs": [
-            ("How much do Nano Brows cost?", "Nano Brows costs $650 USD for the initial session, including a perfection touch-up at 6-8 weeks. Yearly maintenance starts at $300."),
-            ("Does Nano Brows hurt?", "A topical anesthetic minimizes discomfort. Most clients describe mild scratching, not pain."),
-            ("How long does Nano Brows last?", "Nano Brows typically last 1 to 3 years depending on skin type and aftercare."),
+            ("Are Nano Brows painful?", "Most clients experience minimal discomfort thanks to the use of topical numbing agents throughout the procedure."),
+            ("Is Nano Brows better than Microblading?", "Nano Brows is often preferred because it creates highly realistic hair strokes while causing less trauma to the skin."),
+            ("How long is the healing process?", "Most clients heal within 4 to 8 weeks, although initial healing occurs much sooner."),
+            ("Can Nano Brows be performed on oily skin?", "Yes. Nano Brows is often considered an excellent option for clients with oily skin."),
+            ("Will my brows look natural?", "Absolutely. Our goal is to create soft, realistic hair strokes that blend seamlessly with your natural brow hair."),
         ]},
     "microblading": {"cat": "eyebrows", "name": "Microblading", "price": 550,
-        "h1": "Microblading in Massachusetts & New Hampshire",
-        "desc": "Natural hair-stroke eyebrow tattoo. $550 in Wilmington MA & Salem NH by licensed Master Artist.",
-        "answer": "Microblading creates natural hair-stroke eyebrows using a manual technique. Results last 1 to 3 years with proper aftercare.",
+        "title": "Microblading in Wilmington MA & Salem NH | Natural-Looking Brows",
+        "h1": "Microblading in Wilmington, MA & Salem, NH",
+        "desc": "Enhance your eyebrows with professional Microblading in Wilmington, MA and Salem, NH. Achieve fuller, natural-looking brows with long-lasting results.",
+        "answer": "Microblading uses a handheld tool to create fine, hair-like strokes for fuller, natural-looking brows that typically last 12 to 24 months.",
+        "rich_content": True,
+        "cta_heading": "Schedule Your Microblading Consultation",
+        "cta_lead": "Ready to enjoy fuller, beautifully shaped eyebrows every day?",
+        "cta_body": "Book your Microblading consultation with Adriana Beauty Services – Permanent Makeup and discover a customized solution designed to enhance your natural beauty.",
         "faqs": [
-            ("How much is microblading?", "Microblading at Adriana's PMU costs $550 USD for the initial session."),
-            ("Does microblading look natural?", "Yes—when performed by a Master Artist with customized mapping and color matching."),
+            ("Is Microblading painful?", "Most clients report minimal discomfort due to the use of topical numbing products during the procedure."),
+            ("How long does Microblading take?", "Appointments typically last between 2 and 3 hours, including consultation and brow design."),
+            ("How long is the healing process?", "Most healing occurs within a few weeks, with complete results visible after approximately 4 to 8 weeks."),
+            ("Can I wear makeup after Microblading?", "You should avoid applying makeup directly on the treated area until the healing process is complete."),
+            ("Will my brows look natural?", "Yes. Our goal is to create realistic hair strokes that blend seamlessly with your natural brows."),
         ]},
     "powder-brows": {"cat": "eyebrows", "name": "Powder Brows", "price": 550,
-        "h1": "Powder Brows & Ombre Shading in MA & NH",
-        "desc": "Soft defined ombre brows including microshading. $550 in Wilmington & Salem.",
-        "answer": "Powder Brows (ombre shading) creates soft, makeup-ready eyebrow definition. Ideal for oily or mature skin.",
-        "faqs": [("Powder brows vs microblading?", "Powder brows use shading; microblading uses hair strokes. Powder often retains better on oily skin.")]},
+        "title": "Powder Brows in Wilmington MA & Salem NH | Soft Shaded Brows",
+        "h1": "Powder Brows in Wilmington, MA & Salem, NH",
+        "desc": "Get beautifully defined Powder Brows in Wilmington, MA and Salem, NH. Enjoy soft, long-lasting, makeup-inspired eyebrows customized for your unique look.",
+        "answer": "Powder Brows uses a digital machine to create a soft, shaded brow effect with a polished makeup-like finish that typically lasts 1 to 3 years.",
+        "rich_content": True,
+        "cta_heading": "Schedule Your Powder Brows Appointment",
+        "cta_lead": "Ready to enjoy beautifully defined brows with a soft makeup finish?",
+        "cta_body": "Book your Powder Brows consultation with Adriana Beauty Services – Permanent Makeup and discover how effortless beautiful brows can be.",
+        "faqs": [
+            ("Are Powder Brows painful?", "Most clients experience minimal discomfort thanks to topical numbing products used during the procedure."),
+            ("Are Powder Brows better for oily skin?", "Yes. Powder Brows are often recommended for clients with oily skin because the shading technique tends to heal beautifully and retain pigment well."),
+            ("How long does the appointment take?", "Most sessions take approximately 2 to 3 hours."),
+            ("How long is the healing process?", "Initial healing typically occurs within 1 to 2 weeks, while complete healing may take up to 8 weeks."),
+            ("Will my brows look too dark?", "No. Brows will initially appear darker and gradually soften as they heal, resulting in a natural and balanced appearance."),
+        ]},
     "lip-blush": {"cat": "lips", "name": "Lip Blush", "price": 550,
-        "h1": "Lip Blush in Massachusetts & New Hampshire",
-        "desc": "Soft natural lip color lasting 2-3 years. $550 in Wilmington MA & Salem NH.",
-        "answer": "Lip Blush adds soft, natural lip color customized to your skin tone. Results last 2 to 3 years.",
-        "faqs": [("Lip blush for dark lips?", "We offer Dark Lip Neutralization for hyperpigmented lips before or alongside lip blush.")]},
+        "title": "Lip Blush in Wilmington MA & Salem NH | Permanent Lip Color",
+        "h1": "Lip Blush in Wilmington, MA & Salem, NH",
+        "desc": "Enhance your natural lip color and definition with Lip Blush in Wilmington, MA and Salem, NH. Enjoy beautiful, long-lasting results and a youthful appearance.",
+        "answer": "Lip Blush is a semi-permanent cosmetic tattoo that enhances natural lip color, shape, and definition with a soft, healthy-looking tint that typically lasts 2 to 3 years.",
+        "rich_content": True,
+        "cta_heading": "Schedule Your Lip Blush Consultation",
+        "cta_lead": "Ready to enjoy naturally beautiful lips with long-lasting color and definition?",
+        "cta_body": "Book your Lip Blush consultation with Adriana Beauty Services – Permanent Makeup and discover how this advanced treatment can enhance your confidence and simplify your daily beauty routine.",
+        "faqs": [
+            ("Does Lip Blush make lips look bigger?", "Lip Blush enhances the appearance of the lips by improving color and definition, which can create the illusion of fuller lips."),
+            ("Is Lip Blush painful?", "Most clients experience only mild discomfort thanks to the use of topical numbing products."),
+            ("How long does the healing process take?", "Initial healing typically occurs within 1 to 2 weeks, while full healing may take up to 8 weeks."),
+            ("Can I choose my lip color?", "Yes. We work with you to select a shade that complements your skin tone and desired outcome."),
+            ("Will I still need lipstick?", "Many clients find they use significantly less lipstick after Lip Blush because their lips already have enhanced color and definition."),
+        ]},
     "combination-brows": {"cat": "eyebrows", "name": "Combination Brows", "price": None,
-        "h1": "Combination Brows in MA & NH", "desc": "Hair strokes plus soft shading.", "answer": "Combination brows blend hair strokes with soft shading.", "faqs": []},
+        "title": "Combination Brows in Wilmington MA & Salem NH | Full Natural Brows",
+        "h1": "Combination Brows in Wilmington, MA & Salem, NH",
+        "desc": "Get the best of Microblading and Powder Brows with Combination Brows in Wilmington, MA and Salem, NH. Enjoy natural-looking, fuller, beautifully defined eyebrows.",
+        "answer": "Combination Brows blends hair-like strokes with soft shading for fuller, natural-looking eyebrows that typically last 1 to 3 years.",
+        "rich_content": True,
+        "cta_heading": "Schedule Your Combination Brows Consultation",
+        "cta_lead": "Ready to achieve fuller, beautifully balanced brows?",
+        "cta_body": "Book your Combination Brows consultation with Adriana Beauty Services – Permanent Makeup and discover a customized brow solution designed specifically for you.",
+        "faqs": [
+            ("What is the difference between Combination Brows and Microblading?", "Microblading uses only hair-like strokes, while Combination Brows combines hair strokes with soft shading for added fullness and definition."),
+            ("Are Combination Brows suitable for oily skin?", "Yes. Many clients with oily or combination skin benefit from the added shading component of this technique."),
+            ("How long does the appointment take?", "Most Combination Brows appointments take approximately 2 to 3 hours."),
+            ("How long does healing take?", "Initial healing typically occurs within 1 to 2 weeks, while full healing may take several weeks."),
+            ("Will my brows look natural?", "Absolutely. The combination of realistic hair strokes and soft shading creates a natural yet polished appearance."),
+        ]},
     "nano-combo": {"cat": "eyebrows", "name": "Nano Combo Brows", "price": 600,
-        "h1": "Nano Combo Brows in MA & NH", "desc": "Nano strokes with soft shading. $600.", "answer": "Nano Combo combines nano hair strokes with soft shading.", "faqs": []},
+        "title": "Nano Combo Brows in Wilmington MA & Salem NH | Natural Fuller Brows",
+        "h1": "Nano Combo Brows in Wilmington, MA & Salem, NH",
+        "desc": "Enhance your brows with Nano Combo Brows in Wilmington, MA and Salem, NH. Combining realistic nano hair strokes and soft shading for beautiful, long-lasting results.",
+        "answer": "Nano Combo Brows combine ultra-fine nano hair strokes with soft powder shading for fuller, natural-looking brows that typically last 1 to 3 years.",
+        "rich_content": True,
+        "cta_heading": "Schedule Your Nano Combo Brows Consultation",
+        "cta_lead": "Ready to experience one of the most advanced brow enhancement techniques available?",
+        "cta_body": "Book your Nano Combo Brows consultation with Adriana Beauty Services – Permanent Makeup and discover beautifully customized brows designed to complement your natural beauty.",
+        "faqs": [
+            ("What is the difference between Nano Combo Brows and Combination Brows?", "Nano Combo Brows use machine-created nano hair strokes instead of traditional Microblading strokes, offering greater precision and often gentler treatment of the skin."),
+            ("Are Nano Combo Brows suitable for oily skin?", "Yes. Many clients with oily skin experience excellent results with Nano Combo Brows."),
+            ("How long does the procedure take?", "Most appointments take approximately 2 to 3 hours."),
+            ("Does the procedure hurt?", "Most clients report minimal discomfort due to the use of topical numbing products throughout the treatment."),
+            ("Will the results look natural?", "Absolutely. Nano Combo Brows are specifically designed to create realistic hair strokes combined with soft shading for a naturally enhanced appearance."),
+        ]},
     "dark-lip-neutralization": {"cat": "lips", "name": "Dark Lip Neutralization", "price": 550,
-        "h1": "Dark Lip Neutralization in MA & NH", "desc": "Color correction for dark or hyperpigmented lips.", "answer": "Dark lip neutralization corrects uneven lip tone before lip blush.", "faqs": []},
+        "title": "Dark Lip Neutralization in Wilmington MA & Salem NH | Lip Color Correction",
+        "h1": "Dark Lip Neutralization in Wilmington, MA & Salem, NH",
+        "desc": "Correct uneven or dark lip pigmentation with Dark Lip Neutralization in Wilmington, MA and Salem, NH. Customized permanent makeup treatments for beautiful, balanced lips.",
+        "answer": "Dark Lip Neutralization uses advanced color correction to neutralize dark, cool, or uneven lip pigmentation and create a more balanced, natural-looking tone.",
+        "rich_content": True,
+        "cta_heading": "Schedule Your Dark Lip Neutralization Consultation",
+        "cta_lead": "Ready to achieve a more balanced and even lip tone?",
+        "cta_body": "Book your consultation with Adriana Beauty Services – Permanent Makeup and learn how Dark Lip Neutralization can help you achieve naturally beautiful, confidence-boosting results.",
+        "faqs": [
+            ("Can Dark Lip Neutralization completely remove dark pigmentation?", "The goal is to significantly improve and balance pigmentation. Results vary depending on the client's natural lip color and individual characteristics."),
+            ("How many sessions will I need?", "Many clients require multiple sessions to achieve optimal results. Your treatment plan will be customized during your consultation."),
+            ("Is the procedure painful?", "Most clients experience minimal discomfort thanks to the use of topical numbing products."),
+            ("Can I get Lip Blush after neutralization?", "Yes. Many clients choose to undergo Lip Blush after completing the neutralization process."),
+            ("How long do the results last?", "Results can last several years depending on lifestyle, skin characteristics, and maintenance."),
+        ]},
     "top-eyeliner": {"cat": "eyeliner", "name": "Top Eyeliner", "price": 350,
-        "h1": "Top Permanent Eyeliner in MA & NH", "desc": "Classic and cat eye styles. $350.", "answer": "Top permanent eyeliner defines the upper lash line in classic or cat eye styles.", "faqs": []},
+        "title": "Top Eyeliner in Wilmington MA & Salem NH | Permanent Eyeliner",
+        "h1": "Top Eyeliner in Wilmington, MA & Salem, NH",
+        "desc": "Enhance your eyes with Top Eyeliner in Wilmington, MA and Salem, NH. Enjoy long-lasting, smudge-proof eyeliner and beautifully defined eyes every day.",
+        "answer": "Top Eyeliner is a permanent makeup procedure that defines the upper lash line with long-lasting pigment — from subtle lash enhancement to a polished eyeliner look.",
+        "rich_content": True,
+        "cta_heading": "Schedule Your Top Eyeliner Consultation",
+        "cta_lead": "Ready to enjoy beautifully defined eyes every day without the hassle of applying eyeliner?",
+        "cta_body": "Book your Top Eyeliner consultation with Adriana Beauty Services – Permanent Makeup and discover a customized solution designed to enhance your natural beauty.",
+        "faqs": [
+            ("Will Top Eyeliner look natural?", "Yes. The treatment can be customized from a subtle lash enhancement to a more defined eyeliner look."),
+            ("Is the procedure painful?", "Most clients experience minimal discomfort thanks to topical numbing products used throughout the procedure."),
+            ("How long does the appointment take?", "Most sessions take approximately 2 to 3 hours."),
+            ("How long is the healing process?", "Initial healing typically occurs within one to two weeks, with complete healing taking several weeks."),
+            ("Can I still wear makeup?", "Yes. Once the area has fully healed, you may continue using your regular makeup products if desired."),
+        ]},
     "smokey-eyeliner": {"cat": "eyeliner", "name": "Smokey Eyeliner", "price": 400,
-        "h1": "Smokey Permanent Eyeliner in MA & NH", "desc": "Soft diffused shadow effect. $400.", "answer": "Smokey permanent eyeliner creates a soft, diffused upper-lid effect.", "faqs": []},
+        "title": "Smokey Eyeliner in Wilmington MA & Salem NH | Permanent Smokey Eyeliner",
+        "h1": "Smokey Eyeliner in Wilmington, MA & Salem, NH",
+        "desc": "Achieve beautifully defined eyes with Smokey Eyeliner in Wilmington, MA and Salem, NH. Enjoy a soft, blended eyeliner look with long-lasting, smudge-proof results.",
+        "answer": "Smokey Eyeliner combines defined upper-lid liner with soft shading for a blended, makeup-inspired effect that lasts for years with proper care.",
+        "rich_content": True,
+        "cta_heading": "Schedule Your Smokey Eyeliner Consultation",
+        "cta_lead": "Ready to wake up with beautifully defined eyes and a soft, elegant eyeliner effect?",
+        "cta_body": "Book your Smokey Eyeliner consultation with Adriana Beauty Services – Permanent Makeup and discover a customized treatment designed to enhance your natural beauty.",
+        "faqs": [
+            ("What is the difference between Smokey Eyeliner and Top Eyeliner?", "Top Eyeliner creates a defined line along the lash line, while Smokey Eyeliner incorporates soft shading for a blended makeup effect."),
+            ("Is Smokey Eyeliner permanent?", "Smokey Eyeliner is considered permanent makeup, although touch-ups may be needed over time to maintain optimal results."),
+            ("Does the procedure hurt?", "Most clients report minimal discomfort due to the use of topical numbing products throughout the treatment."),
+            ("How long does healing take?", "Initial healing typically occurs within one to two weeks, while complete healing may take several weeks."),
+            ("Will the result look too dramatic?", "Not at all. The treatment is fully customized and can be designed to create either a subtle enhancement or a more glamorous look."),
+        ]},
     "bottom-eyeliner": {"cat": "eyeliner", "name": "Bottom Eyeliner", "price": 250,
-        "h1": "Bottom Permanent Eyeliner in MA & NH", "desc": "Subtle lower lash line. $250.", "answer": "Bottom permanent eyeliner subtly defines the lower lash line.", "faqs": []},
+        "title": "Bottom Eyeliner in Wilmington MA & Salem NH | Permanent Lower Eyeliner",
+        "h1": "Bottom Eyeliner in Wilmington, MA & Salem, NH",
+        "desc": "Enhance your eyes with Bottom Eyeliner in Wilmington, MA and Salem, NH. Enjoy subtle, long-lasting lower lash line definition with permanent makeup.",
+        "answer": "Bottom Eyeliner places pigment along the lower lash line for subtle, natural-looking definition that lasts for years with proper care.",
+        "rich_content": True,
+        "cta_heading": "Schedule Your Bottom Eyeliner Consultation",
+        "cta_lead": "Ready to enhance your eyes with subtle, long-lasting definition?",
+        "cta_body": "Book your Bottom Eyeliner consultation with Adriana Beauty Services – Permanent Makeup and discover how this elegant treatment can simplify your beauty routine while enhancing your natural features.",
+        "faqs": [
+            ("Will Bottom Eyeliner look natural?", "Yes. The treatment is designed to create subtle enhancement and can be customized according to your preferences."),
+            ("Can I get Bottom Eyeliner without Top Eyeliner?", "Absolutely. Bottom Eyeliner can be performed as a standalone treatment or combined with Top Eyeliner."),
+            ("Is the procedure painful?", "Most clients experience minimal discomfort due to the use of topical numbing products."),
+            ("How long does healing take?", "Initial healing typically occurs within one to two weeks, with complete healing taking several weeks."),
+            ("How long do the results last?", "Results often last several years, depending on individual factors and maintenance."),
+        ]},
     "eyeliner-combo": {"cat": "eyeliner", "name": "Eyeliner Combo", "price": 500,
-        "h1": "Permanent Eyeliner Combo in MA & NH", "desc": "Top + bottom. $500.", "answer": "Eyeliner combo includes top and bottom permanent eyeliner in one session.", "faqs": []},
+        "title": "Eyeliner Combo in Wilmington MA & Salem NH | Permanent Eyeliner",
+        "h1": "Eyeliner Combo in Wilmington, MA & Salem, NH",
+        "desc": "Get complete eye definition with an Eyeliner Combo in Wilmington, MA and Salem, NH. Permanent upper and lower eyeliner for beautiful, long-lasting results.",
+        "answer": "Eyeliner Combo combines Top and Bottom Eyeliner in one session for complete upper and lower lash line definition that lasts for years.",
+        "rich_content": True,
+        "cta_heading": "Schedule Your Eyeliner Combo Consultation",
+        "cta_lead": "Ready to enjoy beautifully defined eyes every day without the hassle of applying eyeliner?",
+        "cta_body": "Book your Eyeliner Combo consultation with Adriana Beauty Services – Permanent Makeup and discover a customized solution that enhances your eyes and simplifies your daily beauty routine.",
+        "faqs": [
+            ("What is included in an Eyeliner Combo?", "The treatment includes both Top Eyeliner and Bottom Eyeliner for complete eye definition."),
+            ("Will the eyeliner look natural?", "Yes. The treatment can be customized from very subtle lash enhancement to a more noticeable eyeliner effect."),
+            ("Is the procedure painful?", "Most clients experience minimal discomfort due to the use of professional numbing products."),
+            ("How long does healing take?", "Initial healing usually occurs within one to two weeks, while complete healing may take several weeks."),
+            ("How long do the results last?", "Results often last several years, depending on skin type, lifestyle, and maintenance."),
+        ]},
     "eyebrows-lips-combo": {"cat": "combos", "name": "Brows + Lips Combo", "price": 850,
-        "h1": "Brows + Lips Combo PMU in MA & NH", "desc": "Eyebrow PMU and lip blush together. $850.", "answer": "Combine eyebrow permanent makeup and lip blush in one session and save versus booking separately.", "faqs": []},
+        "title": "Brows + Lips Combo in Wilmington MA & Salem NH | Permanent Makeup Package",
+        "h1": "Brows + Lips Combo in Wilmington, MA & Salem, NH",
+        "desc": "Transform your look with a Brows + Lips Combo in Wilmington, MA and Salem, NH. Beautiful brows and enhanced lips with customized permanent makeup treatments.",
+        "answer": "Brows + Lips Combo pairs a customized brow treatment with lip enhancement in one package for balanced, long-lasting results that typically last 1 to 3 years.",
+        "rich_content": True,
+        "cta_heading": "Schedule Your Brows + Lips Combo Consultation",
+        "cta_lead": "Ready to simplify your beauty routine and enjoy beautiful brows and naturally enhanced lips every day?",
+        "cta_body": "Book your Brows + Lips Combo consultation with Adriana Beauty Services – Permanent Makeup and discover a customized treatment plan designed specifically for you.",
+        "faqs": [
+            ("Which brow treatment is included?", "Your brow treatment will be selected based on your skin type, goals, and desired results during your consultation."),
+            ("Can I combine Lip Blush with any brow procedure?", "Yes. Lip Blush can be paired with virtually any brow enhancement service."),
+            ("Is the combo more cost-effective than booking separately?", "Many clients find combo treatments provide excellent value while achieving a complete beauty transformation."),
+            ("How long does the overall process take?", "Treatment times vary depending on the selected services and may be performed during the same visit or scheduled separately."),
+            ("Will the results look natural?", "Absolutely. Every treatment is customized to enhance your natural features while maintaining a balanced and elegant appearance."),
+        ]},
     "yearly-touch-up": {"cat": "touch-ups", "name": "Yearly Touch-Up", "price": 300, "priceNote": "from",
-        "h1": "Yearly PMU Touch-Up for Brows in MA & NH", "desc": "Color refresh from $300.", "answer": "Yearly touch-ups refresh brow color for existing Adriana's PMU clients.", "faqs": []},
+        "title": "Yearly Touch-Up in Wilmington MA & Salem NH | Permanent Makeup Maintenance",
+        "h1": "Yearly Touch-Up in Wilmington, MA & Salem, NH",
+        "desc": "Maintain beautiful brows, lips, and eyeliner with a Yearly Touch-Up in Wilmington, MA and Salem, NH. Refresh your permanent makeup and keep your results looking their best.",
+        "answer": "Yearly Touch-Up refreshes faded permanent makeup pigment on brows, lips, or eyeliner — typically scheduled about 12 months after your original procedure.",
+        "rich_content": True,
+        "cta_heading": "Schedule Your Yearly Touch-Up Appointment",
+        "cta_lead": "Ready to refresh your brows, lips, or eyeliner?",
+        "cta_body": "Book your Yearly Touch-Up appointment with Adriana Beauty Services – Permanent Makeup and keep your permanent makeup looking vibrant, beautiful, and professionally maintained all year long.",
+        "faqs": [
+            ("When should I schedule a Yearly Touch-Up?", "Most clients schedule maintenance approximately 12 months after their original procedure, although timing may vary."),
+            ("Do I need a touch-up every year?", "Not necessarily. Some clients may retain pigment longer, while others may benefit from more frequent maintenance."),
+            ("Is the touch-up procedure shorter than the original appointment?", "Yes. Touch-up appointments are typically shorter because the shape and design are already established."),
+            ("Can I make changes during my touch-up?", "Minor adjustments may be possible depending on your existing permanent makeup and desired outcome."),
+            ("How long will the refreshed results last?", "Results vary by treatment and individual factors, but regular maintenance helps maximize longevity."),
+        ]},
 }
 
 CITIES = {
     "wilmington-ma": {"city": "Wilmington", "region": "MA", "loc": "wilmington"},
     "salem-nh": {"city": "Salem", "region": "NH", "loc": "salem"},
 }
+
+FRESHA_BOOK_BASE = "https://www.fresha.com/book-now/adrianas-permanent-makeup-zeaseit5"
+FRESHA_ALL_OFFER = f"{FRESHA_BOOK_BASE}/all-offer?share=true&pId=727586"
+FRESHA_SERVICE_URLS = {
+    "yearly-touch-up": f"{FRESHA_BOOK_BASE}/services?oiid=sv%3A18160395&share=true&pId=727586",
+    "flash-sale": f"{FRESHA_BOOK_BASE}/services?oiid=sv%3A19707327&share=true&pId=727586",
+}
+
+
+def fresha_book_url(slug):
+    return FRESHA_SERVICE_URLS.get(slug, FRESHA_ALL_OFFER)
+
+
+def fresha_book_btn(slug, label="Book Now", css_class="btn btn-primary"):
+    return (
+        f'<a class="{css_class}" href="{fresha_book_url(slug)}" '
+        f'target="_blank" rel="noopener noreferrer">{label}</a>'
+    )
 
 CATEGORY_ORDER = [
     ("eyebrows", "Eyebrow Permanent Makeup", ["nano-brows", "microblading", "powder-brows", "combination-brows", "nano-combo"]),
@@ -386,6 +600,24 @@ CATEGORY_ORDER = [
 ]
 
 HERO_SLUGS = {"nano-brows", "microblading", "powder-brows", "lip-blush"}
+
+
+def home_service_card(slug):
+    info = SERVICES[slug]
+    price = info.get("price")
+    price_note = info.get("priceNote", "")
+    price_html = ""
+    if price:
+        prefix = "From " if price_note == "from" else ""
+        price_html = f'<p class="price">{prefix}${price}</p>'
+    url = f'services/{info["cat"]}/{slug}/'
+    thumb = img_tag(service_image_path(slug), info["name"], 0, "card-thumb")
+    return f"""<article class="card card-has-img">
+      <a href="{url}" class="card-img-link">{thumb}</a>
+      <h3><a href="{url}">{info["name"]}</a></h3>
+      {price_html}
+      <p>{info["answer"]}</p>
+    </article>"""
 
 
 def service_hub_card(slug):
@@ -433,17 +665,44 @@ def services_hub_body():
 
 
 def service_page(slug, info):
-    price_html = f'<p class="pricing-badge">Starting at ${info["price"]} USD</p>' if info.get("price") else ""
+    base = depth_to_base(3)
+    if info.get("price"):
+        prefix = "From " if info.get("priceNote") == "from" else "Starting at "
+        price_html = f'<p class="pricing-badge">{prefix}${info["price"]} USD</p>'
+    else:
+        price_html = ""
     faq_html = ""
     if info.get("faqs"):
         items = "".join(
             f'<div class="faq-item"><button type="button" aria-expanded="false">{q}</button><div class="faq-answer"><p>{a}</p></div></div>'
             for q, a in info["faqs"])
-        faq_html = f'<section class="section section-alt"><div class="container"><h2>Frequently Asked Questions</h2><div class="faq-list">{items}</div></div></section>'
+        faq_html = f'<section class="section section-alt" id="faq"><div class="container"><h2>Frequently Asked Questions</h2><div class="faq-list">{items}</div></div></section>'
 
     city_btns = "".join(
         f'<a class="btn btn-secondary" href="{c}.html">Book in {CITIES[c]["city"]}, {CITIES[c]["region"]}</a>'
         for c in CITIES)
+
+    sections_fn = RICH_SERVICE_SECTIONS.get(slug)
+    if info.get("rich_content") and sections_fn:
+        middle = sections_fn(base)
+    else:
+        middle = f"""<section class="section"><div class="container">
+  <h2>How Does {info["name"]} Differ from Similar Services?</h2>
+  <p class="direct-answer">Each permanent makeup technique is customized to your features. <a href="{base}services/{info["cat"]}/">Explore all {info["cat"]} services</a> or <a href="{base}payment-plan.html">view payment plan options</a>.</p>
+</div></section>"""
+
+    cta_html = ""
+    if info.get("rich_content") and info.get("cta_heading"):
+        cta_lead = f'<p>{info["cta_lead"]}</p>' if info.get("cta_lead") else ""
+        cta_html = f"""<section class="section section--cta">
+  <div class="container cta-panel">
+    <h2>{info["cta_heading"]}</h2>
+    {cta_lead}
+    <p>{info["cta_body"]}</p>
+    <div class="city-buttons">{city_btns}</div>
+    {fresha_book_btn(slug)}
+  </div>
+</section>"""
 
     svc_img = img_tag(service_image_path(slug), info["name"], 3, "service-hero-img")
     body = f"""
@@ -453,19 +712,17 @@ def service_page(slug, info):
   <p class="direct-answer">{info["answer"]}</p>
   {price_html}
   <div class="city-buttons">{city_btns}</div>
-  <a class="btn btn-primary" href="{depth_to_base(3)}contact.html">Book Consultation ($50)</a>
+  {fresha_book_btn(slug)}
   </div>
   <div class="hero-visual">{svc_img}</div>
 </div></section>
-<section class="section"><div class="container">
-  <h2>How Does {info["name"]} Differ from Similar Services?</h2>
-  <p class="direct-answer">Each permanent makeup technique is customized to your features. <a href="{depth_to_base(3)}services/{info["cat"]}/">Explore all {info["cat"]} services</a> or <a href="{depth_to_base(3)}payment-plan.html">view payment plan options</a>.</p>
-</div></section>
+{middle}
 {faq_html}
+{cta_html}
 """
     path = f"services/{info['cat']}/{slug}/index.html"
     bc = [("Home", ""), ("Services", "services/"), (info["cat"].title(), f"services/{info['cat']}/"), (info["name"], "")]
-    write(path, shell(info["h1"] + " | Adriana's PMU", info["desc"], info["h1"], body, 3, breadcrumbs=bc))
+    write(path, shell(info.get("title", info["h1"] + " | Adriana's PMU"), info["desc"], info["h1"], body, 3, breadcrumbs=bc))
 
 
 def city_combo(slug, info, city_slug):
@@ -476,7 +733,7 @@ def city_combo(slug, info, city_slug):
   <h1>{h1}</h1>
   <p class="direct-answer">{info["answer"]} Book at our {c["city"]}, {c["region"]} studio with Master PMU Artist Adriana Souza Santos.</p>
   <p><strong>Address:</strong> See <a href="{depth_to_base(3)}locations/{city_slug}.html">{c["city"]} location</a></p>
-  <a class="btn btn-primary" href="{depth_to_base(3)}contact.html">Book in {c["city"]}</a>
+  {fresha_book_btn(slug, f'Book in {c["city"]}')}
 </div></section>
 """
     path = f"services/{info['cat']}/{slug}/{city_slug}.html"
@@ -529,20 +786,30 @@ write("locations/index.html", shell(
     + '<article class="location-card"><h3><a href="salem-nh.html">Salem, NH</a></h3></article></div></section>',
     1))
 
-# Academy
+# Academy / Training hub (content from adrianaspmu.com/training/)
+ACADEMY_META = (
+    "Learn permanent makeup at Adriana's Academy in Peabody, MA. "
+    "AAM-certified 100-hour fundamental training, apprenticeship, hands-on models, "
+    "and Diamond Certified Trainer."
+)
+academy_html = academy_body(img_tag, 1)
 write("academy/index.html", shell(
-    "PMU Academy | Permanent Makeup Training Massachusetts",
-    "100-hour fundamental class, apprenticeship, VIP masterclass.",
-    "Adriana's PMU Academy: Permanent Makeup Training in Massachusetts",
-    f"""<section class="page-hero"><div class="container"><h1>Adriana's PMU Academy</h1>
-    <p class="direct-answer">Train with a Master Artist who has taught since 2017.</p></div></section>
-    <section class="section"><div class="container card-grid">
-    <article class="card card-has-img"><a href="pmu-100h-fundamental.html" class="card-img-link">{img_tag("academy/pmu-100h.jpg", "100-hour PMU training class", 1, "card-thumb")}</a>
-    <h3><a href="pmu-100h-fundamental.html">100-Hour Fundamental</a></h3><p class="price">$7,000</p><p>In-person professional PMU training.</p></article>
-    <article class="card card-has-img"><a href="pmu-apprenticeship.html" class="card-img-link">{img_tag("academy/apprenticeship.jpg", "PMU apprenticeship program", 1, "card-thumb")}</a>
-    <h3><a href="pmu-apprenticeship.html">Apprenticeship</a></h3><p class="price">$700/month</p><p>Hands-on apprenticeship program.</p></article>
-    <article class="card"><h3><a href="vip-masterclass.html">VIP Masterclass</a></h3><p>Custom advanced training by request.</p></article>
-    </div></section>""", 1))
+    "Training | Adriana's PMU Academy Massachusetts",
+    ACADEMY_META,
+    "Learn the Art of Permanent Makeup",
+    academy_html,
+    1,
+    body_class="beauty-site academy-page",
+))
+write("training/index.html", shell(
+    "Training - Adriana's PMU Academy",
+    ACADEMY_META,
+    "Learn the Art of Permanent Makeup",
+    academy_body(img_tag, 1, course_href_base="../academy/"),
+    1,
+    body_class="beauty-site academy-page",
+    head_extra='<link rel="canonical" href="https://adrianaspmu.com/academy/">',
+))
 
 for course, title, price, desc in [
     ("pmu-100h-fundamental", "100-Hour Fundamental Permanent Makeup Training", "$7,000", "100 hours in-person covering Nano Brows, Microblading, Powder Brows, Lip Blush, and Eyeliner."),
@@ -589,11 +856,11 @@ write("faq.html", shell(
     "Answers to common permanent makeup questions.",
     "Permanent Makeup FAQ",
     """<section class="page-hero"><div class="container"><h1>Permanent Makeup FAQ</h1></div></section>
-    <section class="section"><div class="container faq-list">
+    <section class="section"><div class="container"><div class="faq-list">
     <div class="faq-item"><button type="button">How much does permanent makeup cost?</button><div class="faq-answer"><p>Nano Brows from $650, Microblading and Powder Brows from $550, Lip Blush from $550. See individual service pages for details.</p></div></div>
     <div class="faq-item"><button type="button">Does insurance cover PMU?</button><div class="faq-answer"><p>Permanent makeup is cosmetic and not covered by insurance.</p></div></div>
     <div class="faq-item"><button type="button">Is permanent makeup safe?</button><div class="faq-answer"><p>Yes, when performed by a licensed Master Artist using sterile single-use needles in a compliant studio.</p></div></div>
-    </div></section>""", 0))
+    </div></div></section>""", 0))
 
 write("portfolio.html", shell("Portfolio | Before & After PMU", "Real client permanent makeup results.", "Permanent Makeup Before & After Results",
     f'<section class="page-hero"><div class="container"><h1>Permanent Makeup Before & After Results</h1>'
@@ -603,10 +870,221 @@ write("portfolio.html", shell("Portfolio | Before & After PMU", "Real client per
 write("payment-plan.html", shell("Payment Plan | PMU Financing MA & NH", "Financing options for permanent makeup.", "Payment Plan for Permanent Makeup",
     '<section class="page-hero"><div class="container"><h1>Payment Plan for Permanent Makeup Services</h1><p>Flexible payment options available. <a href="contact.html">Contact us</a> for details.</p></div></section>', 0))
 
+
+def flash_sale_body(depth=1):
+    base = depth_to_base(depth)
+    img = img_tag("flash-sale.jpg", "Holiday Flash Sale — Brows or Lips PMU for $349", depth, "service-hero-img")
+    return f"""
+<section class="page-hero page-hero--split">
+  <div class="container hero-grid">
+    <div>
+      <h1>Flash Sale $349!</h1>
+      <p class="direct-answer">It's the most beautiful time of the year — and our Holiday Flash Sale is here! Get your Brows or Lips PMU for only <strong>$349</strong>, but hurry… spots melt away like snowflakes!</p>
+      <p class="pricing-note">*Limited slots available – Book yours before they fill up!</p>
+      <a class="btn btn-primary" href="{fresha_book_url("flash-sale")}" target="_blank" rel="noopener noreferrer">Book Now</a>
+    </div>
+    <div class="hero-visual">{img}</div>
+  </div>
+</section>
+<section class="section">
+  <div class="container container--narrow">
+    <h2>Permanent Makeup Techniques</h2>
+    <p>Permanent Makeup is more than beauty — it's freedom. Imagine waking up every day with brows and lips already enhanced, saving time and boosting your confidence instantly.</p>
+    <p>More than 5,000 procedures performed by Master PMU Artist Adriana Souza Santos.</p>
+  </div>
+</section>
+<section class="section section-alt">
+  <div class="container">
+    <div class="card-grid">
+      <article class="card">
+        <h3>Eyebrows</h3>
+        <p>Nano Brows, Microblading, Powder Brows, and combination techniques.</p>
+        <a class="btn btn-secondary" href="{base}services/eyebrows/">Explore Brow Services</a>
+      </article>
+      <article class="card">
+        <h3>Lips</h3>
+        <p>Lip Blush and Dark Lip Neutralization for natural, lasting color.</p>
+        <a class="btn btn-secondary" href="{base}services/lips/">Explore Lip Services</a>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="section section--cta">
+  <div class="container cta-panel">
+    <h2>Ready to book your $349 Flash Sale?</h2>
+    <p>Wilmington MA and Salem NH — limited appointments available.</p>
+    <a class="btn btn-primary" href="{fresha_book_url("flash-sale")}" target="_blank" rel="noopener noreferrer">Book Now on Fresha</a>
+    <p style="margin-top:1rem"><a href="{base}contact.html">Contact us</a> with questions.</p>
+  </div>
+</section>"""
+
+
+write("flash-sale/index.html", shell(
+    "Flash Sale $349 | Brows or Lips PMU | Adriana's PMU",
+    "Holiday Flash Sale — get Brows or Lips PMU for only $349. Limited slots at Wilmington MA and Salem NH.",
+    "Flash Sale $349",
+    flash_sale_body(1),
+    1,
+    breadcrumbs=[("Home", ""), ("Flash Sale", "flash-sale/")],
+))
+
 write("privacy-policy.html", shell("Privacy Policy", "Privacy policy.", "Privacy Policy",
     '<section class="section"><div class="container"><h1>Privacy Policy</h1><p>Content to be finalized before publish.</p></div></section>', 0))
 
 write("terms-of-use.html", shell("Terms of Use", "Terms of use.", "Terms of Use",
     '<section class="section"><div class="container"><h1>Terms of Use</h1><p>Content to be finalized before publish.</p></div></section>', 0))
+
+write("index.html", shell(
+    "Permanent Makeup Studio & Academy | Wilmington MA & Salem NH | Adriana's PMU",
+    "Master PMU Artist with 20+ years, 5,000+ procedures. Nano Brows, Microblading, Lip Blush in Wilmington MA & Salem NH. Book consultation.",
+    "Permanent Makeup Studio and Academy in Wilmington, MA & Salem, NH",
+    home_body(), 0))
+
+SITE_URL = "https://adrianaspmu.com"
+
+
+def public_url(rel_path: str) -> str:
+    rel = rel_path.replace("\\", "/")
+    if rel == "index.html":
+        return f"{SITE_URL}/"
+    if rel.endswith("/index.html"):
+        return f"{SITE_URL}/{rel[:-len('index.html')]}"
+    return f"{SITE_URL}/{rel}"
+
+
+def sitemap_meta(rel_path: str) -> tuple[str, str]:
+    if rel_path == "index.html":
+        return "1.0", "weekly"
+    if rel_path.startswith("flash-sale/"):
+        return "0.9", "weekly"
+    if rel_path in ("services/index.html", "locations/index.html"):
+        return "0.9", "monthly"
+    if rel_path.endswith("/wilmington-ma.html") or rel_path.endswith("/salem-nh.html"):
+        return "0.85", "monthly"
+    if rel_path in ("privacy-policy.html", "terms-of-use.html"):
+        return "0.3", "yearly"
+    if rel_path.endswith("/index.html") and rel_path.count("/") >= 2:
+        return "0.8", "monthly"
+    return "0.8", "monthly"
+
+
+def write_sitemap():
+    pages = sorted(p.relative_to(ROOT).as_posix() for p in ROOT.rglob("*.html"))
+    lines = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    ]
+    for page in pages:
+        priority, changefreq = sitemap_meta(page)
+        loc = public_url(page)
+        lines.append(
+            f"  <url><loc>{loc}</loc>"
+            f"<priority>{priority}</priority>"
+            f"<changefreq>{changefreq}</changefreq></url>"
+        )
+    lines.append("</urlset>")
+    (ROOT / "sitemap.xml").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print("  sitemap.xml")
+
+
+def write_robots():
+    content = f"""# robots.txt for adrianaspmu.com
+User-agent: *
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Disallow: /scripts/
+
+# LLM site summary: {SITE_URL}/llms.txt
+Sitemap: {SITE_URL}/sitemap.xml
+"""
+    (ROOT / "robots.txt").write_text(content, encoding="utf-8")
+    print("  robots.txt")
+
+
+def service_price_label(info: dict) -> str:
+    price = info.get("price")
+    if not price:
+        return "custom pricing"
+    prefix = "from " if info.get("priceNote") == "from" else ""
+    return f"{prefix}${price}"
+
+
+def write_llms():
+    service_lines = []
+    for _cat, title, slugs in CATEGORY_ORDER:
+        service_lines.append(f"## {title}")
+        for slug in slugs:
+            info = SERVICES[slug]
+            url = public_url(f"services/{info['cat']}/{slug}/index.html")
+            summary = info["answer"][:140].rstrip().rstrip(".") + "."
+            service_lines.append(
+                f"- [{info['name']}]({url}): {summary} ({service_price_label(info)})"
+            )
+        service_lines.append("")
+
+    content = f"""# Adriana's Permanent Makeup
+> Master Permanent Makeup Artist Adriana Souza Santos with 20+ years of experience and 5,000+ procedures performed. PMU studio and academy serving Wilmington, MA and Salem, NH (New England). Site language: English (en-US) only. Book appointments via Fresha: {FRESHA_ALL_OFFER}
+
+## Core Pages
+- [Home]({SITE_URL}/): Permanent Makeup Studio and Academy in Wilmington MA & Salem NH
+- [About]({SITE_URL}/about.html): Master PMU Artist with 20+ years and 5,000+ procedures
+- [Services]({SITE_URL}/services/): All permanent makeup services in MA and NH
+- [Locations]({SITE_URL}/locations/): Wilmington MA + Salem NH studios
+- [Academy]({SITE_URL}/academy/): Permanent Makeup training programs
+- [Training]({SITE_URL}/training/): Academy hub (mirror of /academy/)
+- [Contact]({SITE_URL}/contact.html): Studio contact and consultation
+- [FAQ]({SITE_URL}/faq.html): Permanent makeup frequently asked questions
+- [Portfolio]({SITE_URL}/portfolio.html): Before and after PMU results
+- [Flash Sale]({SITE_URL}/flash-sale/): Limited-time brows or lips PMU for $349
+- [Privacy Policy]({SITE_URL}/privacy-policy.html)
+- [Terms of Use]({SITE_URL}/terms-of-use.html)
+
+{chr(10).join(service_lines)}
+## Locations
+- [Wilmington MA]({SITE_URL}/locations/wilmington-ma.html): 211 Lowell Street, Suite F — (781) 853-8063
+- [Salem NH]({SITE_URL}/locations/salem-nh.html): 117A Main Street — (978) 223-7496
+
+## Academy
+- [100-Hour Fundamental]({SITE_URL}/academy/pmu-100h-fundamental.html): $7,000 in-person training
+- [Apprenticeship]({SITE_URL}/academy/pmu-apprenticeship.html): $700/month hands-on program
+- [VIP Masterclass]({SITE_URL}/academy/vip-masterclass.html): Advanced training for experienced artists
+
+## Booking
+- Fresha (all services): {FRESHA_ALL_OFFER}
+- Yearly Touch-Up: {fresha_book_url("yearly-touch-up")}
+- Flash Sale ($349): {fresha_book_url("flash-sale")}
+
+## Trust & Credentials
+- Licensed: Town of Wilmington Business Certificate #26-26
+- Salem NH: Compliant with Body Art Regulations Chapter 433
+- 4.9 stars, 174 Google reviews; 1,000+ combined reviews (Google + Fresha)
+- Women-owned, LGBTQ+ friendly, wheelchair accessible (Wilmington)
+- Email: info@adrianaspmu.com
+"""
+    (ROOT / "llms.txt").write_text(content, encoding="utf-8")
+    print("  llms.txt")
+
+
+write_sitemap()
+write_robots()
+write_llms()
 
 print("Done.")

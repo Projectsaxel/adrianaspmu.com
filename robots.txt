@@ -22,4 +22,5 @@ Allow: /
 
 Disallow: /scripts/
 
+# LLM site summary: https://adrianaspmu.com/llms.txt
 Sitemap: https://adrianaspmu.com/sitemap.xml
