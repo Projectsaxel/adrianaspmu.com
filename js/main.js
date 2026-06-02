@@ -40,12 +40,12 @@
 
     el.innerHTML = `
       <div class="promo-banner">
-        Limited-time offer: Initial session + perfection touch-up included on select services.
+        <span>Limited-time offer: Initial session + perfection touch-up included on select services.</span>
         <a href="${resolvePath("/contact.html")}">Book consultation ($50)</a>
       </div>
       <header class="site-header">
         <div class="container header-inner">
-          <a class="logo" href="${home}">Adriana's <span>PMU</span></a>
+          <a class="logo" href="${home}" aria-label="Adriana's PMU Home">Adriana's <span>PMU</span></a>
           <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
           <nav class="main-nav" aria-label="Main navigation">
             <ul>${navItems}</ul>
@@ -71,6 +71,13 @@
         btn.setAttribute("aria-expanded", li.classList.contains("is-expanded"));
       });
     });
+
+    const header = el.querySelector(".site-header");
+    if (header) {
+      const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 12);
+      onScroll();
+      window.addEventListener("scroll", onScroll, { passive: true });
+    }
   }
 
   function renderFooter() {

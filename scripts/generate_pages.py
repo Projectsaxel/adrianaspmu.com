@@ -54,16 +54,71 @@ ORG_SCHEMA = """{
   ]
 }"""
 
-FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">'
+FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">'
 
 
 def depth_to_base(depth: int) -> str:
     return "../" * depth if depth else "./"
 
 
+ASSETS = ROOT / "assets" / "images"
+
+
+def img_src(path: str, depth: int = 0) -> str:
+    return f"{depth_to_base(depth)}assets/images/{path}"
+
+
+def img_tag(path: str, alt: str, depth: int = 0, css_class: str = "") -> str:
+    cls = f' class="{css_class}"' if css_class else ""
+    return (
+        f'<img src="{img_src(path, depth)}" alt="{alt}" loading="lazy" decoding="async"{cls}>'
+    )
+
+
+def service_image_path(slug: str) -> str:
+    p = ASSETS / "services" / f"{slug}.jpg"
+    return f"services/{slug}.jpg" if p.exists() else "hero.webp"
+
+
+def portfolio_files():
+    folder = ASSETS / "portfolio"
+    if not folder.is_dir():
+        return []
+    return sorted(f.name for f in folder.glob("*.jpg"))
+
+
+def portfolio_alt(filename: str) -> str:
+    name = filename.replace("Portfolio-", "").replace(".jpg", "").replace("-", " ")
+    return f"Permanent makeup before and after — {name}"
+
+
+def portfolio_gallery_html(depth: int, limit=None) -> str:
+    files = portfolio_files()
+    if limit:
+        files = files[:limit]
+    if not files:
+        return "<p>Portfolio images loading soon.</p>"
+    items = []
+    for fn in files:
+        items.append(
+            f'<figure class="portfolio-item">'
+            f'{img_tag(f"portfolio/{fn}", portfolio_alt(fn), depth, "portfolio-img")}'
+            f"</figure>"
+        )
+    return f'<div class="portfolio-grid">{"".join(items)}</div>'
+
+
+FAVICON = """
+  <link rel="icon" href="{base}assets/images/favicon/favicon-32.png" sizes="32x32">
+  <link rel="icon" href="{base}assets/images/favicon/favicon-192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="{base}assets/images/favicon/apple-touch-icon.png">
+"""
+
+
 def shell(title, desc, h1, body, depth=0, extra_schema="", breadcrumbs=None):
     base = depth_to_base(depth)
     css = f"{base}css/styles.css"
+    favicon = FAVICON.format(base=base)
     bc = ""
     if breadcrumbs:
         items = "".join(
@@ -85,10 +140,11 @@ def shell(title, desc, h1, body, depth=0, extra_schema="", breadcrumbs=None):
   <title>{title}</title>
   <meta name="description" content="{desc}">
   <link rel="stylesheet" href="{css}">
+  {favicon}
   {FONTS}
   {schema_block}
 </head>
-<body>
+<body class="beauty-site">
   <a class="skip-link" href="#main">Skip to content</a>
   <div id="site-header"></div>
   {bc}
@@ -110,10 +166,24 @@ def write(rel_path, content):
 
 
 # --- HOME ---
-home_body = """
-<section class="hero">
+def home_body():
+    hero_cards = ""
+    for slug, href, label in [
+        ("nano-brows", "services/eyebrows/nano-brows/", "Nano Brows"),
+        ("microblading", "services/eyebrows/microblading/", "Microblading"),
+        ("powder-brows", "services/eyebrows/powder-brows/", "Powder Brows"),
+        ("lip-blush", "services/lips/lip-blush/", "Lip Blush"),
+    ]:
+        hero_cards += f"""<article class="card card-has-img">
+        <a href="{href}" class="card-img-link">{img_tag(service_image_path(slug), label, 0, "card-thumb")}</a>
+        <h3><a href="{href}">{label}</a></h3>
+      </article>"""
+    return f"""
+<section class="hero hero--premium">
+  <div class="hero-bg-accent" aria-hidden="true"></div>
   <div class="container hero-grid">
-    <div>
+    <div class="hero-content">
+      <p class="section-label">Master PMU Artist · Wilmington MA &amp; Salem NH</p>
       <h1>Permanent Makeup Studio and Academy in Wilmington, MA &amp; Salem, NH</h1>
       <p class="direct-answer">Master Permanent Makeup Artist Adriana Souza Santos with 20+ years and 5,000+ procedures. Nano Brows, Microblading, Lip Blush, and Eyeliner at two New England locations.</p>
       <div class="hero-badges">
@@ -128,61 +198,59 @@ home_body = """
         <a class="btn btn-secondary" href="services/">Explore Services</a>
       </div>
     </div>
-    <div class="hero-visual" role="img" aria-label="Adriana's PMU studio">Master PMU Artist · Wilmington MA &amp; Salem NH</div>
+    <div class="hero-visual hero-visual--framed">
+      {img_tag("hero.webp", "Adriana's Permanent Makeup studio — Master PMU Artist in Wilmington MA and Salem NH", 0, "hero-img")}
+      <div class="hero-visual-badge" aria-hidden="true">20+ Years · 5,000+ Procedures</div>
+    </div>
   </div>
 </section>
 
-<section class="section" id="what-is-pmu">
-  <div class="container">
-    <h2>What Is Permanent Makeup?</h2>
+<section class="trust-bar" aria-label="Studio credentials">
+  <div class="container trust-bar-inner">
+    <div class="trust-item"><span class="trust-value">4.9★</span><span class="trust-key">Google Reviews</span></div>
+    <div class="trust-divider" aria-hidden="true"></div>
+    <div class="trust-item"><span class="trust-value">5,000+</span><span class="trust-key">Procedures</span></div>
+    <div class="trust-divider" aria-hidden="true"></div>
+    <div class="trust-item"><span class="trust-value">2</span><span class="trust-key">New England Studios</span></div>
+    <div class="trust-divider" aria-hidden="true"></div>
+    <div class="trust-item"><span class="trust-value">Licensed</span><span class="trust-key">MA &amp; NH</span></div>
+  </div>
+</section>
+
+<section class="section section--elegant" id="what-is-pmu">
+  <div class="container container--narrow">
+    <p class="section-label section-label--center">The Art of Effortless Beauty</p>
+    <h2 class="heading-centered">What Is Permanent Makeup?</h2>
     <p class="direct-answer">Permanent makeup, also called cosmetic tattooing or micropigmentation, places color pigment beneath the skin to enhance brows, lips, or eyeliner. Results last 1 to 3 years and save time on daily makeup.</p>
     <p class="fact-layer">PMU procedures use single-use sterile needles. Adriana's studio is licensed under Town of Wilmington Business Certificate #26-26 and complies with Salem NH Body Art Regulations Chapter 433.</p>
   </div>
 </section>
 
-<section class="section section-alt" id="services">
+<section class="section section-alt section--elegant" id="services">
   <div class="container">
-    <h2>What Permanent Makeup Services Do You Offer?</h2>
+    <p class="section-label section-label--center">Treatments</p>
+    <h2 class="heading-centered">What Permanent Makeup Services Do You Offer?</h2>
     <p class="direct-answer">We specialize in permanent makeup for brows, lips, and eyeliner, plus combo packages and yearly touch-ups for existing clients.</p>
-    <div class="card-grid">
-      <article class="card">
-        <h3><a href="services/eyebrows/">Eyebrow PMU</a></h3>
-        <p>Nano Brows, Microblading, Powder Brows, Combination &amp; Nano Combo</p>
-        <div class="card-links">
-          <a href="services/eyebrows/nano-brows/">Nano Brows</a> ·
-          <a href="services/eyebrows/microblading/">Microblading</a> ·
-          <a href="services/eyebrows/powder-brows/">Powder Brows</a>
-        </div>
-      </article>
-      <article class="card">
-        <h3><a href="services/lips/">Lip PMU</a></h3>
-        <p>Lip Blush and Dark Lip Neutralization for all skin tones</p>
-        <div class="card-links"><a href="services/lips/lip-blush/">Lip Blush</a> · <a href="services/lips/dark-lip-neutralization/">Dark Lip Neutralization</a></div>
-      </article>
-      <article class="card">
+    <div class="card-grid">{hero_cards}
+      <article class="card card-has-img">
+        <a href="services/eyeliner/top-eyeliner/" class="card-img-link">{img_tag(service_image_path("top-eyeliner"), "Permanent eyeliner PMU", 0, "card-thumb")}</a>
         <h3><a href="services/eyeliner/">Eyeliner PMU</a></h3>
         <p>Top, Smokey, Bottom, and full eyeliner combo packages</p>
-        <div class="card-links"><a href="services/eyeliner/top-eyeliner/">Top Eyeliner</a></div>
       </article>
-      <article class="card">
+      <article class="card card-has-img">
+        <a href="services/combos/eyebrows-lips-combo/" class="card-img-link">{img_tag(service_image_path("eyebrows-lips-combo"), "Brows and lips combo PMU", 0, "card-thumb")}</a>
         <h3><a href="services/combos/">Combo Packages</a></h3>
         <p class="price">From $850</p>
-        <p>Brows + Lips combo in one session</p>
         <a class="btn btn-secondary" href="services/combos/eyebrows-lips-combo/">Brows + Lips Combo</a>
-      </article>
-      <article class="card">
-        <h3><a href="services/touch-ups/">Touch-ups</a></h3>
-        <p class="price">From $300</p>
-        <p>Yearly color refresh for existing clients</p>
-        <a class="btn btn-secondary" href="services/touch-ups/yearly-touch-up/">Yearly Touch-Up</a>
       </article>
     </div>
   </div>
 </section>
 
-<section class="section" id="why-us">
+<section class="section section--elegant" id="why-us">
   <div class="container">
-    <h2>Why Choose Adriana's PMU for Permanent Makeup?</h2>
+    <p class="section-label section-label--center">Why Adriana's</p>
+    <h2 class="heading-centered">Why Choose Adriana's PMU for Permanent Makeup?</h2>
     <p class="direct-answer">Master PMU Artist Adriana Souza Santos creates natural-looking results fully customized to each client's facial features—never a one-size-fits-all approach.</p>
     <div class="stats-grid">
       <div><span class="stat-number">20+</span><span class="stat-label">Years experience</span></div>
@@ -193,9 +261,10 @@ home_body = """
   </div>
 </section>
 
-<section class="section section-alt" id="locations">
+<section class="section section-alt section--elegant" id="locations">
   <div class="container">
-    <h2>Where Are Adriana's PMU Locations?</h2>
+    <p class="section-label section-label--center">Visit Us</p>
+    <h2 class="heading-centered">Where Are Adriana's PMU Locations?</h2>
     <div class="location-grid">
       <article class="location-card">
         <h3>Wilmington, Massachusetts</h3>
@@ -214,32 +283,45 @@ home_body = """
   </div>
 </section>
 
-<section class="section" id="reviews">
+<section class="section section--elegant" id="reviews">
   <div class="container">
-    <h2>What Do Clients Say About Adriana's PMU?</h2>
+    <p class="section-label section-label--center">Testimonials</p>
+    <h2 class="heading-centered">What Do Clients Say About Adriana's PMU?</h2>
     <div class="reviews-track">
       <article class="review-card"><div class="review-stars">★★★★★</div><p>"Natural brows that look like my own hair. Adriana listened to exactly what I wanted."</p><cite>— Client, Wilmington MA</cite></article>
       <article class="review-card"><div class="review-stars">★★★★★</div><p>"Professional, clean studio and beautiful lip blush results. Worth every penny."</p><cite>— Client, North Shore MA</cite></article>
       <article class="review-card"><div class="review-stars">★★★★★</div><p>"20 years of experience shows. Custom shape and color—not a template."</p><cite>— Client, Andover MA</cite></article>
     </div>
-    <p style="margin-top:1.5rem"><a href="https://maps.app.goo.gl/oJRNewzwwWACAera6" rel="noopener">Read 174+ Google reviews</a> · <a href="portfolio.html">View portfolio</a></p>
+    <p style="margin-top:1.5rem"><a href="https://maps.app.goo.gl/oJRNewzwwWACAera6" rel="noopener">Read 174+ Google reviews</a> · <a href="portfolio.html">View full portfolio</a></p>
   </div>
 </section>
 
-<section class="section section-alt" id="academy">
+<section class="section section-alt section--elegant" id="portfolio-preview">
   <div class="container">
-    <h2>Looking to Become a Permanent Makeup Artist?</h2>
+    <p class="section-label section-label--center">Real Results</p>
+    <h2 class="heading-centered">Permanent Makeup Before and After Results</h2>
+    <p class="direct-answer">Real client results from Nano Brows, Microblading, Lip Blush, and Eyeliner at our Wilmington and Salem studios.</p>
+    {portfolio_gallery_html(0, limit=8)}
+    <p style="margin-top:1.5rem"><a class="btn btn-secondary" href="portfolio.html">View full portfolio</a></p>
+  </div>
+</section>
+
+<section class="section section--elegant section--cta" id="academy">
+  <div class="container cta-panel">
+    <p class="section-label section-label--center">Academy</p>
+    <h2 class="heading-centered">Looking to Become a Permanent Makeup Artist?</h2>
     <p>Adriana's PMU Academy offers 100-hour fundamental training, hands-on apprenticeship, and VIP masterclass at our Wilmington MA studio.</p>
     <a class="btn btn-primary" href="academy/">Explore Training Programs</a>
   </div>
 </section>
 """
 
+
 write("index.html", shell(
     "Permanent Makeup Studio & Academy | Wilmington MA & Salem NH | Adriana's PMU",
     "Master PMU Artist with 20+ years, 5,000+ procedures. Nano Brows, Microblading, Lip Blush in Wilmington MA & Salem NH. Book consultation.",
     "Permanent Makeup Studio and Academy in Wilmington, MA & Salem, NH",
-    home_body, 0))
+    home_body(), 0))
 
 # Service definitions for generator
 SERVICES = {
@@ -320,7 +402,9 @@ def service_hub_card(slug):
         f'<a href="{info["cat"]}/{slug}/{c}.html">{CITIES[c]["city"]}, {CITIES[c]["region"]}</a>'
         for c in CITIES
     )
-    return f"""<article class="card">
+    thumb = img_tag(service_image_path(slug), info["name"], 1, "card-thumb")
+    return f"""<article class="card card-has-img">
+      <a href="{url}" class="card-img-link">{thumb}</a>
       {hero_badge}
       <h3><a href="{url}">{info["name"]}</a></h3>
       <p>{info["answer"]}</p>
@@ -361,13 +445,17 @@ def service_page(slug, info):
         f'<a class="btn btn-secondary" href="{c}.html">Book in {CITIES[c]["city"]}, {CITIES[c]["region"]}</a>'
         for c in CITIES)
 
+    svc_img = img_tag(service_image_path(slug), info["name"], 3, "service-hero-img")
     body = f"""
-<section class="page-hero"><div class="container">
+<section class="page-hero page-hero--split"><div class="container hero-grid">
+  <div>
   <h1>{info["h1"]}</h1>
   <p class="direct-answer">{info["answer"]}</p>
   {price_html}
   <div class="city-buttons">{city_btns}</div>
   <a class="btn btn-primary" href="{depth_to_base(3)}contact.html">Book Consultation ($50)</a>
+  </div>
+  <div class="hero-visual">{svc_img}</div>
 </div></section>
 <section class="section"><div class="container">
   <h2>How Does {info["name"]} Differ from Similar Services?</h2>
@@ -404,7 +492,9 @@ for slug, info in SERVICES.items():
 # Category hubs
 for cat, title, items in CATEGORY_ORDER:
     cards = "".join(
-        f'<article class="card"><h3><a href="{s}/">{SERVICES[s]["name"]}</a></h3><p>{SERVICES[s]["answer"][:80]}...</p></article>'
+        f'<article class="card card-has-img"><a href="{s}/" class="card-img-link">'
+        f'{img_tag(service_image_path(s), SERVICES[s]["name"], 2, "card-thumb")}</a>'
+        f'<h3><a href="{s}/">{SERVICES[s]["name"]}</a></h3><p>{SERVICES[s]["answer"][:120]}...</p></article>'
         for s in items)
     body = f'<section class="page-hero"><div class="container"><h1>{title}</h1><p class="direct-answer">Professional {title.lower()} in Wilmington MA and Salem NH.</p></div></section><section class="section"><div class="container"><div class="card-grid">{cards}</div></div></section>'
     write(f"services/{cat}/index.html", shell(title + " | Adriana's PMU", title, title, body, 2))
@@ -444,11 +534,13 @@ write("academy/index.html", shell(
     "PMU Academy | Permanent Makeup Training Massachusetts",
     "100-hour fundamental class, apprenticeship, VIP masterclass.",
     "Adriana's PMU Academy: Permanent Makeup Training in Massachusetts",
-    """<section class="page-hero"><div class="container"><h1>Adriana's PMU Academy</h1>
+    f"""<section class="page-hero"><div class="container"><h1>Adriana's PMU Academy</h1>
     <p class="direct-answer">Train with a Master Artist who has taught since 2017.</p></div></section>
     <section class="section"><div class="container card-grid">
-    <article class="card"><h3><a href="pmu-100h-fundamental.html">100-Hour Fundamental</a></h3><p class="price">$7,000</p><p>In-person professional PMU training.</p></article>
-    <article class="card"><h3><a href="pmu-apprenticeship.html">Apprenticeship</a></h3><p class="price">$700/month</p><p>Hands-on apprenticeship program.</p></article>
+    <article class="card card-has-img"><a href="pmu-100h-fundamental.html" class="card-img-link">{img_tag("academy/pmu-100h.jpg", "100-hour PMU training class", 1, "card-thumb")}</a>
+    <h3><a href="pmu-100h-fundamental.html">100-Hour Fundamental</a></h3><p class="price">$7,000</p><p>In-person professional PMU training.</p></article>
+    <article class="card card-has-img"><a href="pmu-apprenticeship.html" class="card-img-link">{img_tag("academy/apprenticeship.jpg", "PMU apprenticeship program", 1, "card-thumb")}</a>
+    <h3><a href="pmu-apprenticeship.html">Apprenticeship</a></h3><p class="price">$700/month</p><p>Hands-on apprenticeship program.</p></article>
     <article class="card"><h3><a href="vip-masterclass.html">VIP Masterclass</a></h3><p>Custom advanced training by request.</p></article>
     </div></section>""", 1))
 
@@ -457,18 +549,21 @@ for course, title, price, desc in [
     ("pmu-apprenticeship", "Permanent Makeup Apprenticeship", "$700/month", "Hands-on apprenticeship at Wilmington MA studio."),
     ("vip-masterclass", "VIP Permanent Makeup Masterclass", "Contact for pricing", "Custom advanced training for experienced artists."),
 ]:
+    acad_img = {"pmu-100h-fundamental": "academy/pmu-100h.jpg", "pmu-apprenticeship": "academy/apprenticeship.jpg"}.get(course)
+    img_block = f'<div class="hero-visual">{img_tag(acad_img, title, 1, "service-hero-img")}</div>' if acad_img else ""
     write(f"academy/{course}.html", shell(title, desc, title,
-        f'<section class="page-hero"><div class="container"><h1>{title}</h1><p class="pricing-badge">{price}</p><p>{desc}</p><a class="btn btn-primary" href="../contact.html">Apply Now</a></div></section>', 1))
+        f'<section class="page-hero page-hero--split"><div class="container hero-grid"><div><h1>{title}</h1><p class="pricing-badge">{price}</p><p>{desc}</p><a class="btn btn-primary" href="../contact.html">Apply Now</a></div>{img_block}</div></section>', 1))
 
 # Support pages
 write("about.html", shell(
     "About Adriana Souza Santos | Master PMU Artist",
     "20+ years, 5,000+ procedures, founder of Adriana's PMU and Academy.",
     "About Adriana Souza Santos: Master Permanent Makeup Artist",
-    """<section class="page-hero"><div class="container">
-    <h1>About Adriana Souza Santos</h1>
+    f"""<section class="page-hero page-hero--split"><div class="container hero-grid">
+    <div><h1>About Adriana Souza Santos</h1>
     <p class="direct-answer">Master Permanent Makeup Artist with 20+ years of experience and 5,000+ procedures performed. Founder of Adriana's PMU and educator since 2017.</p>
-    <p class="fact-layer">Licensed under Town of Wilmington Business Certificate #26-26. Women-owned business. LGBTQ+ friendly.</p>
+    <p class="fact-layer">Licensed under Town of Wilmington Business Certificate #26-26. Women-owned business. LGBTQ+ friendly.</p></div>
+    <div class="hero-visual">{img_tag("about-adriana.jpg", "Adriana Souza Santos — Master Permanent Makeup Artist", 0, "hero-img")}</div>
     </div></section>""", 0))
 
 write("contact.html", shell(
@@ -501,7 +596,9 @@ write("faq.html", shell(
     </div></section>""", 0))
 
 write("portfolio.html", shell("Portfolio | Before & After PMU", "Real client permanent makeup results.", "Permanent Makeup Before & After Results",
-    '<section class="page-hero"><div class="container"><h1>Permanent Makeup Before & After Results</h1><p>Portfolio gallery—add client photos before launch.</p></div></section>', 0))
+    f'<section class="page-hero"><div class="container"><h1>Permanent Makeup Before & After Results</h1>'
+    f'<p class="direct-answer">Real Nano Brows, Microblading, Lip Blush, and Eyeliner results from Adriana\'s PMU studios.</p></div></section>'
+    f'<section class="section"><div class="container">{portfolio_gallery_html(0)}</div></section>', 0))
 
 write("payment-plan.html", shell("Payment Plan | PMU Financing MA & NH", "Financing options for permanent makeup.", "Payment Plan for Permanent Makeup",
     '<section class="page-hero"><div class="container"><h1>Payment Plan for Permanent Makeup Services</h1><p>Flexible payment options available. <a href="contact.html">Contact us</a> for details.</p></div></section>', 0))

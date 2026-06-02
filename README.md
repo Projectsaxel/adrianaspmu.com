@@ -19,6 +19,16 @@ python3 -m http.server 8080
 
 Abra http://localhost:8080
 
+## Imagens
+
+Origem: `wp-content/uploads` do WordPress (copiadas para `assets/images/`).
+
+```bash
+# Re-sincronizar do WordPress local
+bash scripts/sync_images.sh "/Users/marceloneves/Downloads/adrianaspmu.com/wp-content/uploads"
+python3 scripts/generate_pages.py
+```
+
 ## Regenerar páginas de serviço
 
 ```bash
