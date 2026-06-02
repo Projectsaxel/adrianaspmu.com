@@ -78,12 +78,7 @@ const NAV = [
   },
   { label: "About", href: "/about.html" },
   { label: "Contact", href: "/contact.html" },
-  {
-    label: "More",
-    children: [
-      { label: "FAQ", href: "/faq.html" },
-    ],
-  },
+  { label: "FAQ", href: "/faq.html" },
 ];
 
 const HERO_SERVICES = [
