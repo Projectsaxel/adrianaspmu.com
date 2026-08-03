@@ -53,6 +53,15 @@ const SITE = {
         "Salem NH, Derry, Windham, Methuen MA, Lawrence MA, Hampstead, Plaistow, and the I-93 corridor",
       tag: "New Location",
     },
+    peabody: {
+      name: "Peabody, MA",
+      street: "39 Cross Street, Suite 206",
+      city: "Peabody",
+      region: "MA",
+      zip: "01960",
+      phone: "(781) 853-8063",
+      tag: "Academy",
+    },
   },
   stats: {
     years: "20+",

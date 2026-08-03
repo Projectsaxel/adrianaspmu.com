@@ -124,21 +124,65 @@ def portfolio_alt(filename: str) -> str:
     return f"Permanent makeup before and after — {name}"
 
 
-def portfolio_gallery_html(depth: int, limit=None) -> str:
+PORTFOLIO_CATEGORIES = [("eyebrows", "Eyebrows"), ("lips", "Lips"), ("eyeliner", "Eyeliner")]
+
+
+def portfolio_category(filename: str) -> str:
+    lowered = filename.lower()
+    for slug, _label in PORTFOLIO_CATEGORIES:
+        if slug in lowered:
+            return slug
+    return "other"
+
+
+def portfolio_filters_html(files) -> str:
+    present = [c for c in PORTFOLIO_CATEGORIES if any(portfolio_category(f) == c[0] for f in files)]
+    if len(present) < 2:
+        return ""
+    buttons = ['<button type="button" class="portfolio-filter is-active" data-filter="all" aria-pressed="true">All</button>']
+    buttons += [
+        f'<button type="button" class="portfolio-filter" data-filter="{slug}" aria-pressed="false">{label}</button>'
+        for slug, label in present
+    ]
+    return (
+        '<div class="portfolio-filters" role="group" aria-label="Filter results by category">'
+        f'{"".join(buttons)}</div>'
+    )
+
+
+def portfolio_sample(files, limit):
+    """Round-robin across categories so every filter has results."""
+    buckets = {}
+    for fn in files:
+        buckets.setdefault(portfolio_category(fn), []).append(fn)
+    order = [c for c, _ in PORTFOLIO_CATEGORIES if c in buckets]
+    order += [c for c in buckets if c not in order]
+    picked, i = [], 0
+    while len(picked) < limit and any(i < len(buckets[c]) for c in order):
+        for c in order:
+            if i < len(buckets[c]) and len(picked) < limit:
+                picked.append(buckets[c][i])
+        i += 1
+    return picked
+
+
+def portfolio_gallery_html(depth: int, limit=None, filters=False) -> str:
     files = portfolio_files()
     if limit:
-        files = files[:limit]
+        files = portfolio_sample(files, limit) if filters else files[:limit]
     if not files:
         return "<p>Portfolio images loading soon.</p>"
     items = []
     for fn in files:
         alt = portfolio_alt(fn)
         items.append(
-            f'<button type="button" class="portfolio-item" aria-label="View larger: {alt}">'
+            f'<button type="button" class="portfolio-item" data-category="{portfolio_category(fn)}" '
+            f'aria-label="View larger: {alt}">'
             f'{img_tag(f"portfolio/{fn}", alt, depth, "portfolio-img")}'
             f"</button>"
         )
-    return f'<div class="portfolio-grid">{"".join(items)}</div>'
+    grid = f'<div class="portfolio-grid">{"".join(items)}</div>'
+    return f"{portfolio_filters_html(files)}{grid}" if filters else grid
 
 
 FAVICON = """
@@ -202,9 +246,7 @@ def write(rel_path, content):
 # --- HOME ---
 def home_body():
     service_cards = "".join(
-        home_service_card(slug)
-        for _cat, _title, slugs in CATEGORY_ORDER
-        for slug in slugs
+        home_category_card(cat) for cat, _title, _slugs in CATEGORY_ORDER
     )
     return f"""
 <section class="hero hero--premium">
@@ -216,13 +258,12 @@ def home_body():
       <p class="direct-answer">Master Permanent Makeup Artist Adriana Souza Santos with 20+ years and 5,000+ procedures. Nano Brows, Microblading, Lip Blush, and Eyeliner at two New England locations.</p>
       <div class="hero-badges">
         <span class="badge">Licensed PMU Artist</span>
-        <span class="badge">LGBTQ+ Friendly</span>
         <span class="badge">Women-Owned</span>
         <span class="badge">Wheelchair Accessible</span>
         <span class="badge">4.9 ★ (174 reviews)</span>
       </div>
       <div class="hero-ctas">
-        <a class="btn btn-primary" href="contact.html">Book Your Consultation ($50)</a>
+        <a class="btn btn-primary" href="contact.html">Book Your Consultation</a>
         <a class="btn btn-secondary" href="services/">Explore Services</a>
       </div>
     </div>
@@ -245,21 +286,12 @@ def home_body():
   </div>
 </section>
 
-<section class="section section--cta" id="flash-sale">
-  <div class="container cta-panel">
-    <p class="section-label section-label--center">Limited Time</p>
-    <h2 class="heading-centered">Holiday Flash Sale — Brows or Lips for $349</h2>
-    <p>Limited slots at our Wilmington MA and Salem NH studios. Book yours before they fill up!</p>
-    <a class="btn btn-primary" href="flash-sale/">View Flash Sale</a>
-  </div>
-</section>
-
 <section class="section section--elegant" id="what-is-pmu">
   <div class="container container--narrow">
     <p class="section-label section-label--center">The Art of Effortless Beauty</p>
     <h2 class="heading-centered">What Is Permanent Makeup?</h2>
     <p class="direct-answer">Permanent makeup, also called cosmetic tattooing or micropigmentation, places color pigment beneath the skin to enhance brows, lips, or eyeliner. Results last 1 to 3 years and save time on daily makeup.</p>
-    <p class="fact-layer">PMU procedures use single-use sterile needles. Adriana's studio is licensed under Town of Wilmington Business Certificate #26-26 and complies with Salem NH Body Art Regulations Chapter 433.</p>
+    <p class="fact-layer">PMU procedures use single-use sterile needles. Adriana is licensed in Wilmington, MA, Salem, NH, and Peabody, MA — under Town of Wilmington Business Certificate #26-26 and in compliance with Salem NH Body Art Regulations Chapter 433.</p>
   </div>
 </section>
 
@@ -304,6 +336,13 @@ def home_body():
         <p>Hours: Mon–Sat 10am–6pm. Serving Salem NH, Derry, Windham, Methuen MA, and Lawrence MA.</p>
         <a class="btn btn-primary" href="locations/salem-nh.html">Salem Studio</a>
       </article>
+      <article class="location-card">
+        <span class="tag">Academy</span>
+        <h3>Peabody, Massachusetts</h3>
+        <p><strong>39 Cross Street, Suite 206</strong><br>Peabody, MA 01960<br><a href="tel:+17818538063">(781) 853-8063</a></p>
+        <p>Adriana's Academy — our training division, where the 100-hour fundamental course, apprenticeship, and VIP masterclass are taught.</p>
+        <a class="btn btn-primary" href="academy/">Adriana's Academy</a>
+      </article>
     </div>
   </div>
 </section>
@@ -341,7 +380,7 @@ def home_body():
     <p class="section-label section-label--center">Real Results</p>
     <h2 class="heading-centered">Permanent Makeup Before and After Results</h2>
     <p class="direct-answer">Real client results from Nano Brows, Microblading, Lip Blush, and Eyeliner at our Wilmington and Salem studios.</p>
-    {portfolio_gallery_html(0, limit=8)}
+    {portfolio_gallery_html(0, limit=8, filters=True)}
     <p style="margin-top:1.5rem"><a class="btn btn-secondary" href="portfolio.html">View full portfolio</a></p>
   </div>
 </section>
@@ -350,7 +389,7 @@ def home_body():
   <div class="container cta-panel">
     <p class="section-label section-label--center">Academy</p>
     <h2 class="heading-centered">Looking to Become a Permanent Makeup Artist?</h2>
-    <p>Adriana's PMU Academy offers 100-hour fundamental training, hands-on apprenticeship, and VIP masterclass at our Wilmington MA studio.</p>
+    <p>Adriana's PMU Academy offers 100-hour fundamental training, hands-on apprenticeship, and VIP masterclass at our academy in Peabody, MA.</p>
     <a class="btn btn-primary" href="academy/">Explore Training Programs</a>
   </div>
 </section>
@@ -620,6 +659,31 @@ def home_service_card(slug):
     </article>"""
 
 
+CATEGORY_CARDS = {
+    "eyebrows": ("Eyebrows", "nano-brows",
+                 "Nano Brows, Microblading, Powder Brows and combination techniques, shaped to your natural features."),
+    "lips": ("Lips", "lip-blush",
+             "Lip Blush and dark lip neutralization for soft, natural color and definition."),
+    "eyeliner": ("Eyeliner", "top-eyeliner",
+                 "Top, bottom, smokey and combo eyeliner for definition that lasts."),
+    "combos": ("Combos", "eyebrows-lips-combo",
+               "Bundle brows and lips in one visit and save on the full transformation."),
+    "touch-ups": ("Touch-Ups", "yearly-touch-up",
+                  "Yearly color refresh to keep existing permanent makeup looking fresh."),
+}
+
+
+def home_category_card(cat):
+    label, img_slug, blurb = CATEGORY_CARDS[cat]
+    url = f"services/{cat}/"
+    thumb = img_tag(service_image_path(img_slug), f"{label} permanent makeup", 0, "card-thumb")
+    return f"""<article class="card card-has-img">
+      <a href="{url}" class="card-img-link">{thumb}</a>
+      <h3><a href="{url}">{label}</a></h3>
+      <p>{blurb}</p>
+    </article>"""
+
+
 def service_hub_card(slug):
     info = SERVICES[slug]
     price = info.get("price")
@@ -840,8 +904,10 @@ write("contact.html", shell(
     """<section class="page-hero"><div class="container"><h1>Contact Adriana's Permanent Makeup</h1></div></section>
     <section class="section"><div class="container" style="max-width:560px">
     <form id="contact-form">
-      <div class="form-group"><label for="name">Name</label><input id="name" name="name" required></div>
-      <div class="form-group"><label for="email">Email</label><input id="email" name="email" type="email" required></div>
+      <p class="form-note"><span class="req" aria-hidden="true">*</span> Required fields</p>
+      <div class="form-group"><label for="name">Name <span class="req" aria-hidden="true">*</span></label><input id="name" name="name" required></div>
+      <div class="form-group"><label for="email">Email <span class="req" aria-hidden="true">*</span></label><input id="email" name="email" type="email" required></div>
+      <div class="form-group"><label for="phone">Phone <span class="req" aria-hidden="true">*</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="(781) 555-0123" required></div>
       <div class="form-group"><label for="location">Preferred location</label>
         <select id="location" name="location"><option>Wilmington, MA</option><option>Salem, NH</option></select></div>
       <div class="form-group"><label for="message">Message</label><textarea id="message" name="message"></textarea></div>
@@ -865,7 +931,7 @@ write("faq.html", shell(
 write("portfolio.html", shell("Portfolio | Before & After PMU", "Real client permanent makeup results.", "Permanent Makeup Before & After Results",
     f'<section class="page-hero"><div class="container"><h1>Permanent Makeup Before & After Results</h1>'
     f'<p class="direct-answer">Real Nano Brows, Microblading, Lip Blush, and Eyeliner results from Adriana\'s PMU studios.</p></div></section>'
-    f'<section class="section"><div class="container">{portfolio_gallery_html(0)}</div></section>', 0))
+    f'<section class="section"><div class="container">{portfolio_gallery_html(0, filters=True)}</div></section>', 0))
 
 write("payment-plan.html", shell("Payment Plan | PMU Financing MA & NH", "Financing options for permanent makeup.", "Payment Plan for Permanent Makeup",
     '<section class="page-hero"><div class="container"><h1>Payment Plan for Permanent Makeup Services</h1><p>Flexible payment options available. <a href="contact.html">Contact us</a> for details.</p></div></section>', 0))

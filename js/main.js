@@ -50,7 +50,6 @@
     el.innerHTML = `
       <div class="promo-banner">
         <span>Limited-time offer: Initial session + perfection touch-up included on select services.</span>
-        <a href="${resolvePath("/contact.html")}">Book consultation ($50)</a>
       </div>
       <header class="site-header">
         <div class="container header-inner">
@@ -110,6 +109,7 @@
 
     const w = SITE.locations.wilmington;
     const s = SITE.locations.salem;
+    const p = SITE.locations.peabody;
 
     el.innerHTML = `
       <footer class="site-footer">
@@ -146,6 +146,9 @@
               <h4>Salem, NH</h4>
               <p>${s.street}, ${s.city}, ${s.region} ${s.zip}<br>
               <a href="tel:+19782237496">${s.phone}</a></p>
+              <h4>Academy — Peabody, MA</h4>
+              <p>${p.street}, ${p.city}, ${p.region} ${p.zip}<br>
+              <a href="tel:+17818538063">${p.phone}</a></p>
             </div>
           </div>
           <div class="footer-bottom">
@@ -196,6 +199,32 @@
     });
   }
 
+  function initPortfolioFilters() {
+    document.querySelectorAll(".portfolio-filters").forEach((bar) => {
+      const grid = bar.nextElementSibling;
+      if (!grid?.classList.contains("portfolio-grid")) return;
+
+      const buttons = bar.querySelectorAll(".portfolio-filter");
+      const items = grid.querySelectorAll(".portfolio-item");
+
+      bar.addEventListener("click", (e) => {
+        const btn = e.target.closest(".portfolio-filter");
+        if (!btn) return;
+        const filter = btn.dataset.filter;
+
+        buttons.forEach((b) => {
+          const active = b === btn;
+          b.classList.toggle("is-active", active);
+          b.setAttribute("aria-pressed", active);
+        });
+
+        items.forEach((item) => {
+          item.hidden = filter !== "all" && item.dataset.category !== filter;
+        });
+      });
+    });
+  }
+
   function initPortfolioLightbox() {
     const triggers = document.querySelectorAll(".portfolio-item");
     if (!triggers.length) return;
@@ -228,7 +257,7 @@
       const thumb = item.querySelector("img");
       if (!thumb) return;
       const idx = items.length;
-      items.push({ src: thumb.src, alt: thumb.alt });
+      items.push({ src: thumb.src, alt: thumb.alt, el: item });
       item.addEventListener("click", () => openAt(idx));
     });
 
@@ -261,7 +290,10 @@
     }
 
     function step(delta) {
-      index = (index + delta + items.length) % items.length;
+      const visible = items.map((it, i) => (it.el.hidden ? -1 : i)).filter((i) => i >= 0);
+      if (!visible.length) return;
+      const pos = visible.indexOf(index);
+      index = visible[pos === -1 ? 0 : (pos + delta + visible.length) % visible.length];
       show();
     }
 
@@ -284,6 +316,7 @@
     initFaq();
     initReviewsNav();
     initContactForm();
+    initPortfolioFilters();
     initPortfolioLightbox();
   });
 })();
