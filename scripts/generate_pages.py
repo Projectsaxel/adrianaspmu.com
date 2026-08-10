@@ -89,6 +89,19 @@ ORG_SCHEMA = """{
 FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">'
 
 
+SITE_URL = "https://adrianaspmu.com"
+
+
+def public_url(rel_path: str) -> str:
+    """Final public URL of a generated file: dir pages end with a trailing slash."""
+    rel = rel_path.replace("\\", "/")
+    if rel == "index.html":
+        return f"{SITE_URL}/"
+    if rel.endswith("/index.html"):
+        return f"{SITE_URL}/{rel[:-len('index.html')]}"
+    return f"{SITE_URL}/{rel}"
+
+
 def depth_to_base(depth: int) -> str:
     return "../" * depth if depth else "./"
 
@@ -236,10 +249,21 @@ def shell(title, desc, h1, body, depth=0, extra_schema="", breadcrumbs=None, bod
 </html>"""
 
 
+def add_canonical(rel_path, content):
+    """Insert the self-referencing canonical unless the page declares its own."""
+    if 'rel="canonical"' in content:
+        return content
+    marker = '<meta name="description"'
+    i = content.index(marker)
+    eol = content.index("\n", i)
+    tag = f'\n  <link rel="canonical" href="{public_url(rel_path)}">'
+    return content[:eol] + tag + content[eol:]
+
+
 def write(rel_path, content):
     path = ROOT / rel_path
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(content, encoding="utf-8")
+    path.write_text(add_canonical(rel_path, content), encoding="utf-8")
     print(f"  {rel_path}")
 
 
@@ -263,7 +287,7 @@ def home_body():
         <span class="badge">4.9 ★ (174 reviews)</span>
       </div>
       <div class="hero-ctas">
-        <a class="btn btn-primary" href="contact.html">Book Your Consultation</a>
+        <a class="btn btn-primary" href="contact/">Book Your Consultation</a>
         <a class="btn btn-secondary" href="services/">Explore Services</a>
       </div>
     </div>
@@ -327,14 +351,14 @@ def home_body():
         <h3>Wilmington, Massachusetts</h3>
         <p><strong>211 Lowell Street, Suite F</strong><br>Wilmington, MA 01887<br><a href="tel:+17818538063">(781) 853-8063</a></p>
         <p>Hours: Mon–Sat 10am–6pm. Serving Wilmington, Reading, Andover, North Andover, and the Boston North Shore.</p>
-        <a class="btn btn-primary" href="locations/wilmington-ma.html">Wilmington Studio</a>
+        <a class="btn btn-primary" href="locations/wilmington-ma/">Wilmington Studio</a>
       </article>
       <article class="location-card">
         <span class="tag">New Location</span>
         <h3>Salem, New Hampshire</h3>
         <p><strong>117A Main Street</strong><br>Salem, NH 03079<br><a href="tel:+19782237496">(978) 223-7496</a></p>
         <p>Hours: Mon–Sat 10am–6pm. Serving Salem NH, Derry, Windham, Methuen MA, and Lawrence MA.</p>
-        <a class="btn btn-primary" href="locations/salem-nh.html">Salem Studio</a>
+        <a class="btn btn-primary" href="locations/salem-nh/">Salem Studio</a>
       </article>
       <article class="location-card">
         <span class="tag">Academy</span>
@@ -381,7 +405,7 @@ def home_body():
     <h2 class="heading-centered">Permanent Makeup Before and After Results</h2>
     <p class="direct-answer">Real client results from Nano Brows, Microblading, Lip Blush, and Eyeliner at our Wilmington and Salem studios.</p>
     {portfolio_gallery_html(0, limit=8, filters=True)}
-    <p style="margin-top:1.5rem"><a class="btn btn-secondary" href="portfolio.html">View full portfolio</a></p>
+    <p style="margin-top:1.5rem"><a class="btn btn-secondary" href="portfolio/">View full portfolio</a></p>
   </div>
 </section>
 
@@ -695,7 +719,7 @@ def service_hub_card(slug):
     hero_badge = '<span class="badge">Hero service</span>' if slug in HERO_SLUGS else ""
     url = f'{info["cat"]}/{slug}/'
     loc_links = " · ".join(
-        f'<a href="{info["cat"]}/{slug}/{c}.html">{CITIES[c]["city"]}, {CITIES[c]["region"]}</a>'
+        f'<a href="{info["cat"]}/{slug}/{c}/">{CITIES[c]["city"]}, {CITIES[c]["region"]}</a>'
         for c in CITIES
     )
     thumb = img_tag(service_image_path(slug), info["name"], 1, "card-thumb")
@@ -743,7 +767,7 @@ def service_page(slug, info):
         faq_html = f'<section class="section section-alt" id="faq"><div class="container"><h2>Frequently Asked Questions</h2><div class="faq-list">{items}</div></div></section>'
 
     city_btns = "".join(
-        f'<a class="btn btn-secondary" href="{c}.html">Book in {CITIES[c]["city"]}, {CITIES[c]["region"]}</a>'
+        f'<a class="btn btn-secondary" href="{c}/">Book in {CITIES[c]["city"]}, {CITIES[c]["region"]}</a>'
         for c in CITIES)
 
     sections_fn = RICH_SERVICE_SECTIONS.get(slug)
@@ -752,7 +776,7 @@ def service_page(slug, info):
     else:
         middle = f"""<section class="section"><div class="container">
   <h2>How Does {info["name"]} Differ from Similar Services?</h2>
-  <p class="direct-answer">Each permanent makeup technique is customized to your features. <a href="{base}services/{info["cat"]}/">Explore all {info["cat"]} services</a> or <a href="{base}payment-plan.html">view payment plan options</a>.</p>
+  <p class="direct-answer">Each permanent makeup technique is customized to your features. <a href="{base}services/{info["cat"]}/">Explore all {info["cat"]} services</a> or <a href="{base}payment-plan/">view payment plan options</a>.</p>
 </div></section>"""
 
     cta_html = ""
@@ -796,12 +820,12 @@ def city_combo(slug, info, city_slug):
 <section class="page-hero"><div class="container">
   <h1>{h1}</h1>
   <p class="direct-answer">{info["answer"]} Book at our {c["city"]}, {c["region"]} studio with Master PMU Artist Adriana Souza Santos.</p>
-  <p><strong>Address:</strong> See <a href="{depth_to_base(3)}locations/{city_slug}.html">{c["city"]} location</a></p>
+  <p><strong>Address:</strong> See <a href="{depth_to_base(4)}locations/{city_slug}/">{c["city"]} location</a></p>
   {fresha_book_btn(slug, f'Book in {c["city"]}')}
 </div></section>
 """
-    path = f"services/{info['cat']}/{slug}/{city_slug}.html"
-    write(path, shell(h1 + " | Adriana's PMU", f'{info["name"]} in {c["city"]} {c["region"]}. Licensed Master PMU Artist.', h1, body, 3))
+    path = f"services/{info['cat']}/{slug}/{city_slug}/index.html"
+    write(path, shell(h1 + " | Adriana's PMU", f'{info["name"]} in {c["city"]} {c["region"]}. Licensed Master PMU Artist.', h1, body, 4))
 
 
 print("Generating pages...")
@@ -835,10 +859,10 @@ for city_file, h1, street, phone, area, tag in [
      "Salem NH, Derry, Windham, Methuen MA, Lawrence MA", '<span class="tag">New Location</span>'),
 ]:
     svc_links = "".join(
-        f'<li><a href="../services/{SERVICES[s]["cat"]}/{s}/{city_file}.html">{SERVICES[s]["name"]} in {city_file.replace("-", " ").title().replace("Ma", "MA").replace("Nh", "NH")}</a></li>'
+        f'<li><a href="../../services/{SERVICES[s]["cat"]}/{s}/{city_file}/">{SERVICES[s]["name"]} in {city_file.replace("-", " ").title().replace("Ma", "MA").replace("Nh", "NH")}</a></li>'
         for s in ["nano-brows", "microblading", "powder-brows", "lip-blush"])
     body = f'<section class="page-hero"><div class="container">{tag}<h1>{h1}</h1><p>{street}<br><a href="tel:{phone.replace("(","").replace(")","").replace(" ","").replace("-","")}">{phone}</a></p><p>Serving {area}.</p><ul>{svc_links}</ul></div></section>'
-    write(f"locations/{city_file}.html", shell(h1, h1, h1, body, 1))
+    write(f"locations/{city_file}/index.html", shell(h1, h1, h1, body, 2))
 
 write("locations/index.html", shell(
     "Locations | Wilmington MA & Salem NH",
@@ -846,8 +870,8 @@ write("locations/index.html", shell(
     "Adriana's Permanent Makeup Locations",
     '<section class="page-hero"><div class="container"><h1>Adriana\'s Permanent Makeup Locations: Wilmington MA & Salem NH</h1></div></section>'
     + '<section class="section"><div class="container location-grid">'
-    + '<article class="location-card"><h3><a href="wilmington-ma.html">Wilmington, MA</a></h3></article>'
-    + '<article class="location-card"><h3><a href="salem-nh.html">Salem, NH</a></h3></article></div></section>',
+    + '<article class="location-card"><h3><a href="wilmington-ma/">Wilmington, MA</a></h3></article>'
+    + '<article class="location-card"><h3><a href="salem-nh/">Salem, NH</a></h3></article></div></section>',
     1))
 
 # Academy / Training hub (content from adrianaspmu.com/training/)
@@ -881,12 +905,12 @@ for course, title, price, desc in [
     ("vip-masterclass", "VIP Permanent Makeup Masterclass", "Contact for pricing", "Custom advanced training for experienced artists."),
 ]:
     acad_img = {"pmu-100h-fundamental": "academy/pmu-100h.jpg", "pmu-apprenticeship": "academy/apprenticeship.jpg"}.get(course)
-    img_block = f'<div class="hero-visual">{img_tag(acad_img, title, 1, "service-hero-img")}</div>' if acad_img else ""
-    write(f"academy/{course}.html", shell(title, desc, title,
-        f'<section class="page-hero page-hero--split"><div class="container hero-grid"><div><h1>{title}</h1><p class="pricing-badge">{price}</p><p>{desc}</p><a class="btn btn-primary" href="../contact.html">Apply Now</a></div>{img_block}</div></section>', 1))
+    img_block = f'<div class="hero-visual">{img_tag(acad_img, title, 2, "service-hero-img")}</div>' if acad_img else ""
+    write(f"academy/{course}/index.html", shell(title, desc, title,
+        f'<section class="page-hero page-hero--split"><div class="container hero-grid"><div><h1>{title}</h1><p class="pricing-badge">{price}</p><p>{desc}</p><a class="btn btn-primary" href="../../contact/">Apply Now</a></div>{img_block}</div></section>', 2))
 
 # Support pages
-write("about.html", shell(
+write("about/index.html", shell(
     "About Adriana Souza Santos | Master PMU Artist",
     "20+ years, 5,000+ procedures, founder of Adriana's PMU and Academy.",
     "About Adriana Souza Santos: Master Permanent Makeup Artist",
@@ -894,10 +918,10 @@ write("about.html", shell(
     <div><h1>About Adriana Souza Santos</h1>
     <p class="direct-answer">Master Permanent Makeup Artist with 20+ years of experience and 5,000+ procedures performed. Founder of Adriana's PMU and educator since 2017.</p>
     <p class="fact-layer">Licensed under Town of Wilmington Business Certificate #26-26. Women-owned business. LGBTQ+ friendly.</p></div>
-    <div class="hero-visual">{img_tag("about-adriana.jpg", "Adriana Souza Santos — Master Permanent Makeup Artist", 0, "hero-img")}</div>
-    </div></section>""", 0))
+    <div class="hero-visual">{img_tag("about-adriana.jpg", "Adriana Souza Santos — Master Permanent Makeup Artist", 1, "hero-img")}</div>
+    </div></section>""", 1))
 
-write("contact.html", shell(
+write("contact/index.html", shell(
     "Contact | Book Permanent Makeup Wilmington MA & Salem NH",
     "Book consultation or contact both studio locations.",
     "Contact Adriana's Permanent Makeup",
@@ -915,9 +939,9 @@ write("contact.html", shell(
       <p class="form-message" hidden role="status"></p>
     </form>
     <p style="margin-top:2rem">Wilmington: <a href="tel:+17818538063">(781) 853-8063</a> · Salem: <a href="tel:+19782237496">(978) 223-7496</a></p>
-    </div></section>""", 0))
+    </div></section>""", 1))
 
-write("faq.html", shell(
+write("faq/index.html", shell(
     "Permanent Makeup FAQ | Brows, Lips, Eyeliner",
     "Answers to common permanent makeup questions.",
     "Permanent Makeup FAQ",
@@ -926,15 +950,15 @@ write("faq.html", shell(
     <div class="faq-item"><button type="button">How much does permanent makeup cost?</button><div class="faq-answer"><p>Nano Brows from $650, Microblading and Powder Brows from $550, Lip Blush from $550. See individual service pages for details.</p></div></div>
     <div class="faq-item"><button type="button">Does insurance cover PMU?</button><div class="faq-answer"><p>Permanent makeup is cosmetic and not covered by insurance.</p></div></div>
     <div class="faq-item"><button type="button">Is permanent makeup safe?</button><div class="faq-answer"><p>Yes, when performed by a licensed Master Artist using sterile single-use needles in a compliant studio.</p></div></div>
-    </div></div></section>""", 0))
+    </div></div></section>""", 1))
 
-write("portfolio.html", shell("Portfolio | Before & After PMU", "Real client permanent makeup results.", "Permanent Makeup Before & After Results",
+write("portfolio/index.html", shell("Portfolio | Before & After PMU", "Real client permanent makeup results.", "Permanent Makeup Before & After Results",
     f'<section class="page-hero"><div class="container"><h1>Permanent Makeup Before & After Results</h1>'
     f'<p class="direct-answer">Real Nano Brows, Microblading, Lip Blush, and Eyeliner results from Adriana\'s PMU studios.</p></div></section>'
-    f'<section class="section"><div class="container">{portfolio_gallery_html(0, filters=True)}</div></section>', 0))
+    f'<section class="section"><div class="container">{portfolio_gallery_html(1, filters=True)}</div></section>', 1))
 
-write("payment-plan.html", shell("Payment Plan | PMU Financing MA & NH", "Financing options for permanent makeup.", "Payment Plan for Permanent Makeup",
-    '<section class="page-hero"><div class="container"><h1>Payment Plan for Permanent Makeup Services</h1><p>Flexible payment options available. <a href="contact.html">Contact us</a> for details.</p></div></section>', 0))
+write("payment-plan/index.html", shell("Payment Plan | PMU Financing MA & NH", "Financing options for permanent makeup.", "Payment Plan for Permanent Makeup",
+    '<section class="page-hero"><div class="container"><h1>Payment Plan for Permanent Makeup Services</h1><p>Flexible payment options available. <a href="../contact/">Contact us</a> for details.</p></div></section>', 1))
 
 
 def flash_sale_body(depth=1):
@@ -980,7 +1004,7 @@ def flash_sale_body(depth=1):
     <h2>Ready to book your $349 Flash Sale?</h2>
     <p>Wilmington MA and Salem NH — limited appointments available.</p>
     <a class="btn btn-primary" href="{fresha_book_url("flash-sale")}" target="_blank" rel="noopener noreferrer">Book Now on Fresha</a>
-    <p style="margin-top:1rem"><a href="{base}contact.html">Contact us</a> with questions.</p>
+    <p style="margin-top:1rem"><a href="{base}contact/">Contact us</a> with questions.</p>
   </div>
 </section>"""
 
@@ -994,29 +1018,17 @@ write("flash-sale/index.html", shell(
     breadcrumbs=[("Home", ""), ("Flash Sale", "flash-sale/")],
 ))
 
-write("privacy-policy.html", shell("Privacy Policy", "Privacy policy.", "Privacy Policy",
-    '<section class="section"><div class="container"><h1>Privacy Policy</h1><p>Content to be finalized before publish.</p></div></section>', 0))
+write("privacy-policy/index.html", shell("Privacy Policy", "Privacy policy.", "Privacy Policy",
+    '<section class="section"><div class="container"><h1>Privacy Policy</h1><p>Content to be finalized before publish.</p></div></section>', 1))
 
-write("terms-of-use.html", shell("Terms of Use", "Terms of use.", "Terms of Use",
-    '<section class="section"><div class="container"><h1>Terms of Use</h1><p>Content to be finalized before publish.</p></div></section>', 0))
+write("terms-of-use/index.html", shell("Terms of Use", "Terms of use.", "Terms of Use",
+    '<section class="section"><div class="container"><h1>Terms of Use</h1><p>Content to be finalized before publish.</p></div></section>', 1))
 
 write("index.html", shell(
     "Permanent Makeup Studio & Academy | Wilmington MA & Salem NH | Adriana's PMU",
     "Master PMU Artist with 20+ years, 5,000+ procedures. Nano Brows, Microblading, Lip Blush in Wilmington MA & Salem NH. Book consultation.",
     "Permanent Makeup Studio and Academy in Wilmington, MA & Salem, NH",
     home_body(), 0))
-
-SITE_URL = "https://adrianaspmu.com"
-
-
-def public_url(rel_path: str) -> str:
-    rel = rel_path.replace("\\", "/")
-    if rel == "index.html":
-        return f"{SITE_URL}/"
-    if rel.endswith("/index.html"):
-        return f"{SITE_URL}/{rel[:-len('index.html')]}"
-    return f"{SITE_URL}/{rel}"
-
 
 def sitemap_meta(rel_path: str) -> tuple[str, str]:
     if rel_path == "index.html":
@@ -1025,12 +1037,10 @@ def sitemap_meta(rel_path: str) -> tuple[str, str]:
         return "0.9", "weekly"
     if rel_path in ("services/index.html", "locations/index.html"):
         return "0.9", "monthly"
-    if rel_path.endswith("/wilmington-ma.html") or rel_path.endswith("/salem-nh.html"):
+    if rel_path.endswith("/wilmington-ma/index.html") or rel_path.endswith("/salem-nh/index.html"):
         return "0.85", "monthly"
-    if rel_path in ("privacy-policy.html", "terms-of-use.html"):
+    if rel_path in ("privacy-policy/index.html", "terms-of-use/index.html"):
         return "0.3", "yearly"
-    if rel_path.endswith("/index.html") and rel_path.count("/") >= 2:
-        return "0.8", "monthly"
     return "0.8", "monthly"
 
 
@@ -1111,27 +1121,27 @@ def write_llms():
 
 ## Core Pages
 - [Home]({SITE_URL}/): Permanent Makeup Studio and Academy in Wilmington MA & Salem NH
-- [About]({SITE_URL}/about.html): Master PMU Artist with 20+ years and 5,000+ procedures
+- [About]({SITE_URL}/about/): Master PMU Artist with 20+ years and 5,000+ procedures
 - [Services]({SITE_URL}/services/): All permanent makeup services in MA and NH
 - [Locations]({SITE_URL}/locations/): Wilmington MA + Salem NH studios
 - [Academy]({SITE_URL}/academy/): Permanent Makeup training programs
 - [Training]({SITE_URL}/training/): Academy hub (mirror of /academy/)
-- [Contact]({SITE_URL}/contact.html): Studio contact and consultation
-- [FAQ]({SITE_URL}/faq.html): Permanent makeup frequently asked questions
-- [Portfolio]({SITE_URL}/portfolio.html): Before and after PMU results
+- [Contact]({SITE_URL}/contact/): Studio contact and consultation
+- [FAQ]({SITE_URL}/faq/): Permanent makeup frequently asked questions
+- [Portfolio]({SITE_URL}/portfolio/): Before and after PMU results
 - [Flash Sale]({SITE_URL}/flash-sale/): Limited-time brows or lips PMU for $349
-- [Privacy Policy]({SITE_URL}/privacy-policy.html)
-- [Terms of Use]({SITE_URL}/terms-of-use.html)
+- [Privacy Policy]({SITE_URL}/privacy-policy/)
+- [Terms of Use]({SITE_URL}/terms-of-use/)
 
 {chr(10).join(service_lines)}
 ## Locations
-- [Wilmington MA]({SITE_URL}/locations/wilmington-ma.html): 211 Lowell Street, Suite F — (781) 853-8063
-- [Salem NH]({SITE_URL}/locations/salem-nh.html): 117A Main Street — (978) 223-7496
+- [Wilmington MA]({SITE_URL}/locations/wilmington-ma/): 211 Lowell Street, Suite F — (781) 853-8063
+- [Salem NH]({SITE_URL}/locations/salem-nh/): 117A Main Street — (978) 223-7496
 
 ## Academy
-- [100-Hour Fundamental]({SITE_URL}/academy/pmu-100h-fundamental.html): $7,000 in-person training
-- [Apprenticeship]({SITE_URL}/academy/pmu-apprenticeship.html): $700/month hands-on program
-- [VIP Masterclass]({SITE_URL}/academy/vip-masterclass.html): Advanced training for experienced artists
+- [100-Hour Fundamental]({SITE_URL}/academy/pmu-100h-fundamental/): $7,000 in-person training
+- [Apprenticeship]({SITE_URL}/academy/pmu-apprenticeship/): $700/month hands-on program
+- [VIP Masterclass]({SITE_URL}/academy/vip-masterclass/): Advanced training for experienced artists
 
 ## Booking
 - Fresha (all services): {FRESHA_ALL_OFFER}

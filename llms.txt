@@ -3,17 +3,17 @@
 
 ## Core Pages
 - [Home](https://adrianaspmu.com/): Permanent Makeup Studio and Academy in Wilmington MA & Salem NH
-- [About](https://adrianaspmu.com/about.html): Master PMU Artist with 20+ years and 5,000+ procedures
+- [About](https://adrianaspmu.com/about/): Master PMU Artist with 20+ years and 5,000+ procedures
 - [Services](https://adrianaspmu.com/services/): All permanent makeup services in MA and NH
 - [Locations](https://adrianaspmu.com/locations/): Wilmington MA + Salem NH studios
 - [Academy](https://adrianaspmu.com/academy/): Permanent Makeup training programs
 - [Training](https://adrianaspmu.com/training/): Academy hub (mirror of /academy/)
-- [Contact](https://adrianaspmu.com/contact.html): Studio contact and consultation
-- [FAQ](https://adrianaspmu.com/faq.html): Permanent makeup frequently asked questions
-- [Portfolio](https://adrianaspmu.com/portfolio.html): Before and after PMU results
+- [Contact](https://adrianaspmu.com/contact/): Studio contact and consultation
+- [FAQ](https://adrianaspmu.com/faq/): Permanent makeup frequently asked questions
+- [Portfolio](https://adrianaspmu.com/portfolio/): Before and after PMU results
 - [Flash Sale](https://adrianaspmu.com/flash-sale/): Limited-time brows or lips PMU for $349
-- [Privacy Policy](https://adrianaspmu.com/privacy-policy.html)
-- [Terms of Use](https://adrianaspmu.com/terms-of-use.html)
+- [Privacy Policy](https://adrianaspmu.com/privacy-policy/)
+- [Terms of Use](https://adrianaspmu.com/terms-of-use/)
 
 ## Eyebrow Permanent Makeup
 - [Nano Brows](https://adrianaspmu.com/services/eyebrows/nano-brows/): Nano Brows uses an ultra-fine needle and digital machine to create realistic, hair-like strokes for fuller, natural-looking eyebrows that la. ($650)
@@ -39,13 +39,13 @@
 - [Yearly Touch-Up](https://adrianaspmu.com/services/touch-ups/yearly-touch-up/): Yearly Touch-Up refreshes faded permanent makeup pigment on brows, lips, or eyeliner — typically scheduled about 12 months after your origin. (from $300)
 
 ## Locations
-- [Wilmington MA](https://adrianaspmu.com/locations/wilmington-ma.html): 211 Lowell Street, Suite F — (781) 853-8063
-- [Salem NH](https://adrianaspmu.com/locations/salem-nh.html): 117A Main Street — (978) 223-7496
+- [Wilmington MA](https://adrianaspmu.com/locations/wilmington-ma/): 211 Lowell Street, Suite F — (781) 853-8063
+- [Salem NH](https://adrianaspmu.com/locations/salem-nh/): 117A Main Street — (978) 223-7496
 
 ## Academy
-- [100-Hour Fundamental](https://adrianaspmu.com/academy/pmu-100h-fundamental.html): $7,000 in-person training
-- [Apprenticeship](https://adrianaspmu.com/academy/pmu-apprenticeship.html): $700/month hands-on program
-- [VIP Masterclass](https://adrianaspmu.com/academy/vip-masterclass.html): Advanced training for experienced artists
+- [100-Hour Fundamental](https://adrianaspmu.com/academy/pmu-100h-fundamental/): $7,000 in-person training
+- [Apprenticeship](https://adrianaspmu.com/academy/pmu-apprenticeship/): $700/month hands-on program
+- [VIP Masterclass](https://adrianaspmu.com/academy/vip-masterclass/): Advanced training for experienced artists
 
 ## Booking
 - Fresha (all services): https://www.fresha.com/book-now/adrianas-permanent-makeup-zeaseit5/all-offer?share=true&pId=727586

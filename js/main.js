@@ -61,7 +61,7 @@
             <ul>${navItems}</ul>
           </nav>
           <div class="header-cta">
-            <a class="btn btn-primary" href="${resolvePath("/contact.html")}">Book Consultation</a>
+            <a class="btn btn-primary" href="${resolvePath("/contact/")}">Book Consultation</a>
           </div>
         </div>
       </header>`;
@@ -133,10 +133,10 @@
             <div>
               <h4>Locations</h4>
               <ul>
-                <li><a href="${resolvePath("/locations/wilmington-ma.html")}">Wilmington, MA</a></li>
-                <li><a href="${resolvePath("/locations/salem-nh.html")}">Salem, NH</a></li>
-                <li><a href="${resolvePath("/contact.html")}">Contact</a></li>
-                <li><a href="${resolvePath("/faq.html")}">FAQ</a></li>
+                <li><a href="${resolvePath("/locations/wilmington-ma/")}">Wilmington, MA</a></li>
+                <li><a href="${resolvePath("/locations/salem-nh/")}">Salem, NH</a></li>
+                <li><a href="${resolvePath("/contact/")}">Contact</a></li>
+                <li><a href="${resolvePath("/faq/")}">FAQ</a></li>
               </ul>
             </div>
             <div class="footer-nap">
@@ -154,8 +154,8 @@
           <div class="footer-bottom">
             <p>© ${new Date().getFullYear()} ${SITE.legalName}. All rights reserved.</p>
             <p>
-              <a href="${resolvePath("/privacy-policy.html")}">Privacy</a> ·
-              <a href="${resolvePath("/terms-of-use.html")}">Terms</a> ·
+              <a href="${resolvePath("/privacy-policy/")}">Privacy</a> ·
+              <a href="${resolvePath("/terms-of-use/")}">Terms</a> ·
               <a href="${SITE.instagram}" rel="noopener">Instagram</a> ·
               <a href="${SITE.facebook}" rel="noopener">Facebook</a>
             </p>

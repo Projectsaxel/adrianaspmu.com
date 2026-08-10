@@ -5,6 +5,9 @@ Reconstrução do site **adrianaspmu.com** conforme o documento *adrianas-pmu-se
 ## Estrutura
 
 - **58+ páginas HTML** com hierarquia corrigida (H1 com cidade/estado, H2 como perguntas)
+- **URLs sem extensão `.html`**: toda página é `pasta/index.html` e é servida como `/pasta/`
+  (ex.: `/about/`, `/services/eyebrows/microblading/wilmington-ma/`). Links internos, sitemap
+  e llms.txt seguem esse formato — não reintroduzir `.html` nas URLs.
 - **Inglês (en-US)** exclusivo no site
 - **Duas localizações**: Wilmington, MA (matriz) e Salem, NH (filial)
 - **Schema.org** JSON-LD (Organization, BeautySalon, Service)
