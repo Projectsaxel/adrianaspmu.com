@@ -75,19 +75,19 @@ const SITE = {
 const NAV = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services/" },
-  { label: "Portfolio", href: "/portfolio.html" },
+  { label: "Portfolio", href: "/portfolio/" },
   {
     label: "Training",
     href: "/training/",
     children: [
-      { label: "100-Hour Fundamental", href: "/academy/pmu-100h-fundamental.html" },
-      { label: "Apprenticeship", href: "/academy/pmu-apprenticeship.html" },
-      { label: "VIP Masterclass", href: "/academy/vip-masterclass.html" },
+      { label: "100-Hour Fundamental", href: "/academy/pmu-100h-fundamental/" },
+      { label: "Apprenticeship", href: "/academy/pmu-apprenticeship/" },
+      { label: "VIP Masterclass", href: "/academy/vip-masterclass/" },
     ],
   },
-  { label: "About", href: "/about.html" },
-  { label: "Contact", href: "/contact.html" },
-  { label: "FAQ", href: "/faq.html" },
+  { label: "About", href: "/about/" },
+  { label: "Contact", href: "/contact/" },
+  { label: "FAQ", href: "/faq/" },
 ];
 
 const HERO_SERVICES = [
