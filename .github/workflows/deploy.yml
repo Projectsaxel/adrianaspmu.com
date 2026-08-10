@@ -32,4 +32,8 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          # A action instala Wrangler 3.90.0 por padrao, que e antigo demais:
+          # nao le wrangler.jsonc e exige "main", quebrando deploy so de assets.
+          # Wrangler 4 suporta Worker apenas com assets, sem entry point.
+          wranglerVersion: "4"
           command: deploy
