@@ -1,0 +1,35 @@
+name: Deploy to Cloudflare Workers
+
+# Site estatico puro (HTML/CSS/JS). Nao existe build step.
+# Cada push na main publica no Worker, APOS aprovacao do environment "production".
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    # Os secrets vivem NESTE environment, nao no nivel do repositorio.
+    # Qualquer execucao que precise deles para aqui e espera aprovacao
+    # do revisor obrigatorio. Job sem "environment: production" nao
+    # enxerga o token.
+    environment: production
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy com Wrangler
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: deploy
