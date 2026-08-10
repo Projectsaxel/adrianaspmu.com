@@ -1,0 +1,145 @@
+# ============================================================
+# CANONICAL via cabecalho HTTP (Link: rel="canonical").
+# Suportado oficialmente pelo Google e nao depende de
+# JavaScript. Protege contra URL duplicada por parametro
+# (utm_source, gclid, fbclid).
+#
+# Limite da plataforma: 100 regras. Em uso: 64.
+# Ao adicionar pagina nova, adicione a regra aqui tambem.
+# Solucao definitiva: <link rel="canonical"> no <head>, via
+# scripts/generate_pages.py. Isto aqui e a ponte ate la.
+# ============================================================
+
+/
+  Link: <https://adrianaspmu.com/>; rel="canonical"
+/about
+  Link: <https://adrianaspmu.com/about>; rel="canonical"
+/academy/
+  Link: <https://adrianaspmu.com/academy/>; rel="canonical"
+/academy/pmu-100h-fundamental
+  Link: <https://adrianaspmu.com/academy/pmu-100h-fundamental>; rel="canonical"
+/academy/pmu-apprenticeship
+  Link: <https://adrianaspmu.com/academy/pmu-apprenticeship>; rel="canonical"
+/academy/vip-masterclass
+  Link: <https://adrianaspmu.com/academy/vip-masterclass>; rel="canonical"
+/contact
+  Link: <https://adrianaspmu.com/contact>; rel="canonical"
+/faq
+  Link: <https://adrianaspmu.com/faq>; rel="canonical"
+/flash-sale/
+  Link: <https://adrianaspmu.com/flash-sale/>; rel="canonical"
+/locations/
+  Link: <https://adrianaspmu.com/locations/>; rel="canonical"
+/locations/salem-nh
+  Link: <https://adrianaspmu.com/locations/salem-nh>; rel="canonical"
+/locations/wilmington-ma
+  Link: <https://adrianaspmu.com/locations/wilmington-ma>; rel="canonical"
+/payment-plan
+  Link: <https://adrianaspmu.com/payment-plan>; rel="canonical"
+/portfolio
+  Link: <https://adrianaspmu.com/portfolio>; rel="canonical"
+/privacy-policy
+  Link: <https://adrianaspmu.com/privacy-policy>; rel="canonical"
+/services/
+  Link: <https://adrianaspmu.com/services/>; rel="canonical"
+/services/combos/
+  Link: <https://adrianaspmu.com/services/combos/>; rel="canonical"
+/services/combos/eyebrows-lips-combo/
+  Link: <https://adrianaspmu.com/services/combos/eyebrows-lips-combo/>; rel="canonical"
+/services/combos/eyebrows-lips-combo/salem-nh
+  Link: <https://adrianaspmu.com/services/combos/eyebrows-lips-combo/salem-nh>; rel="canonical"
+/services/combos/eyebrows-lips-combo/wilmington-ma
+  Link: <https://adrianaspmu.com/services/combos/eyebrows-lips-combo/wilmington-ma>; rel="canonical"
+/services/eyebrows/
+  Link: <https://adrianaspmu.com/services/eyebrows/>; rel="canonical"
+/services/eyebrows/combination-brows/
+  Link: <https://adrianaspmu.com/services/eyebrows/combination-brows/>; rel="canonical"
+/services/eyebrows/combination-brows/salem-nh
+  Link: <https://adrianaspmu.com/services/eyebrows/combination-brows/salem-nh>; rel="canonical"
+/services/eyebrows/combination-brows/wilmington-ma
+  Link: <https://adrianaspmu.com/services/eyebrows/combination-brows/wilmington-ma>; rel="canonical"
+/services/eyebrows/microblading/
+  Link: <https://adrianaspmu.com/services/eyebrows/microblading/>; rel="canonical"
+/services/eyebrows/microblading/salem-nh
+  Link: <https://adrianaspmu.com/services/eyebrows/microblading/salem-nh>; rel="canonical"
+/services/eyebrows/microblading/wilmington-ma
+  Link: <https://adrianaspmu.com/services/eyebrows/microblading/wilmington-ma>; rel="canonical"
+/services/eyebrows/nano-brows/
+  Link: <https://adrianaspmu.com/services/eyebrows/nano-brows/>; rel="canonical"
+/services/eyebrows/nano-brows/salem-nh
+  Link: <https://adrianaspmu.com/services/eyebrows/nano-brows/salem-nh>; rel="canonical"
+/services/eyebrows/nano-brows/wilmington-ma
+  Link: <https://adrianaspmu.com/services/eyebrows/nano-brows/wilmington-ma>; rel="canonical"
+/services/eyebrows/nano-combo/
+  Link: <https://adrianaspmu.com/services/eyebrows/nano-combo/>; rel="canonical"
+/services/eyebrows/nano-combo/salem-nh
+  Link: <https://adrianaspmu.com/services/eyebrows/nano-combo/salem-nh>; rel="canonical"
+/services/eyebrows/nano-combo/wilmington-ma
+  Link: <https://adrianaspmu.com/services/eyebrows/nano-combo/wilmington-ma>; rel="canonical"
+/services/eyebrows/powder-brows/
+  Link: <https://adrianaspmu.com/services/eyebrows/powder-brows/>; rel="canonical"
+/services/eyebrows/powder-brows/salem-nh
+  Link: <https://adrianaspmu.com/services/eyebrows/powder-brows/salem-nh>; rel="canonical"
+/services/eyebrows/powder-brows/wilmington-ma
+  Link: <https://adrianaspmu.com/services/eyebrows/powder-brows/wilmington-ma>; rel="canonical"
+/services/eyeliner/
+  Link: <https://adrianaspmu.com/services/eyeliner/>; rel="canonical"
+/services/eyeliner/bottom-eyeliner/
+  Link: <https://adrianaspmu.com/services/eyeliner/bottom-eyeliner/>; rel="canonical"
+/services/eyeliner/bottom-eyeliner/salem-nh
+  Link: <https://adrianaspmu.com/services/eyeliner/bottom-eyeliner/salem-nh>; rel="canonical"
+/services/eyeliner/bottom-eyeliner/wilmington-ma
+  Link: <https://adrianaspmu.com/services/eyeliner/bottom-eyeliner/wilmington-ma>; rel="canonical"
+/services/eyeliner/eyeliner-combo/
+  Link: <https://adrianaspmu.com/services/eyeliner/eyeliner-combo/>; rel="canonical"
+/services/eyeliner/eyeliner-combo/salem-nh
+  Link: <https://adrianaspmu.com/services/eyeliner/eyeliner-combo/salem-nh>; rel="canonical"
+/services/eyeliner/eyeliner-combo/wilmington-ma
+  Link: <https://adrianaspmu.com/services/eyeliner/eyeliner-combo/wilmington-ma>; rel="canonical"
+/services/eyeliner/smokey-eyeliner/
+  Link: <https://adrianaspmu.com/services/eyeliner/smokey-eyeliner/>; rel="canonical"
+/services/eyeliner/smokey-eyeliner/salem-nh
+  Link: <https://adrianaspmu.com/services/eyeliner/smokey-eyeliner/salem-nh>; rel="canonical"
+/services/eyeliner/smokey-eyeliner/wilmington-ma
+  Link: <https://adrianaspmu.com/services/eyeliner/smokey-eyeliner/wilmington-ma>; rel="canonical"
+/services/eyeliner/top-eyeliner/
+  Link: <https://adrianaspmu.com/services/eyeliner/top-eyeliner/>; rel="canonical"
+/services/eyeliner/top-eyeliner/salem-nh
+  Link: <https://adrianaspmu.com/services/eyeliner/top-eyeliner/salem-nh>; rel="canonical"
+/services/eyeliner/top-eyeliner/wilmington-ma
+  Link: <https://adrianaspmu.com/services/eyeliner/top-eyeliner/wilmington-ma>; rel="canonical"
+/services/lips/
+  Link: <https://adrianaspmu.com/services/lips/>; rel="canonical"
+/services/lips/dark-lip-neutralization/
+  Link: <https://adrianaspmu.com/services/lips/dark-lip-neutralization/>; rel="canonical"
+/services/lips/dark-lip-neutralization/salem-nh
+  Link: <https://adrianaspmu.com/services/lips/dark-lip-neutralization/salem-nh>; rel="canonical"
+/services/lips/dark-lip-neutralization/wilmington-ma
+  Link: <https://adrianaspmu.com/services/lips/dark-lip-neutralization/wilmington-ma>; rel="canonical"
+/services/lips/lip-blush/
+  Link: <https://adrianaspmu.com/services/lips/lip-blush/>; rel="canonical"
+/services/lips/lip-blush/salem-nh
+  Link: <https://adrianaspmu.com/services/lips/lip-blush/salem-nh>; rel="canonical"
+/services/lips/lip-blush/wilmington-ma
+  Link: <https://adrianaspmu.com/services/lips/lip-blush/wilmington-ma>; rel="canonical"
+/services/touch-ups/
+  Link: <https://adrianaspmu.com/services/touch-ups/>; rel="canonical"
+/services/touch-ups/yearly-touch-up/
+  Link: <https://adrianaspmu.com/services/touch-ups/yearly-touch-up/>; rel="canonical"
+/services/touch-ups/yearly-touch-up/salem-nh
+  Link: <https://adrianaspmu.com/services/touch-ups/yearly-touch-up/salem-nh>; rel="canonical"
+/services/touch-ups/yearly-touch-up/wilmington-ma
+  Link: <https://adrianaspmu.com/services/touch-ups/yearly-touch-up/wilmington-ma>; rel="canonical"
+/terms-of-use
+  Link: <https://adrianaspmu.com/terms-of-use>; rel="canonical"
+/training/
+  Link: <https://adrianaspmu.com/training/>; rel="canonical"
+
+# Imagens: cache longo. Nomes sao estaveis no repositorio.
+/assets/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Endurecimento basico em todo o site.
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
