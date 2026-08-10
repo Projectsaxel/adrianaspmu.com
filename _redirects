@@ -26,6 +26,11 @@
 /apprenticeship/                /academy/pmu-apprenticeship/              301
 /100-hours-fundamental/         /academy/pmu-100h-fundamental/            301
 
+# /training/ e /academy/ sao a mesma pagina: mesmo H1, mesma
+# meta description, 5 bytes de diferenca. /training/ e uma das
+# 33 URLs que ranqueiam hoje. Canonical e sugestao, 301 e ordem.
+/training/                      /academy/                                 301
+
 # Servicos: sobrancelhas
 /microblading/                  /services/eyebrows/microblading/          301
 /nano-brows-3d/                 /services/eyebrows/nano-brows/            301
