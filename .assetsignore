@@ -1,0 +1,15 @@
+# Arquivos que NAO devem ir para producao como assets publicos.
+# Sem isso, servir "./" expoe codigo fonte, CI e documentacao interna.
+
+scripts/
+docs/
+.github/
+README.md
+.gitignore
+.assetsignore
+wrangler.jsonc
+**/node_modules
+**/.DS_Store
+**/.git
+**/__pycache__
+*.log

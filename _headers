@@ -1,0 +1,22 @@
+# ============================================================
+# O canonical NAO vive mais aqui.
+#
+# Cada pagina declara o seu proprio <link rel="canonical"> no
+# <head>, gerado por scripts/generate_pages.py a partir do
+# caminho do arquivo de saida. Eram 64 regras nesta arquivo
+# para manter a mao; agora e uma tag por pagina, impossivel de
+# esquecer ao adicionar pagina nova.
+#
+# O cabecalho HTTP Link: rel="canonical" foi removido de
+# proposito: com a tag no HTML, manter os dois significa duas
+# fontes de verdade que podem divergir em silencio.
+# ============================================================
+
+# Imagens: cache longo. Nomes sao estaveis no repositorio.
+/assets/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Endurecimento basico em todo o site.
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin

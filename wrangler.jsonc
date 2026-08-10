@@ -1,0 +1,20 @@
+{
+  // O "name" precisa ser IDENTICO ao nome do Worker no dashboard da Cloudflare,
+  // senao o deploy falha com erro de nome.
+  "name": "adrianaspmu",
+
+  "compatibility_date": "2026-08-10",
+
+  "assets": {
+    // Site e HTML estatico puro na raiz do repo, sem build step.
+    "directory": "./",
+
+    // Workers nao infere o comportamento de 404 como o Pages fazia.
+    // Precisa ser explicito. Usa o 404.html da raiz.
+    "not_found_handling": "404-page"
+  },
+
+  "observability": {
+    "enabled": true
+  }
+}

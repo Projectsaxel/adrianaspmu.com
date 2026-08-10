@@ -1044,8 +1044,16 @@ def sitemap_meta(rel_path: str) -> tuple[str, str]:
     return "0.8", "monthly"
 
 
+# Paginas fora do sitemap. 404.html e servido pelo Workers como
+# not_found_handling e nao deve ser indexado.
+SITEMAP_EXCLUDE = {"404.html"}
+
+
 def write_sitemap():
-    pages = sorted(p.relative_to(ROOT).as_posix() for p in ROOT.rglob("*.html"))
+    pages = sorted(
+        rel for rel in (p.relative_to(ROOT).as_posix() for p in ROOT.rglob("*.html"))
+        if rel not in SITEMAP_EXCLUDE
+    )
     lines = [
         '<?xml version="1.0" encoding="UTF-8"?>',
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
