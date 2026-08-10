@@ -1,0 +1,64 @@
+# ============================================================
+# MAPA 301: WordPress antigo -> site novo
+# 33 URLs indexadas em 2026-08-10. Nenhuma pode virar 404.
+# A primeira regra que casar e a aplicada.
+# ============================================================
+
+# Institucional
+/about-us/                      /about                                    301
+/staff/                         /about                                    301
+/our-history/                   /about                                    301
+/contact-us/                    /contact                                  301
+/beauty-form/                   /contact                                  301
+/portfolio/                     /portfolio                                301
+/faqs/                          /faq                                      301
+/payment-plan/                  /payment-plan                             301
+/policy/                        /terms-of-use                             301
+/terms-of-use/                  /terms-of-use                             301
+/privacy-policy/                /privacy-policy                           301
+
+# Localizacao
+/salem-nh/                      /locations/salem-nh                       301
+
+# Academy e treinamento
+/apprenticeship/                /academy/pmu-apprenticeship               301
+/100-hours-fundamental/         /academy/pmu-100h-fundamental             301
+
+# Servicos: sobrancelhas
+/microblading/                  /services/eyebrows/microblading/          301
+/nano-brows-3d/                 /services/eyebrows/nano-brows/            301
+/nano-brows-combo/              /services/eyebrows/nano-combo/            301
+/ombre-shading-powder-brows/    /services/eyebrows/powder-brows/          301
+/microshading/                  /services/eyebrows/combination-brows/     301
+
+# Servicos: labios
+/lip-blush/                     /services/lips/lip-blush/                 301
+/dark-lip-neutralization/       /services/lips/dark-lip-neutralization/   301
+
+# Servicos: delineador
+/top-eyeliner-classic/          /services/eyeliner/top-eyeliner/          301
+/top-eyeliner-cat-eye/          /services/eyeliner/top-eyeliner/          301
+/bottom-eyeliner/               /services/eyeliner/bottom-eyeliner/       301
+/eyeliner-smokey-effect/        /services/eyeliner/smokey-eyeliner/       301
+/eyeliner-combo/                /services/eyeliner/eyeliner-combo/        301
+
+# Servicos: combos
+/eyebrows-lips-combo/           /services/combos/eyebrows-lips-combo/     301
+/full-face/                     /services/combos/                         301
+
+# Sem equivalente direto no site novo
+/price-list/                    /services/                                301
+
+# /, /flash-sale/, /training/ e /services/ existem nos dois sites
+# com a mesma URL. Nao precisam de regra.
+
+# ============================================================
+# NORMALIZACAO .html -> URL final, com 301 permanente.
+# Sem estas regras a Cloudflare devolve 307 (temporario), que
+# nao consolida autoridade de link do mesmo jeito.
+# A ordem importa: as regras de index.html vem antes da geral.
+# ============================================================
+
+/index.html                     /                                         301
+/*/index.html                   /:splat/                                  301
+/*.html                         /:splat                                   301
