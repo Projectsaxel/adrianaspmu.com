@@ -13,3 +13,5 @@ wrangler.jsonc
 **/.git
 **/__pycache__
 *.log
+src/
+.wrangler/
