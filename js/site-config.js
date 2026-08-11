@@ -3,7 +3,7 @@ const SITE = {
   name: "Adriana's Permanent Makeup",
   legalName: "Adriana Beauty Services, Inc.",
   url: "https://adrianaspmu.com",
-  email: "contact@adrianaspmu.com",
+  logo: "/assets/images/logo.svg",
   lang: "en-US",
   phoneWilmington: "(781) 853-8063",
   phoneSalem: "(978) 223-7496",
