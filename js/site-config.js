@@ -3,11 +3,11 @@ const SITE = {
   name: "Adriana's Permanent Makeup",
   legalName: "Adriana Beauty Services, Inc.",
   url: "https://adrianaspmu.com",
-  logo: "/assets/images/logo.svg",
+  email: "contact@adrianaspmu.com",
   lang: "en-US",
   phoneWilmington: "(781) 853-8063",
   phoneSalem: "(978) 223-7496",
-  email: "info@adrianaspmu.com",
+  email: "contact@adrianaspmu.com",
   fresha: "https://www.fresha.com/a/adrianas-permanent-makeup-wilmington-ma-wilmington-211-lowell-street-jalpqett",
   freshaBookNow:
     "https://www.fresha.com/book-now/adrianas-permanent-makeup-zeaseit5/all-offer?share=true&pId=727586",
