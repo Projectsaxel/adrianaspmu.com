@@ -187,15 +187,65 @@
   function initContactForm() {
     const form = document.getElementById("contact-form");
     if (!form) return;
-    form.addEventListener("submit", (e) => {
+
+    const msg = form.querySelector(".form-message");
+    const button = form.querySelector('button[type="submit"]');
+    const buttonLabel = button ? button.textContent : "";
+    const loadedAt = Date.now();
+
+    const PHONES =
+      "Please call Wilmington (781) 853-8063 or Salem (978) 223-7496.";
+
+    function show(text, ok) {
+      if (!msg) return;
+      msg.textContent = text;
+      msg.hidden = false;
+      msg.classList.toggle("form-message--ok", !!ok);
+      msg.classList.toggle("form-message--error", !ok);
+    }
+
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
-      const msg = form.querySelector(".form-message");
-      if (msg) {
-        msg.textContent =
-          "Thank you! We will contact you shortly. For faster booking, use Fresha or call our studios.";
-        msg.hidden = false;
+
+      if (button) {
+        button.disabled = true;
+        button.textContent = "Sending...";
       }
-      form.reset();
+      show("Sending your message...", true);
+
+      const payload = Object.fromEntries(new FormData(form).entries());
+      payload.elapsed = Date.now() - loadedAt;
+      payload.page = window.location.pathname;
+
+      let ok = false;
+      let text = "We could not send your message. " + PHONES;
+
+      try {
+        const res = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+        const body = await res.json().catch(() => ({}));
+
+        if (res.ok && body.ok) {
+          ok = true;
+          text =
+            "Thank you! We received your message and will contact you shortly. For faster booking, use Fresha or call our studios.";
+        } else if (body.error) {
+          text = body.error;
+        }
+      } catch (err) {
+        text = "Network error. " + PHONES;
+      }
+
+      show(text, ok);
+      if (ok) form.reset();
+
+      if (button) {
+        button.disabled = false;
+        button.textContent = buttonLabel;
+      }
     });
   }
 
