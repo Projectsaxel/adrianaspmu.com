@@ -1920,3 +1920,15 @@ body.portfolio-lightbox-open {
     animation: none;
   }
 }
+
+
+/* Formulario de contato: honeypot anti-spam e estados da mensagem. */
+.hp-field {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+}
+.form-message--ok { color: #1a7f4b; }
+.form-message--error { color: #b3261e; }

@@ -7,7 +7,11 @@ const SITE = {
   lang: "en-US",
   phoneWilmington: "(781) 853-8063",
   phoneSalem: "(978) 223-7496",
-  email: "contact@adrianaspmu.com",
+  // O endereco contact@adrianaspmu.com foi removido em 11/08/2026.
+  // Nao era lido por nenhuma pagina, nenhum schema e nenhum script: era
+  // configuracao morta, mas este arquivo e servido publicamente, entao
+  // servia de isca para scraper de spam. Ninguem tem acesso aquela caixa.
+  // Contato do site: formulario em /contact/ e os dois telefones.
   fresha: "https://www.fresha.com/a/adrianas-permanent-makeup-wilmington-ma-wilmington-211-lowell-street-jalpqett",
   freshaBookNow:
     "https://www.fresha.com/book-now/adrianas-permanent-makeup-zeaseit5/all-offer?share=true&pId=727586",
