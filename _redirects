@@ -74,5 +74,82 @@
 # ============================================================
 
 /index.html                     /                                         301
-/*/index.html                   /:splat/                                  301
+
+# ==========================================================
+# /<dir>/index.html -> URL final
+#
+# O padrao /*/index.html NAO funciona. A Cloudflare aceita um unico
+# splat e ele precisa estar no fim do padrao; splat no meio nao casa.
+# Com a regra antiga, /contact/index.html caia em /*.html e ia parar
+# em /contact/index/, que e 404. Verificado em 11/08/2026 na
+# workers.dev, antes do cutover.
+#
+# Regras explicitas de proposito. Precisam vir ANTES de /*.html.
+# Bloco mantido a mao. Ao criar pagina nova, acrescente a linha
+# correspondente aqui. Conferencia rapida, da raiz do repo:
+#   for d in $(find . -name index.html -not -path "./.git/*" | sed "s|^./||;s|/index.html||"); do grep -q "^/$d/index.html " _redirects || echo "FALTA: $d"; done
+# ==========================================================
+
+/about/index.html                                                /about/                                                301
+/academy/index.html                                              /academy/                                              301
+/academy/pmu-100h-fundamental/index.html                         /academy/pmu-100h-fundamental/                         301
+/academy/pmu-apprenticeship/index.html                           /academy/pmu-apprenticeship/                           301
+/academy/vip-masterclass/index.html                              /academy/vip-masterclass/                              301
+/contact/index.html                                              /contact/                                              301
+/faq/index.html                                                  /faq/                                                  301
+/flash-sale/index.html                                           /flash-sale/                                           301
+/locations/index.html                                            /locations/                                            301
+/locations/salem-nh/index.html                                   /locations/salem-nh/                                   301
+/locations/wilmington-ma/index.html                              /locations/wilmington-ma/                              301
+/payment-plan/index.html                                         /payment-plan/                                         301
+/portfolio/index.html                                            /portfolio/                                            301
+/privacy-policy/index.html                                       /privacy-policy/                                       301
+/services/index.html                                             /services/                                             301
+/services/combos/index.html                                      /services/combos/                                      301
+/services/combos/eyebrows-lips-combo/index.html                  /services/combos/eyebrows-lips-combo/                  301
+/services/combos/eyebrows-lips-combo/salem-nh/index.html         /services/combos/eyebrows-lips-combo/salem-nh/         301
+/services/combos/eyebrows-lips-combo/wilmington-ma/index.html    /services/combos/eyebrows-lips-combo/wilmington-ma/    301
+/services/eyebrows/index.html                                    /services/eyebrows/                                    301
+/services/eyebrows/combination-brows/index.html                  /services/eyebrows/combination-brows/                  301
+/services/eyebrows/combination-brows/salem-nh/index.html         /services/eyebrows/combination-brows/salem-nh/         301
+/services/eyebrows/combination-brows/wilmington-ma/index.html    /services/eyebrows/combination-brows/wilmington-ma/    301
+/services/eyebrows/microblading/index.html                       /services/eyebrows/microblading/                       301
+/services/eyebrows/microblading/salem-nh/index.html              /services/eyebrows/microblading/salem-nh/              301
+/services/eyebrows/microblading/wilmington-ma/index.html         /services/eyebrows/microblading/wilmington-ma/         301
+/services/eyebrows/nano-brows/index.html                         /services/eyebrows/nano-brows/                         301
+/services/eyebrows/nano-brows/salem-nh/index.html                /services/eyebrows/nano-brows/salem-nh/                301
+/services/eyebrows/nano-brows/wilmington-ma/index.html           /services/eyebrows/nano-brows/wilmington-ma/           301
+/services/eyebrows/nano-combo/index.html                         /services/eyebrows/nano-combo/                         301
+/services/eyebrows/nano-combo/salem-nh/index.html                /services/eyebrows/nano-combo/salem-nh/                301
+/services/eyebrows/nano-combo/wilmington-ma/index.html           /services/eyebrows/nano-combo/wilmington-ma/           301
+/services/eyebrows/powder-brows/index.html                       /services/eyebrows/powder-brows/                       301
+/services/eyebrows/powder-brows/salem-nh/index.html              /services/eyebrows/powder-brows/salem-nh/              301
+/services/eyebrows/powder-brows/wilmington-ma/index.html         /services/eyebrows/powder-brows/wilmington-ma/         301
+/services/eyeliner/index.html                                    /services/eyeliner/                                    301
+/services/eyeliner/bottom-eyeliner/index.html                    /services/eyeliner/bottom-eyeliner/                    301
+/services/eyeliner/bottom-eyeliner/salem-nh/index.html           /services/eyeliner/bottom-eyeliner/salem-nh/           301
+/services/eyeliner/bottom-eyeliner/wilmington-ma/index.html      /services/eyeliner/bottom-eyeliner/wilmington-ma/      301
+/services/eyeliner/eyeliner-combo/index.html                     /services/eyeliner/eyeliner-combo/                     301
+/services/eyeliner/eyeliner-combo/salem-nh/index.html            /services/eyeliner/eyeliner-combo/salem-nh/            301
+/services/eyeliner/eyeliner-combo/wilmington-ma/index.html       /services/eyeliner/eyeliner-combo/wilmington-ma/       301
+/services/eyeliner/smokey-eyeliner/index.html                    /services/eyeliner/smokey-eyeliner/                    301
+/services/eyeliner/smokey-eyeliner/salem-nh/index.html           /services/eyeliner/smokey-eyeliner/salem-nh/           301
+/services/eyeliner/smokey-eyeliner/wilmington-ma/index.html      /services/eyeliner/smokey-eyeliner/wilmington-ma/      301
+/services/eyeliner/top-eyeliner/index.html                       /services/eyeliner/top-eyeliner/                       301
+/services/eyeliner/top-eyeliner/salem-nh/index.html              /services/eyeliner/top-eyeliner/salem-nh/              301
+/services/eyeliner/top-eyeliner/wilmington-ma/index.html         /services/eyeliner/top-eyeliner/wilmington-ma/         301
+/services/lips/index.html                                        /services/lips/                                        301
+/services/lips/dark-lip-neutralization/index.html                /services/lips/dark-lip-neutralization/                301
+/services/lips/dark-lip-neutralization/salem-nh/index.html       /services/lips/dark-lip-neutralization/salem-nh/       301
+/services/lips/dark-lip-neutralization/wilmington-ma/index.html  /services/lips/dark-lip-neutralization/wilmington-ma/  301
+/services/lips/lip-blush/index.html                              /services/lips/lip-blush/                              301
+/services/lips/lip-blush/salem-nh/index.html                     /services/lips/lip-blush/salem-nh/                     301
+/services/lips/lip-blush/wilmington-ma/index.html                /services/lips/lip-blush/wilmington-ma/                301
+/services/touch-ups/index.html                                   /services/touch-ups/                                   301
+/services/touch-ups/yearly-touch-up/index.html                   /services/touch-ups/yearly-touch-up/                   301
+/services/touch-ups/yearly-touch-up/salem-nh/index.html          /services/touch-ups/yearly-touch-up/salem-nh/          301
+/services/touch-ups/yearly-touch-up/wilmington-ma/index.html     /services/touch-ups/yearly-touch-up/wilmington-ma/     301
+/terms-of-use/index.html                                         /terms-of-use/                                         301
+/training/index.html                                             /academy/                                              301
+
 /*.html                         /:splat/                                  301

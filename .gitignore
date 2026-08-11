@@ -4,3 +4,8 @@
 *.log
 __pycache__/
 .agent-tools/
+
+# Wrangler / dev local
+.wrangler/
+node_modules/
+.dev.vars
