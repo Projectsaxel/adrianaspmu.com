@@ -94,6 +94,63 @@ def fix_fresha(s, path_rel):
     return s
 
 
+
+# --- Correcoes de E-E-A-T e cross-linking (auditoria itens 10 e 14) ---
+
+# "over 7 years" e a marca antiga vieram do WordPress e contradizem os
+# "20+ years" e "Adriana's PMU" do resto do site. Sinal conflitante de
+# entidade para o Google e para LLMs.
+TEXT_FIXES = [
+    ("over 7 years of experience", "over 20 years of experience"),
+    ("Adriana Beauty Services \u2013 Permanent Makeup", "Adriana's Permanent Makeup"),
+]
+
+BROW_SERVICES = [
+    ("microblading", "Microblading", "Fios desenhados um a um" and "Hair-like strokes drawn one by one for natural fill"),
+    ("nano-brows", "Nano Brows", "Machine-drawn nano strokes, great for most skin types"),
+    ("nano-combo", "Nano Combo", "Nano strokes plus soft shading for extra density"),
+    ("powder-brows", "Ombr\u00e9 Powder Brows", "Soft powdered finish, ideal for oily skin"),
+    ("combination-brows", "Combination Brows", "Strokes at the front, shading through the body"),
+]
+EYELINER_SERVICES = [
+    ("top-eyeliner", "Top Eyeliner", "Classic or winged definition on the upper lash line"),
+    ("bottom-eyeliner", "Bottom Eyeliner", "Subtle lower lash line definition"),
+    ("smokey-eyeliner", "Smokey Eyeliner", "Soft shaded effect that never smudges"),
+    ("eyeliner-combo", "Eyeliner Combo", "Top and bottom in one appointment"),
+]
+LIP_SERVICES = [
+    ("lip-blush", "Lip Blush", "Translucent color and defined contour"),
+    ("dark-lip-neutralization", "Dark Lip Neutralization", "Evens tone before or with color work"),
+]
+
+
+def add_related(s, path_rel):
+    """Bloco "Compare techniques" nas paginas de servico, linkando as irmas."""
+    import re as _re
+    m = _re.match(r"services/([a-z-]+)/([a-z0-9-]+)/index\.html$", path_rel)
+    if not m or 'related-services' in s:
+        return s
+    cat, svc = m.group(1), m.group(2)
+    groups = {"eyebrows": BROW_SERVICES, "eyeliner": EYELINER_SERVICES, "lips": LIP_SERVICES}
+    group = groups.get(cat)
+    if not group:
+        return s
+    siblings = [(slug, name, desc) for slug, name, desc in group if slug != svc]
+    if not siblings:
+        return s
+    title = {"eyebrows": "Compare brow techniques", "eyeliner": "Other eyeliner styles", "lips": "Also for your lips"}[cat]
+    cards = "".join(
+        f'<article class="card"><h3><a href="../{slug}/">{name}</a></h3><p>{desc}</p></article>'
+        for slug, name, desc in siblings
+    )
+    block = (f'<section class="section related-services"><div class="container">'
+             f'<h2>{title}</h2><p>Not sure which technique fits you? '
+             f'<a href="../../../contact/">Book a free consultation</a> and we will map it to your skin and routine. '
+             f'You can also split any service with our <a href="../../../payment-plan/">payment plan</a>.</p>'
+             f'<div class="card-grid">{cards}</div></div></section>')
+    return s.replace("</main>", block + "\n</main>", 1)
+
+
 # ---------- utilidades ----------
 
 def img_size(path):
@@ -324,6 +381,9 @@ def main():
                 s = f.read()
             orig = s
             if fn == "index.html":
+                for a, b in TEXT_FIXES:
+                    s = s.replace(a, b)
+                s = add_related(s, rel)
                 s = fix_descriptions(s, rel)
                 s = fix_fresha(s, rel)
                 s = add_og(s, dirpath)
