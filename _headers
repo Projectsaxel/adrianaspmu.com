@@ -13,8 +13,12 @@
 # ============================================================
 
 # Imagens: cache longo. Nomes sao estaveis no repositorio.
+# Imagens: 1 dia de cache + revalidacao em background por 7 dias.
+# ERA "immutable, 1 ano": quando uma foto era trocada mantendo o nome,
+# quem ja tinha visitado ficava vendo a antiga por meses. Foi por isso
+# que a colagem de olhos "sempre voltava" (feedback Rachel 16/08).
 /assets/images/*
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
 
 # Endurecimento basico em todo o site.
 /*
