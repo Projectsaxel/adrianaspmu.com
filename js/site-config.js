@@ -82,7 +82,7 @@ const NAV = [
   { label: "Portfolio", href: "/portfolio/" },
   {
     label: "Training",
-    href: "/training/",
+    href: "/academy/",
     children: [
       { label: "100-Hour Fundamental", href: "/academy/pmu-100h-fundamental/" },
       { label: "Apprenticeship", href: "/academy/pmu-apprenticeship/" },

@@ -127,7 +127,7 @@
                 <li><a href="${resolvePath("/services/lips/")}">Lip PMU</a></li>
                 <li><a href="${resolvePath("/services/eyeliner/")}">Eyeliner PMU</a></li>
                 <li><a href="${resolvePath("/services/combos/")}">Combo Packages</a></li>
-                <li><a href="${resolvePath("/training/")}">PMU Academy</a></li>
+                <li><a href="${resolvePath("/academy/")}">PMU Academy</a></li>
               </ul>
             </div>
             <div>
