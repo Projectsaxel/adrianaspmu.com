@@ -2227,7 +2227,9 @@ input:focus, select:focus, textarea:focus {
 .pricing-badge { font-size: 1.375rem; letter-spacing: -0.005em; }
 
 /* --- 04 COMPONENTES: destaque de fatos --------------------- */
-.fact-layer {
+/* A grade de 3 colunas e do componente <dl> do design system.
+   Um <p class="fact-layer"> e nota de texto corrido e vira callout. */
+dl.fact-layer {
   display: grid;
   gap: var(--space-6);
   padding-block: var(--space-8);
@@ -2235,7 +2237,19 @@ input:focus, select:focus, textarea:focus {
   border-bottom: 1px solid var(--line);
 }
 @media (min-width: 768px) {
-  .fact-layer { grid-template-columns: repeat(3, 1fr); }
+  dl.fact-layer { grid-template-columns: repeat(3, 1fr); }
+}
+p.fact-layer {
+  max-width: 62ch;
+  margin: var(--space-6) auto 0;
+  padding: var(--space-4) var(--space-6);
+  background: var(--surface-alt);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--rose);
+  border-radius: var(--radius);
+  color: var(--ink-muted);
+  font-size: 0.9375rem;
+  text-align: left;
 }
 .fact-layer dt {
   font-size: 0.75rem;
@@ -2282,3 +2296,38 @@ th {
 }
 .card:hover { border-color: var(--ink); }
 .card:hover h3 a { color: var(--brand-deep); }
+
+
+/* --- Simetria dos cards em grade (feedback Rachel 16/08) -----
+   Mesma altura na linha, imagem sempre 4:3, e o CTA/links
+   ancorados na base para as bordas inferiores alinharem. */
+.card-grid { align-items: stretch; }
+.card {
+  display: flex;
+  flex-direction: column;
+}
+.card-thumb {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  object-fit: cover;
+}
+.card-img-link { display: block; }
+.card .btn:last-child,
+.card .card-links:last-child,
+.card figcaption:last-child,
+.card p.price:last-child {
+  margin-top: auto;
+}
+.location-grid { align-items: stretch; }
+.location-card {
+  display: flex;
+  flex-direction: column;
+}
+.location-card .btn:last-child {
+  margin-top: auto;
+  align-self: flex-start;
+}
+.location-card .tag,
+.card .badge {
+  align-self: flex-start;
+}
