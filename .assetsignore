@@ -4,6 +4,7 @@
 scripts/
 docs/
 .github/
+*.md
 README.md
 .gitignore
 .assetsignore
