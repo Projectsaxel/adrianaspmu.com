@@ -2114,11 +2114,13 @@ input:focus, select:focus, textarea:focus {
 
 /* --- Faixas que eram campo de rosa saturado ---------------- */
 .promo-banner {
-  background: var(--ink);
-  color: var(--surface-alt);
+  /* Era tinta preta e pesava demais no topo (feedback Rachel 16/08).
+     Blush e "preenchimento suave" permitido pelo design system. */
+  background: var(--blush);
+  color: var(--ink);
   border-radius: 0;
 }
-.promo-banner a { color: var(--surface-alt); }
+.promo-banner a { color: var(--brand-deep); }
 .trust-bar {
   background: var(--surface-alt);
   color: var(--ink);
@@ -2133,7 +2135,10 @@ input:focus, select:focus, textarea:focus {
 
 /* --- A cota do rosa: o filete do rodape e a assinatura ----- */
 .site-footer::before {
-  background: var(--brand);
+  /* A cota do rosa saturado agora e a LOGO no header (a assinatura
+     oficial da marca). O filete do rodape desce para a versao
+     dessaturada para manter uma ocorrencia por tela. */
+  background: var(--rose);
   height: 3px;
 }
 
@@ -2264,3 +2269,16 @@ th {
 /* --- Breadcrumb -------------------------------------------- */
 .breadcrumb, .breadcrumb a { color: var(--ink-muted); font-size: 0.875rem; }
 .breadcrumb a:hover { color: var(--ink); }
+
+/* --- UX: o card INTEIRO leva para a pagina do servico ---------
+   O link do <h3> vira a area de clique do card todo (stretched
+   link). Os links secundarios (cidades, Fresha) continuam
+   clicaveis porque sobem uma camada. Zero mudanca de HTML. */
+.card { position: relative; }
+.card h3 a { text-decoration: none; color: inherit; }
+.card h3 a::after { content: ""; position: absolute; inset: 0; }
+.card .card-links a, .card .btn, .card .badge a {
+  position: relative; z-index: 2;
+}
+.card:hover { border-color: var(--ink); }
+.card:hover h3 a { color: var(--brand-deep); }
