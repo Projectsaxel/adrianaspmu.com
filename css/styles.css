@@ -1,40 +1,86 @@
-/* Adriana's PMU — colors from adrianaspmu.com Elementor Kit */
-:root {
-  /* Elementor global colors (kit-5) */
-  --color-primary: #f45197;
-  --color-secondary: #f89aba;
-  --color-accent: #ff548e;
-  --color-text: #585858;
-  --color-text-muted: #848484;
-  --color-black: #000000;
-  --color-white: #ffffff;
-  --color-bg-soft: #fff3f7;
-  --color-peach: #ffbc7d;
+/* Fontes do Design System V1.0.
+   Fica no CSS, e nao num <link> nos 63 HTML, para que este reskin seja
+   UM arquivo so e possa ser revertido com um unico revert.
+   O preconnect para fonts.googleapis/gstatic ja existe em todas as
+   paginas, entao o custo do @import aqui e uma requisicao, nao um
+   handshake. Quando o generate_pages.py rodar de novo ele emite o
+   <link rel="stylesheet"> proprio e esta linha pode sair. */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Inter:wght@400;500;600&display=swap");
 
-  /* Semantic aliases */
-  --blush-50: #fff3f7;
-  --blush-100: #ffe8f1;
-  --blush-200: #f89aba;
-  --champagne: #fff3f7;
-  --cream: #ffffff;
-  --espresso: #000000;
-  --espresso-soft: #585858;
-  --rose: #f45197;
-  --rose-deep: #e03d84;
-  --rose-glow: rgba(244, 81, 151, 0.18);
-  --gold: #ffbc7d;
-  --gold-light: #ffd9b3;
-  --muted: #848484;
-  --border: rgba(244, 81, 151, 0.15);
-  --surface: #ffffff;
-  --font-display: "Nunito Sans", system-ui, sans-serif;
-  --font-body: "Nunito Sans", system-ui, sans-serif;
-  --radius-sm: 10px;
-  --radius: 20px;
-  --radius-lg: 28px;
-  --shadow-soft: 0 8px 40px rgba(31, 26, 24, 0.06);
-  --shadow-card: 0 16px 48px rgba(31, 26, 24, 0.08);
-  --shadow-hover: 0 24px 56px rgba(168, 93, 104, 0.12);
+/* ============================================================
+   Adriana's PMU — DESIGN SYSTEM V1.0 (fev/2026)
+   Fundo neutro quente, acentos discretos, e o rosa saturado
+   UMA vez por tela. Nunca como campo, fundo de bloco ou card.
+   ============================================================ */
+:root {
+  /* --- 01 COR: paleta base ------------------------------- */
+  --surface: #FBF6F3;        /* fundo de pagina, neutro quente */
+  --surface-alt: #FFFFFF;    /* card, campo, area elevada      */
+  --blush: #F3DCE4;          /* preenchimento suave            */
+  --rose: #C98E9B;           /* acento dessaturado             */
+  --brass: #B8985A;          /* SO linha e icone, nunca texto  */
+  /* Corrigido de #8A6E33 para #846931. O deck testou o brass contra
+     BRANCO (4.8:1), mas o fundo real da pagina e o neutro quente
+     #FBF6F3, que e mais escuro: la o #8A6E33 da 4.49:1 e REPROVA em AA.
+     #846931 mantem a matiz e da 4.84:1 sobre surface e 5.19:1 sobre branco. */
+  --brass-text: #846931;
+  --ink: #2A2321;            /* texto corrido, 14.4:1          */
+  --ink-muted: #6B605B;      /* apoio e captions, 5.8:1        */
+  --line: #ECDCE0;           /* borda de 1px                   */
+  --brand: #F45197;          /* rosa da logo. ACENTO, nao campo */
+  --brand-deep: #C2286C;     /* foco e texto de acento, 5.5:1  */
+
+  /* --- Aliases de compatibilidade -------------------------
+     Mantidos porque o HTML das 63 paginas ja referencia estes
+     nomes. Remapeados, nao removidos: remover quebraria pagina. */
+  --color-primary: var(--brand);
+  --color-secondary: var(--rose);
+  --color-accent: var(--brand-deep);
+  --color-text: var(--ink);
+  --color-text-muted: var(--ink-muted);
+  --color-black: var(--ink);
+  --color-white: var(--surface-alt);
+  --color-bg-soft: var(--surface);
+  --color-peach: var(--brass);
+  --blush-50: var(--surface);
+  --blush-100: var(--blush);
+  --blush-200: var(--rose);
+  --champagne: var(--surface);
+  --cream: var(--surface);
+  --espresso: var(--ink);
+  --espresso-soft: var(--ink);
+  --rose-deep: var(--brand-deep);
+  --rose-glow: transparent;      /* o glow rosa morreu de proposito */
+  --gold: var(--brass);
+  --gold-light: var(--blush);
+  --muted: var(--ink-muted);
+  --border: var(--line);
+
+  /* --- 02 TIPO: duas familias, papeis fixos --------------- */
+  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+
+  --h1-size: 3.5rem;    --h1-lh: 1.08;  --h1-ls: -0.02em;   --h1-w: 300;
+  --h2-size: 2.5rem;    --h2-lh: 1.15;  --h2-ls: -0.01em;   --h2-w: 300;
+  --h3-size: 1.375rem;  --h3-lh: 1.25;  --h3-ls: -0.005em;  --h3-w: 600;
+  --body-size: 1rem;    --body-lh: 1.65;
+
+  /* --- 03 FORMA E ESPACO --------------------------------- */
+  --radius-sm: 2px;
+  --radius: 2px;
+  --radius-md: 2px;
+  --radius-lg: 2px;
+
+  --space-1: 4px;   --space-2: 8px;   --space-3: 12px;  --space-4: 16px;
+  --space-6: 24px;  --space-8: 32px;  --space-12: 48px; --space-20: 80px;
+  --section-y: 80px;
+
+  /* Sombra so onde um elemento REALMENTE flutua (menu, barra fixa). */
+  --shadow-soft: none;
+  --shadow-card: none;
+  --shadow-hover: none;
+  --shadow-float: 0 2px 16px rgba(42, 35, 33, 0.10);
+
   --max-width: 1180px;
   --header-h: 80px;
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1932,3 +1978,289 @@ body.portfolio-lightbox-open {
 }
 .form-message--ok { color: #1a7f4b; }
 .form-message--error { color: #b3261e; }
+
+/* ============================================================
+   DESIGN SYSTEM V1.0 — CAMADA DE APLICACAO
+   Vem por ultimo de proposito: vence por ordem de origem, sem
+   precisar de !important e sem cirurgia em 30 declaracoes soltas.
+   Regras que decidem o resto:
+     01. O rosa saturado e acento, uma vez por tela.
+     02. Se um acento carrega texto, use a versao escura.
+     03. Na duvida entre sombra e espaco, use espaco.
+   ============================================================ */
+
+/* --- O glow rosa de fundo morre. Era campo, nao acento. ----- */
+body.beauty-site::before { content: none; }
+body.beauty-site {
+  font-family: var(--font-body);
+  font-size: var(--body-size);
+  line-height: var(--body-lh);
+  color: var(--ink);
+  background: var(--surface);
+}
+
+/* --- 02 TIPO ----------------------------------------------- */
+h1, .h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, var(--h1-size));
+  line-height: var(--h1-lh);
+  letter-spacing: var(--h1-ls);
+  font-weight: var(--h1-w);
+  color: var(--ink);
+}
+h2, .h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.875rem, 4.5vw, var(--h2-size));
+  line-height: var(--h2-lh);
+  letter-spacing: var(--h2-ls);
+  font-weight: var(--h2-w);
+  color: var(--ink);
+}
+h3, .h3, h4 {
+  font-family: var(--font-body);
+  font-size: var(--h3-size);
+  line-height: var(--h3-lh);
+  letter-spacing: var(--h3-ls);
+  font-weight: var(--h3-w);
+  color: var(--ink);
+}
+h4 { font-size: 1.0625rem; }
+p, li { color: var(--ink); }
+.eyebrow, .badge, .section-label, .card-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--brass-text);
+}
+
+/* --- 03 FORMA: raio unico de 2px, sombra so onde flutua ----- */
+.skip-link, .main-nav a, .nav-item-row, .btn, .badge,
+.location-card .tag, .portfolio-filter, .card, .feature-card,
+.has-submenu .nav-parent--static, .submenu-toggle,
+input, select, textarea, .cta-panel, .faq-item {
+  border-radius: var(--radius);
+}
+.card, .feature-card, .location-card, .cta-panel, .faq-item,
+.trust-bar, .promo-banner, .portfolio-img, .card-thumb {
+  box-shadow: none;
+}
+.card:hover, .feature-card:hover, .location-card:hover {
+  box-shadow: none;
+  transform: none;
+  border-color: var(--rose);
+}
+
+/* --- Separacao por borda de 1px e por branco --------------- */
+.card, .feature-card, .location-card, .faq-item, .cta-panel {
+  background: var(--surface-alt);
+  border: 1px solid var(--line);
+}
+
+/* --- 04 COMPONENTES: botoes -------------------------------- */
+.btn {
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  min-height: 48px;
+  padding: 0.875rem 1.75rem;
+  transition: background 0.2s var(--ease), color 0.2s var(--ease),
+              border-color 0.2s var(--ease);
+}
+.btn:hover { transform: none; }
+.btn-primary,
+.btn-primary:hover {
+  background: var(--ink);
+  color: var(--surface-alt);
+  border: 1px solid var(--ink);
+  box-shadow: none;
+}
+.btn-primary:hover { background: #3D3330; }
+.btn-secondary {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  box-shadow: none;
+}
+.btn-secondary:hover {
+  background: var(--ink);
+  color: var(--surface-alt);
+  border-color: var(--ink);
+}
+.btn:focus-visible,
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--brand-deep);
+  outline-offset: 2px;
+}
+
+/* --- Campos de formulario: 52px, foco em brand-deep -------- */
+input, select, textarea {
+  min-height: 52px;
+  border: 1px solid var(--line);
+  background: var(--surface-alt);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+textarea { min-height: 120px; }
+input:focus, select:focus, textarea:focus {
+  border-color: var(--ink);
+  box-shadow: 0 0 0 3px rgba(194, 40, 108, 0.25);
+  outline: none;
+}
+.form-note, .form-help { color: var(--ink-muted); font-size: 0.875rem; }
+
+/* --- Faixas que eram campo de rosa saturado ---------------- */
+.promo-banner {
+  background: var(--ink);
+  color: var(--surface-alt);
+  border-radius: 0;
+}
+.promo-banner a { color: var(--surface-alt); }
+.trust-bar {
+  background: var(--surface-alt);
+  color: var(--ink);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.section--cta .cta-panel {
+  background: var(--surface-alt);
+  border: 1px solid var(--line);
+  color: var(--ink);
+}
+
+/* --- A cota do rosa: o filete do rodape e a assinatura ----- */
+.site-footer::before {
+  background: var(--brand);
+  height: 3px;
+}
+
+/* --- Preco: valor em brass-text, nunca escondido ----------- */
+.price, .card-price, .service-price {
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--brass-text);
+}
+
+/* --- Respiro de secao: 80px minimo no desktop -------------- */
+@media (min-width: 768px) {
+  section, .section { padding-block: var(--section-y); }
+}
+
+/* --- 05 MOBILE: barra fixa de contato ---------------------- */
+.mobile-contact-bar {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  z-index: 90;
+  display: none;
+  grid-template-columns: 1fr 1fr 1.2fr;
+  gap: 1px;
+  height: calc(76px + env(safe-area-inset-bottom));
+  padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+  background: var(--surface-alt);
+  border-top: 1px solid var(--line);
+  box-shadow: var(--shadow-float);
+}
+.mobile-contact-bar a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  border-radius: var(--radius);
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+}
+.mobile-contact-bar a.is-book {
+  background: var(--ink);
+  color: var(--surface-alt);
+}
+@media (max-width: 767px) {
+  .mobile-contact-bar { display: grid; }
+  body.beauty-site { padding-bottom: 86px; }
+}
+
+/* --- Hero: o gradiente rosa era campo, nao acento ---------- */
+.hero--premium { background: var(--surface); }
+.hero-bg-accent { display: none; }
+.hero-visual, .hero-visual--framed, .portfolio-img, .card-thumb, img {
+  border-radius: var(--radius);
+}
+.hero-visual-badge {
+  background: var(--surface-alt);
+  border: 1px solid var(--line);
+  backdrop-filter: none;
+  box-shadow: none;
+  letter-spacing: 0.16em;
+  font-size: 0.75rem;
+  color: var(--ink);
+}
+.hero-badges .badge {
+  background: var(--surface-alt);
+  border: 1px solid var(--line);
+  color: var(--brass-text);
+}
+
+/* --- Valores: sempre em brass-text, familia de corpo -------
+   O rosa da logo nao recebe texto (3.2:1, reprova AA). Preco em
+   serif rosa saturado era o item mais caro da tela na cor errada. */
+.pricing-badge, .price, .card-price, .service-price, .fact-value {
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--brass-text);
+  background: none;
+  border: 0;
+  padding: 0;
+}
+.pricing-badge { font-size: 1.375rem; letter-spacing: -0.005em; }
+
+/* --- 04 COMPONENTES: destaque de fatos --------------------- */
+.fact-layer {
+  display: grid;
+  gap: var(--space-6);
+  padding-block: var(--space-8);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+@media (min-width: 768px) {
+  .fact-layer { grid-template-columns: repeat(3, 1fr); }
+}
+.fact-layer dt {
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--brass-text);
+}
+.fact-layer dd { margin: var(--space-2) 0 0; color: var(--ink-muted); }
+
+/* --- Tabela comparativa: uma recomendacao marcada ---------- */
+table { border-collapse: collapse; width: 100%; }
+th, td {
+  border-bottom: 1px solid var(--line);
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  font-size: 0.9375rem;
+  color: var(--ink);
+}
+th {
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--brass-text);
+}
+/* A coluna recomendada e a UNICA ocorrencia do rosa da marca aqui:
+   um filete de 3px no topo, nunca preenchimento. */
+.col-recommended { box-shadow: inset 0 3px 0 0 var(--brand); }
+
+/* --- Breadcrumb -------------------------------------------- */
+.breadcrumb, .breadcrumb a { color: var(--ink-muted); font-size: 0.875rem; }
+.breadcrumb a:hover { color: var(--ink); }
