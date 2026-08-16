@@ -6,36 +6,38 @@
   "compatibility_date": "2026-08-10",
 
   // Entry point do Worker. Existe por causa de UM endpoint: /api/contact.
-  // Ver src/index.js.
   "main": "./src/index.js",
 
   "assets": {
-    // Site e HTML estatico puro na raiz do repo, sem build step.
     "directory": "./",
-
-    // Workers nao infere o comportamento de 404 como o Pages fazia.
-    // Precisa ser explicito. Usa o 404.html da raiz.
     "not_found_handling": "404-page",
-
     "binding": "ASSETS",
 
-    // ISTO E O QUE IMPORTA: o Worker so e invocado em /api/*.
-    // Qualquer outra URL continua sendo servida direto pelos assets,
-    // sem passar por codigo, com a mesma performance de antes.
+    // O Worker so e invocado em /api/*. Qualquer outra URL continua
+    // sendo servida direto pelos assets, sem passar por codigo.
     "run_worker_first": ["/api/*"]
   },
 
+  // Envio nativo do Cloudflare Email Service. Sem restricao de
+  // destino no binding: a restricao real ja existe na plataforma,
+  // que so aceita enviar para enderecos VERIFICADOS da conta
+  // (gratuito em qualquer plano). Os destinatarios ficam no secret
+  // CONTACT_TO, fora do repo publico.
+  "send_email": [
+    {
+      "name": "EMAIL"
+    }
+  ],
+
   "vars": {
     // Origens aceitas pelo endpoint do formulario. Nao e segredo.
-    // A linha da workers.dev sai depois do cutover, junto com a rota.
     "ALLOWED_ORIGINS": "https://adrianaspmu.com,https://www.adrianaspmu.com,https://adrianaspmu.pablodias2017.workers.dev",
 
-    // Confirmacao automatica para a visitante. Comeca DESLIGADA.
-    // Trocar para "on" so depois de validar a notificacao nas tres caixas.
-    "AUTOREPLY": "off"
+    // Remetente. Precisa pertencer ao dominio de routing.
+    "CONTACT_FROM": "Adriana's PMU Website <website@adrianaspmu.com>"
   },
 
-  // Rate limit nativo, por IP, no endpoint do formulario. Sem KV, sem estado.
+  // Rate limit nativo, por IP, no endpoint do formulario.
   "ratelimits": [
     {
       "name": "CONTACT_LIMITER",
