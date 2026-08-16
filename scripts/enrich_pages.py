@@ -48,6 +48,52 @@ SALEM_NODE = {
 }
 
 
+
+FRESHA_W = ("https://www.fresha.com/a/adrianas-permanent-makeup-wilmington-ma-"
+            "wilmington-211-lowell-street-jalpqett/all-offer?menu=true&share=true&pId=727586")
+FRESHA_S = ("https://www.fresha.com/a/adrianas-permanent-makeup-salem-nh-"
+            "salem-eua-117a-main-street-w0he16uu/all-offer?menu=true&share=true&pId=727586")
+FRESHA_GENERIC = "https://www.fresha.com/book-now/adrianas-permanent-makeup-zeaseit5/all-offer?share=true&pId=727586"
+
+# Meta descriptions reescritas (auditoria 16/08: fracas, duplicadas ou truncadas).
+# Chave: caminho relativo da pagina. Valor: 140-160 chars com servico+cidade+CTA.
+DESCRIPTIONS = {
+    "services/eyebrows/index.html": "Microblading, nano brows, powder and combination brows in Wilmington MA and Salem NH. Compare techniques, see prices, and book a free consultation.",
+    "services/lips/index.html": "Lip blush and dark lip neutralization in Wilmington MA and Salem NH. Natural color and defined contour, with the perfecting session included.",
+    "services/eyeliner/index.html": "Permanent eyeliner in Wilmington MA and Salem NH: top, bottom, smokey effect and combo. Smudge-proof definition that survives the gym, from $250.",
+    "services/combos/index.html": "Permanent makeup combo packages in Wilmington MA and Salem NH. Pair brows, lips and eyeliner in one plan and save, perfecting session included.",
+    "services/touch-ups/index.html": "Yearly permanent makeup touch-ups in Wilmington MA and Salem NH. Keep brows, lips and eyeliner fresh with a refresh by the original artist.",
+    "portfolio/index.html": "Real before and after photos of microblading, nano brows, lip blush and eyeliner by the Adriana's PMU artists in Wilmington MA and Salem NH.",
+    "payment-plan/index.html": "Split your permanent makeup service into easy payments at Adriana's PMU. Flexible payment plans in Wilmington MA and Salem NH, no hidden fees.",
+    "faq/index.html": "Answers about permanent makeup: pain, healing, duration, prices and aftercare, from Master PMU Artist Adriana Souza Santos in MA and NH.",
+    "contact/index.html": "Contact Adriana's Permanent Makeup: Wilmington MA (781) 853-8063 or Salem NH (978) 223-7496. Send a message or book your consultation online.",
+    "locations/index.html": "Two Adriana's Permanent Makeup studios: 211 Lowell Street, Wilmington MA and 117A Main Street, Salem NH. Addresses, phones and booking links.",
+    "locations/salem-nh/index.html": "Adriana's Permanent Makeup at 117A Main Street, Salem NH. Microblading, nano brows, lip blush and eyeliner near Derry, Windham and Methuen.",
+    "locations/wilmington-ma/index.html": "Adriana's Permanent Makeup at 211 Lowell Street Suite F, Wilmington MA. Brows, lips and eyeliner near Burlington, Woburn and North Reading.",
+    "about/index.html": "Meet Adriana Souza Santos, Master PMU Artist with 20+ years and 5,000+ procedures, and the team behind the Adriana's studios in MA and NH.",
+    "privacy-policy/index.html": "How Adriana's Permanent Makeup collects, uses and protects your personal information across our website and studios in MA and NH.",
+    "terms-of-use/index.html": "Terms of use for the Adriana's Permanent Makeup website, including booking, deposits, cancellations and studio policies in MA and NH.",
+}
+
+
+def fix_descriptions(s, path_rel):
+    desc = DESCRIPTIONS.get(path_rel)
+    if not desc:
+        return s
+    return re.sub(r'<meta name="description" content="[^"]*"',
+                  f'<meta name="description" content="{desc}"', s, count=1)
+
+
+def fix_fresha(s, path_rel):
+    """Pagina de cidade manda direto para o Fresha da unidade certa.
+    Elimina a segunda escolha de unidade na jornada (feedback Rachel 16/08)."""
+    if "/wilmington-ma/" in "/" + path_rel:
+        return s.replace(FRESHA_GENERIC, FRESHA_W)
+    if "/salem-nh/" in "/" + path_rel:
+        return s.replace(FRESHA_GENERIC, FRESHA_S)
+    return s
+
+
 # ---------- utilidades ----------
 
 def img_size(path):
@@ -278,6 +324,8 @@ def main():
                 s = f.read()
             orig = s
             if fn == "index.html":
+                s = fix_descriptions(s, rel)
+                s = fix_fresha(s, rel)
                 s = add_og(s, dirpath)
                 s = enrich_schema(s, rel)
                 s = fix_lcp(s, rel)
