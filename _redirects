@@ -56,6 +56,10 @@
 # Sem equivalente direto no site novo
 /price-list/                    /services/                                301
 
+# Oferta sazonal de Natal fora do ar em agosto (auditoria 16/08).
+# 301 para servicos ate existir uma oferta atual de verdade.
+/flash-sale/                    /services/                                301
+
 # URLs iguais nos dois sites, sem regra de proposito:
 #   /  /flash-sale/  /training/  /services/
 # E, desde a migracao para URL sem extensao, tambem:
