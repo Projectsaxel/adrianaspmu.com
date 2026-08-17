@@ -241,6 +241,15 @@ def enrich_schema(s, path_rel):
 
     ids = {n.get("@id") for n in graph if isinstance(n, dict)}
 
+    # 0. aggregateRating auto-declarado sai de TODAS as paginas.
+    #    O Google ignora review snippet self-serving para LocalBusiness
+    #    desde 2019, o numero conflitava com o "1,000+ reviews" da home,
+    #    e markup de review auto-referente fora de pagina de review e
+    #    risco de manual action de structured data spam (auditoria 12/08).
+    for node in graph:
+        if isinstance(node, dict):
+            node.pop("aggregateRating", None)
+
     # 1. Salem NH no grafo de TODAS as paginas
     if f"{BASE}/#salem" not in ids:
         graph.append(SALEM_NODE)
