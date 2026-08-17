@@ -47,7 +47,10 @@
     const home = resolvePath("/");
     const logoSrc = resolvePath((typeof SITE !== "undefined" && SITE.logo) || "/assets/images/logo.svg");
 
-    el.innerHTML = `
+    // Se o build ja injetou o header como HTML estatico (scripts/static_nav.js),
+    // nao reescreve: so liga os listeners abaixo. Isso mantem a navegacao
+    // visivel para crawlers e para GPTBot/ClaudeBot, que nao executam JS.
+    if (!el.innerHTML.trim()) el.innerHTML = `
       <div class="promo-banner">
         <span>Limited-time offer: Initial session + perfection touch-up included on select services.</span>
       </div>
@@ -111,6 +114,7 @@
     const s = SITE.locations.salem;
     const p = SITE.locations.peabody;
 
+    if (el.innerHTML.trim()) return;   // ja injetado no build
     el.innerHTML = `
       <footer class="site-footer">
         <div class="container">
@@ -128,11 +132,13 @@
                 <li><a href="${resolvePath("/services/eyeliner/")}">Eyeliner PMU</a></li>
                 <li><a href="${resolvePath("/services/combos/")}">Combo Packages</a></li>
                 <li><a href="${resolvePath("/academy/")}">PMU Academy</a></li>
+                <li><a href="${resolvePath("/payment-plan/")}">Payment Plans</a></li>
               </ul>
             </div>
             <div>
               <h4>Locations</h4>
               <ul>
+                <li><a href="${resolvePath("/locations/")}">All Locations</a></li>
                 <li><a href="${resolvePath("/locations/wilmington-ma/")}">Wilmington, MA</a></li>
                 <li><a href="${resolvePath("/locations/salem-nh/")}">Salem, NH</a></li>
                 <li><a href="${resolvePath("/contact/")}">Contact</a></li>
