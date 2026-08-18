@@ -76,6 +76,82 @@ DESCRIPTIONS = {
 }
 
 
+# --- Camada de medicao (Fase 0 do plano de 12/08) -------------------
+#
+# Property GA4 "Adriana" (441132178), stream "adrianas pmu" (8152241977).
+# Ate 17/08/2026 o site NAO tinha tag nenhuma: a property existia e
+# estava vazia. Todo o trafego dos ultimos meses foi perdido.
+#
+# O gtag vai no build e nao no repo pelo mesmo motivo dos outros
+# enriquecimentos: 63 paginas. E vai INLINE no head, nao via GTM,
+# porque nao ha nenhum outro tag para gerenciar e o GTM custaria
+# ~90KB de JS e um request extra antes do primeiro hit.
+GA4_ID = "G-ZSD89WRHYZ"
+
+CITY_LABEL = {"wilmington-ma": "wilmington", "salem-nh": "salem"}
+
+
+def classify(path_rel):
+    """page_type, service e city de cada pagina, decididos no build.
+
+    O evento sozinho ("clicou em agendar") nao responde nada. Com estes
+    tres parametros ele responde: agendar O QUE, em QUAL cidade, vindo
+    de QUAL tipo de pagina. E o que transforma o GA4 de contador de
+    visita em ferramenta de decisao sobre onde investir conteudo.
+    """
+    p = path_rel[: -len("/index.html")] if path_rel.endswith("/index.html") else path_rel
+    if path_rel == "index.html":
+        return {"page_type": "home", "service": "", "city": ""}
+
+    seg = p.split("/")
+
+    if seg[0] == "services":
+        if len(seg) == 1:
+            return {"page_type": "service_hub", "service": "", "city": ""}
+        if len(seg) == 2:
+            return {"page_type": "service_category", "service": seg[1], "city": ""}
+        if len(seg) == 3:
+            return {"page_type": "service", "service": seg[2], "city": ""}
+        return {"page_type": "service_city", "service": seg[2], "city": CITY_LABEL.get(seg[3], seg[3])}
+
+    if seg[0] == "locations":
+        if len(seg) == 1:
+            return {"page_type": "locations_hub", "service": "", "city": ""}
+        return {"page_type": "location", "service": "", "city": CITY_LABEL.get(seg[1], seg[1])}
+
+    if seg[0] == "academy":
+        if len(seg) == 1:
+            return {"page_type": "academy_hub", "service": "", "city": ""}
+        return {"page_type": "academy_course", "service": seg[1], "city": ""}
+
+    simple = {
+        "about": "about", "faq": "faq", "contact": "contact",
+        "portfolio": "portfolio", "payment-plan": "payment",
+        "privacy-policy": "legal", "terms-of-use": "legal",
+    }
+    return {"page_type": simple.get(seg[0], "other"), "service": "", "city": ""}
+
+
+def add_analytics(s, path_rel):
+    if GA4_ID in s:
+        return s
+    c = classify(path_rel)
+    page_json = json.dumps(c, separators=(",", ":"))
+    snippet = (
+        f'<script>window.PMU_PAGE={page_json};</script>\n'
+        f'<script async src="https://www.googletagmanager.com/gtag/js?id={GA4_ID}"></script>\n'
+        "<script>window.dataLayer=window.dataLayer||[];"
+        "function gtag(){dataLayer.push(arguments);}gtag('js',new Date());"
+        # Os tres parametros da pagina viajam em TODO evento, inclusive
+        # no page_view. Sem isso, so o evento de clique saberia o
+        # contexto e nao daria para comparar visita com conversao.
+        f"gtag('config','{GA4_ID}',{{page_type:'{c['page_type']}',"
+        f"service:'{c['service'] or '(none)'}',city:'{c['city'] or '(none)'}'}});</script>\n"
+        '<script src="/js/analytics.js" defer></script>\n'
+    )
+    return s.replace("</head>", snippet + "</head>", 1)
+
+
 def fix_descriptions(s, path_rel):
     desc = DESCRIPTIONS.get(path_rel)
     if not desc:
@@ -398,6 +474,9 @@ def main():
                 s = add_og(s, dirpath)
                 s = enrich_schema(s, rel)
                 s = fix_lcp(s, rel)
+            # A 404 tambem leva tag: pagina de erro sem medicao e a
+            # forma mais comum de um link quebrado sobreviver meses.
+            s = add_analytics(s, rel)
             s = fix_dimensions(s, dirpath)
             if s != orig:
                 with open(fp, "w", encoding="utf-8") as f:

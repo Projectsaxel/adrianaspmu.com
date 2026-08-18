@@ -2393,3 +2393,49 @@ th {
   border-radius: var(--radius);
   display: block;
 }
+
+/* ---------------------------------------------------------------
+   Click-to-call no header (auditoria 12/08, item T11)
+
+   Abaixo de 900px o .header-cta inteiro estava display:none, ou seja,
+   no mobile, que e onde uma busca local vira ligacao, o header nao
+   tinha CTA nenhum: a unica forma de ligar era rolar ate o rodape.
+   Aqui o botao Book Consultation continua escondido no mobile (nao
+   cabe ao lado do menu) mas o Call aparece, e no desktop os dois
+   convivem, com o Call em peso secundario para nao competir com o
+   agendamento online.
+   --------------------------------------------------------------- */
+.header-cta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.header-call {
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.header-call:hover {
+  border-color: var(--rose);
+  color: var(--brand-deep);
+}
+
+@media (max-width: 900px) {
+  .header-cta {
+    display: flex;
+    order: 2;
+    margin-left: auto;
+    margin-right: 0.25rem;
+  }
+  .header-cta .btn-primary {
+    display: none;
+  }
+  .header-cta .header-call {
+    padding: 0.55rem 1rem;
+    font-size: 0.7rem;
+  }
+  .nav-toggle {
+    order: 3;
+  }
+}

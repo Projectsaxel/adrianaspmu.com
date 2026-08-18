@@ -64,6 +64,7 @@
             <ul>${navItems}</ul>
           </nav>
           <div class="header-cta">
+            <a class="btn btn-ghost header-call" href="tel:+17818538063" aria-label="Call the studio">Call</a>
             <a class="btn btn-primary" href="${resolvePath("/contact/")}">Book Consultation</a>
           </div>
         </div>
@@ -97,6 +98,14 @@
         }
       });
     });
+
+    // O header e o mesmo HTML em todas as paginas (injetado no build).
+    // Em pagina de Salem, o botao Call precisa tocar em Salem, senao a
+    // visitante liga para a unidade errada.
+    if (String(window.location.pathname).indexOf("salem") > -1) {
+      const call = el.querySelector(".header-call");
+      if (call) call.setAttribute("href", "tel:+19782237496");
+    }
 
     const header = el.querySelector(".site-header");
     if (header) {
@@ -246,7 +255,12 @@
       }
 
       show(text, ok);
-      if (ok) form.reset();
+      if (ok) {
+        // Lead so conta depois que o Worker confirmou o envio. Contar no
+        // submit inflaria o numero com tentativas que nunca chegaram.
+        window.PMU_track?.formSubmitContact?.(payload.location);
+        form.reset();
+      }
 
       if (button) {
         button.disabled = false;
