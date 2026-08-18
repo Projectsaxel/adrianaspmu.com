@@ -70,6 +70,54 @@
 # faria a URL redirecionar para si mesma, em loop.
 
 # ============================================================
+# MESMAS URLs SEM A BARRA FINAL.
+#
+# O site anterior servia /salem-nh, /price-list, /microblading
+# etc. SEM barra (eram <slug>.html). Toda regra acima foi escrita
+# so na forma com barra, entao a forma real, que e a que esta
+# indexada, linkada no Instagram e na ficha do Google, caia em
+# 404 seco: o Workers so faz auto-trailing-slash quando existe um
+# asset com aquele nome, e /salem-nh nao existe mais.
+#
+# Confirmado no GA4 (property 441132178, 1/7 a 17/8/2026), essas
+# URLs sem barra sao paginas de destino reais e ativas:
+#   /salem-nh 105 sessoes, /price-list 79, /payment-plan 54,
+#   /training 40. Eram 25 URLs em 404.
+#
+# /training e /flash-sale respondiam 307 -> /<slug>/ -> 301 destino,
+# corrente de dois saltos. Aqui viram um 301 unico.
+# ============================================================
+
+/about-us                    /about/                                   301
+/staff                       /about/                                   301
+/our-history                 /about/                                   301
+/contact-us                  /contact/                                 301
+/beauty-form                 /contact/                                 301
+/faqs                        /faq/                                     301
+/policy                      /terms-of-use/                            301
+/salem-nh                    /locations/salem-nh/                      301
+/apprenticeship              /academy/pmu-apprenticeship/              301
+/100-hours-fundamental       /academy/pmu-100h-fundamental/            301
+/training                    /academy/                                 301
+/microblading                /services/eyebrows/microblading/          301
+/nano-brows-3d               /services/eyebrows/nano-brows/            301
+/nano-brows-combo            /services/eyebrows/nano-combo/            301
+/ombre-shading-powder-brows  /services/eyebrows/powder-brows/          301
+/microshading                /services/eyebrows/combination-brows/     301
+/lip-blush                   /services/lips/lip-blush/                 301
+/dark-lip-neutralization     /services/lips/dark-lip-neutralization/   301
+/top-eyeliner-classic        /services/eyeliner/top-eyeliner/          301
+/top-eyeliner-cat-eye        /services/eyeliner/top-eyeliner/          301
+/bottom-eyeliner             /services/eyeliner/bottom-eyeliner/       301
+/eyeliner-smokey-effect      /services/eyeliner/smokey-eyeliner/       301
+/eyeliner-combo              /services/eyeliner/eyeliner-combo/        301
+/eyebrows-lips-combo         /services/combos/eyebrows-lips-combo/     301
+/full-face                   /services/combos/                         301
+/price-list                  /services/                                301
+/flash-sale                  /services/                                301
+/wilmington-ma               /locations/wilmington-ma/                 301
+
+# ============================================================
 # NORMALIZACAO .html -> URL final, com 301 permanente.
 # Sem estas regras a Cloudflare devolve 307 (temporario), que
 # nao consolida autoridade de link do mesmo jeito.
