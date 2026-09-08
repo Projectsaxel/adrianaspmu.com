@@ -269,6 +269,190 @@
     });
   }
 
+  /**
+   * Contato flutuante: botao fixo no canto inferior direito de TODAS as
+   * paginas, abrindo uma janela com formulario curto.
+   *
+   * Por que em JS e nao em HTML: sao 63 paginas. Injetar aqui garante 100%
+   * de cobertura sem rebuild, do mesmo jeito que header e footer.
+   *
+   * O envio usa o MESMO endpoint /api/contact e portanto os MESMOS tres
+   * destinatarios do secret CONTACT_TO. O campo "source" viaja para que o
+   * assunto do e-mail diga que o lead veio do botao flutuante, e nao da
+   * pagina de contato.
+   */
+  function initFloatingCta() {
+    if (document.querySelector(".float-cta")) return;
+
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "float-cta";
+    btn.setAttribute("aria-haspopup", "dialog");
+    btn.setAttribute("aria-expanded", "false");
+    btn.setAttribute("aria-label", "Ask about your brows, lips or eyeliner");
+    btn.innerHTML =
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" ' +
+      'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+      '<path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>' +
+      "</svg><span class=\"float-cta-label\">Ask about your brows</span>";
+
+    const modal = document.createElement("div");
+    modal.className = "float-modal";
+    modal.hidden = true;
+    modal.innerHTML = `
+      <div class="float-modal-panel" role="dialog" aria-modal="true" aria-labelledby="float-modal-title">
+        <button type="button" class="float-modal-close" aria-label="Close">&times;</button>
+        <h2 class="float-modal-title" id="float-modal-title">Ask about your brows</h2>
+        <p class="float-modal-sub">Tell us what you are considering and Adriana's team answers with the honest options for your features, healing time and price.</p>
+        <p class="float-modal-langs">We answer in English &middot; Atendemos em portugu&ecirc;s</p>
+        <form novalidate>
+          <div class="float-hp" aria-hidden="true">
+            <label>Do not fill this<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+          </div>
+          <div class="form-group">
+            <label for="float-name">Name <span aria-hidden="true">*</span></label>
+            <input id="float-name" name="name" type="text" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="float-phone">Phone <span aria-hidden="true">*</span></label>
+            <input id="float-phone" name="phone" type="tel" required autocomplete="tel">
+          </div>
+          <div class="form-group">
+            <label for="float-email">Email <span aria-hidden="true">*</span></label>
+            <input id="float-email" name="email" type="email" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="float-message">What are you looking for? <span aria-hidden="true">*</span></label>
+            <textarea id="float-message" name="message" rows="3" required></textarea>
+          </div>
+          <p class="form-message" hidden role="status" aria-live="polite"></p>
+          <button type="submit" class="btn btn-primary">Send my question</button>
+          <p class="float-modal-fine">Or call <a href="tel:+17818538063">(781) 853-8063</a> &middot; Wilmington MA &amp; Salem NH</p>
+        </form>
+      </div>`;
+
+    document.body.append(btn, modal);
+
+    const panel = modal.querySelector(".float-modal-panel");
+    const form = modal.querySelector("form");
+    const msg = modal.querySelector(".form-message");
+    const submit = modal.querySelector('button[type="submit"]');
+    const submitLabel = submit.textContent;
+    let openedAt = 0;
+    let lastFocus = null;
+
+    const PHONES = "Please call Wilmington (781) 853-8063 or Salem (978) 223-7496.";
+
+    function show(text, ok) {
+      msg.textContent = text;
+      msg.hidden = false;
+      msg.classList.toggle("form-message--ok", !!ok);
+      msg.classList.toggle("form-message--error", !ok);
+    }
+
+    function open() {
+      lastFocus = document.activeElement;
+      modal.hidden = false;
+      btn.setAttribute("aria-expanded", "true");
+      openedAt = Date.now();
+      document.body.style.overflow = "hidden";
+      modal.querySelector("#float-name").focus();
+      window.PMU_track?.floatCtaOpen?.();
+    }
+
+    function close() {
+      modal.hidden = true;
+      btn.setAttribute("aria-expanded", "false");
+      document.body.style.overflow = "";
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+
+    btn.addEventListener("click", open);
+    modal.querySelector(".float-modal-close").addEventListener("click", close);
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) close();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (modal.hidden) return;
+      if (e.key === "Escape") {
+        close();
+        return;
+      }
+      // Prende o foco na janela: sem isso o teclado sai para o site atras.
+      if (e.key === "Tab") {
+        const focaveis = panel.querySelectorAll(
+          'button, [href], input, textarea, select, [tabindex]:not([tabindex="-1"])',
+        );
+        const lista = [...focaveis].filter((el) => el.offsetParent !== null);
+        if (!lista.length) return;
+        const primeiro = lista[0];
+        const ultimo = lista[lista.length - 1];
+        if (e.shiftKey && document.activeElement === primeiro) {
+          e.preventDefault();
+          ultimo.focus();
+        } else if (!e.shiftKey && document.activeElement === ultimo) {
+          e.preventDefault();
+          primeiro.focus();
+        }
+      }
+    });
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      // Os quatro campos sao obrigatorios. Validamos aqui tambem porque o
+      // form e novalidate (para controlarmos a mensagem em vez do balao
+      // nativo do navegador).
+      const payload = Object.fromEntries(new FormData(form).entries());
+      const faltando = ["name", "phone", "email", "message"].filter(
+        (k) => !String(payload[k] || "").trim(),
+      );
+      if (faltando.length) {
+        show("Please fill in your name, phone, email and message.", false);
+        form.querySelector(`[name="${faltando[0]}"]`)?.focus();
+        return;
+      }
+
+      submit.disabled = true;
+      submit.textContent = "Sending...";
+      show("Sending your message...", true);
+
+      payload.elapsed = Date.now() - openedAt;
+      payload.page = window.location.pathname;
+      payload.source = "floating-button";
+      payload.location = "From floating button";
+
+      let ok = false;
+      let text = "We could not send your message. " + PHONES;
+
+      try {
+        const res = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+        const body = await res.json().catch(() => ({}));
+        if (res.ok && body.ok) {
+          ok = true;
+          text = "Thank you! We received your question and will get back to you shortly.";
+        } else if (body.error) {
+          text = body.error;
+        }
+      } catch (err) {
+        text = "Network error. " + PHONES;
+      }
+
+      show(text, ok);
+      if (ok) {
+        // Só conta como lead depois que o Worker confirmou o envio.
+        window.PMU_track?.formSubmitFloating?.();
+        form.reset();
+      }
+      submit.disabled = false;
+      submit.textContent = submitLabel;
+    });
+  }
+
   function initPortfolioFilters() {
     document.querySelectorAll(".portfolio-filters").forEach((bar) => {
       const grid = bar.nextElementSibling;
@@ -386,6 +570,7 @@
     initFaq();
     initReviewsNav();
     initContactForm();
+    initFloatingCta();
     initPortfolioFilters();
     initPortfolioLightbox();
   });

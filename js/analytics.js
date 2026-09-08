@@ -379,10 +379,29 @@
    */
   window.PMU_track = {
     formSubmitContact: function (location) {
-      gtagSafe("form_submit_contact", { location: location || PAGE.city || "(not set)" });
+      gtagSafe("form_submit_contact", {
+        location: location || PAGE.city || "(not set)",
+        form_source: "contact-page",
+      });
     },
     academyLead: function (course) {
       gtagSafe("academy_lead", { course: course || PAGE.service || "(not set)" });
+    },
+    /** Abriu a janela do botao flutuante. Intencao, nao lead. */
+    floatCtaOpen: function () {
+      gtagSafe("float_cta_open", { form_source: "floating-button" });
+    },
+    /**
+     * Lead do botao flutuante, so depois de ok:true do Worker.
+     * Evento separado do form_submit_contact de proposito: os dois
+     * chegam nos mesmos tres e-mails, mas vem de contextos diferentes
+     * e precisam ser comparaveis no relatorio.
+     */
+    formSubmitFloating: function () {
+      gtagSafe("form_submit_floating", {
+        form_source: "floating-button",
+        location: PAGE.city || "(not set)",
+      });
     },
   };
 
