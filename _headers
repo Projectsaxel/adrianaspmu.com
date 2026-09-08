@@ -24,3 +24,9 @@
 /*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
+  # Faltavam. HSTS com preload fica de fora de proposito: preload e
+  # praticamente irreversivel e exige decisao consciente da cliente.
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=()
+  Cross-Origin-Opener-Policy: same-origin

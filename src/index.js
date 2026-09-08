@@ -23,7 +23,16 @@
  *   CONTACT_FROM var     website@adrianaspmu.com (dominio de routing)
  */
 
-const LIMITS = { name: 120, email: 200, phone: 40, location: 80, message: 4000 };
+const LIMITS = { name: 120, email: 200, phone: 40, location: 80, message: 4000, source: 40 };
+
+// De onde o lead veio. Allowlist e nao texto livre: "source" entra no
+// assunto do e-mail, e assunto montado com string do cliente e injecao
+// de cabecalho esperando acontecer.
+const SOURCES = {
+  "contact-page": "Contact page",
+  "floating-button": "Floating button",
+};
+const SOURCE_DEFAULT = "contact-page";
 
 // Humano nao preenche nome, e-mail e telefone em menos de 3s. Bot preenche.
 const MIN_FILL_MS = 3000;
@@ -121,10 +130,21 @@ async function handleContact(request, env, ctx) {
   const message = clean(data.message, LIMITS.message);
   const page = clean(data.page, 200);
 
+  const sourceKey = clean(data.source, LIMITS.source);
+  const source = Object.prototype.hasOwnProperty.call(SOURCES, sourceKey)
+    ? sourceKey
+    : SOURCE_DEFAULT;
+  const sourceLabel = SOURCES[source];
+
   const errors = [];
   if (name.length < 2) errors.push("Please enter your name.");
   if (!EMAIL_RE.test(email)) errors.push("Please enter a valid email address.");
   if (phone.replace(/\D/g, "").length < 10) errors.push("Please enter a valid phone number.");
+  // No botao flutuante os quatro campos sao obrigatorios. Na pagina de
+  // contato a mensagem segue opcional, para nao mudar o que ja funciona.
+  if (source === "floating-button" && message.length < 2) {
+    errors.push("Please tell us what you are looking for.");
+  }
   if (errors.length) {
     return json({ ok: false, error: errors.join(" ") }, 422);
   }
@@ -152,6 +172,7 @@ async function handleContact(request, env, ctx) {
 
   const cf = request.cf || {};
   const meta = [
+    ["Came from", sourceLabel],
     ["Preferred location", location],
     ["Submitted from", page || "/contact/"],
     ["Visitor city", [cf.city, cf.region, cf.country].filter(Boolean).join(", ")],
@@ -160,7 +181,7 @@ async function handleContact(request, env, ctx) {
 
   const html = `<!doctype html><html><body style="font-family:-apple-system,Segoe UI,Arial,sans-serif;color:#222">
 <h2 style="margin:0 0 4px">New contact form submission</h2>
-<p style="margin:0 0 16px;color:#666">adrianaspmu.com</p>
+<p style="margin:0 0 16px;color:#666">adrianaspmu.com &mdash; ${esc(sourceLabel)}</p>
 <table cellpadding="6" style="border-collapse:collapse;font-size:15px">
 <tr><td><strong>Name</strong></td><td>${esc(name)}</td></tr>
 <tr><td><strong>Email</strong></td><td><a href="mailto:${esc(email)}">${esc(email)}</a></td></tr>
@@ -173,7 +194,7 @@ ${meta.map(([k, v]) => `<tr><td><strong>${esc(k)}</strong></td><td>${esc(v)}</td
 </body></html>`;
 
   const text = [
-    "New contact form submission - adrianaspmu.com",
+    `New contact form submission - adrianaspmu.com [${sourceLabel}]`,
     "",
     `Name:  ${name}`,
     `Email: ${email}`,
@@ -194,7 +215,7 @@ ${meta.map(([k, v]) => `<tr><td><strong>${esc(k)}</strong></td><td>${esc(v)}</td
         to: rcpt,
         from: env.CONTACT_FROM,
         reply_to: email,
-        subject: `New website inquiry: ${name} (${location})`,
+        subject: `[${sourceLabel}] New website inquiry: ${name}`,
         html,
         text,
       }),

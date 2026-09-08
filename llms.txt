@@ -7,16 +7,14 @@
 - [Services](https://adrianaspmu.com/services/): All permanent makeup services in MA and NH
 - [Locations](https://adrianaspmu.com/locations/): Wilmington MA + Salem NH studios
 - [Academy](https://adrianaspmu.com/academy/): Permanent Makeup training programs
-- [Training](https://adrianaspmu.com/training/): Academy hub (mirror of /academy/)
 - [Contact](https://adrianaspmu.com/contact/): Studio contact and consultation
 - [FAQ](https://adrianaspmu.com/faq/): Permanent makeup frequently asked questions
 - [Portfolio](https://adrianaspmu.com/portfolio/): Before and after PMU results
-- [Flash Sale](https://adrianaspmu.com/flash-sale/): Limited-time brows or lips PMU for $349
 - [Privacy Policy](https://adrianaspmu.com/privacy-policy/)
 - [Terms of Use](https://adrianaspmu.com/terms-of-use/)
 
 ## Eyebrow Permanent Makeup
-- [Nano Brows](https://adrianaspmu.com/services/eyebrows/nano-brows/): Nano Brows uses an ultra-fine needle and digital machine to create realistic, hair-like strokes for fuller, natural-looking eyebrows that la. ($650)
+- [Nano Brows](https://adrianaspmu.com/services/eyebrows/nano-brows/): Nano Brows uses an ultra-fine needle and digital machine to create realistic, hair-like strokes for fuller, natural-looking eyebrows that last one to three years. ($650)
 - [Microblading](https://adrianaspmu.com/services/eyebrows/microblading/): Microblading uses a handheld tool to create fine, hair-like strokes for fuller, natural-looking brows that typically last 12 to 24 months. ($550)
 - [Powder Brows](https://adrianaspmu.com/services/eyebrows/powder-brows/): Powder Brows uses a digital machine to create a soft, shaded brow effect with a polished makeup-like finish that typically lasts 1 to 3 year. ($550)
 - [Combination Brows](https://adrianaspmu.com/services/eyebrows/combination-brows/): Combination Brows blends hair-like strokes with soft shading for fuller, natural-looking eyebrows that typically last 1 to 3 years. (custom pricing)
@@ -27,13 +25,13 @@
 - [Dark Lip Neutralization](https://adrianaspmu.com/services/lips/dark-lip-neutralization/): Dark Lip Neutralization uses advanced color correction to neutralize dark, cool, or uneven lip pigmentation and create a more balanced, natu. ($550)
 
 ## Permanent Eyeliner
-- [Top Eyeliner](https://adrianaspmu.com/services/eyeliner/top-eyeliner/): Top Eyeliner is a permanent makeup procedure that defines the upper lash line with long-lasting pigment — from subtle lash enhancement to a. ($350)
-- [Smokey Eyeliner](https://adrianaspmu.com/services/eyeliner/smokey-eyeliner/): Smokey Eyeliner combines defined upper-lid liner with soft shading for a blended, makeup-inspired effect that lasts for years with proper ca. ($400)
+- [Top Eyeliner](https://adrianaspmu.com/services/eyeliner/top-eyeliner/): Top Eyeliner is a permanent makeup procedure that defines the upper lash line with long-lasting pigment — from subtle lash enhancement to a soft, natural finish. ($350)
+- [Smokey Eyeliner](https://adrianaspmu.com/services/eyeliner/smokey-eyeliner/): Smokey Eyeliner combines defined upper-lid liner with soft shading for a blended, makeup-inspired effect that lasts for years with proper care. ($400)
 - [Bottom Eyeliner](https://adrianaspmu.com/services/eyeliner/bottom-eyeliner/): Bottom Eyeliner places pigment along the lower lash line for subtle, natural-looking definition that lasts for years with proper care. ($250)
 - [Eyeliner Combo](https://adrianaspmu.com/services/eyeliner/eyeliner-combo/): Eyeliner Combo combines Top and Bottom Eyeliner in one session for complete upper and lower lash line definition that lasts for years. ($500)
 
 ## Combo Packages
-- [Brows + Lips Combo](https://adrianaspmu.com/services/combos/eyebrows-lips-combo/): Brows + Lips Combo pairs a customized brow treatment with lip enhancement in one package for balanced, long-lasting results that typically l. ($850)
+- [Brows + Lips Combo](https://adrianaspmu.com/services/combos/eyebrows-lips-combo/): Brows + Lips Combo pairs a customized brow treatment with lip enhancement in one package for balanced, long-lasting results that typically lasts one to three years. ($850)
 
 ## Touch-ups & Maintenance
 - [Yearly Touch-Up](https://adrianaspmu.com/services/touch-ups/yearly-touch-up/): Yearly Touch-Up refreshes faded permanent makeup pigment on brows, lips, or eyeliner — typically scheduled about 12 months after your origin. (from $300)
@@ -50,7 +48,6 @@
 ## Booking
 - Fresha (all services): https://www.fresha.com/book-now/adrianas-permanent-makeup-zeaseit5/all-offer?share=true&pId=727586
 - Yearly Touch-Up: https://www.fresha.com/book-now/adrianas-permanent-makeup-zeaseit5/services?oiid=sv%3A18160395&share=true&pId=727586
-- Flash Sale ($349): https://www.fresha.com/book-now/adrianas-permanent-makeup-zeaseit5/services?oiid=sv%3A19707327&share=true&pId=727586
 
 ## Trust & Credentials
 - Licensed: Town of Wilmington Business Certificate #26-26
