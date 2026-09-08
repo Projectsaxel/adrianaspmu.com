@@ -92,6 +92,26 @@ FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="p
 SITE_URL = "https://adrianaspmu.com"
 
 
+def resumo(texto, limite):
+    """Corta na ultima frase completa, ou na ultima palavra.
+
+    Existia [:120] e [:140] cru, que cortava no meio da palavra e produzia
+    "natural-look..." nas paginas de categoria e "eyebrows that la." no
+    llms.txt. Truncamento no meio da palavra e visivel para a visitante e,
+    no llms.txt, e o texto que a IA le como resumo do servico.
+    """
+    texto = (texto or "").strip()
+    if len(texto) <= limite:
+        return texto
+    janela = texto[:limite]
+    for fim in (". ", "! ", "? "):
+        i = janela.rfind(fim)
+        if i > limite // 3:
+            return janela[: i + 1].strip()
+    i = janela.rfind(" ")
+    return (janela[:i].rstrip(" ,;:") + "\u2026") if i > 40 else janela.strip() + "\u2026"
+
+
 def public_url(rel_path: str) -> str:
     """Final public URL of a generated file: dir pages end with a trailing slash."""
     rel = rel_path.replace("\\", "/")
@@ -291,7 +311,7 @@ def home_body():
         <a class="btn btn-secondary" href="services/">Explore Services</a>
       </div>
     </div>
-    <div class="hero-visual hero-visual--framed">
+    <div class="hero-visual">
       {img_tag("hero.webp", "Adriana's Permanent Makeup studio — Master PMU Artist in Wilmington MA and Salem NH", 0, "hero-img")}
       <div class="hero-visual-badge" aria-hidden="true">20+ Years · 5,000+ Procedures</div>
     </div>
@@ -839,7 +859,7 @@ for cat, title, items in CATEGORY_ORDER:
     cards = "".join(
         f'<article class="card card-has-img"><a href="{s}/" class="card-img-link">'
         f'{img_tag(service_image_path(s), SERVICES[s]["name"], 2, "card-thumb")}</a>'
-        f'<h3><a href="{s}/">{SERVICES[s]["name"]}</a></h3><p>{SERVICES[s]["answer"][:120]}...</p></article>'
+        f'<h3><a href="{s}/">{SERVICES[s]["name"]}</a></h3><p>{resumo(SERVICES[s]["answer"], 165)}</p></article>'
         for s in items)
     body = f'<section class="page-hero"><div class="container"><h1>{title}</h1><p class="direct-answer">Professional {title.lower()} in Wilmington MA and Salem NH.</p></div></section><section class="section"><div class="container"><div class="card-grid">{cards}</div></div></section>'
     write(f"services/{cat}/index.html", shell(title + " | Adriana's PMU", title, title, body, 2))
@@ -1119,7 +1139,7 @@ def write_llms():
         for slug in slugs:
             info = SERVICES[slug]
             url = public_url(f"services/{info['cat']}/{slug}/index.html")
-            summary = info["answer"][:140].rstrip().rstrip(".") + "."
+            summary = resumo(info["answer"], 165)
             service_lines.append(
                 f"- [{info['name']}]({url}): {summary} ({service_price_label(info)})"
             )

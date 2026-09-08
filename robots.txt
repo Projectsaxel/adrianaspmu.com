@@ -20,7 +20,12 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Disallow: /scripts/
+# Nao ha Disallow neste arquivo, de proposito. Havia um "Disallow: /scripts/"
+# solto, fora de qualquer bloco de User-agent, o que pelo padrao o fazia valer
+# so para o Google-Extended. Foi removido em vez de corrigido: /scripts/ nao e
+# publicado (ver .assetsignore) e responde 404, e com 7 blocos nomeados cada
+# crawler usa o SEU grupo e ignora o "*", entao a regra teria de ser repetida
+# sete vezes para proteger um caminho que nao existe.
 
 # LLM site summary: https://adrianaspmu.com/llms.txt
 Sitemap: https://adrianaspmu.com/sitemap.xml
