@@ -70,7 +70,7 @@ DESCRIPTIONS = {
     "locations/index.html": "Two Adriana's Permanent Makeup studios: 211 Lowell Street, Wilmington MA and 117A Main Street, Salem NH. Addresses, phones and booking links.",
     "locations/salem-nh/index.html": "Adriana's Permanent Makeup at 117A Main Street, Salem NH. Microblading, nano brows, lip blush and eyeliner near Derry, Windham and Methuen.",
     "locations/wilmington-ma/index.html": "Adriana's Permanent Makeup at 211 Lowell Street Suite F, Wilmington MA. Brows, lips and eyeliner near Burlington, Woburn and North Reading.",
-    "about/index.html": "Meet Adriana Souza Santos, Master PMU Artist with 20+ years and 5,000+ procedures, and the team behind the Adriana's studios in MA and NH.",
+    "about/index.html": "Meet Adriana Souza Santos, Master PMU Artist with 18+ years and 5,000+ procedures, and the team behind the Adriana's studios in MA and NH.",
     "privacy-policy/index.html": "How Adriana's Permanent Makeup collects, uses and protects your personal information across our website and studios in MA and NH.",
     "terms-of-use/index.html": "Terms of use for the Adriana's Permanent Makeup website, including booking, deposits, cancellations and studio policies in MA and NH.",
 }
@@ -173,11 +173,10 @@ def fix_fresha(s, path_rel):
 
 # --- Correcoes de E-E-A-T e cross-linking (auditoria itens 10 e 14) ---
 
-# "over 7 years" e a marca antiga vieram do WordPress e contradizem os
-# "20+ years" e "Adriana's PMU" do resto do site. Sinal conflitante de
-# entidade para o Google e para LLMs.
+# "over 7 years" contava so os EUA (2017+). O numero correto e a carreira
+# inteira, iniciada no Brasil: 18+ anos. Ver /about/.
 TEXT_FIXES = [
-    ("over 7 years of experience", "over 20 years of experience"),
+    ("over 7 years of experience", "over 18 years of experience"),  # 18+ = carreira total (Brasil desde ~2008); EUA desde 2017
     ("Adriana Beauty Services \u2013 Permanent Makeup", "Adriana's Permanent Makeup"),
 ]
 

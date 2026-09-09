@@ -68,7 +68,7 @@ const SITE = {
     },
   },
   stats: {
-    years: "20+",
+    years: "18+",
     procedures: "5,000+",
     reviews: "1,000+",
     googleRating: "4.9",

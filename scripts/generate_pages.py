@@ -299,7 +299,7 @@ def home_body():
     <div class="hero-content">
       <p class="section-label">Master PMU Artist · Wilmington MA &amp; Salem NH</p>
       <h1>Permanent Makeup Studio and Academy in Wilmington, MA &amp; Salem, NH</h1>
-      <p class="direct-answer">Master Permanent Makeup Artist Adriana Souza Santos with 20+ years and 5,000+ procedures. Nano Brows, Microblading, Lip Blush, and Eyeliner at two New England locations.</p>
+      <p class="direct-answer">Master Permanent Makeup Artist Adriana Souza Santos with 18+ years and 5,000+ procedures. Nano Brows, Microblading, Lip Blush, and Eyeliner at two New England locations.</p>
       <div class="hero-badges">
         <span class="badge">Licensed PMU Artist</span>
         <span class="badge">Women-Owned</span>
@@ -313,7 +313,7 @@ def home_body():
     </div>
     <div class="hero-visual">
       {img_tag("hero.webp", "Adriana's Permanent Makeup studio — Master PMU Artist in Wilmington MA and Salem NH", 0, "hero-img")}
-      <div class="hero-visual-badge" aria-hidden="true">20+ Years · 5,000+ Procedures</div>
+      <div class="hero-visual-badge" aria-hidden="true">18+ Years · 5,000+ Procedures</div>
     </div>
   </div>
 </section>
@@ -354,7 +354,7 @@ def home_body():
     <h2 class="heading-centered">Why Choose Adriana's PMU for Permanent Makeup?</h2>
     <p class="direct-answer">Master PMU Artist Adriana Souza Santos creates natural-looking results fully customized to each client's facial features—never a one-size-fits-all approach.</p>
     <div class="stats-grid">
-      <div><span class="stat-number">20+</span><span class="stat-label">Years experience</span></div>
+      <div><span class="stat-number">18+</span><span class="stat-label">Years experience</span></div>
       <div><span class="stat-number">5,000+</span><span class="stat-label">Procedures</span></div>
       <div><span class="stat-number">1,000+</span><span class="stat-label">Combined reviews</span></div>
       <div><span class="stat-number">4.9</span><span class="stat-label">Google rating</span></div>
@@ -932,11 +932,11 @@ for course, title, price, desc in [
 # Support pages
 write("about/index.html", shell(
     "About Adriana Souza Santos | Master PMU Artist",
-    "20+ years, 5,000+ procedures, founder of Adriana's PMU and Academy.",
+    "18+ years, 5,000+ procedures, founder of Adriana's PMU and Academy.",
     "About Adriana Souza Santos: Master Permanent Makeup Artist",
     f"""<section class="page-hero page-hero--split"><div class="container hero-grid">
     <div><h1>About Adriana Souza Santos</h1>
-    <p class="direct-answer">Master Permanent Makeup Artist with 20+ years of experience and 5,000+ procedures performed. Founder of Adriana's PMU and educator since 2017.</p>
+    <p class="direct-answer">Master Permanent Makeup Artist with 18+ years of experience and 5,000+ procedures performed. Founder of Adriana's PMU and educator since 2017.</p>
     <p class="fact-layer">Licensed under Town of Wilmington Business Certificate #26-26. Women-owned business. LGBTQ+ friendly.</p></div>
     <div class="hero-visual">{img_tag("about-adriana.jpg", "Adriana Souza Santos — Master Permanent Makeup Artist", 1, "hero-img")}</div>
     </div></section>""", 1))
@@ -1309,7 +1309,7 @@ write("terms-of-use/index.html", shell("Terms of Use", "Terms of use.", "Terms o
 
 write("index.html", shell(
     "Permanent Makeup Studio & Academy | Wilmington MA & Salem NH | Adriana's PMU",
-    "Master PMU Artist with 20+ years, 5,000+ procedures. Nano Brows, Microblading, Lip Blush in Wilmington MA & Salem NH. Book consultation.",
+    "Master PMU Artist with 18+ years, 5,000+ procedures. Nano Brows, Microblading, Lip Blush in Wilmington MA & Salem NH. Book consultation.",
     "Permanent Makeup Studio and Academy in Wilmington, MA & Salem, NH",
     home_body(), 0))
 
@@ -1408,11 +1408,11 @@ def write_llms():
         service_lines.append("")
 
     content = f"""# Adriana's Permanent Makeup
-> Master Permanent Makeup Artist Adriana Souza Santos with 20+ years of experience and 5,000+ procedures performed. PMU studio and academy serving Wilmington, MA and Salem, NH (New England). Site language: English (en-US) only. Book appointments via Fresha: {FRESHA_ALL_OFFER}
+> Master Permanent Makeup Artist Adriana Souza Santos with 18+ years of experience and 5,000+ procedures performed. PMU studio and academy serving Wilmington, MA and Salem, NH (New England). Site language: English (en-US) only. Book appointments via Fresha: {FRESHA_ALL_OFFER}
 
 ## Core Pages
 - [Home]({SITE_URL}/): Permanent Makeup Studio and Academy in Wilmington MA & Salem NH
-- [About]({SITE_URL}/about/): Master PMU Artist with 20+ years and 5,000+ procedures
+- [About]({SITE_URL}/about/): Master PMU Artist with 18+ years and 5,000+ procedures
 - [Services]({SITE_URL}/services/): All permanent makeup services in MA and NH
 - [Locations]({SITE_URL}/locations/): Wilmington MA + Salem NH studios
 - [Academy]({SITE_URL}/academy/): Permanent Makeup training programs
