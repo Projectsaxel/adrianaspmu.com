@@ -52,7 +52,7 @@
     // visivel para crawlers e para GPTBot/ClaudeBot, que nao executam JS.
     if (!el.innerHTML.trim()) el.innerHTML = `
       <div class="promo-banner">
-        <span>Limited-time offer: Initial session + perfection touch-up included on select services.</span>
+        <a href="${resolvePath("/payment-plan/")}">Split your service into 4 interest-free payments with Cherry &mdash; see your options</a>
       </div>
       <header class="site-header">
         <div class="container header-inner">

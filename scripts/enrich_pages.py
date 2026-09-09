@@ -227,6 +227,193 @@ def add_related(s, path_rel):
     return s.replace("</main>", block + "\n</main>", 1)
 
 
+# --- Cherry: parcelamento em todo o site (08/09/2026) ---------------
+#
+# O pedido do cliente e do proprio Cherry: o parcelamento tem que
+# aparecer em varios pontos, e o Cherry primeiro, antes de qualquer
+# outro provedor. Fica aqui e nao no generate_pages.py porque sao
+# ~55 paginas: aqui e uma regra, la seriam 55 edicoes.
+#
+# TRES EXCLUSOES DELIBERADAS, nao esquecer o motivo:
+#
+# 1. /payment-plan/ nao recebe o botao flutuante. Aquela pagina ja
+#    carrega o widget FULL PAGE, e os dois snippets chamam _hw("init")
+#    no mesmo escopo. Dois init na mesma pagina = comportamento
+#    indefinido do widget.
+#
+# 2. /academy/* e /training/ nao recebem NADA do Cherry. O Cherry
+#    cobre servicos, NAO cobre mensalidade de curso (confirmado com o
+#    cliente em 08/09/2026). Anunciar Cherry ao lado de um curso de
+#    $7.000 e prometer o que o Cherry pode recusar, com risco de
+#    retencao de repasse. Essas paginas recebem o texto do
+#    financiamento PROPRIO da casa.
+#
+# 3. /privacy-policy/ e /terms-of-use/ ficam de fora: nao ha intencao
+#    comercial ali e o botao flutuante seria so ruido.
+#
+# NUMEROS: sao os da conta real, conferidos no portal. Pay in 4 ativo
+# ($35 a $3.000, sem juros), teto $30.000, prazo maximo 24 meses, 0%
+# APR mensal so em 1-3 meses. NAO escrever "12x sem juros" em lugar
+# nenhum: o APR promocional de 6 a 24 meses esta desligado por decisao
+# do cliente, que preferiu nao pagar a taxa da loja.
+
+CHERRY_APPLY = "https://pay.withcherry.com/adrianas-beauty-services-inc"
+
+# Snippet FLOATING BUTTON gerado em provider.withcherry.com, literal,
+# menos o <link> de 11 familias do Google Fonts que o gerador emite.
+# Aquele <link> e render-blocking e existiria so para o widget usar
+# Montserrat; forcamos Inter (a fonte do site) via CSS .cherry-widget.
+CHERRY_FLOATING = """
+<div class="cherry-widget cherry-widget--floating">
+<!-- CHERRY WIDGET BEGIN -->
+<script>
+    (function (w, d, s, o, f, js, fjs) {
+        w[o] = w[o] || function () {
+            (w[o].q = w[o].q || []).push(arguments);
+        };
+        (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
+        js.id = o;
+        js.src = f;
+        js.async = 1;
+        fjs.parentNode.insertBefore(js, fjs);
+    })(window, document, "script", "_hw", "https://files.withcherry.com/widgets/widget.js");
+    _hw("init", {
+        debug: false,
+        variables: {
+            slug: "adrianas-beauty-services-inc",
+            name: "Adrianas Beauty Services INC",
+            images: [26],
+            customLogo: "",
+            defaultPurchaseAmount: 650,
+            customImage: "",
+            imageCategory: "medspa",
+            language: "en",
+        },
+        styles: {
+            primaryColor: "#c2286c",
+            secondaryColor: "#c2286c10",
+            fontFamily: "Montserrat",
+            headerFontFamily: "Montserrat",
+            floatingEstimator: {
+                position: "bottom-left",
+                offset: {
+                    x: "0px",
+                    y: "0px"
+                },
+                zIndex: 9999,
+                ctaFontFamily: "Montserrat",
+                bodyFontFamily: "Montserrat",
+                ctaColor: "#c2286c",
+                ctaTextColor: "#FFFFFF"
+            }
+        }
+    }, ["floatingEstimator"]);
+</script>
+<div id="floatingEstimator"></div>
+<!-- CHERRY WIDGET END -->
+</div>
+"""
+
+NO_CHERRY = ("payment-plan/", "academy/", "training/", "privacy-policy/", "terms-of-use/")
+IS_ACADEMY = ("academy/", "training/")
+
+
+def _base(path_rel):
+    """Prefixo relativo para a raiz, a partir do caminho da pagina."""
+    depth = path_rel.count("/")
+    return "../" * depth if depth else "./"
+
+
+def finance_line(base):
+    return (
+        f'<p class="finance-line">or <strong>4 interest-free payments</strong> with Cherry &mdash; '
+        f'<a href="{base}payment-plan/">see your options</a>, no impact on your credit score</p>'
+    )
+
+
+def academy_line(base):
+    return (
+        f'<p class="finance-line">an <strong>in-house payment plan</strong> is available for this '
+        f'course &mdash; <a href="{base}payment-plan/#academy-plan">how it works</a></p>'
+    )
+
+
+def finance_banner(base):
+    return f"""
+<section class="section finance-banner">
+  <div class="container finance-banner-inner">
+    <div>
+      <h2>Pay over time, starting today</h2>
+      <p>Split any service into <strong>4 interest-free payments</strong> with Cherry, or over up
+      to 24 months with interest. Checking your options takes about a minute and uses a soft credit
+      check, so it does <strong>not</strong> affect your credit score.</p>
+      <p class="pricing-note">Approval and rates subject to eligibility. Cherry is a financial
+      technology company, not a bank or a lender.</p>
+    </div>
+    <div class="finance-banner-cta">
+      <a class="btn btn-primary" href="{base}payment-plan/">See payment plans</a>
+      <a class="btn btn-ghost" href="{CHERRY_APPLY}" target="_blank" rel="noopener noreferrer">Apply with Cherry</a>
+    </div>
+  </div>
+</section>
+"""
+
+
+def academy_banner(base):
+    return f"""
+<section class="section finance-banner">
+  <div class="container finance-banner-inner">
+    <div>
+      <h2>Training payment plans</h2>
+      <p>Our courses are not financed through Cherry, which covers our permanent makeup services.
+      For training we offer an <strong>in-house payment plan</strong>: place a deposit and pay the
+      balance directly with us.</p>
+    </div>
+    <div class="finance-banner-cta">
+      <a class="btn btn-primary" href="{base}payment-plan/#academy-plan">How it works</a>
+      <a class="btn btn-ghost" href="{base}contact/">Talk to us</a>
+    </div>
+  </div>
+</section>
+"""
+
+
+def add_financing(s, path_rel):
+    """Linha sob o preco e banner de parcelamento nas paginas comerciais."""
+    if path_rel.startswith(("payment-plan/", "privacy-policy/", "terms-of-use/")):
+        return s
+    if "finance-banner" in s or "finance-line" in s:
+        return s                                    # idempotente
+    base = _base(path_rel)
+    academy = path_rel.startswith(IS_ACADEMY)
+    line = academy_line(base) if academy else finance_line(base)
+    banner = academy_banner(base) if academy else finance_banner(base)
+
+    # 1) linha logo abaixo do preco, onde a objecao de preco nasce
+    if 'class="pricing-badge"' in s:
+        i = s.index('class="pricing-badge"')
+        j = s.index("</p>", i) + len("</p>")
+        s = s[:j] + line + s[j:]
+
+    # 2) banner antes do CTA final; se a pagina nao tem CTA final,
+    #    no fim do <main>. Paginas sem intencao comercial ficam fora.
+    anchor = '<section class="section section--cta"'
+    if anchor in s:
+        s = s.replace(anchor, banner + anchor, 1)
+    elif path_rel.startswith(("services/", "locations/")):
+        s = s.replace("</main>", banner + "\n</main>", 1)
+    return s
+
+
+def add_cherry_floating(s, path_rel):
+    """Botao flutuante do Cherry (estimador de parcelas) antes de </body>."""
+    if path_rel.startswith(NO_CHERRY) or path_rel == "404.html":
+        return s
+    if "floatingEstimator" in s:
+        return s                                    # idempotente
+    return s.replace("</body>", CHERRY_FLOATING + "</body>", 1)
+
+
 # ---------- utilidades ----------
 
 def img_size(path):
@@ -469,6 +656,7 @@ def main():
                 for a, b in TEXT_FIXES:
                     s = s.replace(a, b)
                 s = add_related(s, rel)
+                s = add_financing(s, rel)
                 s = fix_descriptions(s, rel)
                 s = fix_fresha(s, rel)
                 s = add_og(s, dirpath)
@@ -478,6 +666,7 @@ def main():
             # forma mais comum de um link quebrado sobreviver meses.
             s = add_analytics(s, rel)
             s = fix_dimensions(s, dirpath)
+            s = add_cherry_floating(s, rel)
             if s != orig:
                 with open(fp, "w", encoding="utf-8") as f:
                     f.write(s)

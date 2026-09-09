@@ -969,6 +969,7 @@ write("faq/index.html", shell(
     """<section class="page-hero"><div class="container"><h1>Permanent Makeup FAQ</h1></div></section>
     <section class="section"><div class="container"><div class="faq-list">
     <div class="faq-item"><button type="button">How much does permanent makeup cost?</button><div class="faq-answer"><p>Nano Brows from $650, Microblading and Powder Brows from $550, Lip Blush from $550. See individual service pages for details.</p></div></div>
+    <div class="faq-item"><button type="button">Do you offer payment plans?</button><div class="faq-answer"><p>Yes. You can split any service into 4 interest-free payments with Cherry, or choose a longer plan of up to 24 months. Applying uses a soft credit check that does not affect your credit score. See <a href="../payment-plan/">payment plans</a> for details.</p></div></div>
     <div class="faq-item"><button type="button">Does insurance cover PMU?</button><div class="faq-answer"><p>Permanent makeup is cosmetic and not covered by insurance.</p></div></div>
     <div class="faq-item"><button type="button">Is permanent makeup safe?</button><div class="faq-answer"><p>Yes, when performed by a licensed Master Artist using sterile single-use needles in a compliant studio.</p></div></div>
     </div></div></section>""", 1))
@@ -978,8 +979,269 @@ write("portfolio/index.html", shell("Portfolio | Before & After PMU", "Real clie
     f'<p class="direct-answer">Real Nano Brows, Microblading, Lip Blush, and Eyeliner results from Adriana\'s PMU studios.</p></div></section>'
     f'<section class="section"><div class="container">{portfolio_gallery_html(1, filters=True)}</div></section>', 1))
 
-write("payment-plan/index.html", shell("Payment Plan | PMU Financing MA & NH", "Financing options for permanent makeup.", "Payment Plan for Permanent Makeup",
-    '<section class="page-hero"><div class="container"><h1>Payment Plan for Permanent Makeup Services</h1><p>Flexible payment options available. <a href="../contact/">Contact us</a> for details.</p></div></section>', 1))
+# ---------------------------------------------------------------------------
+# PAYMENT PLANS (Cherry) — pagina montada em 08/09/2026
+#
+# O widget do Cherry e injetado por JS: nada do que ele desenha existe no
+# HTML bruto, portanto nada dele e lido pelo Google nem pelos crawlers de
+# IA. Por isso o conteudo que precisa ranquear (H1, resposta direta, os
+# numeros, o FAQ) e escrito aqui em HTML estatico, e do widget usamos
+# apenas as duas secoes que nao conseguimos reproduzir: a CALCULADORA
+# (que tambem carrega os disclaimers legais do Cherry) e o HOW IT WORKS.
+#
+# O array de secoes foi reduzido de ["hero","calculator","howitworks","faq"]
+# para ["calculator","howitworks"] de proposito: o hero e o FAQ do widget
+# duplicariam na tela o hero e o FAQ desta pagina. As <div> vazias ficam,
+# como o Cherry gerou.
+#
+# O <link> de fontes que o gerador do Cherry emite foi REMOVIDO: eram 11
+# familias do Google Fonts, render-blocking, so para o widget usar
+# Montserrat. Forcamos Inter (a fonte do site) via CSS em .cherry-widget.
+#
+# CONFIGURACAO REAL DA CONTA, conferida no portal em 08/09/2026. Nao
+# inventar numero aqui: o site nao pode prometer o que a conta nao aprova.
+#   - teto de aprovacao: $30.000 (nao os $65.000 do material do Cherry)
+#   - prazo maximo: 24 meses
+#   - Pay in 4 ATIVO: 4 parcelas / 2 semanas, sem juros, $35 a $3.000
+#   - 0% APR mensal: SO em 1, 2 e 3 meses
+#   - 6 a 24 meses: APR promocional DESLIGADO por decisao do cliente
+#     (a loja pagava ate ~20% de taxa em 24x; os juros ficam com a cliente)
+#   - academia NAO e coberta pelo Cherry: tem financiamento proprio da casa
+# ---------------------------------------------------------------------------
+
+CHERRY_APPLY = "https://pay.withcherry.com/adrianas-beauty-services-inc"
+
+# Snippet FULL PAGE gerado em provider.withcherry.com/script-generator,
+# literal, com duas alteracoes deliberadas e comentadas acima:
+# o <link> de fontes saiu e o array de secoes foi reduzido.
+# O SNIPPET DO CHERRY FICA COMO O GERADOR EMITIU. Nao "limpar".
+#
+# Como o widget realmente funciona, medido em 08/09/2026 comparando
+# duas marcacoes lado a lado: ele monta TODO o layout dentro da
+# PRIMEIRA div nomeada no array de init e ignora as outras cinco, que
+# ficam com altura zero. Com ["calculator","howitworks"] tudo cai em
+# #calculator; com o array original do Cherry tudo cai em #hero. O
+# array nao escolhe "quantas divs renderizam", escolhe quais blocos
+# entram no bloco unico.
+#
+# Ja tentamos apagar as cinco divs vazias. Nao adianta: os dois erros
+# de IntersectionObserver (widget.js:0:374499) continuam acontecendo
+# com elas ou sem elas, e tambem com o snippet original intocado do
+# Cherry. O bug e do widget.js, nao da nossa marcacao.
+#
+# Tambem ja testamos o array completo ["hero","calculator",
+# "howitworks","faq"]: mesmo vao de 200px, coluna vazia saltando de
+# 827px para 1947px, +1388px de pagina, dois heros e dois FAQ na tela,
+# um "Up to ____ approvals" com o valor em branco, um botao que leva a
+# visitante para fora do site, e a fonte do botao voltando a Montserrat.
+# Perde em tudo. Ficou o array reduzido.
+CHERRY_FULLPAGE_EMBED = """
+<div class="cherry-widget">
+<!-- CHERRY WIDGET BEGIN -->
+<script>
+    (function (w, d, s, o, f, js, fjs) {
+        w[o] = w[o] || function () {
+            (w[o].q = w[o].q || []).push(arguments);
+        };
+        (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
+        js.id = o;
+        js.src = f;
+        js.async = 1;
+        fjs.parentNode.insertBefore(js, fjs);
+    })(window, document, "script", "_hw", "https://files.withcherry.com/widgets/widget.js");
+    _hw("init", {
+        debug: false,
+        variables: {
+            slug: "adrianas-beauty-services-inc",
+            name: "Adrianas Beauty Services INC",
+            images: [26],
+            customLogo: "",
+            defaultPurchaseAmount: 650,
+            customImage: "",
+            imageCategory: "medspa",
+            language: "en",
+        },
+        styles: {
+            primaryColor: "#c2286c",
+            secondaryColor: "#c2286c10",
+            fontFamily: "Montserrat",
+            headerFontFamily: "Montserrat",
+        }
+    }, ["calculator","howitworks"]);
+</script>
+<div id="all"></div>
+<div id="hero"></div>
+<div id="calculator"></div>
+<div id="howitworks"></div>
+<div id="testimony"></div>
+<div id="faq"></div>
+<!-- CHERRY WIDGET END -->
+</div>
+"""
+
+PAYMENT_PLAN_FAQ = [
+    ("Does applying affect my credit score?",
+     "No. Cherry uses a soft credit check to show your options, and a soft check does not affect "
+     "your credit score. Once you choose a plan and it is confirmed, Cherry typically begins "
+     "reporting the payment plan to the credit bureaus after 30 days."),
+    ("Can I really pay with no interest?",
+     "Yes, on the shorter plans. The 4-payment plan splits your service into 4 equal payments over "
+     "6 weeks with no interest, and monthly plans of 1 to 3 months are offered at 0% APR. Longer "
+     "plans, up to 24 months, are not interest-free: they carry an APR based on your credit "
+     "profile. All rates and approval are subject to eligibility."),
+    ("How much can I be approved for?",
+     "Approvals of up to $30,000 are available at our studios, with terms up to 24 months. The "
+     "4-payment plan covers purchases from $35 to $3,000, which fits every service in our menu. "
+     "Your own approved amount depends on your credit profile."),
+    ("How much is the down payment?",
+     "Your down payment equals your first payment, and it is collected when you check out. The "
+     "exact amount depends on the price of your service and the plan you pick, so the estimator "
+     "above will show it before you commit."),
+    ("What do I need in order to apply?",
+     "You must be 18 or older, live in the United States, and have a mobile phone and a "
+     "bank-issued debit or credit card. Prepaid cards are not accepted. Paying your installments "
+     "with a credit card adds a 2.99% processing fee; paying with a debit card has no fee."),
+    ("Can I use a payment plan for a training course at the Academy?",
+     "Not through Cherry, which covers our permanent makeup services. Our PMU Academy has its own "
+     "in-house payment plan for the 100-Hour Fundamental and the Apprenticeship Program. Contact "
+     "us and we will walk you through the terms."),
+    ("Can I split the payment when I book online?",
+     "Yes. Beyond Cherry, Fresha offers a payment plan at checkout while you are booking your "
+     "appointment online, so you can split the service there as well."),
+]
+
+
+def payment_plan_body(depth=1):
+    base = depth_to_base(depth)
+    faq_items = "".join(
+        f'<div class="faq-item"><button type="button">{q}</button>'
+        f'<div class="faq-answer"><p>{a}</p></div></div>'
+        for q, a in PAYMENT_PLAN_FAQ
+    )
+    head = f"""
+<section class="page-hero">
+  <div class="container">
+    <h1>Payment Plans for Permanent Makeup in Wilmington, MA &amp; Salem, NH</h1>
+    <p class="direct-answer">You can split any permanent makeup service at Adriana's PMU into
+    <strong>4 interest-free payments</strong> with Cherry, or spread it over up to
+    24 months with interest. Applying takes about a minute and uses a soft credit check that does not affect your credit score.</p>
+    <a class="btn btn-primary" href="{CHERRY_APPLY}" target="_blank" rel="noopener noreferrer">Check your options with Cherry</a>
+    <p class="pricing-note">Approval and rates subject to eligibility. Checking your options will not affect your credit score.</p>
+  </div>
+</section>
+
+<section class="section section--elegant">
+  <div class="container">
+    <h2>How Cherry payment plans work at our studios</h2>
+    <div class="finance-facts">
+      <div class="finance-fact">
+        <h3>4 payments, no interest</h3>
+        <p>Split your service into 4 equal payments, one every two weeks over 6 weeks, with
+        <strong>no interest</strong>. Available for purchases from $35 to $3,000 &mdash; which covers
+        every service on our menu, from $250 eyeliner to $850 combination work.</p>
+      </div>
+      <div class="finance-fact">
+        <h3>Or spread it further</h3>
+        <p>Prefer smaller payments? Monthly plans run up to <strong>24 months</strong>, with approvals
+        of up to $30,000. Plans of 1 to 3 months are offered at 0% APR. Longer plans, 24 months
+        included, are <strong>not</strong> interest-free: they carry an APR based on your credit
+        profile, so you pay more in total.</p>
+      </div>
+      <div class="finance-fact">
+        <h3>No hit to your credit score</h3>
+        <p>Cherry runs a <strong>soft credit check</strong>, so seeing your options does not affect
+        your score. You need to be 18 or older, live in the US, and have a mobile phone and a
+        bank-issued debit or credit card.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="estimate">
+  <div class="container">
+    <h2>Estimate your payments</h2>
+    <p>Enter the price of the service you have in mind and see what the payments look like before
+    you apply. On the 4-payment plan you pay a quarter of the price today and the rest in three
+    payments, one every two weeks, with no interest added. The longer monthly plans in the
+    estimator do include interest, so check the total before you choose one.</p>
+    <p class="pricing-note">Estimator not loading? You can see your exact options, and the amount
+    you are approved for, straight from Cherry.</p>
+    <a class="btn btn-secondary" href="{CHERRY_APPLY}" target="_blank" rel="noopener noreferrer">Check your options with Cherry</a>
+  </div>
+</section>
+"""
+    tail = f"""
+<section class="section section-alt">
+  <div class="container service-prose">
+    <h2>Which services can I put on a payment plan?</h2>
+    <p>All of them. Every service in our menu is eligible, at both studios &mdash;
+    <a href="{base}services/eyebrows/">eyebrow permanent makeup</a> including Nano Brows and
+    Microblading, <a href="{base}services/lips/">lip blush and dark lip neutralization</a>,
+    <a href="{base}services/eyeliner/">permanent eyeliner</a>,
+    <a href="{base}services/combos/">combo packages</a> and
+    <a href="{base}services/touch-ups/">yearly touch-ups</a> &mdash; in
+    <a href="{base}locations/wilmington-ma/">Wilmington, MA</a> and
+    <a href="{base}locations/salem-nh/">Salem, NH</a>.</p>
+  </div>
+</section>
+
+<section class="section section--elegant">
+  <div class="container service-prose">
+    <h2>Booking online? You can also split the payment in Fresha</h2>
+    <p>If you book your appointment online through Fresha, a payment plan is offered right at
+    checkout, while you are scheduling. It is a second option alongside Cherry &mdash; you do not
+    need to choose in advance. Cherry is the option we recommend first, because you can get your
+    approved amount before you book and use it at either studio.</p>
+    <a class="btn btn-secondary" href="{fresha_book_url("payment-plan")}" target="_blank" rel="noopener noreferrer">Book on Fresha</a>
+  </div>
+</section>
+
+<section class="section section-alt" id="academy-plan">
+  <div class="container service-prose">
+    <h2>Training courses: our own in-house payment plan</h2>
+    <p>Cherry covers our permanent makeup services, not tuition. For the
+    <a href="{base}academy/pmu-100h-fundamental/">100-Hour Fundamental Training</a> and the
+    <a href="{base}academy/pmu-apprenticeship/">Apprenticeship Program</a>, our
+    <a href="{base}academy/">PMU Academy</a> offers an <strong>in-house payment plan</strong>: you
+    place a deposit and pay the balance directly with us.</p>
+    <p><a href="{base}contact/">Contact us</a> and we will walk you through the terms for the course
+    you are considering.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Payment plan questions</h2>
+    <div class="faq-list">{faq_items}</div>
+  </div>
+</section>
+
+<section class="section section--elegant">
+  <div class="container cta-panel">
+    <h2>Ready to Book Your Permanent Makeup?</h2>
+    <p>Check your options with Cherry first, then book the appointment. See real-time availability
+    for the Wilmington MA and Salem NH studios, or send your question and we answer with the honest
+    options for your features. We answer in English and in Portuguese.</p>
+    <a class="btn btn-primary" href="{CHERRY_APPLY}" target="_blank" rel="noopener noreferrer">Check your options with Cherry</a>
+    <a class="btn btn-secondary" href="{fresha_book_url("payment-plan")}" rel="noopener">Book Online Now</a>
+    <a class="btn btn-ghost" href="{base}contact/">Ask a Question First</a>
+    <p class="pricing-note">Payment options through Cherry Technologies, Inc. are issued by its
+    lending partners. 0% APR and other promotional rates are subject to eligibility. Cherry is a
+    financial technology company, not a bank or a lender. Eligibility for financing is not
+    guaranteed.</p>
+  </div>
+</section>
+"""
+    return head + CHERRY_FULLPAGE_EMBED + tail
+
+
+write("payment-plan/index.html", shell(
+    "Payment Plans | Split Your PMU Service | Wilmington MA & Salem NH",
+    "Split your permanent makeup into 4 interest-free payments with Cherry, or up to 24 months. "
+    "Soft credit check, no impact on your score. Wilmington MA and Salem NH.",
+    "Payment Plans for Permanent Makeup",
+    payment_plan_body(1), 1,
+    breadcrumbs=[("Home", ""), ("Payment Plans", "payment-plan/")]))
 
 
 def flash_sale_body(depth=1):
@@ -1157,6 +1419,7 @@ def write_llms():
 - [Training]({SITE_URL}/training/): Academy hub (mirror of /academy/)
 - [Contact]({SITE_URL}/contact/): Studio contact and consultation
 - [FAQ]({SITE_URL}/faq/): Permanent makeup frequently asked questions
+- [Payment Plans]({SITE_URL}/payment-plan/): Split any PMU service into 4 interest-free payments with Cherry, or up to 24 months. Soft credit check, no impact on credit score. Approvals up to $30,000. Training courses use a separate in-house plan.
 - [Portfolio]({SITE_URL}/portfolio/): Before and after PMU results
 - [Flash Sale]({SITE_URL}/flash-sale/): Limited-time brows or lips PMU for $349
 - [Privacy Policy]({SITE_URL}/privacy-policy/)

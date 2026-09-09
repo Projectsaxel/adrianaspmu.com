@@ -348,6 +348,24 @@
         });
         return;
       }
+      // Parcelamento. Conta o INTERESSE em parcelar, nao a aprovacao:
+      // a aplicacao acontece no dominio do Cherry e nao volta para ca.
+      // Serve para responder "de qual servico sai o interesse em
+      // parcelar", que e a pergunta que decide onde por a chamada.
+      if (href.indexOf("withcherry.com") > -1) {
+        gtagSafe("financing_click", {
+          provider: "cherry",
+          link_text: (a.textContent || "").trim().slice(0, 60),
+          destination: href.slice(0, 200),
+        });
+        return;
+      }
+      if (href.indexOf("/payment-plan/") > -1) {
+        gtagSafe("financing_page_click", {
+          link_text: (a.textContent || "").trim().slice(0, 60),
+        });
+        return;
+      }
       if (href.indexOf("tel:") === 0) {
         gtagSafe("phone_click", {
           location: unitFromHref(href),
