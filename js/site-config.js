@@ -80,6 +80,7 @@ const NAV = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services/" },
   { label: "Portfolio", href: "/portfolio/" },
+  { label: "Payment Plans", href: "/payment-plan/" },
   {
     label: "Training",
     href: "/academy/",

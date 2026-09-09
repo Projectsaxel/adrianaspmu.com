@@ -413,7 +413,7 @@ p {
   padding: 0.5rem;
 }
 
-@media (min-width: 901px) {
+@media (min-width: 1361px) {
   .main-nav {
     overflow: visible;
   }
@@ -1608,8 +1608,8 @@ body.portfolio-lightbox-open {
   resize: vertical;
 }
 
-/* Mobile */
-@media (max-width: 900px) {
+/* Mobile e tablet: hamburguer ate 1360px (ver ITEM 1 no fim do arquivo) */
+@media (max-width: 1360px) {
   .nav-toggle {
     display: block;
   }
@@ -1711,14 +1711,19 @@ body.portfolio-lightbox-open {
   .header-cta {
     display: none;
   }
+}
 
+/* Hero em coluna: continua trocando aos 900px. Estava dentro do bloco
+   do header e ficou fora quando o header subiu para 1360px, senao o
+   hero de desktop viraria retrato ate 1360. */
+@media (max-width: 900px) {
   .hero-visual {
     aspect-ratio: 3/4;
     max-height: 480px;
   }
 }
 
-@media (min-width: 901px) {
+@media (min-width: 1361px) {
   .header-cta-mobile {
     display: none;
   }
@@ -2427,7 +2432,7 @@ th {
   color: var(--brand-deep);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1360px) {
   .header-cta {
     display: flex;
     order: 2;
@@ -2622,4 +2627,124 @@ th {
   .float-cta:hover {
     transform: none;
   }
+}
+
+/* ============================================================
+   PARCELAMENTO — Cherry (set/2026)
+   O rosa saturado (--brand) aparece UMA vez por tela, regra do
+   design system. Aqui ele nao aparece: o parcelamento usa o
+   brass, que e o papel de "informacao util e discreta". O rosa
+   fica reservado para o botao de agendar, que continua sendo a
+   acao principal da pagina.
+   ============================================================ */
+
+/* --- Linha sob o preco -------------------------------------- */
+/* Nasce colada no preco de proposito: e ali, no instante em que a
+   visitante le "$650", que a objecao aparece. */
+.finance-line {
+  margin: calc(var(--space-2) * -1) 0 var(--space-6);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--ink-muted);
+}
+.finance-line strong { color: var(--brass-text); font-weight: 600; }
+.finance-line a {
+  color: var(--brand-deep);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* --- Tres fatos, na pagina de parcelamento ------------------ */
+.finance-facts {
+  display: grid;
+  gap: var(--space-8);
+  margin-top: var(--space-8);
+}
+.finance-fact { border-top: 1px solid var(--brass); padding-top: var(--space-4); }
+.finance-fact h3 {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin: 0 0 var(--space-3);
+}
+.finance-fact p { margin: 0; font-size: 0.9375rem; }
+@media (min-width: 768px) {
+  .finance-facts { grid-template-columns: repeat(3, 1fr); gap: var(--space-12); }
+}
+
+/* --- Banner de parcelamento, espalhado pelo site ------------ */
+.finance-banner {
+  background: var(--surface-alt);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.finance-banner-inner {
+  display: grid;
+  gap: var(--space-8);
+  align-items: center;
+}
+.finance-banner h2 {
+  font-size: 1.75rem;
+  margin: 0 0 var(--space-3);
+}
+.finance-banner p { margin: 0 0 var(--space-3); }
+.finance-banner .pricing-note { font-size: 0.8125rem; color: var(--ink-muted); margin: 0; }
+.finance-banner-cta { display: flex; flex-direction: column; gap: var(--space-3); }
+@media (min-width: 768px) {
+  .finance-banner-inner { grid-template-columns: 1.6fr 1fr; gap: var(--space-12); }
+  .finance-banner-cta { align-items: stretch; }
+}
+
+/* --- Widget do Cherry --------------------------------------- */
+/* O gerador do Cherry oferece 11 fontes e Inter nao esta entre elas.
+   Em vez de aceitar Montserrat (geometrico e largo, briga com o
+   Inter do site) ou carregar as 11 familias do Google Fonts que o
+   snippet original trazia, o <link> foi removido do embed e a fonte
+   e forcada aqui. O !important e necessario: o widget escreve
+   font-family inline nos elementos que injeta. */
+.cherry-widget,
+.cherry-widget * {
+  font-family: var(--font-body) !important;
+}
+.cherry-widget { margin-block: var(--space-8); }
+
+/* Os botoes do widget recebem font-family inline do proprio Cherry, e
+   estilo inline vence folha externa. Sem esta regra o "Get personalized
+   options" fica em Montserrat no meio de uma pagina em Inter. */
+#calculator button,
+#howitworks button,
+#floatingEstimator button,
+[class*="floatingEstimator"] button,
+.cherry-widget button {
+  font-family: var(--font-body) !important;
+}
+
+/* O widget monta em DUAS COLUNAS: uma imagem de banco de 320x339 a
+   esquerda e o conteudo a direita. Como o conteudo e muito mais alto
+   que a imagem, sobravam 827px de vazio ao lado dela (medido em
+   08/09/2026). A imagem e decorativa e generica, e esta pagina ja tem
+   as fotos reais do estudio, entao ela sai e o widget vira coluna
+   unica centrada.
+
+   As classes do Cherry tem hash (CSS Modules), por isso o seletor mira
+   o PREFIXO com [class*=], que sobrevive a troca do hash. Se o Cherry
+   renomear o prefixo, a regra deixa de casar e o widget volta ao
+   layout de duas colunas: degrada para o estado de hoje, nao quebra. */
+#calculator [class*="heroImage-image_container"],
+#calculator [class*="heroImage_image"] {
+  display: none;
+}
+#calculator [class*="widget_layout"] {
+  display: block;
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+/* O estimador flutuante encosta no canto inferior direito. No mobile
+   ele fica logo acima da area do gesto de home do iOS. */
+.cherry-widget--floating { font-family: var(--font-body); }
+@media (max-width: 767px) {
+  #floatingEstimator { padding-bottom: env(safe-area-inset-bottom); }
 }

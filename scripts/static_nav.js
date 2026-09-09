@@ -33,27 +33,73 @@ function readAll(dir, out = []) {
   return out;
 }
 
-/** Shim de DOM: o minimo que renderHeader/renderFooter tocam. */
-function makeSandbox(base) {
-  const captured = {};
-  const noopEl = {
+/**
+ * Shim de DOM.
+ *
+ * ERA "o minimo que renderHeader/renderFooter tocam", e isso quebrou o
+ * build em 09/09/2026: o PR #5 adicionou initFloatingCta() ao main.js,
+ * que faz document.body.append(btn, modal) e depois
+ * modal.querySelector(...). O shim nao tinha append, e o querySelector
+ * devolvia null, entao static_nav.js morria com TypeError e o passo de
+ * deploy falhava inteiro. Ou seja: qualquer funcao nova no main.js que
+ * toque no DOM fora dos dois slots derrubava a publicacao do site.
+ *
+ * Agora o elemento fake responde a qualquer coisa razoavel e o
+ * querySelector devolve OUTRO elemento fake em vez de null, de forma
+ * que codigo que encadeia (modal.querySelector(...).textContent)
+ * atravessa sem estourar. O que este arquivo precisa capturar continua
+ * sendo so o innerHTML dos dois slots.
+ */
+function makeNoop() {
+  const el = {
     innerHTML: "",
+    textContent: "",
+    value: "",
+    className: "",
+    id: "",
+    hidden: false,
+    disabled: false,
+    checked: false,
+    style: {},
+    dataset: {},
+    classList: { toggle: () => false, add() {}, remove() {}, contains: () => false },
     addEventListener() {},
+    removeEventListener() {},
     setAttribute() {},
     removeAttribute() {},
-    classList: { toggle: () => false, add() {}, remove() {}, contains: () => false },
-    querySelector: () => null,
-    querySelectorAll: () => [],
+    getAttribute: () => null,
+    append() {},
+    appendChild() {},
+    prepend() {},
+    remove() {},
+    insertBefore() {},
+    insertAdjacentHTML() {},
+    focus() {},
+    blur() {},
+    click() {},
+    reset() {},
+    scrollIntoView() {},
     closest: () => null,
-    textContent: "",
+    matches: () => false,
+    contains: () => false,
   };
-  const makeSlot = (id) => ({
-    ...noopEl,
-    set innerHTML(v) { captured[id] = v; },
-    get innerHTML() { return captured[id] || ""; },
-    querySelector: () => null,
-    querySelectorAll: () => [],
-  });
+  el.querySelector = () => makeNoop();
+  el.querySelectorAll = () => [];
+  el.parentNode = { insertBefore() {}, removeChild() {} };
+  el.firstElementChild = null;
+  return el;
+}
+
+function makeSandbox(base) {
+  const captured = {};
+  const makeSlot = (id) => {
+    const el = makeNoop();
+    Object.defineProperty(el, "innerHTML", {
+      get() { return captured[id] || ""; },
+      set(v) { captured[id] = v; },
+    });
+    return el;
+  };
   const slots = { "site-header": makeSlot("site-header"), "site-footer": makeSlot("site-footer") };
 
   const document = {
@@ -61,19 +107,43 @@ function makeSandbox(base) {
     getElementById: (id) => slots[id] || null,
     querySelector: () => null,
     querySelectorAll: () => [],
-    addEventListener: (ev, fn) => { if (ev === "DOMContentLoaded") fn(); },
+    addEventListener: (ev, fn) => {
+      if (ev !== "DOMContentLoaded") return;
+      // Um erro em funcao que NAO seja o header/footer nao pode derrubar
+      // o build. Se o header ou o footer sairem vazios, o main() abaixo
+      // ainda aborta com exit 1 - essa protecao continua valendo.
+      try {
+        fn();
+      } catch (err) {
+        console.warn(`static_nav: main.js lancou "${err.message}" no shim; ` +
+                     "header/footer seguem sendo validados abaixo.");
+      }
+    },
     readyState: "loading",
-    createElement: () => ({ ...noopEl, style: {} }),
-    body: { ...noopEl, appendChild() {} },
+    createElement: () => makeNoop(),
+    body: makeNoop(),
+    activeElement: makeNoop(),
   };
   const window = {
     innerWidth: 1440,
     scrollY: 0,
     addEventListener() {},
+    removeEventListener() {},
     matchMedia: () => ({ matches: false, addEventListener() {} }),
-    location: { pathname: "/", href: "https://adrianaspmu.com/" },
+    location: { pathname: "/", href: "https://adrianaspmu.com/", search: "" },
   };
-  return { sandbox: { document, window, console, navigator: { userAgent: "build" }, fetch: () => Promise.resolve() }, captured };
+  return {
+    sandbox: {
+      document,
+      window,
+      console,
+      navigator: { userAgent: "build" },
+      fetch: () => Promise.resolve(),
+      setTimeout: () => 0,
+      clearTimeout() {},
+    },
+    captured,
+  };
 }
 
 function renderFor(base) {
