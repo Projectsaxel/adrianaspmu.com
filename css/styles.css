@@ -731,6 +731,17 @@ p {
   box-shadow: var(--shadow-soft);
 }
 
+/* Medida de leitura: sem isso o paragrafo herda a largura do
+   .container (1180px) e a linha passa de 130+ caracteres em
+   telas largas (auditoria 10/09). So o texto corrido (h2/h3/p)
+   e limitado; as tabelas (dentro de .table-scroll, tambem filho
+   direto) continuam livres para usar a largura toda do container. */
+.service-prose > h2,
+.service-prose > h3,
+.service-prose > p {
+  max-width: 74ch;
+}
+
 .service-prose h2 {
   margin-top: 0;
 }
@@ -742,6 +753,11 @@ p {
 
 .service-prose p + p {
   margin-top: 1rem;
+}
+
+.aftercare-link {
+  font-size: 0.9375rem;
+  margin: 0.75rem 0 0;
 }
 
 .service-list,
@@ -791,9 +807,11 @@ main:has(.service-prose) .section--cta {
 
 .direct-answer {
   font-size: 1.125rem;
-  font-weight: 300;
-  color: var(--ink-muted);
+  font-weight: 600;
+  color: var(--ink);
   line-height: 1.75;
+  padding-left: 1rem;
+  border-left: 3px solid var(--brand);
 }
 
 .fact-layer {
@@ -2099,6 +2117,19 @@ input, select, textarea, .cta-panel, .faq-item {
   color: var(--surface-alt);
   border-color: var(--ink);
 }
+/* .btn-ghost: usado em 66+ paginas (header, banners) sem regra
+   propria ate agora — herdava so o .btn base (sem cor/borda
+   visiveis). Fica transparente em repouso e ganha contorno no
+   hover/focus, para funcionar sobre qualquer fundo do site. */
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid transparent;
+}
+.btn-ghost:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
 .btn:focus-visible,
 a:focus-visible,
 button:focus-visible {
@@ -2278,6 +2309,8 @@ th, td {
   text-align: left;
   font-size: 0.9375rem;
   color: var(--ink);
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 th {
   font-size: 0.75rem;
@@ -2286,9 +2319,69 @@ th {
   text-transform: uppercase;
   color: var(--brass-text);
 }
-/* A coluna recomendada e a UNICA ocorrencia do rosa da marca aqui:
-   um filete de 3px no topo, nunca preenchimento. */
-.col-recommended { box-shadow: inset 0 3px 0 0 var(--brand); }
+/* A coluna recomendada/alerta e a UNICA ocorrencia do rosa da marca
+   aqui: filete de 3px no topo, MAIS peso de fonte e um fundo bem
+   sutil, para nao depender so do filete (auditoria 10/09: o filete
+   sozinho media como "mesmo peso visual" da coluna vizinha). */
+.col-recommended {
+  box-shadow: inset 0 3px 0 0 var(--brand);
+  background: rgba(244, 81, 151, 0.06);
+  font-weight: 700;
+  color: var(--ink);
+}
+th.col-recommended { color: var(--rose-deep); }
+
+/* --- Tabelas com scroll horizontal: wrapper acessivel ------- */
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.table-scroll:focus-visible {
+  outline: 2px solid var(--rose-deep);
+  outline-offset: 2px;
+}
+
+@media (max-width: 480px) {
+  th, td { padding: var(--space-2) var(--space-3); font-size: 0.875rem; }
+}
+
+/* --- Table of contents (paginas longas de conteudo) --------- */
+.toc {
+  background: var(--surface-alt);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: var(--space-6);
+  margin: 0 0 var(--space-8);
+}
+.toc-title {
+  margin: 0 0 var(--space-3);
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--brass-text);
+}
+.toc ol {
+  columns: 2;
+  column-gap: var(--space-8);
+  margin: 0;
+  padding-left: 1.1rem;
+}
+.toc li { margin-bottom: var(--space-2); break-inside: avoid; }
+.toc a { color: var(--ink); text-decoration: none; }
+.toc a:hover { color: var(--rose-deep); text-decoration: underline; }
+@media (max-width: 640px) {
+  .toc ol { columns: 1; }
+}
+
+/* --- Assinatura/aviso medico no topo da pagina --------------- */
+.page-byline {
+  font-size: 0.875rem;
+  color: var(--ink-muted);
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--line);
+}
 
 /* --- Breadcrumb -------------------------------------------- */
 .breadcrumb, .breadcrumb a { color: var(--ink-muted); font-size: 0.875rem; }

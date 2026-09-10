@@ -377,6 +377,27 @@ def academy_banner(base):
 """
 
 
+def add_aftercare_link(s, path_rel):
+    """Linka /aftercare/ a partir da secao 'Healing and Aftercare' das
+    paginas de servico (auditoria 10/09: a pagina de aftercare estava
+    orfa, zero links de entrada). Roda no build, nao a mao em cada
+    pagina de servico: sao 12+ arquivos e crescem a cada servico novo.
+    """
+    if path_rel == "aftercare/index.html":
+        return s
+    marker_h2 = "<h2>Healing and Aftercare</h2>"
+    if marker_h2 not in s:
+        return s
+    base = _base(path_rel)
+    href = f"{base}aftercare/"
+    if f'href="{href}"' in s:
+        return s                                    # idempotente
+    line = (f'<p class="aftercare-link">Read the full <a href="{href}">'
+            f'aftercare and healing guide</a> for the day-by-day timeline '
+            f'and the signs that need a doctor instead of the studio.</p>')
+    return s.replace(marker_h2, marker_h2 + "\n    " + line, 1)
+
+
 def add_financing(s, path_rel):
     """Linha sob o preco e banner de parcelamento nas paginas comerciais."""
     if path_rel.startswith(("payment-plan/", "privacy-policy/", "terms-of-use/")):
@@ -655,6 +676,7 @@ def main():
                 for a, b in TEXT_FIXES:
                     s = s.replace(a, b)
                 s = add_related(s, rel)
+                s = add_aftercare_link(s, rel)
                 s = add_financing(s, rel)
                 s = fix_descriptions(s, rel)
                 s = fix_fresha(s, rel)
