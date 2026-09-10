@@ -861,7 +861,7 @@ for cat, title, items in CATEGORY_ORDER:
         f'{img_tag(service_image_path(s), SERVICES[s]["name"], 2, "card-thumb")}</a>'
         f'<h3><a href="{s}/">{SERVICES[s]["name"]}</a></h3><p>{resumo(SERVICES[s]["answer"], 165)}</p></article>'
         for s in items)
-    body = f'<section class="page-hero"><div class="container"><h1>{title}</h1><p class="direct-answer">Professional {title.lower()} in Wilmington MA and Salem NH.</p></div></section><section class="section"><div class="container"><div class="card-grid">{cards}</div></div></section>'
+    body = f'<section class="page-hero"><div class="container"><h1>{title}</h1><p class="direct-answer">Professional {title.lower()} in Wilmington MA and Salem NH.</p></div></section><section class="section"><div class="container"><h2>Which {title} Option Is Right for You?</h2><div class="card-grid">{cards}</div></div></section>'
     write(f"services/{cat}/index.html", shell(title + " | Adriana's PMU", title, title, body, 2))
 
 write("services/index.html", shell(
