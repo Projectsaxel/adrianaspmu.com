@@ -21,6 +21,7 @@ import os
 import re
 import sys
 import struct
+from urllib.parse import urljoin
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = "https://adrianaspmu.com"
@@ -70,6 +71,7 @@ DESCRIPTIONS = {
     "locations/index.html": "Two Adriana's Permanent Makeup studios: 211 Lowell Street, Wilmington MA and 117A Main Street, Salem NH. Addresses, phones and booking links.",
     "locations/salem-nh/index.html": "Adriana's Permanent Makeup at 117A Main Street, Salem NH. Microblading, nano brows, lip blush and eyeliner near Derry, Windham and Methuen.",
     "locations/wilmington-ma/index.html": "Adriana's Permanent Makeup at 211 Lowell Street Suite F, Wilmington MA. Brows, lips and eyeliner near Burlington, Woburn and North Reading.",
+    "locations/peabody-ma/index.html": "Adriana's Academy at 39 Cross Street, Peabody MA: AAM Diamond-certified PMU training. 100-Hour Fundamental, Apprenticeship, and VIP Masterclass courses.",
     "about/index.html": "Meet Adriana Souza Santos, Master PMU Artist with 18+ years and 5,000+ procedures, and the team behind the Adriana's studios in MA and NH.",
     "privacy-policy/index.html": "How Adriana's Permanent Makeup collects, uses and protects your personal information across our website and studios in MA and NH.",
     "terms-of-use/index.html": "Terms of use for the Adriana's Permanent Makeup website, including booking, deposits, cancellations and studio policies in MA and NH.",
@@ -88,7 +90,7 @@ DESCRIPTIONS = {
 # ~90KB de JS e um request extra antes do primeiro hit.
 GA4_ID = "G-ZSD89WRHYZ"
 
-CITY_LABEL = {"wilmington-ma": "wilmington", "salem-nh": "salem"}
+CITY_LABEL = {"wilmington-ma": "wilmington", "salem-nh": "salem", "peabody-ma": "peabody"}
 
 
 def classify(path_rel):
@@ -313,8 +315,12 @@ CHERRY_FLOATING = """
 </div>
 """
 
-NO_CHERRY = ("payment-plan/", "academy/", "training/", "privacy-policy/", "terms-of-use/")
-IS_ACADEMY = ("academy/", "training/")
+# "locations/peabody-ma/" e a pagina do ACADEMY, nao de um estudio: mesma
+# regra do item 2 acima (Cherry nao cobre mensalidade de curso). Sem esta
+# entrada, add_financing e add_cherry_floating tratariam Peabody como
+# "locations/" generico e anunciariam Cherry ao lado de tuition de $7.000.
+NO_CHERRY = ("payment-plan/", "academy/", "training/", "privacy-policy/", "terms-of-use/", "locations/peabody-ma/")
+IS_ACADEMY = ("academy/", "training/", "locations/peabody-ma/")
 
 
 def _base(path_rel):
@@ -590,16 +596,17 @@ def enrich_schema(s, path_rel):
         for i, mm in enumerate(re.finditer(r"<li[^>]*>(?:<a href=\"([^\"]*)\">)?(.*?)(?:</a>)?</li>", bc.group(1))):
             href, label = mm.group(1), re.sub(r"<[^>]+>", "", mm.group(2)).strip()
             item = {"@type": "ListItem", "position": i + 1, "name": label}
-            if href:
-                # resolve relativo contra o canonical
-                depth = href.count("../")
-                base_parts = canonical[len(BASE):].strip("/").split("/")
-                kept = base_parts[: max(0, len(base_parts) - depth)]
-                tail = href.replace("../", "")
-                item["item"] = BASE + "/" + "/".join(p for p in kept[:0] + [tail.strip("/")] if p) + "/"
-                item["item"] = item["item"].replace("//", "/").replace("https:/", "https://")
-                if tail in ("", "./"):
-                    item["item"] = BASE + "/"
+            # resolve relativo (ou o proprio canonical, se for o crumb atual,
+            # sem <a>) via RFC 3986 de verdade: urljoin trata corretamente
+            # "../" e "../../" contra um canonical terminado em "/". A conta
+            # manual anterior (contar "../" e fatiar o canonical) colapsava
+            # QUALQUER href so-de-"../" para BASE+"/", perdendo os crumbs
+            # intermediarios (ex.: "Locations" virava a home). Bug pego na
+            # pagina de Peabody, 10/09/2026.
+            target = urljoin(canonical, href) if href else canonical
+            if "#" not in target and "?" not in target and not target.endswith("/"):
+                target += "/"
+            item["item"] = target
             items.append(item)
         if items:
             graph.append({"@type": "BreadcrumbList", "@id": canonical + "#breadcrumb", "itemListElement": items})
