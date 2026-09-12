@@ -238,12 +238,142 @@ ${meta.map(([k, v]) => `<tr><td><strong>${esc(k)}</strong></td><td>${esc(v)}</td
   return json({ ok: true });
 }
 
+/* ---------------------------------------------------------------
+ * Negociacao de conteudo: Accept: text/markdown
+ *
+ * Padrao: acceptmarkdown.com, que cobra tres coisas do servidor:
+ *   1. servir markdown quando o cliente pede text/markdown
+ *   2. mandar "Vary: Accept" em TODA variante, inclusive na HTML,
+ *      senao a CDN cacheia uma e entrega para quem pediu a outra
+ *   3. respeitar q-values (RFC 9110), para que
+ *      "text/html;q=1.0, text/markdown;q=0.9" continue recebendo HTML
+ *
+ * Os gemeos .md sao gerados no build por scripts/gen_markdown.py e
+ * vivem em /content/<caminho>/index.md. Nada e convertido em runtime.
+ * --------------------------------------------------------------- */
+
+const VARY = "Accept, Accept-Encoding";
+
+/** Parseia o header Accept em pares {type, q}, ordenados por q desc. */
+function parseAccept(header) {
+  if (!header) return [];
+  return header
+    .split(",")
+    .map((part) => {
+      const [raw, ...params] = part.trim().split(";");
+      let q = 1;
+      for (const p of params) {
+        const m = /^\s*q=([0-9.]+)\s*$/i.exec(p);
+        if (m) {
+          const v = parseFloat(m[1]);
+          if (!Number.isNaN(v)) q = v;
+        }
+      }
+      return { type: raw.trim().toLowerCase(), q };
+    })
+    .filter((e) => e.type && e.q > 0)
+    .sort((a, b) => b.q - a.q);
+}
+
+/** Peso do Accept para um media type, considerando curingas. */
+function qFor(entries, type) {
+  const [group] = type.split("/");
+  let best = -1;
+  for (const e of entries) {
+    if (e.type === type || e.type === group + "/*" || e.type === "*/*") {
+      if (e.q > best) best = e.q;
+    }
+  }
+  return best;
+}
+
+/**
+ * Decide o formato: "markdown", "html" ou "none" (406).
+ * Sem header Accept, ou com curinga total, o padrao e HTML.
+ */
+function chooseFormat(header) {
+  const entries = parseAccept(header);
+  if (entries.length === 0) return "html";
+  const md = qFor(entries, "text/markdown");
+  const html = qFor(entries, "text/html");
+  if (md < 0 && html < 0) return "none";
+  return md > html ? "markdown" : "html";
+}
+
+/** /servicos/ -> /content/servicos/index.md ; / -> /content/index.md */
+function mdPathFor(pathname) {
+  let p = pathname;
+  if (p.endsWith("/")) p += "index.html";
+  if (!p.endsWith(".html")) return null;
+  return "/content" + p.slice(0, -".html".length) + ".md";
+}
+
+function withVary(res, extra) {
+  const h = new Headers(res.headers);
+  h.set("vary", VARY);
+  if (extra) for (const [k, v] of Object.entries(extra)) h.set(k, v);
+  return new Response(res.body, { status: res.status, statusText: res.statusText, headers: h });
+}
+
+const NOT_FOUND_MD = `# 404 — Page Not Found
+
+This URL does not exist on adrianaspmu.com.
+
+Where to look next:
+
+- Sitemap: https://adrianaspmu.com/sitemap.xml
+- Agent guide: https://adrianaspmu.com/llms.txt
+- All services and prices: https://adrianaspmu.com/services/
+- Studios: https://adrianaspmu.com/locations/
+- Aftercare and contraindications: https://adrianaspmu.com/aftercare/
+- Contact: https://adrianaspmu.com/contact/
+
+Adriana's Permanent Makeup — Wilmington, MA (781) 853-8063 and Salem, NH (978) 223-7496.
+`;
+
+async function serveNegotiated(request, env) {
+  const url = new URL(request.url);
+  const format = chooseFormat(request.headers.get("accept"));
+
+  if (format === "none") {
+    return new Response("Not Acceptable. This resource is available as text/html or text/markdown.\n", {
+      status: 406,
+      headers: { "content-type": "text/plain; charset=utf-8", vary: VARY },
+    });
+  }
+
+  if (format === "markdown") {
+    const md = mdPathFor(url.pathname);
+    if (md) {
+      const hit = await env.ASSETS.fetch(new Request(new URL(md, url), request));
+      if (hit.status === 200) {
+        return withVary(hit, { "content-type": "text/markdown; charset=utf-8" });
+      }
+    }
+    // sem gemeo markdown: 404 em markdown, nao HTML
+    return new Response(NOT_FOUND_MD, {
+      status: 404,
+      headers: { "content-type": "text/markdown; charset=utf-8", vary: VARY },
+    });
+  }
+
+  const res = await env.ASSETS.fetch(request);
+  if (res.status === 404) {
+    const page = await env.ASSETS.fetch(new URL("/404.html", url));
+    return new Response(page.body, {
+      status: 404,
+      headers: { "content-type": "text/html; charset=utf-8", vary: VARY },
+    });
+  }
+  return withVary(res);
+}
+
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
 
     if (url.pathname !== "/api/contact") {
-      return json({ ok: false, error: "Not found" }, 404);
+      return serveNegotiated(request, env);
     }
     if (request.method === "OPTIONS") {
       return new Response(null, { status: 204, headers: { allow: "POST, OPTIONS" } });

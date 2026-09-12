@@ -1,0 +1,111 @@
+<!-- 1-Year PMU Apprenticeship Program | Adriana's Academy, Peabody MA -->
+<!-- canonical: https://adrianaspmu.com/academy/pmu-apprenticeship/ -->
+> One-year PMU apprenticeship in Peabody, MA: advanced model practice, business training and guidance toward your license. $700/month.
+
+# 1-Year Permanent Makeup Apprenticeship
+
+$700/month — or $15,400 bundled with the 100-hour class
+
+an **in-house payment plan** is available for this course — [how it works](../../payment-plan/#academy-plan)
+
+A one-year program for artists who want to master the business behind permanent makeup, not only the technique. You practice on real models, learn to produce natural healed results, and get guided through applying for your PMU license.
+
+## What Does the 1-Year Apprenticeship Cover?
+
+The apprenticeship covers five areas: advanced live-model practice focused on natural healed results, client consultation and simulation, marketing and positioning, day-to-day business operations, and preparation to apply for a PMU license. It is not a second certificate — it is the year that turns a trained beginner into a working artist.
+
+- **Advanced practice on live models**, with the focus on natural, healed results rather than day-one photos.
+- **Client simulation** — consultation, expectation setting, and the conversations that decide whether someone books.
+- **Marketing and positioning**, so you attract high-value clients instead of competing on price.
+- **Business training** for running the practice itself.
+- **License preparation** — hands-on hours, documentation, and guidance through the application.
+Everything is taught step by step, which is the point: the alternative is a year of trial and error on paying clients. Each area builds on the last, since positioning and business training only make sense once healed results are consistent.
+
+## Who Is the Apprenticeship For?
+
+The apprenticeship assumes you already have fundamentals, from our 100 Hours Fundamental Class or from equivalent training elsewhere, and is the right next step for three specific situations: inconsistent healed results, a strong portfolio but an empty calendar, or wanting supervised hours before working alone.
+
+### Your healed results are inconsistent
+
+Some strokes fade, others turn patchy, and it is hard to tell whether the cause was depth, pigment, or skin type. You learn the specific adjustments that make outcomes predictable, working on live models rather than guessing on paying clients.
+
+### Your work is good but the calendar is not full
+
+Lowering prices is the common reflex and the wrong one. Positioning is what changes the kind of client you attract, and it is taught alongside consultation skills so the two reinforce each other.
+
+### You want supervised hours before working alone
+
+An apprenticeship-style year means you finish having already worked on real people with someone correcting you in the room, rather than learning those lessons later on a paying client with no one to ask.
+
+## How Is the Apprenticeship Different from the 100-Hour Fundamental Class?
+
+The 100-Hour Fundamental Class teaches five permanent makeup techniques over nine days; the apprenticeship is a twelve-month program that assumes you already know the techniques and instead builds the business and supervised-practice skills a working artist needs. Most students take the fundamental class first, then the apprenticeship.
+
+| Aspect | 100-Hour Fundamental Class | 1-Year Apprenticeship |
+| --- | --- | --- |
+| Main focus | Learning five PMU techniques from zero | Business, consultation, and supervised practice |
+| Format | 9 days, in a small group | 12 months, ongoing |
+| Prerequisite | None | Fundamentals, from us or elsewhere |
+| Credential | AAM-accredited certificate of completion | No separate certificate; license-application guidance instead |
+| Price | $7,000 alone | $700/month alone, or $15,400 bundled |
+
+Someone who has never held a machine should start with the [100 Hours Fundamental Class](../pmu-100h-fundamental/) instead.
+
+## What Does the Apprenticeship Cost?
+
+The apprenticeship costs $700 per month for twelve months if taken alone, or $15,400 when bundled with the 100-Hour Fundamental Class. Both options use an in-house payment plan rather than the Cherry financing offered for client services.
+
+### Apprenticeship only
+
+$700/month
+
+Twelve months. For artists who already completed their fundamental training.
+
+### 100-Hour Training + Apprenticeship
+
+$15,400
+
+- $1,500 deposit to secure your seat
+- $1,500 on the first day of class
+- 20 bi-weekly payments of $620
+[See the full 100-hour curriculum](../pmu-100h-fundamental/)
+
+Training tuition uses this in-house payment plan. It is separate from the Cherry plans offered for permanent makeup services.
+
+## Does the Apprenticeship Give Me a PMU License?
+
+No. The apprenticeship prepares and guides you toward applying for a PMU license, but the license itself is issued by the state or town where you intend to work, not by the academy. Requirements differ by location, so meeting them is your own responsibility.
+
+Massachusetts has no single statewide body art license: M.G.L. Chapter 111, Section 31 gives each town’s Board of Health the authority to write its own permanent makeup rules, so a permit in one Massachusetts town does not automatically transfer to another. New Hampshire licenses at the state level under RSA 314-A, and the Town of Salem, NH additionally licenses under its own Chapter 433.
+
+The apprenticeship gives you hands-on hours, documentation, and guidance through whichever application applies to you, but it cannot issue, guarantee, or expedite a license. Confirming the exact requirements where you plan to work is your own responsibility.
+
+## Who Teaches the Apprenticeship?
+
+Adriana Souza Santos teaches the apprenticeship personally. She has worked in the beauty industry for over 18 years, beginning her career in Brazil before opening her U.S. business in 2017, and holds Diamond Certified Trainer status with the American Academy of Micropigmentation.
+
+Adriana has trained more than 300 students and performed over 5,000 procedures herself. She teaches in both English and Portuguese.
+
+Adriana’s Academy operates as the educational division of Adriana Beauty Services, Inc., at **39 Cross Street, Suite 206, Peabody, MA 01960**, a space reserved for students only.
+
+## Frequently Asked Questions
+
+You need working fundamentals in permanent makeup technique, either from our 100 Hours Fundamental Class or from equivalent training elsewhere. The apprenticeship builds on those fundamentals rather than teaching them from the beginning.
+
+Yes, at $700 per month for twelve months, if you already have the fundamentals in place. Students who need the fundamental training first usually choose the $15,400 bundle instead.
+
+Not automatically. You still need to meet the licensing requirements of the specific town or state where you plan to work, which the apprenticeship helps you prepare for but cannot issue on its own.
+
+The apprenticeship is a structured twelve-month program covering business, consultation, and supervised practice. The [VIP Masterclass](../vip-masterclass/) is private one-on-one training built around one student’s specific level and the technique she wants to learn or refine.
+
+Yes. Tuition uses an in-house payment plan with a deposit followed by scheduled payments, separate from the Cherry financing offered for permanent makeup services to clients.
+
+## Training payment plans
+
+Our courses are not financed through Cherry, which covers our permanent makeup services.
+ For training we offer an **in-house payment plan**: place a deposit and pay the
+ balance directly with us.
+
+## Start Your Apprenticeship Year
+
+Tell us where you are in your training and we will tell you honestly whether this is the right next step.

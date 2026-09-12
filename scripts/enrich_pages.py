@@ -415,6 +415,148 @@ LICENCA_SALEM = """<section class="section section-alt"><div class="container">
 </div></section>"""
 
 
+# --- alt e title das imagens (auditoria 12/09) ----------------------
+# 165 tags <img> no <main> estavam sem "title" e 2 sem "alt". Fazer isso
+# no build, e nao arquivo a arquivo, porque a mesma foto aparece em ate
+# 4 paginas e o texto precisa ser o mesmo em todas.
+#
+# Regra: o "title" COMPLEMENTA o alt, nunca o repete. O alt descreve o que
+# a imagem mostra, para quem nao a ve; o title diz o que ela prova ou por
+# que ela esta ali. Repetir o alt no title e ruido para leitor de tela.
+IMG_TEXT = {
+    # servicos: o alt e o nome da tecnica, o title diz o resultado
+    "nano-brows.jpg": (None, "Nano Brows: hair-like strokes made with an ultra-fine machine needle"),
+    "microblading.jpg": (None, "Microblading: hair-like strokes made with a handheld blade"),
+    "powder-brows.jpg": (None, "Powder Brows: soft shaded finish, like brows filled with powder"),
+    "combination-brows.jpg": (None, "Combination Brows: hair-like strokes blended with soft shading"),
+    "nano-combo.jpg": (None, "Nano Combo Brows: nano strokes layered with powder shading"),
+    "lip-blush.jpg": (None, "Lip Blush: a soft tint that enhances natural lip colour and shape"),
+    "dark-lip-neutralization.jpg": (None, "Dark Lip Neutralization: colour correction that evens out deeper lip tones"),
+    "top-eyeliner.jpg": (None, "Top Eyeliner: definition along the upper lash line"),
+    "smokey-eyeliner.jpg": (None, "Smokey Eyeliner: upper liner blended upward into soft shading"),
+    "bottom-eyeliner.jpg": (None, "Bottom Eyeliner: fine definition along the lower lash line"),
+    "eyeliner-combo.jpg": (None, "Eyeliner Combo: upper and lower lash lines in one session"),
+    "eyebrows-lips-combo.jpg": (None, "Brows + Lips Combo: both treatments in one healing period"),
+    "yearly-touch-up.jpg": (None, "Yearly Touch-Up: refreshing faded pigment about twelve months on"),
+    # academia e credenciais
+    "aam-seal.png": (None, "Diamond Certified Trainer status with the American Academy of Micropigmentation"),
+    "adriana.jpg": (None, "Adriana Souza Santos, who teaches every class at the Peabody academy"),
+    "apprenticeship.jpg": (None, "The apprenticeship year: supervised practice on live models"),
+    "pmu-100h.jpg": (None, "The 100 Hours Fundamental Class, accredited by the AAM"),
+    "classroom.jpg": (None, "The academy classroom at 39 Cross Street, Peabody"),
+    "in-person-class.jpg": (None, "Small-group teaching, with the instructor correcting work in the room"),
+    # o hero da academia nao tinha alt nenhum
+    "hero.webp": ("Adriana teaching a permanent makeup class at Adriana's Academy in Peabody, MA",
+                  "A class in progress at the Peabody academy"),
+}
+
+def _img_text(src, alt):
+    """Devolve (alt, title) para uma imagem, por nome de arquivo ou familia."""
+    name = src.split("/")[-1]
+    if name in IMG_TEXT:
+        a, t = IMG_TEXT[name]
+        return (a or alt), t
+    if name.startswith("Portfolio-"):
+        # alt ja descreve o caso; o title diz o que a foto e
+        return alt, "Before and after on a real client at Adriana's Permanent Makeup"
+    if name.startswith("academy-"):
+        return alt, "Students at work during a class at Adriana's Academy"
+    if name.startswith("slide-"):
+        return alt, "Course material from the 100 Hours Fundamental Class"
+    if name.startswith(("student-", "Avatar-Aluna")):
+        return alt, "One of the 300+ artists trained at Adriana's Academy"
+    return alt, None
+
+
+def add_img_text(s, path_rel):
+    """Preenche alt e title faltantes nas <img> dentro do <main>."""
+    m = re.search(r"<main.*?</main>", s, re.S)
+    if not m:
+        return s
+    main = m.group(0)
+
+    def fix(mt):
+        tag = mt.group(0)
+        src = re.search(r'src="([^"]*)"', tag)
+        if not src:
+            return tag
+        cur_alt = re.search(r'alt="([^"]*)"', tag)
+        alt_val = cur_alt.group(1) if cur_alt else ""
+        new_alt, title = _img_text(src.group(1), alt_val)
+        if new_alt and new_alt != alt_val:
+            tag = (re.sub(r'alt="[^"]*"', 'alt="%s"' % new_alt, tag) if cur_alt
+                   else tag[:-1] + ' alt="%s">' % new_alt)
+        if title and not re.search(r'\btitle="[^"]+"', tag):
+            tag = tag[:-1] + ' title="%s">' % title
+        return tag
+
+    new_main = re.sub(r"<img\b[^>]*>", fix, main)
+    return s.replace(main, new_main) if new_main != main else s
+
+
+# --- Organization completa (Is Agentic itens 5 e 6) -----------------
+# O scan apontou: "Organization schema found but missing: contactPoint,
+# address" e "JSON-LD has Organization type but missing key fields (name,
+# description)". Sem esses campos a IA nao consegue verificar a empresa
+# nem responder pergunta de contato. Preenchido no build, para valer nas
+# 65 paginas de uma vez.
+ORG_EXTRA = {
+    "description": (
+        "Permanent makeup studio and training academy serving Wilmington, Massachusetts "
+        "and Salem, New Hampshire. Nano brows, microblading, powder brows, lip blush, "
+        "dark lip neutralization and permanent eyeliner, performed by licensed artists. "
+        "Consultations in English and Portuguese."
+    ),
+    "telephone": "+1-781-853-8063",
+    "email": None,  # a empresa nao tem caixa generica monitorada; nao inventar
+    "logo": {
+        "@type": "ImageObject",
+        "url": BASE + "/assets/images/logo.svg",
+    },
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "211 Lowell Street, Suite F",
+        "addressLocality": "Wilmington",
+        "addressRegion": "MA",
+        "postalCode": "01887",
+        "addressCountry": "US",
+    },
+    "contactPoint": [
+        {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "telephone": "+1-781-853-8063",
+            "areaServed": "US-MA",
+            "availableLanguage": ["English", "Portuguese"],
+        },
+        {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "telephone": "+1-978-223-7496",
+            "areaServed": "US-NH",
+            "availableLanguage": ["English", "Portuguese"],
+        },
+    ],
+    "areaServed": [
+        {"@type": "State", "name": "Massachusetts"},
+        {"@type": "State", "name": "New Hampshire"},
+    ],
+    "knowsLanguage": ["en-US", "pt-BR"],
+}
+
+
+def complete_organization(graph):
+    """Preenche os campos que faltavam no no Organization."""
+    for node in graph:
+        if not isinstance(node, dict):
+            continue
+        if node.get("@type") == "Organization":
+            for k, v in ORG_EXTRA.items():
+                if v is not None and k not in node:
+                    node[k] = v
+    return graph
+
+
 def add_licenca(s, path_rel):
     """Injeta o bloco de licenca nas paginas servico-cidade, antes da secao
     final de CTA. Idempotente: nao reinjeta se a marca ja existe."""
@@ -595,6 +737,7 @@ def enrich_schema(s, path_rel):
     for node in graph:
         if isinstance(node, dict):
             node.pop("aggregateRating", None)
+        graph = complete_organization(graph)
 
     # 1. Salem NH no grafo de TODAS as paginas
     if f"{BASE}/#salem" not in ids:
@@ -742,6 +885,7 @@ def main():
                 s = add_related(s, rel)
                 s = add_aftercare_link(s, rel)
                 s = add_licenca(s, rel)
+                s = add_img_text(s, rel)
                 s = add_financing(s, rel)
                 s = fix_descriptions(s, rel)
                 s = fix_fresha(s, rel)

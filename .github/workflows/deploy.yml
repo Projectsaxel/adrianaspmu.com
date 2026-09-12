@@ -33,6 +33,9 @@ jobs:
       - name: Enriquecimento SEO das paginas (OG, schema, LCP, CLS)
         run: python3 scripts/enrich_pages.py
 
+      - name: Gemeos markdown para negociacao de conteudo
+        run: python3 scripts/gen_markdown.py
+
       - name: Deploy com Wrangler
         uses: cloudflare/wrangler-action@v3
         with:
