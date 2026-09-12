@@ -2469,7 +2469,7 @@ th.col-recommended { color: var(--rose-deep); }
   border-top: 1px solid var(--line);
   max-width: 30rem;
 }
-.hero-stats > div { padding-right: var(--space-8); }
+.hero-stats > div { padding-right: var(--space-8); min-width: 0; }
 .hero-stats > div + div { border-left: 1px solid var(--line); padding-left: var(--space-8); }
 .hero-stats dt {
   font-family: var(--font-display);
@@ -2485,6 +2485,16 @@ th.col-recommended { color: var(--rose-deep); }
   text-transform: uppercase;
   font-weight: 600;
   color: var(--ink-muted);
+}
+/* Sem wrap, o terceiro item ("EN & PT / Consultations") vazava 96px em 390px,
+   porque min-width:auto impede o flex item de encolher. Mesmo defeito que o
+   .student-avatars da /academy/ tinha em agosto. Ao quebrar linha, a borda
+   esquerda do divisor sairia solta no inicio da nova linha, entao ela e
+   removida quando o item comeca uma linha. */
+@media (max-width: 600px) {
+  .hero-stats { flex-wrap: wrap; row-gap: var(--space-4); }
+  .hero-stats > div + div { border-left: 0; padding-left: 0; }
+  .hero-stats > div { padding-right: var(--space-6); }
 }
 .hero-visual--editorial { margin: 0; }
 .hero-visual--editorial img,
