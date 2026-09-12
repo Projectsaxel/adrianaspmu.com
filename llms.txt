@@ -1,14 +1,15 @@
 # Adriana's Permanent Makeup
-> Master Permanent Makeup Artist Adriana Souza Santos with 20+ years of experience and 5,000+ procedures performed. PMU studio and academy serving Wilmington, MA and Salem, NH (New England). Site language: English (en-US) only. Book appointments via Fresha: https://www.fresha.com/book-now/adrianas-permanent-makeup-zeaseit5/all-offer?share=true&pId=727586
+> Master Permanent Makeup Artist Adriana Souza Santos with 18+ years of experience and 5,000+ procedures performed. PMU studio and academy serving Wilmington, MA and Salem, NH (New England). Site language: English (en-US) only. Book appointments via Fresha: https://www.fresha.com/book-now/adrianas-permanent-makeup-zeaseit5/all-offer?share=true&pId=727586
 
 ## Core Pages
 - [Home](https://adrianaspmu.com/): Permanent Makeup Studio and Academy in Wilmington MA & Salem NH
-- [About](https://adrianaspmu.com/about/): Master PMU Artist with 20+ years and 5,000+ procedures
+- [About](https://adrianaspmu.com/about/): Master PMU Artist with 18+ years and 5,000+ procedures
 - [Services](https://adrianaspmu.com/services/): All permanent makeup services in MA and NH
 - [Locations](https://adrianaspmu.com/locations/): Wilmington MA + Salem NH studios
 - [Academy](https://adrianaspmu.com/academy/): Permanent Makeup training programs
 - [Contact](https://adrianaspmu.com/contact/): Studio contact and consultation
 - [FAQ](https://adrianaspmu.com/faq/): Permanent makeup frequently asked questions
+- [Aftercare](https://adrianaspmu.com/aftercare/): Day-by-day PMU healing timeline, dry vs. moist healing, what to avoid, pigment allergic reactions, and signs of infection that need a doctor rather than the studio
 - [Payment Plans](https://adrianaspmu.com/payment-plan/): Split any PMU service into 4 interest-free payments with Cherry, or up to 24 months. Soft credit check, no impact on credit score. Approvals up to $30,000. Training courses use a separate in-house plan.
 - [Portfolio](https://adrianaspmu.com/portfolio/): Before and after PMU results
 - [Privacy Policy](https://adrianaspmu.com/privacy-policy/)
@@ -40,6 +41,7 @@
 ## Locations
 - [Wilmington MA](https://adrianaspmu.com/locations/wilmington-ma/): 211 Lowell Street, Suite F — (781) 853-8063
 - [Salem NH](https://adrianaspmu.com/locations/salem-nh/): 117A Main Street — (978) 223-7496
+- [Peabody MA (Academy)](https://adrianaspmu.com/locations/peabody-ma/): 39 Cross Street, Suite 206 — (781) 853-8063 — training only, no client procedures
 
 ## Academy
 - [100-Hour Fundamental](https://adrianaspmu.com/academy/pmu-100h-fundamental/): $7,000 in-person training

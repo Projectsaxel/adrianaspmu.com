@@ -289,12 +289,12 @@
     btn.className = "float-cta";
     btn.setAttribute("aria-haspopup", "dialog");
     btn.setAttribute("aria-expanded", "false");
-    btn.setAttribute("aria-label", "Ask about your brows, lips or eyeliner");
+    btn.setAttribute("aria-label", "Message us about permanent makeup");
     btn.innerHTML =
       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" ' +
       'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
       '<path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>' +
-      "</svg><span class=\"float-cta-label\">Ask about your brows</span>";
+      "</svg><span class=\"float-cta-label\">Message Us</span>";
 
     const modal = document.createElement("div");
     modal.className = "float-modal";
@@ -302,7 +302,7 @@
     modal.innerHTML = `
       <div class="float-modal-panel" role="dialog" aria-modal="true" aria-labelledby="float-modal-title">
         <button type="button" class="float-modal-close" aria-label="Close">&times;</button>
-        <h2 class="float-modal-title" id="float-modal-title">Ask about your brows</h2>
+        <h2 class="float-modal-title" id="float-modal-title">Message Us</h2>
         <p class="float-modal-sub">Tell us what you are considering and Adriana's team answers with the honest options for your features, healing time and price.</p>
         <p class="float-modal-langs">We answer in English &middot; Atendemos em portugu&ecirc;s</p>
         <form novalidate>

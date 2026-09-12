@@ -21,6 +21,7 @@ import os
 import re
 import sys
 import struct
+from urllib.parse import urljoin
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = "https://adrianaspmu.com"
@@ -70,7 +71,8 @@ DESCRIPTIONS = {
     "locations/index.html": "Two Adriana's Permanent Makeup studios: 211 Lowell Street, Wilmington MA and 117A Main Street, Salem NH. Addresses, phones and booking links.",
     "locations/salem-nh/index.html": "Adriana's Permanent Makeup at 117A Main Street, Salem NH. Microblading, nano brows, lip blush and eyeliner near Derry, Windham and Methuen.",
     "locations/wilmington-ma/index.html": "Adriana's Permanent Makeup at 211 Lowell Street Suite F, Wilmington MA. Brows, lips and eyeliner near Burlington, Woburn and North Reading.",
-    "about/index.html": "Meet Adriana Souza Santos, Master PMU Artist with 20+ years and 5,000+ procedures, and the team behind the Adriana's studios in MA and NH.",
+    "locations/peabody-ma/index.html": "Adriana's Academy at 39 Cross Street, Peabody MA: AAM Diamond-certified PMU training. 100-Hour Fundamental, Apprenticeship, and VIP Masterclass courses.",
+    "about/index.html": "Meet Adriana Souza Santos, Master PMU Artist with 18+ years and 5,000+ procedures, and the team behind the Adriana's studios in MA and NH.",
     "privacy-policy/index.html": "How Adriana's Permanent Makeup collects, uses and protects your personal information across our website and studios in MA and NH.",
     "terms-of-use/index.html": "Terms of use for the Adriana's Permanent Makeup website, including booking, deposits, cancellations and studio policies in MA and NH.",
 }
@@ -88,7 +90,7 @@ DESCRIPTIONS = {
 # ~90KB de JS e um request extra antes do primeiro hit.
 GA4_ID = "G-ZSD89WRHYZ"
 
-CITY_LABEL = {"wilmington-ma": "wilmington", "salem-nh": "salem"}
+CITY_LABEL = {"wilmington-ma": "wilmington", "salem-nh": "salem", "peabody-ma": "peabody"}
 
 
 def classify(path_rel):
@@ -173,11 +175,10 @@ def fix_fresha(s, path_rel):
 
 # --- Correcoes de E-E-A-T e cross-linking (auditoria itens 10 e 14) ---
 
-# "over 7 years" e a marca antiga vieram do WordPress e contradizem os
-# "20+ years" e "Adriana's PMU" do resto do site. Sinal conflitante de
-# entidade para o Google e para LLMs.
+# "over 7 years" contava so os EUA (2017+). O numero correto e a carreira
+# inteira, iniciada no Brasil: 18+ anos. Ver /about/.
 TEXT_FIXES = [
-    ("over 7 years of experience", "over 20 years of experience"),
+    ("over 7 years of experience", "over 18 years of experience"),  # 18+ = carreira total (Brasil desde ~2008); EUA desde 2017
     ("Adriana Beauty Services \u2013 Permanent Makeup", "Adriana's Permanent Makeup"),
 ]
 
@@ -314,8 +315,12 @@ CHERRY_FLOATING = """
 </div>
 """
 
-NO_CHERRY = ("payment-plan/", "academy/", "training/", "privacy-policy/", "terms-of-use/")
-IS_ACADEMY = ("academy/", "training/")
+# "locations/peabody-ma/" e a pagina do ACADEMY, nao de um estudio: mesma
+# regra do item 2 acima (Cherry nao cobre mensalidade de curso). Sem esta
+# entrada, add_financing e add_cherry_floating tratariam Peabody como
+# "locations/" generico e anunciariam Cherry ao lado de tuition de $7.000.
+NO_CHERRY = ("payment-plan/", "academy/", "training/", "privacy-policy/", "terms-of-use/", "locations/peabody-ma/")
+IS_ACADEMY = ("academy/", "training/", "locations/peabody-ma/")
 
 
 def _base(path_rel):
@@ -376,6 +381,84 @@ def academy_banner(base):
   </div>
 </section>
 """
+
+
+# --- Bloco de licenca por unidade (documentos verificados 11/09/2026) ---
+# Os numeros sao identicos em todas as paginas da mesma cidade. Injetar no
+# build evita escrever o mesmo bloco 13 vezes por unidade e garante que a
+# renovacao seja feita num lugar so. Fonte: pasta Doc Adrianas pmu.
+LICENCA_WILM = """<section class="section section-alt"><div class="container">
+<h2>Which Licenses Cover This Work in Wilmington?</h2>
+<p class="direct-answer">Massachusetts has no single state body art license. Wilmington&rsquo;s own Board of Health issues both licenses that cover this work: Body Art Facility License 20261921 for the studio at 211 Lowell Street, and Body Art Practitioner License 20261923 for the artist. Both run through 31 December 2026.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Wilmington licenses"><table>
+<thead><tr><th>License</th><th>Number</th><th>Issued by</th><th>Valid through</th></tr></thead>
+<tbody>
+<tr><td>Body Art Facility</td><td>20261921</td><td>Wilmington Board of Health</td><td>31 Dec 2026</td></tr>
+<tr><td>Body Art Practitioner &mdash; Adriana Santos</td><td>20261923</td><td>Wilmington Board of Health</td><td>31 Dec 2026</td></tr>
+<tr><td>Body Art Practitioner &mdash; Livian Camargo Gomes</td><td>20261923</td><td>Wilmington Board of Health</td><td>31 Dec 2026</td></tr>
+</tbody></table></div>
+<p>Under Massachusetts General Laws Chapter 111, Section 31, each town&rsquo;s Board of Health writes its own body art rules, so a permit issued in Wilmington does not carry over to another Massachusetts town. Both licenses are posted in the studio, as Wilmington requires.</p>
+</div></section>"""
+
+LICENCA_SALEM = """<section class="section section-alt"><div class="container">
+<h2>Which Licenses Cover This Work in Salem, NH?</h2>
+<p class="direct-answer">Two levels apply in New Hampshire. The state issues Body Artist license 4283 to Adriana Souza Santos, valid through 18 July 2028 and verifiable at the state&rsquo;s own public lookup. The Town of Salem separately licenses the artist as a Permanent Make-Up Artist under BODA-10 and the establishment under BODE-4.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Salem NH licenses"><table>
+<thead><tr><th>License</th><th>Classification</th><th>Number</th><th>Valid through</th></tr></thead>
+<tbody>
+<tr><td>New Hampshire OPLC</td><td>Body Artist</td><td>4283</td><td>18 Jul 2028</td></tr>
+<tr><td>Town of Salem</td><td>Permanent Make-Up Artist</td><td>BODA-10</td><td>28 Feb 2027</td></tr>
+<tr><td>Town of Salem</td><td>Body Art Establishment</td><td>BODE-4</td><td>28 Feb 2027</td></tr>
+</tbody></table></div>
+<p><strong>Check the state license yourself.</strong> New Hampshire publishes a lookup at <a href="https://forms.nh.gov/licenseverification/" rel="noopener" target="_blank">forms.nh.gov/licenseverification</a>. Search Adriana Souza Santos, or license 4283, and the state confirms the status without relying on anything published here.</p>
+<p>The town license is worth noting: Salem issued BODA-10 specifically as a <strong>Permanent Make-Up Artist</strong> license under Salem Chapter 433, not as a general tattoo license.</p>
+</div></section>"""
+
+
+def add_licenca(s, path_rel):
+    """Injeta o bloco de licenca nas paginas servico-cidade, antes da secao
+    final de CTA. Idempotente: nao reinjeta se a marca ja existe."""
+    if "id=\"licencas\"" in s or "Which Licenses Cover This Work" in s:
+        return s
+    if path_rel.endswith("/wilmington-ma/index.html"):
+        bloco = LICENCA_WILM
+    elif path_rel.endswith("/salem-nh/index.html"):
+        bloco = LICENCA_SALEM
+    else:
+        return s
+    if not path_rel.startswith("services/"):
+        return s
+    # ancora: a secao de CTA final, qualquer que seja a combinacao de
+    # modificadores; se nao houver CTA (pagina ainda esqueleto), entra
+    # antes do fechamento do <main>.
+    m = re.search(r'<section class="section[^"]*section--cta"', s)
+    if m:
+        return s[:m.start()] + bloco + "\n" + s[m.start():]
+    m = re.search(r'</main>', s)
+    if not m:
+        return s
+    return s[:m.start()] + bloco + "\n  " + s[m.start():]
+
+
+def add_aftercare_link(s, path_rel):
+    """Linka /aftercare/ a partir da secao 'Healing and Aftercare' das
+    paginas de servico (auditoria 10/09: a pagina de aftercare estava
+    orfa, zero links de entrada). Roda no build, nao a mao em cada
+    pagina de servico: sao 12+ arquivos e crescem a cada servico novo.
+    """
+    if path_rel == "aftercare/index.html":
+        return s
+    marker_h2 = "<h2>Healing and Aftercare</h2>"
+    if marker_h2 not in s:
+        return s
+    base = _base(path_rel)
+    href = f"{base}aftercare/"
+    if f'href="{href}"' in s:
+        return s                                    # idempotente
+    line = (f'<p class="aftercare-link">Read the full <a href="{href}">'
+            f'aftercare and healing guide</a> for the day-by-day timeline '
+            f'and the signs that need a doctor instead of the studio.</p>')
+    return s.replace(marker_h2, marker_h2 + "\n    " + line, 1)
 
 
 def add_financing(s, path_rel):
@@ -570,16 +653,17 @@ def enrich_schema(s, path_rel):
         for i, mm in enumerate(re.finditer(r"<li[^>]*>(?:<a href=\"([^\"]*)\">)?(.*?)(?:</a>)?</li>", bc.group(1))):
             href, label = mm.group(1), re.sub(r"<[^>]+>", "", mm.group(2)).strip()
             item = {"@type": "ListItem", "position": i + 1, "name": label}
-            if href:
-                # resolve relativo contra o canonical
-                depth = href.count("../")
-                base_parts = canonical[len(BASE):].strip("/").split("/")
-                kept = base_parts[: max(0, len(base_parts) - depth)]
-                tail = href.replace("../", "")
-                item["item"] = BASE + "/" + "/".join(p for p in kept[:0] + [tail.strip("/")] if p) + "/"
-                item["item"] = item["item"].replace("//", "/").replace("https:/", "https://")
-                if tail in ("", "./"):
-                    item["item"] = BASE + "/"
+            # resolve relativo (ou o proprio canonical, se for o crumb atual,
+            # sem <a>) via RFC 3986 de verdade: urljoin trata corretamente
+            # "../" e "../../" contra um canonical terminado em "/". A conta
+            # manual anterior (contar "../" e fatiar o canonical) colapsava
+            # QUALQUER href so-de-"../" para BASE+"/", perdendo os crumbs
+            # intermediarios (ex.: "Locations" virava a home). Bug pego na
+            # pagina de Peabody, 10/09/2026.
+            target = urljoin(canonical, href) if href else canonical
+            if "#" not in target and "?" not in target and not target.endswith("/"):
+                target += "/"
+            item["item"] = target
             items.append(item)
         if items:
             graph.append({"@type": "BreadcrumbList", "@id": canonical + "#breadcrumb", "itemListElement": items})
@@ -656,6 +740,8 @@ def main():
                 for a, b in TEXT_FIXES:
                     s = s.replace(a, b)
                 s = add_related(s, rel)
+                s = add_aftercare_link(s, rel)
+                s = add_licenca(s, rel)
                 s = add_financing(s, rel)
                 s = fix_descriptions(s, rel)
                 s = fix_fresha(s, rel)

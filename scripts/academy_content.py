@@ -48,7 +48,7 @@ def academy_body(img, depth: int = 1, course_href_base: str = "") -> str:
 
 <section class="trust-bar academy-stats" aria-label="Academy credentials">
   <div class="container trust-bar-inner">
-    <div><span class="stat-number">20+</span><span class="stat-label">Years of experience</span></div>
+    <div><span class="stat-number">18+</span><span class="stat-label">Years of experience</span></div>
     <div><span class="stat-number">300+</span><span class="stat-label">Students trained</span></div>
     <div><span class="stat-number">5,000+</span><span class="stat-label">Happy clients</span></div>
   </div>
