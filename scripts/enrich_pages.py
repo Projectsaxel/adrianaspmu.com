@@ -383,6 +383,63 @@ def academy_banner(base):
 """
 
 
+# --- Bloco de licenca por unidade (documentos verificados 11/09/2026) ---
+# Os numeros sao identicos em todas as paginas da mesma cidade. Injetar no
+# build evita escrever o mesmo bloco 13 vezes por unidade e garante que a
+# renovacao seja feita num lugar so. Fonte: pasta Doc Adrianas pmu.
+LICENCA_WILM = """<section class="section section-alt"><div class="container">
+<h2>Which Licenses Cover This Work in Wilmington?</h2>
+<p class="direct-answer">Massachusetts has no single state body art license. Wilmington&rsquo;s own Board of Health issues both licenses that cover this work: Body Art Facility License 20261921 for the studio at 211 Lowell Street, and Body Art Practitioner License 20261923 for the artist. Both run through 31 December 2026.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Wilmington licenses"><table>
+<thead><tr><th>License</th><th>Number</th><th>Issued by</th><th>Valid through</th></tr></thead>
+<tbody>
+<tr><td>Body Art Facility</td><td>20261921</td><td>Wilmington Board of Health</td><td>31 Dec 2026</td></tr>
+<tr><td>Body Art Practitioner &mdash; Adriana Santos</td><td>20261923</td><td>Wilmington Board of Health</td><td>31 Dec 2026</td></tr>
+<tr><td>Body Art Practitioner &mdash; Livian Camargo Gomes</td><td>20261923</td><td>Wilmington Board of Health</td><td>31 Dec 2026</td></tr>
+</tbody></table></div>
+<p>Under Massachusetts General Laws Chapter 111, Section 31, each town&rsquo;s Board of Health writes its own body art rules, so a permit issued in Wilmington does not carry over to another Massachusetts town. Both licenses are posted in the studio, as Wilmington requires.</p>
+</div></section>"""
+
+LICENCA_SALEM = """<section class="section section-alt"><div class="container">
+<h2>Which Licenses Cover This Work in Salem, NH?</h2>
+<p class="direct-answer">Two levels apply in New Hampshire. The state issues Body Artist license 4283 to Adriana Souza Santos, valid through 18 July 2028 and verifiable at the state&rsquo;s own public lookup. The Town of Salem separately licenses the artist as a Permanent Make-Up Artist under BODA-10 and the establishment under BODE-4.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Salem NH licenses"><table>
+<thead><tr><th>License</th><th>Classification</th><th>Number</th><th>Valid through</th></tr></thead>
+<tbody>
+<tr><td>New Hampshire OPLC</td><td>Body Artist</td><td>4283</td><td>18 Jul 2028</td></tr>
+<tr><td>Town of Salem</td><td>Permanent Make-Up Artist</td><td>BODA-10</td><td>28 Feb 2027</td></tr>
+<tr><td>Town of Salem</td><td>Body Art Establishment</td><td>BODE-4</td><td>28 Feb 2027</td></tr>
+</tbody></table></div>
+<p><strong>Check the state license yourself.</strong> New Hampshire publishes a lookup at <a href="https://forms.nh.gov/licenseverification/" rel="noopener" target="_blank">forms.nh.gov/licenseverification</a>. Search Adriana Souza Santos, or license 4283, and the state confirms the status without relying on anything published here.</p>
+<p>The town license is worth noting: Salem issued BODA-10 specifically as a <strong>Permanent Make-Up Artist</strong> license under Salem Chapter 433, not as a general tattoo license.</p>
+</div></section>"""
+
+
+def add_licenca(s, path_rel):
+    """Injeta o bloco de licenca nas paginas servico-cidade, antes da secao
+    final de CTA. Idempotente: nao reinjeta se a marca ja existe."""
+    if "id=\"licencas\"" in s or "Which Licenses Cover This Work" in s:
+        return s
+    if path_rel.endswith("/wilmington-ma/index.html"):
+        bloco = LICENCA_WILM
+    elif path_rel.endswith("/salem-nh/index.html"):
+        bloco = LICENCA_SALEM
+    else:
+        return s
+    if not path_rel.startswith("services/"):
+        return s
+    # ancora: a secao de CTA final, qualquer que seja a combinacao de
+    # modificadores; se nao houver CTA (pagina ainda esqueleto), entra
+    # antes do fechamento do <main>.
+    m = re.search(r'<section class="section[^"]*section--cta"', s)
+    if m:
+        return s[:m.start()] + bloco + "\n" + s[m.start():]
+    m = re.search(r'</main>', s)
+    if not m:
+        return s
+    return s[:m.start()] + bloco + "\n  " + s[m.start():]
+
+
 def add_aftercare_link(s, path_rel):
     """Linka /aftercare/ a partir da secao 'Healing and Aftercare' das
     paginas de servico (auditoria 10/09: a pagina de aftercare estava
@@ -684,6 +741,7 @@ def main():
                     s = s.replace(a, b)
                 s = add_related(s, rel)
                 s = add_aftercare_link(s, rel)
+                s = add_licenca(s, rel)
                 s = add_financing(s, rel)
                 s = fix_descriptions(s, rel)
                 s = fix_fresha(s, rel)
