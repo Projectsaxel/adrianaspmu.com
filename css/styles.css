@@ -935,7 +935,9 @@ main:has(.service-prose) .section--cta {
   margin: 1.25rem 1.75rem 0;
   background: rgba(244, 81, 151, 0.12);
   border-color: rgba(244, 81, 151, 0.35);
-  color: var(--color-primary);
+  /* era --color-primary (#F45197): 3,25:1 sobre o proprio fundo rosa.
+     --brand-deep e o token declarado para texto de acento. */
+  color: var(--brand-deep);
 }
 
 /* Locations */
@@ -975,7 +977,9 @@ main:has(.service-prose) .section--cta {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   padding: 0.35rem 0.75rem;
-  background: var(--color-primary);
+  /* branco sobre --color-primary (#F45197) da 3,25:1 em 10px, abaixo do
+     minimo AA de 4,5:1 para texto pequeno. --brand-deep leva a 5,9:1. */
+  background: var(--brand-deep);
   color: var(--color-white);
   border-radius: 999px;
   margin-bottom: 1rem;
@@ -1771,7 +1775,11 @@ body.portfolio-lightbox-open {
 .academy-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(26, 20, 18, 0.82), rgba(26, 20, 18, 0.45));
+  /* O gradiente antigo caia para 45% de opacidade. Sobre um trecho claro
+     da foto isso da 2,77:1 no texto, reprovando AA. O conteudo do hero vive
+     nos 720px da esquerda, entao o scrim e horizontal e so clareia depois
+     que o texto acaba. Pior caso medido no texto: acima de 6:1. */
+  background: linear-gradient(90deg, rgba(26, 20, 18, 0.88) 0%, rgba(26, 20, 18, 0.80) 82%, rgba(26, 20, 18, 0.50) 100%);
 }
 
 .academy-hero-content {
@@ -1785,6 +1793,16 @@ body.portfolio-lightbox-open {
   color: var(--cream);
   margin-bottom: 1rem;
 }
+
+/* .direct-answer define color:var(--ink) explicitamente, o que VENCE a
+   herança de color:var(--cream) do .academy-hero. Resultado: texto escuro
+   sobre foto escura, ilegivel. A cor precisa ser re-declarada aqui, e a
+   borda da marca fica clara para nao sumir no fundo escuro. */
+.academy-hero .direct-answer {
+  color: var(--cream);
+  border-left-color: var(--gold-light);
+}
+.academy-hero .direct-answer strong { color: #fff; }
 
 .section-label--light {
   color: var(--gold-light);
@@ -1934,7 +1952,9 @@ body.portfolio-lightbox-open {
   font-size: 0.75rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--gold);
+  /* era --gold (--brass, #B8985A): 2,55:1. O proprio token diz
+     "SO linha e icone, nunca texto". --brass-text existe para texto. */
+  color: var(--brass-text);
   font-weight: 700;
 }
 
@@ -2861,3 +2881,15 @@ th.col-recommended { color: var(--rose-deep); }
 .studio-gallery img { width: 100%; height: auto; display: block; border-radius: var(--radius, 10px); }
 .studio-gallery figcaption { font-size: .875rem; color: var(--ink-muted); margin-top: 8px; line-height: 1.45; }
 @media (max-width: 600px) { .studio-gallery { grid-template-columns: 1fr; } }
+
+
+/* --- Correcao de legibilidade sobre foto escura ------------------
+   .section-label--light era sobrescrito pela regra generica
+   ".eyebrow, .badge, .section-label, .card-eyebrow { color: var(--brass-text) }",
+   que aparece depois no arquivo com a mesma especificidade. A variante
+   clara nunca chegou a funcionar. Re-declarada aqui, no fim, com
+   especificidade maior. */
+.academy-hero .section-label--light,
+p.section-label--light {
+  color: var(--blush);
+}
