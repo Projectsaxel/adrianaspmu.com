@@ -7,7 +7,7 @@ def dark_lip_neutralization_sections(base: str) -> str:
   <div class="container service-prose">
     <h2>Restore Balance and Beauty to Naturally Dark Lips</h2>
     <p>If you have lips with darker pigmentation, uneven tones, or areas of discoloration, Dark Lip Neutralization can help create a more balanced, even, and beautiful appearance. At Adriana Beauty Services – Permanent Makeup, we use advanced color correction techniques to neutralize cool or dark tones and prepare the lips for a healthier, more vibrant look.</p>
-    <p>For over 7 years, we have helped clients in Wilmington, MA and now Salem, NH achieve greater confidence through customized permanent makeup treatments.</p>
+    <p>Since 2017, we have helped clients in Wilmington, MA and now Salem, NH achieve greater confidence through customized permanent makeup treatments.</p>
   </div>
 </section>
 
@@ -105,7 +105,7 @@ def dark_lip_neutralization_sections(base: str) -> str:
     <p>Dark Lip Neutralization requires advanced knowledge of color theory, pigment selection, and permanent makeup techniques.</p>
     <p>Clients trust Adriana Beauty Services because we provide:</p>
     <ul class="service-list">
-      <li>More than 7 years of permanent makeup experience</li>
+      <li>20+ years of permanent makeup experience</li>
       <li>Personalized treatment plans</li>
       <li>Advanced color correction expertise</li>
       <li>High-quality pigments and equipment</li>

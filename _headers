@@ -20,6 +20,12 @@
 /assets/images/*
   Cache-Control: public, max-age=86400, stale-while-revalidate=604800
 
+# Fontes hospedadas no site (25/09/2026): 30 dias. Nome fixo por familia e
+# subconjunto; se trocar o arquivo, trocar o nome junto.
+/assets/fonts/*
+  Cache-Control: public, max-age=2592000
+  Access-Control-Allow-Origin: *
+
 # Endurecimento basico em todo o site.
 /*
   X-Content-Type-Options: nosniff

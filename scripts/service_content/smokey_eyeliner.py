@@ -7,7 +7,7 @@ def smokey_eyeliner_sections(base: str) -> str:
   <div class="container service-prose">
     <h2>Soft, Sultry Eyes with a Beautiful Smokey Effect</h2>
     <p>If you love the look of softly blended eyeliner and professionally applied eye makeup, Smokey Eyeliner may be the perfect permanent makeup solution. At Adriana Beauty Services – Permanent Makeup, we create a beautifully diffused eyeliner effect that adds depth, definition, and elegance to your eyes while maintaining a soft and sophisticated appearance.</p>
-    <p>For over 7 years, we have helped clients in Wilmington, MA and now Salem, NH enjoy effortless beauty and long-lasting confidence.</p>
+    <p>Since 2017, we have helped clients in Wilmington, MA and now Salem, NH enjoy effortless beauty and long-lasting confidence.</p>
   </div>
 </section>
 
@@ -108,7 +108,7 @@ def smokey_eyeliner_sections(base: str) -> str:
     <p>At Adriana Beauty Services – Permanent Makeup, we customize every eyeliner treatment to suit your individual style and facial features.</p>
     <p>Clients trust us because we provide:</p>
     <ul class="service-list">
-      <li>Over 7 years of permanent makeup experience</li>
+      <li>20+ years of permanent makeup experience</li>
       <li>Advanced eyeliner techniques</li>
       <li>Personalized consultations</li>
       <li>High-quality pigments and equipment</li>

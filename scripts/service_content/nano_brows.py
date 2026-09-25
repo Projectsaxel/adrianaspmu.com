@@ -104,7 +104,7 @@ def nano_brows_sections(base: str) -> str:
     <p>At Adriana Beauty Services – Permanent Makeup, every brow treatment is customized to complement your unique features.</p>
     <p>Clients choose us because we offer:</p>
     <ul class="service-list">
-      <li>Over 7 years of permanent makeup experience</li>
+      <li>20+ years of permanent makeup experience</li>
       <li>Personalized consultations</li>
       <li>Natural-looking results</li>
       <li>High-quality pigments and equipment</li>

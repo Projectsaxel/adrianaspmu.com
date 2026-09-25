@@ -105,7 +105,7 @@ def microblading_sections(base: str) -> str:
     <p>At Adriana Beauty Services – Permanent Makeup, we believe every client deserves personalized care and exceptional results.</p>
     <p>Clients trust us because we provide:</p>
     <ul class="service-list">
-      <li>More than 7 years of industry experience</li>
+      <li>20+ years of permanent makeup experience</li>
       <li>Customized brow design</li>
       <li>High-quality pigments and techniques</li>
       <li>Focus on natural-looking enhancements</li>

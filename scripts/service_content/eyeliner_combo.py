@@ -7,7 +7,7 @@ def eyeliner_combo_sections(base: str) -> str:
   <div class="container service-prose">
     <h2>Complete Eye Definition with Upper and Lower Eyeliner</h2>
     <p>Imagine waking up every day with perfectly defined eyes, no smudging, no daily eyeliner application, and no time spent perfecting your makeup. At Adriana Beauty Services – Permanent Makeup, our Eyeliner Combo treatment enhances both the upper and lower lash lines to create a beautifully balanced, polished, and long-lasting look.</p>
-    <p>For over 7 years, we have helped clients in Wilmington, MA and now Salem, NH enjoy effortless beauty through customized permanent makeup services.</p>
+    <p>Since 2017, we have helped clients in Wilmington, MA and now Salem, NH enjoy effortless beauty through customized permanent makeup services.</p>
   </div>
 </section>
 
@@ -106,7 +106,7 @@ def eyeliner_combo_sections(base: str) -> str:
     <p>At Adriana Beauty Services – Permanent Makeup, every eyeliner treatment is fully customized to enhance your natural features.</p>
     <p>Clients choose us because we provide:</p>
     <ul class="service-list">
-      <li>Over 7 years of permanent makeup experience</li>
+      <li>20+ years of permanent makeup experience</li>
       <li>Personalized consultations</li>
       <li>Advanced eyeliner techniques</li>
       <li>High-quality pigments and equipment</li>

@@ -15,12 +15,8 @@ const SITE = {
   fresha: "https://www.fresha.com/a/adrianas-permanent-makeup-wilmington-ma-wilmington-211-lowell-street-jalpqett",
   freshaBookNow:
     "https://www.fresha.com/book-now/adrianas-permanent-makeup-zeaseit5/all-offer?share=true&pId=727586",
-  freshaServiceUrls: {
-    "yearly-touch-up":
-      "https://www.fresha.com/book-now/adrianas-permanent-makeup-zeaseit5/services?oiid=sv%3A18160395&share=true&pId=727586",
-    "flash-sale":
-      "https://www.fresha.com/book-now/adrianas-permanent-makeup-zeaseit5/services?oiid=sv%3A19707327&share=true&pId=727586",
-  },
+  // Links diretos por servico removidos em 25/09/2026: os oiid cairam em 404.
+  freshaServiceUrls: {},
   freshaReviews:
     "https://www.fresha.com/a/adrianas-permanent-makeup-wilmington-ma-wilmington-211-lowell-street-jalpqett#modal-reviews",
   gbp: "https://maps.app.goo.gl/oJRNewzwwWACAera6",
@@ -39,7 +35,7 @@ const SITE = {
       phone: "(781) 853-8063",
       hours: "Mon–Sat 10:00 AM – 6:00 PM; Sun Closed",
       geo: { lat: 42.539192, lng: -71.148805 },
-      license: "Town of Wilmington Business Certificate #26-26",
+      license: "Wilmington Board of Health: Body Art Facility 20261921; practitioners 20261923 (Adriana) and 20261924 (Livian)",
       areaServed:
         "Wilmington, Reading, North Reading, Burlington, Tewksbury, Andover, North Andover, Woburn, Lowell, and the Greater Boston North Shore",
     },
@@ -52,7 +48,7 @@ const SITE = {
       phone: "(978) 223-7496",
       hours: "Mon–Sat 10:00 AM – 6:00 PM; Sun Closed",
       geo: { lat: 42.782612, lng: -71.228213 },
-      license: "Compliant with Salem NH Body Art Regulations Chapter 433",
+      license: "NH OPLC Body Artist 4283; Town of Salem BODA-10 and BODE-4 (Salem Chapter 433)",
       areaServed:
         "Salem NH, Derry, Windham, Methuen MA, Lawrence MA, Hampstead, Plaistow, and the I-93 corridor",
       tag: "New Location",
@@ -68,11 +64,11 @@ const SITE = {
     },
   },
   stats: {
-    years: "18+",
+    years: "20+",
     procedures: "5,000+",
     reviews: "1,000+",
     googleRating: "4.9",
-    googleCount: "174",
+    googleCount: "220",
   },
 };
 

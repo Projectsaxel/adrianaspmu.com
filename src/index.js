@@ -23,7 +23,7 @@
  *   CONTACT_FROM var     website@adrianaspmu.com (dominio de routing)
  */
 
-const LIMITS = { name: 120, email: 200, phone: 40, location: 80, message: 4000, source: 40 };
+const LIMITS = { name: 120, email: 200, phone: 40, location: 80, interest: 60, message: 4000, source: 40 };
 
 // De onde o lead veio. Allowlist e nao texto livre: "source" entra no
 // assunto do e-mail, e assunto montado com string do cliente e injecao
@@ -117,16 +117,30 @@ async function handleContact(request, env, ctx) {
     return json({ ok: true });
   }
 
+  // Rapido demais: responde ERRO, nao sucesso. Era { ok: true } silencioso,
+  // e uma pessoa com autofill via "Thank you!", o GA4 contava o lead e o
+  // e-mail nunca saia. O main.js ja espera os 3s antes de enviar, entao
+  // isto so dispara para quem posta direto no endpoint.
   const elapsed = Number(data.elapsed);
   if (!Number.isFinite(elapsed) || elapsed < MIN_FILL_MS) {
     console.log(JSON.stringify({ event: "contact_spam", reason: "too_fast", elapsed }));
-    return json({ ok: true });
+    return json({ ok: false, error: "Please wait a moment and send your message again." }, 422);
   }
 
   const name = clean(data.name, LIMITS.name);
   const email = clean(data.email, LIMITS.email);
   const phone = clean(data.phone, LIMITS.phone);
   const location = clean(data.location, LIMITS.location) || "Not specified";
+  // Interesse (servico ou curso da Academy). Allowlist: entra no e-mail.
+  const INTERESTS = {
+    service: "A permanent makeup service",
+    "pmu-100h-fundamental": "100-Hour Fundamental course",
+    "pmu-apprenticeship": "Apprenticeship",
+    "vip-masterclass": "VIP Masterclass",
+    "not-sure": "Not sure yet",
+  };
+  const interestKey = clean(data.interest, LIMITS.interest);
+  const interest = Object.prototype.hasOwnProperty.call(INTERESTS, interestKey) ? INTERESTS[interestKey] : "Not specified";
   const message = clean(data.message, LIMITS.message);
   const page = clean(data.page, 200);
 
@@ -174,6 +188,7 @@ async function handleContact(request, env, ctx) {
   const meta = [
     ["Came from", sourceLabel],
     ["Preferred location", location],
+    ["Interested in", interest],
     ["Submitted from", page || "/contact/"],
     ["Visitor city", [cf.city, cf.region, cf.country].filter(Boolean).join(", ")],
     ["Received (UTC)", new Date().toISOString().replace("T", " ").slice(0, 19)],
@@ -238,12 +253,237 @@ ${meta.map(([k, v]) => `<tr><td><strong>${esc(k)}</strong></td><td>${esc(v)}</td
   return json({ ok: true });
 }
 
+/* ---------------------------------------------------------------
+ * Negociacao de conteudo: Accept: text/markdown
+ *
+ * Padrao: acceptmarkdown.com, que cobra tres coisas do servidor:
+ *   1. servir markdown quando o cliente pede text/markdown
+ *   2. mandar "Vary: Accept" em TODA variante, inclusive na HTML,
+ *      senao a CDN cacheia uma e entrega para quem pediu a outra
+ *   3. respeitar q-values (RFC 9110), para que
+ *      "text/html;q=1.0, text/markdown;q=0.9" continue recebendo HTML
+ *
+ * Os gemeos .md sao gerados no build por scripts/gen_markdown.py e
+ * vivem em /content/<caminho>/index.md. Nada e convertido em runtime.
+ * --------------------------------------------------------------- */
+
+const VARY = "Accept, Accept-Encoding";
+
+/** Parseia o header Accept em pares {type, q}, ordenados por q desc. */
+function parseAccept(header) {
+  if (!header) return [];
+  return header
+    .split(",")
+    .map((part) => {
+      const [raw, ...params] = part.trim().split(";");
+      let q = 1;
+      for (const p of params) {
+        const m = /^\s*q=([0-9.]+)\s*$/i.exec(p);
+        if (m) {
+          const v = parseFloat(m[1]);
+          if (!Number.isNaN(v)) q = v;
+        }
+      }
+      return { type: raw.trim().toLowerCase(), q };
+    })
+    .filter((e) => e.type && e.q > 0)
+    .sort((a, b) => b.q - a.q);
+}
+
+/** Peso do Accept para um media type, considerando curingas. */
+function qFor(entries, type) {
+  const [group] = type.split("/");
+  let best = -1;
+  for (const e of entries) {
+    if (e.type === type || e.type === group + "/*" || e.type === "*/*") {
+      if (e.q > best) best = e.q;
+    }
+  }
+  return best;
+}
+
+/**
+ * Decide o formato: "markdown", "html" ou "none" (406).
+ * Sem header Accept, ou com curinga total, o padrao e HTML.
+ */
+function chooseFormat(header) {
+  const entries = parseAccept(header);
+  if (entries.length === 0) return "html";
+  const md = qFor(entries, "text/markdown");
+  const html = qFor(entries, "text/html");
+  if (md < 0 && html < 0) return "none";
+  return md > html ? "markdown" : "html";
+}
+
+/** /servicos/ -> /content/servicos/index.md ; / -> /content/index.md */
+function mdPathFor(pathname) {
+  let p = pathname;
+  if (p.endsWith("/")) p += "index.html";
+  if (!p.endsWith(".html")) return null;
+  return "/content" + p.slice(0, -".html".length) + ".md";
+}
+
+function withVary(res, extra) {
+  const h = new Headers(res.headers);
+  h.set("vary", VARY);
+  if (extra) for (const [k, v] of Object.entries(extra)) h.set(k, v);
+  return new Response(res.body, { status: res.status, statusText: res.statusText, headers: h });
+}
+
+const NOT_FOUND_MD = `# 404 — Page Not Found
+
+This URL does not exist on adrianaspmu.com.
+
+Where to look next:
+
+- Sitemap: https://adrianaspmu.com/sitemap.xml
+- Agent guide: https://adrianaspmu.com/llms.txt
+- All services and prices: https://adrianaspmu.com/services/
+- Studios: https://adrianaspmu.com/locations/
+- Aftercare and contraindications: https://adrianaspmu.com/aftercare/
+- Contact: https://adrianaspmu.com/contact/
+
+Adriana's Permanent Makeup — Wilmington, MA (781) 853-8063 and Salem, NH (978) 223-7496.
+`;
+
+/**
+ * Rota de pagina: termina em "/" ou ".html", ou nao tem extensao
+ * (/about, que o asset server manda para /about/). So estas negociam
+ * formato. Imagem, CSS, JS, sitemap, robots e llms.txt sao servidos direto:
+ * antes um Accept: image/webp ou text/css recebia 406.
+ */
+function isPageRoute(pathname) {
+  if (pathname.endsWith("/") || pathname.endsWith(".html")) return true;
+  const last = pathname.split("/").pop();
+  return !last.includes(".");
+}
+
+/**
+ * O asset server responde 307 para URL sem barra (/about -> /about/).
+ * 307 e temporario e nao consolida canonical: vira 301.
+ */
+function permanentSlash(res, url) {
+  if (res.status !== 307) return res;
+  const loc = res.headers.get("location");
+  if (!loc) return res;
+  const to = new URL(loc, url);
+  if (to.origin === url.origin && to.pathname === url.pathname + "/") {
+    const h = new Headers(res.headers);
+    h.set("vary", VARY);
+    return new Response(null, { status: 301, headers: h });
+  }
+  return res;
+}
+
+const isRedirect = (s) => s >= 300 && s < 400;
+
+async function serveNegotiated(request, env) {
+  const url = new URL(request.url);
+
+  // Gemeos markdown acessados direto: servem, mas nao indexam e apontam o
+  // canonical para a pagina HTML (para arquivo que nao e HTML o canonical
+  // vai no header Link).
+  if (url.pathname.startsWith("/content/") && url.pathname.endsWith(".md")) {
+    const res = await env.ASSETS.fetch(request);
+    if (res.status !== 200) return res;
+    let page = url.pathname.slice("/content".length, -".md".length);
+    page = page.endsWith("/index") ? page.slice(0, -"index".length) : page + "/";
+    return withVary(res, {
+      "content-type": "text/markdown; charset=utf-8",
+      "x-robots-tag": "noindex",
+      link: `<${url.origin}${page}>; rel="canonical"`,
+    });
+  }
+
+  if (!isPageRoute(url.pathname)) {
+    const res = await env.ASSETS.fetch(request);
+    if (res.status === 404) {
+      const page = await env.ASSETS.fetch(new URL("/404.html", url));
+      return new Response(page.body, {
+        status: 404,
+        headers: { "content-type": "text/html; charset=utf-8", vary: VARY },
+      });
+    }
+    return res;
+  }
+
+  const format = chooseFormat(request.headers.get("accept"));
+
+  // Redirect vale para qualquer formato: antes, com Accept: text/markdown,
+  // as 118 regras do _redirects e as URLs sem barra davam 404.
+  const res = await env.ASSETS.fetch(request);
+  if (isRedirect(res.status)) return withVary(permanentSlash(res, url));
+
+  if (format === "none") {
+    return new Response("Not Acceptable. This resource is available as text/html or text/markdown.\n", {
+      status: 406,
+      headers: { "content-type": "text/plain; charset=utf-8", vary: VARY },
+    });
+  }
+
+  if (format === "markdown") {
+    const md = mdPathFor(url.pathname);
+    if (md) {
+      const hit = await env.ASSETS.fetch(new Request(new URL(md, url), request));
+      if (hit.status === 200) {
+        return withVary(hit, { "content-type": "text/markdown; charset=utf-8" });
+      }
+    }
+    // Pagina existe mas nao tem gemeo: entrega o HTML, nao um 404 falso.
+    if (res.status === 200) return withVary(res);
+    return new Response(NOT_FOUND_MD, {
+      status: 404,
+      headers: { "content-type": "text/markdown; charset=utf-8", vary: VARY },
+    });
+  }
+
+  if (res.status === 404) {
+    const page = await env.ASSETS.fetch(new URL("/404.html", url));
+    return new Response(page.body, {
+      status: 404,
+      headers: { "content-type": "text/html; charset=utf-8", vary: VARY },
+    });
+  }
+  return withVary(res);
+}
+
+/* Avaliacoes do Google (25/09/2026). O GitHub Actions grava o JSON a cada
+   3 dias na branch reviews-data do repositorio (publico); o Worker so le e
+   guarda 1h em cache. Sem segredo nenhum no Worker. Se a branch falhar, cai
+   no data/reviews.json que foi publicado no ultimo deploy. */
+const REVIEWS_URL =
+  "https://raw.githubusercontent.com/Projectsaxel/adrianaspmu.com/reviews-data/reviews.json";
+
+async function serveReviews(request, env, url) {
+  const headers = {
+    "content-type": "application/json; charset=utf-8",
+    "cache-control": "public, max-age=3600",
+    "x-robots-tag": "noindex",
+  };
+  try {
+    const r = await fetch(REVIEWS_URL, { cf: { cacheTtl: 3600, cacheEverything: true } });
+    if (r.ok) {
+      const body = await r.text();
+      JSON.parse(body); // so repassa se for JSON valido
+      return new Response(body, { status: 200, headers });
+    }
+  } catch (e) {
+    console.log(JSON.stringify({ event: "reviews_fallback", error: String(e).slice(0, 120) }));
+  }
+  const local = await env.ASSETS.fetch(new Request(new URL("/data/reviews.json", url), request));
+  if (local.ok) return new Response(local.body, { status: 200, headers });
+  return new Response('{"units":{},"reviews":{},"selection":{}}', { status: 200, headers });
+}
+
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
 
+    if (url.pathname === "/api/reviews") {
+      return serveReviews(request, env, url);
+    }
     if (url.pathname !== "/api/contact") {
-      return json({ ok: false, error: "Not found" }, 404);
+      return serveNegotiated(request, env);
     }
     if (request.method === "OPTIONS") {
       return new Response(null, { status: 204, headers: { allow: "POST, OPTIONS" } });

@@ -7,7 +7,7 @@ def top_eyeliner_sections(base: str) -> str:
   <div class="container service-prose">
     <h2>Effortless Eye Definition That Lasts Every Day</h2>
     <p>Imagine waking up with perfectly defined eyes without having to apply eyeliner every morning. At Adriana Beauty Services – Permanent Makeup, our Top Eyeliner treatment enhances your natural beauty by creating a clean, elegant line along the upper lash line that adds definition, depth, and lasting confidence.</p>
-    <p>For over 7 years, we have helped clients in Wilmington, MA and now Salem, NH simplify their beauty routines with customized permanent makeup services.</p>
+    <p>Since 2017, we have helped clients in Wilmington, MA and now Salem, NH simplify their beauty routines with customized permanent makeup services.</p>
   </div>
 </section>
 
@@ -105,7 +105,7 @@ def top_eyeliner_sections(base: str) -> str:
     <p>At Adriana Beauty Services – Permanent Makeup, every eyeliner treatment is customized to enhance your natural features.</p>
     <p>Clients choose us because we provide:</p>
     <ul class="service-list">
-      <li>Over 7 years of permanent makeup experience</li>
+      <li>20+ years of permanent makeup experience</li>
       <li>Personalized consultations</li>
       <li>Precise application techniques</li>
       <li>High-quality pigments and equipment</li>

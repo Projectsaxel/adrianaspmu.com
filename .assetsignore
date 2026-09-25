@@ -3,8 +3,12 @@
 
 scripts/
 docs/
+tests/
 .github/
-*.md
+# ATENCAO: nao voltar a usar "*.md". Os gemeos markdown das paginas
+# vivem em content/ e PRECISAM ser servidos, senao a negociacao de
+# conteudo (Accept: text/markdown) devolve HTML em silencio.
+# scripts/ e docs/ ja estao excluidos como diretorio, acima.
 README.md
 .gitignore
 .assetsignore

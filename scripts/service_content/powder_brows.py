@@ -7,7 +7,7 @@ def powder_brows_sections(base: str) -> str:
   <div class="container service-prose">
     <h2>Soft, Beautiful Brows with a Makeup-Like Finish</h2>
     <p>If you love the look of perfectly filled-in eyebrows without spending time applying makeup every day, Powder Brows may be the ideal solution. At Adriana Beauty Services – Permanent Makeup, we create soft, shaded brows that provide a polished, elegant appearance while maintaining a natural look.</p>
-    <p>Serving clients for over 7 years in Wilmington, MA and now welcoming guests to our Salem, NH location, we specialize in customized permanent makeup designed to enhance your confidence and simplify your beauty routine.</p>
+    <p>Serving clients in Wilmington since 2017, MA and now welcoming guests to our Salem, NH location, we specialize in customized permanent makeup designed to enhance your confidence and simplify your beauty routine.</p>
   </div>
 </section>
 
@@ -105,7 +105,7 @@ def powder_brows_sections(base: str) -> str:
     <p>At Adriana Beauty Services – Permanent Makeup, every treatment is customized to enhance your natural beauty while achieving your desired aesthetic goals.</p>
     <p>Clients choose us because we offer:</p>
     <ul class="service-list">
-      <li>Over 7 years of permanent makeup experience</li>
+      <li>20+ years of permanent makeup experience</li>
       <li>Personalized consultations</li>
       <li>Advanced permanent makeup techniques</li>
       <li>Natural-looking and elegant results</li>

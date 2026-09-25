@@ -1,5 +1,39 @@
 #!/usr/bin/env python3
-"""Generate static HTML pages from semantic architecture PDF."""
+"""Generate static HTML pages from semantic architecture PDF.
+
+⚠  ESTE SCRIPT ESTA DEFASADO EM RELACAO AO REPOSITORIO. NAO RODE SEM LER.
+
+    Ele NAO faz parte do deploy (o CI roda static_nav.js, enrich_pages.py e
+    gen_markdown.py — ver .github/workflows). Foi o andaime que criou a
+    primeira versao das paginas; de la para ca o conteudo foi reescrito
+    direto no HTML, que hoje e a fonte da verdade.
+
+    Rodar este script AGORA sobrescreveria conteudo real por versoes
+    antigas ou vazias. Verificado em 21/09/2026:
+
+      - /prices/          -> voltaria a ser "Flash Sale $349!", um preco que
+                             nao existe na tabela ($250 a $850) e que o texto
+                             atual da pagina nega explicitamente
+      - /privacy-policy/  -> "Content to be finalized before publish."
+      - /terms-of-use/    -> "Content to be finalized before publish."
+
+    Por isso ele agora exige uma confirmacao explicita:
+
+        python3 scripts/generate_pages.py --eu-sei-que-sobrescreve
+
+    Antes de usar, atualize as funcoes correspondentes OU gere em outro
+    diretorio e compare. Em caso de duvida, nao rode.
+"""
+import sys as _sys
+
+if "--eu-sei-que-sobrescreve" not in _sys.argv:
+    raise SystemExit(
+        "generate_pages.py NAO foi executado.\n"
+        "Ele esta defasado e sobrescreveria /prices/, /privacy-policy/ e\n"
+        "/terms-of-use/ com conteudo antigo ou vazio. Leia o docstring no\n"
+        "topo do arquivo. Para rodar mesmo assim:\n"
+        "  python3 scripts/generate_pages.py --eu-sei-que-sobrescreve"
+    )
 import os
 import sys
 from pathlib import Path
@@ -52,13 +86,7 @@ ORG_SCHEMA = """{
         "https://www.facebook.com/adrianaspmu",
         "https://www.instagram.com/adrianas_pmu/",
         "https://maps.app.goo.gl/oJRNewzwwWACAera6"
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "174",
-        "bestRating": "5"
-      }
+      ]
     },
     {
       "@type": "BeautySalon",
@@ -86,7 +114,7 @@ ORG_SCHEMA = """{
   ]
 }"""
 
-FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">'
+FONTS = '<link rel="preload" href="/assets/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>'  # fontes hospedadas no site desde 25/09/2026 (ver css/styles.css)
 
 
 SITE_URL = "https://adrianaspmu.com"
@@ -299,12 +327,12 @@ def home_body():
     <div class="hero-content">
       <p class="section-label">Master PMU Artist · Wilmington MA &amp; Salem NH</p>
       <h1>Permanent Makeup Studio and Academy in Wilmington, MA &amp; Salem, NH</h1>
-      <p class="direct-answer">Master Permanent Makeup Artist Adriana Souza Santos with 18+ years and 5,000+ procedures. Nano Brows, Microblading, Lip Blush, and Eyeliner at two New England locations.</p>
+      <p class="direct-answer">Master Permanent Makeup Artist Adriana Souza Santos with 20+ years and 5,000+ procedures. Nano Brows, Microblading, Lip Blush, and Eyeliner at two New England locations.</p>
       <div class="hero-badges">
         <span class="badge">Licensed PMU Artist</span>
         <span class="badge">Women-Owned</span>
         <span class="badge">Wheelchair Accessible</span>
-        <span class="badge">4.9 ★ (174 reviews)</span>
+        <span class="badge">4.8 ★ (217 reviews)</span>
       </div>
       <div class="hero-ctas">
         <a class="btn btn-primary" href="contact/">Book Your Consultation</a>
@@ -313,14 +341,14 @@ def home_body():
     </div>
     <div class="hero-visual">
       {img_tag("hero.webp", "Adriana's Permanent Makeup studio — Master PMU Artist in Wilmington MA and Salem NH", 0, "hero-img")}
-      <div class="hero-visual-badge" aria-hidden="true">18+ Years · 5,000+ Procedures</div>
+      <div class="hero-visual-badge" aria-hidden="true">20+ Years · 5,000+ Procedures</div>
     </div>
   </div>
 </section>
 
 <section class="trust-bar" aria-label="Studio credentials">
   <div class="container trust-bar-inner">
-    <div class="trust-item"><span class="trust-value">4.9★</span><span class="trust-key">Google Reviews</span></div>
+    <div class="trust-item"><span class="trust-value">4.8★</span><span class="trust-key">Google Reviews</span></div>
     <div class="trust-divider" aria-hidden="true"></div>
     <div class="trust-item"><span class="trust-value">5,000+</span><span class="trust-key">Procedures</span></div>
     <div class="trust-divider" aria-hidden="true"></div>
@@ -335,7 +363,7 @@ def home_body():
     <p class="section-label section-label--center">The Art of Effortless Beauty</p>
     <h2 class="heading-centered">What Is Permanent Makeup?</h2>
     <p class="direct-answer">Permanent makeup, also called cosmetic tattooing or micropigmentation, places color pigment beneath the skin to enhance brows, lips, or eyeliner. Results last 1 to 3 years and save time on daily makeup.</p>
-    <p class="fact-layer">PMU procedures use single-use sterile needles. Adriana is licensed in Wilmington, MA, Salem, NH, and Peabody, MA — under Town of Wilmington Business Certificate #26-26 and in compliance with Salem NH Body Art Regulations Chapter 433.</p>
+    <p class="fact-layer">PMU procedures use single-use sterile needles. Adriana holds Body Art Practitioner License 20261923 from the Wilmington Board of Health, where the studio holds Body Art Facility License 20261921, and in New Hampshire holds State Body Artist License 4283 (OPLC) and Town of Salem license BODA-10 under Salem Chapter 433.</p>
   </div>
 </section>
 
@@ -354,7 +382,7 @@ def home_body():
     <h2 class="heading-centered">Why Choose Adriana's PMU for Permanent Makeup?</h2>
     <p class="direct-answer">Master PMU Artist Adriana Souza Santos creates natural-looking results fully customized to each client's facial features—never a one-size-fits-all approach.</p>
     <div class="stats-grid">
-      <div><span class="stat-number">18+</span><span class="stat-label">Years experience</span></div>
+      <div><span class="stat-number">20+</span><span class="stat-label">Years experience</span></div>
       <div><span class="stat-number">5,000+</span><span class="stat-label">Procedures</span></div>
       <div><span class="stat-number">1,000+</span><span class="stat-label">Combined reviews</span></div>
       <div><span class="stat-number">4.9</span><span class="stat-label">Google rating</span></div>
@@ -658,10 +686,13 @@ CITIES = {
 
 FRESHA_BOOK_BASE = "https://www.fresha.com/book-now/adrianas-permanent-makeup-zeaseit5"
 FRESHA_ALL_OFFER = f"{FRESHA_BOOK_BASE}/all-offer?share=true&pId=727586"
-FRESHA_SERVICE_URLS = {
-    "yearly-touch-up": f"{FRESHA_BOOK_BASE}/services?oiid=sv%3A18160395&share=true&pId=727586",
-    "flash-sale": f"{FRESHA_BOOK_BASE}/services?oiid=sv%3A19707327&share=true&pId=727586",
-}
+# Link direto por servico no Fresha (oiid=sv:...). Vazio de proposito: os dois
+# que existiam morreram (sv:18160395 e sv:19707327 caem em /offline, 404, em
+# 25/09/2026). O Fresha nao tem mais um "Yearly Touch-Up" unico: sao retoques
+# por tecnica (nano, nanocombo, sobrancelha ate 1 ano, 1-2 anos, labio), entao
+# o destino certo e o catalogo inteiro. Se voltar a usar oiid, testar no
+# navegador antes: o curl nao ve a pagina /offline.
+FRESHA_SERVICE_URLS = {}
 
 
 def fresha_book_url(slug):
@@ -924,7 +955,7 @@ for course, title, price, desc in [
     ("pmu-apprenticeship", "Permanent Makeup Apprenticeship", "$700/month", "Hands-on apprenticeship at Wilmington MA studio."),
     ("vip-masterclass", "VIP Permanent Makeup Masterclass", "Contact for pricing", "Custom advanced training for experienced artists."),
 ]:
-    acad_img = {"pmu-100h-fundamental": "academy/pmu-100h.jpg", "pmu-apprenticeship": "academy/apprenticeship.jpg"}.get(course)
+    acad_img = {"pmu-100h-fundamental": "academy/pmu-100h.webp", "pmu-apprenticeship": "academy/apprenticeship.webp"}.get(course)
     img_block = f'<div class="hero-visual">{img_tag(acad_img, title, 2, "service-hero-img")}</div>' if acad_img else ""
     write(f"academy/{course}/index.html", shell(title, desc, title,
         f'<section class="page-hero page-hero--split"><div class="container hero-grid"><div><h1>{title}</h1><p class="pricing-badge">{price}</p><p>{desc}</p><a class="btn btn-primary" href="../../contact/">Apply Now</a></div>{img_block}</div></section>', 2))
@@ -932,13 +963,13 @@ for course, title, price, desc in [
 # Support pages
 write("about/index.html", shell(
     "About Adriana Souza Santos | Master PMU Artist",
-    "18+ years, 5,000+ procedures, founder of Adriana's PMU and Academy.",
+    "20+ years, 5,000+ procedures, founder of Adriana's PMU and Academy.",
     "About Adriana Souza Santos: Master Permanent Makeup Artist",
     f"""<section class="page-hero page-hero--split"><div class="container hero-grid">
     <div><h1>About Adriana Souza Santos</h1>
-    <p class="direct-answer">Master Permanent Makeup Artist with 18+ years of experience and 5,000+ procedures performed. Founder of Adriana's PMU and educator since 2017.</p>
-    <p class="fact-layer">Licensed under Town of Wilmington Business Certificate #26-26. Women-owned business. LGBTQ+ friendly.</p></div>
-    <div class="hero-visual">{img_tag("about-adriana.jpg", "Adriana Souza Santos — Master Permanent Makeup Artist", 1, "hero-img")}</div>
+    <p class="direct-answer">Master Permanent Makeup Artist with 20+ years of experience and 5,000+ procedures performed. Founder of Adriana's PMU and educator since 2017.</p>
+    <p class="fact-layer">Licensed by the Wilmington Board of Health (Body Art Facility 20261921), the State of New Hampshire (OPLC 4283) and the Town of Salem (BODA-10). Women-owned business. LGBTQ+ friendly.</p></div>
+    <div class="hero-visual">{img_tag("adriana-quem-sou-eu.webp", "Adriana Souza Santos — Master Permanent Makeup Artist", 1, "hero-img")}</div>
     </div></section>""", 1))
 
 write("contact/index.html", shell(
@@ -1039,15 +1070,28 @@ CHERRY_FULLPAGE_EMBED = """
 <div class="cherry-widget">
 <!-- CHERRY WIDGET BEGIN -->
 <script>
-    (function (w, d, s, o, f, js, fjs) {
+    // Adiado de proposito (auditoria 25/09/2026): o widget.js da Cherry tem
+    // ~434 KB e ainda carrega o Segment. Entrava junto com a pagina e
+    // disputava banda com o hero. Agora sobe na primeira interacao ou 4s
+    // depois do load. A fila _hw("init", ...) abaixo segue valendo.
+    (function (w, d, s, o, f) {
         w[o] = w[o] || function () {
             (w[o].q = w[o].q || []).push(arguments);
         };
-        (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
-        js.id = o;
-        js.src = f;
-        js.async = 1;
-        fjs.parentNode.insertBefore(js, fjs);
+        var done = false;
+        function go() {
+            if (done) return;
+            done = true;
+            var js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
+            js.id = o;
+            js.src = f;
+            js.async = 1;
+            fjs.parentNode.insertBefore(js, fjs);
+        }
+        ["pointerdown", "scroll", "keydown", "touchstart"].forEach(function (e) {
+            w.addEventListener(e, go, { once: true, passive: true });
+        });
+        w.addEventListener("load", function () { setTimeout(go, 4000); });
     })(window, document, "script", "_hw", "https://files.withcherry.com/widgets/widget.js");
     _hw("init", {
         debug: false,
@@ -1309,7 +1353,7 @@ write("terms-of-use/index.html", shell("Terms of Use", "Terms of use.", "Terms o
 
 write("index.html", shell(
     "Permanent Makeup Studio & Academy | Wilmington MA & Salem NH | Adriana's PMU",
-    "Master PMU Artist with 18+ years, 5,000+ procedures. Nano Brows, Microblading, Lip Blush in Wilmington MA & Salem NH. Book consultation.",
+    "Master PMU Artist with 20+ years, 5,000+ procedures. Nano Brows, Microblading, Lip Blush in Wilmington MA & Salem NH. Book consultation.",
     "Permanent Makeup Studio and Academy in Wilmington, MA & Salem, NH",
     home_body(), 0))
 
@@ -1408,11 +1452,11 @@ def write_llms():
         service_lines.append("")
 
     content = f"""# Adriana's Permanent Makeup
-> Master Permanent Makeup Artist Adriana Souza Santos with 18+ years of experience and 5,000+ procedures performed. PMU studio and academy serving Wilmington, MA and Salem, NH (New England). Site language: English (en-US) only. Book appointments via Fresha: {FRESHA_ALL_OFFER}
+> Master Permanent Makeup Artist Adriana Souza Santos with 20+ years of experience and 5,000+ procedures performed. PMU studio and academy serving Wilmington, MA and Salem, NH (New England). Site language: English (en-US) only. Book appointments via Fresha: {FRESHA_ALL_OFFER}
 
 ## Core Pages
 - [Home]({SITE_URL}/): Permanent Makeup Studio and Academy in Wilmington MA & Salem NH
-- [About]({SITE_URL}/about/): Master PMU Artist with 18+ years and 5,000+ procedures
+- [About]({SITE_URL}/about/): Master PMU Artist with 20+ years and 5,000+ procedures
 - [Services]({SITE_URL}/services/): All permanent makeup services in MA and NH
 - [Locations]({SITE_URL}/locations/): Wilmington MA + Salem NH studios
 - [Academy]({SITE_URL}/academy/): Permanent Makeup training programs
@@ -1441,9 +1485,9 @@ def write_llms():
 - Flash Sale ($349): {fresha_book_url("flash-sale")}
 
 ## Trust & Credentials
-- Licensed: Town of Wilmington Business Certificate #26-26
-- Salem NH: Compliant with Body Art Regulations Chapter 433
-- 4.9 stars, 174 Google reviews; 1,000+ combined reviews (Google + Fresha)
+- Wilmington, MA (Wilmington Board of Health, valid through 31 Dec 2026): Body Art Facility License 20261921; Body Art Practitioner License 20261923 (Adriana Santos) and 20261924 (Livian Camargo Gomes)
+- Salem, NH: State of New Hampshire (OPLC) Body Artist License 4283 (Adriana Souza Santos, valid through 18 Jul 2028); Town of Salem Permanent Make-Up Artist BODA-10 and Body Art Establishment BODE-4 under Salem Chapter 433 (valid through 28 Feb 2027)
+- 4.9 stars, 220 Google reviews (Wilmington); 4.3 stars, 6 reviews (Salem); 1,000+ combined reviews (Google + Fresha)
 - Women-owned, LGBTQ+ friendly, wheelchair accessible (Wilmington)
 - Email: info@adrianaspmu.com
 """

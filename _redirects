@@ -22,6 +22,16 @@
 # Localizacao
 /salem-nh/                      /locations/salem-nh/                      301
 
+# /flash-sale/ virou /prices/ em 21/09/2026.
+# A pagina nunca foi uma oferta: e a lista de precos evergreen dos 13
+# servicos, e o proprio texto dela nega existir promocao. A URL prometia
+# desconto que a pagina nao entrega, o que derruba a confianca e atrai a
+# busca errada. /prices/ descreve o conteudo e casa com a intencao de
+# quem procura "permanent makeup prices".
+/flash-sale/                    /prices/                                  301
+/flash-sale                     /prices/                                  301
+/flash-sale/index.html          /prices/                                  301
+
 # Academy e treinamento
 /apprenticeship/                /academy/pmu-apprenticeship/              301
 /100-hours-fundamental/         /academy/pmu-100h-fundamental/            301
@@ -54,11 +64,10 @@
 /full-face/                     /services/combos/                         301
 
 # Sem equivalente direto no site novo
-/price-list/                    /services/                                301
+/price-list/                    /prices/                                  301
 
 # Oferta sazonal de Natal fora do ar em agosto (auditoria 16/08).
 # 301 para servicos ate existir uma oferta atual de verdade.
-/flash-sale/                    /services/                                301
 
 # URLs iguais nos dois sites, sem regra de proposito:
 #   /  /flash-sale/  /training/  /services/
@@ -113,14 +122,360 @@
 /eyeliner-combo              /services/eyeliner/eyeliner-combo/        301
 /eyebrows-lips-combo         /services/combos/eyebrows-lips-combo/     301
 /full-face                   /services/combos/                         301
-/price-list                  /services/                                301
-/flash-sale                  /services/                                301
+/price-list                  /prices/                                  301
 /wilmington-ma               /locations/wilmington-ma/                 301
 
 # ============================================================
 # NORMALIZACAO .html -> URL final, com 301 permanente.
 # Sem estas regras a Cloudflare devolve 307 (temporario), que
 # nao consolida autoridade de link do mesmo jeito.
+
+# ------------------------------------------------------------------
+# URLs dos sites anteriores (WordPress/Wix) que davam 404. Levantadas em
+# 25/09/2026 no GA4 e no sitemap antigo. Cada uma vai para a pagina de
+# MESMO assunto, nunca para a home em massa (o Google trata isso como
+# soft 404). Sem equivalente (glossary, loja, checkout) continuam 404.
+# ------------------------------------------------------------------
+/100hoursclass                                      /academy/pmu-100h-fundamental/                301
+/100hoursclass/                                     /academy/pmu-100h-fundamental/                301
+/affordable-lip-micropigmentation                   /payment-plan/                                301
+/affordable-lip-micropigmentation/                  /payment-plan/                                301
+/author/adrianas-pmu-blog                           /about/                                       301
+/author/adrianas-pmu-blog/                          /about/                                       301
+/benefits-of-eyebrow-tattooing                      /services/eyebrows/                           301
+/benefits-of-eyebrow-tattooing/                     /services/eyebrows/                           301
+/best-eyebrow-tattoo-massachusetts                  /services/eyebrows/                           301
+/best-eyebrow-tattoo-massachusetts/                 /services/eyebrows/                           301
+/best-lip-blush-artists-massachusetts               /services/lips/lip-blush/                     301
+/best-lip-blush-artists-massachusetts/              /services/lips/lip-blush/                     301
+/best-lip-blush-service-ma                          /services/lips/lip-blush/                     301
+/best-lip-blush-service-ma/                         /services/lips/lip-blush/                     301
+/best-microblading-clinics-massachusetts            /services/eyebrows/microblading/              301
+/best-microblading-clinics-massachusetts/           /services/eyebrows/microblading/              301
+/best-microblading-services-near-boston             /services/eyebrows/microblading/              301
+/best-microblading-services-near-boston/            /services/eyebrows/microblading/              301
+/best-permanent-eyeliner-near-me                    /services/eyeliner/                           301
+/best-permanent-eyeliner-near-me/                   /services/eyeliner/                           301
+/best-permanent-makeup-clinics-near-me              /services/                                    301
+/best-permanent-makeup-clinics-near-me/             /services/                                    301
+/best-places-for-microblading-in-wilmington         /services/eyebrows/microblading/              301
+/best-places-for-microblading-in-wilmington/        /services/eyebrows/microblading/              301
+/book-online                                        /contact/                                     301
+/book-online/                                       /contact/                                     301
+/cost-of-lip-blush-services-in-ma                   /prices/                                      301
+/cost-of-lip-blush-services-in-ma/                  /prices/                                      301
+/eyebrow-microblading-near-me                       /services/eyebrows/microblading/              301
+/eyebrow-microblading-near-me/                      /services/eyebrows/microblading/              301
+/eyebrow-tattoo-near-me                             /services/eyebrows/                           301
+/eyebrow-tattoo-near-me/                            /services/eyebrows/                           301
+/eyebrow-tattooing-benefits                         /services/eyebrows/                           301
+/eyebrow-tattooing-benefits/                        /services/eyebrows/                           301
+/eyebrow-tattooing-care-instructions                /aftercare/                                   301
+/eyebrow-tattooing-care-instructions/               /aftercare/                                   301
+/eyebrow-tattooing-near-boston                      /services/eyebrows/                           301
+/eyebrow-tattooing-near-boston/                     /services/eyebrows/                           301
+/eyebrow-tattooing-options-ma                       /services/eyebrows/                           301
+/eyebrow-tattooing-options-ma/                      /services/eyebrows/                           301
+/eyebrow-tattooing-safety                           /aftercare/                                   301
+/eyebrow-tattooing-safety/                          /aftercare/                                   301
+/eyebrow-tattooing-techniques                       /services/eyebrows/                           301
+/eyebrow-tattooing-techniques/                      /services/eyebrows/                           301
+/eyebrowsclass                                      /academy/                                     301
+/eyebrowsclass/                                     /academy/                                     301
+/eyeliner-permanent-makeup-services                 /services/eyeliner/                           301
+/eyeliner-permanent-makeup-services/                /services/eyeliner/                           301
+/eyeliner-tattoo-benefits                           /services/eyeliner/                           301
+/eyeliner-tattoo-benefits/                          /services/eyeliner/                           301
+/eyeliner-tattoo-care                               /services/eyeliner/                           301
+/eyeliner-tattoo-care/                              /services/eyeliner/                           301
+/eyeliner-tattoo-care-instructions                  /aftercare/                                   301
+/eyeliner-tattoo-care-instructions/                 /aftercare/                                   301
+/eyeliner-tattoo-near-me                            /services/eyeliner/                           301
+/eyeliner-tattoo-near-me/                           /services/eyeliner/                           301
+/eyeliner-tattoo-price-boston                       /prices/                                      301
+/eyeliner-tattoo-price-boston/                      /prices/                                      301
+/eyeliner-tattoo-price-near-me                      /prices/                                      301
+/eyeliner-tattoo-price-near-me/                     /prices/                                      301
+/eyeliner-tattoo-reviews                            /services/eyeliner/                           301
+/eyeliner-tattoo-reviews/                           /services/eyeliner/                           301
+/eyeliner-tattoo-services-benefits                  /services/eyeliner/                           301
+/eyeliner-tattoo-services-benefits/                 /services/eyeliner/                           301
+/eyeliner-tattooing-options-available               /services/eyeliner/                           301
+/eyeliner-tattooing-options-available/              /services/eyeliner/                           301
+/eyeliner-tattooing-services-boston                 /services/eyeliner/                           301
+/eyeliner-tattooing-services-boston/                /services/eyeliner/                           301
+/eyeliner-tattooing-techniques                      /services/eyeliner/                           301
+/eyeliner-tattooing-techniques/                     /services/eyeliner/                           301
+/eyeliner-tattooing-techniques-beginners            /services/eyeliner/                           301
+/eyeliner-tattooing-techniques-beginners/           /services/eyeliner/                           301
+/glossary/what-is-cosmetic-enhancement              /services/                                    301
+/glossary/what-is-cosmetic-enhancement/             /services/                                    301
+/glossary/what-is-cosmetic-procedures               /services/                                    301
+/glossary/what-is-cosmetic-procedures/              /services/                                    301
+/glossary/what-is-cosmetic-tattooing                /services/                                    301
+/glossary/what-is-cosmetic-tattooing/               /services/                                    301
+/glossary/what-is-eyebrow-filler                    /services/eyebrows/                           301
+/glossary/what-is-eyebrow-filler/                   /services/eyebrows/                           301
+/glossary/what-is-eyebrow-shaping                   /services/eyebrows/                           301
+/glossary/what-is-eyebrow-shaping/                  /services/eyebrows/                           301
+/glossary/what-is-makeup-artist                     /about/                                       301
+/glossary/what-is-makeup-artist/                    /about/                                       301
+/glossary/what-is-makeup-classes                    /academy/                                     301
+/glossary/what-is-makeup-classes/                   /academy/                                     301
+/glossary/what-is-makeup-inspiration                /services/                                    301
+/glossary/what-is-makeup-inspiration/               /services/                                    301
+/glossary/what-is-makeup-portfolio                  /portfolio/                                   301
+/glossary/what-is-makeup-portfolio/                 /portfolio/                                   301
+/glossary/what-is-makeup-solutions                  /services/                                    301
+/glossary/what-is-makeup-solutions/                 /services/                                    301
+/glossary/what-is-microblading                      /services/eyebrows/microblading/              301
+/glossary/what-is-microblading/                     /services/eyebrows/microblading/              301
+/glossary/what-is-semi-permanent-makeup             /services/                                    301
+/glossary/what-is-semi-permanent-makeup/            /services/                                    301
+/glossary/what-is-trending-makeup                   /services/                                    301
+/glossary/what-is-trending-makeup/                  /services/                                    301
+/holidayspecials                                    /prices/                                      301
+/holidayspecials/                                   /prices/                                      301
+/how-long-does-microblading-last                    /services/eyebrows/microblading/              301
+/how-long-does-microblading-last/                   /services/eyebrows/microblading/              301
+/how-to-care-for-eyebrow-tattoos                    /services/eyebrows/                           301
+/how-to-care-for-eyebrow-tattoos/                   /services/eyebrows/                           301
+/how-to-care-for-microblading                       /services/eyebrows/microblading/              301
+/how-to-care-for-microblading/                      /services/eyebrows/microblading/              301
+/how-to-choose-a-lip-blush-artist                   /services/lips/lip-blush/                     301
+/how-to-choose-a-lip-blush-artist/                  /services/lips/lip-blush/                     301
+/how-to-choose-a-microblading-clinic                /services/eyebrows/microblading/              301
+/how-to-choose-a-microblading-clinic/               /services/eyebrows/microblading/              301
+/how-to-choose-a-permanent-makeup-clinic            /services/                                    301
+/how-to-choose-a-permanent-makeup-clinic/           /services/                                    301
+/how-to-choose-the-right-eyebrow-tattoo             /services/eyebrows/                           301
+/how-to-choose-the-right-eyebrow-tattoo/            /services/eyebrows/                           301
+/how-to-maintain-microblading-results               /portfolio/                                   301
+/how-to-maintain-microblading-results/              /portfolio/                                   301
+/how-to-prepare-for-microblading                    /services/eyebrows/microblading/              301
+/how-to-prepare-for-microblading/                   /services/eyebrows/microblading/              301
+/lip-blush-price-near-me                            /prices/                                      301
+/lip-blush-price-near-me/                           /prices/                                      301
+/lip-blush-tattoo-services-ma                       /services/lips/lip-blush/                     301
+/lip-blush-tattoo-services-ma/                      /services/lips/lip-blush/                     301
+/lip-blush-vs-microblading-comparison               /services/lips/lip-blush/                     301
+/lip-blush-vs-microblading-comparison/              /services/lips/lip-blush/                     301
+/lip-blush-wilmington-ma                            /services/lips/lip-blush/                     301
+/lip-blush-wilmington-ma/                           /services/lips/lip-blush/                     301
+/lip-micropigmentation-boston                       /services/lips/lip-blush/                     301
+/lip-micropigmentation-boston/                      /services/lips/lip-blush/                     301
+/lip-micropigmentation-cost-near-me                 /prices/                                      301
+/lip-micropigmentation-cost-near-me/                /prices/                                      301
+/lip-micropigmentation-near-me-2                    /services/lips/lip-blush/                     301
+/lip-micropigmentation-near-me-2/                   /services/lips/lip-blush/                     301
+/lipsclass                                          /academy/                                     301
+/lipsclass/                                         /academy/                                     301
+/microblading-artists-massachusetts                 /services/eyebrows/microblading/              301
+/microblading-artists-massachusetts/                /services/eyebrows/microblading/              301
+/microblading-boston                                /services/eyebrows/microblading/              301
+/microblading-boston/                               /services/eyebrows/microblading/              301
+/microblading-certifications-massachusetts          /academy/                                     301
+/microblading-certifications-massachusetts/         /academy/                                     301
+/microblading-certifications-near-me                /academy/                                     301
+/microblading-certifications-near-me/               /academy/                                     301
+/microblading-experts-near-me                       /services/eyebrows/microblading/              301
+/microblading-experts-near-me/                      /services/eyebrows/microblading/              301
+/microblading-eyebrow-tattooing-differences         /services/eyebrows/microblading/              301
+/microblading-eyebrow-tattooing-differences/        /services/eyebrows/microblading/              301
+/microblading-for-beginners                         /services/eyebrows/microblading/              301
+/microblading-for-beginners/                        /services/eyebrows/microblading/              301
+/microblading-for-different-skin-types              /services/eyebrows/microblading/              301
+/microblading-for-different-skin-types/             /services/eyebrows/microblading/              301
+/microblading-for-everyday-use                      /services/eyebrows/microblading/              301
+/microblading-for-everyday-use/                     /services/eyebrows/microblading/              301
+/microblading-for-oily-skin                         /services/eyebrows/microblading/              301
+/microblading-for-oily-skin/                        /services/eyebrows/microblading/              301
+/microblading-for-oily-skin-types                   /services/eyebrows/microblading/              301
+/microblading-for-oily-skin-types/                  /services/eyebrows/microblading/              301
+/microblading-for-sensitive-skin                    /services/eyebrows/microblading/              301
+/microblading-for-sensitive-skin/                   /services/eyebrows/microblading/              301
+/microblading-near-me-2                             /services/eyebrows/microblading/              301
+/microblading-near-me-2/                            /services/eyebrows/microblading/              301
+/microblading-prices-near-me                        /prices/                                      301
+/microblading-prices-near-me/                       /prices/                                      301
+/microblading-services-for-oily-skin                /services/eyebrows/microblading/              301
+/microblading-services-for-oily-skin/               /services/eyebrows/microblading/              301
+/microblading-services-sensitive-skin-types         /services/eyebrows/microblading/              301
+/microblading-services-sensitive-skin-types/        /services/eyebrows/microblading/              301
+/microblading-touch-up-prices-ma                    /prices/                                      301
+/microblading-touch-up-prices-ma/                   /prices/                                      301
+/microblading-training-workshops-near-me            /academy/                                     301
+/microblading-training-workshops-near-me/           /academy/                                     301
+/microblading-vs-eyebrow-tattoo                     /services/eyebrows/microblading/              301
+/microblading-vs-eyebrow-tattoo/                    /services/eyebrows/microblading/              301
+/natural-look-microblading-services                 /services/eyebrows/microblading/              301
+/natural-look-microblading-services/                /services/eyebrows/microblading/              301
+/permanent-eyebrow-tattoo-near-me                   /services/eyebrows/                           301
+/permanent-eyebrow-tattoo-near-me/                  /services/eyebrows/                           301
+/permanent-eyeliner-cost-near-me                    /prices/                                      301
+/permanent-eyeliner-cost-near-me/                   /prices/                                      301
+/permanent-eyeliner-touch-up-near-me                /services/touch-ups/                          301
+/permanent-eyeliner-touch-up-near-me/               /services/touch-ups/                          301
+/permanent-lip-makeup-near-me                       /services/lips/lip-blush/                     301
+/permanent-lip-makeup-near-me/                      /services/lips/lip-blush/                     301
+/permanent-make-up-clinic                           /services/                                    301
+/permanent-make-up-clinic/                          /services/                                    301
+/permanent-make-up-near-me                          /services/                                    301
+/permanent-make-up-near-me/                         /services/                                    301
+/permanent-make-up-wilmington-ma                    /locations/wilmington-ma/                     301
+/permanent-make-up-wilmington-ma/                   /locations/wilmington-ma/                     301
+/permanent-makeup-bedford-ma                        /services/                                    301
+/permanent-makeup-bedford-ma/                       /services/                                    301
+/permanent-makeup-busy-lifestyles-2                 /services/                                    301
+/permanent-makeup-busy-lifestyles-2/                /services/                                    301
+/permanent-makeup-busy-professionals                /services/                                    301
+/permanent-makeup-busy-professionals/               /services/                                    301
+/permanent-makeup-clinic-near-boston                /services/                                    301
+/permanent-makeup-clinic-near-boston/               /services/                                    301
+/permanent-makeup-consultation-near-boston          /contact/                                     301
+/permanent-makeup-consultation-near-boston/         /contact/                                     301
+/permanent-makeup-consultation-near-me              /contact/                                     301
+/permanent-makeup-consultation-near-me/             /contact/                                     301
+/permanent-makeup-financing-options                 /payment-plan/                                301
+/permanent-makeup-financing-options/                /payment-plan/                                301
+/permanent-makeup-financing-options-ma              /payment-plan/                                301
+/permanent-makeup-financing-options-ma/             /payment-plan/                                301
+/permanent-makeup-for-every-day                     /services/                                    301
+/permanent-makeup-for-every-day/                    /services/                                    301
+/permanent-makeup-options-busy-professionals        /services/                                    301
+/permanent-makeup-options-busy-professionals/       /services/                                    301
+/permanent-makeup-options-for-every-day             /services/                                    301
+/permanent-makeup-options-for-every-day/            /services/                                    301
+/permanent-makeup-reading-ma                        /services/                                    301
+/permanent-makeup-reading-ma/                       /services/                                    301
+/permanent-makeup-safety-standards                  /aftercare/                                   301
+/permanent-makeup-safety-standards/                 /aftercare/                                   301
+/permanent-makeup-safety-tips                       /aftercare/                                   301
+/permanent-makeup-safety-tips/                      /aftercare/                                   301
+/permanent-makeup-safety-tips-2                     /aftercare/                                   301
+/permanent-makeup-safety-tips-2/                    /aftercare/                                   301
+/permanent-makeup-special-events                    /prices/                                      301
+/permanent-makeup-special-events/                   /prices/                                      301
+/permanent-makeup-special-occasions                 /prices/                                      301
+/permanent-makeup-special-occasions/                /prices/                                      301
+/permanent-makeup-touch-up-near-me                  /services/touch-ups/                          301
+/permanent-makeup-touch-up-near-me/                 /services/touch-ups/                          301
+/permanent-makeup-training-workshops-ma             /academy/                                     301
+/permanent-makeup-training-workshops-ma/            /academy/                                     301
+/permanentmakeuptraining                            /academy/                                     301
+/permanentmakeuptraining/                           /academy/                                     301
+/top-microblading-artists-wilmington-ma             /services/eyebrows/microblading/              301
+/top-microblading-artists-wilmington-ma/            /services/eyebrows/microblading/              301
+/top-rated-permanent-makeup-reviews                 /about/                                       301
+/top-rated-permanent-makeup-reviews/                /about/                                       301
+/vipclass                                           /academy/vip-masterclass/                     301
+/vipclass/                                          /academy/vip-masterclass/                     301
+/what-to-expect-from-microblading-services          /services/eyebrows/microblading/              301
+/what-to-expect-from-microblading-services/         /services/eyebrows/microblading/              301
+/what-to-know-about-permanent-makeup                /about/                                       301
+/what-to-know-about-permanent-makeup/               /about/                                       301
+/where-to-find-best-microblading-services           /services/eyebrows/microblading/              301
+/where-to-find-best-microblading-services/          /services/eyebrows/microblading/              301
+/where-to-find-lip-blush-near-me                    /services/lips/lip-blush/                     301
+/where-to-find-lip-blush-near-me/                   /services/lips/lip-blush/                     301
+/where-to-find-lip-micropigmentation-ma             /services/lips/lip-blush/                     301
+/where-to-find-lip-micropigmentation-ma/            /services/lips/lip-blush/                     301
+/where-to-find-microblading-in-ma                   /services/eyebrows/microblading/              301
+/where-to-find-microblading-in-ma/                  /services/eyebrows/microblading/              301
+/where-to-find-microblading-services-in-wilmin      /services/eyebrows/microblading/              301
+/where-to-find-microblading-services-in-wilmin/     /services/eyebrows/microblading/              301
+/where-to-get-eyebrow-tattoo-services-boston        /services/eyebrows/                           301
+/where-to-get-eyebrow-tattoo-services-boston/       /services/eyebrows/                           301
+/where-to-get-eyebrow-tattooing-in-ma               /services/eyebrows/                           301
+/where-to-get-eyebrow-tattooing-in-ma/              /services/eyebrows/                           301
+/workdoneby                                         /portfolio/                                   301
+/workdoneby/                                        /portfolio/                                   301
+/workdonebyadriana                                  /portfolio/                                   301
+/workdonebyadriana/                                 /portfolio/                                   301
+/workdonebyludy                                     /portfolio/                                   301
+/workdonebyludy/                                    /portfolio/                                   301
+
+
+# ------------------------------------------------------------------
+# JPEG -> WebP (25/09/2026): 80 imagens convertidas (13,0 MB -> 7,8 MB).
+# O site anterior servia estes .jpg; o 301 preserva links externos e o
+# Google Imagens. og-default.jpg segue em JPEG (redes sociais).
+# ------------------------------------------------------------------
+/assets/images/sofia-laura.jpg                                                                  /assets/images/sofia-laura.webp                                                                 301
+/assets/images/adriana-souza-santos.jpg                                                         /assets/images/adriana-souza-santos.webp                                                        301
+/assets/images/livian-gomes.jpg                                                                 /assets/images/livian-gomes.webp                                                                301
+/assets/images/adriana-quem-sou-eu.jpg                                                          /assets/images/adriana-quem-sou-eu.webp                                                         301
+/assets/images/proof/nano-combo-salem-nh.jpg                                                    /assets/images/proof/nano-combo-salem-nh.webp                                                   301
+/assets/images/proof/nano-brows-wilmington-ma.jpg                                               /assets/images/proof/nano-brows-wilmington-ma.webp                                              301
+/assets/images/proof/dark-lip-neutralization-wilmington-ma.jpg                                  /assets/images/proof/dark-lip-neutralization-wilmington-ma.webp                                 301
+/assets/images/proof/eyebrows-lips-combo-wilmington-ma.jpg                                      /assets/images/proof/eyebrows-lips-combo-wilmington-ma.webp                                     301
+/assets/images/proof/dark-lip-neutralization-salem-nh.jpg                                       /assets/images/proof/dark-lip-neutralization-salem-nh.webp                                      301
+/assets/images/proof/microblading-wilmington-ma.jpg                                             /assets/images/proof/microblading-wilmington-ma.webp                                            301
+/assets/images/proof/eyeliner-combo-wilmington-ma.jpg                                           /assets/images/proof/eyeliner-combo-wilmington-ma.webp                                          301
+/assets/images/proof/eyeliner-combo-salem-nh.jpg                                                /assets/images/proof/eyeliner-combo-salem-nh.webp                                               301
+/assets/images/proof/lip-blush-wilmington-ma.jpg                                                /assets/images/proof/lip-blush-wilmington-ma.webp                                               301
+/assets/images/proof/powder-brows-salem-nh.jpg                                                  /assets/images/proof/powder-brows-salem-nh.webp                                                 301
+/assets/images/proof/eyebrows-lips-combo-salem-nh.jpg                                           /assets/images/proof/eyebrows-lips-combo-salem-nh.webp                                          301
+/assets/images/proof/lip-blush-salem-nh.jpg                                                     /assets/images/proof/lip-blush-salem-nh.webp                                                    301
+/assets/images/proof/microblading-salem-nh.jpg                                                  /assets/images/proof/microblading-salem-nh.webp                                                 301
+/assets/images/proof/nano-brows-salem-nh.jpg                                                    /assets/images/proof/nano-brows-salem-nh.webp                                                   301
+/assets/images/proof/nano-combo-wilmington-ma.jpg                                               /assets/images/proof/nano-combo-wilmington-ma.webp                                              301
+/assets/images/proof/powder-brows-wilmington-ma.jpg                                             /assets/images/proof/powder-brows-wilmington-ma.webp                                            301
+/assets/images/academy/adriana.jpg                                                              /assets/images/academy/adriana.webp                                                             301
+/assets/images/academy/apprenticeship.jpg                                                       /assets/images/academy/apprenticeship.webp                                                      301
+/assets/images/academy/pmu-100h.jpg                                                             /assets/images/academy/pmu-100h.webp                                                            301
+/assets/images/academy/classroom.jpg                                                            /assets/images/academy/classroom.webp                                                           301
+/assets/images/academy/in-person-class.jpg                                                      /assets/images/academy/in-person-class.webp                                                     301
+/assets/images/academy/slides/slide-001.jpg                                                     /assets/images/academy/slides/slide-001.webp                                                    301
+/assets/images/academy/slides/slide-002.jpg                                                     /assets/images/academy/slides/slide-002.webp                                                    301
+/assets/images/academy/slides/slide-003.jpg                                                     /assets/images/academy/slides/slide-003.webp                                                    301
+/assets/images/academy/slides/slide-007.jpg                                                     /assets/images/academy/slides/slide-007.webp                                                    301
+/assets/images/academy/slides/slide-006.jpg                                                     /assets/images/academy/slides/slide-006.webp                                                    301
+/assets/images/academy/slides/slide-010.jpg                                                     /assets/images/academy/slides/slide-010.webp                                                    301
+/assets/images/academy/slides/slide-004.jpg                                                     /assets/images/academy/slides/slide-004.webp                                                    301
+/assets/images/academy/slides/slide-005.jpg                                                     /assets/images/academy/slides/slide-005.webp                                                    301
+/assets/images/academy/slides/slide-008.jpg                                                     /assets/images/academy/slides/slide-008.webp                                                    301
+/assets/images/academy/slides/slide-009.jpg                                                     /assets/images/academy/slides/slide-009.webp                                                    301
+/assets/images/locations/wilmington-ma-studio-waiting-room.jpg                                  /assets/images/locations/wilmington-ma-studio-waiting-room.webp                                 301
+/assets/images/locations/salem-nh-studio-consultation-area.jpg                                  /assets/images/locations/salem-nh-studio-consultation-area.webp                                 301
+/assets/images/locations/salem-nh-studio-treatment-room.jpg                                     /assets/images/locations/salem-nh-studio-treatment-room.webp                                    301
+/assets/images/locations/wilmington-ma-studio-neon.jpg                                          /assets/images/locations/wilmington-ma-studio-neon.webp                                         301
+/assets/images/locations/wilmington-ma-studio-reception-desk.jpg                                /assets/images/locations/wilmington-ma-studio-reception-desk.webp                               301
+/assets/images/locations/wilmington-ma-studio-entrance.jpg                                      /assets/images/locations/wilmington-ma-studio-entrance.webp                                     301
+/assets/images/locations/adrianas-permanent-makeup-salem-nh-storefront.jpg                      /assets/images/locations/adrianas-permanent-makeup-salem-nh-storefront.webp                     301
+/assets/images/locations/salem-nh-studio-treatment-station.jpg                                  /assets/images/locations/salem-nh-studio-treatment-station.webp                                 301
+/assets/images/locations/salem-nh-studio-reception.jpg                                          /assets/images/locations/salem-nh-studio-reception.webp                                         301
+/assets/images/portfolio/Portfolio-Adriana-Eyebrows-023.jpg                                     /assets/images/portfolio/Portfolio-Adriana-Eyebrows-023.webp                                    301
+/assets/images/portfolio/Portfolio-Adriana-Eyeliner-004.jpg                                     /assets/images/portfolio/Portfolio-Adriana-Eyeliner-004.webp                                    301
+/assets/images/portfolio/Portfolio-Adriana-Eyeliner-010.jpg                                     /assets/images/portfolio/Portfolio-Adriana-Eyeliner-010.webp                                    301
+/assets/images/portfolio/Portfolio-Livy-Eyebrows-022.jpg                                        /assets/images/portfolio/Portfolio-Livy-Eyebrows-022.webp                                       301
+/assets/images/portfolio/Portfolio-Adriana-Eyeliner-005.jpg                                     /assets/images/portfolio/Portfolio-Adriana-Eyeliner-005.webp                                    301
+/assets/images/portfolio/Portfolio-Adriana-Eyebrows-020.jpg                                     /assets/images/portfolio/Portfolio-Adriana-Eyebrows-020.webp                                    301
+/assets/images/portfolio/Portfolio-Adriana-Eyeliner-013.jpg                                     /assets/images/portfolio/Portfolio-Adriana-Eyeliner-013.webp                                    301
+/assets/images/portfolio/Portfolio-Adriana-Eyeliner-007.jpg                                     /assets/images/portfolio/Portfolio-Adriana-Eyeliner-007.webp                                    301
+/assets/images/portfolio/Portfolio-Livy-Eyebrows-008.jpg                                        /assets/images/portfolio/Portfolio-Livy-Eyebrows-008.webp                                       301
+/assets/images/portfolio/Portfolio-Livy-Eyebrows-020.jpg                                        /assets/images/portfolio/Portfolio-Livy-Eyebrows-020.webp                                       301
+/assets/images/portfolio/Portfolio-Livy-Eyebrows-021.jpg                                        /assets/images/portfolio/Portfolio-Livy-Eyebrows-021.webp                                       301
+/assets/images/portfolio/Portfolio-Livy-Eyebrows-009.jpg                                        /assets/images/portfolio/Portfolio-Livy-Eyebrows-009.webp                                       301
+/assets/images/portfolio/Portfolio-Adriana-Eyeliner-012.jpg                                     /assets/images/portfolio/Portfolio-Adriana-Eyeliner-012.webp                                    301
+/assets/images/portfolio/Portfolio-Adriana-Eyebrows-021.jpg                                     /assets/images/portfolio/Portfolio-Adriana-Eyebrows-021.webp                                    301
+/assets/images/services/yearly-touch-up.jpg                                                     /assets/images/services/yearly-touch-up.webp                                                    301
+/assets/images/services/touch-ups-card.jpg                                                      /assets/images/services/touch-ups-card.webp                                                     301
+/assets/images/services/combos-card.jpg                                                         /assets/images/services/combos-card.webp                                                        301
+/assets/images/services/top-eyeliner.jpg                                                        /assets/images/services/top-eyeliner.webp                                                       301
+/assets/images/services/powder-brows.jpg                                                        /assets/images/services/powder-brows.webp                                                       301
+/assets/images/services/smokey-eyeliner.jpg                                                     /assets/images/services/smokey-eyeliner.webp                                                    301
+/assets/images/services/lip-blush.jpg                                                           /assets/images/services/lip-blush.webp                                                          301
+/assets/images/services/eyebrows-lips-combo.jpg                                                 /assets/images/services/eyebrows-lips-combo.webp                                                301
+/assets/images/services/microblading.jpg                                                        /assets/images/services/microblading.webp                                                       301
+/assets/images/services/bottom-eyeliner.jpg                                                     /assets/images/services/bottom-eyeliner.webp                                                    301
+/assets/images/services/combination-brows.jpg                                                   /assets/images/services/combination-brows.webp                                                  301
+/assets/images/services/eyeliner-combo.jpg                                                      /assets/images/services/eyeliner-combo.webp                                                     301
+/assets/images/services/nano-combo.jpg                                                          /assets/images/services/nano-combo.webp                                                         301
+/assets/images/services/nano-brows.jpg                                                          /assets/images/services/nano-brows.webp                                                         301
+/assets/images/services/eyebrows-card.jpg                                                       /assets/images/services/eyebrows-card.webp                                                      301
+/assets/images/services/dark-lip-neutralization.jpg                                             /assets/images/services/dark-lip-neutralization.webp                                            301
+
 # A ordem importa: as regras de index.html vem antes da geral.
 # Todos os destinos com barra, para nao encadear dois saltos.
 # ============================================================
@@ -149,7 +504,6 @@
 /academy/vip-masterclass/index.html                              /academy/vip-masterclass/                              301
 /contact/index.html                                              /contact/                                              301
 /faq/index.html                                                  /faq/                                                  301
-/flash-sale/index.html                                           /flash-sale/                                           301
 /locations/index.html                                            /locations/                                            301
 /locations/salem-nh/index.html                                   /locations/salem-nh/                                   301
 /locations/wilmington-ma/index.html                              /locations/wilmington-ma/                              301
@@ -203,5 +557,9 @@
 /services/touch-ups/yearly-touch-up/wilmington-ma/index.html     /services/touch-ups/yearly-touch-up/wilmington-ma/     301
 /terms-of-use/index.html                                         /terms-of-use/                                         301
 /training/index.html                                             /academy/                                              301
+
+/prices/index.html                                              /prices/                                               301
+/aftercare/index.html                                           /aftercare/                                            301
+/locations/peabody-ma/index.html                                /locations/peabody-ma/                                 301
 
 /*.html                         /:splat/                                  301

@@ -10,12 +10,17 @@
 
   "assets": {
     "directory": "./",
-    "not_found_handling": "404-page",
+    // O Worker cuida do 404, para poder devolver markdown quando o
+    // cliente pedir. Se ficasse em "404-page" o asset server responderia
+    // antes e sempre em HTML.
+    "not_found_handling": "none",
     "binding": "ASSETS",
 
-    // O Worker so e invocado em /api/*. Qualquer outra URL continua
-    // sendo servida direto pelos assets, sem passar por codigo.
-    "run_worker_first": ["/api/*"]
+    // Era ["/api/*"]. Agora o Worker ve toda requisicao, porque a
+    // negociacao de conteudo (Accept: text/markdown) e o header Vary
+    // precisam existir em TODA resposta, nao so no formulario.
+    // O caminho comum continua sendo um env.ASSETS.fetch() direto.
+    "run_worker_first": ["/*"]
   },
 
   // Envio nativo do Cloudflare Email Service. Sem restricao de

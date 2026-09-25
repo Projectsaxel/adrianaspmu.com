@@ -7,7 +7,7 @@ def eyebrows_lips_combo_sections(base: str) -> str:
   <div class="container service-prose">
     <h2>Complete Your Look with Beautiful Brows and Naturally Enhanced Lips</h2>
     <p>Why choose one treatment when you can transform two of your most important facial features at the same time? At Adriana Beauty Services – Permanent Makeup, our Brows + Lips Combo combines customized eyebrow enhancement with beautiful lip color enhancement, helping you achieve a polished, youthful, and confident appearance every day.</p>
-    <p>For over 7 years, we have helped clients in Wilmington, MA and now Salem, NH simplify their beauty routines through advanced permanent makeup services designed to enhance natural beauty.</p>
+    <p>Since 2017, we have helped clients in Wilmington, MA and now Salem, NH simplify their beauty routines through advanced permanent makeup services designed to enhance natural beauty.</p>
   </div>
 </section>
 
@@ -122,7 +122,7 @@ def eyebrows_lips_combo_sections(base: str) -> str:
     <p>At Adriana Beauty Services – Permanent Makeup, every treatment is tailored to enhance your unique beauty.</p>
     <p>Clients trust us because we offer:</p>
     <ul class="service-list">
-      <li>Over 7 years of experience</li>
+      <li>20+ years of permanent makeup experience</li>
       <li>Customized beauty solutions</li>
       <li>Advanced permanent makeup techniques</li>
       <li>High-quality pigments and equipment</li>
