@@ -891,20 +891,11 @@ def _up(path_rel):
     return "../" * depth if depth else "./"
 
 
-def _sitemap_lastmod():
-    """lastmod declarado no sitemap, por caminho. E a data curada do site."""
-    out = {}
-    fp = os.path.join(ROOT, "sitemap.xml")
-    if not os.path.exists(fp):
-        return out
-    with open(fp, encoding="utf-8") as f:
-        sm = f.read()
-    for loc, mod in re.findall(r"<loc>([^<]+)</loc><lastmod>([^<]+)</lastmod>", sm):
-        out[loc.replace(BASE, "").strip()] = mod.strip()
-    return out
-
-
-LASTMOD = _sitemap_lastmod()
+# dateModified = data do ultimo commit do HTML de origem, a MESMA do
+# <lastmod> do sitemap (auditoria de SEO 25/09/2026, achado 4.1). Antes
+# vinha do sitemap.xml editado a mao, e 57 paginas diziam 2026-09-08.
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from sitemap_lastmod import lastmod_for_url  # noqa: E402
 
 
 
@@ -1835,18 +1826,31 @@ def add_collection(graph, s, path_rel, canonical):
 
 def add_webpage(graph, s, path_rel, canonical):
     """WebPage com dateModified e autoria. Eram 5 paginas com dateModified."""
-    if any(n.get("@id") == canonical + "#webpage" for n in graph if isinstance(n, dict)):
-        return graph
     title = get(r"<title>(.*?)</title>", s, re.S)
     title = re.sub(r"\s+", " ", title).strip() if title else ""
+    mod = lastmod_for_url(canonical)
+    existing = next((n for n in graph if isinstance(n, dict)
+                     and n.get("@id") == canonical + "#webpage"), None)
+    if existing is not None:
+        # O HTML de origem ja traz o no (saida antiga deste script, commitada).
+        # A data e o nome sao SEMPRE recalculados: eram eles que ficavam
+        # congelados (dateModified 2026-09-08, name de um title antigo).
+        if mod:
+            existing["dateModified"] = mod
+        else:
+            existing.pop("dateModified", None)
+        if title:
+            existing["name"] = title
+        return graph
     node = {
         "@type": "WebPage",
         "@id": canonical + "#webpage",
         "url": canonical,
         "isPartOf": {"@id": f"{BASE}/#website"},
         "inLanguage": "en-US",
-        "dateModified": LASTMOD.get(canonical.replace(BASE, ""), REVIEW_DATE_ISO),
     }
+    if mod:
+        node["dateModified"] = mod
     if title:
         node["name"] = title
     if path_rel not in NO_BYLINE:

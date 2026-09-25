@@ -1357,45 +1357,17 @@ write("index.html", shell(
     "Permanent Makeup Studio and Academy in Wilmington, MA & Salem, NH",
     home_body(), 0))
 
-def sitemap_meta(rel_path: str) -> tuple[str, str]:
-    if rel_path == "index.html":
-        return "1.0", "weekly"
-    if rel_path.startswith("flash-sale/"):
-        return "0.9", "weekly"
-    if rel_path in ("services/index.html", "locations/index.html"):
-        return "0.9", "monthly"
-    if rel_path.endswith("/wilmington-ma/index.html") or rel_path.endswith("/salem-nh/index.html"):
-        return "0.85", "monthly"
-    if rel_path in ("privacy-policy/index.html", "terms-of-use/index.html"):
-        return "0.3", "yearly"
-    return "0.8", "monthly"
-
-
-# Paginas fora do sitemap. 404.html e servido pelo Workers como
-# not_found_handling e nao deve ser indexado.
-SITEMAP_EXCLUDE = {"404.html"}
-
-
+# sitemap.xml: este gerador NAO escreve mais o arquivo (auditoria de SEO
+# 25/09/2026, achado 4.1). A versao antiga escrevia <priority> e
+# <changefreq> (que o Google ignora) e SEM <lastmod>: rodar este script
+# apagava o lastmod, e o WebPage.dateModified do schema caia num valor fixo.
+# Agora ha uma fonte so, scripts/sitemap_lastmod.py, que o deploy roda a
+# cada publicacao com o lastmod tirado do git. Aqui so delegamos a ela,
+# para que quem rodar este gerador localmente veja o mesmo formato.
 def write_sitemap():
-    pages = sorted(
-        rel for rel in (p.relative_to(ROOT).as_posix() for p in ROOT.rglob("*.html"))
-        if rel not in SITEMAP_EXCLUDE
-    )
-    lines = [
-        '<?xml version="1.0" encoding="UTF-8"?>',
-        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-    ]
-    for page in pages:
-        priority, changefreq = sitemap_meta(page)
-        loc = public_url(page)
-        lines.append(
-            f"  <url><loc>{loc}</loc>"
-            f"<priority>{priority}</priority>"
-            f"<changefreq>{changefreq}</changefreq></url>"
-        )
-    lines.append("</urlset>")
-    (ROOT / "sitemap.xml").write_text("\n".join(lines) + "\n", encoding="utf-8")
-    print("  sitemap.xml")
+    from sitemap_lastmod import write_sitemap as _write
+
+    _write()
 
 
 def write_robots():

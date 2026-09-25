@@ -26,6 +26,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Historico completo: o <lastmod> do sitemap e o dateModified do
+          # schema saem do "git log" de cada pagina. Com o checkout raso
+          # padrao (depth 1) todas as paginas teriam a data do HEAD; o
+          # scripts/sitemap_lastmod.py detecta isso e cai no fallback.
+          fetch-depth: 0
 
       # Snapshot fresco das avaliacoes no HTML publicado (a branch
       # reviews-data cobre o intervalo entre deploys). Sem o secret, usa o
@@ -34,6 +40,11 @@ jobs:
         env:
           LOCALFALCON_API_KEY: ${{ secrets.LOCALFALCON_API_KEY }}
         run: python3 scripts/fetch_reviews.py || echo "::warning::avaliacoes nao atualizadas; segue com o snapshot do repo"
+
+      # Antes do enrich: o enrich_pages.py usa a mesma data no
+      # WebPage.dateModified. Ver scripts/sitemap_lastmod.py.
+      - name: Sitemap com lastmod real (git)
+        run: python3 scripts/sitemap_lastmod.py
 
       - name: Header e footer estaticos (nav visivel sem JS)
         run: node scripts/static_nav.js
