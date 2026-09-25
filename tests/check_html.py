@@ -12,6 +12,7 @@ Cada checagem aqui ja foi um defeito publicado ou quase publicado
 3. aggregateRating: proibido sem depoimentos individuais visiveis
    (self-serving reviews). O gerador antigo ainda tinha um.
 4. "18+ years": a experiencia e 20+ (PMU desde 2006).
+5. Credito "Website by Axel SEO": uma vez por pagina e com nofollow.
 """
 import os
 import re
@@ -50,6 +51,14 @@ for fp in paginas():
             if tag.tag == "meta" and (tag.get("property") or "").startswith("og:"):
                 erros.append(f"{rel}: meta og: caiu no <body> (head quebrado)")
                 break
+
+    # Credito da agencia: exatamente uma vez por pagina, com nofollow
+    # (sem ele o Google trata como esquema de links).
+    cred = re.findall(r'<a [^>]*href="https://axelseo\.com/"[^>]*>', h)
+    if len(cred) != 1:
+        erros.append(f"{rel}: credito Axel SEO aparece {len(cred)} vezes (deve ser 1)")
+    elif 'rel="nofollow noopener"' not in cred[0]:
+        erros.append(f"{rel}: credito Axel SEO sem rel=\"nofollow noopener\"")
 
     if re.search(r"aggregateRating", h, re.I):
         erros.append(f"{rel}: aggregateRating no schema")
