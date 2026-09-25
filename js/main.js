@@ -134,17 +134,21 @@
     const p = SITE.locations.peabody;
 
     if (el.innerHTML.trim()) return;   // ja injetado no build
+    // Titulos de coluna sao <p class="footer-title">, nao <h3> (auditoria
+    // SEO 25/09/2026, 5.4): seis h3 iguais entravam no outline de TODAS as
+    // paginas, pendurados na ultima secao. O visual e o mesmo (css/styles.css).
+    // Peabody linkada no titulo da Academy e na lista Locations (5.9).
     el.innerHTML = `
       <footer class="site-footer">
         <div class="container">
           <div class="footer-grid">
             <div>
-              <h3>${SITE.name}</h3>
-              <p>Master Permanent Makeup Artist with ${SITE.stats.years} experience and ${SITE.stats.procedures} procedures performed.</p>
+              <p class="footer-title">${SITE.name}</p>
+              <p>Master Permanent Makeup Artist with ${SITE.stats.years} years of experience and ${SITE.stats.procedures} procedures performed.</p>
               <p>Women-owned · LGBTQ+ friendly · Wheelchair accessible (Wilmington)</p>
             </div>
             <div>
-              <h3>Services</h3>
+              <p class="footer-title">Services</p>
               <ul>
                 <li><a href="${resolvePath("/services/eyebrows/")}">Eyebrow PMU</a></li>
                 <li><a href="${resolvePath("/services/lips/")}">Lip PMU</a></li>
@@ -155,34 +159,33 @@
               </ul>
             </div>
             <div>
-              <h3>Locations</h3>
+              <p class="footer-title">Locations</p>
               <ul>
                 <li><a href="${resolvePath("/locations/")}">All Locations</a></li>
                 <li><a href="${resolvePath("/locations/wilmington-ma/")}">Wilmington, MA</a></li>
                 <li><a href="${resolvePath("/locations/salem-nh/")}">Salem, NH</a></li>
+                <li><a href="${resolvePath("/locations/peabody-ma/")}">Peabody, MA (Academy)</a></li>
                 <li><a href="${resolvePath("/contact/")}">Contact</a></li>
                 <li><a href="${resolvePath("/faq/")}">FAQ</a></li>
               </ul>
             </div>
             <div class="footer-nap">
-              <h3>Wilmington, MA</h3>
+              <p class="footer-title">Wilmington, MA</p>
               <p>${w.street}, ${w.city}, ${w.region} ${w.zip}<br>
               <a href="tel:+17818538063">${w.phone}</a></p>
-              <h3>Salem, NH</h3>
+              <p class="footer-title">Salem, NH</p>
               <p>${s.street}, ${s.city}, ${s.region} ${s.zip}<br>
               <a href="tel:+19782237496">${s.phone}</a></p>
-              <h3>Academy — Peabody, MA</h3>
+              <p class="footer-title"><a href="${resolvePath("/locations/peabody-ma/")}">Academy in Peabody, MA</a></p>
               <p>${p.street}, ${p.city}, ${p.region} ${p.zip}<br>
               <a href="tel:+17818538063">${p.phone}</a></p>
             </div>
           </div>
           <div class="footer-bottom">
-            <div class="footer-copy">
-            <p>© ${new Date().getFullYear()} ${SITE.legalName}. All rights reserved.</p>
-            <p style="font-size:12px;opacity:.7;margin-top:8px">
-              Website by <a href="https://axelseo.com/" rel="nofollow noopener" target="_blank">Axel SEO</a>
-            </p>
-            </div>
+            <div class="footer-copy"><p>© ${new Date().getFullYear()} ${SITE.legalName} All rights reserved.</p>
+<p style="font-size:12px;opacity:.7;margin-top:8px">
+  Website by <a href="https://axelseo.com/" rel="nofollow noopener" target="_blank">Axel SEO</a>
+</p></div>
             <p>
               <a href="${resolvePath("/privacy-policy/")}">Privacy</a> ·
               <a href="${resolvePath("/terms-of-use/")}">Terms</a> ·

@@ -394,7 +394,7 @@ def finance_banner(base):
 <section class="section finance-banner">
   <div class="container finance-banner-inner">
     <div>
-      <h2>Pay over time, starting today</h2>
+      <p class="finance-banner-title">Pay over time, starting today</p>
       <p>Split any service into <strong>4 interest-free payments</strong> with Cherry, or over up
       to 24 months with interest. Checking your options takes about a minute and uses a soft credit
       check, so it does <strong>not</strong> affect your credit score.</p>
