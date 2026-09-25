@@ -83,15 +83,16 @@ ORG_SCHEMA = """{
       "url": "https://adrianaspmu.com/",
       "foundingDate": "2017",
       "sameAs": [
-        "https://www.facebook.com/adrianaspmu",
+        "https://www.facebook.com/adrianaspmu/",
         "https://www.instagram.com/adrianas_pmu/",
-        "https://maps.app.goo.gl/oJRNewzwwWACAera6"
+        "https://www.youtube.com/@AdrianasPermanentMakeup"
       ]
     },
     {
       "@type": "BeautySalon",
       "@id": "https://adrianaspmu.com/#wilmington",
-      "name": "Adriana's Permanent Makeup, Wilmington MA",
+      "name": "Adriana's Permanent Makeup",
+      "sameAs": ["https://maps.google.com/?cid=16715673055892397510"],
       "additionalType": "https://schema.org/HealthAndBeautyBusiness",
       "telephone": "+1-781-853-8063",
       "priceRange": "$$ to $$$",

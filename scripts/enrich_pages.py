@@ -30,7 +30,7 @@ OG_DEFAULT = f"{BASE}/assets/images/og/og-default.jpg"
 SALEM_NODE = {
     "@type": "BeautySalon",
     "@id": f"{BASE}/#salem",
-    "name": "Adriana's Permanent Makeup, Salem NH",
+    "name": "Adriana's Permanent Makeup",
     "additionalType": "https://schema.org/HealthAndBeautyBusiness",
     "url": f"{BASE}/locations/salem-nh/",
     "telephone": "+1-978-223-7496",
@@ -1804,13 +1804,18 @@ def add_collection(graph, s, path_rel, canonical):
     # regenera: remove a versao anterior antes de recriar
     stale = {canonical + "#collection", canonical + "#itemlist"}
     graph[:] = [n for n in graph if not (isinstance(n, dict) and n.get("@id") in stale)]
-    graph.append({
-        "@type": "CollectionPage",
-        "@id": canonical + "#collection",
-        "url": canonical,
-        "isPartOf": {"@id": f"{BASE}/#website"},
-        "mainEntity": {"@id": canonical + "#itemlist"},
-    })
+    # UM no de pagina por URL (auditoria SEO 25/09/2026, 5.7d). Eram dois
+    # para a mesma URL: #webpage (WebPage) e #collection (CollectionPage).
+    # Agora o proprio #webpage vira CollectionPage e aponta para o ItemList.
+    # add_webpage() roda antes e garante que o no existe.
+    page = next((n for n in graph if isinstance(n, dict)
+                 and n.get("@id") == canonical + "#webpage"), None)
+    if page is None:
+        page = {"@id": canonical + "#webpage", "url": canonical,
+                "isPartOf": {"@id": f"{BASE}/#website"}}
+        graph.append(page)
+    page["@type"] = "CollectionPage"
+    page["mainEntity"] = {"@id": canonical + "#itemlist"}
     graph.append({
         "@type": "ItemList",
         "@id": canonical + "#itemlist",
@@ -1982,6 +1987,8 @@ LOCATION_FIELDS = {
         "priceRange": "$250-$850",
         "openingHoursSpecification": HOURS,
         "hasMap": "https://maps.google.com/?cid=16715673055892397510",
+        "name": "Adriana's Permanent Makeup",
+        "sameAs": ["https://maps.google.com/?cid=16715673055892397510"],
     },
     f"{BASE}/#salem": {
         "url": f"{BASE}/locations/salem-nh/",
@@ -1989,8 +1996,24 @@ LOCATION_FIELDS = {
         "priceRange": "$250-$850",
         "openingHoursSpecification": HOURS,
         "hasMap": "https://maps.google.com/?cid=8332848331847351639",
+        "name": "Adriana's Permanent Makeup",
+        "sameAs": ["https://maps.google.com/?cid=8332848331847351639"],
     },
 }
+
+
+# Campos de unidade que SEMPRE sobrescrevem o que vier no HTML.
+# name e sameAs: auditoria SEO 25/09/2026 (5.3 e 5.2). O name era
+# "Adriana's Permanent Makeup, Wilmington MA" / "..., Salem NH", diferente
+# do nome das fichas do Google; a cidade ja esta no address e o @id separa
+# as unidades. O sameAs de cada unidade e a URL estavel da propria ficha
+# (a mesma do hasMap), no lugar dos links curtos que estavam na Organization.
+LOCATION_OVERRIDE = {"priceRange", "hasMap", "name", "sameAs"}
+
+# sameAs da Organization: so perfis da MARCA. Os links curtos de ficha
+# (share.google, maps.app.goo.gl) caiam numa pagina de resultado de busca,
+# identificavam as unidades e nao a marca, e dois eram a mesma ficha.
+ORG_SAMEAS_OK = re.compile(r"https://(www\.)?(facebook\.com|instagram\.com|youtube\.com)/", re.I)
 
 
 def normalize_graph(graph):
@@ -2024,8 +2047,10 @@ def normalize_graph(graph):
         nid = n.get("@id")
         if nid in LOCATION_FIELDS:
             for k, val in LOCATION_FIELDS[nid].items():
-                if k in ("priceRange", "hasMap") or k not in n:
+                if k in LOCATION_OVERRIDE or k not in n:
                     n[k] = val
+        if nid == f"{BASE}/#organization" and isinstance(n.get("sameAs"), list):
+            n["sameAs"] = [u for u in n["sameAs"] if ORG_SAMEAS_OK.match(u)]
         if nid and nid in merged and len(n) > 1:
             base = merged[nid]
             for k, val in n.items():
@@ -2035,6 +2060,92 @@ def normalize_graph(graph):
             merged[nid] = n
         out.append(n)
     return out
+
+
+# No da Academy (EducationalOrganization). Era declarado so em
+# /locations/peabody-ma/, e os Course apontavam o provider para a
+# Organization. Texto identico ao da pagina de Peabody.
+ACADEMY_ID = f"{BASE}/#academy"
+ACADEMY_NODE = {
+    "@type": ["EducationalOrganization", "LocalBusiness"],
+    "@id": ACADEMY_ID,
+    "name": "Adriana's Academy",
+    "description": (
+        "The educational division of Adriana Beauty Services, Inc., where permanent makeup "
+        "artists complete hands-on training toward a certificate of completion. No client "
+        "procedures are performed at this address."
+    ),
+    "url": f"{BASE}/academy/",
+    "telephone": "+1-781-853-8063",
+    "parentOrganization": {"@id": f"{BASE}/#organization"},
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "39 Cross Street, Suite 206",
+        "addressLocality": "Peabody",
+        "addressRegion": "MA",
+        "postalCode": "01960",
+        "addressCountry": "US",
+    },
+}
+
+# Servicos cujo preco publicado e um PISO ("From $300, exact price set at
+# the appointment"), nao um preco exato.
+FROM_PRICE_SERVICES = ("services/touch-ups/yearly-touch-up/",)
+
+
+def fix_schema_2026_09(graph, s, path_rel, canonical):
+    """Auditoria SEO de 25/09/2026, itens 5.7 a, b e c.
+
+    a) BreadcrumbList: o ultimo ListItem ganha "item" (a URL da pagina).
+       Valido sem, mas 15 paginas vinham sem e 47 com.
+    b) Course.provider -> #academy, e o no #academy declarado em todas as
+       paginas da Academy (antes so em /locations/peabody-ma/).
+    c) Yearly Touch-Up: a pagina diz "From $300" e o schema dizia price 300
+       exato. Vira priceSpecification com minPrice. Na pagina-base, que nao
+       tinha Offer, o Offer so entra se o "From $X" estiver visivel nela.
+    """
+    for n in graph:
+        if not isinstance(n, dict):
+            continue
+        t = n.get("@type")
+        if t == "BreadcrumbList":
+            items = n.get("itemListElement") or []
+            if items and isinstance(items[-1], dict) and "item" not in items[-1]:
+                items[-1]["item"] = canonical
+        if t == "Course":
+            n["provider"] = {"@id": ACADEMY_ID}
+
+    uses_academy = any(isinstance(n, dict) and n.get("@type") == "Course" for n in graph)
+    if (path_rel.startswith("academy/") or uses_academy) and not any(
+            isinstance(n, dict) and n.get("@id") == ACADEMY_ID for n in graph):
+        graph.append(json.loads(json.dumps(ACADEMY_NODE)))
+
+    if path_rel.startswith(FROM_PRICE_SERVICES):
+        floor = re.search(r"[Ff]rom \$(\d+)", re.sub(r"<[^>]+>", " ", s.split("</head>", 1)[-1]))
+        for n in graph:
+            if not (isinstance(n, dict) and n.get("@type") == "Service"):
+                continue
+            offer = n.get("offers")
+            if isinstance(offer, dict):
+                price = offer.pop("price", None) or (floor.group(1) if floor else None)
+                cur = offer.pop("priceCurrency", "USD")
+                if price:
+                    offer["priceSpecification"] = {
+                        "@type": "PriceSpecification",
+                        "minPrice": int(price),
+                        "priceCurrency": cur,
+                    }
+            elif offer is None and floor:
+                n["offers"] = {
+                    "@type": "Offer",
+                    "url": canonical,
+                    "priceSpecification": {
+                        "@type": "PriceSpecification",
+                        "minPrice": int(floor.group(1)),
+                        "priceCurrency": "USD",
+                    },
+                }
+    return graph
 
 
 def enrich_schema(s, path_rel):
@@ -2180,14 +2291,18 @@ def enrich_schema(s, path_rel):
             "image": f"{BASE}/assets/images/adriana-souza-santos.webp",
         })
 
-    # 6. CollectionPage + ItemList nos hubs (nao havia nenhum ItemList no site)
-    graph = add_collection(graph, s, path_rel, canonical)
-
-    # 7. WebPage com dateModified e autoria (eram 5 paginas com dateModified)
+    # 6. WebPage com dateModified e autoria (eram 5 paginas com dateModified)
     graph = add_webpage(graph, s, path_rel, canonical)
+
+    # 7. CollectionPage + ItemList nos hubs (nao havia nenhum ItemList no
+    #    site). Depois do WebPage: o hub usa o mesmo no, com @type trocado.
+    graph = add_collection(graph, s, path_rel, canonical)
 
     # 8. Equipe na /about/
     graph = add_team(graph, path_rel)
+
+    # 9. Correcoes da auditoria SEO de 25/09/2026 (5.7 a, b, c)
+    graph = fix_schema_2026_09(graph, s, path_rel, canonical)
 
     data["@graph"] = normalize_graph(graph)
     out = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
