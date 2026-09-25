@@ -1920,6 +1920,81 @@ def add_og(s, page_dir):
     return s.replace("</head>", og + "\n</head>", 1)
 
 
+HOURS = {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    "opens": "10:00",
+    "closes": "18:00",
+}
+
+# Campos que TODO no de unidade leva, em todas as paginas (auditoria
+# pre-lancamento 25/09/2026). Antes: #wilmington sem url/image/
+# parentOrganization em nenhuma pagina, #salem sem horario em 62 paginas,
+# priceRange em dois formatos e nenhum hasMap. hasMap usa o CID da ficha
+# do Google de cada unidade (lido no Local Falcon em 25/09/2026).
+LOCATION_FIELDS = {
+    f"{BASE}/#wilmington": {
+        "url": f"{BASE}/locations/wilmington-ma/",
+        "image": f"{BASE}/assets/images/locations/wilmington-ma-studio-entrance.jpg",
+        "parentOrganization": {"@id": f"{BASE}/#organization"},
+        "priceRange": "$250-$850",
+        "openingHoursSpecification": HOURS,
+        "hasMap": "https://maps.google.com/?cid=16715673055892397510",
+    },
+    f"{BASE}/#salem": {
+        "url": f"{BASE}/locations/salem-nh/",
+        "parentOrganization": {"@id": f"{BASE}/#organization"},
+        "priceRange": "$250-$850",
+        "openingHoursSpecification": HOURS,
+        "hasMap": "https://maps.google.com/?cid=8332848331847351639",
+    },
+}
+
+
+def normalize_graph(graph):
+    """Unidades completas e iguais em todo o site, uma Adriana so, texto limpo.
+
+    - no de unidade: garante os LOCATION_FIELDS (priceRange e hasMap sempre
+      sobrescrevem; os outros so entram se faltarem)
+    - Adriana aparecia como duas pessoas: /about/#adriana em 58 paginas e
+      /#adriana em 6. Toda referencia passa para PERSON_ID e nos duplicados
+      viram um so
+    - entidades HTML (&rsquo;, &amp;) saiam cruas no JSON-LD de 52 paginas
+    """
+    import html as _html
+
+    def fix(v):
+        if isinstance(v, str):
+            v = _html.unescape(v)
+            return PERSON_ID if v == f"{BASE}/#adriana" else v
+        if isinstance(v, list):
+            return [fix(x) for x in v]
+        if isinstance(v, dict):
+            return {k: fix(x) for k, x in v.items()}
+        return v
+
+    graph = [fix(n) for n in graph]
+    merged, out = {}, []
+    for n in graph:
+        if not isinstance(n, dict):
+            out.append(n)
+            continue
+        nid = n.get("@id")
+        if nid in LOCATION_FIELDS:
+            for k, val in LOCATION_FIELDS[nid].items():
+                if k in ("priceRange", "hasMap") or k not in n:
+                    n[k] = val
+        if nid and nid in merged and len(n) > 1:
+            base = merged[nid]
+            for k, val in n.items():
+                base.setdefault(k, val)
+            continue
+        if nid:
+            merged[nid] = n
+        out.append(n)
+    return out
+
+
 def enrich_schema(s, path_rel):
     m = re.search(r'<script type="application/ld\+json">(.*?)</script>', s, re.S)
     if not m:
@@ -2072,6 +2147,7 @@ def enrich_schema(s, path_rel):
     # 8. Equipe na /about/
     graph = add_team(graph, path_rel)
 
+    data["@graph"] = normalize_graph(graph)
     out = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
     return s[: m.start()] + '<script type="application/ld+json">' + out + "</script>" + s[m.end():]
 
