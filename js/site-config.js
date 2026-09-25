@@ -15,12 +15,8 @@ const SITE = {
   fresha: "https://www.fresha.com/a/adrianas-permanent-makeup-wilmington-ma-wilmington-211-lowell-street-jalpqett",
   freshaBookNow:
     "https://www.fresha.com/book-now/adrianas-permanent-makeup-zeaseit5/all-offer?share=true&pId=727586",
-  freshaServiceUrls: {
-    "yearly-touch-up":
-      "https://www.fresha.com/book-now/adrianas-permanent-makeup-zeaseit5/services?oiid=sv%3A18160395&share=true&pId=727586",
-    "flash-sale":
-      "https://www.fresha.com/book-now/adrianas-permanent-makeup-zeaseit5/services?oiid=sv%3A19707327&share=true&pId=727586",
-  },
+  // Links diretos por servico removidos em 25/09/2026: os oiid cairam em 404.
+  freshaServiceUrls: {},
   freshaReviews:
     "https://www.fresha.com/a/adrianas-permanent-makeup-wilmington-ma-wilmington-211-lowell-street-jalpqett#modal-reviews",
   gbp: "https://maps.app.goo.gl/oJRNewzwwWACAera6",

@@ -692,10 +692,13 @@ CITIES = {
 
 FRESHA_BOOK_BASE = "https://www.fresha.com/book-now/adrianas-permanent-makeup-zeaseit5"
 FRESHA_ALL_OFFER = f"{FRESHA_BOOK_BASE}/all-offer?share=true&pId=727586"
-FRESHA_SERVICE_URLS = {
-    "yearly-touch-up": f"{FRESHA_BOOK_BASE}/services?oiid=sv%3A18160395&share=true&pId=727586",
-    "flash-sale": f"{FRESHA_BOOK_BASE}/services?oiid=sv%3A19707327&share=true&pId=727586",
-}
+# Link direto por servico no Fresha (oiid=sv:...). Vazio de proposito: os dois
+# que existiam morreram (sv:18160395 e sv:19707327 caem em /offline, 404, em
+# 25/09/2026). O Fresha nao tem mais um "Yearly Touch-Up" unico: sao retoques
+# por tecnica (nano, nanocombo, sobrancelha ate 1 ano, 1-2 anos, labio), entao
+# o destino certo e o catalogo inteiro. Se voltar a usar oiid, testar no
+# navegador antes: o curl nao ve a pagina /offline.
+FRESHA_SERVICE_URLS = {}
 
 
 def fresha_book_url(slug):
