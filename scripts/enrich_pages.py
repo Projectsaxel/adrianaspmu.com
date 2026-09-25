@@ -2170,6 +2170,30 @@ def _logo_sem_prioridade(m):
     return tag
 
 
+def wrap_tables(s, path_rel):
+    """Toda <table> dentro de .table-scroll (rolagem horizontal no celular).
+
+    49 das 165 tabelas estavam fora dele. Com overflow-wrap:anywhere no CSS
+    elas cabiam na tela quebrando palavra no meio ('Proced/ure', 'LICEN/SE');
+    sem o corte, estourariam a largura. Com o wrapper, palavra inteira e a
+    tabela rola quando nao cabe. Idempotente."""
+    out, pos = [], 0
+    for m in re.finditer(r"<table\b.*?</table>", s, re.S):
+        antes = s[max(0, m.start() - 200):m.start()]
+        out.append(s[pos:m.start()])
+        if "table-scroll" in antes:
+            out.append(m.group(0))
+        else:
+            cap = re.search(r"<caption[^>]*>(.*?)</caption>", m.group(0), re.S)
+            rot = re.sub(r"<[^>]+>", "", cap.group(1)).strip() if cap else "Table"
+            rot = rot.replace('"', "&quot;")
+            out.append(f'<div class="table-scroll" tabindex="0" role="region" aria-label="{rot}">'
+                       + m.group(0) + "</div>")
+        pos = m.end()
+    out.append(s[pos:])
+    return "".join(out)
+
+
 def fix_lcp(s, path_rel):
     # primeira <img> do documento vira eager + fetchpriority (uma so)
     def repl(m):
@@ -2268,6 +2292,7 @@ def main():
                 s = add_og(s, dirpath)
                 s = enrich_schema(s, rel)
                 s = fix_lcp(s, rel)
+                s = wrap_tables(s, rel)
             # A 404 tambem leva tag: pagina de erro sem medicao e a
             # forma mais comum de um link quebrado sobreviver meses.
             s = add_analytics(s, rel)

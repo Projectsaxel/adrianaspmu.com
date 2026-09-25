@@ -610,10 +610,17 @@
   function initBookRail() {
     const rail = document.querySelector("[data-book-rail]");
     if (!rail) return;
-    const anchor = document.querySelector(".page-hero .btn, .hero .btn");
+    // .svc-hero e o hero das 45 paginas que tem a barra: sem ele no
+    // seletor, a ancora nunca era encontrada e a barra nunca aparecia.
+    const anchor = document.querySelector(".svc-hero .btn-primary, .page-hero .btn, .hero .btn");
     if (!anchor) return;
 
     rail.hidden = false;
+    // Altura real da barra para os botoes flutuantes subirem o suficiente
+    // (ela tem uma ou duas linhas conforme a tela e o numero de botoes).
+    const medir = () => document.documentElement.style.setProperty("--rail-h", rail.offsetHeight + "px");
+    medir();
+    window.addEventListener("resize", medir, { passive: true });
     const io = new IntersectionObserver(
       ([entry]) => rail.classList.toggle("is-visible", !entry.isIntersecting),
       { rootMargin: "-8px 0px 0px 0px" }

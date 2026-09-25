@@ -2359,8 +2359,13 @@ th, td {
   text-align: left;
   font-size: 0.9375rem;
   color: var(--ink);
-  overflow-wrap: anywhere;
-  word-break: break-word;
+  /* Era overflow-wrap:anywhere + word-break:break-word: no celular a
+     palavra quebrava em qualquer letra ('Proced/ure'). Agora a palavra
+     fica inteira e a tabela rola dentro do .table-scroll (o build envolve
+     toda tabela nele). */
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: manual;
 }
 th {
   font-size: 0.75rem;
@@ -3597,13 +3602,46 @@ main:has(.service-prose) {
   text-transform: uppercase; font-weight: 600; color: var(--ink-muted);
 }
 .book-rail .btn { white-space: nowrap; }
-/* o Message Us sobe para nao sentar em cima da barra */
-body:has(.book-rail.is-visible) .float-cta { bottom: 84px; }
 @media (max-width: 560px) {
   .book-rail { padding-inline: 1rem; }
   .book-rail-name { font-size: 1rem; }
   .book-rail .btn { padding-inline: 1rem; font-size: 0.8125rem; }
 }
+/* Barra com DOIS botoes (paginas de servico sem cidade: Book Wilmington
+   + Book Salem). A 360px nome, preco e os dois rotulos nao cabiam numa
+   linha e os botoes se atropelavam. Em tela estreita vira duas linhas:
+   nome e preco em cima, os dois botoes dividindo a largura embaixo,
+   sem a seta e com espacamento de letra menor. */
+@media (max-width: 560px) {
+  .book-rail:has(.btn + .btn) {
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+  }
+  .book-rail:has(.btn + .btn) .book-rail-info { flex: 1 0 100%; }
+  .book-rail:has(.btn + .btn) .btn {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 0.7rem 0.5rem;
+    letter-spacing: 0.04em;
+    font-size: 0.75rem;
+    text-align: center;
+    justify-content: center;
+  }
+  .book-rail:has(.btn + .btn) .btn-primary::after { display: none; }
+}
+
+/* O Message Us e a pilula "Pay over time" da Cherry sobem a altura REAL
+   da barra (--rail-h, medida pelo main.js), senao sentavam em cima dela.
+   O sufixo da classe da Cherry e gerado pelo widget: seletor por prefixo. */
+body:has(.book-rail.is-visible) .float-cta {
+  bottom: calc(var(--rail-h, 84px) + 0.75rem);
+}
+body:has(.book-rail.is-visible) [class*="floatingEstimator-floatingContainer"] {
+  bottom: calc(var(--rail-h, 84px) + 0.75rem) !important;
+  transition: bottom 0.35s var(--ease);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .book-rail { transition-duration: 0.01ms; }
 }
