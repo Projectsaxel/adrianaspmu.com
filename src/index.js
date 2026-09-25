@@ -117,10 +117,14 @@ async function handleContact(request, env, ctx) {
     return json({ ok: true });
   }
 
+  // Rapido demais: responde ERRO, nao sucesso. Era { ok: true } silencioso,
+  // e uma pessoa com autofill via "Thank you!", o GA4 contava o lead e o
+  // e-mail nunca saia. O main.js ja espera os 3s antes de enviar, entao
+  // isto so dispara para quem posta direto no endpoint.
   const elapsed = Number(data.elapsed);
   if (!Number.isFinite(elapsed) || elapsed < MIN_FILL_MS) {
     console.log(JSON.stringify({ event: "contact_spam", reason: "too_fast", elapsed }));
-    return json({ ok: true });
+    return json({ ok: false, error: "Please wait a moment and send your message again." }, 422);
   }
 
   const name = clean(data.name, LIMITS.name);

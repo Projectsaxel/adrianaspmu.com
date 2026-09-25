@@ -209,6 +209,17 @@
     next?.addEventListener("click", () => scroll(1));
   }
 
+  // O Worker descarta envio feito em menos de 3s (filtro de bot). Com
+  // autofill, uma pessoa de verdade envia o modal em menos que isso: antes
+  // ela via "Thank you!", o GA4 contava um lead e nenhum e-mail saia.
+  // Agora o cliente espera o que falta antes de enviar. O filtro continua
+  // valendo para quem posta direto no endpoint.
+  const MIN_FILL_MS = 3000;
+  function waitMinFill(start) {
+    const left = MIN_FILL_MS + 250 - (Date.now() - start);
+    return left > 0 ? new Promise((r) => setTimeout(r, left)) : Promise.resolve();
+  }
+
   function initContactForm() {
     const form = document.getElementById("contact-form");
     if (!form) return;
@@ -239,6 +250,7 @@
       show("Sending your message...", true);
 
       const payload = Object.fromEntries(new FormData(form).entries());
+      await waitMinFill(loadedAt);
       payload.elapsed = Date.now() - loadedAt;
       payload.page = window.location.pathname;
 
@@ -427,6 +439,7 @@
       submit.textContent = "Sending...";
       show("Sending your message...", true);
 
+      await waitMinFill(openedAt);
       payload.elapsed = Date.now() - openedAt;
       payload.page = window.location.pathname;
       payload.source = "floating-button";
