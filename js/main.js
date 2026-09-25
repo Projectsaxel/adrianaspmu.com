@@ -77,11 +77,21 @@
       toggle.setAttribute("aria-expanded", open);
     });
 
+    // Esc fecha o menu e devolve o foco ao botao que o abriu.
+    document.addEventListener("keydown", (e) => {
+      if (e.key !== "Escape" || !nav?.classList.contains("is-open")) return;
+      nav.classList.remove("is-open");
+      toggle?.setAttribute("aria-expanded", "false");
+      toggle?.focus();
+    });
+
     el.querySelectorAll(".submenu-toggle").forEach((btn) => {
       btn.addEventListener("click", (e) => {
         e.preventDefault();
         e.stopPropagation();
-        if (window.innerWidth > 900) return;
+        // Mesmo corte do CSS do hamburguer. Era innerWidth > 900: entre 901
+        // e 1099px o menu ja e hamburguer, mas o acordeao nao abria.
+        if (!window.matchMedia("(max-width: 1099.98px)").matches) return;
         const li = btn.closest(".has-submenu");
         if (!li) return;
         const expanded = !li.classList.contains("is-expanded");

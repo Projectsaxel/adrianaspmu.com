@@ -1736,7 +1736,10 @@ body.portfolio-lightbox-open {
   .submenu {
     position: static;
     opacity: 1;
-    visibility: visible;
+    /* inherit, nao visible: com visible o filho anulava o visibility:hidden
+       do .main-nav fechado, e o conteudo ficava invisivel (opacity 0) mas
+       clicavel por cima de metade da tela. */
+    visibility: inherit;
     transform: none;
     box-shadow: none;
     border: none;
@@ -2642,7 +2645,9 @@ th.col-recommended { color: var(--rose-deep); }
 .float-modal {
   position: fixed;
   inset: 0;
-  z-index: 100;
+  /* Acima do .site-header (1000): com 100 o header sticky ficava por cima
+     do modal e interceptava o toque no botao de enviar. */
+  z-index: 1100;
   display: grid;
   place-items: center;
   padding: 1.25rem;
@@ -5020,10 +5025,17 @@ html { font-size: 112.5%; }
 }
 
 @media (max-width: 1099.98px) {
-  /* No acordeao o mega vira lista simples: cinco blocos empilhados. */
+  /* No acordeao o mega vira lista simples: cinco blocos empilhados.
+     Fechado por padrao, como os outros submenus: era display:block fixo,
+     e o Services nascia aberto e ignorava o acordeao. Sem JS, o <noscript>
+     de cada pagina (.main-nav .submenu, mesma especificidade, vem depois)
+     continua abrindo tudo. */
   .main-nav .submenu--mega {
-    display: block;
+    display: none;
     padding: 0;
+  }
+  .main-nav .has-submenu.is-expanded > .submenu--mega {
+    display: block;
   }
   .main-nav .submenu--mega .mega-col + .mega-col { margin-top: 0.75rem; }
   .main-nav .submenu--mega .mega-hub {
