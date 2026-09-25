@@ -35,7 +35,7 @@ const SITE = {
       phone: "(781) 853-8063",
       hours: "Mon–Sat 10:00 AM – 6:00 PM; Sun Closed",
       geo: { lat: 42.539192, lng: -71.148805 },
-      license: "Town of Wilmington Business Certificate #26-26",
+      license: "Wilmington Board of Health: Body Art Facility 20261921; practitioners 20261923 (Adriana) and 20261924 (Livian)",
       areaServed:
         "Wilmington, Reading, North Reading, Burlington, Tewksbury, Andover, North Andover, Woburn, Lowell, and the Greater Boston North Shore",
     },
@@ -48,7 +48,7 @@ const SITE = {
       phone: "(978) 223-7496",
       hours: "Mon–Sat 10:00 AM – 6:00 PM; Sun Closed",
       geo: { lat: 42.782612, lng: -71.228213 },
-      license: "Compliant with Salem NH Body Art Regulations Chapter 433",
+      license: "NH OPLC Body Artist 4283; Town of Salem BODA-10 and BODE-4 (Salem Chapter 433)",
       areaServed:
         "Salem NH, Derry, Windham, Methuen MA, Lawrence MA, Hampstead, Plaistow, and the I-93 corridor",
       tag: "New Location",
@@ -64,11 +64,11 @@ const SITE = {
     },
   },
   stats: {
-    years: "18+",
+    years: "20+",
     procedures: "5,000+",
     reviews: "1,000+",
-    googleRating: "4.9",
-    googleCount: "174",
+    googleRating: "4.8",
+    googleCount: "217",
   },
 };
 

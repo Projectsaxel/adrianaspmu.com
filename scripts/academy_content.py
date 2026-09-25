@@ -48,7 +48,7 @@ def academy_body(img, depth: int = 1, course_href_base: str = "") -> str:
 
 <section class="trust-bar academy-stats" aria-label="Academy credentials">
   <div class="container trust-bar-inner">
-    <div><span class="stat-number">18+</span><span class="stat-label">Years of experience</span></div>
+    <div><span class="stat-number">20+</span><span class="stat-label">Years of experience</span></div>
     <div><span class="stat-number">300+</span><span class="stat-label">Students trained</span></div>
     <div><span class="stat-number">5,000+</span><span class="stat-label">Happy clients</span></div>
   </div>
@@ -71,14 +71,14 @@ def academy_body(img, depth: int = 1, course_href_base: str = "") -> str:
   <div class="container">
     <p class="section-label section-label--center">Instructor</p>
     <h2 class="heading-centered">Meet Our Instructor</h2>
-    <p class="direct-answer heading-centered">With over 18 years of experience, <strong>Adriana Santos</strong> has transformed the beauty industry through her artistry and education. Known for her precision, compassion, and dedication to excellence, she has trained hundreds of students and helped women worldwide build confidence, independence, and successful PMU careers.</p>
+    <p class="direct-answer heading-centered">With over 20 years of experience, <strong>Adriana Santos</strong> has transformed the beauty industry through her artistry and education. Known for her precision, compassion, and dedication to excellence, she has trained hundreds of students and helped women worldwide build confidence, independence, and successful PMU careers.</p>
     <div class="hero-grid academy-instructor-grid">
       <div class="hero-visual">
         {img("academy/adriana.jpg", "Adriana Santos — PMU educator", depth, "service-hero-img")}
       </div>
       <div>
         <h3>Adriana Santos</h3>
-        <p>Adriana is a <strong>Brazilian permanent makeup artist and educator</strong> with over 18 years of experience in the beauty industry. She has built a solid reputation for her professionalism, attention to detail, and passion for teaching.</p>
+        <p>Adriana is a <strong>Brazilian permanent makeup artist and educator</strong> with over 20 years of experience in the beauty industry. She has built a solid reputation for her professionalism, attention to detail, and passion for teaching.</p>
         <p>As the founder of <strong>Adriana's Academy</strong>, she has trained <strong>over 300 students</strong> through hands-on, high-quality programs designed to build real confidence and skill. With more than <strong>5,000 procedures performed</strong>, Adriana continues to shape the next generation of PMU artists with her modern approach and commitment to excellence.</p>
         <a class="btn btn-secondary" href="https://www.instagram.com/adrianas_pmu/" target="_blank" rel="noopener noreferrer">Academy Instagram</a>
       </div>

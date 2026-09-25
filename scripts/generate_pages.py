@@ -86,13 +86,7 @@ ORG_SCHEMA = """{
         "https://www.facebook.com/adrianaspmu",
         "https://www.instagram.com/adrianas_pmu/",
         "https://maps.app.goo.gl/oJRNewzwwWACAera6"
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "174",
-        "bestRating": "5"
-      }
+      ]
     },
     {
       "@type": "BeautySalon",
@@ -333,12 +327,12 @@ def home_body():
     <div class="hero-content">
       <p class="section-label">Master PMU Artist · Wilmington MA &amp; Salem NH</p>
       <h1>Permanent Makeup Studio and Academy in Wilmington, MA &amp; Salem, NH</h1>
-      <p class="direct-answer">Master Permanent Makeup Artist Adriana Souza Santos with 18+ years and 5,000+ procedures. Nano Brows, Microblading, Lip Blush, and Eyeliner at two New England locations.</p>
+      <p class="direct-answer">Master Permanent Makeup Artist Adriana Souza Santos with 20+ years and 5,000+ procedures. Nano Brows, Microblading, Lip Blush, and Eyeliner at two New England locations.</p>
       <div class="hero-badges">
         <span class="badge">Licensed PMU Artist</span>
         <span class="badge">Women-Owned</span>
         <span class="badge">Wheelchair Accessible</span>
-        <span class="badge">4.9 ★ (174 reviews)</span>
+        <span class="badge">4.8 ★ (217 reviews)</span>
       </div>
       <div class="hero-ctas">
         <a class="btn btn-primary" href="contact/">Book Your Consultation</a>
@@ -347,14 +341,14 @@ def home_body():
     </div>
     <div class="hero-visual">
       {img_tag("hero.webp", "Adriana's Permanent Makeup studio — Master PMU Artist in Wilmington MA and Salem NH", 0, "hero-img")}
-      <div class="hero-visual-badge" aria-hidden="true">18+ Years · 5,000+ Procedures</div>
+      <div class="hero-visual-badge" aria-hidden="true">20+ Years · 5,000+ Procedures</div>
     </div>
   </div>
 </section>
 
 <section class="trust-bar" aria-label="Studio credentials">
   <div class="container trust-bar-inner">
-    <div class="trust-item"><span class="trust-value">4.9★</span><span class="trust-key">Google Reviews</span></div>
+    <div class="trust-item"><span class="trust-value">4.8★</span><span class="trust-key">Google Reviews</span></div>
     <div class="trust-divider" aria-hidden="true"></div>
     <div class="trust-item"><span class="trust-value">5,000+</span><span class="trust-key">Procedures</span></div>
     <div class="trust-divider" aria-hidden="true"></div>
@@ -369,7 +363,7 @@ def home_body():
     <p class="section-label section-label--center">The Art of Effortless Beauty</p>
     <h2 class="heading-centered">What Is Permanent Makeup?</h2>
     <p class="direct-answer">Permanent makeup, also called cosmetic tattooing or micropigmentation, places color pigment beneath the skin to enhance brows, lips, or eyeliner. Results last 1 to 3 years and save time on daily makeup.</p>
-    <p class="fact-layer">PMU procedures use single-use sterile needles. Adriana is licensed in Wilmington, MA, Salem, NH, and Peabody, MA — under Town of Wilmington Business Certificate #26-26 and in compliance with Salem NH Body Art Regulations Chapter 433.</p>
+    <p class="fact-layer">PMU procedures use single-use sterile needles. Adriana holds Body Art Practitioner License 20261923 from the Wilmington Board of Health, where the studio holds Body Art Facility License 20261921, and in New Hampshire holds State Body Artist License 4283 (OPLC) and Town of Salem license BODA-10 under Salem Chapter 433.</p>
   </div>
 </section>
 
@@ -388,7 +382,7 @@ def home_body():
     <h2 class="heading-centered">Why Choose Adriana's PMU for Permanent Makeup?</h2>
     <p class="direct-answer">Master PMU Artist Adriana Souza Santos creates natural-looking results fully customized to each client's facial features—never a one-size-fits-all approach.</p>
     <div class="stats-grid">
-      <div><span class="stat-number">18+</span><span class="stat-label">Years experience</span></div>
+      <div><span class="stat-number">20+</span><span class="stat-label">Years experience</span></div>
       <div><span class="stat-number">5,000+</span><span class="stat-label">Procedures</span></div>
       <div><span class="stat-number">1,000+</span><span class="stat-label">Combined reviews</span></div>
       <div><span class="stat-number">4.9</span><span class="stat-label">Google rating</span></div>
@@ -969,12 +963,12 @@ for course, title, price, desc in [
 # Support pages
 write("about/index.html", shell(
     "About Adriana Souza Santos | Master PMU Artist",
-    "18+ years, 5,000+ procedures, founder of Adriana's PMU and Academy.",
+    "20+ years, 5,000+ procedures, founder of Adriana's PMU and Academy.",
     "About Adriana Souza Santos: Master Permanent Makeup Artist",
     f"""<section class="page-hero page-hero--split"><div class="container hero-grid">
     <div><h1>About Adriana Souza Santos</h1>
-    <p class="direct-answer">Master Permanent Makeup Artist with 18+ years of experience and 5,000+ procedures performed. Founder of Adriana's PMU and educator since 2017.</p>
-    <p class="fact-layer">Licensed under Town of Wilmington Business Certificate #26-26. Women-owned business. LGBTQ+ friendly.</p></div>
+    <p class="direct-answer">Master Permanent Makeup Artist with 20+ years of experience and 5,000+ procedures performed. Founder of Adriana's PMU and educator since 2017.</p>
+    <p class="fact-layer">Licensed by the Wilmington Board of Health (Body Art Facility 20261921), the State of New Hampshire (OPLC 4283) and the Town of Salem (BODA-10). Women-owned business. LGBTQ+ friendly.</p></div>
     <div class="hero-visual">{img_tag("adriana-quem-sou-eu.jpg", "Adriana Souza Santos — Master Permanent Makeup Artist", 1, "hero-img")}</div>
     </div></section>""", 1))
 
@@ -1346,7 +1340,7 @@ write("terms-of-use/index.html", shell("Terms of Use", "Terms of use.", "Terms o
 
 write("index.html", shell(
     "Permanent Makeup Studio & Academy | Wilmington MA & Salem NH | Adriana's PMU",
-    "Master PMU Artist with 18+ years, 5,000+ procedures. Nano Brows, Microblading, Lip Blush in Wilmington MA & Salem NH. Book consultation.",
+    "Master PMU Artist with 20+ years, 5,000+ procedures. Nano Brows, Microblading, Lip Blush in Wilmington MA & Salem NH. Book consultation.",
     "Permanent Makeup Studio and Academy in Wilmington, MA & Salem, NH",
     home_body(), 0))
 
@@ -1445,11 +1439,11 @@ def write_llms():
         service_lines.append("")
 
     content = f"""# Adriana's Permanent Makeup
-> Master Permanent Makeup Artist Adriana Souza Santos with 18+ years of experience and 5,000+ procedures performed. PMU studio and academy serving Wilmington, MA and Salem, NH (New England). Site language: English (en-US) only. Book appointments via Fresha: {FRESHA_ALL_OFFER}
+> Master Permanent Makeup Artist Adriana Souza Santos with 20+ years of experience and 5,000+ procedures performed. PMU studio and academy serving Wilmington, MA and Salem, NH (New England). Site language: English (en-US) only. Book appointments via Fresha: {FRESHA_ALL_OFFER}
 
 ## Core Pages
 - [Home]({SITE_URL}/): Permanent Makeup Studio and Academy in Wilmington MA & Salem NH
-- [About]({SITE_URL}/about/): Master PMU Artist with 18+ years and 5,000+ procedures
+- [About]({SITE_URL}/about/): Master PMU Artist with 20+ years and 5,000+ procedures
 - [Services]({SITE_URL}/services/): All permanent makeup services in MA and NH
 - [Locations]({SITE_URL}/locations/): Wilmington MA + Salem NH studios
 - [Academy]({SITE_URL}/academy/): Permanent Makeup training programs
@@ -1478,9 +1472,9 @@ def write_llms():
 - Flash Sale ($349): {fresha_book_url("flash-sale")}
 
 ## Trust & Credentials
-- Licensed: Town of Wilmington Business Certificate #26-26
-- Salem NH: Compliant with Body Art Regulations Chapter 433
-- 4.9 stars, 174 Google reviews; 1,000+ combined reviews (Google + Fresha)
+- Wilmington, MA (Wilmington Board of Health, valid through 31 Dec 2026): Body Art Facility License 20261921; Body Art Practitioner License 20261923 (Adriana Santos) and 20261924 (Livian Camargo Gomes)
+- Salem, NH: State of New Hampshire (OPLC) Body Artist License 4283 (Adriana Souza Santos, valid through 18 Jul 2028); Town of Salem Permanent Make-Up Artist BODA-10 and Body Art Establishment BODE-4 under Salem Chapter 433 (valid through 28 Feb 2027)
+- 4.8 stars, 217 Google reviews (Wilmington); 1,000+ combined reviews (Google + Fresha)
 - Women-owned, LGBTQ+ friendly, wheelchair accessible (Wilmington)
 - Email: info@adrianaspmu.com
 """

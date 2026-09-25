@@ -21,7 +21,7 @@ The Art of Effortless Beauty
 
 Permanent makeup, also called cosmetic tattooing or micropigmentation, places color pigment beneath the skin to enhance brows, lips, or eyeliner. Results last 1 to 3 years and save time on daily makeup.
 
-PMU procedures use single-use sterile needles. Adriana is licensed in Wilmington, MA, Salem, NH, and Peabody, MA — under Town of Wilmington Business Certificate #26-26 and in compliance with Salem NH Body Art Regulations Chapter 433.
+PMU procedures use single-use sterile needles. Adriana holds Body Art Practitioner License 20261923 from the Wilmington Board of Health, where the studio holds Body Art Facility License 20261921, and in New Hampshire holds State Body Artist License 4283 (OPLC) and Town of Salem license BODA-10 under Salem Chapter 433.
 
 Treatments
 
