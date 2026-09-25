@@ -177,7 +177,12 @@
             </div>
           </div>
           <div class="footer-bottom">
+            <div class="footer-copy">
             <p>© ${new Date().getFullYear()} ${SITE.legalName}. All rights reserved.</p>
+            <p style="font-size:12px;opacity:.7;margin-top:8px">
+              Website by <a href="https://axelseo.com/" rel="nofollow noopener" target="_blank">Axel SEO</a>
+            </p>
+            </div>
             <p>
               <a href="${resolvePath("/privacy-policy/")}">Privacy</a> ·
               <a href="${resolvePath("/terms-of-use/")}">Terms</a> ·
