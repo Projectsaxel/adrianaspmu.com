@@ -36,6 +36,12 @@ jobs:
       - name: Gemeos markdown para negociacao de conteudo
         run: python3 scripts/gen_markdown.py
 
+      # CSS minificado so na copia publicada: o css/styles.css do repo
+      # continua legivel. 164 KB -> 88 KB (43 -> 17 KB com gzip). Versao
+      # fixada; conferido pixel a pixel em 8 paginas no desktop (25/09/2026).
+      - name: Minificar CSS
+        run: npx --yes lightningcss-cli@1.33.0 --minify --targets '>= 0.25%' css/styles.css -o css/styles.css
+
       # Portao de qualidade: roda sobre o HTML ja buildado, que e o que vai
       # ao ar. Falhou, nao publica. Ver tests/check_html.py.
       - name: Checagem do HTML (links, head, schema, fatos)
