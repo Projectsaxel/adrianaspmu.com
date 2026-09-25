@@ -10,6 +10,67 @@
    este arquivo inteiro, atrasando o primeiro texto pintado. */
 
 /* ============================================================
+   FONTES HOSPEDADAS NO PROPRIO SITE (25/09/2026)
+
+   Antes vinham do Google Fonts. A troca da fonte reserva pela web font
+   mudava a altura dos titulos depois da primeira pintura: CLS 0,16 no
+   /academy/ e 0,09 na home (celular). Sem as web fonts o CLS era 0.
+   Agora: mesmos pesos de antes (Cormorant 300/400, Inter 400-600), do
+   mesmo dominio, com preload no <head>, e uma fonte reserva com as
+   METRICAS ajustadas (size-adjust e ascent/descent-override medidos
+   contra Times New Roman e Arial). A troca continua acontecendo, mas o
+   texto nao muda de tamanho.
+   ============================================================ */
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 300 400;
+  font-display: swap;
+  src: url("../assets/fonts/cormorant-garamond-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 300 400;
+  font-display: swap;
+  src: url("../assets/fonts/cormorant-garamond-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("../assets/fonts/inter-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("../assets/fonts/inter-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Cormorant Fallback";
+  src: local("Times New Roman"), local("TimesNewRomanPSMT");
+  size-adjust: 97.45%;
+  ascent-override: 94.82%;
+  descent-override: 29.45%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Inter Fallback";
+  src: local("Arial"), local("ArialMT");
+  size-adjust: 106.39%;
+  ascent-override: 91.06%;
+  descent-override: 22.67%;
+  line-gap-override: 0%;
+}
+
+/* ============================================================
    Adriana's PMU — DESIGN SYSTEM V1.0 (fev/2026)
    Fundo neutro quente, acentos discretos, e o rosa saturado
    UMA vez por tela. Nunca como campo, fundo de bloco ou card.
@@ -59,8 +120,8 @@
   --border: var(--line);
 
   /* --- 02 TIPO: duas familias, papeis fixos --------------- */
-  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: "Cormorant Garamond", "Cormorant Fallback", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", "Inter Fallback", system-ui, -apple-system, sans-serif;
 
   --h1-size: 3.5rem;    --h1-lh: 1.08;  --h1-ls: -0.02em;   --h1-w: 300;
   --h2-size: 2.5rem;    --h2-lh: 1.15;  --h2-ls: -0.01em;   --h2-w: 300;
@@ -4378,7 +4439,14 @@ html { font-size: 112.5%; }
   flex: 0 0 auto;
   scroll-snap-align: center;
 }
-.cf:not([data-cf-ready]) .cf-controls { display: none; }
+/* Controles invisiveis mas OCUPANDO espaco ate o JS montar a galeria.
+   Com display:none eles surgiam depois e empurravam a pagina para baixo:
+   CLS 0,54 no /academy/, onde a galeria esta na primeira dobra. */
+.cf:not([data-cf-ready]) .cf-controls { visibility: hidden; }
+/* Com JS (classe .js no <html>, posta no <head>), a faixa pre-montagem
+   fica invisivel: as fotos nao aparecem em fila para depois pular para o
+   3D. Sem JS, a faixa rolavel continua sendo a galeria. */
+.js .cf:not([data-cf-ready]) .cf-track { visibility: hidden; }
 
 @media (prefers-reduced-motion: reduce) {
   .cf-slide { transition-duration: 0.01ms; }

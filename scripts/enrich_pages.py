@@ -2194,6 +2194,20 @@ def wrap_tables(s, path_rel):
     return "".join(out)
 
 
+FONT_PRELOAD = '<link rel="preload" href="/assets/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>'
+
+JS_FLAG = '<script>document.documentElement.classList.add("js")</script>'
+
+
+def add_js_flag(s, path_rel):
+    """Marca <html class="js"> antes de qualquer pintura, para o CSS saber
+    que o JS vai montar os componentes (galeria coverflow) e reservar o
+    lugar deles sem layout shift. Idempotente."""
+    if JS_FLAG in s:
+        return s
+    return re.sub(r'(<meta charset="[^"]*">)', r"\1\n  " + JS_FLAG, s, count=1)
+
+
 def fix_lcp(s, path_rel):
     # primeira <img> do documento vira eager + fetchpriority (uma so)
     def repl(m):
@@ -2293,6 +2307,7 @@ def main():
                 s = enrich_schema(s, rel)
                 s = fix_lcp(s, rel)
                 s = wrap_tables(s, rel)
+                s = add_js_flag(s, rel)
             # A 404 tambem leva tag: pagina de erro sem medicao e a
             # forma mais comum de um link quebrado sobreviver meses.
             s = add_analytics(s, rel)
@@ -2302,8 +2317,57 @@ def main():
                 with open(fp, "w", encoding="utf-8") as f:
                     f.write(s)
                 changed += 1
+    sync_404_chrome()
     print(f"enrich_pages: {changed} paginas enriquecidas")
     return 0
+
+
+def _bloco(html, div_id):
+    """Conteudo de <div id="..."> ate o </div> que o fecha (conta aninhamento)."""
+    m = re.search(rf'<div id="{div_id}">', html)
+    if not m:
+        return None
+    i = m.end()
+    depth, pos = 1, i
+    for t in re.finditer(r"<div\b|</div>", html[i:]):
+        depth += 1 if t.group(0) == "<div" else -1
+        if depth == 0:
+            return (m.start(), i, i + t.start(), i + t.end())
+        pos = t.end()
+    return None
+
+
+def sync_404_chrome():
+    """Header e footer da 404 copiados da home ja pronta, com caminhos
+    absolutos (a 404 e servida em qualquer URL, entao "./x" quebraria).
+
+    Antes o header da 404 entrava por JS: sem navegacao para quem nao
+    roda JS e CLS 0,18 no celular. O static_nav.js geraria o menu antigo
+    de 8 itens; copiar da home garante o mesmo mega-menu do resto do site."""
+    home_fp, fp = os.path.join(ROOT, "index.html"), os.path.join(ROOT, "404.html")
+    if not (os.path.exists(home_fp) and os.path.exists(fp)):
+        return
+    home = open(home_fp, encoding="utf-8").read()
+    s = open(fp, encoding="utf-8").read()
+    orig = s
+    absol = lambda t: re.sub(r'(href|src)="\./', r'\1="/', t).replace('href="./"', 'href="/"')
+    for div_id in ("site-header", "site-footer"):
+        h, t = _bloco(home, div_id), _bloco(s, div_id)
+        if not h or not t:
+            continue
+        s = s[: t[1]] + absol(home[h[1]:h[2]]) + s[t[2]:]
+    ns = re.search(r'<noscript><style id="nav-sem-js">.*?</noscript>', home, re.S)
+    if ns and 'id="nav-sem-js"' not in s:
+        s = s.replace("</head>", ns.group(0) + "\n</head>", 1)
+    # Fontes hospedadas no site (ver css/styles.css): tira qualquer resto
+    # de Google Fonts e garante o preload, como nas outras paginas.
+    s = re.sub(r'<link rel="preconnect" href="https://fonts\.(?:googleapis|gstatic)\.com"[^>]*>', "", s)
+    s = re.sub(r'<link [^>]*href="https://fonts\.googleapis\.com/[^"]*"[^>]*>', "", s)
+    if "assets/fonts/inter-latin.woff2" not in s:
+        s = s.replace("</head>", FONT_PRELOAD + "\n</head>", 1)
+    s = add_js_flag(s, "404.html")
+    if s != orig:
+        open(fp, "w", encoding="utf-8").write(s)
 
 
 if __name__ == "__main__":
