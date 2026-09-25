@@ -1,5 +1,39 @@
 #!/usr/bin/env python3
-"""Generate static HTML pages from semantic architecture PDF."""
+"""Generate static HTML pages from semantic architecture PDF.
+
+⚠  ESTE SCRIPT ESTA DEFASADO EM RELACAO AO REPOSITORIO. NAO RODE SEM LER.
+
+    Ele NAO faz parte do deploy (o CI roda static_nav.js, enrich_pages.py e
+    gen_markdown.py — ver .github/workflows). Foi o andaime que criou a
+    primeira versao das paginas; de la para ca o conteudo foi reescrito
+    direto no HTML, que hoje e a fonte da verdade.
+
+    Rodar este script AGORA sobrescreveria conteudo real por versoes
+    antigas ou vazias. Verificado em 21/09/2026:
+
+      - /prices/          -> voltaria a ser "Flash Sale $349!", um preco que
+                             nao existe na tabela ($250 a $850) e que o texto
+                             atual da pagina nega explicitamente
+      - /privacy-policy/  -> "Content to be finalized before publish."
+      - /terms-of-use/    -> "Content to be finalized before publish."
+
+    Por isso ele agora exige uma confirmacao explicita:
+
+        python3 scripts/generate_pages.py --eu-sei-que-sobrescreve
+
+    Antes de usar, atualize as funcoes correspondentes OU gere em outro
+    diretorio e compare. Em caso de duvida, nao rode.
+"""
+import sys as _sys
+
+if "--eu-sei-que-sobrescreve" not in _sys.argv:
+    raise SystemExit(
+        "generate_pages.py NAO foi executado.\n"
+        "Ele esta defasado e sobrescreveria /prices/, /privacy-policy/ e\n"
+        "/terms-of-use/ com conteudo antigo ou vazio. Leia o docstring no\n"
+        "topo do arquivo. Para rodar mesmo assim:\n"
+        "  python3 scripts/generate_pages.py --eu-sei-que-sobrescreve"
+    )
 import os
 import sys
 from pathlib import Path
@@ -938,7 +972,7 @@ write("about/index.html", shell(
     <div><h1>About Adriana Souza Santos</h1>
     <p class="direct-answer">Master Permanent Makeup Artist with 18+ years of experience and 5,000+ procedures performed. Founder of Adriana's PMU and educator since 2017.</p>
     <p class="fact-layer">Licensed under Town of Wilmington Business Certificate #26-26. Women-owned business. LGBTQ+ friendly.</p></div>
-    <div class="hero-visual">{img_tag("about-adriana.jpg", "Adriana Souza Santos — Master Permanent Makeup Artist", 1, "hero-img")}</div>
+    <div class="hero-visual">{img_tag("adriana-quem-sou-eu.jpg", "Adriana Souza Santos — Master Permanent Makeup Artist", 1, "hero-img")}</div>
     </div></section>""", 1))
 
 write("contact/index.html", shell(

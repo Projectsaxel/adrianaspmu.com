@@ -158,3 +158,13 @@ Approval and rates subject to eligibility. Cherry is a financial
 ## Ready to Book Your Permanent Makeup Appointment?
 
 Every service includes the perfecting touch-up and written aftercare instructions, plus phone access to the studio during healing. Book online for Wilmington, MA or Salem, NH, or call ahead with any pre-care or contraindication question first.
+
+## Frequently Asked Questions
+
+Surface healing takes about 4 weeks, and the colour keeps settling for a few weeks after that. This is why the perfecting session is scheduled 6 to 8 weeks out rather than sooner: judging the result before the skin has finished healing leads to correcting something that was going to settle on its own.
+
+Spreading redness, swelling that increases after the first days, pus, fever, or pain that gets worse rather than better are signs for a clinician, not for the studio. The studio handles colour and healing of the pigment; it does not diagnose or treat infection, and will tell you to see a doctor.
+
+Pregnancy, breastfeeding, being under 18 and current isotretinoin use are refused at both studios with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need written clearance from your doctor before booking. These are published here so you can check before paying anything.
+
+The principles are the same — keep it clean, do not pick, avoid soaking and direct sun — but the timelines and the specific cautions differ by area, and lips in particular have their own instructions around cold sores. The written instructions you take home are specific to the procedure you had.

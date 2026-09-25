@@ -16,11 +16,11 @@ Instructor
 
 ## Meet Our Instructor
 
-With over 18 years of experience, **Adriana Santos** has transformed the beauty industry through her artistry and education. Known for her precision, compassion, and dedication to excellence, she has trained hundreds of students and helped women worldwide build confidence, independence, and successful PMU careers.
+With over 20 years of experience, **Adriana Santos** has transformed the beauty industry through her artistry and education. Known for her precision, compassion, and dedication to excellence, she has trained hundreds of students and helped women worldwide build confidence, independence, and successful PMU careers.
 
 ### Adriana Santos
 
-Adriana is a **Brazilian permanent makeup artist and educator** with over 18 years of experience in the beauty industry. She began her career in Brazil, one of the largest permanent makeup markets in the world, and brought that training to Massachusetts when she founded Adriana’s Permanent Makeup in 2017. She teaches in English and in Portuguese, and has built a solid reputation for her professionalism, attention to detail, and passion for teaching.
+Adriana is a **Brazilian permanent makeup artist and educator** with over 20 years of experience in the beauty industry. She began her career in Brazil, one of the largest permanent makeup markets in the world, and brought that training to Massachusetts when she founded Adriana’s Permanent Makeup in 2017. She teaches in English and in Portuguese, and has built a solid reputation for her professionalism, attention to detail, and passion for teaching.
 
 As the founder of **Adriana's Academy**, she has trained **over 300 students** through hands-on, high-quality programs designed to build real confidence and skill. With more than **5,000 procedures performed**, Adriana continues to shape the next generation of PMU artists with her modern approach and commitment to excellence.
 
@@ -62,6 +62,16 @@ $7,000
 
 $700/month
 
+## VIP Masterclass
+
+One-on-one permanent makeup training built around where you actually are: your level, the technique you want, and how many sessions that honestly takes. Open to complete beginners and to working artists correcting a specific technique.
+
+There is no fixed syllabus and no fixed price, because a single number would be wrong for almost everyone. An **in-house payment plan** is available for this course.
+
+Quoted individually
+
+All three courses are taught at the [Peabody, MA training studio at 39 Cross Street](../locations/peabody-ma/), students only.
+
 ## Academy Gallery
 
 Student testimonials
@@ -97,3 +107,36 @@ Our courses are not financed through Cherry, which covers our permanent makeup s
 ## Ready to Start Your PMU Career?
 
 Apply for the 100-Hour Fundamental course or Apprenticeship program today.
+
+Reviewed by [Adriana Souza Santos, Master Permanent Makeup Artist](../about/) with 20+ years and 5,000+ procedures, AAM Diamond Certified Trainer, responsible for this page's accuracy. Questions: [contact page](../contact/). Last reviewed September 21, 2026.
+
+## Who Is This Training For, and Who Is It Not For?
+
+This is for anyone building a career in permanent makeup, from complete beginners to working artists correcting a specific technique.
+
+**It is not for you if** you want a weekend hobby certificate, or you expect the certificate itself to license you to work — licensing is issued by government, not by a school.
+
+## What Should You Check Before Paying for Any PMU Course?
+
+Six things are worth verifying with any permanent makeup school: who actually teaches, whether the certificate is accredited, whether it licenses you to work, how much live-model practice you get, what the price covers, and where the training happens.
+
+| What to check | What to ask any school | The answer here |
+| --- | --- | --- |
+| Who is actually teaching | Ask for the instructor’s name and credential, not the school’s. Many schools sell a brand and hand the class to someone else. | Adriana Souza Santos teaches, and holds AAM Diamond Certified Trainer status — the American Academy of Micropigmentation’s highest instructor level — with 5,000+ procedures and 300+ students trained. |
+| Whether the certificate is accredited | Ask which body accredits the certificate, and confirm that body exists and recognises the school. | The 100-Hour Fundamental is accredited by the American Academy of Micropigmentation. |
+| Certificate against licence | Ask whether the certificate lets you work legally. A school that lets you believe it does is selling you a problem. | It does not, and that is stated plainly here: the certificate is training. The licence to practise is issued by government — town by town in Massachusetts, at state level in New Hampshire under RSA 314-A. |
+| Hands-on practice on live models | Ask how many live models you work on, and who supervises while you do. | The 100-Hour Fundamental is 9 days with practice on live models under supervision; the apprenticeship is a year of supervised practice at $700 a month. |
+| What the price covers | Ask for the total, and what is not in it. | $7,000 for the 100-Hour Fundamental, $700 a month for the apprenticeship. The VIP Masterclass is quoted per student because the scope changes. Cherry installments are available. |
+| Where the training happens | Ask for the training address, and whether clients are treated in the same room. | All training is at 39 Cross Street, Suite 206, Peabody, MA, students only. Client procedures happen at the Wilmington and Salem studios, never at the academy. |
+
+## Frequently Asked Questions
+
+The 100-Hour Fundamental at $7,000 is the structured entry point: 9 days, five techniques, AAM-accredited. The apprenticeship at $700 a month is a year of supervised practice instead. The VIP Masterclass is quoted individually for cases that fit neither. The consultation tells you which, honestly.
+
+No, and no school’s does. The certificate is training; the licence to practise is issued by government. Massachusetts licenses body art town by town through each Board of Health, while New Hampshire licenses at state level under RSA 314-A. You apply where you intend to work, after training.
+
+Yes. Cherry offers 4 interest-free payments or up to 24 months with interest for the 100-Hour Fundamental, using a soft credit check that does not affect your score. The apprenticeship is already monthly at $700, and the VIP Masterclass has its own in-house plan set when it is quoted.
+
+Adriana Souza Santos, AAM Diamond Certified Trainer — the American Academy of Micropigmentation’s highest instructor level. More than 5,000 procedures across 20+ years, over 300 students trained, and New Hampshire Body Artist licence 4283 that anyone can verify at the state’s public lookup.
+
+Yes. The 100-Hour Fundamental includes practice on live models under supervision across its 9 days, and the apprenticeship is built around a year of supervised model practice and client simulation. Training happens only at the Peabody studio, which serves students and never clients.

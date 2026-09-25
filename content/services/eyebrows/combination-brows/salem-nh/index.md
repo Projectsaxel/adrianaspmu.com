@@ -1,16 +1,16 @@
 <!-- Combination Brows in Salem, NH | Adriana's PMU -->
 <!-- canonical: https://adrianaspmu.com/services/eyebrows/combination-brows/salem-nh/ -->
-> Combination Brows in Salem, NH at Adriana's Permanent Makeup, 117A Main St. Custom pricing. Master PMU artist with 18+ years. Call (978) 223-7496 to book.
+> Combination Brows in Salem, NH at Adriana's Permanent Makeup, 117A Main St. Custom pricing. Master PMU artist with 20+ years. Call (978) 223-7496 to book.
 
 # Combination Brows in Salem, NH
 
-Combination Brows in Salem, NH is quoted after a free consultation and includes the perfecting session, blending hair-like strokes with soft shading that last 1 to 3 years. Book with Adriana Souza Santos at 117A Main Street, on Route 97.
+Combination Brows in Salem, NH is quoted after a consultation and includes the perfecting session, blending hair-like strokes with soft shading that last 1 to 3 years. Book with Adriana Souza Santos at 117A Main Street, on Route 97.
 
 **Combination Brows in Salem, NH is a custom-quoted procedure at 117A Main Street.**
 
 ## How Much Does Combination Brows Cost in Salem, NH, and What's Included?
 
-Combination Brows in Salem, NH is priced individually after a free consultation, since the strokes-to-shading mix varies brow to brow. The quote includes the perfecting session 6 to 8 weeks later, a $300 yearly touch-up, and Cherry payment plans on the total.
+Combination Brows in Salem, NH is priced individually after a consultation, since the strokes-to-shading mix varies brow to brow. The quote includes the perfecting session 6 to 8 weeks later, a $300 yearly touch-up, and Cherry payment plans on the total.
 
 | Item | Detail |
 | --- | --- |
@@ -55,7 +55,7 @@ Main Street is Route 97, western terminus at NH-28, Broadway; the address sits i
 
 ## What Backs the Artist Performing Combination Brows in Salem?
 
-Adriana Souza Santos, who performs Combination Brows at the Salem studio, has completed more than 5,000 procedures and trained more than 300 students over an 18-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in both English and Portuguese.
+Adriana Souza Santos, who performs Combination Brows at the Salem studio, has completed more than 5,000 procedures and trained more than 300 students over an 20-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in both English and Portuguese.
 
 *The Salem studio, where Combination Brows appointments begin.*
 
@@ -71,7 +71,7 @@ Deposit terms are confirmed by phone at (978) 223-7496. Signs that need a doctor
 
 Combination Brows in Salem, NH is performed at 117A Main Street, Salem, NH 03079, reached at (978) 223-7496. The studio is open Monday through Saturday, 10 to 6, closed Sunday — a different address and phone than the Wilmington, Massachusetts studio.
 
-Combination Brows in Salem, NH is priced after a free consultation, since the mix of strokes and shading varies. The quote includes the perfecting session 6 to 8 weeks later; a yearly touch-up, from $300, follows roughly 12 months after that, and Cherry covers the quoted total.
+Combination Brows in Salem, NH is priced after a consultation, since the mix of strokes and shading varies. The quote includes the perfecting session 6 to 8 weeks later; a yearly touch-up, from $300, follows roughly 12 months after that, and Cherry covers the quoted total.
 
 Yes. Main Street in Salem is New Hampshire Route 97 along its entire length, with its western terminus at NH-28, Broadway. The address itself sits in the Salem Depot area, and the nearest I-93 access is Exit 2, Pelham Road.
 
@@ -84,6 +84,18 @@ Combination Brows results typically last 1 to 3 years before fading evenly. Abou
 Yes. The Salem studio offers payment plans through Cherry Technologies, an independent lender. Options include 4 interest-free payments, or a longer plan up to 24 months with interest. Approval is not guaranteed; Cherry, not the studio, sets the final terms.
 
 Combination Brows blends the hair-like strokes used in Nano Brows, at $650, with the soft shading used in Powder Brows, at $550, in one appointment. Because the stroke-to-shading mix varies by brow, pricing is custom and quoted after the in-person consultation.
+
+Combination Brows is quoted at the consultation rather than listed at a fixed price, because the work needed changes from face to face. Every other service is published openly, from $250 to $850, on the [price list](../../../../prices/), so you can see the range the studio works in before you book anything.
+
+Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent lender: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
+
+The perfecting session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
+
+Most results hold 12 to 24 months before fading becomes visible. After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
+
+Yes. Pregnancy, breastfeeding, being under 18, and current isotretinoin use are refused at both studios, with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need clearance from your doctor first. The full list is published in the [contraindications guide](../../../../aftercare/) before you book, not after.
+
+Adriana Souza Santos has performed more than 5,000 procedures across 20+ years and trained over 300 students. She holds AAM Diamond Certified Trainer status and New Hampshire Body Artist licence 4283, valid through 18 July 2028, which you can verify yourself at the state’s public lookup rather than take on trust.
 
 ## Explore Other Brow Techniques and the Salem Studio
 

@@ -1,12 +1,19 @@
 <!-- Permanent Makeup in Wilmington MA & Salem NH | Adriana's PMU -->
 <!-- canonical: https://adrianaspmu.com/ -->
-> Master PMU Artist with 18+ years, 5,000+ procedures. Nano Brows, Microblading, Lip Blush in Wilmington MA & Salem NH. Book consultation.
+> Master PMU Artist with 20+ years, 5,000+ procedures. Nano Brows, Microblading, Lip Blush in Wilmington MA & Salem NH. Book consultation.
 
 Wilmington, MA · Salem, NH
 
-# Permanent Makeup Studio *and Academy* in Wilmington, MA & Salem, NH
+# Permanent Makeup Studio *& Academy* in Wilmington, MA & Salem, NH
 
-Master Permanent Makeup Artist Adriana Souza Santos has performed more than 5,000 procedures across 18+ years, bringing a Brazilian-trained eye for color to Nano Brows, Microblading, Lip Blush, and Eyeliner. Prices run from $250 to $850 at two studios, Wilmington, MA and Salem, NH, and every visit starts with a free consultation in English or Portuguese.
+The Artist
+
+## Adriana Souza Santos
+
+Master PMU Artist & Educator · 20+ years · 5,000+ procedures
+
+[Book a Consultation](contact/)
+ [Meet the artist →](about/)
 
 The Art of Effortless Beauty
 
@@ -62,7 +69,7 @@ Every service links to its own page with technique details, price, and before-an
 | [Brows + Lips Combo](services/combos/eyebrows-lips-combo/) | Combos | $850 |
 | [Yearly Touch-Up](services/touch-ups/yearly-touch-up/) | Touch-Ups | from $300 |
 
-A perfecting session is included in every original price, scheduled 6 to 8 weeks after the first appointment. The Yearly Touch-Up is a separate paid visit, booked about 12 months later, priced by how much pigment remains.
+A perfecting session is included in every original price, scheduled 6 to 8 weeks after the first appointment. The Yearly Touch-Up is a separate paid visit, booked about 12 months later, priced by how much pigment remains. See [the full price list and the real ways to pay less](prices/), including combo packages and payment plans.
 
 Why Adriana's
 
@@ -104,9 +111,9 @@ Your Visit
 
 ## How Does a Permanent Makeup Appointment Work?
 
-A visit starts with a free consultation and skin assessment, moves through design approval, numbing, and pigment placement, and finishes with a perfecting session 6 to 8 weeks later, included in your original price. Full healing takes about 4 weeks.
+A visit starts with a consultation and skin assessment, moves through design approval, numbing, and pigment placement, and finishes with a perfecting session 6 to 8 weeks later, included in your original price. Full healing takes about 4 weeks.
 
-- Free consultation and mapping, offered in English or Portuguese
+- Consultation and mapping, offered in English or Portuguese
 - Design approval before any pigment is placed
 - Numbing, then pigment placement with single-use sterile needles
 - Perfecting session 6 to 8 weeks later, included in the original price
@@ -143,3 +150,5 @@ Academy
 Adriana's Academy is a separate training facility at 39 Cross Street, Suite 206, Peabody, MA — students only, with no client procedures performed on site. The 100-Hour Fundamental course costs $7,000 for an AAM-accredited certificate across five techniques; the apprenticeship alone runs $700 a month.
 
 Training happens only in Peabody. Client appointments for brows, lips, and eyeliner stay at the Wilmington, MA and Salem, NH studios.
+
+Reviewed by [Adriana Souza Santos, Master Permanent Makeup Artist](./about/) with 20+ years and 5,000+ procedures, AAM Diamond Certified Trainer, responsible for this page's accuracy. Questions: [contact page](./contact/). Last reviewed September 21, 2026.

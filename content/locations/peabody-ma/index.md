@@ -4,7 +4,7 @@
 
 # Adriana's Academy: PMU Training in Peabody, Massachusetts
 
-Adriana's Academy trains permanent makeup artists at 39 Cross Street, Suite 206, Peabody, in a nine-day, AAM Diamond-certified 100 Hours Fundamental Class taught by a Diamond Certified Trainer with 18-plus years in the industry — the only Adriana's address where students, not clients, are the ones being trained.
+Adriana's Academy trains permanent makeup artists at 39 Cross Street, Suite 206, Peabody, in a nine-day, AAM Diamond-certified 100 Hours Fundamental Class taught by a Diamond Certified Trainer with 20-plus years in the industry — the only Adriana's address where students, not clients, are the ones being trained.
 
 **Adriana's Academy in Peabody, Massachusetts is the training division of Adriana Beauty Services, Inc., where aspiring and working permanent makeup artists complete hands-on coursework, not client procedures, at 39 Cross Street, Suite 206.**
 
@@ -66,7 +66,7 @@ The most common hesitations about the Peabody program are the $7,000 tuition and
 
 ## What Experience Backs Training at the Peabody Academy, and Who Wrote This Page?
 
-Adriana Souza Santos has taught every class at the Peabody academy for 18-plus years, trained more than 300 students, and performed over 5,000 procedures herself; she also wrote and is responsible for this page, which describes the Peabody academy only, not the Wilmington, MA or Salem, NH studios.
+Adriana Souza Santos has taught every class at the Peabody academy for 20-plus years, trained more than 300 students, and performed over 5,000 procedures herself; she also wrote and is responsible for this page, which describes the Peabody academy only, not the Wilmington, MA or Salem, NH studios.
 
 Tuition already includes a full kit, live models, lifetime support, and the right to retake the class. Questions: (781) 853-8063 or the [contact page](../../contact/). Last reviewed September 10, 2026.
 
@@ -76,7 +76,7 @@ Adriana's Academy is the training division of Adriana Beauty Services, Inc., at 
 
 The academy sits at the junction of Route 114 and Route 128, across from the Northshore Mall. The nearest access is Route 128 Exit 40, signed 40A/40B, at mile 39.7 of the route's mileposting; I-95 has already split off Route 128 further south, so this exit belongs to Route 128 alone.
 
-Every class is taught personally by Adriana Souza Santos, 18-plus years in permanent makeup, who began her career in Brazil before opening the U.S. business in 2017. She holds AAM Diamond Certified Trainer status, has performed over 5,000 procedures, and has trained more than 300 students, in English and Portuguese.
+Every class is taught personally by Adriana Souza Santos, 20-plus years in permanent makeup, who began her career in Brazil before opening the U.S. business in 2017. She holds AAM Diamond Certified Trainer status, has performed over 5,000 procedures, and has trained more than 300 students, in English and Portuguese.
 
 The 100 Hours Fundamental Class is $7,000, or $15,400 combined with the 1-year apprenticeship. The apprenticeship alone runs $700 a month. The VIP Masterclass is private, one-on-one instruction priced on request around the student's level. Payment plans are available for both of the fixed-price courses.
 

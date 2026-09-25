@@ -49,7 +49,7 @@ The touch-up at 6 to 8 weeks is included above; the yearly touch-up, from $300, 
 
 ## What Experience Does the Artist at the Salem, NH Studio Have, and Who Wrote This Page?
 
-Adriana Souza Santos, the Master Permanent Makeup Artist behind the Salem, NH studio and the author of this page, has performed more than 5,000 procedures and trained more than 300 students over an 18-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in both English and Portuguese.
+Adriana Souza Santos, the Master Permanent Makeup Artist behind the Salem, NH studio and the author of this page, has performed more than 5,000 procedures and trained more than 300 students over an 20-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in both English and Portuguese.
 
 The New Hampshire licensing information above was checked against the text of RSA 314-A; it is not a claim that this business holds that license. Last reviewed September 10, 2026.
 

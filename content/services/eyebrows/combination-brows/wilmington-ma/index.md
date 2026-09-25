@@ -1,16 +1,16 @@
 <!-- Combination Brows in Wilmington, MA | Adriana's PMU -->
 <!-- canonical: https://adrianaspmu.com/services/eyebrows/combination-brows/wilmington-ma/ -->
-> Combination Brows in Wilmington, MA at 211 Lowell St. Custom pricing after consultation. Master PMU artist, 18+ years. Call (781) 853-8063.
+> Combination Brows in Wilmington, MA at 211 Lowell St. Custom pricing after consultation. Master PMU artist, 20+ years. Call (781) 853-8063.
 
 # Combination Brows in Wilmington, MA
 
-Combination Brows in Wilmington, MA is quoted after a free consultation and includes the perfecting session, blending hair-like strokes with soft shading that last 1 to 3 years. Book with Adriana Souza Santos at 211 Lowell Street, Suite F, on Route 129.
+Combination Brows in Wilmington, MA is quoted after a consultation and includes the perfecting session, blending hair-like strokes with soft shading that last 1 to 3 years. Book with Adriana Souza Santos at 211 Lowell Street, Suite F, on Route 129.
 
 **Combination Brows in Wilmington, MA is a custom-quoted procedure at 211 Lowell Street, Suite F.**
 
 ## How Much Does Combination Brows Cost in Wilmington, MA, and What's Included?
 
-Combination Brows in Wilmington, MA is priced individually after a free consultation, since the strokes-to-shading mix varies brow to brow. The quote includes the perfecting session 6 to 8 weeks later, a $300 yearly touch-up, and Cherry payment plans on the total.
+Combination Brows in Wilmington, MA is priced individually after a consultation, since the strokes-to-shading mix varies brow to brow. The quote includes the perfecting session 6 to 8 weeks later, a $300 yearly touch-up, and Cherry payment plans on the total.
 
 | Item | Detail |
 | --- | --- |
@@ -55,7 +55,7 @@ Lowell Street is Massachusetts Route 129, crossing Route 38 near the town center
 
 ## What Backs the Artist Performing Combination Brows in Wilmington?
 
-Adriana Souza Santos, who performs Combination Brows at the Wilmington studio, has completed more than 5,000 procedures and trained more than 300 students over an 18-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in both English and Portuguese.
+Adriana Souza Santos, who performs Combination Brows at the Wilmington studio, has completed more than 5,000 procedures and trained more than 300 students over an 20-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in both English and Portuguese.
 
 *The Wilmington studio, where Combination Brows appointments begin.*
 
@@ -71,7 +71,7 @@ Deposit terms are confirmed by phone at (781) 853-8063. Signs that need a doctor
 
 Combination Brows in Wilmington, MA is performed at 211 Lowell Street, Suite F, Wilmington, MA 01887, reached at (781) 853-8063. The studio is open Monday through Saturday, 10 to 6, closed Sunday — a different address and phone than the Salem, New Hampshire studio.
 
-Combination Brows in Wilmington, MA is priced after a free consultation, since the mix of strokes and shading varies. The quote includes the perfecting session 6 to 8 weeks later; a yearly touch-up, from $300, follows roughly 12 months after that, and Cherry covers the quoted total.
+Combination Brows in Wilmington, MA is priced after a consultation, since the mix of strokes and shading varies. The quote includes the perfecting session 6 to 8 weeks later; a yearly touch-up, from $300, follows roughly 12 months after that, and Cherry covers the quoted total.
 
 Yes. Lowell Street in Wilmington is Massachusetts Route 129, and 211 Lowell Street, Suite F sits directly on it. Route 129 crosses Route 38 near the town center, and the nearest highway access is the I-93 and Route 129 interchange.
 
@@ -84,6 +84,18 @@ Combination Brows results typically last 1 to 3 years before fading evenly. Abou
 Yes. The Wilmington studio offers payment plans through Cherry Technologies, an independent lender. Options include 4 interest-free payments, or a longer plan up to 24 months with interest. Approval is not guaranteed; Cherry, not the studio, sets the final terms.
 
 Combination Brows blends the hair-like strokes used in Nano Brows, at $650, with the soft shading used in Powder Brows, at $550, in one appointment. Because the stroke-to-shading mix varies by brow, pricing is custom and quoted after the in-person consultation.
+
+Combination Brows is quoted at the consultation rather than listed at a fixed price, because the work needed changes from face to face. Every other service is published openly, from $250 to $850, on the [price list](../../../../prices/), so you can see the range the studio works in before you book anything.
+
+Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent lender: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
+
+The perfecting session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
+
+Most results hold 12 to 24 months before fading becomes visible. After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
+
+Yes. Pregnancy, breastfeeding, being under 18, and current isotretinoin use are refused at both studios, with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need clearance from your doctor first. The full list is published in the [contraindications guide](../../../../aftercare/) before you book, not after.
+
+Adriana Souza Santos has performed more than 5,000 procedures across 20+ years and trained over 300 students. She holds AAM Diamond Certified Trainer status and New Hampshire Body Artist licence 4283, valid through 18 July 2028, which you can verify yourself at the state’s public lookup rather than take on trust.
 
 ## Explore Other Brow Techniques and the Wilmington Studio
 

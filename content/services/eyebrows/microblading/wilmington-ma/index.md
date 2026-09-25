@@ -55,7 +55,7 @@ Lowell Street is Massachusetts Route 129, crossing Route 38 near the center of t
 
 ## What Backs the Artist Performing Microblading in Wilmington?
 
-Adriana Souza Santos, the Master Permanent Makeup Artist performing microblading at the Wilmington studio, has completed more than 5,000 procedures and trained more than 300 students over an 18-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in both English and Portuguese.
+Adriana Souza Santos, the Master Permanent Makeup Artist performing microblading at the Wilmington studio, has completed more than 5,000 procedures and trained more than 300 students over an 20-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in both English and Portuguese.
 
 *The entrance to Suite F, on Route 129 in Wilmington, where microblading appointments begin.*
 
@@ -85,6 +85,16 @@ Yes. The Wilmington studio offers payment plans through Cherry Technologies, an 
 
 Yes. Master Permanent Makeup Artist Adriana Souza Santos consults in both English and Portuguese at the Wilmington studio. Clients who prefer discussing brow shape and color goals in Portuguese can request that language when booking, online through Fresha or by phone at (781) 853-8063.
 
+Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent lender: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
+
+The perfecting session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
+
+Most results hold 12 to 24 months before fading becomes visible. After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
+
+Yes. Pregnancy, breastfeeding, being under 18, and current isotretinoin use are refused at both studios, with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need clearance from your doctor first. The full list is published in the [contraindications guide](../../../../aftercare/) before you book, not after.
+
+Adriana Souza Santos has performed more than 5,000 procedures across 20+ years and trained over 300 students. She holds AAM Diamond Certified Trainer status and New Hampshire Body Artist licence 4283, valid through 18 July 2028, which you can verify yourself at the state’s public lookup rather than take on trust.
+
 ## Explore Other Brow Techniques and the Wilmington Studio
 
 Microblading is one of five brow techniques available at the Wilmington studio, alongside Nano Brows, Powder Brows, Combination Brows, and Nano Combo. Every technique includes the perfecting session, and each has its own page with technique-specific pricing and detail for the Wilmington location.
@@ -95,6 +105,12 @@ Microblading is one of five brow techniques available at the Wilmington studio, 
 - [Combination Brows in Wilmington](../../combination-brows/wilmington-ma/) — custom quote
 - [Nano Combo in Wilmington](../../nano-combo/wilmington-ma/) — $600
 See the [Wilmington, MA studio page](../../../../locations/wilmington-ma/) or the [aftercare guide](../../../../aftercare/).
+
+## What Microblading Looks Like Once It Has Healed
+
+*Microblading healed: denser at the tail, deliberately lighter at the front.*
+
+The front of the brow is left lighter on purpose so the shape reads as hair rather than as makeup. The density builds toward the arch and tail.
 
 ## Which Licenses Cover This Work in Wilmington?
 

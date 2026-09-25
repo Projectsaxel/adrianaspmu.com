@@ -22,6 +22,16 @@
 # Localizacao
 /salem-nh/                      /locations/salem-nh/                      301
 
+# /flash-sale/ virou /prices/ em 21/09/2026.
+# A pagina nunca foi uma oferta: e a lista de precos evergreen dos 13
+# servicos, e o proprio texto dela nega existir promocao. A URL prometia
+# desconto que a pagina nao entrega, o que derruba a confianca e atrai a
+# busca errada. /prices/ descreve o conteudo e casa com a intencao de
+# quem procura "permanent makeup prices".
+/flash-sale/                    /prices/                                  301
+/flash-sale                     /prices/                                  301
+/flash-sale/index.html          /prices/                                  301
+
 # Academy e treinamento
 /apprenticeship/                /academy/pmu-apprenticeship/              301
 /100-hours-fundamental/         /academy/pmu-100h-fundamental/            301

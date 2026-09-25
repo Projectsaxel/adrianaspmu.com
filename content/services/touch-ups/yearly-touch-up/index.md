@@ -16,7 +16,7 @@ A Yearly Touch-Up refreshes faded pigment on brows, lips, or eyeliner, typically
 
 Permanent makeup is designed for long-lasting beauty, but like any cosmetic enhancement, it benefits from periodic maintenance to keep color, definition, and shape looking their best.
 
-Master Permanent Makeup Artist Adriana Souza Santos has over 18 years of experience preserving clients' permanent makeup investment in Wilmington, MA and Salem, NH.
+Master Permanent Makeup Artist Adriana Souza Santos has over 20 years of experience preserving clients' permanent makeup investment in Wilmington, MA and Salem, NH.
 
 ## What Is a Yearly Touch-Up?
 
@@ -129,11 +129,11 @@ Following aftercare recommendations helps ensure optimal healing and long-lastin
 
 ## Why Choose Adriana Beauty Services for a Touch-Up?
 
-Adriana Beauty Services brings over 18 years of experience and more than 5,000 procedures to every touch-up.
+Adriana Beauty Services brings over 20 years of experience and more than 5,000 procedures to every touch-up.
 
 Clients choose us because we provide:
 
-- Over 18 years of permanent makeup experience
+- Over 20 years of permanent makeup experience
 - Personalized care and consultations
 - Advanced permanent makeup techniques
 - High-quality pigments and equipment
@@ -155,6 +155,18 @@ Results vary by treatment and individual factors, but regular maintenance helps 
 
 No. The perfecting session is included in your original price and happens 6 to 8 weeks after your first appointment. The Yearly Touch-Up is a separate, paid visit about 12 months later.
 
+Yearly Touch-Up is quoted at the consultation rather than listed at a fixed price, because the work needed changes from face to face. Every other service is published openly, from $250 to $850, on the [price list](../../../prices/), so you can see the range the studio works in before you book anything.
+
+Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent lender: it sets approval and rates, not the studio. See [how the payment plan works](../../../payment-plan/).
+
+The perfecting session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
+
+Most results hold 12 to 24 months before fading becomes visible. After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
+
+Yes. Pregnancy, breastfeeding, being under 18, and current isotretinoin use are refused at both studios, with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need clearance from your doctor first. The full list is published in the [contraindications guide](../../../aftercare/) before you book, not after.
+
+Adriana Souza Santos has performed more than 5,000 procedures across 20+ years and trained over 300 students. She holds AAM Diamond Certified Trainer status and New Hampshire Body Artist licence 4283, valid through 18 July 2028, which you can verify yourself at the state’s public lookup rather than take on trust.
+
 ## Pay over time, starting today
 
 Split any service into **4 interest-free payments** with Cherry, or over up
@@ -169,3 +181,18 @@ Approval and rates subject to eligibility. Cherry is a financial
 Ready to refresh your brows, lips, or eyeliner?
 
 Book your Yearly Touch-Up appointment with Adriana's Permanent Makeup and keep your permanent makeup looking vibrant, beautiful, and professionally maintained all year long.
+
+Reviewed by [Adriana Souza Santos, Master Permanent Makeup Artist](../../../about/) with 20+ years and 5,000+ procedures, AAM Diamond Certified Trainer, responsible for this page's accuracy. Questions: [contact page](../../../contact/). Last reviewed September 21, 2026.
+
+## What Should You Check Before Booking Permanent Makeup Anywhere?
+
+Six things are worth verifying with any permanent makeup artist before you book: their licence number, who trained them, what the price includes, whether a price is published at all, what they refuse to do, and whether the technique actually suits your skin.
+
+| What to check | What to ask any artist | The answer here |
+| --- | --- | --- |
+| Practitioner licence | Ask for the licence number and check it yourself with the state or the town, instead of taking a badge on a website at face value. | New Hampshire Body Artist licence 4283, valid through 18 July 2028 and searchable at the state’s own public lookup. Town of Salem BODA-10 and BODE-4. Body Art Practitioner licence from the Town of Wilmington Board of Health. |
+| Who trained them | Ask who certified the artist, and whether that credential can be checked with the body that issued it. | AAM Diamond Certified Trainer, the American Academy of Micropigmentation’s highest level of instructor recognition. |
+| What the price includes | Ask whether the perfecting session is included or billed later. This is where quoted prices most often stop matching the final bill. | The perfecting session, 6 to 8 weeks after the appointment, is included in every original price. The yearly touch-up, from $300, is a separate visit about 12 months later. |
+| Whether the price is published at all | Ask for the price before the consultation. A studio that will not name a range before seeing you is not comparable to one that will. | All 13 services are published with their prices, from $250 to $850, on the [price list](../../../prices/). |
+| When they say no | Ask what would make them refuse to perform the procedure. An artist who never refuses is a warning sign. | Pregnancy, breastfeeding, under 18 and isotretinoin are refused at both studios with no exception. The full list is in the [contraindications guide](../../../aftercare/), published before you book rather than after. |
+| Whether the technique fits you | Ask which technique suits your skin type, and what they would recommend if this one does not. | Priced from $300 by how much pigment is left, so the quote depends on a look at your current result, not on a table. This is settled at the consultation, in English or Portuguese. |

@@ -1,6 +1,6 @@
 <!-- Eyeliner Combo in Wilmington, MA | Adriana's PMU -->
 <!-- canonical: https://adrianaspmu.com/services/eyeliner/eyeliner-combo/wilmington-ma/ -->
-> Eyeliner Combo in Wilmington, MA at Adriana's Permanent Makeup, 211 Lowell St, Suite F. $500. Master PMU artist with 18+ years. Call (781) 853-8063 to book.
+> Eyeliner Combo in Wilmington, MA at Adriana's Permanent Makeup, 211 Lowell St, Suite F. $500. Master PMU artist with 20+ years. Call (781) 853-8063 to book.
 
 # Eyeliner Combo in Wilmington, MA
 
@@ -58,7 +58,7 @@ Lowell Street is Massachusetts Route 129, crossing Route 38 near town center. Wi
 
 ## What Backs the Artist Performing Eyeliner Combo in Wilmington?
 
-Adriana Souza Santos, the Master Permanent Makeup Artist performing Eyeliner Combo at the Wilmington studio, has completed more than 5,000 procedures and trained more than 300 students over an 18-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in both English and Portuguese.
+Adriana Souza Santos, the Master Permanent Makeup Artist performing Eyeliner Combo at the Wilmington studio, has completed more than 5,000 procedures and trained more than 300 students over an 20-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in both English and Portuguese.
 
 *The waiting area at 211 Lowell Street, where the consultation happens before either lash line is touched.*
 
@@ -88,6 +88,16 @@ Yes. The Wilmington studio offers payment plans through Cherry Technologies, an 
 
 Yes. Master Permanent Makeup Artist Adriana Souza Santos consults in both English and Portuguese at the Wilmington studio, alongside a second licensed artist, Livian Camargo Gomes. Clients who prefer Portuguese can request that language when booking, online through Fresha or by phone at (781) 853-8063.
 
+Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent lender: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
+
+The perfecting session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
+
+Most results hold 12 to 24 months before fading becomes visible. After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
+
+Yes. Pregnancy, breastfeeding, being under 18, and current isotretinoin use are refused at both studios, with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need clearance from your doctor first. The full list is published in the [contraindications guide](../../../../aftercare/) before you book, not after.
+
+Adriana Souza Santos has performed more than 5,000 procedures across 20+ years and trained over 300 students. She holds AAM Diamond Certified Trainer status and New Hampshire Body Artist licence 4283, valid through 18 July 2028, which you can verify yourself at the state’s public lookup rather than take on trust.
+
 ## Explore Other Eyeliner Styles and the Wilmington Studio
 
 Eyeliner Combo is one of four eyeliner options at the Wilmington studio, alongside Top Eyeliner, Bottom Eyeliner, and Smokey Eyeliner. Every technique includes the perfecting session, and each has its own page with technique-specific pricing and detail for the Wilmington location.
@@ -97,6 +107,12 @@ Eyeliner Combo is one of four eyeliner options at the Wilmington studio, alongsi
 - [Bottom Eyeliner in Wilmington](../../bottom-eyeliner/wilmington-ma/) — $250
 - [Smokey Eyeliner in Wilmington](../../smokey-eyeliner/wilmington-ma/) — $400
 See the [Wilmington, MA studio page](../../../../locations/wilmington-ma/) or the [aftercare guide](../../../../aftercare/).
+
+## What Eyeliner Combo Looks Like Once It Has Healed
+
+*Eyeliner combo healed: thickness added only toward the outer corner.*
+
+Thickness is added toward the outer third, never evenly along the lid, because an even line shortens the eye.
 
 ## Which Licenses Cover This Work in Wilmington?
 

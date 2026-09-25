@@ -52,7 +52,7 @@
     // visivel para crawlers e para GPTBot/ClaudeBot, que nao executam JS.
     if (!el.innerHTML.trim()) el.innerHTML = `
       <div class="promo-banner">
-        <a href="${resolvePath("/payment-plan/")}">Split your service into 4 interest-free payments with Cherry &mdash; see your options</a>
+        <a href="${resolvePath("/payment-plan/")}">Split your service into 4 interest-free payments with Cherry. See your options</a>
       </div>
       <header class="site-header">
         <div class="container header-inner">
@@ -65,7 +65,7 @@
           </nav>
           <div class="header-cta">
             <a class="btn btn-ghost header-call" href="tel:+17818538063" aria-label="Call the studio">Call</a>
-            <a class="btn btn-primary" href="${resolvePath("/contact/")}">Book Consultation</a>
+            <a class="btn btn-primary" href="https://www.fresha.com/book-now/adrianas-permanent-makeup-zeaseit5/all-offer?pId=727586" rel="noopener">Book Now</a>
           </div>
         </div>
       </header>`;
@@ -564,6 +564,233 @@
     });
   }
 
+  /* Barra de reserva que persegue o scroll (23/09/2026).
+
+     O .float-cta ("Message Us") resolve duvida; esta resolve reserva
+     e carrega o preco junto, que e o que a pessoa quer confirmar
+     antes de clicar. So aparece quando o CTA do hero sai da tela:
+     enquanto o botao original esta visivel, dois CTAs identicos na
+     mesma tela so dividem a atencao. */
+  function initBookRail() {
+    const rail = document.querySelector("[data-book-rail]");
+    if (!rail) return;
+    const anchor = document.querySelector(".page-hero .btn, .hero .btn");
+    if (!anchor) return;
+
+    rail.hidden = false;
+    const io = new IntersectionObserver(
+      ([entry]) => rail.classList.toggle("is-visible", !entry.isIntersecting),
+      { rootMargin: "-8px 0px 0px 0px" }
+    );
+    io.observe(anchor);
+  }
+
+  /* Galeria coverflow (24/09/2026).
+
+     Reescrita em vanilla do efeito da referencia, que era React +
+     Swiper. A posicao de cada slide e funcao da distancia ate o ativo:
+     desloca no X, gira no Y e afunda no Z. Nada de biblioteca.
+
+     Altura fixa e largura livre: as 37 fotos tem proporcoes de 0,46 a
+     1,58 e qualquer largura fixa cortaria rosto em metade delas. */
+  function initCoverflow() {
+    document.querySelectorAll("[data-coverflow]").forEach(function (cf) {
+      const track = cf.querySelector(".cf-track");
+      const slides = Array.from(cf.querySelectorAll(".cf-slide"));
+      if (slides.length < 2) return;
+
+      const stage = cf.querySelector(".cf-stage");
+      const saida = cf.querySelector("[data-cf-current]");
+      const VISIVEIS = 3;            // quantos de cada lado ficam na cena
+      let ativo = 0;
+
+      function posicionar() {
+        const total = slides.length;
+        slides.forEach(function (s, i) {
+          /* distancia CIRCULAR: sem isto, no slide 1 todos os outros
+             ficavam a direita e o carrossel parecia ter comeco e fim.
+             Com o laco, sempre ha foto dos dois lados. */
+          let d = i - ativo;
+          if (d > total / 2) d -= total;
+          if (d < -total / 2) d += total;
+          const ad = Math.abs(d);
+          if (ad > VISIVEIS) { s.hidden = true; return; }
+          s.hidden = false;
+          /* Passo em PIXELS, medido na largura real do slide: em
+             porcentagem ele variava com cada foto e o espacamento
+             ficava irregular. */
+          const passo = s.offsetWidth * 0.82;
+          const giro = d === 0 ? 0 : (d > 0 ? -38 : 38);
+          const z = ad === 0 ? 0 : -110 - (ad - 1) * 70;
+          const escala = ad === 0 ? 1 : 0.9 - (ad - 1) * 0.06;
+          s.style.transform =
+            "translateX(calc(-50% + " + (d * passo) + "px)) translateZ(" + z +
+            "px) rotateY(" + giro + "deg) scale(" + escala + ")";
+          s.style.opacity = ad === 0 ? "1" : String(Math.max(0.25, 0.7 - (ad - 1) * 0.2));
+          s.style.zIndex = String(100 - ad);
+          s.setAttribute("aria-hidden", ad === 0 ? "false" : "true");
+        });
+        if (saida) saida.textContent = String(ativo + 1);
+      }
+
+      function ir(delta) {
+        ativo = (ativo + delta + slides.length) % slides.length;
+        posicionar();
+      }
+
+      cf.querySelector("[data-cf-prev]")?.addEventListener("click", function () { pararDeVez(); ir(-1); });
+      cf.querySelector("[data-cf-next]")?.addEventListener("click", function () { pararDeVez(); ir(1); });
+
+      /* clicar num slide lateral traz ele para o centro */
+      slides.forEach(function (s, i) {
+        s.addEventListener("click", function () { if (i !== ativo) { pararDeVez(); ativo = i; posicionar(); } });
+      });
+
+      /* teclado: a cena inteira e focavel e responde as setas */
+      stage.tabIndex = 0;
+      stage.setAttribute("role", "region");
+      stage.setAttribute("aria-label", "Nano Brows gallery, use arrow keys");
+      stage.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowLeft") { e.preventDefault(); pararDeVez(); ir(-1); }
+        if (e.key === "ArrowRight") { e.preventDefault(); pararDeVez(); ir(1); }
+      });
+
+      /* arrastar com o dedo ou com o mouse */
+      let x0 = null;
+      stage.addEventListener("pointerdown", function (e) { x0 = e.clientX; });
+      stage.addEventListener("pointerup", function (e) {
+        if (x0 === null) return;
+        const dx = e.clientX - x0;
+        if (Math.abs(dx) > 40) { pararDeVez(); ir(dx < 0 ? 1 : -1); }
+        x0 = null;
+      });
+      stage.addEventListener("pointercancel", function () { x0 = null; });
+
+      /* --- passagem automatica ---------------------------------
+         Um carrossel que anda sozinho precisa de quatro freios, senao
+         vira armadilha de acessibilidade:
+         1. para no hover e no foco (quem esta olhando nao perde a foto);
+         2. para quando o visitante usa a seta, o teclado ou arrasta;
+         3. para quando a secao sai da tela (nao gasta CPU a toa);
+         4. nao liga se a pessoa pediu menos movimento no sistema.
+
+         3,2s e nao 1s: em 1s nao da tempo de olhar um rosto, e a troca
+         vira piscada. E um numero so, se quiser mais rapido eu mudo. */
+      const INTERVALO = 3200;
+      const semMovimento = window.matchMedia("(prefers-reduced-motion: reduce)");
+      let timer = null;
+      let paradoPeloUsuario = false;
+
+      function tocar() {
+        if (timer || paradoPeloUsuario || semMovimento.matches) return;
+        timer = setInterval(function () { ir(1); }, INTERVALO);
+      }
+      function pausar() {
+        if (timer) { clearInterval(timer); timer = null; }
+      }
+      function pararDeVez() {      // interacao explicita encerra o automatico
+        paradoPeloUsuario = true;
+        pausar();
+      }
+
+      cf.addEventListener("mouseenter", pausar);
+      cf.addEventListener("mouseleave", tocar);
+      cf.addEventListener("focusin", pausar);
+      cf.addEventListener("focusout", function (e) {
+        if (!cf.contains(e.relatedTarget)) tocar();
+      });
+
+      /* so roda enquanto a galeria esta na tela */
+      if ("IntersectionObserver" in window) {
+        new IntersectionObserver(function (entradas) {
+          entradas[0].isIntersecting ? tocar() : pausar();
+        }, { threshold: 0.25 }).observe(cf);
+      } else {
+        tocar();
+      }
+
+      cf.setAttribute("data-cf-ready", "");
+      posicionar();
+    });
+  }
+
+  /* Galeria animada (24/09/2026).
+
+     Vanilla, no lugar de React + motion/react. Duas transformacoes na
+     grade (rotateX e scale) e um translateY por coluna, todas em
+     funcao do progresso da rolagem dentro da secao.
+
+     A secao inteira e conteudo real sem o script: 12 fotos, cada uma
+     linkando para o proprio servico. O JS so adiciona o movimento. */
+  function initGaleria() {
+    const sec = document.querySelector("[data-ag]");
+    if (!sec) return;
+
+    const grade = sec.querySelector("[data-ag-grid]");
+    const colunas = Array.from(sec.querySelectorAll("[data-ag-col]"));
+    if (!grade || !colunas.length) return;
+
+    const desktop = window.matchMedia("(min-width: 900px)");
+    const calma = window.matchMedia("(prefers-reduced-motion: reduce)");
+    /* cada coluna anda num ritmo diferente: e o parallax da referencia */
+    const FAIXAS = [[-8, 2], [14, 4], [-8, 2]];
+
+    let ligado = false, pedido = null;
+
+    const entre = (p, a, b) => Math.min(1, Math.max(0, (p - a) / (b - a)));
+
+    function desenhar() {
+      pedido = null;
+      const r = sec.getBoundingClientRect();
+      const percorrivel = r.height - window.innerHeight;
+      if (percorrivel <= 0) return;
+      const p = Math.min(1, Math.max(0, -r.top / percorrivel));
+
+      const giroX = 75 - 75 * entre(p, 0, 0.5);        // deitada -> de pe
+      const escala = 1.2 - 0.2 * entre(p, 0.5, 0.9);   // aproxima e assenta
+      grade.style.transform = "rotateX(" + giroX + "deg) scale(" + escala + ")";
+
+      const t = entre(p, 0.5, 1);
+      colunas.forEach(function (col, i) {
+        const [de, ate] = FAIXAS[i % FAIXAS.length];
+        col.style.transform = "translateY(" + (de + (ate - de) * t) + "%)";
+      });
+    }
+
+    function aoRolar() {
+      if (pedido === null) pedido = requestAnimationFrame(desenhar);
+    }
+
+    function ligar() {
+      if (ligado) return;
+      ligado = true;
+      sec.setAttribute("data-ag-ready", "");
+      sec.style.minHeight = "320vh";
+      window.addEventListener("scroll", aoRolar, { passive: true });
+      window.addEventListener("resize", aoRolar);
+      desenhar();
+    }
+
+    function desligar() {
+      if (!ligado) return;
+      ligado = false;
+      sec.removeAttribute("data-ag-ready");
+      sec.style.minHeight = "";
+      window.removeEventListener("scroll", aoRolar);
+      window.removeEventListener("resize", aoRolar);
+      grade.style.transform = "";
+      colunas.forEach(function (c) { c.style.transform = ""; });
+    }
+
+    function avaliar() {
+      desktop.matches && !calma.matches ? ligar() : desligar();
+    }
+
+    desktop.addEventListener("change", avaliar);
+    calma.addEventListener("change", avaliar);
+    avaliar();
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     renderHeader();
     renderFooter();
@@ -571,7 +798,162 @@
     initReviewsNav();
     initContactForm();
     initFloatingCta();
+    initBookRail();
+    initCoverflow();
+    initGaleria();
     initPortfolioFilters();
     initPortfolioLightbox();
+    initVideo();
   });
 })();
+
+/* ===================================================================
+   Hero editorial — "The Artist and Her Work" (21/09/2026)
+
+   O markup ja garante, e este script nao pode quebrar:
+   - os seis itens do indice sao <a> com href real: sem JS eles navegam
+     normalmente e seguem rastreaveis. Com JS, o clique troca o slide, e
+     quem navega e o link "Explore the service" do bloco de texto.
+   - existe um unico <h1>, estatico. O titulo que muda e um <h2>.
+   =================================================================== */
+function initEditorialHero() {
+  var hero = document.querySelector("[data-hero]");
+  if (!hero) return;
+
+  var shots = Array.prototype.slice.call(hero.querySelectorAll(".hero-shot"));
+  var links = Array.prototype.slice.call(hero.querySelectorAll(".hero-index a"));
+  var feature = hero.querySelector(".hero-feature");
+  var kicker = hero.querySelector("[data-hero-kicker]");
+  var name = hero.querySelector("[data-hero-name]");
+  var note = hero.querySelector("[data-hero-note]");
+  var cta = hero.querySelector("[data-hero-link]");
+  if (!shots.length || !links.length || !feature || !cta) return;
+
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
+  var current = 0;
+  var timer = null;
+  var userTook = false;
+  var AUTO_MS = 7000;
+
+  function paint(i) {
+    if (i === current) return;
+    var link = links[i];
+    if (!link) return;
+    current = i;
+
+    shots.forEach(function (s, k) { s.classList.toggle("is-active", k === i); });
+    links.forEach(function (a, k) {
+      a.classList.toggle("is-current", k === i);
+      if (k === i) { a.setAttribute("aria-current", "true"); }
+      else { a.removeAttribute("aria-current"); }
+    });
+
+    feature.setAttribute("data-swap", "");
+    window.setTimeout(function () {
+      kicker.textContent = link.getAttribute("data-kicker") || "";
+      name.textContent = link.getAttribute("data-name") || "";
+      note.innerHTML = link.getAttribute("data-note") || "";
+      cta.setAttribute("href", link.getAttribute("href"));
+      cta.childNodes[0].nodeValue = (link.getAttribute("data-cta") || "Explore") + " ";
+      feature.removeAttribute("data-swap");
+    }, reduced.matches ? 0 : 280);
+
+    var nxt = shots[(i + 1) % shots.length];
+    if (nxt) {
+      var img = nxt.querySelector("img");
+      if (img && img.getAttribute("loading") === "lazy") { img.setAttribute("loading", "eager"); }
+    }
+  }
+
+  function stopAuto() { if (timer) { window.clearInterval(timer); timer = null; } }
+
+  function startAuto() {
+    if (reduced.matches || userTook) return;
+    stopAuto();
+    timer = window.setInterval(function () { paint((current + 1) % shots.length); }, AUTO_MS);
+  }
+
+  function take() { userTook = true; stopAuto(); }
+
+  links.forEach(function (a, i) {
+    a.addEventListener("mouseenter", function () { take(); paint(i); });
+    a.addEventListener("focus", function () { take(); paint(i); });
+    a.addEventListener("click", function (ev) {
+      ev.preventDefault();
+      take();
+      paint(i);
+      cta.focus({ preventScroll: true });
+    });
+  });
+
+  var index = hero.querySelector(".hero-index");
+  if (index) {
+    index.addEventListener("keydown", function (ev) {
+      var d = ev.key === "ArrowRight" ? 1 : ev.key === "ArrowLeft" ? -1 : 0;
+      if (!d) return;
+      ev.preventDefault();
+      take();
+      var next = (current + d + shots.length) % shots.length;
+      paint(next);
+      links[next].focus();
+    });
+  }
+
+  var x0 = null;
+  hero.addEventListener("touchstart", function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+  hero.addEventListener("touchend", function (e) {
+    if (x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0;
+    x0 = null;
+    if (Math.abs(dx) < 45) return;
+    take();
+    paint((current + (dx < 0 ? 1 : -1) + shots.length) % shots.length);
+  }, { passive: true });
+
+  links[0].classList.add("is-current");
+  links[0].setAttribute("aria-current", "true");
+  startAuto();
+  document.addEventListener("visibilitychange", function () {
+    if (document.hidden) { stopAuto(); } else { startAuto(); }
+  });
+}
+
+// o restante deste arquivo espera o DOMContentLoaded; o hero tambem
+// precisa esperar, senao o script roda antes de a secao existir.
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initEditorialHero);
+} else {
+  initEditorialHero();
+}
+
+/* ------------------------------------------------------------------
+   VIDEO — fachada que vira player de verdade no clique.
+
+   O embed do YouTube custa ~1,3 MB e roda dezenas de requisicoes antes
+   de alguem apertar play. Numa pagina que vai receber anuncio isso e
+   caro em LCP. Entao o que vai no HTML e o cartaz; o iframe so nasce
+   quando a pessoa clica — e ai ja com autoplay, para o clique valer
+   como play e nao como "carregou, clique de novo".
+
+   Sem JS o <noscript> da pagina mostra o link para o YouTube.
+   ------------------------------------------------------------------ */
+function initVideo() {
+  document.querySelectorAll("[data-video]").forEach(function (caixa) {
+    const botao = caixa.querySelector(".video-play");
+    if (!botao) return;
+    botao.addEventListener("click", function () {
+      const id = caixa.getAttribute("data-video");
+      if (!id) return;
+      const frame = document.createElement("iframe");
+      frame.className = "video-frame";
+      frame.src = "https://www.youtube-nocookie.com/embed/" + id +
+                  "?autoplay=1&rel=0&modestbranding=1&playsinline=1";
+      frame.title = botao.getAttribute("aria-label") || "Video";
+      frame.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      frame.setAttribute("allowfullscreen", "");
+      frame.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
+      caixa.replaceChild(frame, botao);
+      caixa.setAttribute("data-video-ativo", "");
+    });
+  });
+}

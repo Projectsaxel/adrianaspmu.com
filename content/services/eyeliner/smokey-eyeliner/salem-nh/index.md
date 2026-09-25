@@ -1,6 +1,6 @@
 <!-- Smokey Eyeliner in Salem, NH | Adriana's PMU -->
 <!-- canonical: https://adrianaspmu.com/services/eyeliner/smokey-eyeliner/salem-nh/ -->
-> Smokey Eyeliner in Salem, NH at Adriana's Permanent Makeup, 117A Main St. $400. Master PMU artist with 18+ years. Call (978) 223-7496 to book.
+> Smokey Eyeliner in Salem, NH at Adriana's Permanent Makeup, 117A Main St. $400. Master PMU artist with 20+ years. Call (978) 223-7496 to book.
 
 # Smokey Eyeliner in Salem, NH
 
@@ -59,7 +59,7 @@ Main Street is New Hampshire Route 97 along its full length. New Hampshire has n
 
 ## What Backs the Artist Performing Smokey Eyeliner in Salem?
 
-Adriana Souza Santos, the Master Permanent Makeup Artist performing smokey eyeliner at the Salem studio, has completed more than 5,000 procedures and trained more than 300 students over an 18-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in both English and Portuguese.
+Adriana Souza Santos, the Master Permanent Makeup Artist performing smokey eyeliner at the Salem studio, has completed more than 5,000 procedures and trained more than 300 students over an 20-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in both English and Portuguese.
 
 *The Salem studio, where Smokey Eyeliner appointments begin.*
 
@@ -88,6 +88,16 @@ Yes. Contact lenses come out for the smokey eyeliner appointment; the studio say
 Yes. The Salem studio offers payment plans for the $400 smokey eyeliner price, shading pass included, through Cherry Technologies, an independent lender. Options include 4 interest-free payments or a longer plan up to 24 months; approval is not guaranteed; Cherry sets the terms.
 
 No. Smokey Eyeliner is its own $400 technique with soft shading blended into the liner, and it is not part of the Eyeliner Combo. The Combo pairs plain Top Eyeliner and Bottom Eyeliner for $500, $100 less than the $600 those two cost booked separately, at the Salem studio.
+
+Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent lender: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
+
+The perfecting session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
+
+Most results hold 12 to 24 months before fading becomes visible. After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
+
+Yes. Pregnancy, breastfeeding, being under 18, and current isotretinoin use are refused at both studios, with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need clearance from your doctor first. The full list is published in the [contraindications guide](../../../../aftercare/) before you book, not after.
+
+Adriana Souza Santos has performed more than 5,000 procedures across 20+ years and trained over 300 students. She holds AAM Diamond Certified Trainer status and New Hampshire Body Artist licence 4283, valid through 18 July 2028, which you can verify yourself at the state’s public lookup rather than take on trust.
 
 ## Explore Other Eyeliner Styles at the Salem Studio
 

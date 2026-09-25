@@ -1,6 +1,6 @@
 <!-- Brows + Lips Combo in Wilmington, MA | Adriana's PMU -->
 <!-- canonical: https://adrianaspmu.com/services/combos/eyebrows-lips-combo/wilmington-ma/ -->
-> Brows + Lips Combo in Wilmington, MA at Adriana's Permanent Makeup, 211 Lowell St, Suite F. $850. Master PMU artist with 18+ years. Call (781) 853-8063 to book.
+> Brows + Lips Combo in Wilmington, MA at Adriana's Permanent Makeup, 211 Lowell St, Suite F. $850. Master PMU artist with 20+ years. Call (781) 853-8063 to book.
 
 # Brows + Lips Combo in Wilmington, MA
 
@@ -57,7 +57,7 @@ Lowell Street is Massachusetts Route 129, crossing Route 38 near town center. Wi
 
 ## What Backs the Artist Performing Brows + Lips Combo in Wilmington?
 
-Adriana Souza Santos, the Master Permanent Makeup Artist performing Brows + Lips Combo at the Wilmington studio, has completed more than 5,000 procedures and trained more than 300 students over an 18-plus year career, and holds an AAM Diamond Certified Trainer credential.
+Adriana Souza Santos, the Master Permanent Makeup Artist performing Brows + Lips Combo at the Wilmington studio, has completed more than 5,000 procedures and trained more than 300 students over an 20-plus year career, and holds an AAM Diamond Certified Trainer credential.
 
 *The waiting area at 211 Lowell Street, where brow shape and lip color are discussed before either procedure begins.*
 
@@ -87,6 +87,16 @@ Yes. The Wilmington studio offers payment plans through Cherry Technologies, an 
 
 Yes. Master Permanent Makeup Artist Adriana Souza Santos consults in both English and Portuguese at the Wilmington studio, alongside a second licensed artist, Livian Camargo Gomes. Clients who prefer Portuguese can request that language when booking, online through Fresha or by phone at (781) 853-8063.
 
+Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent lender: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
+
+The perfecting session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
+
+Most results hold 12 to 24 months before fading becomes visible. After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
+
+Yes. Pregnancy, breastfeeding, being under 18, and current isotretinoin use are refused at both studios, with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need clearance from your doctor first. The full list is published in the [contraindications guide](../../../../aftercare/) before you book, not after.
+
+Adriana Souza Santos has performed more than 5,000 procedures across 20+ years and trained over 300 students. She holds AAM Diamond Certified Trainer status and New Hampshire Body Artist licence 4283, valid through 18 July 2028, which you can verify yourself at the state’s public lookup rather than take on trust.
+
 ## What Makes Up the Brows + Lips Combo at the Wilmington Studio
 
 The brow half of the combo can be Microblading, Nano Brows, Powder Brows, Combination Brows, or Nano Combo; the lip half is Lip Blush, or Dark Lip Neutralization first if needed. Each technique has its own Wilmington page with full pricing.
@@ -96,6 +106,12 @@ The brow half of the combo can be Microblading, Nano Brows, Powder Brows, Combin
 - [Nano Brows in Wilmington](../../../eyebrows/nano-brows/wilmington-ma/) — $650
 - [Lip Blush in Wilmington](../../../lips/lip-blush/wilmington-ma/) — $550
 See the [Wilmington, MA studio page](../../../../locations/wilmington-ma/) or the [aftercare guide](../../../../aftercare/).
+
+## What Brows + Lips Combo Looks Like Once It Has Healed
+
+*Brows and lips healed together, balanced as one result.*
+
+Doing both in one package is what lets the two be balanced against each other. A strong brow with a pale lip, or the reverse, is the usual result of booking them months apart.
 
 ## Which Licenses Cover This Work in Wilmington?
 

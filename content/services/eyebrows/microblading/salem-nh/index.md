@@ -55,7 +55,7 @@ Main Street is New Hampshire Route 97 along its full length, with a western term
 
 ## What Backs the Artist Performing Microblading in Salem?
 
-Adriana Souza Santos, the Master Permanent Makeup Artist performing microblading at the Salem studio, has completed more than 5,000 procedures and trained more than 300 students over an 18-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in both English and Portuguese.
+Adriana Souza Santos, the Master Permanent Makeup Artist performing microblading at the Salem studio, has completed more than 5,000 procedures and trained more than 300 students over an 20-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in both English and Portuguese.
 
 *Reception at 117A Main Street, on Route 97, where microblading appointments begin.*
 
@@ -85,6 +85,16 @@ Yes. The Salem studio offers payment plans through Cherry Technologies, an indep
 
 Yes. Master Permanent Makeup Artist Adriana Souza Santos consults in both English and Portuguese at the Salem studio. Clients who prefer discussing brow shape and color goals in Portuguese can request that language when booking, online through Fresha or by phone at (978) 223-7496.
 
+Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent lender: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
+
+The perfecting session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
+
+Most results hold 12 to 24 months before fading becomes visible. After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
+
+Yes. Pregnancy, breastfeeding, being under 18, and current isotretinoin use are refused at both studios, with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need clearance from your doctor first. The full list is published in the [contraindications guide](../../../../aftercare/) before you book, not after.
+
+Adriana Souza Santos has performed more than 5,000 procedures across 20+ years and trained over 300 students. She holds AAM Diamond Certified Trainer status and New Hampshire Body Artist licence 4283, valid through 18 July 2028, which you can verify yourself at the state’s public lookup rather than take on trust.
+
 ## Explore Other Brow Techniques and the Salem Studio
 
 Microblading is one of five brow techniques available at the Salem studio, alongside Nano Brows, Powder Brows, Combination Brows, and Nano Combo. Every technique includes the perfecting session, and each has its own page with technique-specific pricing and detail for the Salem location.
@@ -95,6 +105,12 @@ Microblading is one of five brow techniques available at the Salem studio, along
 - [Combination Brows in Salem](../../combination-brows/salem-nh/) — custom quote
 - [Nano Combo in Salem](../../nano-combo/salem-nh/) — $600
 See the [Salem, NH studio page](../../../../locations/salem-nh/) or the [aftercare guide](../../../../aftercare/).
+
+## What Microblading Looks Like Once It Has Healed
+
+*Microblading healed: individual strokes, not a solid block of colour.*
+
+The strokes are cut one at a time with a handheld blade, which is why the brow keeps a broken edge instead of a printed outline. This is the result after the perfecting session.
 
 ## Which Licenses Cover This Work in Salem, NH?
 

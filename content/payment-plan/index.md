@@ -96,3 +96,16 @@ Payment options through Cherry Technologies, Inc. are issued by its
  lending partners. 0% APR and other promotional rates are subject to eligibility. Cherry is a
  financial technology company, not a bank or a lender. Eligibility for financing is not
  guaranteed.
+
+Reviewed by [Adriana Souza Santos, Master Permanent Makeup Artist](../about/) with 20+ years and 5,000+ procedures, AAM Diamond Certified Trainer, responsible for this page's accuracy. Questions: [contact page](../contact/). Last reviewed September 21, 2026.
+
+## How Does Paying Over Time Actually Work?
+
+Five steps, from checking your options to the last installment. Checking does not affect your credit score, and the studio is paid in full either way — the plan is between you and Cherry.
+
+- **Check your options** at Cherry. Takes about a minute and uses a soft credit check, so your score is untouched.
+- **See what you qualify for**: 4 interest-free payments, or a longer plan of up to 24 months with interest. Cherry sets the terms and the approval, not the studio.
+- **Book the appointment** at Wilmington or Salem for the service you chose, from $250 to $850.
+- **Have the procedure**, perfecting session included in the original price, 6 to 8 weeks later at no extra charge.
+- **Pay Cherry on your schedule** over the plan you picked, rather than the studio.
+Approval and rates are subject to eligibility. Cherry Technologies is a financial technology company, not a bank or a lender, and is independent of Adriana’s Permanent Makeup.

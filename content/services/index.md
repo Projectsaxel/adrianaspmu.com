@@ -132,9 +132,11 @@ These restrictions apply the same way across every category, since all five use 
 
 ## Frequently Asked Questions
 
+These are the questions asked most often about the services above. The [full price list with combo packages and payment plans](../prices/) covers cost in detail, and the [complete permanent makeup FAQ](../faq/) answers pain, healing, duration and aftercare.
+
 Prices range from $250 for Bottom Eyeliner to $850 for the Brows + Lips Combo. Most single-area services fall between $350 and $650. Combination Brows is quoted at consultation, and the Yearly Touch-Up starts at $300.
 
-Most first-time clients start with a single category, eyebrows, lips, or eyeliner, rather than a combo, so they can judge the healed result before adding a second area. A free consultation confirms which family matches your skin and goals.
+Most first-time clients start with a single category, eyebrows, lips, or eyeliner, rather than a combo, so they can judge the healed result before adding a second area. A consultation confirms which family matches your skin and goals.
 
 Yes, through the Brows + Lips Combo, priced at $850 for both areas in a single visit with one healing period and one perfecting session. Eyeliner is not currently bundled into that combo and is booked separately as its own service.
 
@@ -143,6 +145,16 @@ Yes. Every category’s posted price includes a perfecting session 6 to 8 weeks 
 No. Both the Wilmington, MA and Salem, NH studios charge the same prices for every service, and both are open Monday through Saturday, 10:00 a.m. to 6:00 p.m., closed Sunday. Choose whichever studio is closer to you.
 
 Yes. Every service can be split into 4 interest-free payments, or a longer plan of up to 24 months with interest, through Cherry Technologies, an independent lending company. Approval is not guaranteed and depends on Cherry’s own criteria, not the studio’s.
+
+Thirteen services are published with their prices, from $250 for bottom eyeliner to $850 for the brows and lips combo. Every original price already includes the perfecting session 6 to 8 weeks later. The full table is on the price list, and combination brows is the one service quoted at the consultation.
+
+Yes. Cherry offers 4 interest-free payments, or up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent lender: it sets approval and rates, not the studio.
+
+The perfecting session covers it. Scheduled 6 to 8 weeks after the first appointment, once the skin has healed, it is included in the original price at no extra charge. Pigment settles differently on different skin, so a second pass is part of the procedure rather than a paid repair.
+
+Pregnancy, breastfeeding, being under 18 and current isotretinoin use are refused at both studios with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need clearance from a doctor first. The full list is published in the contraindications guide before you book.
+
+Adriana Souza Santos has performed more than 5,000 procedures across 20+ years and trained over 300 students. She holds AAM Diamond Certified Trainer status and New Hampshire Body Artist licence 4283, valid through 18 July 2028, which anyone can verify at the state’s public lookup.
 
 ## Ready to Book Your Permanent Makeup?
 
@@ -156,3 +168,5 @@ Split any service into **4 interest-free payments** with Cherry, or over up
 
 Approval and rates subject to eligibility. Cherry is a financial
  technology company, not a bank or a lender.
+
+Reviewed by [Adriana Souza Santos, Master Permanent Makeup Artist](../about/) with 20+ years and 5,000+ procedures, AAM Diamond Certified Trainer, responsible for this page's accuracy. Questions: [contact page](../contact/). Last reviewed September 21, 2026.

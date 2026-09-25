@@ -1,6 +1,6 @@
 <!-- Dark Lip Neutralization in Salem, NH | Adriana's PMU -->
 <!-- canonical: https://adrianaspmu.com/services/lips/dark-lip-neutralization/salem-nh/ -->
-> Dark Lip Neutralization in Salem, NH at Adriana's Permanent Makeup, 117A Main St. $550. Master PMU artist with 18+ years. Call (978) 223-7496 to book.
+> Dark Lip Neutralization in Salem, NH at Adriana's Permanent Makeup, 117A Main St. $550. Master PMU artist with 20+ years. Call (978) 223-7496 to book.
 
 # Dark Lip Neutralization in Salem, NH
 
@@ -58,7 +58,7 @@ Main Street is Route 97, with its western terminus at NH-28, Broadway; the addre
 
 ## What Backs the Artist Performing Dark Lip Neutralization in Salem?
 
-Adriana Souza Santos, the Master Permanent Makeup Artist performing Dark Lip Neutralization at the Salem studio, has completed 5,000+ procedures and trained 300+ students over an 18-plus year career begun in Brazil before the U.S. studio opened in 2017, holds an AAM Diamond Certified Trainer credential, and consults in English and Portuguese.
+Adriana Souza Santos, the Master Permanent Makeup Artist performing Dark Lip Neutralization at the Salem studio, has completed 5,000+ procedures and trained 300+ students over an 20-plus year career begun in Brazil before the U.S. studio opened in 2017, holds an AAM Diamond Certified Trainer credential, and consults in English and Portuguese.
 
 Color correction on deeper, warmer lip tones is routine in Brazilian PMU training, where Adriana's career began — part of why this is a genuine specialism here, not an add-on to Lip Blush. Adriana is currently the only artist at the Salem studio; Livian Camargo Gomes works only in Wilmington, MA.
 
@@ -90,6 +90,16 @@ It is the right starting point for Salem clients with naturally deeper, cooler, 
 
 Speak with your physician before booking. Lip tattooing can trigger an HSV-1 reactivation in people with a cold sore history, and that is a medical question for your doctor, not the studio. The Salem studio does not prescribe or recommend any medication for this.
 
+Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent lender: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
+
+The perfecting session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
+
+Most results hold 12 to 24 months before fading becomes visible. After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
+
+Yes. Pregnancy, breastfeeding, being under 18, and current isotretinoin use are refused at both studios, with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need clearance from your doctor first. The full list is published in the [contraindications guide](../../../../aftercare/) before you book, not after.
+
+Adriana Souza Santos has performed more than 5,000 procedures across 20+ years and trained over 300 students. She holds AAM Diamond Certified Trainer status and New Hampshire Body Artist licence 4283, valid through 18 July 2028, which you can verify yourself at the state’s public lookup rather than take on trust.
+
 ## Explore Other Lip Work and the Salem Studio
 
 Dark Lip Neutralization is one of two lip techniques at the Salem studio, alongside Lip Blush for clients ready to add soft color once the base tone is balanced. Both include the perfecting session, with its own page for Salem pricing and detail.
@@ -97,6 +107,12 @@ Dark Lip Neutralization is one of two lip techniques at the Salem studio, alongs
 - [Dark Lip Neutralization overview](../) — full technique guide and healing timeline
 - [Lip Blush in Salem](../../lip-blush/salem-nh/) — $550
 See the [Salem, NH studio page](../../../../locations/salem-nh/) or the [aftercare guide](../../../../aftercare/).
+
+## What Dark Lip Neutralization Looks Like Once It Has Healed
+
+*After neutralization: the grey cast is gone and the tone reads even.*
+
+Neutralizing works in layers. A correcting tone is laid first to cancel the cool pigment, and only then is the final colour built on top.
 
 ## Which Licenses Cover This Work in Salem, NH?
 

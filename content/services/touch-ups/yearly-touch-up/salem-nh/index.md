@@ -1,6 +1,6 @@
 <!-- Yearly Touch-Up in Salem, NH | Adriana's PMU -->
 <!-- canonical: https://adrianaspmu.com/services/touch-ups/yearly-touch-up/salem-nh/ -->
-> Yearly Touch-Up in Salem, NH at Adriana's Permanent Makeup, 117A Main St. from $300. Master PMU artist with 18+ years. Call (978) 223-7496 to book.
+> Yearly Touch-Up in Salem, NH at Adriana's Permanent Makeup, 117A Main St. from $300. Master PMU artist with 20+ years. Call (978) 223-7496 to book.
 
 # Yearly Touch-Up in Salem, NH
 
@@ -56,7 +56,7 @@ Main Street is New Hampshire Route 97 along its full length, terminating at NH-2
 
 ## What Backs the Artist Performing Yearly Touch-Ups in Salem?
 
-Adriana Souza Santos, the Master Permanent Makeup Artist performing Yearly Touch-Ups at the Salem studio, has completed more than 5,000 procedures and trained more than 300 students over an 18-plus year career, and holds an AAM Diamond Certified Trainer credential.
+Adriana Souza Santos, the Master Permanent Makeup Artist performing Yearly Touch-Ups at the Salem studio, has completed more than 5,000 procedures and trained more than 300 students over an 20-plus year career, and holds an AAM Diamond Certified Trainer credential.
 
 *The treatment station at 117A Main Street, on Route 97, where remaining pigment is assessed before any touch-up price is confirmed.*
 
@@ -85,6 +85,18 @@ Yes. New Hampshire licenses body art practitioners at the state level under RSA 
 Yes. The Salem studio offers payment plans through Cherry Technologies, an independent lender separate from Adriana's Permanent Makeup. Options include 4 interest-free payments or a longer plan up to 24 months with interest. Approval is not guaranteed; Cherry sets the terms, not the studio.
 
 Yes. Master Permanent Makeup Artist Adriana Souza Santos consults in both English and Portuguese at the Salem studio. Clients who prefer discussing their touch-up in Portuguese can request that language when booking, online through Fresha or by phone at (978) 223-7496.
+
+Yearly Touch-Up is quoted at the consultation rather than listed at a fixed price, because the work needed changes from face to face. Every other service is published openly, from $250 to $850, on the [price list](../../../../prices/), so you can see the range the studio works in before you book anything.
+
+Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent lender: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
+
+The perfecting session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
+
+Most results hold 12 to 24 months before fading becomes visible. After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
+
+Yes. Pregnancy, breastfeeding, being under 18, and current isotretinoin use are refused at both studios, with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need clearance from your doctor first. The full list is published in the [contraindications guide](../../../../aftercare/) before you book, not after.
+
+Adriana Souza Santos has performed more than 5,000 procedures across 20+ years and trained over 300 students. She holds AAM Diamond Certified Trainer status and New Hampshire Body Artist licence 4283, valid through 18 July 2028, which you can verify yourself at the state’s public lookup rather than take on trust.
 
 ## What Can Be Refreshed With a Yearly Touch-Up at the Salem Studio
 

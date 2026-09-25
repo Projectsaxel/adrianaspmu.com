@@ -1,6 +1,6 @@
 <!-- Nano Brows in Salem, NH | Adriana's PMU -->
 <!-- canonical: https://adrianaspmu.com/services/eyebrows/nano-brows/salem-nh/ -->
-> Nano Brows in Salem, NH at Adriana's Permanent Makeup, 117A Main St. $650. Master PMU artist, 18+ years, 5,000+ procedures. Call (978) 223-7496 or book online.
+> Nano Brows in Salem, NH at Adriana's Permanent Makeup, 117A Main St. $650. Master PMU artist, 20+ years, 5,000+ procedures. Call (978) 223-7496 or book online.
 
 # Nano Brows in Salem, NH
 
@@ -56,7 +56,7 @@ Main Street is Route 97, western terminus at NH-28, Broadway; the address sits i
 
 ## What Backs the Artist Performing Nano Brows in Salem?
 
-Adriana Souza Santos, who performs Nano Brows at the Salem studio, has completed more than 5,000 procedures and trained more than 300 students over an 18-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in both English and Portuguese.
+Adriana Souza Santos, who performs Nano Brows at the Salem studio, has completed more than 5,000 procedures and trained more than 300 students over an 20-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in both English and Portuguese.
 
 *The Salem studio, where Nano Brows appointments begin.*
 
@@ -86,6 +86,16 @@ Yes. The Salem studio offers payment plans through Cherry Technologies, an indep
 
 Both create hair-like strokes, but Nano Brows uses a digital machine and needle instead of a hand tool, causing less skin trauma and suiting oilier skin better. Microblading, at $550, stays available at the same Salem studio for clients who prefer the hand tool.
 
+Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent lender: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
+
+The perfecting session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
+
+Most results hold 12 to 24 months before fading becomes visible. After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
+
+Yes. Pregnancy, breastfeeding, being under 18, and current isotretinoin use are refused at both studios, with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need clearance from your doctor first. The full list is published in the [contraindications guide](../../../../aftercare/) before you book, not after.
+
+Adriana Souza Santos has performed more than 5,000 procedures across 20+ years and trained over 300 students. She holds AAM Diamond Certified Trainer status and New Hampshire Body Artist licence 4283, valid through 18 July 2028, which you can verify yourself at the state’s public lookup rather than take on trust.
+
 ## Explore Other Brow Techniques and the Salem Studio
 
 Nano Brows draws hair-like strokes with a digital machine and ultra-fine needle, one of five brow techniques available at the Salem studio. If a softer, shading-based finish suits you better, Powder Brows and three other techniques below each have their own page with technique-specific pricing for Salem.
@@ -96,6 +106,12 @@ Nano Brows draws hair-like strokes with a digital machine and ultra-fine needle,
 - [Combination Brows](../../combination-brows/salem-nh/) — custom quote
 - [Nano Combo](../../nano-combo/salem-nh/) — $600
 See the [Salem, NH studio page](../../../../locations/salem-nh/) or the [aftercare guide](../../../../aftercare/).
+
+## What Nano Brows Look Like Once They Have Healed
+
+*Nano brows healed: fine machine strokes, soft arch.*
+
+Nano uses a single ultra-fine needle on a digital machine, so each stroke is thinner than a blade stroke and sits more evenly on mature or oily skin.
 
 ## Which Licenses Cover This Work in Salem, NH?
 

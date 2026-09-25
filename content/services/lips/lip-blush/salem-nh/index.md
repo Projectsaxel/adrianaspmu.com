@@ -1,6 +1,6 @@
 <!-- Lip Blush in Salem, NH | Adriana's PMU -->
 <!-- canonical: https://adrianaspmu.com/services/lips/lip-blush/salem-nh/ -->
-> Lip Blush in Salem, NH at Adriana's Permanent Makeup, 117A Main St. $550. Master PMU artist, 18+ years, 5,000+ procedures. Call (978) 223-7496 or book online.
+> Lip Blush in Salem, NH at Adriana's Permanent Makeup, 117A Main St. $550. Master PMU artist, 20+ years, 5,000+ procedures. Call (978) 223-7496 or book online.
 
 # Lip Blush in Salem, NH
 
@@ -58,7 +58,7 @@ Main Street is Route 97, with its western terminus at NH-28, Broadway; the addre
 
 ## What Backs the Artist Performing Lip Blush in Salem?
 
-Adriana Souza Santos, the Master Permanent Makeup Artist performing Lip Blush at the Salem studio, has completed 5,000+ procedures and trained 300+ students over an 18-plus year career begun in Brazil before the U.S. studio opened in 2017, holds an AAM Diamond Certified Trainer credential, and consults in English and Portuguese.
+Adriana Souza Santos, the Master Permanent Makeup Artist performing Lip Blush at the Salem studio, has completed 5,000+ procedures and trained 300+ students over an 20-plus year career begun in Brazil before the U.S. studio opened in 2017, holds an AAM Diamond Certified Trainer credential, and consults in English and Portuguese.
 
 Adriana is currently the only artist at the Salem studio; the second artist, Livian Camargo Gomes, works only in Wilmington, MA.
 
@@ -90,6 +90,16 @@ That is exactly what the included perfecting session addresses. Because Lip Blus
 
 Speak with your physician before booking. Lip tattooing can trigger an HSV-1 reactivation in people with a cold sore history, and that is a medical question for your doctor, not the studio. The Salem studio does not prescribe or recommend any medication for this.
 
+Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent lender: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
+
+The perfecting session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
+
+Most results hold 12 to 24 months before fading becomes visible. After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
+
+Yes. Pregnancy, breastfeeding, being under 18, and current isotretinoin use are refused at both studios, with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need clearance from your doctor first. The full list is published in the [contraindications guide](../../../../aftercare/) before you book, not after.
+
+Adriana Souza Santos has performed more than 5,000 procedures across 20+ years and trained over 300 students. She holds AAM Diamond Certified Trainer status and New Hampshire Body Artist licence 4283, valid through 18 July 2028, which you can verify yourself at the state’s public lookup rather than take on trust.
+
 ## Explore Other Lip Work and the Salem Studio
 
 Lip Blush is one of two lip techniques at the Salem studio, alongside Dark Lip Neutralization for clients whose starting pigmentation is darker, cooler, or uneven. Both include the perfecting session, with its own page for Salem pricing and detail.
@@ -97,6 +107,12 @@ Lip Blush is one of two lip techniques at the Salem studio, alongside Dark Lip N
 - [Lip Blush overview](../) — full technique guide and healing timeline
 - [Dark Lip Neutralization in Salem](../../dark-lip-neutralization/salem-nh/) — $550
 See the [Salem, NH studio page](../../../../locations/salem-nh/) or the [aftercare guide](../../../../aftercare/).
+
+## What Lip Blush Looks Like Once It Has Healed
+
+*Lip blush healed: deep rose, border defined without a drawn line.*
+
+The border is defined by where the colour stops, not by an outline drawn around the lip. Saturation like this is built over two sessions.
 
 ## Which Licenses Cover This Work in Salem, NH?
 

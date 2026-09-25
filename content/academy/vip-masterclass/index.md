@@ -89,6 +89,37 @@ No. Licensing is set by the town or state where you plan to work, and meeting th
 
 Yes, an in-house payment plan is available, the same type offered for our other training programs.
 
+Because one number would be wrong for almost everyone. A complete beginner and a working artist fixing her lip blush healing need different classes, so the class is quoted after a short conversation about your level, the technique you want, how many sessions that honestly takes, and your schedule.
+
+Yes. This course has an in-house payment plan, separate from the Cherry plan used for services and for the 100-Hour Fundamental. The terms are set when the class is quoted, since the scope and the number of sessions change from student to student.
+
+Yes, and also to artists already taking clients. That is the point of quoting it individually: the syllabus is built from where you actually are rather than from a fixed curriculum. Beginners and working artists simply get different classes under the same name.
+
+Adriana Souza Santos, AAM Diamond Certified Trainer, the American Academy of Micropigmentation’s highest instructor level, with more than 5,000 procedures across 20+ years and over 300 students trained. The class is one-on-one, in English or in Portuguese.
+
+At Adriana’s Academy, 39 Cross Street, Suite 206, Peabody, MA — the training division, students only. No client procedures are performed at that address. Client appointments are at the Wilmington, MA and Salem, NH studios.
+
 ## Tell Us Where You Are
 
 We will come back with a plan, a number of sessions, and a price — built for your level, not for an average student.
+
+Reviewed by [Adriana Souza Santos, Master Permanent Makeup Artist](../../about/) with 20+ years and 5,000+ procedures, AAM Diamond Certified Trainer, responsible for this page's accuracy. Questions: [contact page](../../contact/). Last reviewed September 21, 2026.
+
+## Who Is This Training For, and Who Is It Not For?
+
+This is for your case does not fit a standard class: a specific technique, an odd schedule, or a level between beginner and working artist.
+
+**It is not for you if** a standard curriculum already fits you — the [100-Hour Fundamental](../../academy/pmu-100h-fundamental/) costs less for the same foundation.
+
+## What Should You Check Before Paying for Any PMU Course?
+
+Six things are worth verifying with any permanent makeup school: who actually teaches, whether the certificate is accredited, whether it licenses you to work, how much live-model practice you get, what the price covers, and where the training happens.
+
+| What to check | What to ask any school | The answer here |
+| --- | --- | --- |
+| Who is actually teaching | Ask for the instructor’s name and credential, not the school’s. Many schools sell a brand and hand the class to someone else. | Adriana Souza Santos teaches, and holds AAM Diamond Certified Trainer status — the American Academy of Micropigmentation’s highest instructor level — with 5,000+ procedures and 300+ students trained. |
+| Whether the certificate is accredited | Ask which body accredits the certificate, and confirm that body exists and recognises the school. | The 100-Hour Fundamental is accredited by the American Academy of Micropigmentation. |
+| Certificate against licence | Ask whether the certificate lets you work legally. A school that lets you believe it does is selling you a problem. | It does not, and that is stated plainly here: the certificate is training. The licence to practise is issued by government — town by town in Massachusetts, at state level in New Hampshire under RSA 314-A. |
+| Hands-on practice on live models | Ask how many live models you work on, and who supervises while you do. | The 100-Hour Fundamental is 9 days with practice on live models under supervision; the apprenticeship is a year of supervised practice at $700 a month. |
+| What the price covers | Ask for the total, and what is not in it. | $7,000 for the 100-Hour Fundamental, $700 a month for the apprenticeship. The VIP Masterclass is quoted per student because the scope changes. Cherry installments are available. |
+| Where the training happens | Ask for the training address, and whether clients are treated in the same room. | All training is at 39 Cross Street, Suite 206, Peabody, MA, students only. Client procedures happen at the Wilmington and Salem studios, never at the academy. |

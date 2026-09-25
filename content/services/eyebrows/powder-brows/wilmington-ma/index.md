@@ -1,6 +1,6 @@
 <!-- Powder Brows in Wilmington, MA | Adriana's PMU -->
 <!-- canonical: https://adrianaspmu.com/services/eyebrows/powder-brows/wilmington-ma/ -->
-> Powder Brows in Wilmington, MA at Adriana's Permanent Makeup, 211 Lowell St, Suite F. $550. Master PMU artist with 18+ years. Call (781) 853-8063 to book.
+> Powder Brows in Wilmington, MA at Adriana's Permanent Makeup, 211 Lowell St, Suite F. $550. Master PMU artist with 20+ years. Call (781) 853-8063 to book.
 
 # Powder Brows in Wilmington, MA
 
@@ -56,7 +56,7 @@ Lowell Street is Massachusetts Route 129, crossing Route 38 near the town center
 
 ## What Backs the Artist Performing Powder Brows in Wilmington?
 
-Adriana Souza Santos, who performs Powder Brows at the Wilmington studio, has completed more than 5,000 procedures and trained more than 300 students over an 18-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in both English and Portuguese.
+Adriana Souza Santos, who performs Powder Brows at the Wilmington studio, has completed more than 5,000 procedures and trained more than 300 students over an 20-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in both English and Portuguese.
 
 *The Wilmington studio, where Powder Brows appointments begin.*
 
@@ -86,6 +86,16 @@ Yes. The Wilmington studio offers payment plans through Cherry Technologies, an 
 
 Microblading, at $550, draws individual strokes by hand, while Powder Brows uses a digital machine for a soft, shaded finish with no visible strokes. Powder Brows is often the better fit for oilier skin, which can blur fine strokes over time.
 
+Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent lender: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
+
+The perfecting session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
+
+Most results hold 12 to 24 months before fading becomes visible. After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
+
+Yes. Pregnancy, breastfeeding, being under 18, and current isotretinoin use are refused at both studios, with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need clearance from your doctor first. The full list is published in the [contraindications guide](../../../../aftercare/) before you book, not after.
+
+Adriana Souza Santos has performed more than 5,000 procedures across 20+ years and trained over 300 students. She holds AAM Diamond Certified Trainer status and New Hampshire Body Artist licence 4283, valid through 18 July 2028, which you can verify yourself at the state’s public lookup rather than take on trust.
+
 ## Explore Other Brow Techniques and the Wilmington Studio
 
 Powder Brows builds a soft, shaded field of pigment with a digital machine, one of five brow techniques available at the Wilmington studio. If a hair-like stroke finish suits you better, Nano Brows and three other techniques below each have their own page with technique-specific pricing for Wilmington.
@@ -96,6 +106,12 @@ Powder Brows builds a soft, shaded field of pigment with a digital machine, one 
 - [Combination Brows](../../combination-brows/wilmington-ma/) — custom quote
 - [Nano Combo](../../nano-combo/wilmington-ma/) — $600
 See the [Wilmington, MA studio page](../../../../locations/wilmington-ma/) or the [aftercare guide](../../../../aftercare/).
+
+## What Powder Brows Look Like Once They Have Healed
+
+*Powder brows healed: lightest at the inner corner.*
+
+The gradient runs front to tail. Keeping the inner corner light is what stops a shaded brow from reading as a block.
 
 ## Which Licenses Cover This Work in Wilmington?
 

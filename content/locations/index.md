@@ -109,3 +109,15 @@ Split any service into **4 interest-free payments** with Cherry, or over up
 
 Approval and rates subject to eligibility. Cherry is a financial
  technology company, not a bank or a lender.
+
+## Frequently Asked Questions
+
+Either Wilmington, MA or Salem, NH — they offer the same 13 services at the same prices. Pick by distance and by phone number: Wilmington is 211 Lowell Street, Suite F, (781) 853-8063; Salem is 117A Main Street, (978) 223-7496. The Peabody address is the academy and treats no clients.
+
+Because it is the training division. Adriana’s Academy at 39 Cross Street, Suite 206, Peabody, MA serves students only — the 100-hour course, the apprenticeship and the VIP Masterclass are taught there. No client procedures happen at that address, so never book a brow or lip appointment for Peabody.
+
+Yes. The same 13 services are published at the same prices at both, from $250 to $850, and every original price includes the perfecting session 6 to 8 weeks later. What differs between them is the phone number and the licensing regime, not the price list.
+
+Yes, and that is worth knowing. Massachusetts has no single state body art licence: each town’s Board of Health licenses separately, which is why Wilmington issues its own numbers. New Hampshire licenses at state level under RSA 314-A, and the Town of Salem licenses on top of that.
+
+Both studios are open Monday to Saturday, 10:00 a.m. to 6:00 p.m., and closed on Sunday. Booking runs through Fresha for real-time availability, or by phone at the number of the studio you want: (781) 853-8063 for Wilmington, (978) 223-7496 for Salem.

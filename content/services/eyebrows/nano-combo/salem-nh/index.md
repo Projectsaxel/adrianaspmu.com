@@ -1,6 +1,6 @@
 <!-- Nano Combo Brows in Salem, NH | Adriana's PMU -->
 <!-- canonical: https://adrianaspmu.com/services/eyebrows/nano-combo/salem-nh/ -->
-> Nano Combo Brows in Salem, NH at Adriana's Permanent Makeup, 117A Main St. $600. Master PMU artist with 18+ years. Call (978) 223-7496 to book.
+> Nano Combo Brows in Salem, NH at Adriana's Permanent Makeup, 117A Main St. $600. Master PMU artist with 20+ years. Call (978) 223-7496 to book.
 
 # Nano Combo Brows in Salem, NH
 
@@ -56,7 +56,7 @@ Main Street is Route 97, with its western terminus at NH-28, Broadway; the addre
 
 ## What Backs the Artist Performing Nano Combo Brows in Salem?
 
-Adriana Souza Santos, the Master Permanent Makeup Artist performing Nano Combo Brows at the Salem studio, has completed 5,000+ procedures and trained 300+ students over an 18-plus year career begun in Brazil before the U.S. studio opened in 2017, holds an AAM Diamond Certified Trainer credential, and consults in English and Portuguese.
+Adriana Souza Santos, the Master Permanent Makeup Artist performing Nano Combo Brows at the Salem studio, has completed 5,000+ procedures and trained 300+ students over an 20-plus year career begun in Brazil before the U.S. studio opened in 2017, holds an AAM Diamond Certified Trainer credential, and consults in English and Portuguese.
 
 Adriana is currently the only artist at the Salem studio; the second artist, Livian Camargo Gomes, works only in Wilmington, MA.
 
@@ -88,6 +88,18 @@ Yes. The Salem studio offers payment plans through Cherry Technologies, an indep
 
 No. Livian Camargo Gomes, the studio's second licensed permanent makeup artist, works only at the Wilmington, MA location, not in Salem. At the Salem, NH studio, every Nano Combo Brows appointment is performed personally by Master Permanent Makeup Artist Adriana Souza Santos herself.
 
+Nano Combo Brows costs $600 at both studios, and that price already includes the perfecting session scheduled 6 to 8 weeks after the appointment. The consultation, the mapping and the topical numbing are part of it as well. A yearly touch-up, from $300, is a separate visit about 12 months later. Every price is published on the [price list](../../../../prices/).
+
+Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent lender: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
+
+The perfecting session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
+
+Most results hold 12 to 24 months before fading becomes visible. After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
+
+Yes. Pregnancy, breastfeeding, being under 18, and current isotretinoin use are refused at both studios, with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need clearance from your doctor first. The full list is published in the [contraindications guide](../../../../aftercare/) before you book, not after.
+
+Adriana Souza Santos has performed more than 5,000 procedures across 20+ years and trained over 300 students. She holds AAM Diamond Certified Trainer status and New Hampshire Body Artist licence 4283, valid through 18 July 2028, which you can verify yourself at the state’s public lookup rather than take on trust.
+
 ## Explore Other Brow Techniques and the Salem Studio
 
 Nano Combo Brows is one of five brow techniques at the Salem studio, alongside Microblading, Nano Brows, Powder Brows, and Combination Brows. Every technique includes the perfecting session, and each has its own page with pricing and detail for the Salem location.
@@ -98,6 +110,12 @@ Nano Combo Brows is one of five brow techniques at the Salem studio, alongside M
 - [Powder Brows in Salem](../../powder-brows/salem-nh/) — $550
 - [Combination Brows in Salem](../../combination-brows/salem-nh/) — custom quote
 See the [Salem, NH studio page](../../../../locations/salem-nh/) or the [aftercare guide](../../../../aftercare/).
+
+## What Nano Combo Brows Look Like Once They Have Healed
+
+*Nano combo healed: strokes at the front, shading behind them.*
+
+The combination is not half and half. Strokes carry the front, where the eye looks first, and the shading picks up behind them to give depth without a drawn edge.
 
 ## Which Licenses Cover This Work in Salem, NH?
 

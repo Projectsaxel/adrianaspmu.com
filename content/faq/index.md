@@ -92,7 +92,7 @@ All procedures are performed by licensed artists using sterile, single-use needl
 
 ### Who Performs the Procedures, and Is Permanent Makeup Safe?
 
-Adriana Souza Santos, an AAM Diamond Certified Trainer with 18+ years and 5,000+ procedures performed, treats clients at both studios, alongside Livian Camargo Gomes, a second licensed artist at Wilmington. Licensed artists and sterile, single-use equipment make the service safe.
+Adriana Souza Santos, an AAM Diamond Certified Trainer with 20+ years and 5,000+ procedures performed, treats clients at both studios, alongside Livian Camargo Gomes, a second licensed artist at Wilmington. Licensed artists and sterile, single-use equipment make the service safe.
 
 ### Which Licenses Cover Each Studio, and Can I Verify Them?
 
@@ -144,3 +144,5 @@ Approval and rates subject to eligibility. Cherry is a financial
 ## Ready to Book Your Appointment?
 
 Book online for Wilmington, MA or Salem, NH on Fresha, or ask a question first. The team answers in English and Portuguese.
+
+Reviewed by [Adriana Souza Santos, Master Permanent Makeup Artist](../about/) with 20+ years and 5,000+ procedures, AAM Diamond Certified Trainer, responsible for this page's accuracy. Questions: [contact page](../contact/). Last reviewed September 21, 2026.
