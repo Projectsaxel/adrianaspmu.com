@@ -955,7 +955,7 @@ for course, title, price, desc in [
     ("pmu-apprenticeship", "Permanent Makeup Apprenticeship", "$700/month", "Hands-on apprenticeship at Wilmington MA studio."),
     ("vip-masterclass", "VIP Permanent Makeup Masterclass", "Contact for pricing", "Custom advanced training for experienced artists."),
 ]:
-    acad_img = {"pmu-100h-fundamental": "academy/pmu-100h.jpg", "pmu-apprenticeship": "academy/apprenticeship.jpg"}.get(course)
+    acad_img = {"pmu-100h-fundamental": "academy/pmu-100h.webp", "pmu-apprenticeship": "academy/apprenticeship.webp"}.get(course)
     img_block = f'<div class="hero-visual">{img_tag(acad_img, title, 2, "service-hero-img")}</div>' if acad_img else ""
     write(f"academy/{course}/index.html", shell(title, desc, title,
         f'<section class="page-hero page-hero--split"><div class="container hero-grid"><div><h1>{title}</h1><p class="pricing-badge">{price}</p><p>{desc}</p><a class="btn btn-primary" href="../../contact/">Apply Now</a></div>{img_block}</div></section>', 2))
@@ -969,7 +969,7 @@ write("about/index.html", shell(
     <div><h1>About Adriana Souza Santos</h1>
     <p class="direct-answer">Master Permanent Makeup Artist with 20+ years of experience and 5,000+ procedures performed. Founder of Adriana's PMU and educator since 2017.</p>
     <p class="fact-layer">Licensed by the Wilmington Board of Health (Body Art Facility 20261921), the State of New Hampshire (OPLC 4283) and the Town of Salem (BODA-10). Women-owned business. LGBTQ+ friendly.</p></div>
-    <div class="hero-visual">{img_tag("adriana-quem-sou-eu.jpg", "Adriana Souza Santos — Master Permanent Makeup Artist", 1, "hero-img")}</div>
+    <div class="hero-visual">{img_tag("adriana-quem-sou-eu.webp", "Adriana Souza Santos — Master Permanent Makeup Artist", 1, "hero-img")}</div>
     </div></section>""", 1))
 
 write("contact/index.html", shell(

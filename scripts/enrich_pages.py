@@ -44,7 +44,7 @@ SALEM_NODE = {
         "addressCountry": "US",
     },
     "geo": {"@type": "GeoCoordinates", "latitude": 42.782612, "longitude": -71.228213},
-    "image": f"{BASE}/assets/images/locations/adrianas-permanent-makeup-salem-nh-storefront.jpg",
+    "image": f"{BASE}/assets/images/locations/adrianas-permanent-makeup-salem-nh-storefront.webp",
     "priceRange": "$250-$850",
 }
 
@@ -471,26 +471,26 @@ LICENCA_SALEM = """<section class="section section-alt"><div class="container">
 # que ela esta ali. Repetir o alt no title e ruido para leitor de tela.
 IMG_TEXT = {
     # servicos: o alt e o nome da tecnica, o title diz o resultado
-    "nano-brows.jpg": (None, "Nano Brows: hair-like strokes made with an ultra-fine machine needle"),
-    "microblading.jpg": (None, "Microblading: hair-like strokes made with a handheld blade"),
-    "powder-brows.jpg": (None, "Powder Brows: soft shaded finish, like brows filled with powder"),
-    "combination-brows.jpg": (None, "Combination Brows: hair-like strokes blended with soft shading"),
-    "nano-combo.jpg": (None, "Nano Combo Brows: nano strokes layered with powder shading"),
-    "lip-blush.jpg": (None, "Lip Blush: a soft tint that enhances natural lip colour and shape"),
-    "dark-lip-neutralization.jpg": (None, "Dark Lip Neutralization: colour correction that evens out deeper lip tones"),
-    "top-eyeliner.jpg": (None, "Top Eyeliner: definition along the upper lash line"),
-    "smokey-eyeliner.jpg": (None, "Smokey Eyeliner: upper liner blended upward into soft shading"),
-    "bottom-eyeliner.jpg": (None, "Bottom Eyeliner: fine definition along the lower lash line"),
-    "eyeliner-combo.jpg": (None, "Eyeliner Combo: upper and lower lash lines in one session"),
-    "eyebrows-lips-combo.jpg": (None, "Brows + Lips Combo: both treatments in one healing period"),
-    "yearly-touch-up.jpg": (None, "Yearly Touch-Up: refreshing faded pigment about twelve months on"),
+    "nano-brows.webp": (None, "Nano Brows: hair-like strokes made with an ultra-fine machine needle"),
+    "microblading.webp": (None, "Microblading: hair-like strokes made with a handheld blade"),
+    "powder-brows.webp": (None, "Powder Brows: soft shaded finish, like brows filled with powder"),
+    "combination-brows.webp": (None, "Combination Brows: hair-like strokes blended with soft shading"),
+    "nano-combo.webp": (None, "Nano Combo Brows: nano strokes layered with powder shading"),
+    "lip-blush.webp": (None, "Lip Blush: a soft tint that enhances natural lip colour and shape"),
+    "dark-lip-neutralization.webp": (None, "Dark Lip Neutralization: colour correction that evens out deeper lip tones"),
+    "top-eyeliner.webp": (None, "Top Eyeliner: definition along the upper lash line"),
+    "smokey-eyeliner.webp": (None, "Smokey Eyeliner: upper liner blended upward into soft shading"),
+    "bottom-eyeliner.webp": (None, "Bottom Eyeliner: fine definition along the lower lash line"),
+    "eyeliner-combo.webp": (None, "Eyeliner Combo: upper and lower lash lines in one session"),
+    "eyebrows-lips-combo.webp": (None, "Brows + Lips Combo: both treatments in one healing period"),
+    "yearly-touch-up.webp": (None, "Yearly Touch-Up: refreshing faded pigment about twelve months on"),
     # academia e credenciais
     "aam-seal.png": (None, "Diamond Certified Trainer status with the American Academy of Micropigmentation"),
-    "adriana.jpg": (None, "Adriana Souza Santos, who teaches every class at the Peabody academy"),
-    "apprenticeship.jpg": (None, "The apprenticeship year: supervised practice on live models"),
-    "pmu-100h.jpg": (None, "The 100 Hours Fundamental Class, accredited by the AAM"),
-    "classroom.jpg": (None, "The academy classroom at 39 Cross Street, Peabody"),
-    "in-person-class.jpg": (None, "Small-group teaching, with the instructor correcting work in the room"),
+    "adriana.webp": (None, "Adriana Souza Santos, who teaches every class at the Peabody academy"),
+    "apprenticeship.webp": (None, "The apprenticeship year: supervised practice on live models"),
+    "pmu-100h.webp": (None, "The 100 Hours Fundamental Class, accredited by the AAM"),
+    "classroom.webp": (None, "The academy classroom at 39 Cross Street, Peabody"),
+    "in-person-class.webp": (None, "Small-group teaching, with the instructor correcting work in the room"),
     # o hero da academia nao tinha alt nenhum
     "hero.webp": ("Adriana teaching a permanent makeup class at Adriana's Academy in Peabody, MA",
                   "A class in progress at the Peabody academy"),
@@ -859,7 +859,7 @@ PERSON_NODE = {
     # foto de GRUPO de quatro pessoas num evento (com TV de outra marca ao
     # fundo): o Person nomeava uma pessoa e mostrava quatro. Trocado em
     # 21/09/2026 pela foto de estudio da sessao Meet the Team.
-    "image": f"{BASE}/assets/images/adriana-souza-santos.jpg",
+    "image": f"{BASE}/assets/images/adriana-souza-santos.webp",
     "knowsLanguage": ["en-US", "pt-BR"],
     "hasCredential": {
         "@type": "EducationalOccupationalCredential",
@@ -922,7 +922,7 @@ TEAM_NODES = [
         "jobTitle": "Permanent Makeup Artist",
         "worksFor": {"@id": f"{BASE}/#organization"},
         "url": f"{BASE}/about/#livian-gomes",
-        "image": f"{BASE}/assets/images/livian-gomes.jpg",
+        "image": f"{BASE}/assets/images/livian-gomes.webp",
         "nationality": {"@type": "Country", "name": "Brazil"},
         "knowsAbout": [
             "Permanent makeup",
@@ -951,7 +951,7 @@ TEAM_NODES = [
         "name": "Sofia Laura",
         "worksFor": {"@id": f"{BASE}/#organization"},
         "url": f"{BASE}/about/#sofia-laura",
-        "image": f"{BASE}/assets/images/sofia-laura.jpg",
+        "image": f"{BASE}/assets/images/sofia-laura.webp",
         "nationality": {"@type": "Country", "name": "Brazil"},
     },
 ]
@@ -1973,7 +1973,7 @@ HOURS = {
 LOCATION_FIELDS = {
     f"{BASE}/#wilmington": {
         "url": f"{BASE}/locations/wilmington-ma/",
-        "image": f"{BASE}/assets/images/locations/wilmington-ma-studio-entrance.jpg",
+        "image": f"{BASE}/assets/images/locations/wilmington-ma-studio-entrance.webp",
         "parentOrganization": {"@id": f"{BASE}/#organization"},
         "priceRange": "$250-$850",
         "openingHoursSpecification": HOURS,
@@ -2173,7 +2173,7 @@ def enrich_schema(s, path_rel):
             "jobTitle": "Master Permanent Makeup Artist",
             "worksFor": {"@id": f"{BASE}/#organization"},
             "url": f"{BASE}/about/",
-            "image": f"{BASE}/assets/images/adriana-souza-santos.jpg",
+            "image": f"{BASE}/assets/images/adriana-souza-santos.webp",
         })
 
     # 6. CollectionPage + ItemList nos hubs (nao havia nenhum ItemList no site)

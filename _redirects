@@ -395,6 +395,93 @@
 /workdonebyludy                                     /portfolio/                                   301
 /workdonebyludy/                                    /portfolio/                                   301
 
+
+# ------------------------------------------------------------------
+# JPEG -> WebP (25/09/2026): 80 imagens convertidas (13,0 MB -> 7,8 MB).
+# O site anterior servia estes .jpg; o 301 preserva links externos e o
+# Google Imagens. og-default.jpg segue em JPEG (redes sociais).
+# ------------------------------------------------------------------
+/assets/images/sofia-laura.jpg                                                                  /assets/images/sofia-laura.webp                                                                 301
+/assets/images/adriana-souza-santos.jpg                                                         /assets/images/adriana-souza-santos.webp                                                        301
+/assets/images/livian-gomes.jpg                                                                 /assets/images/livian-gomes.webp                                                                301
+/assets/images/adriana-quem-sou-eu.jpg                                                          /assets/images/adriana-quem-sou-eu.webp                                                         301
+/assets/images/proof/nano-combo-salem-nh.jpg                                                    /assets/images/proof/nano-combo-salem-nh.webp                                                   301
+/assets/images/proof/nano-brows-wilmington-ma.jpg                                               /assets/images/proof/nano-brows-wilmington-ma.webp                                              301
+/assets/images/proof/dark-lip-neutralization-wilmington-ma.jpg                                  /assets/images/proof/dark-lip-neutralization-wilmington-ma.webp                                 301
+/assets/images/proof/eyebrows-lips-combo-wilmington-ma.jpg                                      /assets/images/proof/eyebrows-lips-combo-wilmington-ma.webp                                     301
+/assets/images/proof/dark-lip-neutralization-salem-nh.jpg                                       /assets/images/proof/dark-lip-neutralization-salem-nh.webp                                      301
+/assets/images/proof/microblading-wilmington-ma.jpg                                             /assets/images/proof/microblading-wilmington-ma.webp                                            301
+/assets/images/proof/eyeliner-combo-wilmington-ma.jpg                                           /assets/images/proof/eyeliner-combo-wilmington-ma.webp                                          301
+/assets/images/proof/eyeliner-combo-salem-nh.jpg                                                /assets/images/proof/eyeliner-combo-salem-nh.webp                                               301
+/assets/images/proof/lip-blush-wilmington-ma.jpg                                                /assets/images/proof/lip-blush-wilmington-ma.webp                                               301
+/assets/images/proof/powder-brows-salem-nh.jpg                                                  /assets/images/proof/powder-brows-salem-nh.webp                                                 301
+/assets/images/proof/eyebrows-lips-combo-salem-nh.jpg                                           /assets/images/proof/eyebrows-lips-combo-salem-nh.webp                                          301
+/assets/images/proof/lip-blush-salem-nh.jpg                                                     /assets/images/proof/lip-blush-salem-nh.webp                                                    301
+/assets/images/proof/microblading-salem-nh.jpg                                                  /assets/images/proof/microblading-salem-nh.webp                                                 301
+/assets/images/proof/nano-brows-salem-nh.jpg                                                    /assets/images/proof/nano-brows-salem-nh.webp                                                   301
+/assets/images/proof/nano-combo-wilmington-ma.jpg                                               /assets/images/proof/nano-combo-wilmington-ma.webp                                              301
+/assets/images/proof/powder-brows-wilmington-ma.jpg                                             /assets/images/proof/powder-brows-wilmington-ma.webp                                            301
+/assets/images/academy/adriana.jpg                                                              /assets/images/academy/adriana.webp                                                             301
+/assets/images/academy/apprenticeship.jpg                                                       /assets/images/academy/apprenticeship.webp                                                      301
+/assets/images/academy/pmu-100h.jpg                                                             /assets/images/academy/pmu-100h.webp                                                            301
+/assets/images/academy/classroom.jpg                                                            /assets/images/academy/classroom.webp                                                           301
+/assets/images/academy/in-person-class.jpg                                                      /assets/images/academy/in-person-class.webp                                                     301
+/assets/images/academy/slides/slide-001.jpg                                                     /assets/images/academy/slides/slide-001.webp                                                    301
+/assets/images/academy/slides/slide-002.jpg                                                     /assets/images/academy/slides/slide-002.webp                                                    301
+/assets/images/academy/slides/slide-003.jpg                                                     /assets/images/academy/slides/slide-003.webp                                                    301
+/assets/images/academy/slides/slide-007.jpg                                                     /assets/images/academy/slides/slide-007.webp                                                    301
+/assets/images/academy/slides/slide-006.jpg                                                     /assets/images/academy/slides/slide-006.webp                                                    301
+/assets/images/academy/slides/slide-010.jpg                                                     /assets/images/academy/slides/slide-010.webp                                                    301
+/assets/images/academy/slides/slide-004.jpg                                                     /assets/images/academy/slides/slide-004.webp                                                    301
+/assets/images/academy/slides/slide-005.jpg                                                     /assets/images/academy/slides/slide-005.webp                                                    301
+/assets/images/academy/slides/slide-008.jpg                                                     /assets/images/academy/slides/slide-008.webp                                                    301
+/assets/images/academy/slides/slide-009.jpg                                                     /assets/images/academy/slides/slide-009.webp                                                    301
+/assets/images/locations/wilmington-ma-studio-waiting-room.jpg                                  /assets/images/locations/wilmington-ma-studio-waiting-room.webp                                 301
+/assets/images/locations/salem-nh-studio-consultation-area.jpg                                  /assets/images/locations/salem-nh-studio-consultation-area.webp                                 301
+/assets/images/locations/salem-nh-studio-treatment-room.jpg                                     /assets/images/locations/salem-nh-studio-treatment-room.webp                                    301
+/assets/images/locations/wilmington-ma-studio-neon.jpg                                          /assets/images/locations/wilmington-ma-studio-neon.webp                                         301
+/assets/images/locations/wilmington-ma-studio-reception-desk.jpg                                /assets/images/locations/wilmington-ma-studio-reception-desk.webp                               301
+/assets/images/locations/wilmington-ma-studio-entrance.jpg                                      /assets/images/locations/wilmington-ma-studio-entrance.webp                                     301
+/assets/images/locations/adrianas-permanent-makeup-salem-nh-storefront.jpg                      /assets/images/locations/adrianas-permanent-makeup-salem-nh-storefront.webp                     301
+/assets/images/locations/salem-nh-studio-treatment-station.jpg                                  /assets/images/locations/salem-nh-studio-treatment-station.webp                                 301
+/assets/images/locations/salem-nh-studio-reception.jpg                                          /assets/images/locations/salem-nh-studio-reception.webp                                         301
+/assets/images/portfolio/Portfolio-Ludi-Lips-014.jpg                                            /assets/images/portfolio/Portfolio-Ludi-Lips-014.webp                                           301
+/assets/images/portfolio/Portfolio-Adriana-Eyebrows-023.jpg                                     /assets/images/portfolio/Portfolio-Adriana-Eyebrows-023.webp                                    301
+/assets/images/portfolio/Portfolio-Adriana-Eyeliner-004.jpg                                     /assets/images/portfolio/Portfolio-Adriana-Eyeliner-004.webp                                    301
+/assets/images/portfolio/Portfolio-Adriana-Eyeliner-010.jpg                                     /assets/images/portfolio/Portfolio-Adriana-Eyeliner-010.webp                                    301
+/assets/images/portfolio/Portfolio-Livy-Eyebrows-022.jpg                                        /assets/images/portfolio/Portfolio-Livy-Eyebrows-022.webp                                       301
+/assets/images/portfolio/Portfolio-Adriana-Eyeliner-005.jpg                                     /assets/images/portfolio/Portfolio-Adriana-Eyeliner-005.webp                                    301
+/assets/images/portfolio/Portfolio-Adriana-Eyebrows-022.jpg                                     /assets/images/portfolio/Portfolio-Adriana-Eyebrows-022.webp                                    301
+/assets/images/portfolio/Portfolio-Ludi-Lips-015.jpg                                            /assets/images/portfolio/Portfolio-Ludi-Lips-015.webp                                           301
+/assets/images/portfolio/Portfolio-Ludi-Lips-003.jpg                                            /assets/images/portfolio/Portfolio-Ludi-Lips-003.webp                                           301
+/assets/images/portfolio/Portfolio-Adriana-Eyebrows-020.jpg                                     /assets/images/portfolio/Portfolio-Adriana-Eyebrows-020.webp                                    301
+/assets/images/portfolio/Portfolio-Stella-Eyebrows-005.jpg                                      /assets/images/portfolio/Portfolio-Stella-Eyebrows-005.webp                                     301
+/assets/images/portfolio/Portfolio-Adriana-Eyeliner-013.jpg                                     /assets/images/portfolio/Portfolio-Adriana-Eyeliner-013.webp                                    301
+/assets/images/portfolio/Portfolio-Adriana-Eyeliner-007.jpg                                     /assets/images/portfolio/Portfolio-Adriana-Eyeliner-007.webp                                    301
+/assets/images/portfolio/Portfolio-Livy-Eyebrows-008.jpg                                        /assets/images/portfolio/Portfolio-Livy-Eyebrows-008.webp                                       301
+/assets/images/portfolio/Portfolio-Livy-Eyebrows-020.jpg                                        /assets/images/portfolio/Portfolio-Livy-Eyebrows-020.webp                                       301
+/assets/images/portfolio/Portfolio-Livy-Eyebrows-021.jpg                                        /assets/images/portfolio/Portfolio-Livy-Eyebrows-021.webp                                       301
+/assets/images/portfolio/Portfolio-Livy-Eyebrows-009.jpg                                        /assets/images/portfolio/Portfolio-Livy-Eyebrows-009.webp                                       301
+/assets/images/portfolio/Portfolio-Adriana-Eyeliner-012.jpg                                     /assets/images/portfolio/Portfolio-Adriana-Eyeliner-012.webp                                    301
+/assets/images/portfolio/Portfolio-Stella-Eyebrows-004.jpg                                      /assets/images/portfolio/Portfolio-Stella-Eyebrows-004.webp                                     301
+/assets/images/portfolio/Portfolio-Adriana-Eyebrows-021.jpg                                     /assets/images/portfolio/Portfolio-Adriana-Eyebrows-021.webp                                    301
+/assets/images/services/yearly-touch-up.jpg                                                     /assets/images/services/yearly-touch-up.webp                                                    301
+/assets/images/services/touch-ups-card.jpg                                                      /assets/images/services/touch-ups-card.webp                                                     301
+/assets/images/services/combos-card.jpg                                                         /assets/images/services/combos-card.webp                                                        301
+/assets/images/services/top-eyeliner.jpg                                                        /assets/images/services/top-eyeliner.webp                                                       301
+/assets/images/services/powder-brows.jpg                                                        /assets/images/services/powder-brows.webp                                                       301
+/assets/images/services/smokey-eyeliner.jpg                                                     /assets/images/services/smokey-eyeliner.webp                                                    301
+/assets/images/services/lip-blush.jpg                                                           /assets/images/services/lip-blush.webp                                                          301
+/assets/images/services/eyebrows-lips-combo.jpg                                                 /assets/images/services/eyebrows-lips-combo.webp                                                301
+/assets/images/services/microblading.jpg                                                        /assets/images/services/microblading.webp                                                       301
+/assets/images/services/bottom-eyeliner.jpg                                                     /assets/images/services/bottom-eyeliner.webp                                                    301
+/assets/images/services/combination-brows.jpg                                                   /assets/images/services/combination-brows.webp                                                  301
+/assets/images/services/eyeliner-combo.jpg                                                      /assets/images/services/eyeliner-combo.webp                                                     301
+/assets/images/services/nano-combo.jpg                                                          /assets/images/services/nano-combo.webp                                                         301
+/assets/images/services/nano-brows.jpg                                                          /assets/images/services/nano-brows.webp                                                         301
+/assets/images/services/eyebrows-card.jpg                                                       /assets/images/services/eyebrows-card.webp                                                      301
+/assets/images/services/dark-lip-neutralization.jpg                                             /assets/images/services/dark-lip-neutralization.webp                                            301
+
 # A ordem importa: as regras de index.html vem antes da geral.
 # Todos os destinos com barra, para nao encadear dois saltos.
 # ============================================================
