@@ -335,9 +335,73 @@ Where to look next:
 Adriana's Permanent Makeup — Wilmington, MA (781) 853-8063 and Salem, NH (978) 223-7496.
 `;
 
+/**
+ * Rota de pagina: termina em "/" ou ".html", ou nao tem extensao
+ * (/about, que o asset server manda para /about/). So estas negociam
+ * formato. Imagem, CSS, JS, sitemap, robots e llms.txt sao servidos direto:
+ * antes um Accept: image/webp ou text/css recebia 406.
+ */
+function isPageRoute(pathname) {
+  if (pathname.endsWith("/") || pathname.endsWith(".html")) return true;
+  const last = pathname.split("/").pop();
+  return !last.includes(".");
+}
+
+/**
+ * O asset server responde 307 para URL sem barra (/about -> /about/).
+ * 307 e temporario e nao consolida canonical: vira 301.
+ */
+function permanentSlash(res, url) {
+  if (res.status !== 307) return res;
+  const loc = res.headers.get("location");
+  if (!loc) return res;
+  const to = new URL(loc, url);
+  if (to.origin === url.origin && to.pathname === url.pathname + "/") {
+    const h = new Headers(res.headers);
+    h.set("vary", VARY);
+    return new Response(null, { status: 301, headers: h });
+  }
+  return res;
+}
+
+const isRedirect = (s) => s >= 300 && s < 400;
+
 async function serveNegotiated(request, env) {
   const url = new URL(request.url);
+
+  // Gemeos markdown acessados direto: servem, mas nao indexam e apontam o
+  // canonical para a pagina HTML (para arquivo que nao e HTML o canonical
+  // vai no header Link).
+  if (url.pathname.startsWith("/content/") && url.pathname.endsWith(".md")) {
+    const res = await env.ASSETS.fetch(request);
+    if (res.status !== 200) return res;
+    let page = url.pathname.slice("/content".length, -".md".length);
+    page = page.endsWith("/index") ? page.slice(0, -"index".length) : page + "/";
+    return withVary(res, {
+      "content-type": "text/markdown; charset=utf-8",
+      "x-robots-tag": "noindex",
+      link: `<${url.origin}${page}>; rel="canonical"`,
+    });
+  }
+
+  if (!isPageRoute(url.pathname)) {
+    const res = await env.ASSETS.fetch(request);
+    if (res.status === 404) {
+      const page = await env.ASSETS.fetch(new URL("/404.html", url));
+      return new Response(page.body, {
+        status: 404,
+        headers: { "content-type": "text/html; charset=utf-8", vary: VARY },
+      });
+    }
+    return res;
+  }
+
   const format = chooseFormat(request.headers.get("accept"));
+
+  // Redirect vale para qualquer formato: antes, com Accept: text/markdown,
+  // as 118 regras do _redirects e as URLs sem barra davam 404.
+  const res = await env.ASSETS.fetch(request);
+  if (isRedirect(res.status)) return withVary(permanentSlash(res, url));
 
   if (format === "none") {
     return new Response("Not Acceptable. This resource is available as text/html or text/markdown.\n", {
@@ -354,14 +418,14 @@ async function serveNegotiated(request, env) {
         return withVary(hit, { "content-type": "text/markdown; charset=utf-8" });
       }
     }
-    // sem gemeo markdown: 404 em markdown, nao HTML
+    // Pagina existe mas nao tem gemeo: entrega o HTML, nao um 404 falso.
+    if (res.status === 200) return withVary(res);
     return new Response(NOT_FOUND_MD, {
       status: 404,
       headers: { "content-type": "text/markdown; charset=utf-8", vary: VARY },
     });
   }
 
-  const res = await env.ASSETS.fetch(request);
   if (res.status === 404) {
     const page = await env.ASSETS.fetch(new URL("/404.html", url));
     return new Response(page.body, {
