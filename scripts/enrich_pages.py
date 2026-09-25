@@ -162,13 +162,38 @@ def fix_descriptions(s, path_rel):
                   f'<meta name="description" content="{desc}"', s, count=1)
 
 
+# Formas do link generico que aparecem no HTML. Comparar so com "&" era o
+# bug de 25/09/2026: o HTML traz "&amp;", a troca nunca acontecia e o
+# "Book Now in Wilmington" abria o seletor das duas unidades. O Book Now
+# do header usa ainda uma terceira forma, sem share=true.
+_FRESHA_GENERIC_FORMS = (
+    FRESHA_GENERIC,
+    FRESHA_GENERIC.replace("&", "&amp;"),
+    "https://www.fresha.com/book-now/adrianas-permanent-makeup-zeaseit5/all-offer?pId=727586",
+)
+
+PHONE_W = "tel:+17818538063"
+PHONE_S = "tel:+19782237496"
+
+
 def fix_fresha(s, path_rel):
     """Pagina de cidade manda direto para o Fresha da unidade certa.
-    Elimina a segunda escolha de unidade na jornada (feedback Rachel 16/08)."""
-    if "/wilmington-ma/" in "/" + path_rel:
-        return s.replace(FRESHA_GENERIC, FRESHA_W)
-    if "/salem-nh/" in "/" + path_rel:
-        return s.replace(FRESHA_GENERIC, FRESHA_S)
+    Elimina a segunda escolha de unidade na jornada (feedback Rachel 16/08).
+
+    Pagina de Salem tambem troca o Call do header no HTML estatico: antes so
+    o main.js trocava, e crawler (sem JS) e o gemeo markdown viam o telefone
+    de Wilmington."""
+    p = "/" + path_rel
+    if "/wilmington-ma/" in p:
+        dest = FRESHA_W.replace("&", "&amp;")
+    elif "/salem-nh/" in p:
+        dest = FRESHA_S.replace("&", "&amp;")
+        s = s.replace(f'header-call" href="{PHONE_W}"', f'header-call" href="{PHONE_S}"')
+        s = s.replace('href="tel:9782237496"', f'href="{PHONE_S}"')
+    else:
+        return s
+    for g in _FRESHA_GENERIC_FORMS:
+        s = s.replace(f'href="{g}"', f'href="{dest}"')
     return s
 
 

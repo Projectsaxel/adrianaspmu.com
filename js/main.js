@@ -318,6 +318,18 @@
       '<path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>' +
       "</svg><span class=\"float-cta-label\">Message Us</span>";
 
+    // Unidade da pagina (window.PMU_PAGE, gravado no build). Em pagina de
+    // Salem o modal mandava ligar para Wilmington e o lead chegava sem unidade.
+    const pageCity = (window.PMU_PAGE && window.PMU_PAGE.city) || "";
+    const callLine =
+      pageCity === "salem"
+        ? 'Or call <a href="tel:+19782237496">(978) 223-7496</a> &middot; Salem, NH'
+        : pageCity === "wilmington"
+          ? 'Or call <a href="tel:+17818538063">(781) 853-8063</a> &middot; Wilmington, MA'
+          : 'Or call Wilmington <a href="tel:+17818538063">(781) 853-8063</a> or Salem <a href="tel:+19782237496">(978) 223-7496</a>';
+    const leadLocation =
+      pageCity === "salem" ? "Salem, NH" : pageCity === "wilmington" ? "Wilmington, MA" : "Not specified";
+
     const modal = document.createElement("div");
     modal.className = "float-modal";
     modal.hidden = true;
@@ -349,7 +361,7 @@
           </div>
           <p class="form-message" hidden role="status" aria-live="polite"></p>
           <button type="submit" class="btn btn-primary">Send my question</button>
-          <p class="float-modal-fine">Or call <a href="tel:+17818538063">(781) 853-8063</a> &middot; Wilmington MA &amp; Salem NH</p>
+          <p class="float-modal-fine">${callLine}</p>
         </form>
       </div>`;
 
@@ -443,7 +455,8 @@
       payload.elapsed = Date.now() - openedAt;
       payload.page = window.location.pathname;
       payload.source = "floating-button";
-      payload.location = "From floating button";
+      // A origem ja vai em payload.source; aqui vai a unidade da pagina.
+      payload.location = leadLocation;
 
       let ok = false;
       let text = "We could not send your message. " + PHONES;
