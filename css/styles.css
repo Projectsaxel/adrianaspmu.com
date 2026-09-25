@@ -6000,3 +6000,7 @@ tbody tr:last-child > td { border-bottom: 0; }
   fill: none; stroke: currentColor; stroke-width: 2;
   stroke-linecap: round; stroke-linejoin: round;
 }
+
+/* Academy e Peabody: o Cherry nao financia curso. Some o texto da faixa,
+   as redes sociais ficam (classe posta pelo enrich_pages.py). */
+.no-cherry-banner .promo-banner > a { display: none; }

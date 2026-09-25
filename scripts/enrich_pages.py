@@ -1562,7 +1562,7 @@ ACADEMY_CRITERIA = [
      "The 100-Hour Fundamental is 9 days with practice on live models under supervision; the apprenticeship is a year of supervised practice at $700 a month."),
     ("What the price covers",
      "Ask for the total, and what is not in it.",
-     "$7,000 for the 100-Hour Fundamental, $700 a month for the apprenticeship. The VIP Masterclass is quoted per student because the scope changes. Cherry installments are available."),
+     "$7,000 for the 100-Hour Fundamental, $700 a month for the apprenticeship. The VIP Masterclass is quoted per student because the scope changes. Tuition can be split through our in-house payment plan (a deposit, then scheduled payments); Cherry covers permanent makeup services, not courses."),
     ("Where the training happens",
      "Ask for the training address, and whether clients are treated in the same room.",
      "All training is at 39 Cross Street, Suite 206, Peabody, MA, students only. Client procedures happen at the Wilmington and Salem studios, never at the academy."),
@@ -2224,6 +2224,15 @@ FONT_PRELOAD = '<link rel="preload" href="/assets/fonts/cormorant-garamond-latin
 JS_FLAG = '<script>document.documentElement.classList.add("js")</script>'
 
 
+def mark_no_cherry(s, path_rel):
+    """Paginas da Academy e de Peabody: a faixa do topo dizia 'Split your
+    service ... with Cherry', mas o Cherry nao financia curso (confirmado
+    pela Rachel em 25/09/2026). A classe esconde so o texto; as redes ficam."""
+    if not path_rel.startswith(IS_ACADEMY) or "no-cherry-banner" in s:
+        return s
+    return re.sub(r'<body class="([^"]*)"', r'<body class="\1 no-cherry-banner"', s, count=1)
+
+
 def add_js_flag(s, path_rel):
     """Marca <html class="js"> antes de qualquer pintura, para o CSS saber
     que o JS vai montar os componentes (galeria coverflow) e reservar o
@@ -2333,6 +2342,7 @@ def main():
                 s = fix_lcp(s, rel)
                 s = wrap_tables(s, rel)
                 s = add_js_flag(s, rel)
+                s = mark_no_cherry(s, rel)
             # A 404 tambem leva tag: pagina de erro sem medicao e a
             # forma mais comum de um link quebrado sobreviver meses.
             s = add_analytics(s, rel)

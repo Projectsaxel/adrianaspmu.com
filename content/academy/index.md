@@ -126,7 +126,7 @@ Six things are worth verifying with any permanent makeup school: who actually te
 | Whether the certificate is accredited | Ask which body accredits the certificate, and confirm that body exists and recognises the school. | The 100-Hour Fundamental is accredited by the American Academy of Micropigmentation. |
 | Certificate against licence | Ask whether the certificate lets you work legally. A school that lets you believe it does is selling you a problem. | It does not, and that is stated plainly here: the certificate is training. The licence to practise is issued by government — town by town in Massachusetts, at state level in New Hampshire under RSA 314-A. |
 | Hands-on practice on live models | Ask how many live models you work on, and who supervises while you do. | The 100-Hour Fundamental is 9 days with practice on live models under supervision; the apprenticeship is a year of supervised practice at $700 a month. |
-| What the price covers | Ask for the total, and what is not in it. | $7,000 for the 100-Hour Fundamental, $700 a month for the apprenticeship. The VIP Masterclass is quoted per student because the scope changes. Cherry installments are available. |
+| What the price covers | Ask for the total, and what is not in it. | $7,000 for the 100-Hour Fundamental, $700 a month for the apprenticeship. The VIP Masterclass is quoted per student because the scope changes. Tuition can be split through our in-house payment plan (a deposit, then scheduled payments); Cherry covers permanent makeup services, not courses. |
 | Where the training happens | Ask for the training address, and whether clients are treated in the same room. | All training is at 39 Cross Street, Suite 206, Peabody, MA, students only. Client procedures happen at the Wilmington and Salem studios, never at the academy. |
 
 ## Frequently Asked Questions
@@ -135,7 +135,7 @@ The 100-Hour Fundamental at $7,000 is the structured entry point: 9 days, five t
 
 No, and no school’s does. The certificate is training; the licence to practise is issued by government. Massachusetts licenses body art town by town through each Board of Health, while New Hampshire licenses at state level under RSA 314-A. You apply where you intend to work, after training.
 
-Yes. Cherry offers 4 interest-free payments or up to 24 months with interest for the 100-Hour Fundamental, using a soft credit check that does not affect your score. The apprenticeship is already monthly at $700, and the VIP Masterclass has its own in-house plan set when it is quoted.
+Yes. The 100-Hour Fundamental can be paid through our in-house payment plan (a deposit, then scheduled payments). Cherry covers permanent makeup services, not tuition. The apprenticeship is already monthly at $700, and the VIP Masterclass has its own in-house plan set when it is quoted.
 
 Adriana Souza Santos, AAM Diamond Certified Trainer — the American Academy of Micropigmentation’s highest instructor level. More than 5,000 procedures across 20+ years, over 300 students trained, and New Hampshire Body Artist licence 4283 that anyone can verify at the state’s public lookup.
 

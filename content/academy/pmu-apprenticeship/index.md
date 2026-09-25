@@ -102,7 +102,7 @@ Yes. Tuition uses an in-house payment plan with a deposit followed by scheduled 
 
 The apprenticeship runs $700 a month. It is the longer path: a year of supervised practice rather than an intensive, built around advanced model practice, client simulation, and the business side of working as an artist. The 100-Hour Fundamental, at $7,000, is the shorter and more structured alternative.
 
-The apprenticeship is already billed monthly at $700. For the 100-Hour Fundamental, Cherry offers 4 interest-free payments or up to 24 months with interest, using a soft credit check that does not affect your score. Cherry is an independent financing provider and sets approval and rates, not the academy.
+The apprenticeship is already billed monthly at $700. The 100-Hour Fundamental uses the same in-house payment plan; Cherry covers permanent makeup services, not tuition.
 
 Adriana Souza Santos, AAM Diamond Certified Trainer — the American Academy of Micropigmentation’s highest instructor level — with more than 5,000 procedures across 20+ years and over 300 students trained. Supervision happens in person at the Peabody studio, in English or in Portuguese.
 
@@ -138,5 +138,5 @@ Six things are worth verifying with any permanent makeup school: who actually te
 | Whether the certificate is accredited | Ask which body accredits the certificate, and confirm that body exists and recognises the school. | The 100-Hour Fundamental is accredited by the American Academy of Micropigmentation. |
 | Certificate against licence | Ask whether the certificate lets you work legally. A school that lets you believe it does is selling you a problem. | It does not, and that is stated plainly here: the certificate is training. The licence to practise is issued by government — town by town in Massachusetts, at state level in New Hampshire under RSA 314-A. |
 | Hands-on practice on live models | Ask how many live models you work on, and who supervises while you do. | The 100-Hour Fundamental is 9 days with practice on live models under supervision; the apprenticeship is a year of supervised practice at $700 a month. |
-| What the price covers | Ask for the total, and what is not in it. | $7,000 for the 100-Hour Fundamental, $700 a month for the apprenticeship. The VIP Masterclass is quoted per student because the scope changes. Cherry installments are available. |
+| What the price covers | Ask for the total, and what is not in it. | $7,000 for the 100-Hour Fundamental, $700 a month for the apprenticeship. The VIP Masterclass is quoted per student because the scope changes. Tuition can be split through our in-house payment plan (a deposit, then scheduled payments); Cherry covers permanent makeup services, not courses. |
 | Where the training happens | Ask for the training address, and whether clients are treated in the same room. | All training is at 39 Cross Street, Suite 206, Peabody, MA, students only. Client procedures happen at the Wilmington and Salem studios, never at the academy. |

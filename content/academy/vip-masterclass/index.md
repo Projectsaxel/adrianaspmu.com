@@ -91,7 +91,7 @@ Yes, an in-house payment plan is available, the same type offered for our other 
 
 Because one number would be wrong for almost everyone. A complete beginner and a working artist fixing her lip blush healing need different classes, so the class is quoted after a short conversation about your level, the technique you want, how many sessions that honestly takes, and your schedule.
 
-Yes. This course has an in-house payment plan, separate from the Cherry plan used for services and for the 100-Hour Fundamental. The terms are set when the class is quoted, since the scope and the number of sessions change from student to student.
+Yes. This course has an in-house payment plan, separate from the Cherry plans used for permanent makeup services. The terms are set when the class is quoted, since the scope and the number of sessions change from student to student.
 
 Yes, and also to artists already taking clients. That is the point of quoting it individually: the syllabus is built from where you actually are rather than from a fixed curriculum. Beginners and working artists simply get different classes under the same name.
 
@@ -121,5 +121,5 @@ Six things are worth verifying with any permanent makeup school: who actually te
 | Whether the certificate is accredited | Ask which body accredits the certificate, and confirm that body exists and recognises the school. | The 100-Hour Fundamental is accredited by the American Academy of Micropigmentation. |
 | Certificate against licence | Ask whether the certificate lets you work legally. A school that lets you believe it does is selling you a problem. | It does not, and that is stated plainly here: the certificate is training. The licence to practise is issued by government — town by town in Massachusetts, at state level in New Hampshire under RSA 314-A. |
 | Hands-on practice on live models | Ask how many live models you work on, and who supervises while you do. | The 100-Hour Fundamental is 9 days with practice on live models under supervision; the apprenticeship is a year of supervised practice at $700 a month. |
-| What the price covers | Ask for the total, and what is not in it. | $7,000 for the 100-Hour Fundamental, $700 a month for the apprenticeship. The VIP Masterclass is quoted per student because the scope changes. Cherry installments are available. |
+| What the price covers | Ask for the total, and what is not in it. | $7,000 for the 100-Hour Fundamental, $700 a month for the apprenticeship. The VIP Masterclass is quoted per student because the scope changes. Tuition can be split through our in-house payment plan (a deposit, then scheduled payments); Cherry covers permanent makeup services, not courses. |
 | Where the training happens | Ask for the training address, and whether clients are treated in the same room. | All training is at 39 Cross Street, Suite 206, Peabody, MA, students only. Client procedures happen at the Wilmington and Salem studios, never at the academy. |
