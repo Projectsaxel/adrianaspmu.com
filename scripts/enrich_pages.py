@@ -134,23 +134,54 @@ def classify(path_rel):
     return {"page_type": simple.get(seg[0], "other"), "service": "", "city": ""}
 
 
+# GA4 so no dominio de producao (25/09/2026). O GA4 recebia hits de
+# 127.0.0.1 (31 sessoes), localhost (12), *.workers.dev e hostingersite.com:
+# qualquer "wrangler dev", "python3 -m http.server" ou preview contava como
+# visita real. Agora o gtag.js e o /js/analytics.js so sao CARREGADOS quando
+# location.hostname === "adrianaspmu.com" (www redireciona para o apex, entao
+# nao precisa entrar). Fora dele nada vai para o Google, de proposito: testar
+# local e ver zero hits no GA4 e o comportamento esperado (ver README).
+# window.PMU_PAGE continua sendo definido sempre (o main.js le a unidade
+# dele), e o stub gtag/dataLayer tambem, para nenhum codigo quebrar.
+GA_HOST = "adrianaspmu.com"
+GA_GATE_MARK = "/*ga4-so-em-producao*/"
+
+# Bloco antigo (sem trava de hostname), ja commitado no HTML de 64 paginas
+_GA_OLD = re.compile(
+    r'<script>window\.PMU_PAGE=[^<]*</script>\s*'
+    r'<script async src="https://www\.googletagmanager\.com/gtag/js\?id=[^"]+"></script>\s*'
+    r'<script>window\.dataLayer=.*?</script>\s*'
+    r'<script src="/js/analytics\.js" defer></script>\n?',
+    re.S,
+)
+
+
 def add_analytics(s, path_rel):
-    if GA4_ID in s:
+    if GA_GATE_MARK in s:
         return s
     c = classify(path_rel)
     page_json = json.dumps(c, separators=(",", ":"))
     snippet = (
-        f'<script>window.PMU_PAGE={page_json};</script>\n'
-        f'<script async src="https://www.googletagmanager.com/gtag/js?id={GA4_ID}"></script>\n'
-        "<script>window.dataLayer=window.dataLayer||[];"
-        "function gtag(){dataLayer.push(arguments);}gtag('js',new Date());"
+        f"<script>{GA_GATE_MARK}window.PMU_PAGE={page_json};"
+        "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}"
+        f'if(location.hostname==="{GA_HOST}"){{'
+        "gtag('js',new Date());"
         # Os tres parametros da pagina viajam em TODO evento, inclusive
         # no page_view. Sem isso, so o evento de clique saberia o
         # contexto e nao daria para comparar visita com conversao.
         f"gtag('config','{GA4_ID}',{{page_type:'{c['page_type']}',"
-        f"service:'{c['service'] or '(none)'}',city:'{c['city'] or '(none)'}'}});</script>\n"
-        '<script src="/js/analytics.js" defer></script>\n'
+        f"service:'{c['service'] or '(none)'}',city:'{c['city'] or '(none)'}'}});"
+        # IIFE: sem ela d/g/a virariam variaveis globais da pagina
+        "(function(d){var g=d.createElement('script'),a=d.createElement('script');"
+        f"g.async=true;g.src='https://www.googletagmanager.com/gtag/js?id={GA4_ID}';"
+        # analytics.js injetado fica async (defer nao vale para script
+        # dinamico); ele ja trata DOM ainda carregando (readyState).
+        "a.src='/js/analytics.js';d.head.appendChild(g);d.head.appendChild(a);})(document);}"
+        "</script>\n"
     )
+    # troca o bloco antigo no MESMO lugar do <head>; pagina nova recebe no fim
+    if _GA_OLD.search(s):
+        return _GA_OLD.sub(lambda _m: snippet, s, count=1)
     return s.replace("</head>", snippet + "</head>", 1)
 
 
