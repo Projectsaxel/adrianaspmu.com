@@ -2224,6 +2224,117 @@ FONT_PRELOAD = '<link rel="preload" href="/assets/fonts/cormorant-garamond-latin
 JS_FLAG = '<script>document.documentElement.classList.add("js")</script>'
 
 
+# ====================================================================
+# Avaliacoes do Google (25/09/2026)
+#
+# data/reviews.json e escrito por scripts/fetch_reviews.py (Local Falcon,
+# a cada 3 dias pelo GitHub Actions). Aqui o build grava no HTML as
+# avaliacoes escolhidas para cada pagina (indexavel e sem JS) e a nota real;
+# o main.js depois busca /api/reviews e atualiza sem precisar de deploy.
+# Sem schema Review/aggregateRating: a pagina e da propria empresa.
+# ====================================================================
+def _load_reviews():
+    fp = os.path.join(ROOT, "data", "reviews.json")
+    try:
+        with open(fp, encoding="utf-8") as f:
+            return json.load(f)
+    except (OSError, ValueError):
+        return None
+
+
+REVIEWS = _load_reviews()
+
+_REV_CAT = {"eyebrows", "lips", "eyeliner", "combos", "touch-ups"}
+
+
+def _review_target(path_rel):
+    """(servico, unidade) da pagina, ou None se a pagina nao leva avaliacoes."""
+    parts = path_rel.split("/")[:-1]              # tira o index.html
+    if parts[:1] == ["locations"] and len(parts) == 2 and parts[1] in ("wilmington-ma", "salem-nh"):
+        return "_any", parts[1].split("-")[0]
+    if parts[:1] != ["services"] or len(parts) < 2:
+        return None
+    unit = "all"
+    if parts[-1] in ("wilmington-ma", "salem-nh"):
+        unit = parts[-1].split("-")[0]
+        parts = parts[:-1]
+    if len(parts) == 2 and parts[1] in _REV_CAT:
+        return parts[1], unit
+    if len(parts) == 3:
+        return parts[2], unit
+    return None
+
+
+def _esc(t):
+    import html as _h
+    return _h.escape(t, quote=True)
+
+
+def _review_card(r, units):
+    label = units.get(r["unit"], {}).get("label", "")
+    return (
+        '<figure class="review-live">'
+        '<p class="review-live-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>'
+        f'<blockquote><p>{_esc(r["text"])}</p></blockquote>'
+        f'<figcaption><strong>{_esc(r["name"])}</strong> &middot; {_esc(r["month"])} &middot; Google review, {_esc(label)}</figcaption>'
+        "</figure>"
+    )
+
+
+def _reviews_summary(units):
+    w, sa = units.get("wilmington"), units.get("salem")
+    bits = []
+    if w:
+        bits.append(f'<span data-gbp-rating="wilmington">{w["rating"]}</span> &#9733; from '
+                    f'<span data-gbp-count="wilmington">{w["total"]}</span> Google reviews in Wilmington, MA')
+    if sa:
+        bits.append(f'<span data-gbp-rating="salem">{sa["rating"]}</span> &#9733; from '
+                    f'<span data-gbp-count="salem">{sa["total"]}</span> in Salem, NH')
+    return " &middot; ".join(bits)
+
+
+def add_reviews(s, path_rel):
+    if not REVIEWS:
+        return s
+    units = REVIEWS.get("units", {})
+    # nota fixa espalhada pelo site ("4.8&#9733; 217 Google reviews") vira o
+    # dado real, marcado para o main.js atualizar
+    w = units.get("wilmington")
+    if w:
+        s = re.sub(r'<dt(?: data-gbp-rating="wilmington")?>[\d.]+&#9733;</dt><dd(?: data-gbp-count="wilmington")?>\d+ Google reviews</dd>',
+                   f'<dt data-gbp-rating="wilmington" data-gbp-suffix="&#9733;">{w["rating"]}&#9733;</dt>'
+                   f'<dd data-gbp-count="wilmington" data-gbp-suffix=" Google reviews">{w["total"]} Google reviews</dd>', s)
+        s = re.sub(r'<span class="trust-value"(?: data-gbp-rating="wilmington"(?: data-gbp-suffix="[^"]*")?)?>[\d.]+★</span>',
+                   f'<span class="trust-value" data-gbp-rating="wilmington" data-gbp-suffix="★">{w["rating"]}★</span>', s)
+    tgt = _review_target(path_rel)
+    if not tgt:
+        return s
+    service, unit = tgt
+    sel = REVIEWS.get("selection", {}).get(service) or REVIEWS.get("selection", {}).get("_any", {})
+    ids = sel.get(unit) or sel.get("all") or []
+    cards = [REVIEWS["reviews"][i] for i in ids if i in REVIEWS.get("reviews", {})]
+    if not cards:
+        return s
+    maps = units.get(unit if unit in units else "wilmington", {}).get("maps", "")
+    bloco = (
+        f'<section class="section reviews-live" data-reviews data-service="{service}" data-unit="{unit}" aria-labelledby="reviews-live-h">'
+        '<div class="container">'
+        '<h2 id="reviews-live-h">What Clients Say on Google</h2>'
+        f'<p class="reviews-live-summary">{_reviews_summary(units)}</p>'
+        '<div class="reviews-live-grid" data-reviews-grid>' + "".join(_review_card(r, units) for r in cards) + "</div>"
+        '<p class="reviews-live-note">Shown as written on Google, with first name and initial. '
+        f'<a href="{maps}" target="_blank" rel="noopener noreferrer">Read every review on Google</a></p>'
+        "</div></section>"
+    )
+    # substitui o bloco de um build anterior; senao entra antes do CTA final
+    if "data-reviews " in s or "data-reviews>" in s:
+        return re.sub(r'<section class="section reviews-live".*?</section>', bloco, s, count=1, flags=re.S)
+    m = re.search(r'<section class="section[^"]*section--cta"', s)
+    if m:
+        return s[: m.start()] + bloco + "\n" + s[m.start():]
+    return s.replace("</main>", bloco + "\n</main>", 1)
+
+
 def mark_no_cherry(s, path_rel):
     """Paginas da Academy e de Peabody: a faixa do topo dizia 'Split your
     service ... with Cherry', mas o Cherry nao financia curso (confirmado
@@ -2343,6 +2454,7 @@ def main():
                 s = wrap_tables(s, rel)
                 s = add_js_flag(s, rel)
                 s = mark_no_cherry(s, rel)
+                s = add_reviews(s, rel)
             # A 404 tambem leva tag: pagina de erro sem medicao e a
             # forma mais comum de um link quebrado sobreviver meses.
             s = add_analytics(s, rel)

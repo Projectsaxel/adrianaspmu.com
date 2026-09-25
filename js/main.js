@@ -936,7 +936,46 @@
     initPortfolioFilters();
     initPortfolioLightbox();
     initVideo();
+    initReviews();
   });
+
+  /* Avaliacoes do Google ao vivo (25/09/2026).
+     O build ja grava no HTML as avaliacoes escolhidas e a nota. Aqui a
+     pagina busca /api/reviews, que o GitHub Actions atualiza a cada 3 dias
+     pelo Local Falcon, e troca pelo mais recente sem precisar de deploy.
+     Se a busca falhar, fica o que veio no HTML. */
+  function initReviews() {
+    const blocos = document.querySelectorAll("[data-reviews]");
+    const notas = document.querySelectorAll("[data-gbp-rating], [data-gbp-count]");
+    if (!blocos.length && !notas.length) return;
+    fetch("/api/reviews", { headers: { Accept: "application/json" } })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d) => {
+        if (!d || !d.units || !d.reviews) return;
+        notas.forEach((el) => {
+          const u = d.units[el.getAttribute("data-gbp-rating") || el.getAttribute("data-gbp-count")];
+          if (!u) return;
+          const valor = el.hasAttribute("data-gbp-rating") ? Number(u.rating).toFixed(1) : String(u.total);
+          el.textContent = valor + (el.getAttribute("data-gbp-suffix") || "");
+        });
+        const esc = (t) => String(t).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+        blocos.forEach((b) => {
+          const sel = (d.selection || {})[b.getAttribute("data-service")] || (d.selection || {})._any;
+          if (!sel) return;
+          const ids = sel[b.getAttribute("data-unit")] || sel.all || [];
+          const cards = ids.map((i) => d.reviews[i]).filter(Boolean);
+          const grid = b.querySelector("[data-reviews-grid]");
+          if (!grid || !cards.length) return;
+          grid.innerHTML = cards.map((r) => {
+            const label = (d.units[r.unit] || {}).label || "";
+            return '<figure class="review-live"><p class="review-live-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>' +
+              "<blockquote><p>" + esc(r.text) + "</p></blockquote>" +
+              "<figcaption><strong>" + esc(r.name) + "</strong> &middot; " + esc(r.month) + " &middot; Google review, " + esc(label) + "</figcaption></figure>";
+          }).join("");
+        });
+      })
+      .catch(() => {});
+  }
 })();
 
 /* ===================================================================

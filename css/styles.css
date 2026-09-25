@@ -6004,3 +6004,48 @@ tbody tr:last-child > td { border-bottom: 0; }
 /* Academy e Peabody: o Cherry nao financia curso. Some o texto da faixa,
    as redes sociais ficam (classe posta pelo enrich_pages.py). */
 .no-cherry-banner .promo-banner > a { display: none; }
+
+/* ---------------------------------------------------------------
+   Avaliacoes do Google (25/09/2026). Gravadas no build pelo
+   enrich_pages.py e atualizadas pelo main.js a partir de /api/reviews.
+   --------------------------------------------------------------- */
+.reviews-live .reviews-live-summary {
+  margin: 0 0 var(--space-6);
+  color: var(--ink-muted);
+  font-size: 0.9375rem;
+}
+.reviews-live-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  gap: var(--space-4);
+}
+.review-live {
+  margin: 0;
+  padding: var(--space-5, 1.5rem);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.review-live-stars {
+  margin: 0;
+  color: var(--brass-text);
+  letter-spacing: 0.12em;
+  font-size: 0.95rem;
+}
+.review-live blockquote { margin: 0; flex: 1; }
+.review-live blockquote p {
+  margin: 0;
+  color: var(--ink);
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.review-live figcaption { font-size: 0.8125rem; color: var(--ink-muted); }
+.review-live figcaption strong { color: var(--ink); font-weight: 600; }
+.reviews-live-note { margin: var(--space-4) 0 0; font-size: 0.8125rem; color: var(--ink-muted); }
+.reviews-live-note a { color: var(--brand-deep); }

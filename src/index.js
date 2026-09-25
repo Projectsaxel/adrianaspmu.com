@@ -447,10 +447,41 @@ async function serveNegotiated(request, env) {
   return withVary(res);
 }
 
+/* Avaliacoes do Google (25/09/2026). O GitHub Actions grava o JSON a cada
+   3 dias na branch reviews-data do repositorio (publico); o Worker so le e
+   guarda 1h em cache. Sem segredo nenhum no Worker. Se a branch falhar, cai
+   no data/reviews.json que foi publicado no ultimo deploy. */
+const REVIEWS_URL =
+  "https://raw.githubusercontent.com/Projectsaxel/adrianaspmu.com/reviews-data/reviews.json";
+
+async function serveReviews(request, env, url) {
+  const headers = {
+    "content-type": "application/json; charset=utf-8",
+    "cache-control": "public, max-age=3600",
+    "x-robots-tag": "noindex",
+  };
+  try {
+    const r = await fetch(REVIEWS_URL, { cf: { cacheTtl: 3600, cacheEverything: true } });
+    if (r.ok) {
+      const body = await r.text();
+      JSON.parse(body); // so repassa se for JSON valido
+      return new Response(body, { status: 200, headers });
+    }
+  } catch (e) {
+    console.log(JSON.stringify({ event: "reviews_fallback", error: String(e).slice(0, 120) }));
+  }
+  const local = await env.ASSETS.fetch(new Request(new URL("/data/reviews.json", url), request));
+  if (local.ok) return new Response(local.body, { status: 200, headers });
+  return new Response('{"units":{},"reviews":{},"selection":{}}', { status: 200, headers });
+}
+
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
 
+    if (url.pathname === "/api/reviews") {
+      return serveReviews(request, env, url);
+    }
     if (url.pathname !== "/api/contact") {
       return serveNegotiated(request, env);
     }

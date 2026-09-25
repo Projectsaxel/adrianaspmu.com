@@ -27,6 +27,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # Snapshot fresco das avaliacoes no HTML publicado (a branch
+      # reviews-data cobre o intervalo entre deploys). Sem o secret, usa o
+      # data/reviews.json do repositorio.
+      - name: Avaliacoes do Google (Local Falcon)
+        env:
+          LOCALFALCON_API_KEY: ${{ secrets.LOCALFALCON_API_KEY }}
+        run: python3 scripts/fetch_reviews.py || echo "::warning::avaliacoes nao atualizadas; segue com o snapshot do repo"
+
       - name: Header e footer estaticos (nav visivel sem JS)
         run: node scripts/static_nav.js
 

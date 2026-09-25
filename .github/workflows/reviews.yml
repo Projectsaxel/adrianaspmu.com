@@ -1,0 +1,54 @@
+name: Atualizar avaliacoes do Google
+
+# A cada 3 dias busca as avaliacoes das duas unidades no Local Falcon e
+# grava reviews.json na branch reviews-data. O Worker le essa branch em
+# /api/reviews (cache de 1h): o site atualiza SEM deploy e sem aprovacao.
+# Para rodar na hora: Actions > "Atualizar avaliacoes do Google" > Run workflow.
+on:
+  schedule:
+    - cron: "17 10 */3 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: reviews-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Buscar avaliacoes (Local Falcon)
+        env:
+          LOCALFALCON_API_KEY: ${{ secrets.LOCALFALCON_API_KEY }}
+        run: |
+          if [ -z "$LOCALFALCON_API_KEY" ]; then
+            echo "::warning::Secret LOCALFALCON_API_KEY ainda nao cadastrado; nada a fazer."
+            exit 0
+          fi
+          python3 scripts/fetch_reviews.py "$RUNNER_TEMP/reviews.json"
+
+      - name: Publicar na branch reviews-data
+        run: |
+          [ -f "$RUNNER_TEMP/reviews.json" ] || exit 0
+          git config user.name "reviews-bot"
+          git config user.email "reviews-bot@users.noreply.github.com"
+          git fetch origin reviews-data || true
+          if git rev-parse --verify origin/reviews-data >/dev/null 2>&1; then
+            git worktree add "$RUNNER_TEMP/rd" origin/reviews-data
+            cd "$RUNNER_TEMP/rd" && git checkout -B reviews-data
+          else
+            git worktree add --detach "$RUNNER_TEMP/rd" && cd "$RUNNER_TEMP/rd"
+            git checkout --orphan reviews-data && git rm -rfq . || true
+          fi
+          cp "$RUNNER_TEMP/reviews.json" reviews.json
+          git add reviews.json
+          if git diff --cached --quiet; then echo "Sem mudanca nas avaliacoes."; exit 0; fi
+          git commit -qm "Avaliacoes do Google: $(date -u +%Y-%m-%d)"
+          git push origin reviews-data
