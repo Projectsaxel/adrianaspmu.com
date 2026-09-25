@@ -148,7 +148,7 @@ Yes. Every service can be split into 4 interest-free payments, or a longer plan 
 
 Thirteen services are published with their prices, from $250 for bottom eyeliner to $850 for the brows and lips combo. Every original price already includes the perfecting session 6 to 8 weeks later. The full table is on the price list, and combination brows is the one service quoted at the consultation.
 
-Yes. Cherry offers 4 interest-free payments, or up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent lender: it sets approval and rates, not the studio.
+Yes. Cherry offers 4 interest-free payments, or up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent financing provider: it sets approval and rates, not the studio.
 
 The perfecting session covers it. Scheduled 6 to 8 weeks after the first appointment, once the skin has healed, it is included in the original price at no extra charge. Pigment settles differently on different skin, so a second pass is part of the procedure rather than a paid repair.
 

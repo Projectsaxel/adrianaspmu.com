@@ -52,7 +52,7 @@ Every price includes one perfecting session, 6 to 8 weeks after the first appoin
 
 ### Does Insurance Cover Permanent Makeup, and Can I Split the Cost?
 
-Permanent makeup is cosmetic, so insurance does not cover it. Clients can split the cost through Cherry Technologies, an independent lender, instead of paying upfront. Approval is not guaranteed, and every term is set by Cherry, not the studio. Details are on the [payment plans page](../payment-plan/).
+Permanent makeup is cosmetic, so insurance does not cover it. Clients can split the cost through Cherry Technologies, an independent financing provider, instead of paying upfront. Approval is not guaranteed, and every term is set by Cherry, not the studio. Details are on the [payment plans page](../payment-plan/).
 
 ## Which Permanent Makeup Technique Is Right for Me?
 
@@ -72,11 +72,11 @@ Options include Top Eyeliner ($350), Bottom Eyeliner ($250), Smokey Eyeliner ($4
 
 ## How Long Does Permanent Makeup Last, and What Does Healing Look Like?
 
-Results generally last 12 to 24 months before fading, depending on skin type and sun exposure. Healing runs through several stages over about 6 to 8 weeks. Full day-by-day detail is in the [aftercare guide](../aftercare/).
+Results generally last 1 to 3 years, depending on the technique, skin type and sun exposure; microblading sits at the short end, 12 to 24 months. Healing runs through several stages over about 6 to 8 weeks. Full day-by-day detail is in the [aftercare guide](../aftercare/).
 
 ### How Long Does Permanent Makeup Last?
 
-Results generally last 12 to 24 months before fading, though retention varies by skin type and sun exposure. Daily SPF slows fading, since color keeps breaking down under UV light. The yearly touch-up, from $300, restores the color when it's time.
+Results generally last 1 to 3 years, depending on the technique, skin type and sun exposure; microblading sits at the short end, 12 to 24 months. Daily SPF slows fading, since color keeps breaking down under UV light. The yearly touch-up, from $300, restores the color when it's time.
 
 ### What Does Healing Look Like After a Procedure?
 

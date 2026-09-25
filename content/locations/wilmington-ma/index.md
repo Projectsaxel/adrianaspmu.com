@@ -129,7 +129,7 @@ The Wilmington, MA studio is open Monday through Saturday, 10:00 a.m. to 6:00 p.
 
 Prices at the Wilmington studio start at $250 for bottom eyeliner and range up to $850 for a brows-and-lips package. Nano Brows is $650; Microblading, Powder Brows, and Lip Blush are each $550. Combination Brows is quoted at consultation, since the technique blend varies by client.
 
-Yes. The Wilmington studio offers payment plans through Cherry Technologies, an independent lender separate from Adriana's Permanent Makeup. Options include 4 interest-free payments or a longer plan up to 24 months with interest. Approval is not guaranteed; Cherry sets the terms, not the studio.
+Yes. The Wilmington studio offers payment plans through Cherry Technologies, an independent financing provider separate from Adriana's Permanent Makeup. Options include 4 interest-free payments or a longer plan up to 24 months with interest. Approval is not guaranteed; Cherry sets the terms, not the studio.
 
 Yes. Master Permanent Makeup Artist Adriana Souza Santos consults in both English and Portuguese at the Wilmington studio. Clients who prefer discussing brows, lips, or eyeliner goals in Portuguese can request that language when booking, online through Fresha or by phone at (781) 853-8063.
 

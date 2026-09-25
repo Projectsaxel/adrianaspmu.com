@@ -44,7 +44,7 @@ Full healing detail is in the [aftercare guide](../../../../aftercare/).
 
 New Hampshire regulates body art at two levels in Salem: a state license under RSA 314-A, and a separate Town of Salem license under Chapter 433. The studio sits on Route 97 near I-93 Exit 2, about 9 miles from Methuen, Windham, or Pelham.
 
-Main Street is Route 97, with its western terminus at NH-28, Broadway; the address sits in the Salem Depot area, nearest I-93 access Exit 2, Pelham Road. New Hampshire has no passenger rail — MBTA ends at Lowell and Haverhill, both in Massachusetts. Population: 30,964.
+Main Street is Route 97, with its western terminus at NH-28, Broadway; the address sits in the Salem Depot area, nearest I-93 access Exit 2, Pelham Road. New Hampshire has no passenger rail — MBTA ends at Lowell and Haverhill, both in Massachusetts.
 
 | Town | Driving distance |
 | --- | --- |
@@ -56,7 +56,7 @@ Main Street is Route 97, with its western terminus at NH-28, Broadway; the addre
 
 ## What Backs the Artist Performing Nano Combo Brows in Salem?
 
-Adriana Souza Santos, the Master Permanent Makeup Artist performing Nano Combo Brows at the Salem studio, has completed 5,000+ procedures and trained 300+ students over an 20-plus year career begun in Brazil before the U.S. studio opened in 2017, holds an AAM Diamond Certified Trainer credential, and consults in English and Portuguese.
+Adriana Souza Santos, the Master Permanent Makeup Artist performing Nano Combo Brows at the Salem studio, has completed 5,000+ procedures and trained 300+ students over a 20-plus year career begun in Brazil before the U.S. studio opened in 2017, holds an AAM Diamond Certified Trainer credential, and consults in English and Portuguese.
 
 Adriana is currently the only artist at the Salem studio; the second artist, Livian Camargo Gomes, works only in Wilmington, MA.
 
@@ -84,17 +84,17 @@ Yes, at two levels. New Hampshire licenses body art practitioners at the state l
 
 Nano Combo Brows typically last 1 to 3 years before fading. About 12 months after the perfecting session, a yearly touch-up, from $300, refreshes the strokes and shading at the Salem studio rather than requiring the full original $600 procedure again from scratch entirely.
 
-Yes. The Salem studio offers payment plans through Cherry Technologies, an independent lender separate from Adriana's Permanent Makeup. Options include 4 interest-free payments or a longer plan up to 24 months with interest. Approval is not guaranteed; Cherry sets the terms, not the studio.
+Yes. The Salem studio offers payment plans through Cherry Technologies, an independent financing provider separate from Adriana's Permanent Makeup. Options include 4 interest-free payments or a longer plan up to 24 months with interest. Approval is not guaranteed; Cherry sets the terms, not the studio.
 
 No. Livian Camargo Gomes, the studio's second licensed permanent makeup artist, works only at the Wilmington, MA location, not in Salem. At the Salem, NH studio, every Nano Combo Brows appointment is performed personally by Master Permanent Makeup Artist Adriana Souza Santos herself.
 
 Nano Combo Brows costs $600 at both studios, and that price already includes the perfecting session scheduled 6 to 8 weeks after the appointment. The consultation, the mapping and the topical numbing are part of it as well. A yearly touch-up, from $300, is a separate visit about 12 months later. Every price is published on the [price list](../../../../prices/).
 
-Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent lender: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
+Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent financing provider: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
 
 The perfecting session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
 
-Most results hold 12 to 24 months before fading becomes visible. After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
+Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
 
 Yes. Pregnancy, breastfeeding, being under 18, and current isotretinoin use are refused at both studios, with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need clearance from your doctor first. The full list is published in the [contraindications guide](../../../../aftercare/) before you book, not after.
 

@@ -7,7 +7,7 @@ def yearly_touch_up_sections(base: str) -> str:
   <div class="container service-prose">
     <h2>Keep Your Permanent Makeup Looking Fresh and Beautiful</h2>
     <p>Permanent makeup is designed to provide long-lasting beauty, but like any cosmetic enhancement, it benefits from periodic maintenance. At Adriana Beauty Services – Permanent Makeup, our Yearly Touch-Up service helps maintain the color, definition, and overall appearance of your brows, lips, and eyeliner so you can continue enjoying beautiful results year after year.</p>
-    <p>For over 7 years, we have helped clients in Wilmington, MA and now Salem, NH preserve their permanent makeup investment with professional touch-up services.</p>
+    <p>Since 2017, we have helped clients in Wilmington, MA and now Salem, NH preserve their permanent makeup investment with professional touch-up services.</p>
   </div>
 </section>
 
@@ -126,7 +126,7 @@ def yearly_touch_up_sections(base: str) -> str:
     <p>At Adriana Beauty Services – Permanent Makeup, we are committed to helping clients maintain beautiful results long after their original treatment.</p>
     <p>Clients choose us because we provide:</p>
     <ul class="service-list">
-      <li>Over 7 years of permanent makeup experience</li>
+      <li>20+ years of permanent makeup experience</li>
       <li>Personalized care and consultations</li>
       <li>Advanced permanent makeup techniques</li>
       <li>High-quality pigments and equipment</li>

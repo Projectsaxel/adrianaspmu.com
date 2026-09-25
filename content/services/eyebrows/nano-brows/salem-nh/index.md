@@ -44,7 +44,7 @@ Full healing detail is in the [aftercare guide](../../../../aftercare/).
 
 New Hampshire licenses body art at the state level under RSA 314-A, unlike Massachusetts’ town-by-town system, and Salem separately licenses both artist and establishment under Chapter 433. The studio sits on Route 97 near I-93 Exit 2, reachable from Methuen, Windham, Pelham, Haverhill, and North Andover within about 9 miles.
 
-Main Street is Route 97, western terminus at NH-28, Broadway; the address sits in the Salem Depot area, nearest I-93 access is Exit 2. No passenger rail; MBTA ends at Lowell and Haverhill. Population: 30,964.
+Main Street is Route 97; the address sits in the Salem Depot area, nearest I-93 access is Exit 2. No passenger rail; MBTA ends at Lowell and Haverhill.
 
 | Town | Driving distance |
 | --- | --- |
@@ -56,7 +56,7 @@ Main Street is Route 97, western terminus at NH-28, Broadway; the address sits i
 
 ## What Backs the Artist Performing Nano Brows in Salem?
 
-Adriana Souza Santos, who performs Nano Brows at the Salem studio, has completed more than 5,000 procedures and trained more than 300 students over an 20-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in both English and Portuguese.
+Adriana Souza Santos, who performs Nano Brows at the Salem studio, has completed more than 5,000 procedures and trained more than 300 students over a 20-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in both English and Portuguese.
 
 *The Salem studio, where Nano Brows appointments begin.*
 
@@ -82,15 +82,15 @@ Nano Brows is not the best match for clients with very oily skin who want a guar
 
 Nano Brows fades by lightening evenly, with individual strokes staying visible but softer rather than blurring into a single shape. About 12 months after the perfecting session, a yearly touch-up, from $300, redraws the strokes and restores contrast at the Salem studio, rather than requiring the full original $650 procedure again.
 
-Yes. The Salem studio offers payment plans through Cherry Technologies, an independent lender. Options include 4 interest-free payments, or a longer plan up to 24 months with interest. Approval is not guaranteed; Cherry, not the studio, sets the final terms.
+Yes. The Salem studio offers payment plans through Cherry Technologies, an independent financing provider. Options include 4 interest-free payments, or a longer plan up to 24 months with interest. Approval is not guaranteed; Cherry, not the studio, sets the final terms.
 
 Both create hair-like strokes, but Nano Brows uses a digital machine and needle instead of a hand tool, causing less skin trauma and suiting oilier skin better. Microblading, at $550, stays available at the same Salem studio for clients who prefer the hand tool.
 
-Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent lender: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
+Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent financing provider: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
 
 The perfecting session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
 
-Most results hold 12 to 24 months before fading becomes visible. After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
+Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
 
 Yes. Pregnancy, breastfeeding, being under 18, and current isotretinoin use are refused at both studios, with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need clearance from your doctor first. The full list is published in the [contraindications guide](../../../../aftercare/) before you book, not after.
 

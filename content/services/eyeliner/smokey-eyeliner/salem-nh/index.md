@@ -47,7 +47,7 @@ A Salem smokey eyeliner appointment takes longer than a plain liner: consultatio
 
 New Hampshire licenses body art practitioners at the state level under RSA 314-A, unlike Massachusetts’ town-by-town system, and the Town of Salem separately licenses both the artist and the studio under Salem Chapter 433. The studio sits on Route 97, reachable from Methuen, Windham, Pelham, Haverhill, and North Andover within about 8.7 miles.
 
-Main Street is New Hampshire Route 97 along its full length. New Hampshire has no passenger rail at all — MBTA Commuter Rail ends at Lowell and Haverhill, in Massachusetts. Population: 30,964.
+Main Street is New Hampshire Route 97 along its full length. New Hampshire has no passenger rail at all — MBTA Commuter Rail ends at Lowell and Haverhill, in Massachusetts.
 
 | Town | Driving distance |
 | --- | --- |
@@ -59,7 +59,7 @@ Main Street is New Hampshire Route 97 along its full length. New Hampshire has n
 
 ## What Backs the Artist Performing Smokey Eyeliner in Salem?
 
-Adriana Souza Santos, the Master Permanent Makeup Artist performing smokey eyeliner at the Salem studio, has completed more than 5,000 procedures and trained more than 300 students over an 20-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in both English and Portuguese.
+Adriana Souza Santos, the Master Permanent Makeup Artist performing smokey eyeliner at the Salem studio, has completed more than 5,000 procedures and trained more than 300 students over a 20-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in both English and Portuguese.
 
 *The Salem studio, where Smokey Eyeliner appointments begin.*
 
@@ -85,15 +85,15 @@ Smokey Eyeliner suits clients who already wear a smokey eye look regularly and w
 
 Yes. Contact lenses come out for the smokey eyeliner appointment; the studio says how long to leave them out after. Separately, the AAD documents that eyeliner pigment can rarely react during an MRI with burning, tingling, or swelling; tell the technician beforehand and ask them to stop the scan.
 
-Yes. The Salem studio offers payment plans for the $400 smokey eyeliner price, shading pass included, through Cherry Technologies, an independent lender. Options include 4 interest-free payments or a longer plan up to 24 months; approval is not guaranteed; Cherry sets the terms.
+Yes. The Salem studio offers payment plans for the $400 smokey eyeliner price, shading pass included, through Cherry Technologies, an independent financing provider. Options include 4 interest-free payments or a longer plan up to 24 months; approval is not guaranteed; Cherry sets the terms.
 
 No. Smokey Eyeliner is its own $400 technique with soft shading blended into the liner, and it is not part of the Eyeliner Combo. The Combo pairs plain Top Eyeliner and Bottom Eyeliner for $500, $100 less than the $600 those two cost booked separately, at the Salem studio.
 
-Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent lender: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
+Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent financing provider: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
 
 The perfecting session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
 
-Most results hold 12 to 24 months before fading becomes visible. After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
+Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
 
 Yes. Pregnancy, breastfeeding, being under 18, and current isotretinoin use are refused at both studios, with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need clearance from your doctor first. The full list is published in the [contraindications guide](../../../../aftercare/) before you book, not after.
 

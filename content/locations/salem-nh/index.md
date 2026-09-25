@@ -49,7 +49,7 @@ The touch-up at 6 to 8 weeks is included above; the yearly touch-up, from $300, 
 
 ## What Experience Does the Artist at the Salem, NH Studio Have, and Who Wrote This Page?
 
-Adriana Souza Santos, the Master Permanent Makeup Artist behind the Salem, NH studio and the author of this page, has performed more than 5,000 procedures and trained more than 300 students over an 20-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in both English and Portuguese.
+Adriana Souza Santos, the Master Permanent Makeup Artist behind the Salem, NH studio and the author of this page, has performed more than 5,000 procedures and trained more than 300 students over a 20-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in both English and Portuguese.
 
 The New Hampshire licensing information above was checked against the text of RSA 314-A; it is not a claim that this business holds that license. Last reviewed September 10, 2026.
 
@@ -122,7 +122,7 @@ Adriana’s Permanent Makeup in Salem, NH sits on Main Street, also known as NH 
 
 ## Frequently Asked Questions About the Salem, NH Studio
 
-Prices at the Salem, NH studio start at $250 for Bottom Eyeliner and reach $850 for a Brows + Lips Combo. Nano Brows is $650; Microblading, Powder Brows, and Lip Blush are each $550. Services can be split into 4 interest-free payments with Cherry, an independent lender; approval is not guaranteed.
+Prices at the Salem, NH studio start at $250 for Bottom Eyeliner and reach $850 for a Brows + Lips Combo. Nano Brows is $650; Microblading, Powder Brows, and Lip Blush are each $550. Services can be split into 4 interest-free payments with Cherry, an independent financing provider; approval is not guaranteed.
 
 The studio is at 117A Main Street, Salem, NH 03079, on NH Route 97, the name Main Street carries along its entire length through town. The nearest I-93 access is Exit 2, Pelham Road, per the Town of Salem’s own transportation plan. Call (978) 223-7496 for directions.
 

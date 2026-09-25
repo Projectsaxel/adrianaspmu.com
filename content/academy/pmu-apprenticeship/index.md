@@ -102,7 +102,7 @@ Yes. Tuition uses an in-house payment plan with a deposit followed by scheduled 
 
 The apprenticeship runs $700 a month. It is the longer path: a year of supervised practice rather than an intensive, built around advanced model practice, client simulation, and the business side of working as an artist. The 100-Hour Fundamental, at $7,000, is the shorter and more structured alternative.
 
-The apprenticeship is already billed monthly at $700. For the 100-Hour Fundamental, Cherry offers 4 interest-free payments or up to 24 months with interest, using a soft credit check that does not affect your score. Cherry is an independent lender and sets approval and rates, not the academy.
+The apprenticeship is already billed monthly at $700. For the 100-Hour Fundamental, Cherry offers 4 interest-free payments or up to 24 months with interest, using a soft credit check that does not affect your score. Cherry is an independent financing provider and sets approval and rates, not the academy.
 
 Adriana Souza Santos, AAM Diamond Certified Trainer — the American Academy of Micropigmentation’s highest instructor level — with more than 5,000 procedures across 20+ years and over 300 students trained. Supervision happens in person at the Peabody studio, in English or in Portuguese.
 
@@ -124,7 +124,7 @@ Reviewed by [Adriana Souza Santos, Master Permanent Makeup Artist](../../about/)
 
 ## Who Is This Training For, and Who Is It Not For?
 
-This is for you want a year of supervised practice rather than an intensive, and can commit to $700 a month over that period.
+This is for you if you want a year of supervised practice rather than an intensive, and can commit to $700 a month over that period.
 
 **It is not for you if** you need certification quickly — the [100-Hour Fundamental](../../academy/pmu-100h-fundamental/) is the shorter path.
 

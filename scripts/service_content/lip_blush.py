@@ -7,7 +7,7 @@ def lip_blush_sections(base: str) -> str:
   <div class="container service-prose">
     <h2>Enhance Your Natural Lip Color and Confidence</h2>
     <p>Beautiful lips can brighten your entire appearance and give you a fresh, youthful look. At Adriana Beauty Services – Permanent Makeup, our Lip Blush treatments are designed to enhance the natural color, shape, and definition of your lips while creating a soft, healthy-looking tint that lasts.</p>
-    <p>For over 7 years, we have helped clients in Wilmington, MA achieve effortless beauty, and we are excited to welcome clients to our Salem, NH location as well.</p>
+    <p>Since 2017, we have helped clients in Wilmington, MA achieve effortless beauty, and we are excited to welcome clients to our Salem, NH location as well.</p>
   </div>
 </section>
 
@@ -105,7 +105,7 @@ def lip_blush_sections(base: str) -> str:
     <p>At Adriana Beauty Services – Permanent Makeup, we believe every client deserves personalized treatment and beautiful results.</p>
     <p>Clients trust us because we provide:</p>
     <ul class="service-list">
-      <li>Over 7 years of experience</li>
+      <li>20+ years of permanent makeup experience</li>
       <li>Customized color matching</li>
       <li>Natural-looking enhancements</li>
       <li>High-quality pigments and equipment</li>

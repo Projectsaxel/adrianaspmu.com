@@ -59,7 +59,7 @@ FRESHA_GENERIC = "https://www.fresha.com/book-now/adrianas-permanent-makeup-zeas
 # Meta descriptions reescritas (auditoria 16/08: fracas, duplicadas ou truncadas).
 # Chave: caminho relativo da pagina. Valor: 140-160 chars com servico+cidade+CTA.
 DESCRIPTIONS = {
-    "services/eyebrows/index.html": "Microblading, nano brows, powder and combination brows in Wilmington MA and Salem NH. Compare techniques, see prices, and book a free consultation.",
+    "services/eyebrows/index.html": "Microblading, nano brows, powder and combination brows in Wilmington MA and Salem NH. Compare techniques, see prices, and book a consultation.",
     "services/lips/index.html": "Lip blush and dark lip neutralization in Wilmington MA and Salem NH. Natural color and defined contour, with the perfecting session included.",
     "services/eyeliner/index.html": "Permanent eyeliner in Wilmington MA and Salem NH: top, bottom, smokey effect and combo. Smudge-proof definition that survives the gym, from $250.",
     "services/combos/index.html": "Permanent makeup combo packages in Wilmington MA and Salem NH. Pair brows, lips and eyeliner in one plan and save, perfecting session included.",
@@ -1133,7 +1133,7 @@ def _faq_extra(label, price, up):
         "Can I pay in installments?",
         "Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months "
         "with interest. Checking your options takes about a minute and uses a soft credit "
-        "check, so it does not affect your credit score. Cherry is an independent lender: "
+        "check, so it does not affect your credit score. Cherry is an independent financing provider: "
         "it sets approval and rates, not the studio. See "
         f"<a href=\"{up}payment-plan/\">how the payment plan works</a>."))
 
@@ -1146,7 +1146,7 @@ def _faq_extra(label, price, up):
 
     qa.append((
         "How often will I need a touch-up?",
-        "Most results hold 12 to 24 months before fading becomes visible. After that, a "
+        "Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). After that, a "
         "yearly touch-up refreshes the colour from $300, priced by how much pigment is "
         "left rather than at a flat rate. That is a separate visit from the perfecting "
         "session, which is included in the original price and happens in the first weeks."))
@@ -1265,7 +1265,7 @@ FAQ_BY_PAGE = {
         ("Can I pay in installments?",
          "The apprenticeship is already billed monthly at $700. For the 100-Hour Fundamental, "
          "Cherry offers 4 interest-free payments or up to 24 months with interest, using a soft "
-         "credit check that does not affect your score. Cherry is an independent lender and sets "
+         "credit check that does not affect your score. Cherry is an independent financing provider and sets "
          "approval and rates, not the academy."),
         ("Who supervises the apprenticeship?",
          "Adriana Souza Santos, AAM Diamond Certified Trainer &mdash; the American Academy of "
@@ -1316,7 +1316,7 @@ FAQ_BY_PAGE = {
         ("Can I pay in installments?",
          "Yes. Cherry offers 4 interest-free payments, or up to 24 months with interest. Checking "
          "your options takes about a minute and uses a soft credit check, so it does not affect "
-         "your credit score. Cherry is an independent lender: it sets approval and rates, not "
+         "your credit score. Cherry is an independent financing provider: it sets approval and rates, not "
          "the studio."),
         ("What happens if the colour heals unevenly?",
          "The perfecting session covers it. Scheduled 6 to 8 weeks after the first appointment, "
@@ -1407,7 +1407,7 @@ FAQ_BY_PAGE = {
          "Street, Suite F in Wilmington, MA, and 117A Main Street in Salem, NH. What differs "
          "between them is the phone number and the licensing regime, not the price."),
         ("How long do the results last before I pay again?",
-         "Most results hold 12 to 24 months before fading becomes visible. The perfecting session "
+         "Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). The perfecting session "
          "in the first weeks is included; after that, the next paid visit is the yearly touch-up, "
          "from $300, priced by how much pigment remains rather than at a flat rate."),
     ],

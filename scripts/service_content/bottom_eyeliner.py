@@ -7,7 +7,7 @@ def bottom_eyeliner_sections(base: str) -> str:
   <div class="container service-prose">
     <h2>Subtle Definition for Brighter, More Beautiful Eyes</h2>
     <p>A softly defined lower lash line can enhance your eyes, create balance, and make your entire eye area appear more polished. At Adriana Beauty Services – Permanent Makeup, our Bottom Eyeliner treatment is designed to provide natural-looking definition along the lower lash line, helping you achieve a refined appearance without the need for daily makeup application.</p>
-    <p>For over 7 years, we have helped clients in Wilmington, MA and now Salem, NH simplify their beauty routines with customized permanent makeup solutions.</p>
+    <p>Since 2017, we have helped clients in Wilmington, MA and now Salem, NH simplify their beauty routines with customized permanent makeup solutions.</p>
   </div>
 </section>
 
@@ -105,7 +105,7 @@ def bottom_eyeliner_sections(base: str) -> str:
     <p>At Adriana Beauty Services – Permanent Makeup, every treatment is customized to complement your natural beauty.</p>
     <p>Clients choose us because we offer:</p>
     <ul class="service-list">
-      <li>Over 7 years of experience</li>
+      <li>20+ years of permanent makeup experience</li>
       <li>Personalized consultations</li>
       <li>Advanced permanent makeup techniques</li>
       <li>High-quality pigments and equipment</li>

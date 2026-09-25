@@ -131,7 +131,7 @@ A touch-up session exists because the first appointment cannot fully predict how
 
 During the touch-up, the artist adjusts color, corrects patchy or light spots, and refines shape based on the healed result. The touch-up is included in the original price, not billed separately.
 
-Results generally last 12 to 24 months before fading enough to need a refresh. That refresh is a separate paid service, the [yearly touch-up](../services/touch-ups/yearly-touch-up/) from $300, usually scheduled about 12 months after the original procedure — not the included perfecting touch-up at 6 to 8 weeks above. Waiting past 24 months usually means more correction work.
+Most clients need a colour refresh every 12 to 24 months, depending on the technique and skin. That refresh is a separate paid service, the [yearly touch-up](../services/touch-ups/yearly-touch-up/) from $300, usually scheduled about 12 months after the original procedure — not the included perfecting touch-up at 6 to 8 weeks above. Waiting past 24 months usually means more correction work.
 
 ## What Should I Do Before My Appointment?
 

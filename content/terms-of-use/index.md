@@ -24,7 +24,7 @@ If you arrive late, we may need to shorten or reschedule your session. Permanent
 
 ## Paying Over Time
 
-Payment plans for permanent makeup services run through **Cherry Technologies, Inc.**, an independent lender. Cherry decides approval, terms, interest and repayment under its own agreement with you. We do not lend money, we do not set those terms, and **approval is never guaranteed**. Training tuition uses a different, in-house payment plan, described on the relevant course page.
+Payment plans for permanent makeup services run through **Cherry Technologies, Inc.**, an independent financing provider. Cherry decides approval, terms, interest and repayment under its own agreement with you. We do not lend money, we do not set those terms, and **approval is never guaranteed**. Training tuition uses a different, in-house payment plan, described on the relevant course page.
 
 Prices on this site are starting prices and can change. The price that applies to you is the one confirmed at your consultation or at booking.
 

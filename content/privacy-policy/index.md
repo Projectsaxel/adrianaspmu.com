@@ -26,9 +26,9 @@ You can block or delete cookies in your browser at any time, or install the [Goo
 
 ## Booking Through Fresha, Financing Through Cherry
 
-Appointments are booked on **Fresha**, an independent scheduling company. Clicking a booking link takes you to fresha.com, where anything you enter — your name, contact details, payment information, and the appointment itself — is collected by Fresha under [Fresha’s own privacy policy](https://www.fresha.com/privacy-policy), not ours. We receive your appointment details as the business you booked with, plus aggregated statistics; we never receive your full card number.
+Appointments are booked on **Fresha**, an independent scheduling company. Clicking a booking link takes you to fresha.com, where anything you enter — your name, contact details, payment information, and the appointment itself — is collected by Fresha under [Fresha’s own privacy policy](https://terms.fresha.com/privacy-policy), not ours. We receive your appointment details as the business you booked with, plus aggregated statistics; we never receive your full card number.
 
-Payment plans are offered through **Cherry Technologies, Inc.**, an independent lender. Anything you submit to apply for financing goes to Cherry directly, under Cherry’s own privacy policy. We are not part of that application, and we do not see your financial details unless Cherry shares the outcome with us as your service provider.
+Payment plans are offered through **Cherry Technologies, Inc.**, an independent financing provider. Anything you submit to apply for financing goes to Cherry directly, under Cherry’s own privacy policy. We are not part of that application, and we do not see your financial details unless Cherry shares the outcome with us as your service provider.
 
 ## Who Else Sees Your Information
 

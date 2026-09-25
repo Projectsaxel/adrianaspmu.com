@@ -57,7 +57,7 @@ Main Street is New Hampshire Route 97 along its full length, terminating at NH-2
 
 ## What Backs the Artist Performing Brows + Lips Combo in Salem?
 
-Adriana Souza Santos, the Master Permanent Makeup Artist performing Brows + Lips Combo at the Salem studio, has completed more than 5,000 procedures and trained more than 300 students over an 20-plus year career, and holds an AAM Diamond Certified Trainer credential.
+Adriana Souza Santos, the Master Permanent Makeup Artist performing Brows + Lips Combo at the Salem studio, has completed more than 5,000 procedures and trained more than 300 students over a 20-plus year career, and holds an AAM Diamond Certified Trainer credential.
 
 *The treatment station at 117A Main Street, on Route 97, where brows and lips are treated in the same visit.*
 
@@ -83,15 +83,15 @@ Yes. New Hampshire licenses body art practitioners at the state level under RSA 
 
 The perfecting session is included in the $850 and happens once, 6 to 8 weeks after the original appointment, correcting any unevenness while healing is still fresh. The yearly touch-up is a separate, paid visit from $300 per area, scheduled about 12 months later to refresh faded pigment.
 
-Yes. The Salem studio offers payment plans through Cherry Technologies, an independent lender separate from Adriana's Permanent Makeup. Options include 4 interest-free payments or a longer plan up to 24 months with interest. Approval is not guaranteed; Cherry sets the terms.
+Yes. The Salem studio offers payment plans through Cherry Technologies, an independent financing provider separate from Adriana's Permanent Makeup. Options include 4 interest-free payments or a longer plan up to 24 months with interest. Approval is not guaranteed; Cherry sets the terms.
 
 Yes. Master Permanent Makeup Artist Adriana Souza Santos consults in both English and Portuguese at the Salem studio. Clients who prefer discussing brow shape and lip color in Portuguese can request that language when booking, online through Fresha or by phone at (978) 223-7496.
 
-Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent lender: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
+Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent financing provider: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
 
 The perfecting session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
 
-Most results hold 12 to 24 months before fading becomes visible. After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
+Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
 
 Yes. Pregnancy, breastfeeding, being under 18, and current isotretinoin use are refused at both studios, with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need clearance from your doctor first. The full list is published in the [contraindications guide](../../../../aftercare/) before you book, not after.
 

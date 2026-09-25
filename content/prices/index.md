@@ -79,7 +79,7 @@ Because the mix of strokes and shading changes from face to face, and a single n
 
 No. The same 13 services are published at the same prices at both addresses: 211 Lowell Street, Suite F in Wilmington, MA, and 117A Main Street in Salem, NH. What differs between them is the phone number and the licensing regime, not the price.
 
-Most results hold 12 to 24 months before fading becomes visible. The perfecting session in the first weeks is included; after that, the next paid visit is the yearly touch-up, from $300, priced by how much pigment remains rather than at a flat rate.
+Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). The perfecting session in the first weeks is included; after that, the next paid visit is the yearly touch-up, from $300, priced by how much pigment remains rather than at a flat rate.
 
 ## Pay over time, starting today
 

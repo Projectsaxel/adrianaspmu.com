@@ -10,7 +10,7 @@ Combination Brows blends hair-like strokes with soft shading for fuller, natural
 
 If you love the natural appearance of Microblading but also want the added fullness of Powder Brows, Combination Brows may be the perfect solution. At Adriana's Permanent Makeup, we combine both techniques to create beautifully balanced eyebrows with realistic hair strokes and soft shading.
 
-For over 7 years, we have helped clients in Wilmington, MA and now Salem, NH achieve customized brows that enhance their natural beauty and boost their confidence.
+Since 2017, we have helped clients in Wilmington, MA and now Salem, NH achieve customized brows that enhance their natural beauty and boost their confidence.
 
 ## What Are Combination Brows?
 
@@ -90,7 +90,7 @@ At Adriana's Permanent Makeup, every brow treatment is tailored to the individua
 
 Clients choose us because we offer:
 
-- More than 7 years of experience
+- 20+ years of permanent makeup experience
 - Customized brow designs
 - Advanced permanent makeup techniques
 - High-quality pigments and equipment
@@ -112,11 +112,11 @@ Absolutely. The combination of realistic hair strokes and soft shading creates a
 
 Combination Brows is quoted at the consultation rather than listed at a fixed price, because the work needed changes from face to face. Every other service is published openly, from $250 to $850, on the [price list](../../../prices/), so you can see the range the studio works in before you book anything.
 
-Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent lender: it sets approval and rates, not the studio. See [how the payment plan works](../../../payment-plan/).
+Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent financing provider: it sets approval and rates, not the studio. See [how the payment plan works](../../../payment-plan/).
 
 The perfecting session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
 
-Most results hold 12 to 24 months before fading becomes visible. After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
+Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
 
 Yes. Pregnancy, breastfeeding, being under 18, and current isotretinoin use are refused at both studios, with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need clearance from your doctor first. The full list is published in the [contraindications guide](../../../aftercare/) before you book, not after.
 

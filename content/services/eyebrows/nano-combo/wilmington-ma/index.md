@@ -44,7 +44,7 @@ Full healing detail is in the [aftercare guide](../../../../aftercare/).
 
 Wilmington's Board of Health, not a single Massachusetts license, requires an establishment permit and an individual practitioner permit naming the body art performed, under M.G.L. Chapter 111, Section 31. The studio sits on Route 129 near the I-93 interchange, about 11 miles from Reading, Woburn, or Andover.
 
-Lowell Street is Route 129, crossing Route 38 in town center. Wilmington has two MBTA stations: Wilmington (405 Main Street, Lowell Line) and North Wilmington (370 Middlesex Avenue, Haverhill Line). Population: 23,336.
+Lowell Street is Route 129, crossing Route 38 in town center. Wilmington has two MBTA stations: Wilmington (405 Main Street, Lowell Line) and North Wilmington (370 Middlesex Avenue, Haverhill Line).
 
 | Town | Driving distance |
 | --- | --- |
@@ -56,7 +56,7 @@ Lowell Street is Route 129, crossing Route 38 in town center. Wilmington has two
 
 ## What Backs the Artist Performing Nano Combo Brows in Wilmington?
 
-Adriana Souza Santos, the Master Permanent Makeup Artist performing Nano Combo Brows at the Wilmington studio, has completed 5,000+ procedures and trained 300+ students over an 20-plus year career begun in Brazil before the U.S. studio opened in 2017, holds an AAM Diamond Certified Trainer credential, and consults in English and Portuguese.
+Adriana Souza Santos, the Master Permanent Makeup Artist performing Nano Combo Brows at the Wilmington studio, has completed 5,000+ procedures and trained 300+ students over a 20-plus year career begun in Brazil before the U.S. studio opened in 2017, holds an AAM Diamond Certified Trainer credential, and consults in English and Portuguese.
 
 Livian Camargo Gomes, a second licensed artist, also works at this studio.
 
@@ -84,17 +84,17 @@ Wilmington's Board of Health requires both an establishment permit and an indivi
 
 Nano Combo Brows typically last 1 to 3 years before fading. About 12 months after the perfecting session, a yearly touch-up, from $300, refreshes the strokes and shading at the Wilmington studio rather than requiring the full original $600 procedure again from scratch entirely.
 
-Yes. The Wilmington studio offers payment plans through Cherry Technologies, an independent lender separate from Adriana's Permanent Makeup. Options include 4 interest-free payments or a longer plan up to 24 months with interest. Approval is not guaranteed; Cherry sets the terms, not the studio.
+Yes. The Wilmington studio offers payment plans through Cherry Technologies, an independent financing provider separate from Adriana's Permanent Makeup. Options include 4 interest-free payments or a longer plan up to 24 months with interest. Approval is not guaranteed; Cherry sets the terms, not the studio.
 
 Yes. Livian Camargo Gomes is a second licensed permanent makeup artist working at the Wilmington studio, alongside Adriana Souza Santos, and can be requested for Nano Combo Brows when booking. This second artist is not currently available at the Salem, New Hampshire studio.
 
 Nano Combo Brows costs $600 at both studios, and that price already includes the perfecting session scheduled 6 to 8 weeks after the appointment. The consultation, the mapping and the topical numbing are part of it as well. A yearly touch-up, from $300, is a separate visit about 12 months later. Every price is published on the [price list](../../../../prices/).
 
-Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent lender: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
+Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent financing provider: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
 
 The perfecting session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
 
-Most results hold 12 to 24 months before fading becomes visible. After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
+Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
 
 Yes. Pregnancy, breastfeeding, being under 18, and current isotretinoin use are refused at both studios, with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need clearance from your doctor first. The full list is published in the [contraindications guide](../../../../aftercare/) before you book, not after.
 
