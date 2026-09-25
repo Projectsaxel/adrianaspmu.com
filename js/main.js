@@ -1018,10 +1018,71 @@ function initEditorialHero() {
   var pausadoBotao = false;
   var hoverIndice = false;
 
+  // Carregamento dos slides (auditoria SEO 25/09/2026, achado 4.2: LCP
+  // mobile de 6,6 s). Os seis <figure> ficam empilhados dentro da viewport,
+  // entao o loading="lazy" nao adiava nada e as seis fotos disputavam banda
+  // com a primeira, que e o LCP. Agora so o slide 0 vem com src no HTML;
+  // os outros trazem data-src/data-srcset e sao promovidos aqui, depois do
+  // evento load. A rotacao automatica so avanca para um slide cuja imagem
+  // ja carregou. As fotos e a ordem sao as mesmas (escolha da cliente).
+  // estado: "espera" (sem src) -> "baixando" -> "ok" | "erro"
+  var estado = shots.map(function (s, k) { return k === 0 ? "ok" : "espera"; });
+  var pendente = -1;   // slide que a rotacao queria mostrar, mas nao tinha chegado
+
+  function promover(k) {
+    if (estado[k] !== "espera") return;
+    var sh = shots[k];
+    var img = sh.querySelector("img");
+    if (!img) { estado[k] = "ok"; return; }
+    estado[k] = "baixando";
+    var fim = function (ok) {
+      if (estado[k] !== "baixando") return;
+      estado[k] = ok ? "ok" : "erro";
+      // a troca que ficou esperando esta foto acontece assim que ela chega
+      if (pendente === k) {
+        pendente = -1;
+        if (timer) { paint(ok ? k : proximoPronto()); startAuto(); }
+      }
+    };
+    img.addEventListener("load", function () { fim(true); }, { once: true });
+    img.addEventListener("error", function () { fim(false); }, { once: true });
+    Array.prototype.forEach.call(sh.querySelectorAll("source[data-srcset]"), function (src) {
+      src.setAttribute("srcset", src.getAttribute("data-srcset"));
+      src.removeAttribute("data-srcset");
+    });
+    if (img.hasAttribute("data-srcset")) {
+      img.setAttribute("srcset", img.getAttribute("data-srcset"));
+      img.removeAttribute("data-srcset");
+    }
+    if (img.hasAttribute("data-src")) {
+      img.setAttribute("src", img.getAttribute("data-src"));
+      img.removeAttribute("data-src");
+    }
+    if (img.complete && img.naturalWidth) fim(true);
+  }
+
+  function promoverTodos() { for (var k = 1; k < shots.length; k++) promover(k); }
+  if (document.readyState === "complete") { promoverTodos(); }
+  else { window.addEventListener("load", promoverTodos, { once: true }); }
+
+  // proximo slide que ja pode aparecer; -1 = o proximo ainda nao chegou
+  // (espera, em vez de pular: a ordem das fotos nao muda). Foto que deu
+  // erro e pulada, para a rotacao nao travar.
+  function proximoPronto() {
+    for (var d = 1; d < shots.length; d++) {
+      var k = (current + d) % shots.length;
+      if (estado[k] === "ok") return k;
+      if (estado[k] !== "erro") { pendente = k; return -1; }
+    }
+    return -1;
+  }
+
   function paint(i) {
-    if (i === current) return;
+    if (i < 0 || i === current) return;
     var link = links[i];
     if (!link) return;
+    // interacao manual antes do load: baixa a foto escolhida na hora
+    promover(i);
     current = i;
 
     shots.forEach(function (s, k) { s.classList.toggle("is-active", k === i); });
@@ -1041,11 +1102,6 @@ function initEditorialHero() {
       feature.removeAttribute("data-swap");
     }, reduced.matches ? 0 : 280);
 
-    var nxt = shots[(i + 1) % shots.length];
-    if (nxt) {
-      var img = nxt.querySelector("img");
-      if (img && img.getAttribute("loading") === "lazy") { img.setAttribute("loading", "eager"); }
-    }
   }
 
   function stopAuto() { if (timer) { window.clearInterval(timer); timer = null; } }
@@ -1055,7 +1111,7 @@ function initEditorialHero() {
   function startAuto() {
     if (pausadoBotao || hoverIndice || document.hidden) return;
     stopAuto();
-    timer = window.setInterval(function () { paint((current + 1) % shots.length); }, AUTO_MS);
+    timer = window.setInterval(function () { paint(proximoPronto()); }, AUTO_MS);
   }
 
   // interacao manual troca o slide e o automatico volta sozinho depois
