@@ -1204,13 +1204,14 @@ main:has(.service-prose) .section--cta {
 }
 
 .portfolio-filter:hover {
-  border-color: var(--color-primary);
-  color: var(--color-primary);
+  border-color: var(--brand-deep);
+  color: var(--brand-deep);
 }
 
+/* Branco sobre #F45197 dava 3,25:1; sobre --brand-deep, 5,51:1. */
 .portfolio-filter.is-active {
-  background: var(--color-primary);
-  border-color: var(--color-primary);
+  background: var(--brand-deep);
+  border-color: var(--brand-deep);
   color: #fff;
 }
 
@@ -1619,8 +1620,11 @@ body.portfolio-lightbox-open {
   margin-bottom: 3rem;
 }
 
+.footer-grid h3,
 .footer-grid h4 {
-  color: var(--color-primary);
+  /* Era --color-primary (#F45197, rosa da logo): 3,03:1 no creme. O rosa
+     da logo e acento, nao texto; --brand-deep da 5,13:1. */
+  color: var(--brand-deep);
   font-family: var(--font-body);
   font-size: 0.6875rem;
   font-weight: 700;
@@ -1655,10 +1659,12 @@ body.portfolio-lightbox-open {
   line-height: 1.6;
 }
 
+.footer-nap h3,
 .footer-nap h4 {
   margin-top: 1.25rem;
 }
 
+.footer-nap h3:first-child,
 .footer-nap h4:first-child {
   margin-top: 0;
 }
@@ -2273,7 +2279,9 @@ input:focus, select:focus, textarea:focus {
   color: var(--ink);
   border-radius: 0;
 }
-.promo-banner a { color: var(--brand-deep); }
+/* --brand-deep sobre o --blush da faixa dava 4,24:1 (abaixo de AA).
+   #B82666 e o mesmo rosa 5% mais escuro: 4,61:1. */
+.promo-banner a { color: #B82666; }
 .trust-bar {
   background: var(--surface-alt);
   color: var(--ink);
@@ -4758,8 +4766,10 @@ html { font-size: 112.5%; }
 }
 .breadcrumb ol { gap: 0; align-items: baseline; }
 .breadcrumb a {
+  /* Era opacity 0.6: 2,5:1, abaixo de AA (axe, 25/09/2026). O breadcrumb
+     segue discreto pelo tamanho e pela caixa normal; a cor fica cheia. */
   color: var(--ink-muted);
-  opacity: 0.6;
+  opacity: 1;                  /* anula o 0.75 de uma regra anterior deste arquivo */
   text-decoration: none;
   font-weight: 400;
 }
@@ -4776,9 +4786,8 @@ html { font-size: 112.5%; }
   font-weight: 400;
 }
 .breadcrumb li[aria-current="page"] {
-  color: var(--ink-muted);
+  color: var(--ink);           /* opacity 0.85 dava 4,06:1; a pagina atual se destaca pela cor */
   font-weight: 500;            /* era 600: negrito demais chamava atencao */
-  opacity: 0.85;
 }
 
 /* Na hero de servico, que ja comeca logo abaixo, o respiro e menor
@@ -5468,6 +5477,8 @@ html { font-size: 112.5%; }
   margin-top: var(--space-5, 1.5rem);
 }
 .checklist h3 { margin: 0 0 0.75rem; font-size: 1.05rem; font-weight: 500; }
+/* link sobre o fundo --blush do bloco: --brand-deep dava 4,23:1 */
+.checklist a:not(.btn) { color: #B82666; }
 .checklist-itens { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.6rem; }
 .checklist-itens li {
   position: relative;
@@ -5832,6 +5843,7 @@ tbody tr:last-child > td { border-bottom: 0; }
 
 /* rodape: os 36 <h4> de 12,4px eram os titulos de coluna, em todas as
    paginas do site */
+.footer-grid h3,
 .footer-grid h4 {
   font-size: 0.875rem;       /* era 0.6875rem = 12,4px */
   letter-spacing: 0.14em;    /* menos tracking, que a fonte cresceu */
@@ -5916,7 +5928,7 @@ tbody tr:last-child > td { border-bottom: 0; }
   text-decoration: none;
   line-height: 1;
   transition: background 0.2s var(--ease), opacity 0.2s var(--ease);
-  opacity: 0.88;
+  opacity: 1;                  /* 0.88 clareava o rosa do texto para 3,92:1 */
 }
 .promo-social-link:hover,
 .promo-social-link:focus-visible {

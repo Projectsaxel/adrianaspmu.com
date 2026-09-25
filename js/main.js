@@ -139,12 +139,12 @@
         <div class="container">
           <div class="footer-grid">
             <div>
-              <h4>${SITE.name}</h4>
+              <h3>${SITE.name}</h3>
               <p>Master Permanent Makeup Artist with ${SITE.stats.years} experience and ${SITE.stats.procedures} procedures performed.</p>
               <p>Women-owned · LGBTQ+ friendly · Wheelchair accessible (Wilmington)</p>
             </div>
             <div>
-              <h4>Services</h4>
+              <h3>Services</h3>
               <ul>
                 <li><a href="${resolvePath("/services/eyebrows/")}">Eyebrow PMU</a></li>
                 <li><a href="${resolvePath("/services/lips/")}">Lip PMU</a></li>
@@ -155,7 +155,7 @@
               </ul>
             </div>
             <div>
-              <h4>Locations</h4>
+              <h3>Locations</h3>
               <ul>
                 <li><a href="${resolvePath("/locations/")}">All Locations</a></li>
                 <li><a href="${resolvePath("/locations/wilmington-ma/")}">Wilmington, MA</a></li>
@@ -165,13 +165,13 @@
               </ul>
             </div>
             <div class="footer-nap">
-              <h4>Wilmington, MA</h4>
+              <h3>Wilmington, MA</h3>
               <p>${w.street}, ${w.city}, ${w.region} ${w.zip}<br>
               <a href="tel:+17818538063">${w.phone}</a></p>
-              <h4>Salem, NH</h4>
+              <h3>Salem, NH</h3>
               <p>${s.street}, ${s.city}, ${s.region} ${s.zip}<br>
               <a href="tel:+19782237496">${s.phone}</a></p>
-              <h4>Academy — Peabody, MA</h4>
+              <h3>Academy — Peabody, MA</h3>
               <p>${p.street}, ${p.city}, ${p.region} ${p.zip}<br>
               <a href="tel:+17818538063">${p.phone}</a></p>
             </div>
