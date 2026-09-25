@@ -301,15 +301,28 @@ CHERRY_FLOATING = """
 <div class="cherry-widget cherry-widget--floating">
 <!-- CHERRY WIDGET BEGIN -->
 <script>
-    (function (w, d, s, o, f, js, fjs) {
+    // Adiado de proposito (auditoria 25/09/2026): o widget.js da Cherry tem
+    // ~434 KB e ainda carrega o Segment. Entrava junto com a pagina e
+    // disputava banda com o hero. Agora sobe na primeira interacao ou 4s
+    // depois do load. A fila _hw("init", ...) abaixo segue valendo.
+    (function (w, d, s, o, f) {
         w[o] = w[o] || function () {
             (w[o].q = w[o].q || []).push(arguments);
         };
-        (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
-        js.id = o;
-        js.src = f;
-        js.async = 1;
-        fjs.parentNode.insertBefore(js, fjs);
+        var done = false;
+        function go() {
+            if (done) return;
+            done = true;
+            var js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
+            js.id = o;
+            js.src = f;
+            js.async = 1;
+            fjs.parentNode.insertBefore(js, fjs);
+        }
+        ["pointerdown", "scroll", "keydown", "touchstart"].forEach(function (e) {
+            w.addEventListener(e, go, { once: true, passive: true });
+        });
+        w.addEventListener("load", function () { setTimeout(go, 4000); });
     })(window, document, "script", "_hw", "https://files.withcherry.com/widgets/widget.js");
     _hw("init", {
         debug: false,
@@ -2152,6 +2165,11 @@ def enrich_schema(s, path_rel):
     return s[: m.start()] + '<script type="application/ld+json">' + out + "</script>" + s[m.end():]
 
 
+def _logo_sem_prioridade(m):
+    tag = m.group(0).replace(' fetchpriority="high"', "").replace('loading="eager" ', "")
+    return tag
+
+
 def fix_lcp(s, path_rel):
     # primeira <img> do documento vira eager + fetchpriority (uma so)
     def repl(m):
@@ -2163,7 +2181,14 @@ def fix_lcp(s, path_rel):
             tag = tag.replace("<img ", '<img loading="eager" fetchpriority="high" ', 1)
         return tag
 
-    s = re.sub(r"<img [^>]*>", repl, s, count=1)
+    # A primeira <img> do DOCUMENTO e o logo do header: ele recebia
+    # fetchpriority=high em todas as paginas e disputava banda com o hero,
+    # que e o LCP. A regra passa a valer para a primeira imagem do <main>.
+    i = s.find("<main")
+    if i < 0:
+        i = 0
+    s = s[:i] + re.sub(r"<img [^>]*>", repl, s[i:], count=1)
+    s = re.sub(r'<img\b[^>]*class="logo-img"[^>]*>', _logo_sem_prioridade, s)
 
     if path_rel == "index.html" and 'rel="preload" as="image"' not in s:
         # O caminho do preload sai do PROPRIO hero da pagina, nao de uma
@@ -2171,8 +2196,19 @@ def fix_lcp(s, path_rel):
         # (21/09/2026, tinha uma colega que nao esta mais na equipe), a
         # constante teria reintroduzido um preload para um arquivo
         # inexistente — o navegador baixaria um 404 com prioridade alta.
+        # Preload com media: sem ele o celular baixava o hero de 1600px E a
+        # versao -m do <picture> (auditoria 25/09/2026).
+        pic = re.search(r'<picture><source media="\(max-width: 767px\)" srcset="\.?/?(assets/images/[^"]+)"[^>]*>'
+                        r'<img src="\.?/?(assets/images/[^"]+)"', s)
         hero = re.search(r'<img[^>]+src="\.?/?(assets/images/[^"]+)"[^>]*fetchpriority="high"', s)
-        if hero:
+        if pic:
+            s = s.replace(
+                "</head>",
+                f'<link rel="preload" as="image" href="/{pic.group(1)}" media="(max-width: 767px)" fetchpriority="high">\n'
+                f'<link rel="preload" as="image" href="/{pic.group(2)}" media="(min-width: 768px)" fetchpriority="high">\n</head>',
+                1,
+            )
+        elif hero:
             s = s.replace(
                 "</head>",
                 f'<link rel="preload" as="image" href="/{hero.group(1)}" fetchpriority="high">\n</head>',

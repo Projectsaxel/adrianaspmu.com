@@ -42,7 +42,7 @@
       <header class="site-header">
         <div class="container header-inner">
           <a class="logo" href="../../../" aria-label="Adriana's PMU Home">
-            <img loading="eager" fetchpriority="high" class="logo-img" src="../../../assets/images/logo.svg" alt="Adriana's Permanent Makeup" width="254" height="66" decoding="async">
+            <img class="logo-img" src="../../../assets/images/logo.svg" alt="Adriana's Permanent Makeup" width="254" height="66" decoding="async">
           </a>
           <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
           <nav class="main-nav" aria-label="Main navigation">
@@ -85,7 +85,7 @@
   <div class="svc-hero-panels" aria-hidden="true"><span class="svc-panel svc-panel--left"></span><span class="svc-panel svc-panel--right"></span></div>
   <div class="svc-hero-inner">
     <figure class="svc-hero-figure">
-      <img src="../../../assets/images/hero/eyeliner-combo-hero.webp" alt="Healed Eyeliner Combo on a client of Adriana&#39;s Permanent Makeup" width="900" height="1286" loading="eager" fetchpriority="high" decoding="async">
+      <img srcset="../../../assets/images/hero/eyeliner-combo-hero-400.webp 400w, ../../../assets/images/hero/eyeliner-combo-hero-600.webp 600w, ../../../assets/images/hero/eyeliner-combo-hero.webp 900w" sizes="(max-width: 900px) 198px, 29vw" src="../../../assets/images/hero/eyeliner-combo-hero.webp" alt="Healed Eyeliner Combo on a client of Adriana&#39;s Permanent Makeup" width="900" height="1286" loading="eager" fetchpriority="high" decoding="async">
     </figure>
     <div class="svc-hero-copy">
       <p class="svc-hero-script">Upper and lower, in one visit</p>
@@ -360,15 +360,28 @@
 <div class="cherry-widget cherry-widget--floating">
 <!-- CHERRY WIDGET BEGIN -->
 <script>
-    (function (w, d, s, o, f, js, fjs) {
+    // Adiado de proposito (auditoria 25/09/2026): o widget.js da Cherry tem
+    // ~434 KB e ainda carrega o Segment. Entrava junto com a pagina e
+    // disputava banda com o hero. Agora sobe na primeira interacao ou 4s
+    // depois do load. A fila _hw("init", ...) abaixo segue valendo.
+    (function (w, d, s, o, f) {
         w[o] = w[o] || function () {
             (w[o].q = w[o].q || []).push(arguments);
         };
-        (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
-        js.id = o;
-        js.src = f;
-        js.async = 1;
-        fjs.parentNode.insertBefore(js, fjs);
+        var done = false;
+        function go() {
+            if (done) return;
+            done = true;
+            var js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
+            js.id = o;
+            js.src = f;
+            js.async = 1;
+            fjs.parentNode.insertBefore(js, fjs);
+        }
+        ["pointerdown", "scroll", "keydown", "touchstart"].forEach(function (e) {
+            w.addEventListener(e, go, { once: true, passive: true });
+        });
+        w.addEventListener("load", function () { setTimeout(go, 4000); });
     })(window, document, "script", "_hw", "https://files.withcherry.com/widgets/widget.js");
     _hw("init", {
         debug: false,

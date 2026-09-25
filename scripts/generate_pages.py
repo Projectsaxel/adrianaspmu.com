@@ -1070,15 +1070,28 @@ CHERRY_FULLPAGE_EMBED = """
 <div class="cherry-widget">
 <!-- CHERRY WIDGET BEGIN -->
 <script>
-    (function (w, d, s, o, f, js, fjs) {
+    // Adiado de proposito (auditoria 25/09/2026): o widget.js da Cherry tem
+    // ~434 KB e ainda carrega o Segment. Entrava junto com a pagina e
+    // disputava banda com o hero. Agora sobe na primeira interacao ou 4s
+    // depois do load. A fila _hw("init", ...) abaixo segue valendo.
+    (function (w, d, s, o, f) {
         w[o] = w[o] || function () {
             (w[o].q = w[o].q || []).push(arguments);
         };
-        (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
-        js.id = o;
-        js.src = f;
-        js.async = 1;
-        fjs.parentNode.insertBefore(js, fjs);
+        var done = false;
+        function go() {
+            if (done) return;
+            done = true;
+            var js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
+            js.id = o;
+            js.src = f;
+            js.async = 1;
+            fjs.parentNode.insertBefore(js, fjs);
+        }
+        ["pointerdown", "scroll", "keydown", "touchstart"].forEach(function (e) {
+            w.addEventListener(e, go, { once: true, passive: true });
+        });
+        w.addEventListener("load", function () { setTimeout(go, 4000); });
     })(window, document, "script", "_hw", "https://files.withcherry.com/widgets/widget.js");
     _hw("init", {
         debug: false,
