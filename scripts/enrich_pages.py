@@ -403,7 +403,7 @@ LICENCA_WILM = """<section class="section section-alt"><div class="container">
 <tbody>
 <tr><td>Body Art Facility</td><td>20261921</td><td>Wilmington Board of Health</td><td>31 Dec 2026</td></tr>
 <tr><td>Body Art Practitioner &mdash; Adriana Santos</td><td>20261923</td><td>Wilmington Board of Health</td><td>31 Dec 2026</td></tr>
-<tr><td>Body Art Practitioner &mdash; Livian Camargo Gomes</td><td>20261923</td><td>Wilmington Board of Health</td><td>31 Dec 2026</td></tr>
+<tr><td>Body Art Practitioner &mdash; Livian Camargo Gomes</td><td>20261924</td><td>Wilmington Board of Health</td><td>31 Dec 2026</td></tr>
 </tbody></table></div>
 <p>Under Massachusetts General Laws Chapter 111, Section 31, each town&rsquo;s Board of Health writes its own body art rules, so a permit issued in Wilmington does not carry over to another Massachusetts town. Both licenses are posted in the studio, as Wilmington requires.</p>
 </div></section>"""
@@ -896,6 +896,10 @@ TEAM_NODES = [
             "@type": "EducationalOccupationalCredential",
             "credentialCategory": "Professional license",
             "name": "Body Art Practitioner License",
+            # Numero proprio da Livian, confirmado pela Rachel em 25/09/2026.
+            # A tabela chegou a repetir o 20261923 da Adriana nas duas linhas.
+            "identifier": "20261924",
+            "validUntil": "2026-12-31",
             "recognizedBy": {
                 "@type": "GovernmentOrganization",
                 "name": "Town of Wilmington Board of Health",
@@ -919,10 +923,13 @@ def add_team(graph, path_rel):
     """Person de cada colega na /about/, onde as bios estao visiveis."""
     if path_rel != "about/index.html":
         return graph
-    have = {n.get("@id") for n in graph if isinstance(n, dict)}
+    # Substitui o no existente em vez de so acrescentar quando falta: com
+    # "se nao existe, acrescenta", uma correcao aqui (ex.: a licenca da
+    # Livian, 25/09/2026) nunca chegava a pagina que ja tinha o no antigo.
+    ids = {node["@id"] for node in TEAM_NODES}
+    graph[:] = [n for n in graph if not (isinstance(n, dict) and n.get("@id") in ids)]
     for node in TEAM_NODES:
-        if node["@id"] not in have:
-            graph.append(dict(node))
+        graph.append(dict(node))
     # a Organization passa a listar quem trabalha nela
     for n in graph:
         if isinstance(n, dict) and n.get("@type") == "Organization":

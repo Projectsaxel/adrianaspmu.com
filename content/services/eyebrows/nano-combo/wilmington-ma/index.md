@@ -125,7 +125,7 @@ Massachusetts has no single state body art license. Wilmington’s own Board of 
 | --- | --- | --- | --- |
 | Body Art Facility | 20261921 | Wilmington Board of Health | 31 Dec 2026 |
 | Body Art Practitioner — Adriana Santos | 20261923 | Wilmington Board of Health | 31 Dec 2026 |
-| Body Art Practitioner — Livian Camargo Gomes | 20261923 | Wilmington Board of Health | 31 Dec 2026 |
+| Body Art Practitioner — Livian Camargo Gomes | 20261924 | Wilmington Board of Health | 31 Dec 2026 |
 
 Under Massachusetts General Laws Chapter 111, Section 31, each town’s Board of Health writes its own body art rules, so a permit issued in Wilmington does not carry over to another Massachusetts town. Both licenses are posted in the studio, as Wilmington requires.
 

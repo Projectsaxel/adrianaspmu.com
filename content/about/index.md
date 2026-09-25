@@ -47,7 +47,7 @@ Livian holds a Body Art Practitioner License from the Wilmington Board of Health
 | Town of Salem, NH | Body Art Establishment | BODE-4 | 28 Feb 2027 |
 | Town of Wilmington, MA | Body Art Facility | 20261921 | 31 Dec 2026 |
 | Town of Wilmington, MA | Body Art Practitioner — Adriana Santos | 20261923 | 31 Dec 2026 |
-| Town of Wilmington, MA | Body Art Practitioner — Livian Camargo Gomes | 20261923 | 31 Dec 2026 |
+| Town of Wilmington, MA | Body Art Practitioner — Livian Camargo Gomes | 20261924 | 31 Dec 2026 |
 
 **Anyone can check the state license independently.** New Hampshire publishes a public lookup at [forms.nh.gov/licenseverification](https://forms.nh.gov/licenseverification/). Search for Adriana Souza Santos, or for license 4283, and the state confirms the status without relying on anything published here.
 

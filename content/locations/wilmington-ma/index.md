@@ -87,7 +87,7 @@ The Wilmington studio holds Body Art Facility License 20261921 from the Wilmingt
 | --- | --- | --- | --- | --- |
 | Body Art Facility License | Adriana’s Permanent Makeup, 211 Lowell St, Ste F | 20261921 | Wilmington Board of Health | 31 Dec 2026 |
 | Body Art Practitioner License | Adriana Santos | 20261923 | Wilmington Board of Health | 31 Dec 2026 |
-| Body Art Practitioner License | Livian Camargo Gomes | 20261923 | Wilmington Board of Health | 31 Dec 2026 |
+| Body Art Practitioner License | Livian Camargo Gomes | 20261924 | Wilmington Board of Health | 31 Dec 2026 |
 
 Massachusetts law requires both licenses separately. The facility license covers the room; the practitioner license covers the person holding the needle. A studio can hold one and not the other, which is why asking to see both is a reasonable question at any studio in the state.
 

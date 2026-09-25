@@ -39,7 +39,7 @@ Both client studios share one menu and one price list, $250 to $850, with the pe
 
 The Wilmington, MA studio occupies a private suite at 211 Lowell Street, Suite F, directly on Massachusetts Route 129, near the I-93/Route 129 interchange. It is a single closed room, not a chair inside a larger salon, and Wilmington's population is 23,336.
 
-Master Permanent Makeup Artist Adriana Souza Santos and second licensed artist Livian Camargo Gomes both work from this location, under Wilmington Board of Health licenses 20261921 (facility) and 20261923 (practitioner), both valid through 31 December 2026.
+Master Permanent Makeup Artist Adriana Souza Santos and second licensed artist Livian Camargo Gomes both work from this location, under Wilmington Board of Health licenses 20261921 (facility), 20261923 (Adriana, practitioner) and 20261924 (Livian, practitioner), both valid through 31 December 2026.
 
 Two MBTA commuter rail stations serve the town, Wilmington on the Lowell Line and North Wilmington on the Haverhill Line, an option Salem, NH does not have.
 
