@@ -36,6 +36,13 @@ jobs:
       - name: Gemeos markdown para negociacao de conteudo
         run: python3 scripts/gen_markdown.py
 
+      # Portao de qualidade: roda sobre o HTML ja buildado, que e o que vai
+      # ao ar. Falhou, nao publica. Ver tests/check_html.py.
+      - name: Checagem do HTML (links, head, schema, fatos)
+        run: |
+          pip install --quiet html5lib
+          python3 tests/check_html.py
+
       - name: Deploy com Wrangler
         uses: cloudflare/wrangler-action@v3
         with:

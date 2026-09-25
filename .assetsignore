@@ -3,6 +3,7 @@
 
 scripts/
 docs/
+tests/
 .github/
 # ATENCAO: nao voltar a usar "*.md". Os gemeos markdown das paginas
 # vivem em content/ e PRECISAM ser servidos, senao a negociacao de
