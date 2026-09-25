@@ -1910,9 +1910,33 @@ def get(pattern, s, flags=0):
 
 # ---------- transformacoes ----------
 
+def _sync_og(s, title, desc, canonical):
+    """OG/Twitter ja existentes passam a acompanhar <title>, description e
+    canonical. Antes, uma vez gravados, nunca mais mudavam: og:title
+    divergia do <title> em 17 paginas e og:description em 29 (auditoria
+    25/09/2026). O Google usa og:title como uma das fontes do title link."""
+    import html as _h
+    t, d = _h.escape(_h.unescape(title), quote=True), _h.escape(_h.unescape(desc), quote=True)
+    for attr, name, val in (("property", "og:title", t), ("property", "og:description", d),
+                            ("property", "og:url", canonical), ("name", "twitter:title", t),
+                            ("name", "twitter:description", d)):
+        s = re.sub(rf'<meta {attr}="{name}" content="[^"]*">', f'<meta {attr}="{name}" content="{val}">', s)
+    extra = ""
+    if 'property="og:locale"' not in s:
+        extra += '<meta property="og:locale" content="en_US">'
+    if 'property="og:image:alt"' not in s:
+        extra += "<meta property=\"og:image:alt\" content=\"Adriana&#39;s Permanent Makeup, Wilmington MA and Salem NH\">"
+    if extra:
+        s = re.sub(r'(<meta property="og:image:height" content="[^"]*">)', r"\1" + extra.replace("\\", "\\\\"), s, count=1)
+    return s
+
+
 def add_og(s, page_dir):
     if 'property="og:title"' in s:
-        return s
+        title = get(r"<title>(.*?)</title>", s, re.S) or "Adriana's Permanent Makeup"
+        desc = get(r'<meta name="description" content="([^"]*)"', s) or title
+        canonical = get(r'<link rel="canonical" href="([^"]*)"', s) or BASE + "/"
+        return _sync_og(s, title, desc, canonical)
     title = get(r"<title>(.*?)</title>", s, re.S) or "Adriana's Permanent Makeup"
     desc = get(r'<meta name="description" content="([^"]*)"', s) or title
     canonical = get(r'<link rel="canonical" href="([^"]*)"', s) or BASE + "/"
@@ -1930,7 +1954,8 @@ def add_og(s, page_dir):
         f'<meta name="twitter:description" content="{desc}">'
         f'<meta name="twitter:image" content="{OG_DEFAULT}">'
     )
-    return s.replace("</head>", og + "\n</head>", 1)
+    s = s.replace("</head>", og + "\n</head>", 1)
+    return _sync_og(s, title, desc, canonical)
 
 
 HOURS = {
