@@ -669,9 +669,28 @@
         if (saida) saida.textContent = String(ativo + 1);
       }
 
+      /* As fotos sao loading="lazy" e as que estao fora da cena ficam
+         display:none: o navegador so comecava a baixar quando a foto
+         entrava na borda, e com a troca a cada 1s ela passava em branco.
+         Aqui as proximas ADIANTE fotos de cada lado sao aquecidas antes
+         de entrar em cena. A pagina continua carregando so o necessario. */
+      const ADIANTE = 3;
+      const aquecidas = new Set();
+      function aquecer() {
+        for (let k = -(VISIVEIS + ADIANTE); k <= VISIVEIS + ADIANTE; k++) {
+          const i = (ativo + k + slides.length * 2) % slides.length;
+          if (aquecidas.has(i)) continue;
+          const img = slides[i].querySelector("img");
+          if (!img) continue;
+          aquecidas.add(i);
+          img.loading = "eager";
+        }
+      }
+
       function ir(delta) {
         ativo = (ativo + delta + slides.length) % slides.length;
         posicionar();
+        aquecer();
       }
 
       cf.querySelector("[data-cf-prev]")?.addEventListener("click", function () { pararDeVez(); ir(-1); });
@@ -685,7 +704,9 @@
       /* teclado: a cena inteira e focavel e responde as setas */
       stage.tabIndex = 0;
       stage.setAttribute("role", "region");
-      stage.setAttribute("aria-label", "Nano Brows gallery, use arrow keys");
+      // O rotulo era "Nano Brows gallery" fixo, ate em pagina de labio.
+      const titulo = cf.closest("section")?.querySelector("h2")?.textContent.trim() || "Photo gallery";
+      stage.setAttribute("aria-label", titulo + ", use arrow keys");
       stage.addEventListener("keydown", function (e) {
         if (e.key === "ArrowLeft") { e.preventDefault(); pararDeVez(); ir(-1); }
         if (e.key === "ArrowRight") { e.preventDefault(); pararDeVez(); ir(1); }
@@ -703,50 +724,100 @@
       stage.addEventListener("pointercancel", function () { x0 = null; });
 
       /* --- passagem automatica ---------------------------------
-         Um carrossel que anda sozinho precisa de quatro freios, senao
-         vira armadilha de acessibilidade:
-         1. para no hover e no foco (quem esta olhando nao perde a foto);
-         2. para quando o visitante usa a seta, o teclado ou arrasta;
-         3. para quando a secao sai da tela (nao gasta CPU a toa);
-         4. nao liga se a pessoa pediu menos movimento no sistema.
+         Pedido da Rachel (25/09/2026): troca a cada 1s, para a visitante
+         perceber que ha muitas fotos. Movimento chama atencao. As setas,
+         o arrasto e o teclado continuam funcionando.
 
-         3,2s e nao 1s: em 1s nao da tempo de olhar um rosto, e a troca
-         vira piscada. E um numero so, se quiser mais rapido eu mudo. */
-      const INTERVALO = 3200;
+         Freios que ficam (acessibilidade, WCAG 2.2.2):
+         1. botao de pausar/retomar ao lado das setas; quem pausa por
+            ele fica pausado
+         2. seta, arrasto, clique ou tecla trocam a foto e o automatico
+            volta sozinho RETOMA ms depois (antes desligava de vez)
+         3. foco pelo TECLADO pausa (clique de mouse nao)
+         4. so roda com a galeria na tela
+         5. nao liga se o sistema pede menos movimento
+         O hover NAO pausa mais: no desktop o cursor quase sempre esta
+         em cima da galeria e ela parecia parada. */
+      const INTERVALO = 1000;
+      const RETOMA = 4000;
       const semMovimento = window.matchMedia("(prefers-reduced-motion: reduce)");
       let timer = null;
-      let paradoPeloUsuario = false;
+      let retomar = null;
+      let naTela = !("IntersectionObserver" in window);
+      let pausadoPeloBotao = false;
+      let focoTeclado = false;
 
+      const controles = cf.querySelector(".cf-controls");
+      const btnPlay = document.createElement("button");
+      btnPlay.type = "button";
+      btnPlay.className = "cf-nav cf-play";
+      function pintarBotao() {
+        const rodando = !pausadoPeloBotao;
+        btnPlay.setAttribute("aria-label", rodando ? "Pause slideshow" : "Play slideshow");
+        btnPlay.setAttribute("aria-pressed", rodando ? "false" : "true");
+        btnPlay.innerHTML = rodando
+          ? '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6v12M15 6v12"/></svg>'
+          : '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>';
+      }
+      if (controles && !semMovimento.matches) {
+        pintarBotao();
+        controles.appendChild(btnPlay);
+      }
+
+      function podeTocar() {
+        return naTela && !pausadoPeloBotao && !focoTeclado && !semMovimento.matches;
+      }
       function tocar() {
-        if (timer || paradoPeloUsuario || semMovimento.matches) return;
+        if (timer || !podeTocar()) return;
         timer = setInterval(function () { ir(1); }, INTERVALO);
       }
       function pausar() {
         if (timer) { clearInterval(timer); timer = null; }
       }
-      function pararDeVez() {      // interacao explicita encerra o automatico
-        paradoPeloUsuario = true;
+      function pararDeVez() {      // interacao manual: pausa e volta sozinho
         pausar();
+        clearTimeout(retomar);
+        retomar = setTimeout(tocar, RETOMA);
       }
 
-      cf.addEventListener("mouseenter", pausar);
-      cf.addEventListener("mouseleave", tocar);
-      cf.addEventListener("focusin", pausar);
+      btnPlay.addEventListener("click", function () {
+        pausadoPeloBotao = !pausadoPeloBotao;
+        clearTimeout(retomar);
+        pintarBotao();
+        pausadoPeloBotao ? pausar() : (ir(1), tocar());
+      });
+
+      cf.addEventListener("focusin", function (e) {
+        if (e.target.matches && e.target.matches(":focus-visible")) { focoTeclado = true; pausar(); }
+      });
       cf.addEventListener("focusout", function (e) {
-        if (!cf.contains(e.relatedTarget)) tocar();
+        if (!cf.contains(e.relatedTarget)) { focoTeclado = false; tocar(); }
       });
 
       /* so roda enquanto a galeria esta na tela */
       if ("IntersectionObserver" in window) {
         new IntersectionObserver(function (entradas) {
-          entradas[0].isIntersecting ? tocar() : pausar();
+          naTela = entradas[0].isIntersecting;
+          naTela ? tocar() : pausar();
         }, { threshold: 0.25 }).observe(cf);
       } else {
         tocar();
       }
 
+      /* total real de fotos: o HTML trazia "37" fixo, e a galeria de
+         Nano Brows tem 33 desde a retirada das fotos de antes */
+      const totalEl = cf.querySelector(".cf-total");
+      if (totalEl) totalEl.textContent = String(slides.length);
+
       cf.setAttribute("data-cf-ready", "");
       posicionar();
+      if ("IntersectionObserver" in window) {
+        new IntersectionObserver(function (entradas, obs) {
+          if (entradas[0].isIntersecting) { aquecer(); obs.disconnect(); }
+        }, { rootMargin: "600px 0px" }).observe(cf);
+      } else {
+        aquecer();
+      }
     });
   }
 
