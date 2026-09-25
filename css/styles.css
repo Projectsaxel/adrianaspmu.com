@@ -5957,3 +5957,22 @@ tbody tr:last-child > td { border-bottom: 0; }
   .promo-social { grid-column: 1; justify-self: center; }
   .promo-social-cidade { display: none; }
 }
+
+/* Hero do /academy/: o unico CTA era o video. "Apply for the Next Class"
+   vira o principal; o video fica como secundario, claro sobre a foto. */
+.academy-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.5rem 0 0;
+}
+.academy-hero .academy-hero-actions .btn-secondary {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.75);
+}
+.academy-hero .academy-hero-actions .btn-secondary:hover,
+.academy-hero .academy-hero-actions .btn-secondary:focus-visible {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}

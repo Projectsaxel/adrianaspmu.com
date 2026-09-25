@@ -23,7 +23,7 @@
  *   CONTACT_FROM var     website@adrianaspmu.com (dominio de routing)
  */
 
-const LIMITS = { name: 120, email: 200, phone: 40, location: 80, message: 4000, source: 40 };
+const LIMITS = { name: 120, email: 200, phone: 40, location: 80, interest: 60, message: 4000, source: 40 };
 
 // De onde o lead veio. Allowlist e nao texto livre: "source" entra no
 // assunto do e-mail, e assunto montado com string do cliente e injecao
@@ -131,6 +131,16 @@ async function handleContact(request, env, ctx) {
   const email = clean(data.email, LIMITS.email);
   const phone = clean(data.phone, LIMITS.phone);
   const location = clean(data.location, LIMITS.location) || "Not specified";
+  // Interesse (servico ou curso da Academy). Allowlist: entra no e-mail.
+  const INTERESTS = {
+    service: "A permanent makeup service",
+    "pmu-100h-fundamental": "100-Hour Fundamental course",
+    "pmu-apprenticeship": "Apprenticeship",
+    "vip-masterclass": "VIP Masterclass",
+    "not-sure": "Not sure yet",
+  };
+  const interestKey = clean(data.interest, LIMITS.interest);
+  const interest = Object.prototype.hasOwnProperty.call(INTERESTS, interestKey) ? INTERESTS[interestKey] : "Not specified";
   const message = clean(data.message, LIMITS.message);
   const page = clean(data.page, 200);
 
@@ -178,6 +188,7 @@ async function handleContact(request, env, ctx) {
   const meta = [
     ["Came from", sourceLabel],
     ["Preferred location", location],
+    ["Interested in", interest],
     ["Submitted from", page || "/contact/"],
     ["Visitor city", [cf.city, cf.region, cf.country].filter(Boolean).join(", ")],
     ["Received (UTC)", new Date().toISOString().replace("T", " ").slice(0, 19)],

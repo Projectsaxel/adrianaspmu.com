@@ -229,6 +229,18 @@
     const buttonLabel = button ? button.textContent : "";
     const loadedAt = Date.now();
 
+    // Vindo de uma pagina da Academy (?course=...), o formulario ja chega
+    // com o curso e a unidade preenchidos. Antes todo CTA de curso caia
+    // aqui sem saber qual curso a pessoa queria.
+    const COURSES = ["pmu-100h-fundamental", "pmu-apprenticeship", "vip-masterclass", "academy"];
+    const pedido = new URLSearchParams(window.location.search).get("course");
+    if (pedido && COURSES.includes(pedido)) {
+      const interest = form.querySelector("#interest");
+      const loc = form.querySelector("#location");
+      if (interest && pedido !== "academy") interest.value = pedido;
+      if (loc) loc.value = "Academy (Peabody, MA)";
+    }
+
     const PHONES =
       "Please call Wilmington (781) 853-8063 or Salem (978) 223-7496.";
 
@@ -280,7 +292,12 @@
       if (ok) {
         // Lead so conta depois que o Worker confirmou o envio. Contar no
         // submit inflaria o numero com tentativas que nunca chegaram.
-        window.PMU_track?.formSubmitContact?.(payload.location);
+        // Interesse em curso conta como academy_lead (o evento existia no
+        // analytics.js mas nunca era disparado).
+        const curso = COURSES.includes(payload.interest) ? payload.interest
+          : payload.location === "Academy (Peabody, MA)" ? "academy" : "";
+        if (curso) window.PMU_track?.academyLead?.(curso);
+        else window.PMU_track?.formSubmitContact?.(payload.location);
         form.reset();
       }
 
