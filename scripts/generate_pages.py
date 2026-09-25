@@ -917,7 +917,7 @@ for city_file, h1, street, phone, area, tag in [
     write(f"locations/{city_file}/index.html", shell(h1, h1, h1, body, 2))
 
 write("locations/index.html", shell(
-    "Locations | Wilmington MA & Salem NH",
+    "Locations | Wilmington MA, Salem NH & Peabody MA",
     "Two permanent makeup studio locations in New England.",
     "Adriana's Permanent Makeup Locations",
     '<section class="page-hero"><div class="container"><h1>Adriana\'s Permanent Makeup Locations: Wilmington MA & Salem NH</h1></div></section>'
@@ -936,7 +936,7 @@ academy_html = academy_body(img_tag, 1)
 write("academy/index.html", shell(
     "Training | Adriana's PMU Academy Massachusetts",
     ACADEMY_META,
-    "Learn the Art of Permanent Makeup",
+    "Permanent Makeup Training in Peabody, MA",
     academy_html,
     1,
     body_class="beauty-site academy-page",
@@ -944,7 +944,7 @@ write("academy/index.html", shell(
 write("training/index.html", shell(
     "Training - Adriana's PMU Academy",
     ACADEMY_META,
-    "Learn the Art of Permanent Makeup",
+    "Permanent Makeup Training in Peabody, MA",
     academy_body(img_tag, 1, course_href_base="../academy/"),
     1,
     body_class="beauty-site academy-page",

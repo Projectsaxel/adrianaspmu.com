@@ -1,4 +1,4 @@
-<!-- Locations | Wilmington MA & Salem NH -->
+<!-- Locations | Wilmington MA, Salem NH & Peabody MA -->
 <!-- canonical: https://adrianaspmu.com/locations/ -->
 > Two Adriana's Permanent Makeup studios: 211 Lowell Street, Wilmington MA and 117A Main Street, Salem NH. Addresses, phones and booking links.
 
