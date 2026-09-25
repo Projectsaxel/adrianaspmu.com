@@ -53,7 +53,7 @@ The Salem, NH studio is at 117A Main Street, on NH Route 97, in the Salem Depot 
 
 Because Salem runs multiple stations, it can often take an appointment when the single Wilmington suite is already booked. Adriana Souza Santos also consults here, holding New Hampshire state Body Artist license 4283 (valid through 18 July 2028, verifiable at forms.nh.gov/licenseverification) plus Town of Salem licenses BODA-10 and BODE-4, both through 28 February 2027.
 
-New Hampshire has no passenger rail service anywhere in the state, so nearby Massachusetts clients drive rather than take a train.
+Salem has no passenger rail station, so nearby Massachusetts clients drive rather than take a train.
 
 *Reception at 117A Main Street, on Route 97 in Salem Depot.*
 

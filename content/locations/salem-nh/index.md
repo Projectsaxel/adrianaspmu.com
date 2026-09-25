@@ -126,7 +126,7 @@ Prices at the Salem, NH studio start at $250 for Bottom Eyeliner and reach $850 
 
 The studio is at 117A Main Street, Salem, NH 03079, on NH Route 97, the name Main Street carries along its entire length through town. The nearest I-93 access is Exit 2, Pelham Road, per the Town of Salem’s own transportation plan. Call (978) 223-7496 for directions.
 
-No. New Hampshire has no passenger rail service at all; MBTA Commuter Rail ends at Lowell and Haverhill, both in Massachusetts, and a possible NH extension exists only as a study with no construction schedule. Clients from Methuen or Haverhill drive to the Salem, NH studio instead.
+No. Salem has no passenger rail station, and MBTA Commuter Rail ends at Lowell and Haverhill, both in Massachusetts; a possible NH extension exists only as a study with no construction schedule. Clients from Methuen or Haverhill drive to the Salem, NH studio instead.
 
 Outside two narrow exceptions in RSA 314-A:4, New Hampshire requires every body art practitioner to hold a license from the state’s Office of Professional Licensure and Certification, not a local permit. Ask for that license number and verify it with the OPLC directly, not with Salem’s town hall.
 

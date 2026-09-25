@@ -75,7 +75,7 @@ Combination Brows in Salem, NH is priced after a consultation, since the mix of 
 
 Yes. Main Street in Salem is New Hampshire Route 97 along its entire length, with its western terminus at NH-28, Broadway. The address itself sits in the Salem Depot area, and the nearest I-93 access is Exit 2, Pelham Road.
 
-No. New Hampshire has no passenger rail service at all; MBTA Commuter Rail ends at Lowell and Haverhill, both in Massachusetts. Clients from Methuen or Haverhill drive to the Salem, NH studio for their appointment instead, with no rail extension planned.
+No. Salem has no passenger rail station, and MBTA Commuter Rail ends at Lowell and Haverhill, both in Massachusetts. Clients from Methuen or Haverhill drive to the Salem, NH studio for their appointment instead, with no rail extension planned.
 
 Yes. New Hampshire licenses body art practitioners at the state level under RSA 314-A. The Town of Salem separately licenses both artist and establishment under Salem Chapter 433, so two levels of paperwork apply here, unlike Massachusetts’ single town-level system.
 

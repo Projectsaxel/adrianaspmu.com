@@ -75,7 +75,7 @@ Microblading in Salem, NH costs $550, and that price already includes the perfec
 
 Yes. Main Street in Salem is New Hampshire Route 97 along its entire length, with its western terminus at NH-28, Broadway. The address sits in the Salem Depot area, and the nearest I-93 access is Exit 2, Pelham Road, per the Town of Salem's own transportation plan.
 
-No. New Hampshire has no passenger rail service at all; MBTA Commuter Rail ends at Lowell and Haverhill, both in Massachusetts. Clients from Methuen or Haverhill drive to the Salem, NH studio for their microblading appointment instead, since no rail extension is under construction.
+No. Salem has no passenger rail station, and MBTA Commuter Rail ends at Lowell and Haverhill, both in Massachusetts. Clients from Methuen or Haverhill drive to the Salem, NH studio for their microblading appointment instead, since no rail extension is under construction.
 
 Yes. New Hampshire licenses body art practitioners at the state level under RSA 314-A, with two narrow exceptions in RSA 314-A:4. Eyebrow microblading performed by a licensed cosmetologist or esthetician follows a separate, shorter certificate process under RSA 314-A:2, IV.
 

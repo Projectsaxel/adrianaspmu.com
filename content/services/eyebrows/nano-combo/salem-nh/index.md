@@ -78,7 +78,7 @@ Nano Combo Brows in Salem, NH cost $600, and that price already includes the per
 
 Yes. Main Street in Salem is New Hampshire Route 97 along its entire length, with its western terminus at NH-28, Broadway. The address sits in the Salem Depot area, and the nearest I-93 access is Exit 2, Pelham Road, per the Town of Salem's own transportation plan.
 
-No. New Hampshire has no passenger rail service at all; MBTA Commuter Rail ends at Lowell and Haverhill, both in Massachusetts. Clients from Methuen or Haverhill drive to the Salem, NH studio for their Nano Combo Brows appointment instead, since no rail extension is under construction.
+No. Salem has no passenger rail station, and MBTA Commuter Rail ends at Lowell and Haverhill, both in Massachusetts. Clients from Methuen or Haverhill drive to the Salem, NH studio for their Nano Combo Brows appointment instead, since no rail extension is under construction.
 
 Yes, at two levels. New Hampshire licenses body art practitioners at the state level under RSA 314-A, and the Town of Salem separately licenses the artist and the establishment under Salem Chapter 433. Both licenses must be current, and a client may ask to see them before booking.
 
