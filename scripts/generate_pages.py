@@ -1487,7 +1487,7 @@ def write_llms():
 ## Trust & Credentials
 - Wilmington, MA (Wilmington Board of Health, valid through 31 Dec 2026): Body Art Facility License 20261921; Body Art Practitioner License 20261923 (Adriana Santos) and 20261924 (Livian Camargo Gomes)
 - Salem, NH: State of New Hampshire (OPLC) Body Artist License 4283 (Adriana Souza Santos, valid through 18 Jul 2028); Town of Salem Permanent Make-Up Artist BODA-10 and Body Art Establishment BODE-4 under Salem Chapter 433 (valid through 28 Feb 2027)
-- 4.8 stars, 217 Google reviews (Wilmington); 1,000+ combined reviews (Google + Fresha)
+- 4.9 stars, 220 Google reviews (Wilmington); 4.3 stars, 6 reviews (Salem); 1,000+ combined reviews (Google + Fresha)
 - Women-owned, LGBTQ+ friendly, wheelchair accessible (Wilmington)
 - Email: info@adrianaspmu.com
 """

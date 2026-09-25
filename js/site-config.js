@@ -67,8 +67,8 @@ const SITE = {
     years: "20+",
     procedures: "5,000+",
     reviews: "1,000+",
-    googleRating: "4.8",
-    googleCount: "217",
+    googleRating: "4.9",
+    googleCount: "220",
   },
 };
 
