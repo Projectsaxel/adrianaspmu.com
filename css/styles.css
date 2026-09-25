@@ -5976,3 +5976,27 @@ tbody tr:last-child > td { border-bottom: 0; }
   background: rgba(255, 255, 255, 0.12);
   color: #fff;
 }
+
+/* Botao de pausa do hero da home (25/09/2026). O autoplay agora roda
+   sempre, a cada 3s; conteudo que se move sem parar precisa de pausa
+   (WCAG 2.2.2). Fica no canto do indice, discreto sobre a foto. */
+.hero-pause {
+  margin-top: 1rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  background: rgba(42, 35, 33, 0.35);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s var(--ease);
+}
+.hero-pause:hover { background: rgba(42, 35, 33, 0.6); }
+.hero-pause:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+.hero-pause svg {
+  width: 1rem; height: 1rem;
+  fill: none; stroke: currentColor; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}

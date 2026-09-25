@@ -759,7 +759,8 @@
             volta sozinho RETOMA ms depois (antes desligava de vez)
          3. foco pelo TECLADO pausa (clique de mouse nao)
          4. so roda com a galeria na tela
-         5. nao liga se o sistema pede menos movimento
+         5. com "Reduzir movimento" no sistema continua rodando (pedido da
+            Rachel), mas sem animacao: o CSS zera a transicao
          O hover NAO pausa mais: no desktop o cursor quase sempre esta
          em cima da galeria e ela parecia parada. */
       const INTERVALO = 1000;
@@ -783,13 +784,13 @@
           ? '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6v12M15 6v12"/></svg>'
           : '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>';
       }
-      if (controles && !semMovimento.matches) {
+      if (controles) {
         pintarBotao();
         controles.appendChild(btnPlay);
       }
 
       function podeTocar() {
-        return naTela && !pausadoPeloBotao && !focoTeclado && !semMovimento.matches;
+        return naTela && !pausadoPeloBotao && !focoTeclado;
       }
       function tocar() {
         if (timer || !podeTocar()) return;
@@ -964,7 +965,14 @@ function initEditorialHero() {
   var current = 0;
   var timer = null;
   var userTook = false;
-  var AUTO_MS = 7000;
+  // Pedido da Rachel (25/09/2026): 3s, e o hero tem que andar sozinho.
+  // Antes eram 7s e o autoplay desligava DE VEZ ao primeiro hover no
+  // indice, clique ou toque; com "Reduzir movimento" no sistema nem ligava.
+  var AUTO_MS = 3000;
+  var RETOMA_MS = 6000;
+  var retoma = null;
+  var pausadoBotao = false;
+  var hoverIndice = false;
 
   function paint(i) {
     if (i === current) return;
@@ -998,16 +1006,23 @@ function initEditorialHero() {
 
   function stopAuto() { if (timer) { window.clearInterval(timer); timer = null; } }
 
+  // Roda tambem com "Reduzir movimento": a troca e um fade que o CSS ja
+  // encurta nesse caso, e o botao de pausa atende a WCAG 2.2.2.
   function startAuto() {
-    if (reduced.matches || userTook) return;
+    if (pausadoBotao || hoverIndice || document.hidden) return;
     stopAuto();
     timer = window.setInterval(function () { paint((current + 1) % shots.length); }, AUTO_MS);
   }
 
-  function take() { userTook = true; stopAuto(); }
+  // interacao manual troca o slide e o automatico volta sozinho depois
+  function take() {
+    stopAuto();
+    window.clearTimeout(retoma);
+    retoma = window.setTimeout(startAuto, RETOMA_MS);
+  }
 
   links.forEach(function (a, i) {
-    a.addEventListener("mouseenter", function () { take(); paint(i); });
+    a.addEventListener("mouseenter", function () { paint(i); });
     a.addEventListener("focus", function () { take(); paint(i); });
     a.addEventListener("click", function (ev) {
       ev.preventDefault();
@@ -1019,6 +1034,35 @@ function initEditorialHero() {
 
   var index = hero.querySelector(".hero-index");
   if (index) {
+    // hover no indice so pausa enquanto o mouse esta la
+    // so a lista de links; o botao de pausa fica de fora
+    var lista = index.querySelector("ol, ul") || index;
+    lista.addEventListener("mouseenter", function () { hoverIndice = true; stopAuto(); });
+    lista.addEventListener("mouseleave", function () { hoverIndice = false; window.clearTimeout(retoma); retoma = window.setTimeout(startAuto, AUTO_MS); });
+
+    var pausa = document.createElement("button");
+    pausa.type = "button";
+    pausa.className = "hero-pause";
+    var pintar = function () {
+      pausa.setAttribute("aria-label", pausadoBotao ? "Play slideshow" : "Pause slideshow");
+      pausa.setAttribute("aria-pressed", pausadoBotao ? "true" : "false");
+      pausa.innerHTML = pausadoBotao
+        ? '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>'
+        : '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6v12M15 6v12"/></svg>';
+    };
+    pintar();
+    pausa.addEventListener("click", function () {
+      pausadoBotao = !pausadoBotao;
+      window.clearTimeout(retoma);
+      pintar();
+      pausadoBotao ? stopAuto() : startAuto();
+    });
+    // na linha dos botoes do hero: no canto do indice ficava atras do
+    // Message Us flutuante
+    // Fora do .hero-actions, que faz fade a cada troca (o botao piscaria).
+    var acoes = hero.querySelector(".hero-actions");
+    if (acoes) acoes.insertAdjacentElement("afterend", pausa); else index.appendChild(pausa);
+
     index.addEventListener("keydown", function (ev) {
       var d = ev.key === "ArrowRight" ? 1 : ev.key === "ArrowLeft" ? -1 : 0;
       if (!d) return;
