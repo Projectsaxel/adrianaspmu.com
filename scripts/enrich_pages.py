@@ -137,14 +137,19 @@ def classify(path_rel):
 # GA4 so no dominio de producao (25/09/2026). O GA4 recebia hits de
 # 127.0.0.1 (31 sessoes), localhost (12), *.workers.dev e hostingersite.com:
 # qualquer "wrangler dev", "python3 -m http.server" ou preview contava como
-# visita real. Agora o gtag.js e o /js/analytics.js so sao CARREGADOS quando
+# visita real. Agora o gtag('config') e o /js/analytics.js so rodam quando
 # location.hostname === "adrianaspmu.com" (www redireciona para o apex, entao
 # nao precisa entrar). Fora dele nada vai para o Google, de proposito: testar
 # local e ver zero hits no GA4 e o comportamento esperado (ver README).
 # window.PMU_PAGE continua sendo definido sempre (o main.js le a unidade
 # dele), e o stub gtag/dataLayer tambem, para nenhum codigo quebrar.
 GA_HOST = "adrianaspmu.com"
-GA_GATE_MARK = "/*ga4-so-em-producao*/"
+GA_GATE_MARK = "/*ga4-so-em-producao-v2*/"
+# O <script src=gtag.js> continua ESTATICO no <head>: o Search Console desta
+# propriedade e verificado pela tag do GA (nao ha meta, arquivo nem TXT de
+# verificacao), e o Google procura o snippet no HTML. Sem gtag('config') o
+# gtag.js nao envia nada, entao carregar o arquivo fora de producao e inofensivo.
+_GA_V1 = re.compile(r'<script>/\*ga4-so-em-producao\*/.*?</script>\n?', re.S)
 
 # Bloco antigo (sem trava de hostname), ja commitado no HTML de 64 paginas
 _GA_OLD = re.compile(
@@ -162,6 +167,7 @@ def add_analytics(s, path_rel):
     c = classify(path_rel)
     page_json = json.dumps(c, separators=(",", ":"))
     snippet = (
+        f'<script async src="https://www.googletagmanager.com/gtag/js?id={GA4_ID}"></script>\n'
         f"<script>{GA_GATE_MARK}window.PMU_PAGE={page_json};"
         "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}"
         f'if(location.hostname==="{GA_HOST}"){{'
@@ -172,14 +178,15 @@ def add_analytics(s, path_rel):
         f"gtag('config','{GA4_ID}',{{page_type:'{c['page_type']}',"
         f"service:'{c['service'] or '(none)'}',city:'{c['city'] or '(none)'}'}});"
         # IIFE: sem ela d/g/a virariam variaveis globais da pagina
-        "(function(d){var g=d.createElement('script'),a=d.createElement('script');"
-        f"g.async=true;g.src='https://www.googletagmanager.com/gtag/js?id={GA4_ID}';"
         # analytics.js injetado fica async (defer nao vale para script
         # dinamico); ele ja trata DOM ainda carregando (readyState).
-        "a.src='/js/analytics.js';d.head.appendChild(g);d.head.appendChild(a);})(document);}"
+        "(function(d){var a=d.createElement('script');"
+        "a.src='/js/analytics.js';d.head.appendChild(a);})(document);}"
         "</script>\n"
     )
     # troca o bloco antigo no MESMO lugar do <head>; pagina nova recebe no fim
+    if _GA_V1.search(s):
+        return _GA_V1.sub(lambda _m: snippet, s, count=1)
     if _GA_OLD.search(s):
         return _GA_OLD.sub(lambda _m: snippet, s, count=1)
     return s.replace("</head>", snippet + "</head>", 1)
