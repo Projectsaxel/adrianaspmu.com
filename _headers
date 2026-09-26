@@ -36,3 +36,13 @@
   X-Frame-Options: SAMEORIGIN
   Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=()
   Cross-Origin-Opener-Policy: same-origin
+  # CSP em modo REPORT-ONLY (auditoria SEO 25/09/2026, 5.10): o navegador
+  # so AVISA no console o que violaria a politica; nada e bloqueado. Lista
+  # feita a partir do que o site carrega de verdade (varredura dos HTML/JS e
+  # da rede no navegador): GA4/GTM, widget da Cherry (files/gql.withcherry +
+  # Segment), Trustindex (home e academy), YouTube-nocookie (video da
+  # academy, iframe so no clique), fontes locais, /api/* no mesmo dominio.
+  # 'unsafe-inline' e necessario: ha <script> e style="" inline no site.
+  # Para endurecer: acompanhar os avisos, depois trocar o nome do header
+  # para Content-Security-Policy. Nao ha endpoint de report (report-uri).
+  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://*.google-analytics.com https://files.withcherry.com https://*.withcherry.com https://cdn.segment.com https://cdn.trustindex.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.trustindex.io https://*.withcherry.com; font-src 'self' data: https://fonts.gstatic.com https://cdn.trustindex.io https://*.withcherry.com; img-src 'self' data: blob: https://www.googletagmanager.com https://*.google-analytics.com https://*.g.doubleclick.net https://www.google.com https://*.googleusercontent.com https://*.gstatic.com https://*.googleapis.com https://maps.google.com https://i.ytimg.com https://cdn.trustindex.io https://*.withcherry.com; connect-src 'self' https://www.googletagmanager.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://www.google.com https://stats.g.doubleclick.net https://*.withcherry.com https://cdn.segment.com https://api.segment.io https://cdn.trustindex.io; frame-src https://www.youtube-nocookie.com https://*.withcherry.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'

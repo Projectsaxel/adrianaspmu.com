@@ -40,7 +40,7 @@ def academy_body(img, depth: int = 1, course_href_base: str = "") -> str:
   </div>
   <div class="container academy-hero-content">
     <p class="section-label section-label--light">Adriana's Academy</p>
-    <h1>Learn the Art of Permanent Makeup</h1>
+    <h1>Permanent Makeup Training in Peabody, MA</h1>
     <p class="direct-answer">At <strong>Adriana's Academy</strong>, we teach more than techniques — we shape <strong>confident, skilled artists ready</strong> to build successful careers in the PMU industry. Created by <strong>Adriana Santos</strong>, an experienced artist and educator recognized for excellence and innovation.</p>
     <a class="btn btn-primary academy-video-cta" href="https://www.youtube.com/watch?v=qmjz3Xohiro" target="_blank" rel="noopener noreferrer">Watch academy video</a>
   </div>

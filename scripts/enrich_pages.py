@@ -30,7 +30,7 @@ OG_DEFAULT = f"{BASE}/assets/images/og/og-default.jpg"
 SALEM_NODE = {
     "@type": "BeautySalon",
     "@id": f"{BASE}/#salem",
-    "name": "Adriana's Permanent Makeup, Salem NH",
+    "name": "Adriana's Permanent Makeup",
     "additionalType": "https://schema.org/HealthAndBeautyBusiness",
     "url": f"{BASE}/locations/salem-nh/",
     "telephone": "+1-978-223-7496",
@@ -134,23 +134,54 @@ def classify(path_rel):
     return {"page_type": simple.get(seg[0], "other"), "service": "", "city": ""}
 
 
+# GA4 so no dominio de producao (25/09/2026). O GA4 recebia hits de
+# 127.0.0.1 (31 sessoes), localhost (12), *.workers.dev e hostingersite.com:
+# qualquer "wrangler dev", "python3 -m http.server" ou preview contava como
+# visita real. Agora o gtag.js e o /js/analytics.js so sao CARREGADOS quando
+# location.hostname === "adrianaspmu.com" (www redireciona para o apex, entao
+# nao precisa entrar). Fora dele nada vai para o Google, de proposito: testar
+# local e ver zero hits no GA4 e o comportamento esperado (ver README).
+# window.PMU_PAGE continua sendo definido sempre (o main.js le a unidade
+# dele), e o stub gtag/dataLayer tambem, para nenhum codigo quebrar.
+GA_HOST = "adrianaspmu.com"
+GA_GATE_MARK = "/*ga4-so-em-producao*/"
+
+# Bloco antigo (sem trava de hostname), ja commitado no HTML de 64 paginas
+_GA_OLD = re.compile(
+    r'<script>window\.PMU_PAGE=[^<]*</script>\s*'
+    r'<script async src="https://www\.googletagmanager\.com/gtag/js\?id=[^"]+"></script>\s*'
+    r'<script>window\.dataLayer=.*?</script>\s*'
+    r'<script src="/js/analytics\.js" defer></script>\n?',
+    re.S,
+)
+
+
 def add_analytics(s, path_rel):
-    if GA4_ID in s:
+    if GA_GATE_MARK in s:
         return s
     c = classify(path_rel)
     page_json = json.dumps(c, separators=(",", ":"))
     snippet = (
-        f'<script>window.PMU_PAGE={page_json};</script>\n'
-        f'<script async src="https://www.googletagmanager.com/gtag/js?id={GA4_ID}"></script>\n'
-        "<script>window.dataLayer=window.dataLayer||[];"
-        "function gtag(){dataLayer.push(arguments);}gtag('js',new Date());"
+        f"<script>{GA_GATE_MARK}window.PMU_PAGE={page_json};"
+        "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}"
+        f'if(location.hostname==="{GA_HOST}"){{'
+        "gtag('js',new Date());"
         # Os tres parametros da pagina viajam em TODO evento, inclusive
         # no page_view. Sem isso, so o evento de clique saberia o
         # contexto e nao daria para comparar visita com conversao.
         f"gtag('config','{GA4_ID}',{{page_type:'{c['page_type']}',"
-        f"service:'{c['service'] or '(none)'}',city:'{c['city'] or '(none)'}'}});</script>\n"
-        '<script src="/js/analytics.js" defer></script>\n'
+        f"service:'{c['service'] or '(none)'}',city:'{c['city'] or '(none)'}'}});"
+        # IIFE: sem ela d/g/a virariam variaveis globais da pagina
+        "(function(d){var g=d.createElement('script'),a=d.createElement('script');"
+        f"g.async=true;g.src='https://www.googletagmanager.com/gtag/js?id={GA4_ID}';"
+        # analytics.js injetado fica async (defer nao vale para script
+        # dinamico); ele ja trata DOM ainda carregando (readyState).
+        "a.src='/js/analytics.js';d.head.appendChild(g);d.head.appendChild(a);})(document);}"
+        "</script>\n"
     )
+    # troca o bloco antigo no MESMO lugar do <head>; pagina nova recebe no fim
+    if _GA_OLD.search(s):
+        return _GA_OLD.sub(lambda _m: snippet, s, count=1)
     return s.replace("</head>", snippet + "</head>", 1)
 
 
@@ -394,7 +425,7 @@ def finance_banner(base):
 <section class="section finance-banner">
   <div class="container finance-banner-inner">
     <div>
-      <h2>Pay over time, starting today</h2>
+      <p class="finance-banner-title">Pay over time, starting today</p>
       <p>Split any service into <strong>4 interest-free payments</strong> with Cherry, or over up
       to 24 months with interest. Checking your options takes about a minute and uses a soft credit
       check, so it does <strong>not</strong> affect your credit score.</p>
@@ -891,20 +922,11 @@ def _up(path_rel):
     return "../" * depth if depth else "./"
 
 
-def _sitemap_lastmod():
-    """lastmod declarado no sitemap, por caminho. E a data curada do site."""
-    out = {}
-    fp = os.path.join(ROOT, "sitemap.xml")
-    if not os.path.exists(fp):
-        return out
-    with open(fp, encoding="utf-8") as f:
-        sm = f.read()
-    for loc, mod in re.findall(r"<loc>([^<]+)</loc><lastmod>([^<]+)</lastmod>", sm):
-        out[loc.replace(BASE, "").strip()] = mod.strip()
-    return out
-
-
-LASTMOD = _sitemap_lastmod()
+# dateModified = data do ultimo commit do HTML de origem, a MESMA do
+# <lastmod> do sitemap (auditoria de SEO 25/09/2026, achado 4.1). Antes
+# vinha do sitemap.xml editado a mao, e 57 paginas diziam 2026-09-08.
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from sitemap_lastmod import lastmod_for_url  # noqa: E402
 
 
 
@@ -1813,13 +1835,18 @@ def add_collection(graph, s, path_rel, canonical):
     # regenera: remove a versao anterior antes de recriar
     stale = {canonical + "#collection", canonical + "#itemlist"}
     graph[:] = [n for n in graph if not (isinstance(n, dict) and n.get("@id") in stale)]
-    graph.append({
-        "@type": "CollectionPage",
-        "@id": canonical + "#collection",
-        "url": canonical,
-        "isPartOf": {"@id": f"{BASE}/#website"},
-        "mainEntity": {"@id": canonical + "#itemlist"},
-    })
+    # UM no de pagina por URL (auditoria SEO 25/09/2026, 5.7d). Eram dois
+    # para a mesma URL: #webpage (WebPage) e #collection (CollectionPage).
+    # Agora o proprio #webpage vira CollectionPage e aponta para o ItemList.
+    # add_webpage() roda antes e garante que o no existe.
+    page = next((n for n in graph if isinstance(n, dict)
+                 and n.get("@id") == canonical + "#webpage"), None)
+    if page is None:
+        page = {"@id": canonical + "#webpage", "url": canonical,
+                "isPartOf": {"@id": f"{BASE}/#website"}}
+        graph.append(page)
+    page["@type"] = "CollectionPage"
+    page["mainEntity"] = {"@id": canonical + "#itemlist"}
     graph.append({
         "@type": "ItemList",
         "@id": canonical + "#itemlist",
@@ -1835,18 +1862,31 @@ def add_collection(graph, s, path_rel, canonical):
 
 def add_webpage(graph, s, path_rel, canonical):
     """WebPage com dateModified e autoria. Eram 5 paginas com dateModified."""
-    if any(n.get("@id") == canonical + "#webpage" for n in graph if isinstance(n, dict)):
-        return graph
     title = get(r"<title>(.*?)</title>", s, re.S)
     title = re.sub(r"\s+", " ", title).strip() if title else ""
+    mod = lastmod_for_url(canonical)
+    existing = next((n for n in graph if isinstance(n, dict)
+                     and n.get("@id") == canonical + "#webpage"), None)
+    if existing is not None:
+        # O HTML de origem ja traz o no (saida antiga deste script, commitada).
+        # A data e o nome sao SEMPRE recalculados: eram eles que ficavam
+        # congelados (dateModified 2026-09-08, name de um title antigo).
+        if mod:
+            existing["dateModified"] = mod
+        else:
+            existing.pop("dateModified", None)
+        if title:
+            existing["name"] = title
+        return graph
     node = {
         "@type": "WebPage",
         "@id": canonical + "#webpage",
         "url": canonical,
         "isPartOf": {"@id": f"{BASE}/#website"},
         "inLanguage": "en-US",
-        "dateModified": LASTMOD.get(canonical.replace(BASE, ""), REVIEW_DATE_ISO),
     }
+    if mod:
+        node["dateModified"] = mod
     if title:
         node["name"] = title
     if path_rel not in NO_BYLINE:
@@ -1978,6 +2018,8 @@ LOCATION_FIELDS = {
         "priceRange": "$250-$850",
         "openingHoursSpecification": HOURS,
         "hasMap": "https://maps.google.com/?cid=16715673055892397510",
+        "name": "Adriana's Permanent Makeup",
+        "sameAs": ["https://maps.google.com/?cid=16715673055892397510"],
     },
     f"{BASE}/#salem": {
         "url": f"{BASE}/locations/salem-nh/",
@@ -1985,8 +2027,24 @@ LOCATION_FIELDS = {
         "priceRange": "$250-$850",
         "openingHoursSpecification": HOURS,
         "hasMap": "https://maps.google.com/?cid=8332848331847351639",
+        "name": "Adriana's Permanent Makeup",
+        "sameAs": ["https://maps.google.com/?cid=8332848331847351639"],
     },
 }
+
+
+# Campos de unidade que SEMPRE sobrescrevem o que vier no HTML.
+# name e sameAs: auditoria SEO 25/09/2026 (5.3 e 5.2). O name era
+# "Adriana's Permanent Makeup, Wilmington MA" / "..., Salem NH", diferente
+# do nome das fichas do Google; a cidade ja esta no address e o @id separa
+# as unidades. O sameAs de cada unidade e a URL estavel da propria ficha
+# (a mesma do hasMap), no lugar dos links curtos que estavam na Organization.
+LOCATION_OVERRIDE = {"priceRange", "hasMap", "name", "sameAs"}
+
+# sameAs da Organization: so perfis da MARCA. Os links curtos de ficha
+# (share.google, maps.app.goo.gl) caiam numa pagina de resultado de busca,
+# identificavam as unidades e nao a marca, e dois eram a mesma ficha.
+ORG_SAMEAS_OK = re.compile(r"https://(www\.)?(facebook\.com|instagram\.com|youtube\.com)/", re.I)
 
 
 def normalize_graph(graph):
@@ -2020,8 +2078,10 @@ def normalize_graph(graph):
         nid = n.get("@id")
         if nid in LOCATION_FIELDS:
             for k, val in LOCATION_FIELDS[nid].items():
-                if k in ("priceRange", "hasMap") or k not in n:
+                if k in LOCATION_OVERRIDE or k not in n:
                     n[k] = val
+        if nid == f"{BASE}/#organization" and isinstance(n.get("sameAs"), list):
+            n["sameAs"] = [u for u in n["sameAs"] if ORG_SAMEAS_OK.match(u)]
         if nid and nid in merged and len(n) > 1:
             base = merged[nid]
             for k, val in n.items():
@@ -2031,6 +2091,92 @@ def normalize_graph(graph):
             merged[nid] = n
         out.append(n)
     return out
+
+
+# No da Academy (EducationalOrganization). Era declarado so em
+# /locations/peabody-ma/, e os Course apontavam o provider para a
+# Organization. Texto identico ao da pagina de Peabody.
+ACADEMY_ID = f"{BASE}/#academy"
+ACADEMY_NODE = {
+    "@type": ["EducationalOrganization", "LocalBusiness"],
+    "@id": ACADEMY_ID,
+    "name": "Adriana's Academy",
+    "description": (
+        "The educational division of Adriana Beauty Services, Inc., where permanent makeup "
+        "artists complete hands-on training toward a certificate of completion. No client "
+        "procedures are performed at this address."
+    ),
+    "url": f"{BASE}/academy/",
+    "telephone": "+1-781-853-8063",
+    "parentOrganization": {"@id": f"{BASE}/#organization"},
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "39 Cross Street, Suite 206",
+        "addressLocality": "Peabody",
+        "addressRegion": "MA",
+        "postalCode": "01960",
+        "addressCountry": "US",
+    },
+}
+
+# Servicos cujo preco publicado e um PISO ("From $300, exact price set at
+# the appointment"), nao um preco exato.
+FROM_PRICE_SERVICES = ("services/touch-ups/yearly-touch-up/",)
+
+
+def fix_schema_2026_09(graph, s, path_rel, canonical):
+    """Auditoria SEO de 25/09/2026, itens 5.7 a, b e c.
+
+    a) BreadcrumbList: o ultimo ListItem ganha "item" (a URL da pagina).
+       Valido sem, mas 15 paginas vinham sem e 47 com.
+    b) Course.provider -> #academy, e o no #academy declarado em todas as
+       paginas da Academy (antes so em /locations/peabody-ma/).
+    c) Yearly Touch-Up: a pagina diz "From $300" e o schema dizia price 300
+       exato. Vira priceSpecification com minPrice. Na pagina-base, que nao
+       tinha Offer, o Offer so entra se o "From $X" estiver visivel nela.
+    """
+    for n in graph:
+        if not isinstance(n, dict):
+            continue
+        t = n.get("@type")
+        if t == "BreadcrumbList":
+            items = n.get("itemListElement") or []
+            if items and isinstance(items[-1], dict) and "item" not in items[-1]:
+                items[-1]["item"] = canonical
+        if t == "Course":
+            n["provider"] = {"@id": ACADEMY_ID}
+
+    uses_academy = any(isinstance(n, dict) and n.get("@type") == "Course" for n in graph)
+    if (path_rel.startswith("academy/") or uses_academy) and not any(
+            isinstance(n, dict) and n.get("@id") == ACADEMY_ID for n in graph):
+        graph.append(json.loads(json.dumps(ACADEMY_NODE)))
+
+    if path_rel.startswith(FROM_PRICE_SERVICES):
+        floor = re.search(r"[Ff]rom \$(\d+)", re.sub(r"<[^>]+>", " ", s.split("</head>", 1)[-1]))
+        for n in graph:
+            if not (isinstance(n, dict) and n.get("@type") == "Service"):
+                continue
+            offer = n.get("offers")
+            if isinstance(offer, dict):
+                price = offer.pop("price", None) or (floor.group(1) if floor else None)
+                cur = offer.pop("priceCurrency", "USD")
+                if price:
+                    offer["priceSpecification"] = {
+                        "@type": "PriceSpecification",
+                        "minPrice": int(price),
+                        "priceCurrency": cur,
+                    }
+            elif offer is None and floor:
+                n["offers"] = {
+                    "@type": "Offer",
+                    "url": canonical,
+                    "priceSpecification": {
+                        "@type": "PriceSpecification",
+                        "minPrice": int(floor.group(1)),
+                        "priceCurrency": "USD",
+                    },
+                }
+    return graph
 
 
 def enrich_schema(s, path_rel):
@@ -2176,14 +2322,18 @@ def enrich_schema(s, path_rel):
             "image": f"{BASE}/assets/images/adriana-souza-santos.webp",
         })
 
-    # 6. CollectionPage + ItemList nos hubs (nao havia nenhum ItemList no site)
-    graph = add_collection(graph, s, path_rel, canonical)
-
-    # 7. WebPage com dateModified e autoria (eram 5 paginas com dateModified)
+    # 6. WebPage com dateModified e autoria (eram 5 paginas com dateModified)
     graph = add_webpage(graph, s, path_rel, canonical)
+
+    # 7. CollectionPage + ItemList nos hubs (nao havia nenhum ItemList no
+    #    site). Depois do WebPage: o hub usa o mesmo no, com @type trocado.
+    graph = add_collection(graph, s, path_rel, canonical)
 
     # 8. Equipe na /about/
     graph = add_team(graph, path_rel)
+
+    # 9. Correcoes da auditoria SEO de 25/09/2026 (5.7 a, b, c)
+    graph = fix_schema_2026_09(graph, s, path_rel, canonical)
 
     data["@graph"] = normalize_graph(graph)
     out = json.dumps(data, ensure_ascii=False, separators=(",", ":"))

@@ -22,6 +22,21 @@ python3 -m http.server 8080
 
 Abra http://localhost:8080
 
+### GA4 nao mede fora de producao (de proposito)
+
+O `gtag.js` (G-ZSD89WRHYZ) e o `/js/analytics.js` so sao carregados quando
+`location.hostname === "adrianaspmu.com"` (o `www` redireciona para o apex).
+Em `127.0.0.1`, `localhost`, `*.workers.dev`, preview da Hostinger ou qualquer
+outro host, **nenhum hit vai para o Google Analytics** e a decoracao de UTM dos
+links do Fresha tambem nao roda. Testar local e ver zero requisicoes para
+`google-analytics.com` / `googletagmanager.com` e o comportamento esperado,
+nao medicao quebrada. Antes disso, o GA4 somava sessoes de 127.0.0.1 (31),
+localhost (12), workers.dev e hostingersite.com.
+
+A trava e injetada no build por `scripts/enrich_pages.py` (`add_analytics`,
+constante `GA_HOST`); `window.PMU_PAGE` continua definido em todo host. Para
+depurar a medicao, use o DebugView do GA4 no site publicado.
+
 ## Imagens
 
 Origem: `wp-content/uploads` do WordPress (copiadas para `assets/images/`).

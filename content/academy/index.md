@@ -4,7 +4,7 @@
 
 Adriana's Academy
 
-# Learn the Art of Permanent Makeup
+# Permanent Makeup Training in Peabody, MA
 
 At **Adriana's Academy**, we teach more than techniques — we shape **confident, skilled artists ready** to build successful careers in the PMU industry. Created by **Adriana Santos**, an experienced artist and educator recognized for excellence and innovation.
 

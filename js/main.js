@@ -134,17 +134,21 @@
     const p = SITE.locations.peabody;
 
     if (el.innerHTML.trim()) return;   // ja injetado no build
+    // Titulos de coluna sao <p class="footer-title">, nao <h3> (auditoria
+    // SEO 25/09/2026, 5.4): seis h3 iguais entravam no outline de TODAS as
+    // paginas, pendurados na ultima secao. O visual e o mesmo (css/styles.css).
+    // Peabody linkada no titulo da Academy e na lista Locations (5.9).
     el.innerHTML = `
       <footer class="site-footer">
         <div class="container">
           <div class="footer-grid">
             <div>
-              <h3>${SITE.name}</h3>
-              <p>Master Permanent Makeup Artist with ${SITE.stats.years} experience and ${SITE.stats.procedures} procedures performed.</p>
+              <p class="footer-title">${SITE.name}</p>
+              <p>Master Permanent Makeup Artist with ${SITE.stats.years} years of experience and ${SITE.stats.procedures} procedures performed.</p>
               <p>Women-owned · LGBTQ+ friendly · Wheelchair accessible (Wilmington)</p>
             </div>
             <div>
-              <h3>Services</h3>
+              <p class="footer-title">Services</p>
               <ul>
                 <li><a href="${resolvePath("/services/eyebrows/")}">Eyebrow PMU</a></li>
                 <li><a href="${resolvePath("/services/lips/")}">Lip PMU</a></li>
@@ -155,34 +159,33 @@
               </ul>
             </div>
             <div>
-              <h3>Locations</h3>
+              <p class="footer-title">Locations</p>
               <ul>
                 <li><a href="${resolvePath("/locations/")}">All Locations</a></li>
                 <li><a href="${resolvePath("/locations/wilmington-ma/")}">Wilmington, MA</a></li>
                 <li><a href="${resolvePath("/locations/salem-nh/")}">Salem, NH</a></li>
+                <li><a href="${resolvePath("/locations/peabody-ma/")}">Peabody, MA (Academy)</a></li>
                 <li><a href="${resolvePath("/contact/")}">Contact</a></li>
                 <li><a href="${resolvePath("/faq/")}">FAQ</a></li>
               </ul>
             </div>
             <div class="footer-nap">
-              <h3>Wilmington, MA</h3>
+              <p class="footer-title">Wilmington, MA</p>
               <p>${w.street}, ${w.city}, ${w.region} ${w.zip}<br>
               <a href="tel:+17818538063">${w.phone}</a></p>
-              <h3>Salem, NH</h3>
+              <p class="footer-title">Salem, NH</p>
               <p>${s.street}, ${s.city}, ${s.region} ${s.zip}<br>
               <a href="tel:+19782237496">${s.phone}</a></p>
-              <h3>Academy — Peabody, MA</h3>
+              <p class="footer-title"><a href="${resolvePath("/locations/peabody-ma/")}">Academy in Peabody, MA</a></p>
               <p>${p.street}, ${p.city}, ${p.region} ${p.zip}<br>
               <a href="tel:+17818538063">${p.phone}</a></p>
             </div>
           </div>
           <div class="footer-bottom">
-            <div class="footer-copy">
-            <p>© ${new Date().getFullYear()} ${SITE.legalName}. All rights reserved.</p>
-            <p style="font-size:12px;opacity:.7;margin-top:8px">
-              Website by <a href="https://axelseo.com/" rel="nofollow noopener" target="_blank">Axel SEO</a>
-            </p>
-            </div>
+            <div class="footer-copy"><p>© ${new Date().getFullYear()} ${SITE.legalName} All rights reserved.</p>
+<p style="font-size:12px;opacity:.7;margin-top:8px">
+  Website by <a href="https://axelseo.com/" rel="nofollow noopener" target="_blank">Axel SEO</a>
+</p></div>
             <p>
               <a href="${resolvePath("/privacy-policy/")}">Privacy</a> ·
               <a href="${resolvePath("/terms-of-use/")}">Terms</a> ·
@@ -1018,10 +1021,71 @@ function initEditorialHero() {
   var pausadoBotao = false;
   var hoverIndice = false;
 
+  // Carregamento dos slides (auditoria SEO 25/09/2026, achado 4.2: LCP
+  // mobile de 6,6 s). Os seis <figure> ficam empilhados dentro da viewport,
+  // entao o loading="lazy" nao adiava nada e as seis fotos disputavam banda
+  // com a primeira, que e o LCP. Agora so o slide 0 vem com src no HTML;
+  // os outros trazem data-src/data-srcset e sao promovidos aqui, depois do
+  // evento load. A rotacao automatica so avanca para um slide cuja imagem
+  // ja carregou. As fotos e a ordem sao as mesmas (escolha da cliente).
+  // estado: "espera" (sem src) -> "baixando" -> "ok" | "erro"
+  var estado = shots.map(function (s, k) { return k === 0 ? "ok" : "espera"; });
+  var pendente = -1;   // slide que a rotacao queria mostrar, mas nao tinha chegado
+
+  function promover(k) {
+    if (estado[k] !== "espera") return;
+    var sh = shots[k];
+    var img = sh.querySelector("img");
+    if (!img) { estado[k] = "ok"; return; }
+    estado[k] = "baixando";
+    var fim = function (ok) {
+      if (estado[k] !== "baixando") return;
+      estado[k] = ok ? "ok" : "erro";
+      // a troca que ficou esperando esta foto acontece assim que ela chega
+      if (pendente === k) {
+        pendente = -1;
+        if (timer) { paint(ok ? k : proximoPronto()); startAuto(); }
+      }
+    };
+    img.addEventListener("load", function () { fim(true); }, { once: true });
+    img.addEventListener("error", function () { fim(false); }, { once: true });
+    Array.prototype.forEach.call(sh.querySelectorAll("source[data-srcset]"), function (src) {
+      src.setAttribute("srcset", src.getAttribute("data-srcset"));
+      src.removeAttribute("data-srcset");
+    });
+    if (img.hasAttribute("data-srcset")) {
+      img.setAttribute("srcset", img.getAttribute("data-srcset"));
+      img.removeAttribute("data-srcset");
+    }
+    if (img.hasAttribute("data-src")) {
+      img.setAttribute("src", img.getAttribute("data-src"));
+      img.removeAttribute("data-src");
+    }
+    if (img.complete && img.naturalWidth) fim(true);
+  }
+
+  function promoverTodos() { for (var k = 1; k < shots.length; k++) promover(k); }
+  if (document.readyState === "complete") { promoverTodos(); }
+  else { window.addEventListener("load", promoverTodos, { once: true }); }
+
+  // proximo slide que ja pode aparecer; -1 = o proximo ainda nao chegou
+  // (espera, em vez de pular: a ordem das fotos nao muda). Foto que deu
+  // erro e pulada, para a rotacao nao travar.
+  function proximoPronto() {
+    for (var d = 1; d < shots.length; d++) {
+      var k = (current + d) % shots.length;
+      if (estado[k] === "ok") return k;
+      if (estado[k] !== "erro") { pendente = k; return -1; }
+    }
+    return -1;
+  }
+
   function paint(i) {
-    if (i === current) return;
+    if (i < 0 || i === current) return;
     var link = links[i];
     if (!link) return;
+    // interacao manual antes do load: baixa a foto escolhida na hora
+    promover(i);
     current = i;
 
     shots.forEach(function (s, k) { s.classList.toggle("is-active", k === i); });
@@ -1041,11 +1105,6 @@ function initEditorialHero() {
       feature.removeAttribute("data-swap");
     }, reduced.matches ? 0 : 280);
 
-    var nxt = shots[(i + 1) % shots.length];
-    if (nxt) {
-      var img = nxt.querySelector("img");
-      if (img && img.getAttribute("loading") === "lazy") { img.setAttribute("loading", "eager"); }
-    }
   }
 
   function stopAuto() { if (timer) { window.clearInterval(timer); timer = null; } }
@@ -1055,7 +1114,7 @@ function initEditorialHero() {
   function startAuto() {
     if (pausadoBotao || hoverIndice || document.hidden) return;
     stopAuto();
-    timer = window.setInterval(function () { paint((current + 1) % shots.length); }, AUTO_MS);
+    timer = window.setInterval(function () { paint(proximoPronto()); }, AUTO_MS);
   }
 
   // interacao manual troca o slide e o automatico volta sozinho depois
