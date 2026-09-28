@@ -1,0 +1,167 @@
+/* ===================================================================
+   RESPONSIVO: CELULAR E iPAD (28/09/2026)
+   O desktop foi aprovado como esta. Tudo aqui vive dentro de faixas
+   ate 1023.98px (ou de toque, onde indicado), para nao encostar nele.
+   =================================================================== */
+
+/* ---------- HERO: foto e texto em areas proprias ----------
+   No celular o texto ficava sobre a foto escurecida. Agora o titulo vem
+   em cima, a foto numa caixa propria e o texto do slide embaixo, tudo em
+   --ink solido. A caixa mostra o retangulo da fotografia de cada slide
+   inteiro na largura (as variaveis dizem onde ele esta dentro do arquivo
+   composto); a foto nao e cortada nas laterais nem editada. */
+@media (max-width: 767.98px) {
+  /* --fy: onde a caixa comeca, em fracao da altura do arquivo, escolhido
+     foto a foto para mostrar o trabalho inteiro (sobrancelha a labio) */
+  .hero-shot[data-shot="0"] { --rx: 0;    --rw: .828; --fy: .22; }
+  .hero-shot[data-shot="1"] { --rx: .203; --rw: .549; --fy: .12; }
+  .hero-shot[data-shot="2"] { --rx: .216; --rw: .522; --fy: .17; }
+  .hero-shot[data-shot="3"] { --rx: .223; --rw: .509; --fy: .22; }
+  .hero-shot[data-shot="4"] { --rx: .148; --rw: .626; --fy: .19; }
+  .hero-shot[data-shot="5"] { --rx: .143; --rw: .624; --fy: .10; }
+}
+@media (min-width: 430px) and (max-width: 519.98px) {
+  .hero-shot[data-shot="0"] { --fy: .22; }
+  .hero-shot[data-shot="1"] { --rx: .177; --rw: .598; --fy: .11; }
+  .hero-shot[data-shot="2"] { --rx: .189; --rw: .570; --fy: .16; }
+  .hero-shot[data-shot="3"] { --rx: .197; --rw: .558; --fy: .21; }
+  .hero-shot[data-shot="4"] { --rx: .117; --rw: .681; --fy: .17; }
+  .hero-shot[data-shot="5"] { --rx: .112; --rw: .682; --fy: .09; }
+}
+@media (min-width: 520px) and (max-width: 767.98px) {
+  /* aqui a composicao inteira cobre a caixa (a foto nitida fica no centro,
+     com o fade da propria composicao dos lados); --py so escolhe a altura */
+  .hero-shot { --py: 30%; }
+  .hero-shot[data-shot="0"] { --py: 55%; }
+  .hero-shot[data-shot="2"] { --py: 42%; }
+  .hero-shot[data-shot="3"] { --py: 55%; }
+  .hero-shot[data-shot="4"] { --py: 30%; }
+}
+
+@media (max-width: 767.98px) {
+  .hero-editorial { display: flex; flex-direction: column; min-height: 0; }
+  .hero-lede { order: 1; padding-bottom: 1rem; }
+  .hero-stage {
+    order: 2; position: relative; inset: auto; overflow: hidden;
+    height: clamp(260px, min(100vw, 46svh), 520px);
+  }
+  .hero-feature { order: 3; align-self: stretch; padding-top: 1.25rem; }
+  .hero-index { order: 4; }
+  .hero-shot img {
+    position: absolute; top: 0; max-width: none; height: auto;
+    width: calc(100% * var(--k, 1) / var(--rw));
+    left: calc(50% - 100% * var(--k, 1) * (var(--rx) + var(--rw) / 2) / var(--rw));
+    transform: translateY(calc(var(--fy) * -100%)) !important;
+    transition: none;
+  }
+  @media (min-width: 520px) {
+    .hero-shot img {
+      position: static; width: 100%; height: 100%; max-width: 100%;
+      object-fit: cover; object-position: 50% var(--py) !important;
+      transform: none !important;
+    }
+  }
+  /* so o encontro da foto com o fundo: nada escurece a foto por inteiro */
+  .hero-veil {
+    background: linear-gradient(180deg, var(--ink) 0%, rgba(42, 35, 33, 0) 12%,
+                                rgba(42, 35, 33, 0) 84%, var(--ink) 100%);
+  }
+}
+
+/* iPad: duas colunas, como o desktop, mas o texto numa coluna propria em
+   --ink e a foto na outra, sem nada por cima do rosto. Em retrato vale pela
+   largura; deitado (1024-1366) so em tela de toque, para o notebook com
+   mouse continuar exatamente como foi aprovado. */
+@media (min-width: 768px) and (max-width: 1023.98px),
+       (hover: none) and (pointer: coarse) and (min-width: 1024px) and (max-width: 1366px) {
+  .hero-shot { --tx: 73%; }
+  .hero-shot[data-shot="2"] { --tx: 90%; }
+  .hero-shot[data-shot="3"] { --tx: 84%; }
+  .hero-editorial {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: auto 1fr auto;
+  }
+  .hero-editorial { padding-block: 0; }
+  .hero-stage { position: relative; inset: auto; grid-column: 2; grid-row: 1 / 3; }
+  .hero-lede { grid-column: 1; grid-row: 1; padding-right: 1rem; padding-top: 3rem; }
+  .hero-feature { grid-column: 1; grid-row: 2; padding-right: 1rem; }
+  /* os botoes flutuantes (Cherry e mensagem) ocupam o rodape da tela:
+     o indice sobe acima deles para nenhum nome ficar coberto */
+  .hero-index { grid-column: 1 / -1; grid-row: 3; padding-bottom: 5.5rem; }
+  .hero-shot img { object-position: var(--tx) 50% !important; }
+  .hero-shot { transform: none; }
+  .hero-veil {
+    background: linear-gradient(90deg, var(--ink) 0%, rgba(42, 35, 33, 0) 14%),
+                linear-gradient(180deg, rgba(42, 35, 33, 0) 80%, var(--ink) 100%);
+  }
+}
+
+/* iPad deitado: a composicao larga (b5) tem a foto na direita; alinhada
+   pela direita ela fica centrada na coluna. */
+@media (hover: none) and (pointer: coarse) and (min-width: 1024px) and (max-width: 1366px) {
+  .hero-shot, .hero-shot[data-shot="2"], .hero-shot[data-shot="3"] { --tx: 100%; }
+}
+
+/* ---------- botao flutuante da Cherry (widget de terceiros) ----------
+   Em tablet e celular ele caia em cima do "Book Now" do hero e do indice.
+   Fica empilhado acima do "Message Us", no canto direito. So em toque ou
+   ate 1023px: no desktop com mouse ele continua onde estava. */
+@media (max-width: 1023.98px), (hover: none) and (pointer: coarse) and (max-width: 1366px) {
+  [class*="floatingEstimator-floatingContainer"] {
+    left: auto !important;
+    right: 16px !important;
+    bottom: calc(16px + 52px + 12px) !important;
+  }
+}
+
+/* ---------- tabela "All 13 Services and Prices" ----------
+   Em 3 colunas a coluna de preco saia cortada dentro da faixa rolavel.
+   No celular cada linha vira um bloco: o servico em cima, categoria e
+   preco embaixo. Os titulos das colunas continuam la para leitor de tela. */
+@media (max-width: 599.98px) {
+  .table-scroll { overflow: visible; }
+  .table-scroll table, .table-scroll tbody, .table-scroll tr, .table-scroll td { display: block; }
+  .table-scroll caption { display: block; text-align: left; padding: 0 0 .75rem; }
+  .table-scroll thead {
+    position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+  }
+  .table-scroll tr {
+    display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 1rem;
+    padding: .5rem 0 .75rem; border-bottom: 1px solid var(--line-forte, var(--line));
+  }
+  .table-scroll td { border: 0; padding: 0; }
+  .table-scroll td:first-child { grid-column: 1 / -1; }
+  .table-scroll td:first-child a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; }
+  .table-scroll td:nth-child(2) { color: var(--ink-muted); }
+  .table-scroll td:nth-child(3) { text-align: right; font-weight: 600; }
+}
+
+/* ---------- galeria "The Work" ----------
+   Tres colunas de 104px no celular: a foto do trabalho nao se le.
+   Duas colunas; as colunas do JS somem do layout (display: contents) e as
+   fotos passam a ser itens da grade, sem mudar a ordem nem o corte 4:5. */
+@media (max-width: 599.98px) {
+  .ag-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; }
+  .ag-col { display: contents; }
+}
+
+/* ---------- Academy ---------- */
+@media (max-width: 599.98px) {
+  #academy .cta-panel { padding: 2.25rem 1.25rem; }
+  #academy .btn { display: block; width: 100%; }
+}
+
+/* ---------- alvos de toque ----------
+   Links soltos com 19 a 28px de altura: ganham altura de toque (44px)
+   sem mudar o tamanho do texto. Links dentro de paragrafo ficam como estao.
+   Vale ate 1023px e, acima disso, so em tela de toque (iPad deitado). */
+@media (max-width: 1023.98px), (hover: none) and (pointer: coarse) {
+  .table-scroll td:first-child a,
+  .hero-explore,
+  .svc-item-link,
+  .svc-item-texto h3 a,
+  #locations a[href^="tel:"],
+  .footer-bottom a { display: inline-flex; align-items: center; min-height: 44px; }
+  .svc-item-link { margin-top: .25rem; }
+}

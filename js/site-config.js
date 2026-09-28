@@ -19,11 +19,11 @@ const SITE = {
   freshaServiceUrls: {},
   freshaReviews:
     "https://www.fresha.com/a/adrianas-permanent-makeup-wilmington-ma-wilmington-211-lowell-street-jalpqett#modal-reviews",
-  gbp: "https://maps.app.goo.gl/oJRNewzwwWACAera6",
+  gbp: "https://maps.google.com/?cid=16715673055892397510",
   googleReviews:
     "https://www.google.com/maps/place/Adriana's+Permanent+Makeup/@42.5388138,-71.1485431,17z/data=!4m8!3m7!1s0x89e30b1334f8bef9:0xe7fa0014b608ddc6!8m2!3d42.5388138!4d-71.1485431!9m1!1b1!16s%2Fg%2F11tm_909cb",
   trustindexLoader: "https://cdn.trustindex.io/loader.js?a8b99d8541280410986623737af",
-  facebook: "https://www.facebook.com/adrianaspmu",
+  facebook: "https://www.facebook.com/adrianaspmu/",
   instagram: "https://www.instagram.com/adrianas_pmu/",
   locations: {
     wilmington: {

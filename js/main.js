@@ -72,17 +72,61 @@
 
     const toggle = el.querySelector(".nav-toggle");
     const nav = el.querySelector(".main-nav");
-    toggle?.addEventListener("click", () => {
-      const open = nav.classList.toggle("is-open");
-      toggle.setAttribute("aria-expanded", open);
-    });
+    const isMobileNav = () => window.matchMedia("(max-width: 1099.98px)").matches;
 
-    // Esc fecha o menu e devolve o foco ao botao que o abriu.
-    document.addEventListener("keydown", (e) => {
-      if (e.key !== "Escape" || !nav?.classList.contains("is-open")) return;
+    // UM SO caminho para fechar submenu: usado pelo proprio acordeao, pelo
+    // Esc, pelo tap fora e ao fechar o painel inteiro. Antes cada chamador
+    // repetia o mesmo forEach (ou nem fechava), e um submenu podia ficar
+    // com is-expanded/aria-expanded="true" por baixo do painel fechado —
+    // reabrir o hamburguer trazia o acordeao de volta com o submenu errado
+    // ja aberto, e o leitor de tela continuava anunciando "expanded".
+    function closeAllSubmenus(exceptLi) {
+      el.querySelectorAll(".has-submenu.is-expanded").forEach((li) => {
+        if (li === exceptLi) return;
+        li.classList.remove("is-expanded");
+        li.querySelector(".submenu-toggle")?.setAttribute("aria-expanded", "false");
+      });
+    }
+
+    // Fecha o painel do hamburguer e, com ele, qualquer submenu que tenha
+    // ficado aberto por baixo (mesmo padrao para as duas formas de sair:
+    // tocar no hamburguer de novo, apertar Esc ou tocar fora do painel).
+    function closePanel(focusEl) {
       nav.classList.remove("is-open");
       toggle?.setAttribute("aria-expanded", "false");
-      toggle?.focus();
+      closeAllSubmenus();
+      focusEl?.focus();
+    }
+
+    toggle?.addEventListener("click", () => {
+      const open = nav.classList.toggle("is-open");
+      toggle.setAttribute("aria-expanded", String(open));
+      if (!open) closeAllSubmenus();
+    });
+
+    // Tocar fora do painel fecha, exatamente como tocar no hamburguer de
+    // novo. So importa enquanto o painel mobile esta aberto: no desktop
+    // nav.is-open nunca fica true (o hamburguer some do layout).
+    document.addEventListener("click", (e) => {
+      if (!nav.classList.contains("is-open")) return;
+      if (nav.contains(e.target) || toggle?.contains(e.target)) return;
+      closePanel();
+    });
+
+    // Esc fecha a camada mais interna primeiro: se um submenu esta aberto,
+    // fecha so ele e devolve o foco ao proprio botao que o abriu; sem
+    // submenu aberto, fecha o painel inteiro e devolve o foco ao hamburguer.
+    document.addEventListener("keydown", (e) => {
+      if (e.key !== "Escape") return;
+      const openLi = el.querySelector(".has-submenu.is-expanded");
+      if (openLi) {
+        const openBtn = openLi.querySelector(".submenu-toggle");
+        openLi.classList.remove("is-expanded");
+        openBtn?.setAttribute("aria-expanded", "false");
+        openBtn?.focus();
+        return;
+      }
+      if (nav?.classList.contains("is-open")) closePanel(toggle);
     });
 
     el.querySelectorAll(".submenu-toggle").forEach((btn) => {
@@ -91,14 +135,13 @@
         e.stopPropagation();
         // Mesmo corte do CSS do hamburguer. Era innerWidth > 900: entre 901
         // e 1099px o menu ja e hamburguer, mas o acordeao nao abria.
-        if (!window.matchMedia("(max-width: 1099.98px)").matches) return;
+        if (!isMobileNav()) return;
         const li = btn.closest(".has-submenu");
         if (!li) return;
         const expanded = !li.classList.contains("is-expanded");
-        el.querySelectorAll(".has-submenu.is-expanded").forEach((other) => {
-          other.classList.remove("is-expanded");
-          other.querySelector(".submenu-toggle")?.setAttribute("aria-expanded", "false");
-        });
+        // So um submenu aberto por vez: fecha os outros antes de decidir
+        // o estado deste (mesma funcao usada por Esc, tap fora e hamburguer).
+        closeAllSubmenus(li);
         if (expanded) {
           li.classList.add("is-expanded");
           btn.setAttribute("aria-expanded", "true");
@@ -646,8 +689,19 @@
     const medir = () => document.documentElement.style.setProperty("--rail-h", rail.offsetHeight + "px");
     medir();
     window.addEventListener("resize", medir, { passive: true });
+    /* A barra aparece quando o botao da hero ja PASSOU para cima, nao
+       simplesmente quando ele nao esta visivel.
+
+       No celular a diferenca e decisiva: o botao da hero nasce abaixo da
+       dobra, entao `!isIntersecting` era verdadeiro desde o carregamento e
+       a barra subia na hora, cobrindo o H1 da propria pagina. Olhando o
+       lado do retangulo (top < 0) ela so aparece depois que a pessoa
+       rolou de fato. */
     const io = new IntersectionObserver(
-      ([entry]) => rail.classList.toggle("is-visible", !entry.isIntersecting),
+      ([entry]) => {
+        const passou = entry.boundingClientRect.top < 0;
+        rail.classList.toggle("is-visible", !entry.isIntersecting && passou);
+      },
       { rootMargin: "-8px 0px 0px 0px" }
     );
     io.observe(anchor);
@@ -1064,7 +1118,17 @@ function initEditorialHero() {
     if (img.complete && img.naturalWidth) fim(true);
   }
 
-  function promoverTodos() { for (var k = 1; k < shots.length; k++) promover(k); }
+  // Um de cada vez, no ocioso: promover os cinco de uma vez colocava 385KB
+  // de foto na rede logo apos o LCP, disputando banda sem pintar nada.
+  // A ordem e a mesma em que a rotacao vai precisar deles.
+  function promoverEmFila(k) {
+    if (k >= shots.length) return;
+    promover(k);
+    var proximo = function () { promoverEmFila(k + 1); };
+    if (window.requestIdleCallback) requestIdleCallback(proximo, { timeout: 1200 });
+    else setTimeout(proximo, 400);
+  }
+  function promoverTodos() { promoverEmFila(1); }
   if (document.readyState === "complete") { promoverTodos(); }
   else { window.addEventListener("load", promoverTodos, { once: true }); }
 

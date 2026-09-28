@@ -714,7 +714,11 @@ CATEGORY_ORDER = [
     ("touch-ups", "Touch-ups & Maintenance", ["yearly-touch-up"]),
 ]
 
-HERO_SLUGS = {"nano-brows", "microblading", "powder-brows", "lip-blush"}
+# A caixa "Hero service" saiu em 26/09/2026. Ela existia em 4 dos 13 cards e
+# em nenhum dos outros 9, e o <h3> logo abaixo ja e o nome do servico: repetir
+# o nome na caixa seria trocar inconsistencia por redundancia. Rachel: "Nao
+# precisa dessa caixa". HERO_SLUGS e o hero_badge foram removidos daqui porque
+# so tirar do HTML nao bastava - rodar o gerador trazia os 4 badges de volta.
 
 
 def home_service_card(slug):
@@ -768,7 +772,6 @@ def service_hub_card(slug):
     if price:
         prefix = "from " if price_note else ""
         price_html = f'<p class="price">{prefix}${price}</p>'
-    hero_badge = '<span class="badge">Hero service</span>' if slug in HERO_SLUGS else ""
     url = f'{info["cat"]}/{slug}/'
     loc_links = " · ".join(
         f'<a href="{info["cat"]}/{slug}/{c}/">{CITIES[c]["city"]}, {CITIES[c]["region"]}</a>'
@@ -777,7 +780,6 @@ def service_hub_card(slug):
     thumb = img_tag(service_image_path(slug), info["name"], 1, "card-thumb")
     return f"""<article class="card card-has-img">
       <a href="{url}" class="card-img-link">{thumb}</a>
-      {hero_badge}
       <h3><a href="{url}">{info["name"]}</a></h3>
       <p>{info["answer"]}</p>
       {price_html}
