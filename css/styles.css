@@ -1,3 +1,10 @@
+/* =====================================================================
+   ESTE E O FONTE. O site serve css/styles.min.css.
+   Depois de editar aqui, rode:   python3 scripts/minify_css.py
+   Os comentarios desta folha valem - eles registram POR QUE cada regra
+   existe - mas viajavam ate o navegador: comprimido, o arquivo caia de
+   51,4 KB para 18,4 KB ao minificar, e o CSS bloqueia a renderizacao.
+   ===================================================================== */
 /* Fontes do Design System V1.0.
    Fica no CSS, e nao num <link> nos 63 HTML, para que este reskin seja
    UM arquivo so e possa ser revertido com um unico revert.
@@ -352,7 +359,10 @@ p {
 
 .logo-img {
   display: block;
-  height: 44px;
+  /* era 44px: medido ao vivo em 390px o alvo (a .logo em volta, que so
+     segue a altura da imagem via line-height:0) fecha em 43,5px --
+     arredondamento de subpixel, nao erro de valor. 1px de folga. */
+  height: 45px;
   width: auto;
   max-width: min(210px, 44vw);
 }
@@ -991,7 +1001,6 @@ main:has(.service-prose) .section--cta {
 .card-has-img p,
 .card-has-img .price,
 .card-has-img .card-links,
-.card-has-img .badge,
 .card-has-img .btn {
   margin-left: 1.75rem;
   margin-right: 1.75rem;
@@ -1006,14 +1015,11 @@ main:has(.service-prose) .section--cta {
   margin-bottom: 1.5rem;
 }
 
-.card-has-img .badge {
-  margin: 1.25rem 1.75rem 0;
-  background: rgba(244, 81, 151, 0.12);
-  border-color: rgba(244, 81, 151, 0.35);
-  /* era --color-primary (#F45197): 3,25:1 sobre o proprio fundo rosa.
-     --brand-deep e o token declarado para texto de acento. */
-  color: var(--brand-deep);
-}
+/* .card-has-img .badge foi removida daqui (25/09/2026): nenhum .card-has-img
+   nas 63 paginas tem badge dentro (conferido por grep no HTML). Os badges
+   de verdade (academy/index.html, "9-Day Course" etc.) usam .badge base
+   (linha ~672) e .card .badge (~2599), que continuam de pe -- so o par
+   morto especifico de .card-has-img saiu. */
 
 /* Locations */
 .location-grid {
@@ -1740,8 +1746,15 @@ body.portfolio-lightbox-open {
 
 /* Mobile e tablet: hamburguer ate 1360px (ver ITEM 1 no fim do arquivo) */
 @media (max-width: 1099.98px) {
+  /* 36-40px de altura real (padding + linha do simbolo): abaixo do piso de
+     44px de alvo de toque. E o unico jeito de abrir o menu no celular,
+     entao e o botao que mais precisa acertar esse minimo. */
   .nav-toggle {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
   }
 
   .main-nav {
@@ -1770,12 +1783,24 @@ body.portfolio-lightbox-open {
     padding: 1.25rem;
   }
 
-  .main-nav a,
+  /* Home e About (link solto, sem submenu) ficavam com ~36-40px de altura:
+     so o padding de .main-nav a, sem o padding extra que .nav-parent ja
+     tinha. min-height aqui cobre os tres, o mesmo padrao valendo para
+     todo item do acordeao, com ou sem submenu.
+     `.main-nav > ul a` (0,1,2) em vez de `.main-nav a` (0,1,1): esse ultimo
+     empataria em especificidade com `.submenu a` (0,1,1, definido mais acima
+     no arquivo) e so ganharia por vir depois na fonte — fragil. Com o `>`
+     mais o elemento extra a regra ganha por especificidade mesmo, do jeito
+     que o resto do arquivo ja faz para casos assim. */
+  .main-nav > ul a,
   .has-submenu .nav-parent,
   .has-submenu .nav-parent--static {
     text-transform: none;
     letter-spacing: 0;
     font-size: 1rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
   }
 
   .has-submenu {
@@ -1998,6 +2023,36 @@ body.portfolio-lightbox-open {
 .academy-students-label {
   margin: 0;
   font-weight: 600;
+}
+
+/* ---------------------------------------------------------------
+   OS 12 AVATARES DE ALUNAS — 6 + 6 no telefone (26/09/2026, Rachel)
+
+   De 600px para cima os 12 cabem numa linha so (492px) e ficam
+   centrados: essa faixa NAO e tocada.
+
+   Abaixo de 600px o flex-wrap quebrava onde coubesse — 7+5 em 375px,
+   8+4 em 390px, 9+3 em 430px — e dava para ler como turma incompleta.
+   Pior: so o PRIMEIRO avatar do conjunto perde o margin-left negativo,
+   entao a segunda linha comecava 12px a esquerda da primeira (medido:
+   x=11 contra x=23). Era essa a assimetria.
+
+   A largura de 252px trava exatamente 6 por linha, porque o passo de
+   cada avatar e 40px (52 de largura menos 12 de sobreposicao) e o
+   primeiro ocupa os 52 inteiros: 52 + 5x40 = 252. O setimo precisaria
+   de 292px e cai para a linha de baixo.
+
+   Com a quebra travada em 6, da para saber quem comeca linha:
+   o 1o e o 7o. Por isso o nth-child(6n+1) zera a margem negativa dos
+   dois, e as duas linhas nascem alinhadas na mesma borda esquerda.
+   --------------------------------------------------------------- */
+@media (max-width: 599.98px) {
+  .student-avatars {
+    width: 252px;
+    margin-inline: auto;
+    row-gap: 0.5rem;
+  }
+  .student-avatar:nth-child(6n+1) { margin-left: 0; }
 }
 
 .gallery-marquee {
@@ -3093,6 +3148,12 @@ p.section-label--light {
   transition: opacity 900ms cubic-bezier(.4, 0, .2, 1), visibility 0s;
 }
 
+/* O <picture> entrou em 26/09/2026 para servir foto diferente no telefone.
+   Sem display:contents ele vira uma caixa inline entre a moldura e o <img>,
+   com gap de baseline embaixo. Com contents a caixa some do layout e o <img>
+   e disposto como se fosse filho direto da moldura. A regra .hero-shot picture
+   abaixo (0,1,1) continua vencendo esta (0,0,1) onde ela ja existia. */
+picture { display: contents; }
 .hero-shot picture { display: block; height: 100%; }
 
 .hero-shot img {
@@ -3215,18 +3276,30 @@ p.section-label--light {
   max-width: 32ch;
 }
 
-/* a troca de slide anima o bloco de texto, nao cada elemento */
+/* a troca de slide anima o bloco de texto, nao cada elemento.
+   O JS (main.js) troca o texto e tira o [data-swap] num setTimeout de
+   280ms fixo -- ele nao espera a transicao CSS terminar. Com 520ms de
+   duracao aqui, o JS interrompia o fade no meio do caminho (por volta de
+   0,538 da curva) e mandava ele de volta pra 1, criando um "solavanco":
+   o texto nunca chegava a sumir, so mergulhava e ricocheteava, e o axe
+   flagrou opacity computado em 0,23 nesse ponto -- link-name/color-contrast
+   do .hero-book reprovando de forma intermitente (2 rodadas, 1 falha).
+   Aqui a duracao fica ABAIXO dos 280ms do JS (o fade termina e so entao
+   o texto troca, sem interromper a curva) e o piso de opacidade sobe pra
+   0,92: mesmo se o axe amostrar exatamente no fundo do fade, 0,92 de
+   branco sobre --brand-deep ainda folga acima de 4,5:1. Efeito colateral
+   bom: o texto para de "pulsar" enquanto alguem tenta ler. */
 .hero-feature[data-swap] .hero-kicker,
 .hero-feature[data-swap] .hero-name,
 .hero-feature[data-swap] .hero-note,
 .hero-feature[data-swap] .hero-actions {
-  opacity: 0;
-  transform: translateY(14px);
+  opacity: 0.92;
+  transform: translateY(6px);
 }
 
 .hero-kicker, .hero-name, .hero-note, .hero-actions {
-  transition: opacity 520ms cubic-bezier(.4, 0, .2, 1),
-              transform 520ms cubic-bezier(.4, 0, .2, 1);
+  transition: opacity 220ms cubic-bezier(.4, 0, .2, 1),
+              transform 220ms cubic-bezier(.4, 0, .2, 1);
 }
 
 .hero-actions {
@@ -3790,7 +3863,7 @@ body:has(.book-rail.is-visible) [class*="floatingEstimator-floatingContainer"] {
   max-width: 21rem;
   justify-self: center;
 }
-.svc-hero-figure > img {
+.svc-hero-figure img {
   display: block;
   width: 100%;
   height: auto;
@@ -3961,10 +4034,13 @@ body:has(.book-rail.is-visible) [class*="floatingEstimator-floatingContainer"] {
      14rem para o H1 e o preco continuarem na primeira dobra. */
   .svc-hero-figure {
     margin-bottom: 0;
-    /* No telefone a foto cede altura para o H1 e o botao de agendar
-       aparecerem cedo. A tipografia NAO encolhe: quem cede altura e a
-       foto, que tem a galeria inteira logo abaixo para se mostrar. */
-    max-width: 11rem;
+    /* 26/09/2026, pedido da Rachel: no telefone a moldura vinha travada em
+       11rem (198px a 18px de raiz) e a foto lia como miniatura. Passa para
+       ~320-350px conforme a largura, sem tocar no desktop. O `sizes` do
+       <img> foi atualizado junto, senao o navegador continuaria escolhendo
+       a variante de 400w para uma caixa maior. */
+    width: 100%;
+    max-width: min(19.5rem, 82vw);
     margin-inline: auto;
   }
 }
@@ -4088,7 +4164,7 @@ body:has(.book-rail.is-visible) [class*="floatingEstimator-floatingContainer"] {
   /* Centrada em absoluto: so assim o height:100% resolve contra a
      altura definida do quadro (aspect-ratio 0.95) em vez de cair no
      tamanho intrinseco do arquivo. */
-  .svc-hero-figure > img {
+  .svc-hero-figure img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -4110,7 +4186,7 @@ body:has(.book-rail.is-visible) [class*="floatingEstimator-floatingContainer"] {
     padding: 1.75rem;
   }
   .svc-hero-figure::after { display: none; }   /* o contorno solto sai */
-  .svc-hero-figure > img {
+  .svc-hero-figure img {
     height: calc(100% - 3.5rem);
     border-radius: 50% 50% var(--radius) var(--radius) / 20% 20% var(--radius) var(--radius);
   }
@@ -4121,7 +4197,7 @@ body:has(.book-rail.is-visible) [class*="floatingEstimator-floatingContainer"] {
 @media (min-width: 900px) {
   .svc-hero-figure { border: 0; padding: 0; }
   .svc-hero-figure::after { display: block; }
-  .svc-hero-figure > img {
+  .svc-hero-figure img {
     position: static;
     transform: none;
     width: 100%;
@@ -4719,13 +4795,38 @@ html { font-size: 112.5%; }
 .card.card-has-img h3 {
   margin: 0 0 var(--space-2);
   font-family: var(--font-display);
-  font-weight: 300;
-  font-size: 1.625rem;
+  /* Era weight 300: nome do servico lia fraco sob a foto de alto contraste.
+     A pill rosa que ficava sobre 4 cards foi tirada (a cliente achou
+     inconsistente ter pill so em algumas) e a sugestao dela foi colocar
+     o NOME do servico dentro da pill -- sinal de que o titulo sozinho nao
+     lia com confianca. Aqui ele ganha peso, mais tamanho e um fio de brass
+     embaixo (brass so como linha, nunca como texto, regra do token), sem
+     trazer a pill de volta. Mesma serifada Cormorant, sem sombra. */
+  font-weight: 600;
+  font-size: 1.75rem;
   line-height: 1.15;
+  border-bottom: 1px solid var(--brass);
+  padding-bottom: 0.4rem;
+  display: inline-block;
 }
 .card.card-has-img h3 a { color: var(--ink); text-decoration: none; }
 .card.card-has-img h3 a:hover { color: var(--brand-deep); }
 .card.card-has-img > p { color: var(--ink-muted); max-width: 34ch; }
+
+/* h3 ficava em x=0 (o shorthand acima zera margin-left/right) enquanto
+   p, .price e .card-links seguiam com o inset de 1,75rem herdado da regra
+   de ".card-has-img h3, p, .price, .card-links" la em cima do arquivo —
+   32px de descompasso, medido nas 31 cards. O comentario original ja
+   dizia que este card virou "suporte da foto", sem borda nem padding:
+   entao o acerto e tirar o inset do CORPO, nao devolve-lo ao titulo.
+   ".card.card-has-img" (0,2,0) vence ".card-has-img h3, p, ..." (0,1,1)
+   por especificidade, entao esta regra e que manda. */
+.card.card-has-img p,
+.card.card-has-img .price,
+.card.card-has-img .card-links {
+  margin-left: 0;
+  margin-right: 0;
+}
 
 
 /* ===============================================================
@@ -5001,18 +5102,12 @@ html { font-size: 112.5%; }
 }
 .ag-tile:hover img { transform: scale(1.04); }
 
-/* A etiqueta do servico vive sobre a foto, no rodape do tile. */
-.ag-tag {
-  position: absolute;
-  left: 0; right: 0; bottom: 0;
-  padding: 2.5rem 0.9rem 0.8rem;
-  font-size: 0.75rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: #fff;
-  background: linear-gradient(to top, rgba(42,35,33,0.72), rgba(42,35,33,0));
-}
+/* A etiqueta .ag-tag foi REMOVIDA em 26/09/2026, a pedido da Rachel.
+   Ela era um plato solido de rgba(42,35,33,.93) ate 4rem do rodape mais um
+   degrade ate o topo. Num tile de coluna estreita no telefone isso cobria o
+   rosto inteiro: "uma sombra que tapa a cara da pessoa". O texto tambem saiu -
+   a secao mostra so as fotos. O link nao perdeu nome acessivel: os 12 tiles
+   tiram o nome do alt do <img>, conferido um a um. */
 .ag-tile:focus-visible { outline: 2px solid var(--brand-deep); outline-offset: 3px; }
 
 /* --- com JS, acima de 900px: a grade entra deitada e se levanta --- */
@@ -5286,10 +5381,10 @@ html { font-size: 112.5%; }
 /* A foto da Adriana e de corpo inteiro, sentada. No 9:16 padrao o object-fit
    cortava os pes dela. Aqui a moldura assume a proporcao NATIVA do arquivo
    (2:3), entao nao ha recorte nenhum — nem no topo nem na base. */
-.svc-hero--contact .svc-hero-figure > img { aspect-ratio: 2 / 3; }
+.svc-hero--contact .svc-hero-figure img { aspect-ratio: 0.70; }
 
 @media (min-width: 900px) {
-  .svc-hero--contact .svc-hero-figure { aspect-ratio: 2 / 3; }
+  .svc-hero--contact .svc-hero-figure { aspect-ratio: 0.70; }
 }
 
 /* O <ol> do breadcrumb e filho direto do <nav> nas 47 paginas que tem
@@ -5329,7 +5424,7 @@ html { font-size: 112.5%; }
    inteira sobre um campo desfocado dela mesma. Entao nao ha nada a ajustar
    aqui: a moldura e do mesmo tamanho de todas as outras e o cover nao tem
    o que cortar. A regra fica so para registrar a decisao. */
-.svc-hero--macro .svc-hero-figure > img { object-position: center; }
+.svc-hero--macro .svc-hero-figure img { object-position: center; }
 
 /* Servico sem foto nenhuma no acervo: a hero vira uma coluna so, sem
    moldura vazia. Some quando a foto chegar. */
@@ -6008,8 +6103,11 @@ tbody tr:last-child > td { border-bottom: 0; }
    (WCAG 2.2.2). Fica no canto do indice, discreto sobre a foto. */
 .hero-pause {
   margin-top: 1rem;
-  width: 2.25rem;
-  height: 2.25rem;
+  /* era 2,25rem: a raiz do site e 18px (nao 16px), entao isso rendia
+     40,5px, nao 36px -- medido 40x40 ao vivo, abaixo do alvo de 44.
+     px direto tira a dependencia da raiz. */
+  width: 44px;
+  height: 44px;
   display: grid;
   place-items: center;
   border-radius: 50%;
@@ -6075,3 +6173,545 @@ tbody tr:last-child > td { border-bottom: 0; }
 .review-live figcaption strong { color: var(--ink); font-weight: 600; }
 .reviews-live-note { margin: var(--space-4) 0 0; font-size: 0.8125rem; color: var(--ink-muted); }
 .reviews-live-note a { color: var(--brand-deep); }
+
+/* ==========================================================================
+   MOBILE E TABLET — legibilidade, contraste e alvo de toque
+   ==========================================================================
+   Medido em 25/09 com amostragem de PIXEL: a foto da hero foi desenhada num
+   canvas com o veu composto por cima, e o contraste calculado ponto a ponto
+   sob cada caixa de texto. Quatro dos seis textos da hero reprovavam:
+
+     THE WORK (rosa da marca)      1,06 : 1     precisa 4,5
+     WILMINGTON · SALEM (brass)    1,64 : 1     precisa 4,5
+     Effortless definition         3,54 : 1     precisa 4,5
+     H1                            2,95 : 1     precisa 3,0 (texto grande)
+
+   A causa nao e o veu sozinho: rosa #F45197 e brass #B8985A sao cores de
+   MEIO-TOM. Sobre pele clara elas nao alcancam 4,5 por mais que se escureca
+   o fundo sem apagar a foto. Entao duas frentes: veu mais firme no trecho
+   onde o texto vive, e cor clara para os dois rotulos quando estao sobre
+   fotografia. O rosa e o brass continuam sendo a marca no resto do site.
+   ========================================================================== */
+
+/* Vale ate 1024px, nao so no telefone: no iPad o veu de desktop deixa a
+   faixa do rotulo clara e la o brass media 1,51 e o rosa 1,80. */
+@media (max-width: 1024px) {
+  /* o gradiente caia para 0,40 justo aos 26%, que e onde fica o H1 */
+  .hero-veil {
+    background:
+      linear-gradient(180deg, rgba(42, 35, 33, .78) 0%, rgba(42, 35, 33, .66) 26%,
+                      rgba(42, 35, 33, .78) 58%, rgba(42, 35, 33, .94) 100%);
+  }
+
+  /* rotulos sobre foto: versao clara. Nao muda a marca, muda o contexto.
+     Rosa #F45197 e brass #B8985A sao meio-tom: sobre pele clara nenhum
+     escurecimento razoavel do veu os leva a 4,5. */
+  .hero-editorial .hero-eyebrow { color: #F0E4CE; }
+  .hero-editorial .hero-kicker { color: #FDE4EE; }
+  .hero-editorial .hero-note { color: rgba(251, 246, 243, 0.96); }
+  .hero-editorial .hero-kicker::after { background: rgba(253, 228, 238, .55); }
+
+  /* tipografia da hero: o rotulo estava em 11,3px e o kicker em 13,5px */
+  .hero-eyebrow { font-size: .8125rem; letter-spacing: .16em; }
+  .hero-kicker { font-size: .8125rem; }
+
+  /* CTA da hero: era o unico botao primario do site fora do padrao rosa.
+     Creme sobre foto clara ainda somava um contraste de borda fraco. */
+  .hero-book {
+    background: var(--brand-deep);
+    border-color: var(--brand-deep);
+    color: #fff;
+    font-size: .875rem;
+    min-height: 3rem;
+  }
+  .hero-explore { font-size: .875rem; min-height: 2.75rem; }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero-eyebrow { font-size: .8125rem; letter-spacing: .16em; }
+  .hero-kicker { font-size: .8125rem; }
+  .hero-book { background: var(--brand-deep); border-color: var(--brand-deep); color: #fff; }
+}
+
+/* --- alvo de toque: 44px e o minimo para dedo ------------------------- */
+@media (pointer: coarse), (max-width: 1024px) {
+  /* link de texto solto (nao <button>): media 363x20 ao vivo, os 20px vem
+     so do line-height do proprio texto.
+     ERRO JA PAGO (26/09): resolvi isso com inline-flex. Num container flex
+     cada filho vira item e o navegador DESCARTA o espaco nas bordas dele -
+     o texto tem <span class="promo-longo">...into </span> e <span> with
+     Cherry</span>, entao no iPad saia "into4 interest-free paymentswith".
+     padding-block da a mesma altura sem transformar o texto em itens. */
+  .promo-banner > a {
+    display: inline-block;
+    padding-block: 0.7rem;
+    min-height: 44px;
+  }
+  .promo-social-link { min-height: 44px; min-width: 44px; justify-content: center; }
+  .cf-nav { min-height: 44px; min-width: 44px; }
+  .submenu a, .mega-list a, .mega-hub { min-height: 44px; display: flex; align-items: center; }
+  /* era 40px flat -- nao arredondamento, erro de valor mesmo. Esta e a
+     regra que realmente manda nos links do rodape: ".footer-grid li a"
+     (0,1,2) vence ".footer-grid a" (0,1,1) da regra generica de alvo de
+     toque la embaixo no arquivo, entao consertar SO a generica (como eu
+     tentei primeiro) nao muda nada renderizado -- confirmado medindo ao
+     vivo (44x40 antes do 45, 44x40 de novo depois, ate eu achar esta). */
+  .footer-grid li a { min-height: 45px; display: inline-flex; align-items: center; }
+  /* era 40px: medido 44x40 ao vivo, largura ja passava mas a altura nao */
+  .breadcrumb a { min-height: 44px; display: inline-flex; align-items: center; }
+}
+
+/* --- botao nunca abaixo de 16px no telefone --------------------------- */
+@media (max-width: 767px) {
+  .btn { font-size: 1rem; min-height: 3rem; }
+  .btn-ghost, .header-call { font-size: .9375rem; }
+  .book-rail .btn { font-size: .9375rem; }
+}
+
+/* --- iPad: a etiqueta de cidade nas redes cabia mal em 13,5px --------- */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .promo-social-cidade { font-size: .8125rem; }
+}
+
+/* `.header-cta .header-call` (0,2,0) vence `.header-call` (0,1,0) e deixava
+   o botao CALL do topo em 12,6px no celular, menor que qualquer outro texto
+   clicavel da pagina. */
+@media (max-width: 1099.98px) {
+  .header-cta .header-call {
+    font-size: .9375rem;
+    padding: .7rem 1.1rem;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+/* Links soltos de navegacao ficavam em 36px de altura: abaixo dos 44px que
+   Apple e Google pedem para alvo de dedo. Vale para qualquer link dentro de
+   lista de navegacao, nao so os do rodape. */
+@media (pointer: coarse), (max-width: 1024px) {
+  .service-list a,
+  .card-links a,
+  .footer-grid a,
+  .toc a,
+  .service-cities a,
+  .mega-list a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+  /* .card-links a: mesma regra acima, 44px no papel, mas medido ao vivo em
+     390px o retangulo real fecha em 43,5px (arredondamento de subpixel do
+     navegador, nao um erro de valor). Empurra 1px alem da linha para nao
+     depender de como cada motor arredonda.
+     (".footer-grid a" tambem estava aqui, mas e morta pra valer: os links
+     do rodape sempre vem dentro de <li>, e ".footer-grid li a" (0,1,2) ja
+     vence essa e a regra generica acima por especificidade. O conserto
+     real do rodape esta em ".footer-grid li a", no bloco de cima.) */
+  .card-links a {
+    min-height: 45px;
+  }
+  /* credito do rodape: 12px era o menor texto da pagina */
+  .footer-bottom p, .footer-bottom a { font-size: .875rem; }
+}
+
+/* --- ultimos pontos medidos no celular -------------------------------- */
+@media (max-width: 1024px) {
+  /* `.city-buttons .btn-primary` (0,2,0) vencia `.btn` e deixava os dois
+     botoes de unidade em 13,5px, os CTAs mais importantes da pagina */
+  .city-buttons .btn-primary { font-size: 1rem; min-height: 3rem; }
+
+  /* o complemento geografico do H1 sai de 0,26em do titulo: em telefone
+     isso dava 11,7px, o menor texto da pagina */
+  .svc-hero-copy h1 .h1-where { font-size: 0.85rem; letter-spacing: .1em; }
+
+  /* titulo de card e link: precisa da mesma area de toque dos outros */
+  .card h3 a, .card-has-img h3 a { min-height: 44px; display: inline-flex; align-items: center; }
+
+  /* credito do rodape */
+  .footer-copy, .footer-copy a { font-size: .875rem; }
+}
+
+/* ==========================================================================
+   HERO NO CELULAR — cabe na tela, com o indice alcancavel
+   --------------------------------------------------------------------------
+   Medido: janela 844px, hero 781px, indice comecando em 777 e terminando em
+   986. Ou seja, o indice de servicos nascia 142px ABAIXO da dobra e ainda
+   por baixo dos dois CTAs flutuantes (parcelamento e chat), que ocupam os
+   ultimos ~90px fixos da tela. Era impossivel ver ou tocar.
+
+   Agora a hero recebe um orcamento de altura: a tela menos o cabecalho,
+   menos a faixa dos flutuantes. O indice e a ultima faixa da grade e cabe
+   dentro desse orcamento.
+   ========================================================================== */
+@media (max-width: 767px) {
+  /* Barra rosa: media 125px, quase um sexto da tela do telefone. O texto
+     encurta e os icones ficam logo abaixo, centrados. Duas colunas lado a
+     lado, que foi minha primeira tentativa, espremiam o texto em quatro
+     linhas e nao economizavam nada. */
+  .promo-banner {
+    grid-template-columns: 1fr;
+    gap: .35rem;
+    padding: .45rem .75rem;
+    text-align: center;
+    font-size: .8125rem;
+    line-height: 1.35;
+  }
+  .promo-banner > a { grid-column: 1; }
+  /* Este bloco vinha DEPOIS da regra de 44px (pointer:coarse) e com a
+     mesma especificidade (0,1,0): por ordem no arquivo, ele vencia e
+     encolhia os 5 icones para 34x34, medido ao vivo em 390px. 5 alvos de
+     44px somam 220px + gap, cabem de sobra nos ~342px uteis da faixa —
+     entao o ajuste e no layout (gap menor), nao encolher o alvo. */
+  .promo-social { grid-column: 1; justify-self: center; gap: .1rem; }
+  .promo-social-link { min-width: 44px; min-height: 44px; justify-content: center; }
+  .promo-social-link svg { width: 1.1rem; height: 1.1rem; }
+  .promo-social-cidade { display: none; }
+  .promo-banner > a .promo-longo { display: none; }
+
+  /* A hero herdava min-height de 100vh do desktop: com a barra rosa e o
+     cabecalho somando 157px, ela nascia 764px e sobrava 183px de vao
+     interno, empurrando o indice para fora da tela. Aqui o min-height passa
+     a ser o espaco que REALMENTE existe abaixo do cabecalho.
+
+     max-height eu ja tentei e da errado: a faixa do meio encolhe abaixo do
+     proprio conteudo e o H1 imprime por cima de "THE WORK". Com min-height
+     a caixa cede sem colidir. */
+  .hero-editorial { min-height: calc(100dvh - 10rem); }
+  .hero-h1 { font-size: clamp(1.5rem, 6.4vw, 1.875rem); line-height: 1.16; }
+  .hero-lede { padding-top: .9rem; padding-bottom: .2rem; }
+  .hero-name { font-size: clamp(1.75rem, 8vw, 2.25rem); }
+  .hero-note { font-size: .9375rem; margin-top: .35rem; }
+  .hero-actions { gap: .6rem; margin-top: .9rem; }
+  .hero-book { padding-block: .8rem; }
+
+  /* No telefone o "Pay over time" flutuante repete, palavra por palavra, a
+     mensagem da barra rosa que esta no topo da mesma tela. Duas vezes a
+     mesma oferta, e a de baixo cobrindo o indice de servicos. Fica so a do
+     topo; no desktop, onde ha espaco, os dois convivem. */
+  [class*="floatingEstimator-floatingCont"],
+  [class*="floatingEstimator-desktop"] { display: none !important; }
+
+  /* os dois CTA lado a lado: empilhados custavam ~120px de altura, que era
+     justamente o que faltava para o indice caber na tela. `flex: 1 1 auto`
+     na primeira tentativa fez o BOOK NOW tomar a linha inteira e empurrar o
+     outro para baixo de novo; com `0 1 auto` os dois dividem a linha. */
+  .hero-actions { flex-direction: row; align-items: center; flex-wrap: nowrap; gap: .75rem; }
+  .hero-book { width: auto; flex: 0 1 auto; padding-inline: 1.1rem; white-space: nowrap; }
+  .hero-explore { flex: 0 1 auto; font-size: .8125rem; letter-spacing: .06em; white-space: nowrap; }
+
+  /* linha do titulo mais junta: 3 linhas de H1 custavam 151px */
+  .hero-h1 { line-height: 1.1; margin-bottom: .2rem; }
+  .hero-eyebrow { margin-bottom: .45rem; }
+
+  /* sem o pill da Cherry, sobra so a bolha do chat no canto: o indice
+     precisa de bem menos folga embaixo */
+  .hero-index { padding-bottom: 1.25rem; }
+}
+
+/* Trilho de agendamento no celular: media 146px, quase um quinto da tela.
+   Nome e preco na mesma linha dos botoes deixa em ~68px. */
+@media (max-width: 767px) {
+  .book-rail { padding: .5rem .75rem; gap: .5rem; }
+  .book-rail-info { flex-direction: row; align-items: baseline; gap: .4rem; flex: 0 0 auto; }
+  .book-rail-name { font-size: .9375rem; }
+  .book-rail-price { font-size: .8125rem; }
+  .book-rail .btn { padding: .65rem .75rem; font-size: .875rem; min-height: 44px; }
+}
+
+/* Hero de servico no telefone: a moldura e 9:16 (0,562) e o arquivo e 0,70.
+   O cover cortava 19,6% da LARGURA - e a queixa "esta cortando os cantos".
+   Era so `.svc-hero--macro`, entao 5 das 13 paginas escapavam e as outras 8
+   cortavam. Os 13 arquivos agora sao todos 1120x1600 (0,70), entao a regra
+   vale para todas. Declarar a proporcao tambem reserva a caixa certa antes de
+   a foto chegar, o que tira a corrida de layout no arranque frio. */
+@media (max-width: 899.98px) {
+  .svc-hero-figure img {
+    aspect-ratio: 0.70;
+    /* A regra base e `height:100%; width:auto`, que faz a foto ser governada
+       pela ALTURA. Medido em 430px: a moldura ficava 351 de largura e a foto
+       so 312 - 39px de moldura vazia, com o fio de brass desenhado em volta da
+       MOLDURA e nao da foto. No telefone quem manda e a largura: assim a foto
+       preenche a moldura exatamente e a altura sai dos 0,70 do arquivo.
+       Medido depois: 308 / 320 / 351px de foto em 375 / 390 / 430. */
+    width: 100%;
+    height: auto;
+  }
+  /* contact tem moldura propria em 2/3, declarada mais acima; nao mexer */
+  .svc-hero--contact .svc-hero-figure img { aspect-ratio: 0.70; }
+}
+
+/* ==========================================================================
+   ACORDEAO DO MENU NO CELULAR — um comportamento so para os tres itens
+   --------------------------------------------------------------------------
+   Medido: com o menu aberto e nenhum item expandido, Services vinha
+   `display: none` (certo) mas Training e Contact vinham `display: flex` com
+   216px de altura (errado) — nasciam abertos e nao fechavam nunca.
+
+   Causa: `.main-nav ul` (0,1,1) declara display:flex para a barra do desktop
+   e vence `.submenu { display: none }` (0,1,0) do bloco mobile. O mega de
+   Services escapava porque tem regra propria. Resultado: dois
+   comportamentos diferentes no mesmo menu.
+
+   Aqui os tres passam a obedecer a mesma regra, com especificidade que ganha
+   dos dois lados e declarada no fim do arquivo.
+   ========================================================================== */
+@media (max-width: 1099.98px) {
+  .main-nav .submenu,
+  .main-nav .submenu--mega { display: none; }
+
+  .main-nav .has-submenu.is-expanded > .submenu,
+  .main-nav .has-submenu.is-expanded > .submenu--mega { display: block; }
+
+  /* a seta so aponta para baixo quando o item esta realmente aberto */
+  .main-nav .has-submenu .submenu-chevron { transform: rotate(0deg); }
+  .main-nav .has-submenu.is-expanded .submenu-chevron { transform: rotate(180deg); }
+
+  /* area de toque do proprio botao da seta */
+  .main-nav .submenu-toggle { min-width: 44px; min-height: 44px; }
+}
+
+/* ==========================================================================
+   INDICE DE SLIDES NO CELULAR — pontos, nao lista cortada
+   --------------------------------------------------------------------------
+   A faixa com "01 ADRIANA  02 NANO COMBO  03 POW..." rolava na horizontal e
+   o terceiro item ficava sempre cortado na borda. Ler meia palavra passa
+   descuido, nao "tem mais conteudo".
+
+   No telefone a faixa vira seis pontos centrados: diz quantos slides
+   existem, diz em qual voce esta e nada fica pela metade. O NOME do servico
+   nao se perde, porque ele ja esta em tamanho grande logo acima, no proprio
+   bloco da hero.
+   ========================================================================== */
+@media (max-width: 767px) {
+  .hero-index ol {
+    display: flex;
+    justify-content: center;
+    gap: .25rem;
+    overflow: visible;
+    padding-inline: 1rem;
+    scroll-snap-type: none;
+  }
+  .hero-index li { flex: 0 0 auto; scroll-snap-align: none; }
+
+  /* cada item vira um alvo de 44px com um ponto no meio. Era exatamente
+     44x44 mas media 43,5px ao vivo (arredondamento de subpixel); 45px da
+     a folga. position:relative contem o texto absoluto-e-clipado abaixo. */
+  .hero-index a {
+    display: grid;
+    place-items: center;
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    border: 0;
+    position: relative;
+  }
+  /* Era display:none: tira o texto da arvore de acessibilidade e cada
+     ponto vira um link sem nome (link-name reprova no axe, 6 links, toda
+     rodada). O texto continua existindo para leitor de tela, so fica
+     clipado da tela -- o ponto de 8px (ou a barra de 22px do atual)
+     continua sendo tudo que se ve. */
+  .hero-index .hero-index-num,
+  .hero-index .hero-index-name {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .hero-index .hero-index-bar {
+    position: static;
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(251, 246, 243, .45);
+    transform: none;
+    transition: background .3s var(--ease), width .3s var(--ease);
+  }
+  /* o slide atual vira um traco, nao so um ponto mais claro: distingue
+     tambem para quem nao diferencia bem as duas opacidades */
+  .hero-index a.is-current .hero-index-bar {
+    width: 22px;
+    border-radius: 999px;
+    background: var(--brand);
+    transform: none;
+  }
+  .hero-index { padding-bottom: 1rem; }
+}
+
+/* ==========================================================================
+   HERO DO TELEFONE: faixa central livre para o rosto (26/09/2026)
+   --------------------------------------------------------------------------
+   Pedido da Rachel, com print marcado: "no meio da cara da pessoa voce botou
+   o texto" e "ja que voce fez esse espaco gigante, vamos descer o texto pra
+   parte que nao tem foto". Medido antes: o .hero-feature tinha 351px dentro
+   de uma faixa de 455px e vinha CENTRADO, entao ocupava de 30% a 83% da
+   altura - exatamente sobre o rosto - e sobravam 80px mortos entre o botao
+   de pausa e os pontinhos.
+   Agora: o texto desce para o fim da faixa e o botao de pausa sai do fluxo.
+   Isso abre de ~21% a ~47% para o rosto, e a regra que a Rachel deu e que
+   nessa janela nao pode haver letra sobre a area da SOBRANCELHA ATE O LABIO.
+   O enquadramento das fotos e gerado para respeitar essa janela
+   (scratchpad/hero2.py, dicionario JANELA).
+   ========================================================================== */
+@media (max-width: 767.98px) {
+  .hero-feature { align-self: end; padding-bottom: 0; }
+
+  /* O botao de pausa fica no fluxo, onde sempre esteve. Tirei-o com
+     position:absolute numa primeira tentativa e ele ancorou no .hero-feature
+     (que e position:relative por causa do z-index sobre o veu), caindo em
+     cima dos pontinhos. So encurto a margem dele. */
+  .hero-pause { margin-top: .5rem; }
+
+  /* respiros internos mais curtos: cada um destes vinha do desktop */
+  .hero-feature .hero-note { margin-top: .2rem; }
+  .hero-feature .hero-actions { margin-top: .6rem; }
+  .hero-kicker { margin-bottom: .5rem; }
+}
+
+/* ==========================================================================
+   PALCO DE MIDIA  ("media stage")            — 26/09/2026, pedido da Rachel
+   --------------------------------------------------------------------------
+   SO VALE ABAIXO DE 900px. O desktop nao entra neste bloco em ponto nenhum:
+   nada daqui e declarado fora da media query, e as variaveis inline que o HTML
+   carrega (--media-foto, --media-*) nao sao lidas por regra nenhuma de min-width.
+
+   Duas camadas do MESMO arquivo:
+     fundo  -> copia em `cover`, desfocada e ampliada, lavada para os tons da
+               propria pagina (surface/blush). Preenche a moldura inteira.
+     frente -> a foto original, nitida, em `contain`. Nao perde um pixel: nem
+               canto de boca, nem rabo de sobrancelha, nem linha de cilio.
+
+   O veu e CLARO de proposito. A primeira versao usava --ink por cima do
+   desfoque: num rosto que ocupa todo o quadro, o desfoque vira uma massa
+   marrom escura, e contra o rosa da pagina aquilo lia como um cartao pesado
+   com a foto colada no meio - exatamente a colagem que o brief proibe. Lavado
+   para surface/blush, o fundo continua a pagina em vez de furar um buraco nela.
+
+   RESPIRO IGUAL NOS QUATRO LADOS: nao sai de um scale. Com `contain` dentro de
+   uma moldura de mesma razao da foto, qualquer scale deixa a folga vertical
+   MAIOR que a horizontal em pixels (medido: 33px nos lados contra 48px em cima
+   e embaixo). A folga vem de `padding` em PORCENTAGEM, que no CSS resolve
+   sempre contra a LARGURA nos quatro lados - logo, pixels iguais. A razao da
+   moldura e entao calculada para a caixa interna cair na razao exata do
+   arquivo, e a foto a preenche sem sobra em eixo nenhum:
+     card: arquivo 0,80 (todos os 16 sao 1080x1350); padding 10%
+           => H = W*((1-0,20)/0,80 + 0,20) = 1,2000W  ->  razao 0,8333
+   A foto ocupa 80% da largura da moldura - dentro da faixa de 76-82% pedida -
+   com a mesma folga em px nos quatro lados.
+
+   POR QUE A HERO DE SERVICO NAO ENTRA AQUI: o brief da a ela outra instrucao,
+   "corrigir apenas o limite de ~198px, mantendo a imagem inteira, sem zoom
+   adicional". E de fato ela nunca esteve cortada: arquivo 0,70 dentro de
+   moldura 0,70 faz o `cover` descartar 0,0%. O problema era so tamanho, ja
+   resolvido (198px -> 308/320/351px). Botar o palco ali encolheria a foto de
+   volta para 251px e a assentaria num cartao - o oposto do pedido.
+
+   O ARCO fica no PALCO, nunca na foto da frente: o --arco corta 22% da altura
+   nos cantos de cima, e na foto nitida ele comeria justamente o rabo da
+   sobrancelha - a queixa original. O palco veste o arco (moldura igual em
+   todas as paginas) e a foto fica reta e inteira.
+
+   ARMADILHA JA PAGA: o caminho em --media-foto e ABSOLUTO a partir da raiz do site,
+   e nao relativo. Um url() dentro de custom property e resolvido contra a
+   FOLHA DE ESTILO que consome o var(), nunca contra o documento. Como o CSS
+   mora em /css/, o "./assets/..." da home virava "/css/assets/..." e dava 404
+   - e o card ainda parecia certo na tela, porque o background-color de reserva
+   pintava o rosa no lugar. So o console do Lighthouse denunciou.
+
+   O fundo NAO e download novo: e a mesma URL que o <img> do card ja busca -
+   e com 22px de desfoque a resolucao ali seria desperdicio de qualquer jeito.
+   Como `background-image` so e resolvido quando a media query casa, o desktop
+   nunca pede esse arquivo.
+
+   Cada imagem afina a si mesma pelas variaveis --media-*, declaradas inline no
+   HTML. Nao existe object-position global aqui, de proposito.
+   ========================================================================== */
+@media (max-width: 899.98px) {
+
+  .card-has-img .card-img-link {
+    /* padrao; cada foto sobrescreve o que precisar, inline, no HTML */
+    --media-scale: 1;         /* 1 = os 80% exatos da geometria acima */
+    --media-shift-x: 0px;
+    --media-shift-y: 0px;
+    --media-focal-x: 50%;
+    --media-focal-y: 50%;
+    --media-blur: 22px;
+    --media-bg-scale: 1.14;
+
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 10%;
+    border-radius: var(--arco);
+    isolation: isolate;
+    /* enquanto o fundo nao pinta, e para moldura sem --media-foto declarada */
+    background-color: var(--blush);
+  }
+
+  .card-has-img .card-img-link { aspect-ratio: 0.8333; }
+
+  /* --- camada de fundo -------------------------------------------------- */
+  .card-has-img .card-img-link::before {
+    content: "";
+    position: absolute;
+    /* ampliar por inset negativo, e nao por transform: o transform arrastaria
+       junto o recorte arredondado e ele vazaria para fora do palco. Aqui a
+       caixa cresce e o overflow do palco continua cortando certo. O excesso
+       tambem esconde a franja transparente que o blur deixa na borda. */
+    inset: calc((1 - var(--media-bg-scale)) / 2 * 100%);
+    background-image:
+      linear-gradient(180deg,
+        rgba(251, 246, 243, 0.79) 0%,
+        rgba(243, 220, 228, 0.69) 50%,
+        rgba(251, 246, 243, 0.83) 100%),
+      var(--media-foto);
+    background-size: cover, cover;
+    background-position: center, var(--media-focal-x) var(--media-focal-y);
+    background-repeat: no-repeat;
+    /* o veu e liso, entao o blur nao o altera: da para desfocar as duas
+       camadas de uma vez e poupar um pseudo-elemento. A dessaturacao e o que
+       impede o fundo de competir com a foto nitida.
+
+       O veu e PESADO (0,69-0,83) por um motivo medido: com ele leve, a cor do
+       fundo era ditada pela foto, e os cards de cabelo escuro (powder-brows,
+       combos-card) viravam um retangulo cinza contra o rosa da pagina - cada
+       card com uma cor de moldura diferente. Pesado, todos convergem para o
+       mesmo blush e so guardam um tracinho da propria cor. */
+    filter: blur(var(--media-blur)) brightness(1.12) saturate(0.45);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  /* --- foto da frente, nitida e inteira --------------------------------- */
+  .card-has-img .card-thumb {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: var(--media-focal-x) var(--media-focal-y);
+    transform:
+      translate(var(--media-shift-x), var(--media-shift-y))
+      scale(var(--media-scale));
+    /* sombra muito sutil, so para a foto nao encostar de chapa no fundo.
+       Hoje os 16 arquivos sao 0,80 e a caixa interna tambem, entao `contain`
+       preenche exato e box-shadow daria no mesmo. drop-shadow fica por
+       robustez: se um dia entrar um card com outra razao, o `contain` passa a
+       sobrar em um eixo e o box-shadow desenharia o retangulo da CAIXA, solto
+       no ar a alguns pixels da foto. O drop-shadow segue a foto. Medido: sem
+       custo de performance (/services/ em 94-95, igual a antes do palco). */
+    filter: drop-shadow(0 1px 4px rgba(42, 35, 33, 0.15));
+    border-radius: var(--radius);
+  }
+
+  /* o fio de brass solto e o contorno do palco na mesma moldura viravam duas
+     linhas concentricas. No telefone fica so a do palco. */
+  .card-has-img .card-img-link::after { display: none; }
+}
