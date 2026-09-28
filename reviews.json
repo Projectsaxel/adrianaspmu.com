@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-25T19:32:25Z",
+ "updated": "2026-09-28T18:10:26Z",
  "units": {
   "wilmington": {
    "label": "Wilmington, MA",
@@ -10,8 +10,8 @@
   "salem": {
    "label": "Salem, NH",
    "maps": "https://maps.google.com/?cid=8332848331847351639",
-   "rating": 4.3,
-   "total": 6
+   "rating": 4.4,
+   "total": 7
   }
  },
  "reviews": {
@@ -468,7 +468,7 @@
   "AbFvOqnWAPvoQk6uQwBQCbakVj32MjtO0ops1Fe3hZjZtqznbcDiTrV76O0s8v3kBr1_F0dXJF8s": {
    "id": "AbFvOqnWAPvoQk6uQwBQCbakVj32MjtO0ops1Fe3hZjZtqznbcDiTrV76O0s8v3kBr1_F0dXJF8s",
    "unit": "wilmington",
-   "name": "Smart E.",
+   "name": "Matthew K.",
    "rating": 5,
    "text": "Best Service!!!My third year having my eyebrows done by Adriana. SHE IS THE 👌",
    "date": "2026-03-26",
@@ -1311,6 +1311,15 @@
    "date": "2023-05-05",
    "month": "May 2023"
   },
+  "AbFvOqm-3hcZsn3j-obtHCW9_J0LeIFOrRDIaFT8qAvmVFNnWb8bK5At63Zt3-qbwOBhTgbJWMEGcQ": {
+   "id": "AbFvOqm-3hcZsn3j-obtHCW9_J0LeIFOrRDIaFT8qAvmVFNnWb8bK5At63Zt3-qbwOBhTgbJWMEGcQ",
+   "unit": "salem",
+   "name": "Courtney R.",
+   "rating": 5,
+   "text": "I am absolutely obsessed with my Nano Combo Brows! Adriana did an amazing job and completely nailed the natural, polished look I wanted. She really listened to what I was looking for, paid attention to every little detail, and made sure I was completely happy with the shape. My favorite part is waking up every morning and my brows already look DONE. It honestly feels like I wake up with part of my makeup already on, and it makes getting ready so much easier. Adriana is incredibly talented, patient, and professional. I couldn’t be happier and would recommend her to anyone!",
+   "date": "2026-09-25",
+   "month": "September 2026"
+  },
   "AbFvOqmHpjiDbb81OJ8soeeu1voLQUgiJbUMQQ3bj89MmgIUYY7nErglT5AtEXb7hX6HqQAoDB0hqg": {
    "id": "AbFvOqmHpjiDbb81OJ8soeeu1voLQUgiJbUMQQ3bj89MmgIUYY7nErglT5AtEXb7hX6HqQAoDB0hqg",
    "unit": "salem",
@@ -1368,14 +1377,17 @@
   },
   "nano-combo": {
    "all": [
+    "AbFvOqm-3hcZsn3j-obtHCW9_J0LeIFOrRDIaFT8qAvmVFNnWb8bK5At63Zt3-qbwOBhTgbJWMEGcQ",
     "AbFvOqkK8Qu4pJYsf1zOl-xPF0fOT1aNMF8ZpbNfweVDnSn6dAAR4BMjWDJl91YvY-Fh-fWM5ZcK",
     "AbFvOqmC0-fEyVUt2AHxPQjontdKotbjxbkQjDKUW54hYyoImwrWJK4lDxt0Gu22OZbkMAc9ngjz"
    ],
    "wilmington": [
     "AbFvOqkK8Qu4pJYsf1zOl-xPF0fOT1aNMF8ZpbNfweVDnSn6dAAR4BMjWDJl91YvY-Fh-fWM5ZcK",
-    "AbFvOqmC0-fEyVUt2AHxPQjontdKotbjxbkQjDKUW54hYyoImwrWJK4lDxt0Gu22OZbkMAc9ngjz"
+    "AbFvOqmC0-fEyVUt2AHxPQjontdKotbjxbkQjDKUW54hYyoImwrWJK4lDxt0Gu22OZbkMAc9ngjz",
+    "AbFvOqm-3hcZsn3j-obtHCW9_J0LeIFOrRDIaFT8qAvmVFNnWb8bK5At63Zt3-qbwOBhTgbJWMEGcQ"
    ],
    "salem": [
+    "AbFvOqm-3hcZsn3j-obtHCW9_J0LeIFOrRDIaFT8qAvmVFNnWb8bK5At63Zt3-qbwOBhTgbJWMEGcQ",
     "AbFvOqkK8Qu4pJYsf1zOl-xPF0fOT1aNMF8ZpbNfweVDnSn6dAAR4BMjWDJl91YvY-Fh-fWM5ZcK",
     "AbFvOqmC0-fEyVUt2AHxPQjontdKotbjxbkQjDKUW54hYyoImwrWJK4lDxt0Gu22OZbkMAc9ngjz"
    ]
@@ -1433,9 +1445,9 @@
   },
   "eyebrows": {
    "all": [
+    "AbFvOqm-3hcZsn3j-obtHCW9_J0LeIFOrRDIaFT8qAvmVFNnWb8bK5At63Zt3-qbwOBhTgbJWMEGcQ",
     "AbFvOqkwaaR5O0qHzHNmviLuro48FJHb65Flmn1CBIyO4hB71gjC7SnHIlXJSI6KWsNBg6fhcjG0",
-    "AbFvOqnv9WlfDzQLnTgxhh2bAPGXGwKDr10FSkOMLc61f91SeMGcf8BXD6VFVdEM00lu8xNqIZ8FfQ",
-    "AbFvOqmOPn2FUv0AlOwm8KC67W-TfGjvF5BPQF_KgcI78i47ZfYlopmR36_-hWRvvYFLSImTB5zA"
+    "AbFvOqnv9WlfDzQLnTgxhh2bAPGXGwKDr10FSkOMLc61f91SeMGcf8BXD6VFVdEM00lu8xNqIZ8FfQ"
    ],
    "wilmington": [
     "AbFvOqkwaaR5O0qHzHNmviLuro48FJHb65Flmn1CBIyO4hB71gjC7SnHIlXJSI6KWsNBg6fhcjG0",
@@ -1443,9 +1455,9 @@
     "AbFvOqmOPn2FUv0AlOwm8KC67W-TfGjvF5BPQF_KgcI78i47ZfYlopmR36_-hWRvvYFLSImTB5zA"
    ],
    "salem": [
+    "AbFvOqm-3hcZsn3j-obtHCW9_J0LeIFOrRDIaFT8qAvmVFNnWb8bK5At63Zt3-qbwOBhTgbJWMEGcQ",
     "AbFvOqlyWdBDeVbVN6pynarRh8kYSv6DckulnzqY6-2D6VWsmack_39-7L0oQxWuA-np1JzOwgkXDA",
-    "AbFvOqkoBFqchXaydumpYX6eatYchN6JDeWoTXMqZiRy3RS2upjem9l3uhiU5HKYlQb9pY9bAHuo",
-    "AbFvOqkwaaR5O0qHzHNmviLuro48FJHb65Flmn1CBIyO4hB71gjC7SnHIlXJSI6KWsNBg6fhcjG0"
+    "AbFvOqkoBFqchXaydumpYX6eatYchN6JDeWoTXMqZiRy3RS2upjem9l3uhiU5HKYlQb9pY9bAHuo"
    ]
   },
   "lip-blush": {
@@ -1651,9 +1663,9 @@
   },
   "_any": {
    "all": [
+    "AbFvOqm-3hcZsn3j-obtHCW9_J0LeIFOrRDIaFT8qAvmVFNnWb8bK5At63Zt3-qbwOBhTgbJWMEGcQ",
     "AbFvOqmHpjiDbb81OJ8soeeu1voLQUgiJbUMQQ3bj89MmgIUYY7nErglT5AtEXb7hX6HqQAoDB0hqg",
-    "AbFvOqkwaaR5O0qHzHNmviLuro48FJHb65Flmn1CBIyO4hB71gjC7SnHIlXJSI6KWsNBg6fhcjG0",
-    "AbFvOqmUntc0GtUcllIaj-g6CLpWXX83MfQGDWwqQf0IRuf0sZ0YtTZveh3R6r-PLskkYeodaVBxXQ"
+    "AbFvOqkwaaR5O0qHzHNmviLuro48FJHb65Flmn1CBIyO4hB71gjC7SnHIlXJSI6KWsNBg6fhcjG0"
    ],
    "wilmington": [
     "AbFvOqkwaaR5O0qHzHNmviLuro48FJHb65Flmn1CBIyO4hB71gjC7SnHIlXJSI6KWsNBg6fhcjG0",
@@ -1661,9 +1673,9 @@
     "AbFvOqndaD2h-KmzYD92AulCH-bMw7QB56FoHvPtadXhXS1P8k3m_1JjAYKG502OyhqLuYOD6VU1cw"
    ],
    "salem": [
+    "AbFvOqm-3hcZsn3j-obtHCW9_J0LeIFOrRDIaFT8qAvmVFNnWb8bK5At63Zt3-qbwOBhTgbJWMEGcQ",
     "AbFvOqmHpjiDbb81OJ8soeeu1voLQUgiJbUMQQ3bj89MmgIUYY7nErglT5AtEXb7hX6HqQAoDB0hqg",
-    "AbFvOqmolbWY1zIwXFkB-P6dD6STUQRYeK1OdDKwsX-ezxYAzjLgrI_vVh2AcW2OZty93HvQPET8rw",
-    "AbFvOqlyWdBDeVbVN6pynarRh8kYSv6DckulnzqY6-2D6VWsmack_39-7L0oQxWuA-np1JzOwgkXDA"
+    "AbFvOqmolbWY1zIwXFkB-P6dD6STUQRYeK1OdDKwsX-ezxYAzjLgrI_vVh2AcW2OZty93HvQPET8rw"
    ]
   }
  }
