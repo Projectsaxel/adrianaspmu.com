@@ -52,7 +52,7 @@ Most classes include **practical sessions with hands-on models**, offering real-
 
 If you're looking for the perfect course to start your career in permanent makeup, this is it. Our **100-Hour Fundamental Training**, certified by the **American Academy of Micropigmentation (AAM)**, provides everything you need to become a confident and skilled artist.
 
-In this **9-day hands-on program**, you'll learn **five essential techniques** — Microblading, Ombre Shading, Microshading, Lip Blush, and Dark Lip Neutralization — while practicing on live models under expert guidance.
+In this **10-day hands-on program**, you'll learn **five essential techniques** — Microblading, Ombre Shading, Microshading, Lip Blush, and Dark Lip Neutralization — while practicing on live models under expert guidance.
 
 $7,000
 
@@ -125,13 +125,13 @@ Six things are worth verifying with any permanent makeup school: who actually te
 | Who is actually teaching | Ask for the instructor’s name and credential, not the school’s. Many schools sell a brand and hand the class to someone else. | Adriana Souza Santos teaches, and holds AAM Diamond Certified Trainer status — the American Academy of Micropigmentation’s highest instructor level — with 5,000+ procedures and 300+ students trained. |
 | Whether the certificate is accredited | Ask which body accredits the certificate, and confirm that body exists and recognises the school. | The 100-Hour Fundamental is accredited by the American Academy of Micropigmentation. |
 | Certificate against licence | Ask whether the certificate lets you work legally. A school that lets you believe it does is selling you a problem. | It does not, and that is stated plainly here: the certificate is training. The licence to practise is issued by government — town by town in Massachusetts, at state level in New Hampshire under RSA 314-A. |
-| Hands-on practice on live models | Ask how many live models you work on, and who supervises while you do. | The 100-Hour Fundamental is 9 days with practice on live models under supervision; the apprenticeship is a year of supervised practice at $700 a month. |
+| Hands-on practice on live models | Ask how many live models you work on, and who supervises while you do. | The 100-Hour Fundamental is 10 days with practice on live models under supervision; the apprenticeship is a year of supervised practice at $700 a month. |
 | What the price covers | Ask for the total, and what is not in it. | $7,000 for the 100-Hour Fundamental, $700 a month for the apprenticeship. The VIP Masterclass is quoted per student because the scope changes. Tuition can be split through our in-house payment plan (a deposit, then scheduled payments); Cherry covers permanent makeup services, not courses. |
 | Where the training happens | Ask for the training address, and whether clients are treated in the same room. | All training is at 39 Cross Street, Suite 206, Peabody, MA, students only. Client procedures happen at the Wilmington and Salem studios, never at the academy. |
 
 ## Frequently Asked Questions
 
-The 100-Hour Fundamental at $7,000 is the structured entry point: 9 days, five techniques, AAM-accredited. The apprenticeship at $700 a month is a year of supervised practice instead. The VIP Masterclass is quoted individually for cases that fit neither. The consultation tells you which, honestly.
+The 100-Hour Fundamental at $7,000 is the structured entry point: 10 days, five techniques, AAM-accredited. The apprenticeship at $700 a month is a year of supervised practice instead. The VIP Masterclass is quoted individually for cases that fit neither. The consultation tells you which, honestly.
 
 No, and no school’s does. The certificate is training; the licence to practise is issued by government. Massachusetts licenses body art town by town through each Board of Health, while New Hampshire licenses at state level under RSA 314-A. You apply where you intend to work, after training.
 
@@ -139,4 +139,4 @@ Yes. The 100-Hour Fundamental can be paid through our in-house payment plan (a d
 
 Adriana Souza Santos, AAM Diamond Certified Trainer — the American Academy of Micropigmentation’s highest instructor level. More than 5,000 procedures across 20+ years, over 300 students trained, and New Hampshire Body Artist licence 4283 that anyone can verify at the state’s public lookup.
 
-Yes. The 100-Hour Fundamental includes practice on live models under supervision across its 9 days, and the apprenticeship is built around a year of supervised model practice and client simulation. Training happens only at the Peabody studio, which serves students and never clients.
+Yes. The 100-Hour Fundamental includes practice on live models under supervision across its 10 days, and the apprenticeship is built around a year of supervised model practice and client simulation. Training happens only at the Peabody studio, which serves students and never clients.

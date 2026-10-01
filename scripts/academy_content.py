@@ -137,10 +137,10 @@ def academy_body(img, depth: int = 1, course_href_base: str = "") -> str:
         {img("academy/pmu-100h.webp", "100-Hour Fundamental PMU training", depth, "service-hero-img")}
       </div>
       <div>
-        <span class="badge">9-Day Course</span>
+        <span class="badge">10-Day Course</span>
         <h2>100 Hours Fundamental</h2>
         <p>If you're looking for the perfect course to start your career in permanent makeup, this is it. Our <strong>100-Hour Fundamental Training</strong>, certified by the <strong>American Academy of Micropigmentation (AAM)</strong>, provides everything you need to become a confident and skilled artist.</p>
-        <p>In this <strong>9-day hands-on program</strong>, you'll learn <strong>five essential techniques</strong> — Microblading, Ombre Shading, Microshading, Lip Blush, and Dark Lip Neutralization — while practicing on live models under expert guidance.</p>
+        <p>In this <strong>10-day hands-on program</strong>, you'll learn <strong>five essential techniques</strong> — Microblading, Ombre Shading, Microshading, Lip Blush, and Dark Lip Neutralization — while practicing on live models under expert guidance.</p>
         <p class="price">$7,000</p>
         <a class="btn btn-primary" href="{course_href_base}pmu-100h-fundamental.html">Learn More</a>
       </div>

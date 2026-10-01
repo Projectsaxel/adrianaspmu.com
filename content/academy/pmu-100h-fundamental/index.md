@@ -1,6 +1,6 @@
 <!-- 100-Hour PMU Training + Apprenticeship | Peabody MA -->
 <!-- canonical: https://adrianaspmu.com/academy/pmu-100h-fundamental/ -->
-> 9-day AAM-accredited PMU course in Peabody, MA. Five techniques, full kit, live models, lifetime support. $7,000, or $15,400 with apprenticeship.
+> 10-day AAM-accredited PMU course in Peabody, MA. Five techniques, full kit, live models, lifetime support. $7,000, or $15,400 with apprenticeship.
 
 # 100 Hours Fundamental Class + 1 Year of Apprenticeship
 
@@ -8,13 +8,13 @@ $7,000 — or $15,400 with the 1-year apprenticeship
 
 an **in-house payment plan** is available for this course — [how it works](../../payment-plan/#academy-plan)
 
-A nine-day, hands-on permanent makeup course in Peabody, Massachusetts. You learn five techniques on live models, leave with a full professional kit, and receive a certificate of completion accredited by the American Academy of Micropigmentation. Payment plans available, and you can review the entire class again after you finish.
+A ten-day, hands-on permanent makeup course in Peabody, Massachusetts. You learn five techniques on live models, leave with a full professional kit, and receive a certificate of completion accredited by the American Academy of Micropigmentation. Payment plans available, and you can review the entire class again after you finish.
 
 ## What Is Included in the 100-Hour Fundamental Class?
 
-The 100-Hour Fundamental Class includes 9 days of hands-on training in a small group, live-model practice, a full professional kit, and lifetime ongoing support after you finish, plus the right to retake the entire class later at no extra cost.
+The 100-Hour Fundamental Class includes 10 days of hands-on training in a small group, live-model practice, a full professional kit, and lifetime ongoing support after you finish, plus the right to retake the entire class later at no extra cost.
 
-- **9 days of theory and training** — 8 days of class plus a shadowing day in a working studio.
+- **10 days of theory and training** — 7 days of class plus a day of supervised practice, a day of professional observation in a working studio and a marketing class day.
 - **5 techniques**, taught step by step.
 - **Small group class**, so you get personal correction while you work.
 - **Live demonstration** by the instructor before every technique.
@@ -124,7 +124,7 @@ Students come from across Greater Boston and southern New Hampshire.
 
 No. The course teaches five techniques from zero, starting with skin anatomy and color theory before moving into hands-on practice.
 
-Nine days total: 8 class days covering the five techniques and the foundations around them, plus 1 shadowing day in a working studio.
+Ten days total: 7 class days covering the five techniques and the foundations around them, plus 1 day of supervised professional practice, 1 day of professional observation in a working studio and 1 marketing class day.
 
 Only once you meet the licensing requirements of the town or state where you plan to work. A certificate of completion is not the same thing as a license, and meeting those requirements is your responsibility.
 
@@ -132,7 +132,7 @@ A full professional kit is included in the $7,000 tuition, so you leave the cour
 
 Yes. Graduates can review the entire class again at any time after completion, at no extra cost.
 
-The 100-Hour Fundamental costs $7,000 and runs over 9 days in Peabody, MA. It covers five techniques — microblading, ombré shading, microshading, lip blush and dark lip neutralization — with practice on live models under supervision, and it carries certification from the American Academy of Micropigmentation.
+The 100-Hour Fundamental costs $7,000 and runs over 10 days in Peabody, MA. It covers five techniques — microblading, ombré shading, microshading, lip blush and dark lip neutralization — with practice on live models under supervision, and it carries certification from the American Academy of Micropigmentation.
 
 Yes. Tuition can be split through our in-house payment plan (a deposit, then scheduled payments). Cherry covers permanent makeup services, not courses. The VIP Masterclass also has an in-house plan.
 
@@ -156,7 +156,7 @@ Reviewed by [Adriana Souza Santos, Master Permanent Makeup Artist](../../about/)
 
 ## Who Is This Training For, and Who Is It Not For?
 
-This is for you are starting from zero and want a structured, accredited foundation across five techniques in 9 days.
+This is for you are starting from zero and want a structured, accredited foundation across five techniques in 10 days.
 
 **It is not for you if** you already take clients and need to fix one specific technique — the [VIP Masterclass](../../academy/vip-masterclass/) is built for that case.
 
@@ -169,6 +169,6 @@ Six things are worth verifying with any permanent makeup school: who actually te
 | Who is actually teaching | Ask for the instructor’s name and credential, not the school’s. Many schools sell a brand and hand the class to someone else. | Adriana Souza Santos teaches, and holds AAM Diamond Certified Trainer status — the American Academy of Micropigmentation’s highest instructor level — with 5,000+ procedures and 300+ students trained. |
 | Whether the certificate is accredited | Ask which body accredits the certificate, and confirm that body exists and recognises the school. | The 100-Hour Fundamental is accredited by the American Academy of Micropigmentation. |
 | Certificate against licence | Ask whether the certificate lets you work legally. A school that lets you believe it does is selling you a problem. | It does not, and that is stated plainly here: the certificate is training. The licence to practise is issued by government — town by town in Massachusetts, at state level in New Hampshire under RSA 314-A. |
-| Hands-on practice on live models | Ask how many live models you work on, and who supervises while you do. | The 100-Hour Fundamental is 9 days with practice on live models under supervision; the apprenticeship is a year of supervised practice at $700 a month. |
+| Hands-on practice on live models | Ask how many live models you work on, and who supervises while you do. | The 100-Hour Fundamental is 10 days with practice on live models under supervision; the apprenticeship is a year of supervised practice at $700 a month. |
 | What the price covers | Ask for the total, and what is not in it. | $7,000 for the 100-Hour Fundamental, $700 a month for the apprenticeship. The VIP Masterclass is quoted per student because the scope changes. Tuition can be split through our in-house payment plan (a deposit, then scheduled payments); Cherry covers permanent makeup services, not courses. |
 | Where the training happens | Ask for the training address, and whether clients are treated in the same room. | All training is at 39 Cross Street, Suite 206, Peabody, MA, students only. Client procedures happen at the Wilmington and Salem studios, never at the academy. |
