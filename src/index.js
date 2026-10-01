@@ -23,7 +23,7 @@
  *   CONTACT_FROM var     website@adrianaspmu.com (dominio de routing)
  */
 
-const LIMITS = { name: 120, email: 200, phone: 40, location: 80, interest: 60, message: 4000, source: 40 };
+const LIMITS = { lead_path: 60, name: 120, email: 200, phone: 40, location: 80, interest: 60, message: 4000, source: 40 };
 
 // De onde o lead veio. Allowlist e nao texto livre: "source" entra no
 // assunto do e-mail, e assunto montado com string do cliente e injecao
@@ -31,6 +31,7 @@ const LIMITS = { name: 120, email: 200, phone: 40, location: 80, interest: 60, m
 const SOURCES = {
   "contact-page": "Contact page",
   "floating-button": "Floating button",
+  "academy-class": "Home announcement (Academy enrollment)",
 };
 const SOURCE_DEFAULT = "contact-page";
 
@@ -143,6 +144,17 @@ async function handleContact(request, env, ctx) {
   const interest = Object.prototype.hasOwnProperty.call(INTERESTS, interestKey) ? INTERESTS[interestKey] : "Not specified";
   const message = clean(data.message, LIMITS.message);
   const page = clean(data.page, 200);
+  // Caminho ate o lead de curso (secao da home, pagina do curso...).
+  // Allowlist: entra no e-mail.
+  const LEAD_PATHS = {
+    "home-announcement": "Home announcement, directly",
+    "home-announcement > course-page": "Home announcement, then the course page",
+    "home-announcement > contact-page": "Home announcement, then the contact page",
+    "course-page": "Course page",
+    "contact-page": "Contact page",
+  };
+  const leadPathKey = clean(data.lead_path, LIMITS.lead_path);
+  const leadPath = Object.prototype.hasOwnProperty.call(LEAD_PATHS, leadPathKey) ? LEAD_PATHS[leadPathKey] : "";
 
   const sourceKey = clean(data.source, LIMITS.source);
   const source = Object.prototype.hasOwnProperty.call(SOURCES, sourceKey)
@@ -189,6 +201,7 @@ async function handleContact(request, env, ctx) {
     ["Came from", sourceLabel],
     ["Preferred location", location],
     ["Interested in", interest],
+    ["Lead path", leadPath],
     ["Submitted from", page || "/contact/"],
     ["Visitor city", [cf.city, cf.region, cf.country].filter(Boolean).join(", ")],
     ["Received (UTC)", new Date().toISOString().replace("T", " ").slice(0, 19)],

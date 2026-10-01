@@ -49,7 +49,7 @@ The touch-up at 6 to 8 weeks is included above; the yearly touch-up, from $300, 
 
 ## What Experience Does the Artist at the Salem, NH Studio Have, and Who Wrote This Page?
 
-Adriana Souza Santos, the Master Permanent Makeup Artist behind the Salem, NH studio and the author of this page, has performed more than 5,000 procedures and trained more than 300 students over a 20-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in both English and Portuguese.
+Adriana Souza Santos, the Master Permanent Makeup Artist behind the Salem, NH studio and the author of this page, has performed more than 5,000 procedures and trained more than 300 students over a 20-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in English, Portuguese and Spanish.
 
 The New Hampshire licensing information above was checked against the text of RSA 314-A; it is not a claim that this business holds that license. Last reviewed September 10, 2026.
 
@@ -138,7 +138,7 @@ Pregnant or breastfeeding clients, anyone under 18, and anyone actively using is
 
 Yes. Any service splits into 4 interest-free payments through Cherry, an independent financial technology company, using a soft credit check that does not affect your credit score. Cherry also offers plans of up to 24 months with interest. Cherry, not this studio, sets approval and final terms.
 
-Adriana Souza Santos, the Master Permanent Makeup Artist who consults at the Salem, NH studio, speaks both English and Portuguese, so clients can describe the result they want in whichever language feels most comfortable, including healing questions after the appointment.
+Adriana Souza Santos, the Master Permanent Makeup Artist who consults at the Salem, NH studio, speaks English, Portuguese and Spanish, so clients can describe the result they want in whichever language feels most comfortable, including healing questions after the appointment.
 
 Book online through Fresha for real-time availability at 117A Main Street, or call (978) 223-7496 directly. The studio is open Monday through Saturday, 10:00 a.m. to 6:00 p.m., closed Sunday. First-time clients can also send a question through the contact page first.
 

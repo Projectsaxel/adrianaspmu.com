@@ -15,7 +15,7 @@ Written by Adriana Souza Santos, Master Permanent Makeup Artist and AAM Diamond 
 The Wilmington, MA studio fits residents of Wilmington, Reading, Woburn, Burlington, Tewksbury, Billerica, and North Reading who want brow, lip, or eyeliner permanent makeup from a Master Artist with 20+ years in the industry. It is not a fit for anyone under 18, pregnant, breastfeeding, or currently using isotretinoin.
 
 - Good fit: Route 129 corridor clients wanting a consultation before choosing a technique
-- Good fit: Portuguese-speaking clients wanting the consultation in Portuguese
+- Good fit: Portuguese- and Spanish-speaking clients wanting the consultation in their own language
 - Good fit: existing clients due for a yearly touch-up
 - Not a fit: anyone pregnant, breastfeeding, or under 18, at either studio
 - Not yet: isotretinoin, blood thinners, autoimmune, or keloid history without clearance — see the [contraindications guide](../../aftercare/#who-should-not)
@@ -69,7 +69,7 @@ Every price above already includes the perfecting touch-up.
 
 ## What Experience Backs the Artist at the Wilmington Studio?
 
-Adriana Souza Santos brings 20+ years in the permanent makeup industry to the Wilmington, MA studio, with more than 5,000 procedures performed and over 300 students trained. She holds AAM Diamond Certified Trainer status and consults in both English and Portuguese, a detail that matters in a bilingual community like Wilmington.
+Adriana Souza Santos brings 20+ years in the permanent makeup industry to the Wilmington, MA studio, with more than 5,000 procedures performed and over 300 students trained. She holds AAM Diamond Certified Trainer status and consults in English, Portuguese and Spanish, a detail that matters in a multilingual community like Wilmington.
 
 Adriana Beauty Services, Inc. has operated in Massachusetts since 2017, running Wilmington alongside its Salem, New Hampshire studio.
 
@@ -131,7 +131,7 @@ Prices at the Wilmington studio start at $250 for bottom eyeliner and range up t
 
 Yes. The Wilmington studio offers payment plans through Cherry Technologies, an independent financing provider separate from Adriana's Permanent Makeup. Options include 4 interest-free payments or a longer plan up to 24 months with interest. Approval is not guaranteed; Cherry sets the terms, not the studio.
 
-Yes. Master Permanent Makeup Artist Adriana Souza Santos consults in both English and Portuguese at the Wilmington studio. Clients who prefer discussing brows, lips, or eyeliner goals in Portuguese can request that language when booking, online through Fresha or by phone at (781) 853-8063.
+Yes. Master Permanent Makeup Artist Adriana Souza Santos consults in English, Portuguese and Spanish at the Wilmington studio. Clients who prefer discussing brows, lips, or eyeliner goals in Portuguese or Spanish can request that language when booking, online through Fresha or by phone at (781) 853-8063.
 
 Clients travel to the Wilmington studio from Reading, Woburn, Burlington, North Reading, Tewksbury, Billerica, and Andover, all within about 11 miles by road. Wilmington's own population is 23,336, and its spot on Route 129 near the I-93 interchange makes it a natural meeting point.
 

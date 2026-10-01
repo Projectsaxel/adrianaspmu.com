@@ -1268,7 +1268,7 @@ def payment_plan_body(depth=1):
     <h2>Ready to Book Your Permanent Makeup?</h2>
     <p>Check your options with Cherry first, then book the appointment. See real-time availability
     for the Wilmington MA and Salem NH studios, or send your question and we answer with the honest
-    options for your features. We answer in English and in Portuguese.</p>
+    options for your features. We answer in English, Portuguese and Spanish.</p>
     <a class="btn btn-primary" href="{CHERRY_APPLY}" target="_blank" rel="noopener noreferrer">Check your options with Cherry</a>
     <a class="btn btn-secondary" href="{fresha_book_url("payment-plan")}" rel="noopener">Book Online Now</a>
     <a class="btn btn-ghost" href="{base}contact/">Ask a Question First</a>

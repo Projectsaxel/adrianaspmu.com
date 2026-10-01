@@ -20,7 +20,7 @@ With over 20 years of experience, **Adriana Santos** has transformed the beauty 
 
 ### Adriana Santos
 
-Adriana is a **Brazilian permanent makeup artist and educator** with over 20 years of experience in the beauty industry. She began her career in Brazil, one of the largest permanent makeup markets in the world, and brought that training to Massachusetts when she founded Adriana’s Permanent Makeup in 2017. She teaches in English and in Portuguese, and has built a solid reputation for her professionalism, attention to detail, and passion for teaching.
+Adriana is a **Brazilian permanent makeup artist and educator** with over 20 years of experience in the beauty industry. She began her career in Brazil, one of the largest permanent makeup markets in the world, and brought that training to Massachusetts when she founded Adriana’s Permanent Makeup in 2017. She teaches in English, Portuguese and Spanish, and has built a solid reputation for her professionalism, attention to detail, and passion for teaching.
 
 As the founder of **Adriana's Academy**, she has trained **over 300 students** through hands-on, high-quality programs designed to build real confidence and skill. With more than **5,000 procedures performed**, Adriana continues to shape the next generation of PMU artists with her modern approach and commitment to excellence.
 

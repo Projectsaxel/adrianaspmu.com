@@ -56,7 +56,7 @@ Lowell Street is Massachusetts Route 129, crossing Route 38 near the town center
 
 ## What Backs the Artist Performing Nano Brows in Wilmington?
 
-Adriana Souza Santos, who performs Nano Brows at the Wilmington studio, has completed more than 5,000 procedures and trained more than 300 students over a 20-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in both English and Portuguese.
+Adriana Souza Santos, who performs Nano Brows at the Wilmington studio, has completed more than 5,000 procedures and trained more than 300 students over a 20-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in English, Portuguese and Spanish.
 
 *The Wilmington studio, where Nano Brows appointments begin.*
 

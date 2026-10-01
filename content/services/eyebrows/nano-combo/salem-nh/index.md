@@ -24,7 +24,7 @@ Nano Combo Brows in Salem, NH cost $600, already including the perfecting sessio
 
 Nano Combo Brows in Salem, NH suit clients near Route 97 who want more density than Microblading alone gives, and who can commit to a 6- to 8-week healing period. It is not appropriate for anyone pregnant, breastfeeding, under 18, or using isotretinoin, with no exception at either studio.
 
-- Good fit: Salem-area clients wanting fuller, shaded brows, including Portuguese speakers
+- Good fit: Salem-area clients wanting fuller, shaded brows, including Portuguese and Spanish speakers
 - Not a fit: anyone pregnant, breastfeeding, or under 18, at either studio
 - Not yet: isotretinoin, blood thinners, autoimmune, or keloid history without clearance — see the [contraindications guide](../../../../aftercare/#who-should-not)
 
@@ -56,7 +56,7 @@ Main Street is Route 97, with its western terminus at NH-28, Broadway; the addre
 
 ## What Backs the Artist Performing Nano Combo Brows in Salem?
 
-Adriana Souza Santos, the Master Permanent Makeup Artist performing Nano Combo Brows at the Salem studio, has completed 5,000+ procedures and trained 300+ students over a 20-plus year career begun in Brazil before the U.S. studio opened in 2017, holds an AAM Diamond Certified Trainer credential, and consults in English and Portuguese.
+Adriana Souza Santos, the Master Permanent Makeup Artist performing Nano Combo Brows at the Salem studio, has completed 5,000+ procedures and trained 300+ students over a 20-plus year career begun in Brazil before the U.S. studio opened in 2017, holds an AAM Diamond Certified Trainer credential, and consults in English, Portuguese and Spanish.
 
 Adriana is currently the only artist at the Salem studio; the second artist, Livian Camargo Gomes, works only in Wilmington, MA.
 

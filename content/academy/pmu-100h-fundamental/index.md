@@ -138,7 +138,7 @@ Yes. Tuition can be split through our in-house payment plan (a deposit, then sch
 
 Certification and licence are different things. The course gives you an AAM-accredited certificate; the licence to practise is issued by government. Massachusetts licenses body art town by town through each Board of Health, while New Hampshire licenses at state level under RSA 314-A. You apply where you intend to work.
 
-Adriana Souza Santos, AAM Diamond Certified Trainer, which is the American Academy of Micropigmentation’s highest level of instructor recognition. She has performed more than 5,000 procedures across 20+ years and has trained over 300 students. Classes are taught in English and in Portuguese.
+Adriana Souza Santos, AAM Diamond Certified Trainer, which is the American Academy of Micropigmentation’s highest level of instructor recognition. She has performed more than 5,000 procedures across 20+ years and has trained over 300 students. Classes are taught in English, Portuguese and Spanish.
 
 All training happens at Adriana’s Academy, 39 Cross Street, Suite 206, Peabody, MA. That address is the training division and serves students only — no client procedures are performed there. Client appointments stay at the Wilmington, MA and Salem, NH studios.
 

@@ -402,8 +402,31 @@
         form_source: "contact-page",
       });
     },
-    academyLead: function (course) {
-      gtagSafe("academy_lead", { course: course || PAGE.service || "(not set)" });
+    /**
+     * Lead de curso. extra.lead_path separa o alcance da secao de anuncio
+     * da home do da pagina do curso: home-announcement (direto pela secao),
+     * home-announcement > course-page, course-page, contact-page.
+     */
+    academyLead: function (course, extra) {
+      extra = extra || {};
+      gtagSafe("academy_lead", {
+        course: course || PAGE.service || "(not set)",
+        form_source: extra.form_source || "contact-page",
+        lead_path: extra.lead_path || "(not set)",
+        campaign: extra.campaign || "(none)",
+      });
+    },
+    /** Secao de anuncio da home apareceu na tela. Alcance, nao lead. */
+    announceView: function (campaign) {
+      gtagSafe("announce_view", { campaign: campaign });
+    },
+    /** Clique na secao: cta = enroll-form (abre o formulario) ou program-page. */
+    announceClick: function (campaign, cta) {
+      gtagSafe("announce_click", { campaign: campaign, cta: cta || "(not set)" });
+    },
+    /** Abriu o formulario da turma. Intencao, nao lead. */
+    classFormOpen: function (campaign) {
+      gtagSafe("class_form_open", { campaign: campaign, form_source: "home-announcement" });
     },
     /** Abriu a janela do botao flutuante. Intencao, nao lead. */
     floatCtaOpen: function () {

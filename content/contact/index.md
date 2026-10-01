@@ -4,7 +4,7 @@
 
 # Contact Adriana's Permanent Makeup
 
-Reach Adriana's Permanent Makeup by phone, by the form below, or by booking directly on Fresha, for either the Wilmington, MA or Salem, NH studio. The team reads every message and consults in both English and Portuguese. A consultation, not a same-day procedure, is the usual next step after a first message.
+Reach Adriana's Permanent Makeup by phone, by the form below, or by booking directly on Fresha, for either the Wilmington, MA or Salem, NH studio. The team reads every message and consults in English, Portuguese and Spanish. A consultation, not a same-day procedure, is the usual next step after a first message.
 
 ## What's the Best Way to Reach Adriana's Permanent Makeup?
 
@@ -42,7 +42,7 @@ A useful first message names the service you're considering, your preferred stud
 - Your preferred studio, Wilmington, MA or Salem, NH
 - Whether you have existing permanent makeup on the same area
 - Any relevant health conditions, covered fully on the [contraindications guide](../aftercare/#who-should-not)
-- Whether English or Portuguese is your preferred consultation language
+- Whether English, Portuguese or Spanish is your preferred consultation language
 
 ## How Do I Contact Adriana's Academy?
 
@@ -68,7 +68,7 @@ Consultation terms are confirmed when you book or message the studio directly, r
 
 Call the studio directly — (781) 853-8063 for Wilmington or (978) 223-7496 for Salem — for anything tied to a booking that's already on the calendar.
 
-Yes. Adriana Souza Santos and the team consult and correspond in both English and Portuguese; mention your preference in the message field above.
+Yes. Adriana Souza Santos and the team consult and correspond in English, Portuguese and Spanish; mention your preference in the message field above.
 
 ## Pay over time, starting today
 

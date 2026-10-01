@@ -59,7 +59,7 @@ Lowell Street is Massachusetts Route 129, with highway access at the I-93 interc
 
 ## What Backs the Artist Performing Smokey Eyeliner in Wilmington?
 
-Adriana Souza Santos, the Master Permanent Makeup Artist performing smokey eyeliner at the Wilmington studio, has completed more than 5,000 procedures and trained more than 300 students over a 20-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in both English and Portuguese. A second licensed artist, Livian Camargo Gomes, also performs procedures at the Wilmington studio.
+Adriana Souza Santos, the Master Permanent Makeup Artist performing smokey eyeliner at the Wilmington studio, has completed more than 5,000 procedures and trained more than 300 students over a 20-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in English, Portuguese and Spanish. A second licensed artist, Livian Camargo Gomes, also performs procedures at the Wilmington studio.
 
 *The Wilmington studio, where Smokey Eyeliner appointments begin.*
 

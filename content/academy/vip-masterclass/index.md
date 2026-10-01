@@ -53,12 +53,12 @@ A complete beginner who wants the accredited certificate and does not mind learn
 
 ## What Stays the Same in Every VIP Class?
 
-The curriculum, number of sessions, and price all change from student to student, but five things never do: the Peabody location, one-on-one instruction with Adriana herself, hands-on practice, the choice of English or Portuguese, and ongoing support after the class ends.
+The curriculum, number of sessions, and price all change from student to student, but five things never do: the Peabody location, one-on-one instruction with Adriana herself, hands-on practice, the choice of English, Portuguese or Spanish, and ongoing support after the class ends.
 
 - **In person, at the academy in Peabody** — 39 Cross Street, Suite 206.
 - **One-on-one with Adriana**, who holds Diamond Certified Trainer status with the American Academy of Micropigmentation.
 - **Hands-on practice**, with live model work whenever the technique calls for it.
-- **Taught in English or in Portuguese**, whichever you are more comfortable learning in.
+- **Taught in English, Portuguese or Spanish**, whichever you are more comfortable learning in.
 - **Ongoing support afterward**, the same as our other programs.
 
 ## Does the VIP Masterclass Include a PMU License?
@@ -83,7 +83,7 @@ Price is based on your current level, the technique you want, and the number of 
 
 Yes. Complete beginners are welcome, though a beginner who wants the accredited certificate and does not mind a group setting usually gets better value from the 100-Hour Fundamental Class.
 
-Yes. Adriana teaches in English or Portuguese, whichever you are more comfortable learning in.
+Yes. Adriana teaches in English, Portuguese or Spanish, whichever you are more comfortable learning in.
 
 No. Licensing is set by the town or state where you plan to work, and meeting those requirements is your own responsibility, not something the academy issues.
 
@@ -95,7 +95,7 @@ Yes. This course has an in-house payment plan, separate from the Cherry plans us
 
 Yes, and also to artists already taking clients. That is the point of quoting it individually: the syllabus is built from where you actually are rather than from a fixed curriculum. Beginners and working artists simply get different classes under the same name.
 
-Adriana Souza Santos, AAM Diamond Certified Trainer, the American Academy of Micropigmentation’s highest instructor level, with more than 5,000 procedures across 20+ years and over 300 students trained. The class is one-on-one, in English or in Portuguese.
+Adriana Souza Santos, AAM Diamond Certified Trainer, the American Academy of Micropigmentation’s highest instructor level, with more than 5,000 procedures across 20+ years and over 300 students trained. The class is one-on-one, in English, Portuguese or Spanish.
 
 At Adriana’s Academy, 39 Cross Street, Suite 206, Peabody, MA — the training division, students only. No client procedures are performed at that address. Client appointments are at the Wilmington, MA and Salem, NH studios.
 

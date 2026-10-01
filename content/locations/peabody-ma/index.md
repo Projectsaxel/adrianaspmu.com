@@ -76,7 +76,7 @@ Adriana's Academy is the training division of Adriana Beauty Services, Inc., at 
 
 The academy sits at the junction of Route 114 and Route 128, across from the Northshore Mall. The nearest access is Route 128 Exit 40, signed 40A/40B, at mile 39.7 of the route's mileposting; I-95 has already split off Route 128 further south, so this exit belongs to Route 128 alone.
 
-Every class is taught personally by Adriana Souza Santos, 20-plus years in permanent makeup, who began her career in Brazil before opening the U.S. business in 2017. She holds AAM Diamond Certified Trainer status, has performed over 5,000 procedures, and has trained more than 300 students, in English and Portuguese.
+Every class is taught personally by Adriana Souza Santos, 20-plus years in permanent makeup, who began her career in Brazil before opening the U.S. business in 2017. She holds AAM Diamond Certified Trainer status, has performed over 5,000 procedures, and has trained more than 300 students, in English, Portuguese and Spanish.
 
 The 100 Hours Fundamental Class is $7,000, or $15,400 combined with the 1-year apprenticeship. The apprenticeship alone runs $700 a month. The VIP Masterclass is private, one-on-one instruction priced on request around the student's level. Payment plans are available for both of the fixed-price courses.
 

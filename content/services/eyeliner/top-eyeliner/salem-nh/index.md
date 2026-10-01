@@ -26,7 +26,7 @@ Want both lines? The [Eyeliner Combo](../../eyeliner-combo/salem-nh/) is $500, v
 
 Top Eyeliner in Salem, NH suits first-time eyeliner clients who want lasting definition and can commit to the 6- to 8-week healing period, with the exact thickness decided together at mapping. It is not for anyone pregnant, breastfeeding, under 18, or currently using isotretinoin.
 
-- Good fit: first-time eyeliner clients choosing their intensity at mapping, from barely-there to a defined tail, including Portuguese speakers
+- Good fit: first-time eyeliner clients choosing their intensity at mapping, from barely-there to a defined tail, including Portuguese and Spanish speakers
 - Want lower-lid or shaded definition instead? See [Bottom Eyeliner](../../bottom-eyeliner/salem-nh/) or [Smokey Eyeliner](../../smokey-eyeliner/salem-nh/)
 - Not a fit: anyone pregnant, breastfeeding, or under 18
 - Not yet: isotretinoin, blood thinners, autoimmune, or keloid history — see the [contraindications guide](../../../../aftercare/#who-should-not)
@@ -59,7 +59,7 @@ Main Street is New Hampshire Route 97 along its full length. New Hampshire has n
 
 ## What Backs the Artist Performing Top Eyeliner in Salem?
 
-Adriana Souza Santos, the Master Permanent Makeup Artist performing top eyeliner at the Salem studio, has completed more than 5,000 procedures and trained more than 300 students over a 20-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in both English and Portuguese.
+Adriana Souza Santos, the Master Permanent Makeup Artist performing top eyeliner at the Salem studio, has completed more than 5,000 procedures and trained more than 300 students over a 20-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in English, Portuguese and Spanish.
 
 *The Salem studio, where Top Eyeliner appointments begin.*
 

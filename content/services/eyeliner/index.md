@@ -89,7 +89,7 @@ Beyond eyeliner: [eyebrows](../eyebrows/), [lips](../lips/), the [Brows + Lips C
 
 ## Ready to Book Your Permanent Makeup?
 
-See real-time availability for the Wilmington MA and Salem NH studios, or send your question and we answer with the honest options for your features. We answer in English and in Portuguese.
+See real-time availability for the Wilmington MA and Salem NH studios, or send your question and we answer with the honest options for your features. We answer in English, Portuguese and Spanish.
 
 ## Pay over time, starting today
 
@@ -113,4 +113,4 @@ Six things are worth verifying with any permanent makeup artist before you book:
 | What the price includes | Ask whether the perfecting session is included or billed later. This is where quoted prices most often stop matching the final bill. | The perfecting session, 6 to 8 weeks after the appointment, is included in every original price. The yearly touch-up, from $300, is a separate visit about 12 months later. |
 | Whether the price is published at all | Ask for the price before the consultation. A studio that will not name a range before seeing you is not comparable to one that will. | All 13 services are published with their prices, from $250 to $850, on the [price list](../../prices/). |
 | When they say no | Ask what would make them refuse to perform the procedure. An artist who never refuses is a warning sign. | Pregnancy, breastfeeding, under 18 and isotretinoin are refused at both studios with no exception. The full list is in the [contraindications guide](../../aftercare/), published before you book rather than after. |
-| Whether the technique fits you | Ask which technique suits your skin type, and what they would recommend if this one does not. | Four eyeliner options, from a subtle lower line to a full shaded finish. This is settled at the consultation, in English or Portuguese. |
+| Whether the technique fits you | Ask which technique suits your skin type, and what they would recommend if this one does not. | Four eyeliner options, from a subtle lower line to a full shaded finish. This is settled at the consultation, in English, Portuguese or Spanish. |
