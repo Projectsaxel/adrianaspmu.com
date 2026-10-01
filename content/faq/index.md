@@ -116,9 +116,9 @@ Adriana's Permanent Makeup operates two client-facing studios, identical in serv
 
 | Location | Serves | Language |
 | --- | --- | --- |
-| Wilmington, MA | Clients — brows, lips, eyeliner | English & Portuguese |
-| Salem, NH | Clients — brows, lips, eyeliner | English & Portuguese |
-| Peabody, MA (Academy) | Students only, no client procedures | English & Portuguese |
+| Wilmington, MA | Clients — brows, lips, eyeliner | English, Portuguese & Spanish |
+| Salem, NH | Clients — brows, lips, eyeliner | English, Portuguese & Spanish |
+| Peabody, MA (Academy) | Students only, no client procedures | English, Portuguese & Spanish |
 
 ### What's the Difference Between the Wilmington, MA and Salem, NH Studios?
 
@@ -128,9 +128,9 @@ Both studios offer the same services at the same prices; the difference is locat
 
 No. The Peabody, MA address is [Adriana's Academy](../academy/), a training facility for students, not client procedures. Anyone booking a brow, lip, or eyeliner service should book Wilmington, MA or Salem, NH instead. Training enquiries go through the same [contact form](../contact/).
 
-### Can I Have My Consultation in Portuguese?
+### Can I Have My Consultation in Portuguese or Spanish?
 
-Yes. Adriana Souza Santos consults with clients in both English and Portuguese, serving the Portuguese-speaking communities near both studios. Mention a language preference in your [message](../contact/) or when booking.
+Yes. Adriana Souza Santos consults with clients in English, Portuguese and Spanish, serving the Portuguese- and Spanish-speaking communities near both studios. Mention a language preference in your [message](../contact/) or when booking.
 
 ## Pay over time, starting today
 
@@ -143,6 +143,6 @@ Approval and rates subject to eligibility. Cherry is a financial
 
 ## Ready to Book Your Appointment?
 
-Book online for Wilmington, MA or Salem, NH on Fresha, or ask a question first. The team answers in English and Portuguese.
+Book online for Wilmington, MA or Salem, NH on Fresha, or ask a question first. The team answers in English, Portuguese and Spanish.
 
 Reviewed by [Adriana Souza Santos, Master Permanent Makeup Artist](../about/) with 20+ years and 5,000+ procedures, AAM Diamond Certified Trainer, responsible for this page's accuracy. Questions: [contact page](../contact/). Last reviewed September 21, 2026.

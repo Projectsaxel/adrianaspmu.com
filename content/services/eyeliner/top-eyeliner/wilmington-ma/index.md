@@ -26,7 +26,7 @@ Want both lines? The [Eyeliner Combo](../../eyeliner-combo/wilmington-ma/) is $5
 
 Top Eyeliner in Wilmington, MA suits first-time eyeliner clients who want lasting definition and can commit to the 6- to 8-week healing period, with the exact thickness decided together at mapping. It is not for anyone pregnant, breastfeeding, under 18, or currently using isotretinoin.
 
-- Good fit: first-time eyeliner clients choosing their intensity at mapping, from barely-there to a defined tail, including Portuguese speakers
+- Good fit: first-time eyeliner clients choosing their intensity at mapping, from barely-there to a defined tail, including Portuguese and Spanish speakers
 - Want lower-lid or shaded definition instead? See [Bottom Eyeliner](../../bottom-eyeliner/wilmington-ma/) or [Smokey Eyeliner](../../smokey-eyeliner/wilmington-ma/)
 - Not a fit: anyone pregnant, breastfeeding, or under 18
 - Not yet: isotretinoin, blood thinners, autoimmune, or keloid history — see the [contraindications guide](../../../../aftercare/#who-should-not)
@@ -59,7 +59,7 @@ Lowell Street is Massachusetts Route 129, with highway access at the I-93 interc
 
 ## What Backs the Artist Performing Top Eyeliner in Wilmington?
 
-Adriana Souza Santos, the Master Permanent Makeup Artist performing top eyeliner at the Wilmington studio, has completed more than 5,000 procedures and trained more than 300 students over a 20-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in both English and Portuguese. A second licensed artist, Livian Camargo Gomes, also performs procedures at the Wilmington studio.
+Adriana Souza Santos, the Master Permanent Makeup Artist performing top eyeliner at the Wilmington studio, has completed more than 5,000 procedures and trained more than 300 students over a 20-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in English, Portuguese and Spanish. A second licensed artist, Livian Camargo Gomes, also performs procedures at the Wilmington studio.
 
 *The Wilmington studio, where Top Eyeliner appointments begin.*
 

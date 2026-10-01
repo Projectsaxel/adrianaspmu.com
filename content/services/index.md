@@ -158,7 +158,7 @@ Adriana Souza Santos has performed more than 5,000 procedures across 20+ years a
 
 ## Ready to Book Your Permanent Makeup?
 
-See real-time availability for the Wilmington MA and Salem NH studios, or send your question and we answer with the honest options for your features. We answer in English and in Portuguese.
+See real-time availability for the Wilmington MA and Salem NH studios, or send your question and we answer with the honest options for your features. We answer in English, Portuguese and Spanish.
 
 ## Pay over time, starting today
 

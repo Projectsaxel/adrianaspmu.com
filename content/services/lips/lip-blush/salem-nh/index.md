@@ -24,7 +24,7 @@ Lip Blush in Salem, NH costs $550, already including the perfecting session 6 to
 
 Lip Blush in Salem, NH suits clients whose natural lip tone is already fairly even and who want more definition and a soft, chosen color rather than a correction. It assumes an even starting canvas: pigment placed over dark, cool, or blue-grey lips tends to shift, which is why Dark Lip Neutralization exists as the corrective first step instead.
 
-- Good fit: Salem-area clients with an already even lip tone who want soft, chosen color and sharper definition, including Portuguese speakers
+- Good fit: Salem-area clients with an already even lip tone who want soft, chosen color and sharper definition, including Portuguese and Spanish speakers
 - Not a fit: anyone pregnant, breastfeeding, or under 18, at either studio
 - Not yet: isotretinoin, blood thinners, autoimmune, or keloid history without clearance — see the [contraindications guide](../../../../aftercare/#who-should-not)
 - Talk to your doctor first: anyone with a history of cold sores (HSV-1), since lip tattooing can trigger a reactivation — get clearance from a clinician first
@@ -58,7 +58,7 @@ Main Street is Route 97, with its western terminus at NH-28, Broadway; the addre
 
 ## What Backs the Artist Performing Lip Blush in Salem?
 
-Adriana Souza Santos, the Master Permanent Makeup Artist performing Lip Blush at the Salem studio, has completed 5,000+ procedures and trained 300+ students over a 20-plus year career begun in Brazil before the U.S. studio opened in 2017, holds an AAM Diamond Certified Trainer credential, and consults in English and Portuguese.
+Adriana Souza Santos, the Master Permanent Makeup Artist performing Lip Blush at the Salem studio, has completed 5,000+ procedures and trained 300+ students over a 20-plus year career begun in Brazil before the U.S. studio opened in 2017, holds an AAM Diamond Certified Trainer credential, and consults in English, Portuguese and Spanish.
 
 Adriana is currently the only artist at the Salem studio; the second artist, Livian Camargo Gomes, works only in Wilmington, MA.
 

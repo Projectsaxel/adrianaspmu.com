@@ -71,10 +71,10 @@ Every price above already includes the perfecting touch-up 6 to 8 weeks later. C
 
 Adriana Souza Santos, Master Permanent Makeup Artist with 20+ years in the industry and 5,000+ procedures performed, treats clients at both the Wilmington, MA and Salem, NH studios. Livian Camargo Gomes, the second licensed artist, works from the Wilmington, MA studio.
 
-Adriana Souza Santos began her career in Brazil before opening this business in the United States in 2017, and consults in both English and Portuguese at either location. She also trains new artists separately at [Adriana's Academy](../academy/) in Peabody, MA, apart from any client appointment.
+Adriana Souza Santos began her career in Brazil before opening this business in the United States in 2017, and consults in English, Portuguese and Spanish at either location. She also trains new artists separately at [Adriana's Academy](../academy/) in Peabody, MA, apart from any client appointment.
 
 This gallery does not label which of the two artists performed a specific photo. A client wanting to confirm who will perform their own appointment should ask at booking or consultation, by studio: [Wilmington, MA](../locations/wilmington-ma/) or [Salem, NH](../locations/salem-nh/).
 
 ## Ready to Book Your Permanent Makeup?
 
-See real-time availability for the Wilmington MA and Salem NH studios, or send your question and we answer with the honest options for your features. We answer in English and in Portuguese.
+See real-time availability for the Wilmington MA and Salem NH studios, or send your question and we answer with the honest options for your features. We answer in English, Portuguese and Spanish.

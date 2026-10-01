@@ -589,7 +589,7 @@ ORG_EXTRA = {
         "Permanent makeup studio and training academy serving Wilmington, Massachusetts "
         "and Salem, New Hampshire. Nano brows, microblading, powder brows, lip blush, "
         "dark lip neutralization and permanent eyeliner, performed by licensed artists. "
-        "Consultations in English and Portuguese."
+        "Consultations in English, Portuguese and Spanish."
     ),
     "telephone": "+1-781-853-8063",
     "email": None,  # a empresa nao tem caixa generica monitorada; nao inventar
@@ -611,21 +611,21 @@ ORG_EXTRA = {
             "contactType": "customer service",
             "telephone": "+1-781-853-8063",
             "areaServed": "US-MA",
-            "availableLanguage": ["English", "Portuguese"],
+            "availableLanguage": ["English", "Portuguese", "Spanish"],
         },
         {
             "@type": "ContactPoint",
             "contactType": "customer service",
             "telephone": "+1-978-223-7496",
             "areaServed": "US-NH",
-            "availableLanguage": ["English", "Portuguese"],
+            "availableLanguage": ["English", "Portuguese", "Spanish"],
         },
     ],
     "areaServed": [
         {"@type": "State", "name": "Massachusetts"},
         {"@type": "State", "name": "New Hampshire"},
     ],
-    "knowsLanguage": ["en-US", "pt-BR"],
+    "knowsLanguage": ["en-US", "pt-BR", "es"],
 }
 
 
@@ -898,7 +898,7 @@ PERSON_NODE = {
     # fundo): o Person nomeava uma pessoa e mostrava quatro. Trocado em
     # 21/09/2026 pela foto de estudio da sessao Meet the Team.
     "image": f"{BASE}/assets/images/adriana-souza-santos.webp",
-    "knowsLanguage": ["en-US", "pt-BR"],
+    "knowsLanguage": ["en-US", "pt-BR", "es"],
     "hasCredential": {
         "@type": "EducationalOccupationalCredential",
         "credentialCategory": "Professional certification",
@@ -1084,7 +1084,7 @@ def _criteria_rows(fit_text):
          "Pregnancy, breastfeeding, under 18 and isotretinoin are refused at both studios with no exception. The full list is in the <a href=\"{up}aftercare/\">contraindications guide</a>, published before you book rather than after."),
         ("Whether the technique fits you",
          "Ask which technique suits your skin type, and what they would recommend if this one does not.",
-         fit_text + " This is settled at the free consultation, in English or Portuguese."),
+         fit_text + " This is settled at the free consultation, in English, Portuguese or Spanish."),
     ]
     return rows
 
@@ -1292,7 +1292,7 @@ FAQ_BY_PAGE = {
          "Adriana Souza Santos, AAM Diamond Certified Trainer, which is the American Academy of "
          "Micropigmentation&rsquo;s highest level of instructor recognition. She has performed more "
          "than 5,000 procedures across 20+ years and has trained over 300 students. Classes are "
-         "taught in English and in Portuguese."),
+         "taught in English, Portuguese and Spanish."),
         ("Where are classes held?",
          "All training happens at Adriana&rsquo;s Academy, 39 Cross Street, Suite 206, Peabody, MA. "
          "That address is the training division and serves students only &mdash; no client procedures "
@@ -1313,7 +1313,7 @@ FAQ_BY_PAGE = {
          "Adriana Souza Santos, AAM Diamond Certified Trainer &mdash; the American Academy of "
          "Micropigmentation&rsquo;s highest instructor level &mdash; with more than 5,000 procedures "
          "across 20+ years and over 300 students trained. Supervision happens in person at the "
-         "Peabody studio, in English or in Portuguese."),
+         "Peabody studio, in English, Portuguese or Spanish."),
         ("Do I need the 100-hour course first?",
          "The two are separate paths and the right one depends on where you are starting. Bring "
          "that question to the consultation: the academy will tell you honestly which fits, "
@@ -1342,8 +1342,8 @@ FAQ_BY_PAGE = {
         ("Who teaches it?",
          "Adriana Souza Santos, AAM Diamond Certified Trainer, the American Academy of "
          "Micropigmentation&rsquo;s highest instructor level, with more than 5,000 procedures across "
-         "20+ years and over 300 students trained. The class is one-on-one, in English or in "
-         "Portuguese."),
+         "20+ years and over 300 students trained. The class is one-on-one, in English, Portuguese or "
+         "Spanish."),
         ("Where is it taught?",
          "At Adriana&rsquo;s Academy, 39 Cross Street, Suite 206, Peabody, MA &mdash; the training "
          "division, students only. No client procedures are performed at that address. Client "

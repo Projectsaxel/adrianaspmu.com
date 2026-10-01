@@ -26,7 +26,7 @@ Eyeliner Combo in Salem, NH costs $500 for Top and Bottom Eyeliner performed in 
 
 Eyeliner Combo in Salem, NH suits clients near Route 97 who want both lash lines defined in a single visit and can commit to a 6- to 8-week healing period before the perfecting session. It is not appropriate for anyone pregnant, breastfeeding, under 18, or currently using isotretinoin, with no exception at either studio.
 
-- Good fit: Salem, Methuen, or Windham clients who want upper and lower lash-line definition in one appointment, including Portuguese speakers
+- Good fit: Salem, Methuen, or Windham clients who want upper and lower lash-line definition in one appointment, including Portuguese and Spanish speakers
 - Not a fit: anyone pregnant, breastfeeding, or under 18, at either studio
 - Not yet: isotretinoin, blood thinners, autoimmune conditions, or keloid history without clearance — see the [contraindications guide](../../../../aftercare/#who-should-not)
 
@@ -58,7 +58,7 @@ Main Street is New Hampshire Route 97 along its full length, terminating at NH-2
 
 ## What Backs the Artist Performing Eyeliner Combo in Salem?
 
-Adriana Souza Santos, the Master Permanent Makeup Artist performing Eyeliner Combo at the Salem studio, has completed more than 5,000 procedures and trained more than 300 students over a 20-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in both English and Portuguese.
+Adriana Souza Santos, the Master Permanent Makeup Artist performing Eyeliner Combo at the Salem studio, has completed more than 5,000 procedures and trained more than 300 students over a 20-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in English, Portuguese and Spanish.
 
 *The treatment station at 117A Main Street, on Route 97, where Eyeliner Combo appointments happen.*
 
@@ -86,7 +86,7 @@ The perfecting session is included in the $500 and happens 6 to 8 weeks after th
 
 Yes. The Salem studio offers payment plans through Cherry Technologies, an independent financing provider separate from Adriana's Permanent Makeup. Options include 4 interest-free payments or a longer plan up to 24 months with interest. Approval is not guaranteed; Cherry sets the terms, not the studio.
 
-Yes. Master Permanent Makeup Artist Adriana Souza Santos consults in both English and Portuguese at the Salem studio. Clients who prefer discussing eyeliner style in Portuguese can request that language when booking, online through Fresha or by phone at (978) 223-7496.
+Yes. Master Permanent Makeup Artist Adriana Souza Santos consults in English, Portuguese and Spanish at the Salem studio. Clients who prefer discussing eyeliner style in Portuguese or Spanish can request that language when booking, online through Fresha or by phone at (978) 223-7496.
 
 Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent financing provider: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
 

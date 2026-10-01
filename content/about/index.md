@@ -4,7 +4,7 @@
 
 # About Adriana Souza Santos
 
-Master Permanent Makeup Artist with 20+ years of experience and 5,000+ procedures performed. Trained and practicing in Brazil before founding Adriana’s Permanent Makeup in Massachusetts in 2017. Consultations in English and Portuguese.
+Master Permanent Makeup Artist with 20+ years of experience and 5,000+ procedures performed. Trained and practicing in Brazil before founding Adriana’s Permanent Makeup in Massachusetts in 2017. Consultations in English, Portuguese and Spanish.
 
 New Hampshire Body Artist license 4283, verifiable at the state’s public lookup. Body art licensed by the Wilmington and Peabody Boards of Health and by the Town of Salem, NH. Women-owned business. LGBTQ+ friendly.
 
@@ -14,7 +14,7 @@ Adriana began her career in permanent makeup in Brazil, a country with one of th
 
 She brought that work to Massachusetts and opened **Adriana’s Permanent Makeup in 2017**. What followed — two studios, an academy in Peabody, more than 5,000 procedures and over 300 students trained — was built on a foundation that already existed. In total she has **more than 20 years** in the industry.
 
-That background is the reason for two things clients notice. The first is **color work on deeper and warmer skin tones**, including dark lip neutralization, which is routine in Brazil and still specialized here. The second is that Adriana and the team **consult in both English and Portuguese**, so a client can describe exactly what she wants in her own language — which matters more than it sounds when the result is on her face for years.
+That background is the reason for two things clients notice. The first is **color work on deeper and warmer skin tones**, including dark lip neutralization, which is routine in Brazil and still specialized here. The second is that Adriana and the team **consult in English, Portuguese and Spanish**, so a client can describe exactly what she wants in her own language — which matters more than it sounds when the result is on her face for years.
 
 ## How Did Adriana’s Grow From One Studio Into Two States?
 
@@ -32,7 +32,7 @@ Two licensed artists work at Adriana’s Permanent Makeup: Adriana Souza Santos 
 
 Adriana is the founder and lead artist, with over 20 years in the beauty industry. She began her career in Brazil and opened Adriana’s Permanent Makeup in Massachusetts in 2017. She has performed more than 5,000 procedures and trained over 300 students.
 
-She holds Diamond Certified Trainer status with the American Academy of Micropigmentation, the academy’s highest level of instructor recognition. She consults and teaches in English and in Portuguese, and treats clients at both the Wilmington, MA and Salem, NH studios.
+She holds Diamond Certified Trainer status with the American Academy of Micropigmentation, the academy’s highest level of instructor recognition. She consults and teaches in English, Portuguese and Spanish, and treats clients at both the Wilmington, MA and Salem, NH studios.
 
 ### Livian Camargo Gomes
 
@@ -91,9 +91,9 @@ Outside of work, I love going to the gym, staying active, spending time with my 
 
 ## What Happens During a Consultation With Adriana?
 
-Every appointment opens with a consultation before any pigment is placed. Adriana assesses skin type, discusses the client’s goals, and maps a proposed shape or color directly on the client’s skin for approval, in either English or Portuguese depending on the client’s preference.
+Every appointment opens with a consultation before any pigment is placed. Adriana assesses skin type, discusses the client’s goals, and maps a proposed shape or color directly on the client’s skin for approval, in English, Portuguese or Spanish depending on the client’s preference.
 
-A client describes the result she wants in her own words rather than through a translated approximation, which matters when the outcome stays on her face for one to three years. A Portuguese-speaking client can specify a lip color or a brow shape precisely, without losing nuance in translation.
+A client describes the result she wants in her own words rather than through a translated approximation, which matters when the outcome stays on her face for one to three years. A Portuguese- or Spanish-speaking client can specify a lip color or a brow shape precisely, without losing nuance in translation.
 
 Pricing, the healing timeline, and any contraindications are confirmed at this stage too, before a deposit or appointment is booked.
 
@@ -105,6 +105,6 @@ These standards apply the same way at both the Wilmington, MA and Salem, NH stud
 
 ## Ready to Book Your Permanent Makeup?
 
-See real-time availability for the Wilmington MA and Salem NH studios, or send your question and we answer with the honest options for your features. We answer in English and in Portuguese.
+See real-time availability for the Wilmington MA and Salem NH studios, or send your question and we answer with the honest options for your features. We answer in English, Portuguese and Spanish.
 
 Reviewed by [Adriana Souza Santos, Master Permanent Makeup Artist](../about/) with 20+ years and 5,000+ procedures, AAM Diamond Certified Trainer, responsible for this page's accuracy. Questions: [contact page](../contact/). Last reviewed September 21, 2026.

@@ -90,7 +90,7 @@ Yes. Beyond Cherry, Fresha offers a payment plan at checkout while you are booki
 
 Check your options with Cherry first, then book the appointment. See real-time availability
  for the Wilmington MA and Salem NH studios, or send your question and we answer with the honest
- options for your features. We answer in English and in Portuguese.
+ options for your features. We answer in English, Portuguese and Spanish.
 
 Payment options through Cherry Technologies, Inc. are issued by its
  lending partners. 0% APR and other promotional rates are subject to eligibility. Cherry is a

@@ -84,7 +84,7 @@ The apprenticeship gives you hands-on hours, documentation, and guidance through
 
 Adriana Souza Santos teaches the apprenticeship personally. She has worked in the beauty industry for over 20 years, beginning her career in Brazil before opening her U.S. business in 2017, and holds Diamond Certified Trainer status with the American Academy of Micropigmentation.
 
-Adriana has trained more than 300 students and performed over 5,000 procedures herself. She teaches in both English and Portuguese.
+Adriana has trained more than 300 students and performed over 5,000 procedures herself. She teaches in English, Portuguese and Spanish.
 
 Adriana’s Academy operates as the educational division of Adriana Beauty Services, Inc., at **39 Cross Street, Suite 206, Peabody, MA 01960**, a space reserved for students only.
 
@@ -104,7 +104,7 @@ The apprenticeship runs $700 a month. It is the longer path: a year of supervise
 
 The apprenticeship is already billed monthly at $700. The 100-Hour Fundamental uses the same in-house payment plan; Cherry covers permanent makeup services, not tuition.
 
-Adriana Souza Santos, AAM Diamond Certified Trainer — the American Academy of Micropigmentation’s highest instructor level — with more than 5,000 procedures across 20+ years and over 300 students trained. Supervision happens in person at the Peabody studio, in English or in Portuguese.
+Adriana Souza Santos, AAM Diamond Certified Trainer — the American Academy of Micropigmentation’s highest instructor level — with more than 5,000 procedures across 20+ years and over 300 students trained. Supervision happens in person at the Peabody studio, in English, Portuguese or Spanish.
 
 The two are separate paths and the right one depends on where you are starting. Bring that question to the consultation: the academy will tell you honestly which fits, rather than selling you both. The VIP Masterclass exists for exactly the cases that do not fit either standard format.
 

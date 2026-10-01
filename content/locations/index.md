@@ -99,7 +99,7 @@ Wilmington draws from seven towns within about 11 miles, led by Reading at 2.7 m
 
 ## Ready to Book Your Permanent Makeup?
 
-See real-time availability for the Wilmington MA and Salem NH studios, or send your question and we answer with the honest options for your features. We answer in English and in Portuguese.
+See real-time availability for the Wilmington MA and Salem NH studios, or send your question and we answer with the honest options for your features. We answer in English, Portuguese and Spanish.
 
 ## Pay over time, starting today
 

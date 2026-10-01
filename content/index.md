@@ -113,7 +113,7 @@ Your Visit
 
 A visit starts with a consultation and skin assessment, moves through design approval, numbing, and pigment placement, and finishes with a perfecting session 6 to 8 weeks later, included in your original price. Full healing takes about 4 weeks.
 
-- Consultation and mapping, offered in English or Portuguese
+- Consultation and mapping, offered in English, Portuguese or Spanish
 - Design approval before any pigment is placed
 - Numbing, then pigment placement with single-use sterile needles
 - Perfecting session 6 to 8 weeks later, included in the original price

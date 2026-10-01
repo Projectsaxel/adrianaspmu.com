@@ -26,7 +26,7 @@ Brows + Lips Combo in Wilmington, MA costs $850 for a brow treatment and Lip Blu
 
 Brows + Lips Combo in Wilmington, MA suits clients near Route 129 who want fuller brows and enhanced lip color from one visit and one healing period. It is not appropriate for anyone pregnant, breastfeeding, under 18, or currently using isotretinoin, with no exception at either studio.
 
-- Good fit: Wilmington, Reading, or Woburn clients wanting brows and lips refreshed together, including Portuguese speakers
+- Good fit: Wilmington, Reading, or Woburn clients wanting brows and lips refreshed together, including Portuguese and Spanish speakers
 - Not a fit: anyone pregnant, breastfeeding, or under 18, at either studio
 - Not yet: isotretinoin, blood thinners, autoimmune conditions, cold sore history on the lip, or keloid history without clearance — see the [contraindications guide](../../../../aftercare/#who-should-not)
 
@@ -85,7 +85,7 @@ The perfecting session is included in the $850 and happens once, 6 to 8 weeks af
 
 Yes. The Wilmington studio offers payment plans through Cherry Technologies, an independent financing provider separate from Adriana's Permanent Makeup. Options include 4 interest-free payments or a longer plan up to 24 months with interest. Approval is not guaranteed; Cherry sets the terms, not the studio.
 
-Yes. Master Permanent Makeup Artist Adriana Souza Santos consults in both English and Portuguese at the Wilmington studio, alongside a second licensed artist, Livian Camargo Gomes. Clients who prefer Portuguese can request that language when booking, online through Fresha or by phone at (781) 853-8063.
+Yes. Master Permanent Makeup Artist Adriana Souza Santos consults in English, Portuguese and Spanish at the Wilmington studio, alongside a second licensed artist, Livian Camargo Gomes. Clients who prefer Portuguese or Spanish can request that language when booking, online through Fresha or by phone at (781) 853-8063.
 
 Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent financing provider: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
 

@@ -24,7 +24,7 @@ Microblading in Wilmington, MA costs $550, a single price that already includes 
 
 Microblading in Wilmington, MA suits clients near Route 129 who want fuller-looking brows without daily makeup and can commit to a 6- to 8-week healing period before the perfecting session. It is not appropriate for anyone pregnant, breastfeeding, under 18, or currently using isotretinoin, with no exception at either studio.
 
-- Good fit: Wilmington, Reading, or Woburn clients wanting fuller brows without daily filling-in, including Portuguese speakers
+- Good fit: Wilmington, Reading, or Woburn clients wanting fuller brows without daily filling-in, including Portuguese and Spanish speakers
 - Not a fit: anyone pregnant, breastfeeding, or under 18, at either studio
 - Not yet: isotretinoin, blood thinners, autoimmune, or keloid history without clearance — see the [contraindications guide](../../../../aftercare/#who-should-not)
 
@@ -55,7 +55,7 @@ Lowell Street is Massachusetts Route 129, crossing Route 38 near the center of t
 
 ## What Backs the Artist Performing Microblading in Wilmington?
 
-Adriana Souza Santos, the Master Permanent Makeup Artist performing microblading at the Wilmington studio, has completed more than 5,000 procedures and trained more than 300 students over a 20-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in both English and Portuguese.
+Adriana Souza Santos, the Master Permanent Makeup Artist performing microblading at the Wilmington studio, has completed more than 5,000 procedures and trained more than 300 students over a 20-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in English, Portuguese and Spanish.
 
 *The entrance to Suite F, on Route 129 in Wilmington, where microblading appointments begin.*
 
@@ -83,7 +83,7 @@ Microblading results typically last 12 to 24 months before fading. About 12 mont
 
 Yes. The Wilmington studio offers payment plans through Cherry Technologies, an independent financing provider separate from Adriana's Permanent Makeup. Options include 4 interest-free payments or a longer plan up to 24 months with interest. Approval is not guaranteed; Cherry sets the terms, not the studio.
 
-Yes. Master Permanent Makeup Artist Adriana Souza Santos consults in both English and Portuguese at the Wilmington studio. Clients who prefer discussing brow shape and color goals in Portuguese can request that language when booking, online through Fresha or by phone at (781) 853-8063.
+Yes. Master Permanent Makeup Artist Adriana Souza Santos consults in English, Portuguese and Spanish at the Wilmington studio. Clients who prefer discussing brow shape and color goals in Portuguese or Spanish can request that language when booking, online through Fresha or by phone at (781) 853-8063.
 
 Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent financing provider: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
 

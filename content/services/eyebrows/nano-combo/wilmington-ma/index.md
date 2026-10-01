@@ -24,7 +24,7 @@ Nano Combo Brows in Wilmington, MA cost $600, already including the perfecting s
 
 Nano Combo Brows in Wilmington, MA suit clients near Route 129 who want more density than Microblading alone gives, and who can commit to a 6- to 8-week healing period. It is not appropriate for anyone pregnant, breastfeeding, under 18, or using isotretinoin, with no exception at either studio.
 
-- Good fit: Wilmington-area clients wanting fuller, shaded brows, including Portuguese speakers
+- Good fit: Wilmington-area clients wanting fuller, shaded brows, including Portuguese and Spanish speakers
 - Not a fit: anyone pregnant, breastfeeding, or under 18, at either studio
 - Not yet: isotretinoin, blood thinners, autoimmune, or keloid history without clearance — see the [contraindications guide](../../../../aftercare/#who-should-not)
 
@@ -56,7 +56,7 @@ Lowell Street is Route 129, crossing Route 38 in town center. Wilmington has two
 
 ## What Backs the Artist Performing Nano Combo Brows in Wilmington?
 
-Adriana Souza Santos, the Master Permanent Makeup Artist performing Nano Combo Brows at the Wilmington studio, has completed 5,000+ procedures and trained 300+ students over a 20-plus year career begun in Brazil before the U.S. studio opened in 2017, holds an AAM Diamond Certified Trainer credential, and consults in English and Portuguese.
+Adriana Souza Santos, the Master Permanent Makeup Artist performing Nano Combo Brows at the Wilmington studio, has completed 5,000+ procedures and trained 300+ students over a 20-plus year career begun in Brazil before the U.S. studio opened in 2017, holds an AAM Diamond Certified Trainer credential, and consults in English, Portuguese and Spanish.
 
 Livian Camargo Gomes, a second licensed artist, also works at this studio.
 

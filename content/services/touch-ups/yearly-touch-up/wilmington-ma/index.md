@@ -25,7 +25,7 @@ A Yearly Touch-Up in Wilmington, MA starts at $300, with the final price set bas
 
 A Yearly Touch-Up in Wilmington, MA suits clients near Route 129 whose pigment has visibly faded roughly a year after their original procedure. It is not the right booking for anyone still inside the perfecting-session window, or for anyone pregnant, breastfeeding, or currently using isotretinoin.
 
-- Good fit: Wilmington, Reading, or Woburn clients whose pigment has faded about 12 months later, including Portuguese speakers
+- Good fit: Wilmington, Reading, or Woburn clients whose pigment has faded about 12 months later, including Portuguese and Spanish speakers
 - Not a fit: anyone pregnant, breastfeeding, or under 18, at either studio
 - Not yet: still inside the 6- to 8-week perfecting-session window (call to confirm), or isotretinoin, blood thinners, or autoimmune conditions without clearance — see the [contraindications guide](../../../../aftercare/#who-should-not)
 
@@ -84,7 +84,7 @@ Wilmington's Board of Health requires both an establishment permit and an indivi
 
 Yes. The Wilmington studio offers payment plans through Cherry Technologies, an independent financing provider separate from Adriana's Permanent Makeup. Options include 4 interest-free payments or a longer plan up to 24 months with interest. Approval is not guaranteed; Cherry sets the terms, not the studio.
 
-Yes. Master Permanent Makeup Artist Adriana Souza Santos consults in both English and Portuguese at the Wilmington studio, alongside a second licensed artist, Livian Camargo Gomes. Clients who prefer Portuguese can request that language when booking, online through Fresha or by phone at (781) 853-8063.
+Yes. Master Permanent Makeup Artist Adriana Souza Santos consults in English, Portuguese and Spanish at the Wilmington studio, alongside a second licensed artist, Livian Camargo Gomes. Clients who prefer Portuguese or Spanish can request that language when booking, online through Fresha or by phone at (781) 853-8063.
 
 Yearly Touch-Up is quoted at the consultation rather than listed at a fixed price, because the work needed changes from face to face. Every other service is published openly, from $250 to $850, on the [price list](../../../../prices/), so you can see the range the studio works in before you book anything.
 

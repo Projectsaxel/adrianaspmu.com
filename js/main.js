@@ -316,6 +316,12 @@
       await waitMinFill(loadedAt);
       payload.elapsed = Date.now() - loadedAt;
       payload.page = window.location.pathname;
+      // Caminho ate o lead: veio da pagina do curso (?course=) ou direto
+      // ao contato, e se antes passou pela secao de anuncio da home.
+      const deAnuncio = new URLSearchParams(window.location.search).get("from") === "home-announcement";
+      const via = deAnuncio ? "contact-page" : pedido && COURSES.includes(pedido) ? "course-page" : "contact-page";
+      const touch = announceTouch() || (deAnuncio ? "home-announcement-link" : "");
+      payload.lead_path = touch ? "home-announcement > " + via : via;
 
       let ok = false;
       let text = "We could not send your message. " + PHONES;
@@ -347,7 +353,13 @@
         // analytics.js mas nunca era disparado).
         const curso = COURSES.includes(payload.interest) ? payload.interest
           : payload.location === "Academy (Peabody, MA)" ? "academy" : "";
-        if (curso) window.PMU_track?.academyLead?.(curso);
+        if (curso) {
+          window.PMU_track?.academyLead?.(curso, {
+            form_source: "contact-page",
+            lead_path: payload.lead_path,
+            campaign: touch || "(none)",
+          });
+        }
         else window.PMU_track?.formSubmitContact?.(payload.location);
         form.reset();
       }
@@ -371,6 +383,231 @@
    * assunto do e-mail diga que o lead veio do botao flutuante, e nao da
    * pagina de contato.
    */
+  /*
+   * Secao de anuncio da home (turma da Academy). O botao abre um
+   * formulario na propria pagina, sem mensagem: so nome, telefone e
+   * e-mail. Nome da turma, curso e campanha vem dos data-* do HTML, para
+   * trocar de evento sem mexer aqui.
+   *
+   * Medicao (para separar o alcance da secao do da pagina do curso):
+   *   announce_view    a secao apareceu na tela (uma vez por pagina)
+   *   announce_click   cta = enroll-form | program-page
+   *   class_form_open  abriu o formulario
+   *   academy_lead     lead_path = home-announcement (direto pela secao)
+   * Quem clica em "Program Details" leva uma marca na sessao
+   * (ANNOUNCE_KEY). Se virar lead no formulario de contato, o lead_path
+   * sai "home-announcement > course-page", e nao so "course-page".
+   */
+  const ANNOUNCE_KEY = "pmu_announce";
+
+  function markAnnounceTouch(campaign) {
+    try {
+      sessionStorage.setItem(ANNOUNCE_KEY, campaign);
+    } catch (err) {
+      /* aba anonima ou storage bloqueado: segue sem a marca */
+    }
+  }
+
+  function announceTouch() {
+    try {
+      return sessionStorage.getItem(ANNOUNCE_KEY) || "";
+    } catch (err) {
+      return "";
+    }
+  }
+
+  function initClassLead() {
+    const section = document.getElementById("announcement");
+    const trigger = section && section.querySelector("[data-class-lead]");
+    if (!trigger) return;
+
+    const course = trigger.dataset.course || "pmu-100h-fundamental";
+    const className = trigger.dataset.className || "the class";
+    const classWhen = trigger.dataset.classWhen || "";
+    // O botao e um link para o formulario de contato (funciona sem JS ou
+    // com main.js antigo em cache). Com JS, abre a janela aqui mesmo.
+    trigger.setAttribute("role", "button");
+    trigger.setAttribute("aria-haspopup", "dialog");
+    trigger.setAttribute("aria-expanded", "false");
+    const campaign = section.dataset.campaign || "(not set)";
+
+    if ("IntersectionObserver" in window) {
+      const io = new IntersectionObserver(
+        (entries) => {
+          if (entries.some((en) => en.isIntersecting)) {
+            window.PMU_track?.announceView?.(campaign);
+            io.disconnect();
+          }
+        },
+        { threshold: 0.4 },
+      );
+      io.observe(section);
+    }
+
+    section.querySelectorAll("[data-announce-cta]").forEach((a) => {
+      a.addEventListener("click", () => {
+        markAnnounceTouch(campaign);
+        window.PMU_track?.announceClick?.(campaign, a.dataset.announceCta);
+      });
+    });
+
+    const modal = document.createElement("div");
+    modal.className = "float-modal class-modal";
+    modal.hidden = true;
+    modal.innerHTML = `
+      <div class="float-modal-panel" role="dialog" aria-modal="true" aria-labelledby="class-modal-title">
+        <button type="button" class="float-modal-close" aria-label="Close">&times;</button>
+        <p class="section-label class-modal-label"></p>
+        <h2 class="float-modal-title" id="class-modal-title">Start Your Enrollment</h2>
+        <p class="float-modal-sub">Fill in your name, phone and email to start your enrollment. Our team will send you the complete class information, answer your questions and guide you through the next steps: the enrollment agreement and the deposit that secures your spot.</p>
+        <p class="float-modal-langs">Classes in English &middot; Portugu&ecirc;s &middot; Espa&ntilde;ol</p>
+        <form novalidate>
+          <div class="float-hp" aria-hidden="true">
+            <label>Do not fill this<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+          </div>
+          <div class="form-group">
+            <label for="class-name">Name <span aria-hidden="true">*</span></label>
+            <input id="class-name" name="name" type="text" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="class-phone">Phone <span aria-hidden="true">*</span></label>
+            <input id="class-phone" name="phone" type="tel" required autocomplete="tel">
+          </div>
+          <div class="form-group">
+            <label for="class-email">Email <span aria-hidden="true">*</span></label>
+            <input id="class-email" name="email" type="email" required autocomplete="email">
+          </div>
+          <p class="form-message" hidden role="status" aria-live="polite"></p>
+          <button type="submit" class="btn btn-primary">Start My Enrollment</button>
+        </form>
+      </div>`;
+    modal.querySelector(".class-modal-label").textContent = classWhen ? className + " \u00b7 " + classWhen : className;
+    document.body.append(modal);
+
+    const panel = modal.querySelector(".float-modal-panel");
+    const form = modal.querySelector("form");
+    const msg = modal.querySelector(".form-message");
+    const submit = modal.querySelector('button[type="submit"]');
+    const submitLabel = submit.textContent;
+    let openedAt = 0;
+    let lastFocus = null;
+
+    const RETRY = "Please try again in a moment.";
+
+    function show(text, ok) {
+      msg.textContent = text;
+      msg.hidden = false;
+      msg.classList.toggle("form-message--ok", !!ok);
+      msg.classList.toggle("form-message--error", !ok);
+    }
+
+    function open() {
+      lastFocus = document.activeElement;
+      modal.hidden = false;
+      trigger.setAttribute("aria-expanded", "true");
+      openedAt = Date.now();
+      document.body.style.overflow = "hidden";
+      modal.querySelector("#class-name").focus();
+      window.PMU_track?.classFormOpen?.(campaign);
+    }
+
+    function close() {
+      modal.hidden = true;
+      trigger.setAttribute("aria-expanded", "false");
+      document.body.style.overflow = "";
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+
+    trigger.addEventListener("click", (e) => {
+      e.preventDefault();
+      open();
+    });
+    modal.querySelector(".float-modal-close").addEventListener("click", close);
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) close();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (modal.hidden) return;
+      if (e.key === "Escape") {
+        close();
+        return;
+      }
+      if (e.key === "Tab") {
+        const lista = [...panel.querySelectorAll("button, [href], input")].filter(
+          (el) => el.offsetParent !== null,
+        );
+        if (!lista.length) return;
+        const primeiro = lista[0];
+        const ultimo = lista[lista.length - 1];
+        if (e.shiftKey && document.activeElement === primeiro) {
+          e.preventDefault();
+          ultimo.focus();
+        } else if (!e.shiftKey && document.activeElement === ultimo) {
+          e.preventDefault();
+          primeiro.focus();
+        }
+      }
+    });
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const payload = Object.fromEntries(new FormData(form).entries());
+      const faltando = ["name", "phone", "email"].filter((k) => !String(payload[k] || "").trim());
+      if (faltando.length) {
+        show("Please fill in your name, phone and email.", false);
+        form.querySelector(`[name="${faltando[0]}"]`)?.focus();
+        return;
+      }
+
+      submit.disabled = true;
+      submit.textContent = "Sending...";
+      show("Sending...", true);
+
+      await waitMinFill(openedAt);
+      payload.elapsed = Date.now() - openedAt;
+      payload.page = window.location.pathname;
+      payload.source = "academy-class";
+      payload.interest = course;
+      payload.location = "Academy (Peabody, MA)";
+      payload.lead_path = "home-announcement";
+      payload.message = "Wants to enroll in the " + className + ". Please send the class information and the next steps.";
+
+      let ok = false;
+      let text = "We could not send your request. " + RETRY;
+
+      try {
+        const res = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+        const body = await res.json().catch(() => ({}));
+        if (res.ok && body.ok) {
+          ok = true;
+          text =
+            "Thank you! Your enrollment request was received. Our team will send you the complete class information and contact you shortly with the next steps.";
+        } else if (body.error) {
+          text = body.error;
+        }
+      } catch (err) {
+        text = "Network error. " + RETRY;
+      }
+
+      show(text, ok);
+      if (ok) {
+        window.PMU_track?.academyLead?.(course, {
+          form_source: "home-announcement",
+          lead_path: "home-announcement",
+          campaign: campaign,
+        });
+        form.reset();
+      }
+      submit.disabled = false;
+      submit.textContent = submitLabel;
+    });
+  }
+
   function initFloatingCta() {
     if (document.querySelector(".float-cta")) return;
 
@@ -406,7 +643,7 @@
         <button type="button" class="float-modal-close" aria-label="Close">&times;</button>
         <h2 class="float-modal-title" id="float-modal-title">Message Us</h2>
         <p class="float-modal-sub">Tell us what you are considering and Adriana's team answers with the honest options for your features, healing time and price.</p>
-        <p class="float-modal-langs">We answer in English &middot; Atendemos em portugu&ecirc;s</p>
+        <p class="float-modal-langs">We answer in English &middot; Atendemos em portugu&ecirc;s &middot; Atendemos en espa&ntilde;ol</p>
         <form novalidate>
           <div class="float-hp" aria-hidden="true">
             <label>Do not fill this<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
@@ -992,6 +1229,7 @@
     initReviewsNav();
     initContactForm();
     initFloatingCta();
+    initClassLead();
     initBookRail();
     initCoverflow();
     initGaleria();

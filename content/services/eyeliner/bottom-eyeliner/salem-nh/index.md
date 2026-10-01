@@ -60,7 +60,7 @@ Main Street is New Hampshire Route 97 along its full length. New Hampshire has n
 
 ## What Backs the Artist Performing Bottom Eyeliner in Salem?
 
-Adriana Souza Santos, the Master Permanent Makeup Artist performing bottom eyeliner at the Salem studio, has completed more than 5,000 procedures and trained more than 300 students over a 20-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in both English and Portuguese.
+Adriana Souza Santos, the Master Permanent Makeup Artist performing bottom eyeliner at the Salem studio, has completed more than 5,000 procedures and trained more than 300 students over a 20-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in English, Portuguese and Spanish.
 
 *The Salem studio, where Bottom Eyeliner appointments begin.*
 

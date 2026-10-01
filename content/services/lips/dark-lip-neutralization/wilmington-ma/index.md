@@ -24,7 +24,7 @@ Dark Lip Neutralization in Wilmington, MA costs $550, already including the perf
 
 Dark Lip Neutralization in Wilmington, MA is the right starting point for clients near Route 129 with naturally deeper, cooler, or uneven lip pigmentation who want a more balanced base before color is added. It is not appropriate for anyone pregnant, breastfeeding, under 18, or using isotretinoin, with no exception at either studio.
 
-- Good fit: Wilmington-area clients with naturally dark, cool, or uneven lip tones, including Portuguese speakers
+- Good fit: Wilmington-area clients with naturally dark, cool, or uneven lip tones, including Portuguese and Spanish speakers
 - Not a fit: anyone pregnant, breastfeeding, or under 18, at either studio
 - Not yet: isotretinoin, blood thinners, autoimmune, or keloid history without clearance — see the [contraindications guide](../../../../aftercare/#who-should-not)
 - Talk to your doctor first: anyone with a history of cold sores (HSV-1), since lip tattooing can trigger a reactivation — get clearance from a clinician first
@@ -58,7 +58,7 @@ Lowell Street is Route 129, crossing Route 38 in town center. Wilmington has two
 
 ## What Backs the Artist Performing Dark Lip Neutralization in Wilmington?
 
-Adriana Souza Santos, the Master Permanent Makeup Artist performing Dark Lip Neutralization at the Wilmington studio, has completed 5,000+ procedures and trained 300+ students over a 20-plus year career begun in Brazil before the U.S. studio opened in 2017, holds an AAM Diamond Certified Trainer credential, and consults in English and Portuguese.
+Adriana Souza Santos, the Master Permanent Makeup Artist performing Dark Lip Neutralization at the Wilmington studio, has completed 5,000+ procedures and trained 300+ students over a 20-plus year career begun in Brazil before the U.S. studio opened in 2017, holds an AAM Diamond Certified Trainer credential, and consults in English, Portuguese and Spanish.
 
 Color correction on deeper, warmer lip tones is routine in Brazilian PMU training, where Adriana's career began — part of why this is a genuine specialism here, not an add-on to Lip Blush. Livian Camargo Gomes, a second licensed artist, also works at this studio.
 

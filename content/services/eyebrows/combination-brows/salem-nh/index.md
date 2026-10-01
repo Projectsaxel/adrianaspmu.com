@@ -55,7 +55,7 @@ Main Street is Route 97; the address sits in the Salem Depot area, nearest I-93 
 
 ## What Backs the Artist Performing Combination Brows in Salem?
 
-Adriana Souza Santos, who performs Combination Brows at the Salem studio, has completed more than 5,000 procedures and trained more than 300 students over a 20-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in both English and Portuguese.
+Adriana Souza Santos, who performs Combination Brows at the Salem studio, has completed more than 5,000 procedures and trained more than 300 students over a 20-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in English, Portuguese and Spanish.
 
 *The Salem studio, where Combination Brows appointments begin.*
 

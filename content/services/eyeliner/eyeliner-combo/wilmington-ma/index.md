@@ -26,7 +26,7 @@ Eyeliner Combo in Wilmington, MA costs $500 for Top and Bottom Eyeliner performe
 
 Eyeliner Combo in Wilmington, MA suits clients near Route 129 who want both lash lines defined in a single visit and can commit to a 6- to 8-week healing period before the perfecting session. It is not appropriate for anyone pregnant, breastfeeding, under 18, or currently using isotretinoin, with no exception at either studio.
 
-- Good fit: Wilmington, Reading, or Woburn clients who want upper and lower lash-line definition in one appointment, including Portuguese speakers
+- Good fit: Wilmington, Reading, or Woburn clients who want upper and lower lash-line definition in one appointment, including Portuguese and Spanish speakers
 - Not a fit: anyone pregnant, breastfeeding, or under 18, at either studio
 - Not yet: isotretinoin, blood thinners, autoimmune conditions, or keloid history without clearance — see the [contraindications guide](../../../../aftercare/#who-should-not)
 
@@ -58,7 +58,7 @@ Lowell Street is Massachusetts Route 129, crossing Route 38 near town center. Wi
 
 ## What Backs the Artist Performing Eyeliner Combo in Wilmington?
 
-Adriana Souza Santos, the Master Permanent Makeup Artist performing Eyeliner Combo at the Wilmington studio, has completed more than 5,000 procedures and trained more than 300 students over a 20-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in both English and Portuguese.
+Adriana Souza Santos, the Master Permanent Makeup Artist performing Eyeliner Combo at the Wilmington studio, has completed more than 5,000 procedures and trained more than 300 students over a 20-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in English, Portuguese and Spanish.
 
 *The waiting area at 211 Lowell Street, where the consultation happens before either lash line is touched.*
 
@@ -86,7 +86,7 @@ The perfecting session is included in the $500 and happens 6 to 8 weeks after th
 
 Yes. The Wilmington studio offers payment plans through Cherry Technologies, an independent financing provider separate from Adriana's Permanent Makeup. Options include 4 interest-free payments or a longer plan up to 24 months with interest. Approval is not guaranteed; Cherry sets the terms, not the studio.
 
-Yes. Master Permanent Makeup Artist Adriana Souza Santos consults in both English and Portuguese at the Wilmington studio, alongside a second licensed artist, Livian Camargo Gomes. Clients who prefer Portuguese can request that language when booking, online through Fresha or by phone at (781) 853-8063.
+Yes. Master Permanent Makeup Artist Adriana Souza Santos consults in English, Portuguese and Spanish at the Wilmington studio, alongside a second licensed artist, Livian Camargo Gomes. Clients who prefer Portuguese or Spanish can request that language when booking, online through Fresha or by phone at (781) 853-8063.
 
 Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent financing provider: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
 
