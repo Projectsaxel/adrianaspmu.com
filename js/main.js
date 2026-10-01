@@ -271,6 +271,57 @@
     return left > 0 ? new Promise((r) => setTimeout(r, left)) : Promise.resolve();
   }
 
+  /*
+   * Tela de confirmacao, so depois que o Worker confirmou o envio. O
+   * formulario (e o que mais vier em "hide") some e no lugar entra a
+   * resposta. Antes a pessoa via os campos vazios de novo e ficava sem
+   * saber se tinha enviado (feedback Rachel 01/10/2026). Devolve uma
+   * funcao que traz o formulario de volta, usada ao fechar as janelas.
+   */
+  function firstName(nome) {
+    return String(nome || "").trim().split(/\s+/)[0] || "";
+  }
+
+  function showSent(form, opts) {
+    const hide = [form, ...(opts.hide || [])].filter(Boolean);
+    const box = document.createElement("div");
+    box.className = "form-sent";
+    box.setAttribute("role", "status");
+    box.setAttribute("aria-live", "polite");
+    box.tabIndex = -1;
+    box.innerHTML =
+      '<span class="form-sent-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" ' +
+      'stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">' +
+      '<path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>' +
+      '<h3 class="form-sent-title"></h3><p class="form-sent-text"></p>';
+    const nome = firstName(opts.name);
+    box.querySelector(".form-sent-title").textContent = nome ? "Thank you, " + nome + "!" : "Thank you!";
+    box.querySelector(".form-sent-text").textContent = opts.text;
+    if (opts.onClose) {
+      const fechar = document.createElement("button");
+      fechar.type = "button";
+      fechar.className = "btn btn-primary";
+      fechar.textContent = "Close";
+      fechar.addEventListener("click", opts.onClose);
+      box.append(fechar);
+    }
+    // style.display e nao so hidden: a faixa de idiomas tem display proprio
+    // no CSS, que vence o atributo hidden.
+    hide.forEach((el) => {
+      el.hidden = true;
+      el.style.display = "none";
+    });
+    form.after(box);
+    box.focus();
+    return () => {
+      box.remove();
+      hide.forEach((el) => {
+        el.hidden = false;
+        el.style.display = "";
+      });
+    };
+  }
+
   function initContactForm() {
     const form = document.getElementById("contact-form");
     if (!form) return;
@@ -336,8 +387,6 @@
 
         if (res.ok && body.ok) {
           ok = true;
-          text =
-            "Thank you! We received your message and will contact you shortly. For faster booking, use Fresha or call our studios.";
         } else if (body.error) {
           text = body.error;
         }
@@ -345,8 +394,9 @@
         text = "Network error. " + PHONES;
       }
 
-      show(text, ok);
+      if (!ok) show(text, false);
       if (ok) {
+        msg && (msg.hidden = true);
         // Lead so conta depois que o Worker confirmou o envio. Contar no
         // submit inflaria o numero com tentativas que nunca chegaram.
         // Interesse em curso conta como academy_lead (o evento existia no
@@ -361,6 +411,12 @@
           });
         }
         else window.PMU_track?.formSubmitContact?.(payload.location);
+        showSent(form, {
+          name: payload.name,
+          text: curso
+            ? "Your message was sent. Our team will contact you as soon as possible with the class information and the next steps of your enrollment."
+            : "Your message was sent. Our team will contact you as soon as possible to answer your questions and help with the next steps.",
+        });
         form.reset();
       }
 
@@ -491,6 +547,7 @@
     const submitLabel = submit.textContent;
     let openedAt = 0;
     let lastFocus = null;
+    let restore = null;
 
     const RETRY = "Please try again in a moment.";
 
@@ -512,6 +569,10 @@
     }
 
     function close() {
+      if (restore) {
+        restore();
+        restore = null;
+      }
       modal.hidden = true;
       trigger.setAttribute("aria-expanded", "false");
       document.body.style.overflow = "";
@@ -585,8 +646,6 @@
         const body = await res.json().catch(() => ({}));
         if (res.ok && body.ok) {
           ok = true;
-          text =
-            "Thank you! Your enrollment request was received. Our team will send you the complete class information and contact you shortly with the next steps.";
         } else if (body.error) {
           text = body.error;
         }
@@ -594,8 +653,16 @@
         text = "Network error. " + RETRY;
       }
 
-      show(text, ok);
+      if (!ok) show(text, false);
       if (ok) {
+        msg.hidden = true;
+        restore = showSent(form, {
+          name: payload.name,
+          text:
+            "Your enrollment request for the " + className + " was sent. Our team will contact you as soon as possible to share the class information and continue with the next steps of your enrollment.",
+          hide: [".float-modal-title", ".float-modal-sub", ".float-modal-langs"].map((s) => modal.querySelector(s)),
+          onClose: close,
+        });
         window.PMU_track?.academyLead?.(course, {
           form_source: "home-announcement",
           lead_path: "home-announcement",
@@ -679,6 +746,7 @@
     const submitLabel = submit.textContent;
     let openedAt = 0;
     let lastFocus = null;
+    let restore = null;
 
     const PHONES = "Please call Wilmington (781) 853-8063 or Salem (978) 223-7496.";
 
@@ -700,6 +768,10 @@
     }
 
     function close() {
+      if (restore) {
+        restore();
+        restore = null;
+      }
       modal.hidden = true;
       btn.setAttribute("aria-expanded", "false");
       document.body.style.overflow = "";
@@ -775,7 +847,6 @@
         const body = await res.json().catch(() => ({}));
         if (res.ok && body.ok) {
           ok = true;
-          text = "Thank you! We received your question and will get back to you shortly.";
         } else if (body.error) {
           text = body.error;
         }
@@ -783,8 +854,15 @@
         text = "Network error. " + PHONES;
       }
 
-      show(text, ok);
+      if (!ok) show(text, false);
       if (ok) {
+        msg.hidden = true;
+        restore = showSent(form, {
+          name: payload.name,
+          text: "Your message was sent. Our team will get back to you as soon as possible to answer your questions and help with the next steps.",
+          hide: [".float-modal-title", ".float-modal-sub", ".float-modal-langs"].map((s) => modal.querySelector(s)),
+          onClose: close,
+        });
         // Só conta como lead depois que o Worker confirmou o envio.
         window.PMU_track?.formSubmitFloating?.();
         form.reset();
