@@ -4,7 +4,7 @@
 
 # Adriana's Academy: PMU Training in Peabody, Massachusetts
 
-Adriana's Academy trains permanent makeup artists at 39 Cross Street, Suite 206, Peabody, in a nine-day, AAM Diamond-certified 100 Hours Fundamental Class taught by a Diamond Certified Trainer with 20-plus years in the industry — the only Adriana's address where students, not clients, are the ones being trained.
+Adriana's Academy trains permanent makeup artists at 39 Cross Street, Suite 206, Peabody, in a ten-day, AAM Diamond-certified 100 Hours Fundamental Class taught by a Diamond Certified Trainer with 20-plus years in the industry — the only Adriana's address where students, not clients, are the ones being trained.
 
 **Adriana's Academy in Peabody, Massachusetts is the training division of Adriana Beauty Services, Inc., where aspiring and working permanent makeup artists complete hands-on coursework, not client procedures, at 39 Cross Street, Suite 206.**
 
@@ -16,12 +16,12 @@ Looking for an appointment instead? See the [Wilmington, MA](../wilmington-ma/) 
 
 ## How Does Peabody Academy Training Move From Enrollment to a Finished Certificate?
 
-Training at the Peabody academy moves from a reserved seat to a finished certificate in five short stages: deposit, nine days of hands-on class at 39 Cross Street, an AAM-accredited certificate, an optional year of apprenticeship, and, separately, the student's own state and town licensing process.
+Training at the Peabody academy moves from a reserved seat to a finished certificate in five short stages: deposit, ten days of hands-on class at 39 Cross Street, an AAM-accredited certificate, an optional year of apprenticeship, and, separately, the student's own state and town licensing process.
 
 - Reserve your seat with the $1,500 deposit.
 - Pay $1,500 on day one of class.
-- Complete 8 class days, on live models.
-- Complete a ninth day, shadowing a working studio.
+- Complete 7 class days, on live models.
+- Complete 3 more days: supervised professional practice, professional observation in a working studio and a marketing class.
 - Receive the AAM-accredited certificate of completion.
 - Continue, optionally, into the 1-year apprenticeship.
 - Confirm licensing separately, with your state and town.
@@ -60,9 +60,9 @@ In Massachusetts, there is no single state license for body art: General Laws Ch
 
 New Hampshire and Massachusetts also handle transfer differently: a body art license issued by New Hampshire's Office of Professional Licensure and Certification travels statewide, while a Massachusetts town permit stays tied to that one town's Board of Health, so a Wilmington permit does not carry over to Peabody, or the reverse. None of this describes Adriana's Academy's own permit status, which this page does not claim; it describes what a graduate must check herself, since the certificate awarded here is not a license and confirming the requirement is the student's own responsibility, not the school's.
 
-## What If Tuition Feels Like Too Much, or Nine Days Doesn't Feel Like Enough?
+## What If Tuition Feels Like Too Much, or Ten Days Doesn't Feel Like Enough?
 
-The most common hesitations about the Peabody program are the $7,000 tuition and whether nine days is enough; both have direct answers: tuition splits into a deposit plus scheduled installments, and every graduate keeps the right to retake the entire class again later, at no extra cost.
+The most common hesitations about the Peabody program are the $7,000 tuition and whether ten days is enough; both have direct answers: tuition splits into a deposit plus scheduled installments, and every graduate keeps the right to retake the entire class again later, at no extra cost.
 
 ## What Experience Backs Training at the Peabody Academy, and Who Wrote This Page?
 

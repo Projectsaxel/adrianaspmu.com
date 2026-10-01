@@ -39,12 +39,12 @@ An apprenticeship-style year means you finish having already worked on real peop
 
 ## How Is the Apprenticeship Different from the 100-Hour Fundamental Class?
 
-The 100-Hour Fundamental Class teaches five permanent makeup techniques over nine days; the apprenticeship is a twelve-month program that assumes you already know the techniques and instead builds the business and supervised-practice skills a working artist needs. Most students take the fundamental class first, then the apprenticeship.
+The 100-Hour Fundamental Class teaches five permanent makeup techniques over ten days; the apprenticeship is a twelve-month program that assumes you already know the techniques and instead builds the business and supervised-practice skills a working artist needs. Most students take the fundamental class first, then the apprenticeship.
 
 | Aspect | 100-Hour Fundamental Class | 1-Year Apprenticeship |
 | --- | --- | --- |
 | Main focus | Learning five PMU techniques from zero | Business, consultation, and supervised practice |
-| Format | 9 days, in a small group | 12 months, ongoing |
+| Format | 10 days, in a small group | 12 months, ongoing |
 | Prerequisite | None | Fundamentals, from us or elsewhere |
 | Credential | AAM-accredited certificate of completion | No separate certificate; license-application guidance instead |
 | Price | $7,000 alone | $700/month alone, or $15,400 bundled |
@@ -137,6 +137,6 @@ Six things are worth verifying with any permanent makeup school: who actually te
 | Who is actually teaching | Ask for the instructor’s name and credential, not the school’s. Many schools sell a brand and hand the class to someone else. | Adriana Souza Santos teaches, and holds AAM Diamond Certified Trainer status — the American Academy of Micropigmentation’s highest instructor level — with 5,000+ procedures and 300+ students trained. |
 | Whether the certificate is accredited | Ask which body accredits the certificate, and confirm that body exists and recognises the school. | The 100-Hour Fundamental is accredited by the American Academy of Micropigmentation. |
 | Certificate against licence | Ask whether the certificate lets you work legally. A school that lets you believe it does is selling you a problem. | It does not, and that is stated plainly here: the certificate is training. The licence to practise is issued by government — town by town in Massachusetts, at state level in New Hampshire under RSA 314-A. |
-| Hands-on practice on live models | Ask how many live models you work on, and who supervises while you do. | The 100-Hour Fundamental is 9 days with practice on live models under supervision; the apprenticeship is a year of supervised practice at $700 a month. |
+| Hands-on practice on live models | Ask how many live models you work on, and who supervises while you do. | The 100-Hour Fundamental is 10 days with practice on live models under supervision; the apprenticeship is a year of supervised practice at $700 a month. |
 | What the price covers | Ask for the total, and what is not in it. | $7,000 for the 100-Hour Fundamental, $700 a month for the apprenticeship. The VIP Masterclass is quoted per student because the scope changes. Tuition can be split through our in-house payment plan (a deposit, then scheduled payments); Cherry covers permanent makeup services, not courses. |
 | Where the training happens | Ask for the training address, and whether clients are treated in the same room. | All training is at 39 Cross Street, Suite 206, Peabody, MA, students only. Client procedures happen at the Wilmington and Salem studios, never at the academy. |

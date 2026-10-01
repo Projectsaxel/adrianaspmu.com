@@ -1274,7 +1274,7 @@ def add_faq_items(s, path_rel):
 FAQ_BY_PAGE = {
     "academy/pmu-100h-fundamental/index.html": [
         ("How much does the 100-Hour Fundamental course cost, and what is included?",
-         "The 100-Hour Fundamental costs $7,000 and runs over 9 days in Peabody, MA. It covers "
+         "The 100-Hour Fundamental costs $7,000 and runs over 10 days in Peabody, MA. It covers "
          "five techniques &mdash; microblading, ombr&eacute; shading, microshading, lip blush and dark lip "
          "neutralization &mdash; with practice on live models under supervision, and it carries "
          "certification from the American Academy of Micropigmentation."),
@@ -1403,7 +1403,7 @@ FAQ_BY_PAGE = {
     ],
     "academy/index.html": [
         ("Which course should I start with?",
-         "The 100-Hour Fundamental at $7,000 is the structured entry point: 9 days, five "
+         "The 100-Hour Fundamental at $7,000 is the structured entry point: 10 days, five "
          "techniques, AAM-accredited. The apprenticeship at $700 a month is a year of supervised "
          "practice instead. The VIP Masterclass is quoted individually for cases that fit neither. "
          "The consultation tells you which, honestly."),
@@ -1424,7 +1424,7 @@ FAQ_BY_PAGE = {
          "can verify at the state&rsquo;s public lookup."),
         ("Do I practise on real people?",
          "Yes. The 100-Hour Fundamental includes practice on live models under supervision across "
-         "its 9 days, and the apprenticeship is built around a year of supervised model practice "
+         "its 10 days, and the apprenticeship is built around a year of supervised model practice "
          "and client simulation. Training happens only at the Peabody studio, which serves "
          "students and never clients."),
     ],
@@ -1588,7 +1588,7 @@ ACADEMY_CRITERIA = [
      "It does not, and that is stated plainly here: the certificate is training. The licence to practise is issued by government &mdash; town by town in Massachusetts, at state level in New Hampshire under RSA 314-A."),
     ("Hands-on practice on live models",
      "Ask how many live models you work on, and who supervises while you do.",
-     "The 100-Hour Fundamental is 9 days with practice on live models under supervision; the apprenticeship is a year of supervised practice at $700 a month."),
+     "The 100-Hour Fundamental is 10 days with practice on live models under supervision; the apprenticeship is a year of supervised practice at $700 a month."),
     ("What the price covers",
      "Ask for the total, and what is not in it.",
      "$7,000 for the 100-Hour Fundamental, $700 a month for the apprenticeship. The VIP Masterclass is quoted per student because the scope changes. Tuition can be split through our in-house payment plan (a deposit, then scheduled payments); Cherry covers permanent makeup services, not courses."),
@@ -1605,7 +1605,7 @@ ACADEMY_FIT = {
         "you to work &mdash; licensing is issued by government, not by a school"),
     "academy/pmu-100h-fundamental/index.html": (
         "you are starting from zero and want a structured, accredited foundation across five "
-        "techniques in 9 days",
+        "techniques in 10 days",
         "you already take clients and need to fix one specific technique &mdash; the "
         "<a href=\"{up}academy/vip-masterclass/\">VIP Masterclass</a> is built for that case"),
     "academy/pmu-apprenticeship/index.html": (
