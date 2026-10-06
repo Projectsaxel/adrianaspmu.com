@@ -417,16 +417,16 @@
       });
     },
     /** Secao de anuncio da home apareceu na tela. Alcance, nao lead. */
-    announceView: function (campaign) {
-      gtagSafe("announce_view", { campaign: campaign });
+    announceView: function (campaign, origin) {
+      gtagSafe("announce_view", { campaign: campaign, form_source: origin || "home-announcement" });
     },
     /** Clique na secao: cta = enroll-form (abre o formulario) ou program-page. */
-    announceClick: function (campaign, cta) {
-      gtagSafe("announce_click", { campaign: campaign, cta: cta || "(not set)" });
+    announceClick: function (campaign, cta, origin) {
+      gtagSafe("announce_click", { campaign: campaign, cta: cta || "(not set)", form_source: origin || "home-announcement" });
     },
     /** Abriu o formulario da turma. Intencao, nao lead. */
-    classFormOpen: function (campaign) {
-      gtagSafe("class_form_open", { campaign: campaign, form_source: "home-announcement" });
+    classFormOpen: function (campaign, origin) {
+      gtagSafe("class_form_open", { campaign: campaign, form_source: origin || "home-announcement" });
     },
     /** Abriu a janela do botao flutuante. Intencao, nao lead. */
     floatCtaOpen: function () {

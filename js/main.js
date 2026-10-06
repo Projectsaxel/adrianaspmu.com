@@ -369,10 +369,11 @@
       payload.page = window.location.pathname;
       // Caminho ate o lead: veio da pagina do curso (?course=) ou direto
       // ao contato, e se antes passou pela secao de anuncio da home.
-      const deAnuncio = new URLSearchParams(window.location.search).get("from") === "home-announcement";
+      const de = new URLSearchParams(window.location.search).get("from");
+      const deAnuncio = ["home-announcement", "course-announcement"].includes(de);
       const via = deAnuncio ? "contact-page" : pedido && COURSES.includes(pedido) ? "course-page" : "contact-page";
-      const touch = announceTouch() || (deAnuncio ? "home-announcement-link" : "");
-      payload.lead_path = touch ? "home-announcement > " + via : via;
+      const touch = announceTouch() || (deAnuncio ? { origin: de, campaign: "(link)" } : null);
+      payload.lead_path = touch ? touch.origin + " > " + via : via;
 
       let ok = false;
       let text = "We could not send your message. " + PHONES;
@@ -407,7 +408,7 @@
           window.PMU_track?.academyLead?.(curso, {
             form_source: "contact-page",
             lead_path: payload.lead_path,
-            campaign: touch || "(none)",
+            campaign: touch ? touch.campaign : "(none)",
           });
         }
         else window.PMU_track?.formSubmitContact?.(payload.location);
@@ -456,9 +457,11 @@
    */
   const ANNOUNCE_KEY = "pmu_announce";
 
-  function markAnnounceTouch(campaign) {
+  // A marca guarda "origem|campanha". Origem = onde estava o card
+  // (home-announcement ou course-announcement, do data-origin da secao).
+  function markAnnounceTouch(origin, campaign) {
     try {
-      sessionStorage.setItem(ANNOUNCE_KEY, campaign);
+      sessionStorage.setItem(ANNOUNCE_KEY, origin + "|" + campaign);
     } catch (err) {
       /* aba anonima ou storage bloqueado: segue sem a marca */
     }
@@ -466,10 +469,25 @@
 
   function announceTouch() {
     try {
-      return sessionStorage.getItem(ANNOUNCE_KEY) || "";
+      const v = sessionStorage.getItem(ANNOUNCE_KEY) || "";
+      if (!v) return null;
+      const [origin, campaign] = v.includes("|") ? v.split("|") : ["home-announcement", v];
+      return { origin, campaign: campaign || "(not set)" };
     } catch (err) {
-      return "";
+      return null;
     }
+  }
+
+  // O analytics.js carrega assincrono. No card do topo da pagina do curso,
+  // o evento de visualizacao saia antes dele existir e se perdia. Aqui o
+  // evento espera o PMU_track ficar pronto (ate ~10s).
+  function pmuTrack(name, ...args) {
+    let tentativas = 0;
+    (function vai() {
+      const fn = window.PMU_track && window.PMU_track[name];
+      if (fn) fn(...args);
+      else if (tentativas++ < 40) setTimeout(vai, 250);
+    })();
   }
 
   function initClassLead() {
@@ -486,12 +504,18 @@
     trigger.setAttribute("aria-haspopup", "dialog");
     trigger.setAttribute("aria-expanded", "false");
     const campaign = section.dataset.campaign || "(not set)";
+    // Onde o card esta: home-announcement (home) ou course-announcement
+    // (pagina do curso). Lido ANTES de qualquer clique: se a pessoa veio do
+    // card da home e se inscreve no card do curso, o caminho mostra os dois.
+    const origin = section.dataset.origin || "home-announcement";
+    const antes = announceTouch();
+    const leadPath = antes && antes.origin !== origin ? antes.origin + " > " + origin : origin;
 
     if ("IntersectionObserver" in window) {
       const io = new IntersectionObserver(
         (entries) => {
           if (entries.some((en) => en.isIntersecting)) {
-            window.PMU_track?.announceView?.(campaign);
+            pmuTrack("announceView", campaign, origin);
             io.disconnect();
           }
         },
@@ -502,8 +526,8 @@
 
     section.querySelectorAll("[data-announce-cta]").forEach((a) => {
       a.addEventListener("click", () => {
-        markAnnounceTouch(campaign);
-        window.PMU_track?.announceClick?.(campaign, a.dataset.announceCta);
+        markAnnounceTouch(origin, campaign);
+        pmuTrack("announceClick", campaign, a.dataset.announceCta, origin);
       });
     });
 
@@ -565,7 +589,7 @@
       openedAt = Date.now();
       document.body.style.overflow = "hidden";
       modal.querySelector("#class-name").focus();
-      window.PMU_track?.classFormOpen?.(campaign);
+      pmuTrack("classFormOpen", campaign, origin);
     }
 
     function close() {
@@ -631,7 +655,7 @@
       payload.source = "academy-class";
       payload.interest = course;
       payload.location = "Academy (Peabody, MA)";
-      payload.lead_path = "home-announcement";
+      payload.lead_path = leadPath;
       payload.message = "Wants to enroll in the " + className + ". Please send the class information and the next steps.";
 
       let ok = false;
@@ -646,7 +670,10 @@
         const body = await res.json().catch(() => ({}));
         if (res.ok && body.ok) {
           ok = true;
-        } else if (body.error) {
+        } else if (res.status === 422 && body.error) {
+          // So aviso de campo (nome, e-mail, telefone invalido). As outras
+          // falhas do Worker mandam ligar, e este formulario nao pode
+          // desviar o lead para o telefone: perde o rastreio.
           text = body.error;
         }
       } catch (err) {
@@ -663,9 +690,9 @@
           hide: [".float-modal-title", ".float-modal-sub", ".float-modal-langs"].map((s) => modal.querySelector(s)),
           onClose: close,
         });
-        window.PMU_track?.academyLead?.(course, {
-          form_source: "home-announcement",
-          lead_path: "home-announcement",
+        pmuTrack("academyLead", course, {
+          form_source: origin,
+          lead_path: leadPath,
           campaign: campaign,
         });
         form.reset();
