@@ -150,6 +150,9 @@ async function handleContact(request, env, ctx) {
     "home-announcement": "Home announcement, directly",
     "home-announcement > course-page": "Home announcement, then the course page",
     "home-announcement > contact-page": "Home announcement, then the contact page",
+    "course-announcement": "Course page announcement card, directly",
+    "home-announcement > course-announcement": "Home announcement, then the course page card",
+    "course-announcement > contact-page": "Course page announcement card, then the contact page",
     "course-page": "Course page",
     "contact-page": "Contact page",
   };
