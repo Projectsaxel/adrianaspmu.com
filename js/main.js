@@ -367,6 +367,9 @@
       await waitMinFill(loadedAt);
       payload.elapsed = Date.now() - loadedAt;
       payload.page = window.location.pathname;
+      // Origem da visitante (Google Ads, ficha do Google, ChatGPT...).
+      // So existe em producao, onde o analytics.js carrega.
+      if (window.PMU_leadSource) payload.attribution = window.PMU_leadSource();
       // Caminho ate o lead: veio da pagina do curso (?course=) ou direto
       // ao contato, e se antes passou pela secao de anuncio da home.
       const de = new URLSearchParams(window.location.search).get("from");
@@ -652,6 +655,9 @@
       await waitMinFill(openedAt);
       payload.elapsed = Date.now() - openedAt;
       payload.page = window.location.pathname;
+      // Origem da visitante (Google Ads, ficha do Google, ChatGPT...).
+      // So existe em producao, onde o analytics.js carrega.
+      if (window.PMU_leadSource) payload.attribution = window.PMU_leadSource();
       payload.source = "academy-class";
       payload.interest = course;
       payload.location = "Academy (Peabody, MA)";
@@ -858,6 +864,9 @@
       await waitMinFill(openedAt);
       payload.elapsed = Date.now() - openedAt;
       payload.page = window.location.pathname;
+      // Origem da visitante (Google Ads, ficha do Google, ChatGPT...).
+      // So existe em producao, onde o analytics.js carrega.
+      if (window.PMU_leadSource) payload.attribution = window.PMU_leadSource();
       payload.source = "floating-button";
       // A origem ja vai em payload.source; aqui vai a unidade da pagina.
       payload.location = leadLocation;

@@ -88,6 +88,159 @@ function originAllowed(request, env) {
   }
 }
 
+/* ---------------------------------------------------------------
+ * Origem do lead (07/10/2026)
+ *
+ * O analytics.js manda o cookie pmu_attr cru (primeiro toque e ultimo
+ * toque nao-direto, mesmo modelo do GA4) e as paginas vistas na visita.
+ * A classificacao e feita AQUI, num lugar so, e o que vai para o assunto
+ * do e-mail e sempre um rotulo fixo desta tabela, nunca texto do cliente.
+ *
+ * Pago x organico e o ponto: a Adriana paga Google Ads, entao o lead que
+ * veio da ficha do Google, da busca organica ou do ChatGPT precisa chegar
+ * marcado como ORGANICO para nao ser creditado ao anuncio.
+ *
+ * Ficha do Google: o Google manda a visita da ficha com referrer
+ * google.com, igual a busca organica. So da para separar se o link do
+ * site na ficha tiver utm_campaign comecando com "gbp" (ex.:
+ * ?utm_source=google&utm_medium=organic&utm_campaign=gbp-wilmington).
+ * --------------------------------------------------------------- */
+
+const PAID_MEDIUM = /^(cpc|ppc|paid|paidsearch|paid[-_ ]?social|paid[-_ ]?search|display|cpm|ads?)$/i;
+const AI_SOURCE = /(chatgpt|openai|perplexity|gemini|copilot|claude|anthropic)/i;
+const SEARCH_SOURCE = /^(google|bing|yahoo|duckduckgo|ecosia|brave|baidu|yandex|aol|ask)$/i;
+const SOCIAL_SOURCE = /(instagram|facebook|^ig$|^fb$|meta|tiktok|pinterest|youtube|linkedin|threads|reddit|snapchat|twitter)/i;
+
+const AI_NAMES = [
+  [/chatgpt|openai/i, "ChatGPT"],
+  [/perplexity/i, "Perplexity"],
+  [/gemini/i, "Google Gemini"],
+  [/copilot/i, "Microsoft Copilot"],
+  [/claude|anthropic/i, "Claude"],
+];
+
+function attrField(v, max) {
+  return clean(v, max).replace(/[\r\n\t]+/g, " ").replace(/[<>"'`]/g, "");
+}
+
+function safePath(v) {
+  const p = clean(v, 120);
+  return /^\/(?!\/)[\w\-./%~]*$/.test(p) ? p : "";
+}
+
+/** Le um toque do cookie e devolve so campos conhecidos e limpos. */
+function readTouch(t) {
+  if (!t || typeof t !== "object") return null;
+  const touch = {
+    s: attrField(t.s, 100).toLowerCase(),
+    m: attrField(t.m, 100).toLowerCase(),
+    c: attrField(t.c, 150),
+    t: attrField(t.t, 150),
+    k: ["gclid", "gbraid", "wbraid", "msclkid", "fbclid", "ttclid"].includes(t.k) ? t.k : "",
+    r: attrField(t.r, 80).toLowerCase(),
+    lp: safePath(t.lp),
+    ts: Number.isFinite(Number(t.ts)) ? Number(t.ts) : 0,
+  };
+  return touch.s ? touch : null;
+}
+
+/**
+ * Rotulo do canal. type: PAID | ORGANIC | DIRECT | REFERRAL.
+ * channel e detail sao sempre texto fixo daqui, seguros para o assunto.
+ */
+function classifyTouch(t) {
+  if (!t || t.s === "(direct)") {
+    return { type: "DIRECT", channel: "Direct", detail: "Typed the address, saved bookmark, or a link from a text/email/app" };
+  }
+  const { s, m, c, k } = t;
+  const camp = c.toLowerCase();
+
+  // Pago primeiro: click id do Google ou medium de anuncio.
+  if (k === "gclid" || k === "gbraid" || k === "wbraid" || (s === "google" && PAID_MEDIUM.test(m))) {
+    return { type: "PAID", channel: "Google Ads", detail: "Clicked a paid Google ad" };
+  }
+  if (k === "msclkid" || (s === "bing" && PAID_MEDIUM.test(m))) {
+    return { type: "PAID", channel: "Microsoft Ads", detail: "Clicked a paid Bing ad" };
+  }
+  if (PAID_MEDIUM.test(m)) {
+    if (SOCIAL_SOURCE.test(s)) return { type: "PAID", channel: "Meta Ads (Facebook/Instagram)", detail: "Clicked a paid social ad" };
+    return { type: "PAID", channel: "Paid ad", detail: "Clicked a paid ad" };
+  }
+
+  // Ficha do Google: so reconhecivel pelo utm do link da ficha.
+  if (camp.startsWith("gbp") || m === "gbp" || s === "gbp") {
+    const unit = /salem/.test(camp) ? " - Salem" : /wilmington/.test(camp) ? " - Wilmington" : "";
+    return { type: "ORGANIC", channel: "Google Business Profile" + unit, detail: "Clicked the website button on the Google Maps / Business listing" };
+  }
+
+  if (AI_SOURCE.test(s) || AI_SOURCE.test(t.r) || m === "ai_referral") {
+    const hit = AI_NAMES.find(([re]) => re.test(s) || re.test(t.r));
+    return { type: "ORGANIC", channel: "AI assistant: " + (hit ? hit[1] : "other"), detail: "An AI assistant recommended or linked the site" };
+  }
+
+  if (SEARCH_SOURCE.test(s) && (m === "organic" || m === "(not set)" || m === "referral")) {
+    const name = s === "google" ? "Google Search" : s.charAt(0).toUpperCase() + s.slice(1) + " Search";
+    return { type: "ORGANIC", channel: name, detail: "Found the site in the regular, unpaid search results" };
+  }
+
+  if (SOCIAL_SOURCE.test(s) || m === "social") {
+    const net = /insta|^ig$/.test(s) ? "Instagram" : /face|^fb$|meta/.test(s) ? "Facebook" : /tiktok/.test(s) ? "TikTok" : "Social media";
+    return { type: "ORGANIC", channel: net, detail: "Came from a post, profile or bio link, not an ad" };
+  }
+
+  if (m === "email") return { type: "ORGANIC", channel: "Email", detail: "Clicked a link in an email" };
+
+  return { type: "REFERRAL", channel: "Another website", detail: "Followed a link from another site" };
+}
+
+const TYPE_LABEL = {
+  PAID: "PAID",
+  ORGANIC: "ORGANIC",
+  DIRECT: "DIRECT",
+  REFERRAL: "REFERRAL",
+};
+const TYPE_COLOR = { PAID: "#b45309", ORGANIC: "#15803d", DIRECT: "#475569", REFERRAL: "#1d4ed8" };
+
+function fmtDate(ts) {
+  if (!ts) return "";
+  const d = new Date(ts);
+  return Number.isNaN(d.getTime()) ? "" : d.toISOString().slice(0, 10);
+}
+
+/** Monta a origem do lead a partir do payload. Nunca lanca. */
+function leadOrigin(raw) {
+  const a = raw && typeof raw === "object" ? raw : {};
+  const last = readTouch(a.last);
+  const first = readTouch(a.first);
+  const path = (Array.isArray(a.path) ? a.path : []).slice(-15).map(safePath).filter(Boolean);
+
+  if (!last && !first) {
+    return { known: false, type: "UNKNOWN", channel: "Not recorded", rows: [], path };
+  }
+  const main = last || first;
+  const cls = classifyTouch(main);
+  const rows = [
+    ["Lead type", TYPE_LABEL[cls.type]],
+    ["Channel", cls.channel],
+    ["What that means", cls.detail],
+    ["Arrived on page", main.lp],
+  ];
+  if (cls.type === "REFERRAL") rows.push(["Referring site", main.r || main.s]);
+  if (cls.type === "PAID") {
+    if (main.c && main.c !== "(not set)") rows.push(["Ad campaign", main.c]);
+    if (main.t) rows.push(["Ad keyword", main.t]);
+  }
+  if (first && last && (first.s !== last.s || first.m !== last.m || first.c !== last.c)) {
+    const fc = classifyTouch(first);
+    rows.push([
+      "First found us",
+      `${fc.channel} (${TYPE_LABEL[fc.type]})` + (first.lp ? ` on ${first.lp}` : "") + (first.ts ? `, ${fmtDate(first.ts)}` : ""),
+    ]);
+  }
+  rows.push(["Raw source / medium", `${main.s} / ${main.m || "(none)"}` + (main.c && main.c !== "(not set)" ? ` / ${main.c}` : "")]);
+  return { known: true, type: cls.type, channel: cls.channel, rows: rows.filter(([, v]) => v), path };
+}
+
 async function handleContact(request, env, ctx) {
   if (!originAllowed(request, env)) {
     return json({ ok: false, error: FALLBACK }, 403);
@@ -201,6 +354,8 @@ async function handleContact(request, env, ctx) {
     .map((s) => s.trim())
     .filter(Boolean);
 
+  const origin = leadOrigin(data.attribution);
+
   const cf = request.cf || {};
   const meta = [
     ["Came from", sourceLabel],
@@ -221,6 +376,14 @@ async function handleContact(request, env, ctx) {
 <tr><td><strong>Phone</strong></td><td><a href="tel:${esc(phone.replace(/[^\d+]/g, ""))}">${esc(phone)}</a></td></tr>
 ${meta.map(([k, v]) => `<tr><td><strong>${esc(k)}</strong></td><td>${esc(v)}</td></tr>`).join("")}
 </table>
+<h3 style="margin:20px 0 6px">How this person found Adriana's</h3>
+${origin.known
+    ? `<p style="margin:0 0 8px"><span style="display:inline-block;padding:3px 10px;border-radius:4px;color:#fff;font-weight:700;background:${TYPE_COLOR[origin.type]}">${esc(origin.type)}</span> <strong>${esc(origin.channel)}</strong></p>
+<table cellpadding="6" style="border-collapse:collapse;font-size:15px">
+${origin.rows.slice(1).map(([k, v]) => `<tr><td><strong>${esc(k)}</strong></td><td>${esc(v)}</td></tr>`).join("")}
+${origin.path.length ? `<tr><td><strong>Pages viewed before contacting</strong></td><td>${origin.path.map(esc).join(" &rarr; ")}</td></tr>` : ""}
+</table>`
+    : `<p style="margin:0;color:#888">Not recorded (cookies blocked, or the form was sent before tracking loaded).</p>`}
 <h3 style="margin:20px 0 6px">Message</h3>
 <div style="white-space:pre-wrap;border-left:3px solid #ddd;padding-left:12px">${esc(message) || "<em style='color:#888'>No message</em>"}</div>
 <p style="margin-top:24px;color:#888;font-size:12px">Reply directly to this email to answer ${esc(name)}.</p>
@@ -233,6 +396,11 @@ ${meta.map(([k, v]) => `<tr><td><strong>${esc(k)}</strong></td><td>${esc(v)}</td
     `Email: ${email}`,
     `Phone: ${phone}`,
     ...meta.map(([k, v]) => `${k}: ${v}`),
+    "",
+    "HOW THIS PERSON FOUND ADRIANA'S",
+    ...(origin.known
+      ? [...origin.rows.map(([k, v]) => `${k}: ${v}`), ...(origin.path.length ? [`Pages viewed before contacting: ${origin.path.join(" > ")}`] : [])]
+      : ["Not recorded"]),
     "",
     "Message:",
     message || "(no message)",
@@ -248,7 +416,7 @@ ${meta.map(([k, v]) => `<tr><td><strong>${esc(k)}</strong></td><td>${esc(v)}</td
         to: rcpt,
         from: env.CONTACT_FROM,
         reply_to: email,
-        subject: `[${sourceLabel}] New website inquiry: ${name}`,
+        subject: `[${!origin.known ? sourceLabel : origin.type === "DIRECT" ? "DIRECT" : `${origin.type} - ${origin.channel}`}] New website inquiry: ${name}`,
         html,
         text,
       }),
@@ -267,7 +435,7 @@ ${meta.map(([k, v]) => `<tr><td><strong>${esc(k)}</strong></td><td>${esc(v)}</td
     return json({ ok: false, error: FALLBACK }, 502);
   }
 
-  console.log(JSON.stringify({ event: "contact_sent", delivered, of: to.length, location }));
+  console.log(JSON.stringify({ event: "contact_sent", delivered, of: to.length, location, lead_type: origin.type, channel: origin.channel }));
   return json({ ok: true });
 }
 
