@@ -370,7 +370,7 @@
       // Caminho ate o lead: veio da pagina do curso (?course=) ou direto
       // ao contato, e se antes passou pela secao de anuncio da home.
       const de = new URLSearchParams(window.location.search).get("from");
-      const deAnuncio = ["home-announcement", "course-announcement"].includes(de);
+      const deAnuncio = ["home-announcement", "academy-announcement", "course-announcement"].includes(de);
       const via = deAnuncio ? "contact-page" : pedido && COURSES.includes(pedido) ? "course-page" : "contact-page";
       const touch = announceTouch() || (deAnuncio ? { origin: de, campaign: "(link)" } : null);
       payload.lead_path = touch ? touch.origin + " > " + via : via;
