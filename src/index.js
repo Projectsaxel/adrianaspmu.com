@@ -103,13 +103,14 @@ function originAllowed(request, env) {
  *   +2 link na mensagem
  *   +1 por expressao de oferta (maximo 4)
  *
- * Filtrado NAO e descartado: vai so para SPAM_TO (Axel), com [FILTERED]
+ * Filtrado NAO e descartado: vai so para a Axel (SPAM_TO_DEFAULT), com [FILTERED]
  * no assunto, e nao para a Adriana. Se aparecer cliente real ali, a
  * regra e ajustada. A visitante ve o "Thank you" normal e o GA4 nao conta
  * como lead (o main.js le "filtered").
  * --------------------------------------------------------------- */
 
 const SPAM_PHONES = new Set(["3072076448"]);
+const SPAM_TO_DEFAULT = "info@axelseo.com";
 
 const PITCH = [
   /\bseo\b/i,
@@ -418,9 +419,9 @@ async function handleContact(request, env, ctx) {
 
   const origin = leadOrigin(data.attribution);
   const check = spamCheck({ message, phone, country: (request.cf || {}).country || "" });
-  // Filtrado vai so para SPAM_TO. Sem SPAM_TO configurado, cai no
-  // CONTACT_TO de sempre (com [FILTERED] no assunto): nunca se perde lead.
-  const to = String(check.spam && env.SPAM_TO ? env.SPAM_TO : env.CONTACT_TO)
+  // Filtrado vai so para a Axel. SPAM_TO (secret) sobrepoe o padrao, que
+  // e o endereco publico da agencia e ja e destino verificado do CONTACT_TO.
+  const to = String(check.spam ? env.SPAM_TO || SPAM_TO_DEFAULT : env.CONTACT_TO)
     .split(",")
     .map((s) => s.trim())
     .filter(Boolean);
