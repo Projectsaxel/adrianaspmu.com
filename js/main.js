@@ -379,6 +379,7 @@
       payload.lead_path = touch ? touch.origin + " > " + via : via;
 
       let ok = false;
+      let filtered = false;
       let text = "We could not send your message. " + PHONES;
 
       try {
@@ -391,6 +392,9 @@
 
         if (res.ok && body.ok) {
           ok = true;
+          // Mensagem que o Worker classificou como oferta/spam: a pessoa ve
+          // o "Thank you" normal, mas nao conta como lead no GA4.
+          filtered = body.filtered === true;
         } else if (body.error) {
           text = body.error;
         }
@@ -407,7 +411,9 @@
         // analytics.js mas nunca era disparado).
         const curso = COURSES.includes(payload.interest) ? payload.interest
           : payload.location === "Academy (Peabody, MA)" ? "academy" : "";
-        if (curso) {
+        if (filtered) {
+          // nao e lead
+        } else if (curso) {
           window.PMU_track?.academyLead?.(curso, {
             form_source: "contact-page",
             lead_path: payload.lead_path,
@@ -665,6 +671,7 @@
       payload.message = "Wants to enroll in the " + className + ". Please send the class information and the next steps.";
 
       let ok = false;
+      let filtered = false;
       let text = "We could not send your request. " + RETRY;
 
       try {
@@ -676,6 +683,9 @@
         const body = await res.json().catch(() => ({}));
         if (res.ok && body.ok) {
           ok = true;
+          // Mensagem que o Worker classificou como oferta/spam: a pessoa ve
+          // o "Thank you" normal, mas nao conta como lead no GA4.
+          filtered = body.filtered === true;
         } else if (res.status === 422 && body.error) {
           // So aviso de campo (nome, e-mail, telefone invalido). As outras
           // falhas do Worker mandam ligar, e este formulario nao pode
@@ -696,7 +706,7 @@
           hide: [".float-modal-title", ".float-modal-sub", ".float-modal-langs"].map((s) => modal.querySelector(s)),
           onClose: close,
         });
-        pmuTrack("academyLead", course, {
+        if (!filtered) pmuTrack("academyLead", course, {
           form_source: origin,
           lead_path: leadPath,
           campaign: campaign,
@@ -872,6 +882,7 @@
       payload.location = leadLocation;
 
       let ok = false;
+      let filtered = false;
       let text = "We could not send your message. " + PHONES;
 
       try {
@@ -883,6 +894,9 @@
         const body = await res.json().catch(() => ({}));
         if (res.ok && body.ok) {
           ok = true;
+          // Mensagem que o Worker classificou como oferta/spam: a pessoa ve
+          // o "Thank you" normal, mas nao conta como lead no GA4.
+          filtered = body.filtered === true;
         } else if (body.error) {
           text = body.error;
         }
@@ -900,7 +914,7 @@
           onClose: close,
         });
         // Só conta como lead depois que o Worker confirmou o envio.
-        window.PMU_track?.formSubmitFloating?.();
+        if (!filtered) window.PMU_track?.formSubmitFloating?.();
         form.reset();
       }
       submit.disabled = false;

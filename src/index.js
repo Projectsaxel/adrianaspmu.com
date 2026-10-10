@@ -89,6 +89,72 @@ function originAllowed(request, env) {
 }
 
 /* ---------------------------------------------------------------
+ * Filtro de oferta/spam (10/10/2026)
+ *
+ * O spam que chega NAO e robo: e gente oferecendo SEO, trafego ou
+ * "mais alunos", de fora dos EUA ou de servidor, digitando no formulario
+ * de verdade. Honeypot, tempo minimo e captcha nao pegam isso. O que
+ * separa e o conteudo: cliente pergunta de horario, preco e procedimento;
+ * spam oferece servico.
+ *
+ * Pontuacao (3 ou mais = filtrado):
+ *   +2 enviado de fora dos EUA
+ *   +3 telefone que ja foi usado em spam
+ *   +2 link na mensagem
+ *   +1 por expressao de oferta (maximo 4)
+ *
+ * Filtrado NAO e descartado: vai so para SPAM_TO (Axel), com [FILTERED]
+ * no assunto, e nao para a Adriana. Se aparecer cliente real ali, a
+ * regra e ajustada. A visitante ve o "Thank you" normal e o GA4 nao conta
+ * como lead (o main.js le "filtered").
+ * --------------------------------------------------------------- */
+
+const SPAM_PHONES = new Set(["3072076448"]);
+
+const PITCH = [
+  /\bseo\b/i,
+  /search engine|google search|first page|page one of google|higher on google|rank(ing|ings)?\b/i,
+  /\btraffic\b/i,
+  /backlink|guest post/i,
+  /(website|site) audit|audit of your|improvements? (for|to) your (site|website)/i,
+  /digital marketing|marketing (agency|services|plan)|social media (management|marketing)/i,
+  /web ?design|redesign|app development|wordpress develop/i,
+  /\bleads?\b.*\b(generat|more)|more (clients|customers|students|leads|patients)/i,
+  /student base|client base|customer base|(connect|provide) you with/i,
+  /expand(ing)? your|grow (your|traffic)|scale your/i,
+  /competitors/i,
+  /unsubscribe|reply stop|opt[- ]out/i,
+  /cost[- ]effective|affordable package|free (seo|review|audit|quote|consultation for your)/i,
+  /\bi (help|specialize|work with) (businesses|business|companies|brands)/i,
+  /\bwe can (place|help your business|get your)/i,
+  /\bpartnership\b|\bcollaborat/i,
+];
+
+function spamCheck({ message, phone, country }) {
+  const reasons = [];
+  let score = 0;
+  if (country && country !== "US") {
+    score += 2;
+    reasons.push("sent from outside the US (" + country + ")");
+  }
+  const digits = phone.replace(/\D/g, "").replace(/^1(?=\d{10}$)/, "");
+  if (SPAM_PHONES.has(digits)) {
+    score += 3;
+    reasons.push("phone number used in earlier spam");
+  }
+  if (/https?:\/\/|www\.|\b[a-z0-9-]+\.(com|net|io|co|org)\/\S*/i.test(message)) {
+    score += 2;
+    reasons.push("link in the message");
+  }
+  const hits = PITCH.filter((re) => re.test(message)).length;
+  if (hits) {
+    score += Math.min(hits, 4);
+    reasons.push(hits + " sales-pitch expression(s)");
+  }
+  return { spam: score >= 3, score, reasons };
+}
+
+/* ---------------------------------------------------------------
  * Origem do lead (07/10/2026)
  *
  * O analytics.js manda o cookie pmu_attr cru (primeiro toque e ultimo
@@ -349,12 +415,15 @@ async function handleContact(request, env, ctx) {
     return json({ ok: false, error: FALLBACK }, 503);
   }
 
-  const to = String(env.CONTACT_TO)
+
+  const origin = leadOrigin(data.attribution);
+  const check = spamCheck({ message, phone, country: (request.cf || {}).country || "" });
+  // Filtrado vai so para SPAM_TO. Sem SPAM_TO configurado, cai no
+  // CONTACT_TO de sempre (com [FILTERED] no assunto): nunca se perde lead.
+  const to = String(check.spam && env.SPAM_TO ? env.SPAM_TO : env.CONTACT_TO)
     .split(",")
     .map((s) => s.trim())
     .filter(Boolean);
-
-  const origin = leadOrigin(data.attribution);
 
   const cf = request.cf || {};
   const meta = [
@@ -368,6 +437,7 @@ async function handleContact(request, env, ctx) {
   ].filter(([, v]) => v);
 
   const html = `<!doctype html><html><body style="font-family:-apple-system,Segoe UI,Arial,sans-serif;color:#222">
+${check.spam ? `<p style="margin:0 0 12px;padding:8px 12px;background:#fef3c7;border-left:4px solid #b45309"><strong>Filtered as a sales pitch / spam</strong> (score ${check.score}): ${esc(check.reasons.join("; "))}. Sent only to the Axel team, not to Adriana. If this is a real client, forward it and tell us.</p>` : ""}
 <h2 style="margin:0 0 4px">New contact form submission</h2>
 <p style="margin:0 0 16px;color:#666">adrianaspmu.com &mdash; ${esc(sourceLabel)}</p>
 <table cellpadding="6" style="border-collapse:collapse;font-size:15px">
@@ -390,6 +460,7 @@ ${origin.path.length ? `<tr><td><strong>Pages viewed before contacting</strong><
 </body></html>`;
 
   const text = [
+    ...(check.spam ? [`FILTERED AS SALES PITCH / SPAM (score ${check.score}): ${check.reasons.join("; ")}`, ""] : []),
     `New contact form submission - adrianaspmu.com [${sourceLabel}]`,
     "",
     `Name:  ${name}`,
@@ -416,7 +487,7 @@ ${origin.path.length ? `<tr><td><strong>Pages viewed before contacting</strong><
         to: rcpt,
         from: env.CONTACT_FROM,
         reply_to: email,
-        subject: `[${!origin.known ? sourceLabel : origin.type === "DIRECT" ? "DIRECT" : `${origin.type} - ${origin.channel}`}] New website inquiry: ${name}`,
+        subject: `${check.spam ? "[FILTERED] " : ""}[${!origin.known ? sourceLabel : origin.type === "DIRECT" ? "DIRECT" : `${origin.type} - ${origin.channel}`}] New website inquiry: ${name}`,
         html,
         text,
       }),
@@ -435,8 +506,8 @@ ${origin.path.length ? `<tr><td><strong>Pages viewed before contacting</strong><
     return json({ ok: false, error: FALLBACK }, 502);
   }
 
-  console.log(JSON.stringify({ event: "contact_sent", delivered, of: to.length, location, lead_type: origin.type, channel: origin.channel }));
-  return json({ ok: true });
+  console.log(JSON.stringify({ event: "contact_sent", delivered, of: to.length, location, lead_type: origin.type, channel: origin.channel, filtered: check.spam, spam_score: check.score }));
+  return json(check.spam ? { ok: true, filtered: true } : { ok: true });
 }
 
 /* ---------------------------------------------------------------
