@@ -1,11 +1,11 @@
 {
- "updated": "2026-10-07T17:25:52Z",
+ "updated": "2026-10-10T15:52:48Z",
  "units": {
   "wilmington": {
    "label": "Wilmington, MA",
    "maps": "https://maps.google.com/?cid=16715673055892397510",
    "rating": 4.9,
-   "total": 222
+   "total": 223
   },
   "salem": {
    "label": "Salem, NH",
@@ -15,6 +15,15 @@
   }
  },
  "reviews": {
+  "AbFvOqlzEm8rKobLvWfXlHtRlCv8zY-YJ1oURQ1WKDtdRbrUp1m1xa04yKPHMK1PMRuADDcbQG-jlg": {
+   "id": "AbFvOqlzEm8rKobLvWfXlHtRlCv8zY-YJ1oURQ1WKDtdRbrUp1m1xa04yKPHMK1PMRuADDcbQG-jlg",
+   "unit": "wilmington",
+   "name": "Sandra S.",
+   "rating": 5,
+   "text": "Wonderful experience with the services and staff. My face completely change. I'm ver happy with the results. I really recommend to anyone. Para Las Latinas excepsional servicio. Mi 💯 % satisfecha.",
+   "date": "2026-10-08",
+   "month": "October 2026"
+  },
   "AbFvOqni9oDEQDs4Ttkj8lPVu0fkKu0nIe8FTaJxAT-W9MkGOR06GqSjHzIWVVBcldaEtNMXa68q": {
    "id": "AbFvOqni9oDEQDs4Ttkj8lPVu0fkKu0nIe8FTaJxAT-W9MkGOR06GqSjHzIWVVBcldaEtNMXa68q",
    "unit": "wilmington",
@@ -1681,14 +1690,14 @@
   },
   "_any": {
    "all": [
+    "AbFvOqlzEm8rKobLvWfXlHtRlCv8zY-YJ1oURQ1WKDtdRbrUp1m1xa04yKPHMK1PMRuADDcbQG-jlg",
     "AbFvOqni9oDEQDs4Ttkj8lPVu0fkKu0nIe8FTaJxAT-W9MkGOR06GqSjHzIWVVBcldaEtNMXa68q",
-    "AbFvOqk22w12Qt31LORLRSnajqtVS-B_xyfBLOK1Ygfc0kDV4hx622t-i65nEo2dTVAoDysL_VExuw",
-    "AbFvOqm-3hcZsn3j-obtHCW9_J0LeIFOrRDIaFT8qAvmVFNnWb8bK5At63Zt3-qbwOBhTgbJWMEGcQ"
+    "AbFvOqk22w12Qt31LORLRSnajqtVS-B_xyfBLOK1Ygfc0kDV4hx622t-i65nEo2dTVAoDysL_VExuw"
    ],
    "wilmington": [
+    "AbFvOqlzEm8rKobLvWfXlHtRlCv8zY-YJ1oURQ1WKDtdRbrUp1m1xa04yKPHMK1PMRuADDcbQG-jlg",
     "AbFvOqni9oDEQDs4Ttkj8lPVu0fkKu0nIe8FTaJxAT-W9MkGOR06GqSjHzIWVVBcldaEtNMXa68q",
-    "AbFvOqk22w12Qt31LORLRSnajqtVS-B_xyfBLOK1Ygfc0kDV4hx622t-i65nEo2dTVAoDysL_VExuw",
-    "AbFvOqkwaaR5O0qHzHNmviLuro48FJHb65Flmn1CBIyO4hB71gjC7SnHIlXJSI6KWsNBg6fhcjG0"
+    "AbFvOqk22w12Qt31LORLRSnajqtVS-B_xyfBLOK1Ygfc0kDV4hx622t-i65nEo2dTVAoDysL_VExuw"
    ],
    "salem": [
     "AbFvOqm-3hcZsn3j-obtHCW9_J0LeIFOrRDIaFT8qAvmVFNnWb8bK5At63Zt3-qbwOBhTgbJWMEGcQ",
