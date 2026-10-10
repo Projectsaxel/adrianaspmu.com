@@ -109,7 +109,9 @@
       return null;
     }
 
-    var touch = { ts: Date.now() };
+    // lp = pagina em que a visitante entrou neste toque. Vai no e-mail do
+    // lead como "chegou por esta pagina".
+    var touch = { ts: Date.now(), lp: location.pathname.slice(0, 120) };
     var i, id, val;
 
     // Click ids sempre viajam, mesmo quando ha utm por cima.
@@ -163,6 +165,7 @@
     if (refHost === location.hostname || FRESHA_HOST.test(refHost)) return null;
 
     touch.s = rootName(refHost);
+    touch.r = refHost.slice(0, 80);
     if (SEARCH_HOSTS.test(refHost)) touch.m = "organic";
     else if (SOCIAL_HOSTS.test(refHost)) touch.m = "social";
     else if (AI_HOSTS.test(refHost)) touch.m = "ai_referral";
@@ -192,7 +195,7 @@
       stored.l = touch;
       writeCookie(ATTR_COOKIE, JSON.stringify(stored));
     } else if (!stored.f) {
-      stored.f = stored.l = { s: "(direct)", m: "(none)", c: "(not set)", ts: Date.now() };
+      stored.f = stored.l = { s: "(direct)", m: "(none)", c: "(not set)", ts: Date.now(), lp: location.pathname.slice(0, 120) };
       writeCookie(ATTR_COOKIE, JSON.stringify(stored));
     }
     return stored;
@@ -200,6 +203,30 @@
 
   var ATTR = attribution();
   var LAST = ATTR.l || {};
+
+  /**
+   * Paginas vistas nesta visita, em ordem. sessionStorage e nao cookie:
+   * vale so para a aba aberta e nao viaja em toda requisicao. Vai no
+   * e-mail do lead como "o que ela leu antes de escrever".
+   */
+  var JOURNEY_KEY = "pmu_path";
+  var JOURNEY_MAX = 15;
+  function journey() {
+    var list = [];
+    try {
+      list = JSON.parse(sessionStorage.getItem(JOURNEY_KEY) || "[]") || [];
+    } catch (e) {
+      list = [];
+    }
+    var here = location.pathname.slice(0, 120);
+    if (list[list.length - 1] !== here) list.push(here);
+    if (list.length > JOURNEY_MAX) list = list.slice(-JOURNEY_MAX);
+    try {
+      sessionStorage.setItem(JOURNEY_KEY, JSON.stringify(list));
+    } catch (e) {}
+    return list;
+  }
+  var PATH = journey();
 
   // ---------------------------------------------------------------
   // eventos
@@ -444,6 +471,15 @@
         location: PAGE.city || "(not set)",
       });
     },
+  };
+
+  /**
+   * Origem do lead, mandada junto com todo formulario (main.js). O Worker
+   * classifica (Google Ads, ficha do Google, ChatGPT...) e poe no e-mail.
+   * Aqui so vai o dado cru: a classificacao fica num lugar so.
+   */
+  window.PMU_leadSource = function () {
+    return { first: ATTR.f || null, last: ATTR.l || null, path: PATH };
   };
 
   // Exposto para depuracao no console: PMU_attr().
