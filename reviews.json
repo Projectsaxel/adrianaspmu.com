@@ -1,11 +1,11 @@
 {
- "updated": "2026-10-10T15:52:48Z",
+ "updated": "2026-10-13T17:36:17Z",
  "units": {
   "wilmington": {
    "label": "Wilmington, MA",
    "maps": "https://maps.google.com/?cid=16715673055892397510",
    "rating": 4.9,
-   "total": 223
+   "total": 224
   },
   "salem": {
    "label": "Salem, NH",
@@ -15,6 +15,15 @@
   }
  },
  "reviews": {
+  "AbFvOqmJASxDKrGn5b8tCVkPPaB5k37K2RRYxjt5NNvpp9pEWghxKGXzsXDSrKdYGmaktIihX19iDA": {
+   "id": "AbFvOqmJASxDKrGn5b8tCVkPPaB5k37K2RRYxjt5NNvpp9pEWghxKGXzsXDSrKdYGmaktIihX19iDA",
+   "unit": "wilmington",
+   "name": "Miss F.",
+   "rating": 5,
+   "text": "Have been coming since 2019 and Adriana always does an amazing job!! Highly recommend her.",
+   "date": "2026-10-12",
+   "month": "October 2026"
+  },
   "AbFvOqlzEm8rKobLvWfXlHtRlCv8zY-YJ1oURQ1WKDtdRbrUp1m1xa04yKPHMK1PMRuADDcbQG-jlg": {
    "id": "AbFvOqlzEm8rKobLvWfXlHtRlCv8zY-YJ1oURQ1WKDtdRbrUp1m1xa04yKPHMK1PMRuADDcbQG-jlg",
    "unit": "wilmington",
@@ -956,7 +965,7 @@
    "unit": "wilmington",
    "name": "Rosilene S.",
    "rating": 5,
-   "text": "Com alegria digo que Adriana fez um trabalho Maravilhoso!!! Depois de ter perdido minha som-brancelha. durante o câncer confesso que eu estava apreensiva se eu iria gostar. Mas Adriana foi muito atenciosa dedicada em me agradar e fazer o melhor para que eu me sentisse bem. Ficou muito bonita!! Ela fez exatamente o que pedi e o que ficasse bem para meu estilo de rosto. Depois de passar por um sofrimento do câncer e perdas. Amei me olhar no espelho e ver que uma som-brancelha feita por uma verdadeira profissional faz um grande impacto no rosto. AMEl grata!! Obrigada Rosillene Silva (Translated by Google) With joy I say that Adriana did a wonderful job!!! After losing my eyebrows during cancer, I confess I was apprehensive about whether I would like it. But Adriana was very attentive, dedicated to pleasing me and doing her best to make me feel good. It turned out very beautiful!! She did exactly what I asked and what would look good for my face shape. After going through the suffering of cancer and losses. I loved looking in the mirror and seeing that eyebrows done by a true professional make a big impact on the face. I am so grateful!! Thank you, Rosillene Silva",
+   "text": "With joy I say that Adriana did a wonderful job!!! After losing my eyebrows during cancer, I confess I was apprehensive about whether I would like it. But Adriana was very attentive, dedicated to pleasing me and doing her best to make me feel good. It turned out very beautiful!! She did exactly what I asked and what would look good for my face shape. After going through the suffering of cancer and losses. I loved looking in the mirror and seeing that eyebrows done by a true professional make a big impact on the face. I am so grateful!! Thank you, Rosillene Silva",
    "date": "2025-05-26",
    "month": "May 2025"
   },
@@ -1001,7 +1010,7 @@
    "unit": "wilmington",
    "name": "Cristiane S.",
    "rating": 5,
-   "text": "**Review sobre o trabalho de Adriana** Eu sou cliente da Adriana há 6 anos e posso afirmar com certeza que ela é a melhor na sua área! A cada visita, sou surpreendida pela sua habilidade e dedicação. O cuidado que ela tem com cada detalhe é notável, e a transformação que ela proporciona é simplesmente incrível. Adriana não apenas entende as minhas necessidades, mas também traz novas ideias que sempre me encantam. Sua técnica é impecável e o resultado final é sempre deslumbrante. Além disso, ela é uma profissional super atenciosa e acolhedora, o que torna a experiência ainda mais especial. Recomendo a todos que buscam qualidade e profissionalismo ! Sem dúvida, ela é a melhor do mercado! (Translated by Google) **Review of Adriana's work** I've been Adriana's client for 6 years and I can say with certainty that she is the best in her field! With each visit, I'm amazed by her skill and dedication. The care she takes with every detail is remarkable, and the transformation she provides is simply incredible. Adriana not only understands my needs, but also brings new ideas that always enchant me. Her technique is impeccable and the final result is always stunning. Furthermore, she is a super attentive and welcoming professional, which makes the experience even more special. I recommend her to everyone seeking quality and professionalism! Without a doubt, she is the best in the market!",
+   "text": "**Review of Adriana's work** I've been Adriana's client for 6 years and I can say with certainty that she is the best in her field! With each visit, I'm amazed by her skill and dedication. The care she takes with every detail is remarkable, and the transformation she provides is simply incredible. Adriana not only understands my needs, but also brings new ideas that always enchant me. Her technique is impeccable and the final result is always stunning. Furthermore, she is a super attentive and welcoming professional, which makes the experience even more special. I recommend her to everyone seeking quality and professionalism! Without a doubt, she is the best in the market!",
    "date": "2025-05-08",
    "month": "May 2025"
   },
@@ -1690,14 +1699,14 @@
   },
   "_any": {
    "all": [
+    "AbFvOqmJASxDKrGn5b8tCVkPPaB5k37K2RRYxjt5NNvpp9pEWghxKGXzsXDSrKdYGmaktIihX19iDA",
     "AbFvOqlzEm8rKobLvWfXlHtRlCv8zY-YJ1oURQ1WKDtdRbrUp1m1xa04yKPHMK1PMRuADDcbQG-jlg",
-    "AbFvOqni9oDEQDs4Ttkj8lPVu0fkKu0nIe8FTaJxAT-W9MkGOR06GqSjHzIWVVBcldaEtNMXa68q",
-    "AbFvOqk22w12Qt31LORLRSnajqtVS-B_xyfBLOK1Ygfc0kDV4hx622t-i65nEo2dTVAoDysL_VExuw"
+    "AbFvOqni9oDEQDs4Ttkj8lPVu0fkKu0nIe8FTaJxAT-W9MkGOR06GqSjHzIWVVBcldaEtNMXa68q"
    ],
    "wilmington": [
+    "AbFvOqmJASxDKrGn5b8tCVkPPaB5k37K2RRYxjt5NNvpp9pEWghxKGXzsXDSrKdYGmaktIihX19iDA",
     "AbFvOqlzEm8rKobLvWfXlHtRlCv8zY-YJ1oURQ1WKDtdRbrUp1m1xa04yKPHMK1PMRuADDcbQG-jlg",
-    "AbFvOqni9oDEQDs4Ttkj8lPVu0fkKu0nIe8FTaJxAT-W9MkGOR06GqSjHzIWVVBcldaEtNMXa68q",
-    "AbFvOqk22w12Qt31LORLRSnajqtVS-B_xyfBLOK1Ygfc0kDV4hx622t-i65nEo2dTVAoDysL_VExuw"
+    "AbFvOqni9oDEQDs4Ttkj8lPVu0fkKu0nIe8FTaJxAT-W9MkGOR06GqSjHzIWVVBcldaEtNMXa68q"
    ],
    "salem": [
     "AbFvOqm-3hcZsn3j-obtHCW9_J0LeIFOrRDIaFT8qAvmVFNnWb8bK5At63Zt3-qbwOBhTgbJWMEGcQ",
