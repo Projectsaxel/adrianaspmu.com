@@ -6764,6 +6764,234 @@ tbody tr:last-child > td { border-bottom: 0; }
 }
 
 /* ==========================================================================
+   HUB DE SERVICOS: cards padronizados + antes/depois no card — 15/10/2026
+   --------------------------------------------------------------------------
+   Pedido da Rachel: no /services/ cada categoria tinha card de uma largura
+   (brows 372px, lips/combos/touch-ups 380px, eyeliner 275px), porque o
+   .card-grid flex estica conforme a quantidade de cards. Aqui a grade e
+   .hub-grid (nao .card-grid, de proposito: escapa da regra :has() de 4 cards
+   e do max-width de 380px) e TODO card tem a mesma largura fixa.
+   5 cards quebram 3+2 centralizado, nunca 4+1.
+
+   Sem carrossel: o unico movimento da pagina e a troca antes -> depois dentro
+   do card. A foto e 4:5 (arte de 1600x2000, mesmo modelo da galeria da home)
+   e o arco fica na MOLDURA (.ba-frame), nao na foto - ver corte e moldura.
+   Card sem par antes/depois mostra so o depois, parado e sem rotulo.
+   ========================================================================== */
+/* v3 (15/10/2026, depois do merge): "nao ta bom uma linha ter 1 servico
+   isolado... muita area de rolagem". Agora:
+   - UMA linha por categoria numa grade FIXA de 5 colunas (desktop);
+     Combos e Touch-Ups viraram uma categoria so (1 + 1 = 2).
+   - O que sobra da linha vira um bloco de orientacao (.hub-tile) que ocupa
+     exatamente as colunas livres: toda linha fica retangular e completa.
+       desktop 5 col: brows 5 | lips 2+3 | eyeliner 4+1 | combos 2+3
+       tablet  3 col: brows 5+1 | lips 2+1 | eyeliner 4+2 | combos 2+1
+       celular 2 col: brows 5+1 | lips 2+2 | eyeliner 4+2 | combos 2+2
+     O span de cada bloco vem inline (--span-d/-t/-m); 0 = escondido.
+   - Card enxuto: foto, nome, uma frase, preco. Os links de cidade sairam
+     do card (continuam na pagina de cada servico). */
+.hub-cat { padding-block: 3.5rem; }
+.hub-cat + .hub-cat { padding-top: 0; }
+.hub-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.75rem;
+  margin-bottom: 2rem;
+}
+.hub-head h2 { margin: 0; }
+.hub-browse { margin: 0; display: flex; gap: 1.25rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; }
+.hub-browse a { text-decoration: none; }
+.hub-browse { align-items: center; }
+.hub-browse .ba-pausa { min-height: 36px; padding: 0.25rem 0.9rem; font-size: 0.6875rem; letter-spacing: 0.08em; }
+
+.hub-grid5 {
+  --cols: 5;
+  display: grid;
+  grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+  column-gap: 1.5rem;
+  align-items: stretch;
+}
+.hub-tile { grid-column: span var(--span-d); }
+.hub-tile[style*="--span-d:0"] { display: none; }
+@media (max-width: 1023.98px) {
+  .hub-grid5 { --cols: 3; }
+  .hub-tile { grid-column: span var(--span-t); }
+  .hub-tile[style*="--span-d:0"] { display: flex; }
+}
+@media (max-width: 599.98px) {
+  .hub-grid5 { --cols: 2; gap: 1.5rem 0.875rem; }
+  .hub-tile { grid-column: span var(--span-m); }
+}
+
+/* SIMETRIA (Rachel, 15/10: "observe com rigor... a simetria e imperativa").
+   Cada card vira SUBGRID de 4 faixas (foto, nome, descricao, preco) que a
+   linha inteira compartilha: a faixa tem a altura do maior item da linha,
+   entao nome, descricao e preco comecam na MESMA altura em todos os cards,
+   mesmo quando um nome ou descricao quebra em mais linhas. Nada de
+   reticencias: o nome quebra, e a faixa dos outros acompanha. */
+.hub-grid5 { row-gap: 2.75rem; }
+.hub-card {
+  position: relative;
+  min-width: 0;
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 4;
+  row-gap: 0;
+}
+.hub-tile { grid-row: span 4; }
+.hub-card .ba { margin-bottom: 0; }
+.hub-card h3 {
+  margin: 0.9rem 0 0.3rem;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.hub-card h3 a { color: var(--ink); text-decoration: none; }
+.hub-card h3 a::after { content: ""; position: absolute; inset: 0; }  /* card inteiro clicavel */
+.hub-desc { margin: 0; font-size: 0.875rem; line-height: 1.5; color: var(--ink-muted); }
+.hub-price {
+  margin: 0.6rem 0 0;
+  align-self: end;
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  color: var(--rose-deep);
+}
+@media (max-width: 599.98px) {
+  .hub-card h3 { font-size: 1.0625rem; }
+  .hub-desc { font-size: 0.8125rem; }
+}
+
+/* Bloco de orientacao: o texto escala com a LARGURA DO PROPRIO BLOCO
+   (container query), nao da tela. Bloco de 1 coluna (~170px) nao quebra
+   palavra por palavra nem vaza; bloco de 3 colunas usa o tamanho cheio. */
+.hub-tile {
+  container-type: inline-size;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(1rem, 3vw, 2.25rem);
+  background: var(--blush);
+  border-radius: var(--radius);
+  color: var(--ink);
+}
+.hub-tile p { margin: 0 0 0.75rem; font-size: clamp(0.8125rem, 7cqi, 0.9375rem); line-height: 1.5; }
+.hub-tile .hub-tile-titulo {
+  font-family: var(--font-display);
+  font-size: clamp(1.0625rem, 11cqi, 1.625rem);
+  line-height: 1.2;
+  overflow-wrap: break-word;
+  hyphens: none;
+}
+.hub-tile .hub-tile-links { margin: 0.25rem 0 0; display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; font-weight: 600; font-size: clamp(0.75rem, 6.5cqi, 0.875rem); }
+.hub-tile a { text-decoration: none; }
+
+.ba { position: relative; margin-bottom: var(--space-6); isolation: isolate; }
+/* fio de brass deslocado, igual aos outros cards */
+.ba::after {
+  content: "";
+  position: absolute;
+  inset: -10px -10px 10px 10px;
+  border: 1px solid var(--brass);
+  border-radius: var(--arco);
+  opacity: 0.45;
+  z-index: -1;
+  pointer-events: none;
+  transition: inset 0.3s var(--ease), opacity 0.3s var(--ease);
+}
+.card:hover .ba::after { inset: -14px -14px 14px 14px; opacity: 0.75; }
+
+.ba-frame {
+  position: relative;
+  display: block;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: var(--arco);
+  background: var(--blush);
+}
+.ba-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s var(--ease);
+}
+.card:hover .ba-img { transform: scale(1.03); }
+
+/* rotulo no pe da foto: "Before" e "After" trocam junto com a imagem */
+.ba-tags {
+  position: absolute;
+  left: 50%;
+  bottom: 0.75rem;
+  transform: translateX(-50%);
+  display: grid;
+  pointer-events: none;
+}
+.ba-tag {
+  grid-area: 1 / 1;
+  justify-self: center;
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(251, 246, 243, 0.92);
+  color: var(--ink);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* ciclo de 7s: antes ~3s, troca de 0,7s, depois ~3s, volta */
+@keyframes ba-mostra-antes {
+  0%, 40%  { opacity: 1; }
+  50%, 90% { opacity: 0; }
+  100%     { opacity: 1; }
+}
+@keyframes ba-mostra-depois {
+  0%, 40%  { opacity: 0; }
+  50%, 90% { opacity: 1; }
+  100%     { opacity: 0; }
+}
+.ba-antes,
+.ba-tag--antes  { animation: ba-mostra-antes 7s ease-in-out infinite; }
+.ba-tag--depois { animation: ba-mostra-depois 7s ease-in-out infinite; }
+.ba-antes, .ba-tag { animation-delay: var(--ba-delay, 0s); }
+
+/* botao de pausa (WCAG 2.2.2: movimento automatico > 5s precisa de pausa) */
+.ba-controle { display: flex; justify-content: center; margin-top: 1.5rem; }
+.ba-pausa {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.5rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface-alt);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.8125rem;
+  cursor: pointer;
+}
+.ba-pausa:hover { border-color: var(--rose); }
+.ba-pausa:focus-visible { outline: 2px solid var(--brand-deep); outline-offset: 3px; }
+.ba-pausado .ba-antes,
+.ba-pausado .ba-tag { animation-play-state: paused; }
+
+/* quem pediu menos movimento: so o depois, parado */
+@media (prefers-reduced-motion: reduce) {
+  .ba-antes, .ba-tag { animation: none; }
+  .ba-antes, .ba-tags { display: none; }
+  .ba-controle { display: none; }
+  .ba-img { transition: none; }
+}
+
+/* ==========================================================================
    PAINEL "READY TO BOOK" — 15/10/2026 (revisao do Pablo)
    O .cta-panel fora de .section--cta tinha borda mas padding zero: no celular
    o texto encostava na borda e os dois botoes empilhados se tocavam.
