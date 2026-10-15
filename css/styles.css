@@ -6778,38 +6778,106 @@ tbody tr:last-child > td { border-bottom: 0; }
    e o arco fica na MOLDURA (.ba-frame), nao na foto - ver corte e moldura.
    Card sem par antes/depois mostra so o depois, parado e sem rotulo.
    ========================================================================== */
-.hub-grid {
-  /* UM padrao so: ate 3 cards por linha em TODA categoria (Rachel, 15/10:
-     "num lugar 3, no outro 4, no outro 2... tem que ter um padrao").
-     Linha incompleta fica centralizada. Larguras ja somadas porque o
-     scripts/minify_css.py tira os espacos em volta do + dentro de calc(). */
-  --hub-card: 340px;
-  --hub-gap: 32px;
-  --hub-3: 1084px;  /* 3 x 340 + 2 x 32 */
-  --hub-2: 712px;   /* 2 x 340 + 32 */
+/* v3 (15/10/2026, depois do merge): "nao ta bom uma linha ter 1 servico
+   isolado... muita area de rolagem". Agora:
+   - UMA linha por categoria numa grade FIXA de 5 colunas (desktop);
+     Combos e Touch-Ups viraram uma categoria so (1 + 1 = 2).
+   - O que sobra da linha vira um bloco de orientacao (.hub-tile) que ocupa
+     exatamente as colunas livres: toda linha fica retangular e completa.
+       desktop 5 col: brows 5 | lips 2+3 | eyeliner 4+1 | combos 2+3
+       tablet  3 col: brows 5+1 | lips 2+1 | eyeliner 4+2 | combos 2+1
+       celular 2 col: brows 5+1 | lips 2+2 | eyeliner 4+2 | combos 2+2
+     O span de cada bloco vem inline (--span-d/-t/-m); 0 = escondido.
+   - Card enxuto: foto, nome, uma frase, preco. Os links de cidade sairam
+     do card (continuam na pagina de cada servico). */
+.hub-cat { padding-block: 3.5rem; }
+.hub-cat + .hub-cat { padding-top: 0; }
+.hub-head {
   display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 3rem var(--hub-gap);
-  max-width: var(--hub-3);
-  margin: 2.5rem auto 0;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.75rem;
+  margin-bottom: 2rem;
 }
-.hub-grid > .card { flex: 0 0 var(--hub-card); min-width: 0; max-width: none; }
-@media (max-width: 1123.98px) { .hub-grid { max-width: var(--hub-2); } }
-@media (max-width: 751.98px) {
-  .hub-grid { max-width: none; }
-  .hub-grid > .card { flex-basis: min(100%, var(--hub-card)); }
-}
-/* titulo e "Browse ..." centralizados juntos, como a grade */
-.section:has(.hub-grid) h2 { text-align: center; }
+.hub-head h2 { margin: 0; }
+.hub-browse { margin: 0; display: flex; gap: 1.25rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; }
+.hub-browse a { text-decoration: none; }
+.hub-browse { align-items: center; }
+.hub-browse .ba-pausa { min-height: 36px; padding: 0.25rem 0.9rem; font-size: 0.6875rem; letter-spacing: 0.08em; }
 
-/* Tudo no card tem altura previsivel, para as linhas divisorias cairem no
-   mesmo lugar em todos: nome em UMA linha, descricao com reserva de 3
-   linhas (os textos do hub tem 69-79 caracteres), links com reserva de 2. */
-.hub-grid .card h3 { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.hub-grid .card-desc { min-height: calc(3 * 1.7em); margin-bottom: 0.5rem; }
-.hub-grid .card .price { margin: 0.25rem 0 0.75rem; }
-.hub-grid .card-links { min-height: calc(2 * 1.7em); margin-top: 0; }
+.hub-grid5 {
+  --cols: 5;
+  display: grid;
+  grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+  gap: 2rem 1.5rem;
+  align-items: stretch;
+}
+.hub-tile { grid-column: span var(--span-d); }
+.hub-tile[style*="--span-d:0"] { display: none; }
+@media (max-width: 1023.98px) {
+  .hub-grid5 { --cols: 3; }
+  .hub-tile { grid-column: span var(--span-t); }
+  .hub-tile[style*="--span-d:0"] { display: flex; }
+}
+@media (max-width: 599.98px) {
+  .hub-grid5 { --cols: 2; gap: 1.5rem 0.875rem; }
+  .hub-tile { grid-column: span var(--span-m); }
+}
+
+.hub-card { min-width: 0; }
+.hub-card h3 {
+  margin: 0.9rem 0 0.25rem;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.hub-card h3 a { color: var(--ink); text-decoration: none; }
+.hub-card h3 a::after { content: ""; position: absolute; inset: 0; }  /* card inteiro clicavel */
+.hub-card { position: relative; }
+.hub-card .ba { margin-bottom: 0; }
+.hub-desc {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--ink-muted);
+  min-height: 3em;             /* sempre 2 linhas: precos alinhados */
+}
+.hub-price {
+  margin: 0.5rem 0 0;
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  color: var(--rose-deep);
+}
+@media (max-width: 599.98px) {
+  .hub-card h3 { font-size: 1.0625rem; white-space: normal; min-height: 2.4em; }
+  .hub-desc { font-size: 0.8125rem; min-height: 4.5em; }
+}
+
+/* bloco de orientacao: preenche o resto da linha, mesma altura dos cards */
+.hub-tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(1.25rem, 3vw, 2.25rem);
+  background: var(--blush);
+  border-radius: var(--radius);
+  color: var(--ink);
+}
+.hub-tile p { margin: 0 0 0.75rem; font-size: 0.9375rem; line-height: 1.55; }
+.hub-tile .hub-tile-titulo {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2vw, 1.625rem);
+  line-height: 1.2;
+}
+.hub-tile .hub-tile-links { margin: 0.25rem 0 0; display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; font-weight: 600; font-size: 0.875rem; }
+.hub-tile a { text-decoration: none; }
 
 .ba { position: relative; margin-bottom: var(--space-6); isolation: isolate; }
 /* fio de brass deslocado, igual aos outros cards */
