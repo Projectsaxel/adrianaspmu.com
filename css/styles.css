@@ -6812,7 +6812,7 @@ tbody tr:last-child > td { border-bottom: 0; }
   --cols: 5;
   display: grid;
   grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
-  gap: 2rem 1.5rem;
+  column-gap: 1.5rem;
   align-items: stretch;
 }
 .hub-tile { grid-column: span var(--span-d); }
@@ -6827,56 +6827,67 @@ tbody tr:last-child > td { border-bottom: 0; }
   .hub-tile { grid-column: span var(--span-m); }
 }
 
-.hub-card { min-width: 0; }
+/* SIMETRIA (Rachel, 15/10: "observe com rigor... a simetria e imperativa").
+   Cada card vira SUBGRID de 4 faixas (foto, nome, descricao, preco) que a
+   linha inteira compartilha: a faixa tem a altura do maior item da linha,
+   entao nome, descricao e preco comecam na MESMA altura em todos os cards,
+   mesmo quando um nome ou descricao quebra em mais linhas. Nada de
+   reticencias: o nome quebra, e a faixa dos outros acompanha. */
+.hub-grid5 { row-gap: 2.75rem; }
+.hub-card {
+  position: relative;
+  min-width: 0;
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 4;
+  row-gap: 0;
+}
+.hub-tile { grid-row: span 4; }
+.hub-card .ba { margin-bottom: 0; }
 .hub-card h3 {
-  margin: 0.9rem 0 0.25rem;
+  margin: 0.9rem 0 0.3rem;
   font-family: var(--font-display);
   font-size: 1.25rem;
   font-weight: 500;
   line-height: 1.2;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .hub-card h3 a { color: var(--ink); text-decoration: none; }
 .hub-card h3 a::after { content: ""; position: absolute; inset: 0; }  /* card inteiro clicavel */
-.hub-card { position: relative; }
-.hub-card .ba { margin-bottom: 0; }
-.hub-desc {
-  margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  color: var(--ink-muted);
-  min-height: 3em;             /* sempre 2 linhas: precos alinhados */
-}
+.hub-desc { margin: 0; font-size: 0.875rem; line-height: 1.5; color: var(--ink-muted); }
 .hub-price {
-  margin: 0.5rem 0 0;
+  margin: 0.6rem 0 0;
+  align-self: end;
   font-family: var(--font-display);
   font-size: 1.125rem;
   color: var(--rose-deep);
 }
 @media (max-width: 599.98px) {
-  .hub-card h3 { font-size: 1.0625rem; white-space: normal; min-height: 2.4em; }
-  .hub-desc { font-size: 0.8125rem; min-height: 4.5em; }
+  .hub-card h3 { font-size: 1.0625rem; }
+  .hub-desc { font-size: 0.8125rem; }
 }
 
-/* bloco de orientacao: preenche o resto da linha, mesma altura dos cards */
+/* Bloco de orientacao: o texto escala com a LARGURA DO PROPRIO BLOCO
+   (container query), nao da tela. Bloco de 1 coluna (~170px) nao quebra
+   palavra por palavra nem vaza; bloco de 3 colunas usa o tamanho cheio. */
 .hub-tile {
+  container-type: inline-size;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: clamp(1.25rem, 3vw, 2.25rem);
+  padding: clamp(1rem, 3vw, 2.25rem);
   background: var(--blush);
   border-radius: var(--radius);
   color: var(--ink);
 }
-.hub-tile p { margin: 0 0 0.75rem; font-size: 0.9375rem; line-height: 1.55; }
+.hub-tile p { margin: 0 0 0.75rem; font-size: clamp(0.8125rem, 7cqi, 0.9375rem); line-height: 1.5; }
 .hub-tile .hub-tile-titulo {
   font-family: var(--font-display);
-  font-size: clamp(1.25rem, 2vw, 1.625rem);
+  font-size: clamp(1.0625rem, 11cqi, 1.625rem);
   line-height: 1.2;
+  overflow-wrap: break-word;
+  hyphens: none;
 }
-.hub-tile .hub-tile-links { margin: 0.25rem 0 0; display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; font-weight: 600; font-size: 0.875rem; }
+.hub-tile .hub-tile-links { margin: 0.25rem 0 0; display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; font-weight: 600; font-size: clamp(0.75rem, 6.5cqi, 0.875rem); }
 .hub-tile a { text-decoration: none; }
 
 .ba { position: relative; margin-bottom: var(--space-6); isolation: isolate; }
