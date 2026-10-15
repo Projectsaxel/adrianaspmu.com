@@ -1665,3 +1665,16 @@ function initVideo() {
     });
   });
 }
+
+/* Hub de servicos: pausa da troca antes/depois dos cards (WCAG 2.2.2).
+   Um botao so pausa todos os cards da pagina. */
+{
+  const botao = document.querySelector("[data-ba-pausa]");
+  if (botao) {
+    botao.addEventListener("click", () => {
+      const pausado = document.body.classList.toggle("ba-pausado");
+      botao.setAttribute("aria-pressed", String(pausado));
+      botao.textContent = pausado ? "Play before & after" : "Pause before & after";
+    });
+  }
+}

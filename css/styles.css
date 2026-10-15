@@ -6764,6 +6764,155 @@ tbody tr:last-child > td { border-bottom: 0; }
 }
 
 /* ==========================================================================
+   HUB DE SERVICOS: cards padronizados + antes/depois no card — 15/10/2026
+   --------------------------------------------------------------------------
+   Pedido da Rachel: no /services/ cada categoria tinha card de uma largura
+   (brows 372px, lips/combos/touch-ups 380px, eyeliner 275px), porque o
+   .card-grid flex estica conforme a quantidade de cards. Aqui a grade e
+   .hub-grid (nao .card-grid, de proposito: escapa da regra :has() de 4 cards
+   e do max-width de 380px) e TODO card tem a mesma largura fixa.
+   5 cards quebram 3+2 centralizado, nunca 4+1.
+
+   Sem carrossel: o unico movimento da pagina e a troca antes -> depois dentro
+   do card. A foto e 4:5 (arte de 1600x2000, mesmo modelo da galeria da home)
+   e o arco fica na MOLDURA (.ba-frame), nao na foto - ver corte e moldura.
+   Card sem par antes/depois mostra so o depois, parado e sem rotulo.
+   ========================================================================== */
+.hub-grid {
+  /* UM padrao so: ate 3 cards por linha em TODA categoria (Rachel, 15/10:
+     "num lugar 3, no outro 4, no outro 2... tem que ter um padrao").
+     Linha incompleta fica centralizada. Larguras ja somadas porque o
+     scripts/minify_css.py tira os espacos em volta do + dentro de calc(). */
+  --hub-card: 340px;
+  --hub-gap: 32px;
+  --hub-3: 1084px;  /* 3 x 340 + 2 x 32 */
+  --hub-2: 712px;   /* 2 x 340 + 32 */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem var(--hub-gap);
+  max-width: var(--hub-3);
+  margin: 2.5rem auto 0;
+}
+.hub-grid > .card { flex: 0 0 var(--hub-card); min-width: 0; max-width: none; }
+@media (max-width: 1123.98px) { .hub-grid { max-width: var(--hub-2); } }
+@media (max-width: 751.98px) {
+  .hub-grid { max-width: none; }
+  .hub-grid > .card { flex-basis: min(100%, var(--hub-card)); }
+}
+/* titulo e "Browse ..." centralizados juntos, como a grade */
+.section:has(.hub-grid) h2 { text-align: center; }
+
+/* Tudo no card tem altura previsivel, para as linhas divisorias cairem no
+   mesmo lugar em todos: nome em UMA linha, descricao com reserva de 3
+   linhas (os textos do hub tem 69-79 caracteres), links com reserva de 2. */
+.hub-grid .card h3 { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.hub-grid .card-desc { min-height: calc(3 * 1.7em); margin-bottom: 0.5rem; }
+.hub-grid .card .price { margin: 0.25rem 0 0.75rem; }
+.hub-grid .card-links { min-height: calc(2 * 1.7em); margin-top: 0; }
+
+.ba { position: relative; margin-bottom: var(--space-6); isolation: isolate; }
+/* fio de brass deslocado, igual aos outros cards */
+.ba::after {
+  content: "";
+  position: absolute;
+  inset: -10px -10px 10px 10px;
+  border: 1px solid var(--brass);
+  border-radius: var(--arco);
+  opacity: 0.45;
+  z-index: -1;
+  pointer-events: none;
+  transition: inset 0.3s var(--ease), opacity 0.3s var(--ease);
+}
+.card:hover .ba::after { inset: -14px -14px 14px 14px; opacity: 0.75; }
+
+.ba-frame {
+  position: relative;
+  display: block;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: var(--arco);
+  background: var(--blush);
+}
+.ba-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s var(--ease);
+}
+.card:hover .ba-img { transform: scale(1.03); }
+
+/* rotulo no pe da foto: "Before" e "After" trocam junto com a imagem */
+.ba-tags {
+  position: absolute;
+  left: 50%;
+  bottom: 0.75rem;
+  transform: translateX(-50%);
+  display: grid;
+  pointer-events: none;
+}
+.ba-tag {
+  grid-area: 1 / 1;
+  justify-self: center;
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(251, 246, 243, 0.92);
+  color: var(--ink);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* ciclo de 7s: antes ~3s, troca de 0,7s, depois ~3s, volta */
+@keyframes ba-mostra-antes {
+  0%, 40%  { opacity: 1; }
+  50%, 90% { opacity: 0; }
+  100%     { opacity: 1; }
+}
+@keyframes ba-mostra-depois {
+  0%, 40%  { opacity: 0; }
+  50%, 90% { opacity: 1; }
+  100%     { opacity: 0; }
+}
+.ba-antes,
+.ba-tag--antes  { animation: ba-mostra-antes 7s ease-in-out infinite; }
+.ba-tag--depois { animation: ba-mostra-depois 7s ease-in-out infinite; }
+.ba-antes, .ba-tag { animation-delay: var(--ba-delay, 0s); }
+
+/* botao de pausa (WCAG 2.2.2: movimento automatico > 5s precisa de pausa) */
+.ba-controle { display: flex; justify-content: center; margin-top: 1.5rem; }
+.ba-pausa {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.5rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface-alt);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.8125rem;
+  cursor: pointer;
+}
+.ba-pausa:hover { border-color: var(--rose); }
+.ba-pausa:focus-visible { outline: 2px solid var(--brand-deep); outline-offset: 3px; }
+.ba-pausado .ba-antes,
+.ba-pausado .ba-tag { animation-play-state: paused; }
+
+/* quem pediu menos movimento: so o depois, parado */
+@media (prefers-reduced-motion: reduce) {
+  .ba-antes, .ba-tag { animation: none; }
+  .ba-antes, .ba-tags { display: none; }
+  .ba-controle { display: none; }
+  .ba-img { transition: none; }
+}
+
+/* ==========================================================================
    PAINEL "READY TO BOOK" — 15/10/2026 (revisao do Pablo)
    O .cta-panel fora de .section--cta tinha borda mas padding zero: no celular
    o texto encostava na borda e os dois botoes empilhados se tocavam.
