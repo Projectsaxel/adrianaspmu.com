@@ -38,6 +38,7 @@ const SITE = {
       license: "Wilmington Board of Health: Body Art Facility 20261921; practitioners 20261923 (Adriana) and 20261924 (Livian)",
       areaServed:
         "Wilmington, Reading, North Reading, Burlington, Tewksbury, Andover, North Andover, Woburn, Lowell, and the Greater Boston North Shore",
+      tag: "First Location",
     },
     salem: {
       name: "Salem, NH",
