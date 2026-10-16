@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-13T17:36:17Z",
+ "updated": "2026-10-16T14:51:35Z",
  "units": {
   "wilmington": {
    "label": "Wilmington, MA",
@@ -10,8 +10,8 @@
   "salem": {
    "label": "Salem, NH",
    "maps": "https://maps.google.com/?cid=8332848331847351639",
-   "rating": 4.4,
-   "total": 7
+   "rating": 4.5,
+   "total": 8
   }
  },
  "reviews": {
@@ -504,7 +504,7 @@
   "AbFvOqnWAPvoQk6uQwBQCbakVj32MjtO0ops1Fe3hZjZtqznbcDiTrV76O0s8v3kBr1_F0dXJF8s": {
    "id": "AbFvOqnWAPvoQk6uQwBQCbakVj32MjtO0ops1Fe3hZjZtqznbcDiTrV76O0s8v3kBr1_F0dXJF8s",
    "unit": "wilmington",
-   "name": "Matthew K.",
+   "name": "Nakiganda M.",
    "rating": 5,
    "text": "Best Service!!!My third year having my eyebrows done by Adriana. SHE IS THE 👌",
    "date": "2026-03-26",
@@ -1347,6 +1347,15 @@
    "date": "2023-05-05",
    "month": "May 2023"
   },
+  "AbFvOqlHJ8AyBQFHtjI6ZP71C1yTH2IzUVSJh3c35RQBEWrFdk8yif5SA_fBAAtKz6uIXvLZcKwuOg": {
+   "id": "AbFvOqlHJ8AyBQFHtjI6ZP71C1yTH2IzUVSJh3c35RQBEWrFdk8yif5SA_fBAAtKz6uIXvLZcKwuOg",
+   "unit": "salem",
+   "name": "Juliette U.",
+   "rating": 5,
+   "text": "Adriana is meticulous and is very attentive to detail with her art. Recommend her 1000%.",
+   "date": "2026-10-13",
+   "month": "October 2026"
+  },
   "AbFvOqm-3hcZsn3j-obtHCW9_J0LeIFOrRDIaFT8qAvmVFNnWb8bK5At63Zt3-qbwOBhTgbJWMEGcQ": {
    "id": "AbFvOqm-3hcZsn3j-obtHCW9_J0LeIFOrRDIaFT8qAvmVFNnWb8bK5At63Zt3-qbwOBhTgbJWMEGcQ",
    "unit": "salem",
@@ -1699,9 +1708,9 @@
   },
   "_any": {
    "all": [
+    "AbFvOqlHJ8AyBQFHtjI6ZP71C1yTH2IzUVSJh3c35RQBEWrFdk8yif5SA_fBAAtKz6uIXvLZcKwuOg",
     "AbFvOqmJASxDKrGn5b8tCVkPPaB5k37K2RRYxjt5NNvpp9pEWghxKGXzsXDSrKdYGmaktIihX19iDA",
-    "AbFvOqlzEm8rKobLvWfXlHtRlCv8zY-YJ1oURQ1WKDtdRbrUp1m1xa04yKPHMK1PMRuADDcbQG-jlg",
-    "AbFvOqni9oDEQDs4Ttkj8lPVu0fkKu0nIe8FTaJxAT-W9MkGOR06GqSjHzIWVVBcldaEtNMXa68q"
+    "AbFvOqlzEm8rKobLvWfXlHtRlCv8zY-YJ1oURQ1WKDtdRbrUp1m1xa04yKPHMK1PMRuADDcbQG-jlg"
    ],
    "wilmington": [
     "AbFvOqmJASxDKrGn5b8tCVkPPaB5k37K2RRYxjt5NNvpp9pEWghxKGXzsXDSrKdYGmaktIihX19iDA",
@@ -1709,9 +1718,9 @@
     "AbFvOqni9oDEQDs4Ttkj8lPVu0fkKu0nIe8FTaJxAT-W9MkGOR06GqSjHzIWVVBcldaEtNMXa68q"
    ],
    "salem": [
+    "AbFvOqlHJ8AyBQFHtjI6ZP71C1yTH2IzUVSJh3c35RQBEWrFdk8yif5SA_fBAAtKz6uIXvLZcKwuOg",
     "AbFvOqm-3hcZsn3j-obtHCW9_J0LeIFOrRDIaFT8qAvmVFNnWb8bK5At63Zt3-qbwOBhTgbJWMEGcQ",
-    "AbFvOqmHpjiDbb81OJ8soeeu1voLQUgiJbUMQQ3bj89MmgIUYY7nErglT5AtEXb7hX6HqQAoDB0hqg",
-    "AbFvOqmolbWY1zIwXFkB-P6dD6STUQRYeK1OdDKwsX-ezxYAzjLgrI_vVh2AcW2OZty93HvQPET8rw"
+    "AbFvOqmHpjiDbb81OJ8soeeu1voLQUgiJbUMQQ3bj89MmgIUYY7nErglT5AtEXb7hX6HqQAoDB0hqg"
    ]
   }
  }
