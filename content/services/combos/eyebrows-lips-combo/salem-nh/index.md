@@ -18,8 +18,8 @@ Brows + Lips Combo in Salem, NH costs $850 for a brow treatment and Lip Blush at
 | Booked separately | Brow treatment $550-$650 + Lip Blush $550 = $1,100-$1,200 |
 | What the combo saves | $250 to $350, and one healing period instead of two |
 | What's included | Consultation, brow technique selection, lip color match, numbing, and both procedures |
-| Perfecting session | Included, 6 to 8 weeks after the procedure |
-| Yearly touch-up | From $300 per area, about 12 months later, booked and paid separately |
+| 2nd Session | Included, 6 to 8 weeks after the procedure |
+| Yearly touch-up | From $250 per area, about 12 months later, booked and paid separately |
 | Payment plan | 4 interest-free payments or longer, via Cherry; approval not guaranteed |
 
 ## Who Should Book Brows + Lips Combo in Salem, NH, and Who Should Not?
@@ -32,13 +32,13 @@ Brows + Lips Combo in Salem, NH suits clients near Route 97 who want fuller brow
 
 ## How Does a Brows + Lips Combo Appointment Work at the Salem Studio?
 
-A Brows + Lips Combo appointment at the Salem studio starts with a consultation covering brow shape and lip color goals, performs the brow treatment first, then the lip treatment in the same visit, under topical numbing. The perfecting session at the Salem studio follows 6 to 8 weeks later at no extra charge.
+A Brows + Lips Combo appointment at the Salem studio starts with a consultation covering brow shape and lip color goals, performs the brow treatment first, then the lip treatment in the same visit, under topical numbing. The 2nd session at the Salem studio follows 6 to 8 weeks later at no extra charge.
 
 - Consultation, health history, and brow mapping
 - Brow treatment, with a sterile single-use tool
 - Lip color matching and Lip Blush application
 - Written aftercare for brows and lips
-- Perfecting session, 6 to 8 weeks later, included in the $850
+- 2nd Session, 6 to 8 weeks later, included in the $850
 Full healing detail is in the [aftercare guide](../../../../aftercare/).
 
 ## Why Book Brows + Lips Combo at the Salem, NH Studio Specifically?
@@ -65,7 +65,7 @@ Written by Adriana Souza Santos, responsible for this page's accuracy. Questions
 
 ## What If Brows + Lips Combo Hurts, Swells, or Fades Unevenly?
 
-Most Salem clients describe the brow portion as light scratching and the lip portion as pressure, reduced by topical numbing; swelling is usually more noticeable on the lips. Results typically last 1 to 3 years; if either area heals lighter than expected, the perfecting session corrects it at no extra charge.
+Most Salem clients describe the brow portion as light scratching and the lip portion as pressure, reduced by topical numbing; swelling is usually more noticeable on the lips. Results typically last 1 to 3 years; if either area heals lighter than expected, the 2nd session corrects it at no extra charge.
 
 Deposit terms are confirmed by phone at (978) 223-7496. Signs needing a doctor are listed in the [aftercare guide](../../../../aftercare/#infection-signs).
 
@@ -81,7 +81,7 @@ No. Salem has no passenger rail station, and MBTA Commuter Rail ends at Lowell a
 
 Yes. New Hampshire licenses body art practitioners at the state level under RSA 314-A. The Town of Salem separately licenses both the studio and the artist under Salem Chapter 433, so two levels of licensing apply here, unlike Wilmington's single town-only permit.
 
-The perfecting session is included in the $850 and happens once, 6 to 8 weeks after the original appointment, correcting any unevenness while healing is still fresh. The yearly touch-up is a separate, paid visit from $300 per area, scheduled about 12 months later to refresh faded pigment.
+The 2nd session is included in the $850 and happens once, 6 to 8 weeks after the original appointment, correcting any unevenness while healing is still fresh. The yearly touch-up is a separate, paid visit from $250 per area, scheduled about 12 months later to refresh faded pigment.
 
 Yes. The Salem studio offers payment plans through Cherry Technologies, an independent financing provider separate from Adriana's Permanent Makeup. Options include 4 interest-free payments or a longer plan up to 24 months with interest. Approval is not guaranteed; Cherry sets the terms.
 
@@ -89,9 +89,9 @@ Yes. Master Permanent Makeup Artist Adriana Souza Santos consults in English, Po
 
 Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent financing provider: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
 
-The perfecting session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
+The 2nd session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
 
-Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
+Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). After that, a yearly touch-up refreshes the colour from $250, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the 2nd session, which is included in the original price and happens in the first weeks.
 
 Yes. Pregnancy, breastfeeding, being under 18, and current isotretinoin use are refused at both studios, with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need clearance from your doctor first. The full list is published in the [contraindications guide](../../../../aftercare/) before you book, not after.
 

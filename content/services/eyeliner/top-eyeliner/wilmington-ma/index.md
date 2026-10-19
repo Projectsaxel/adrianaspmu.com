@@ -10,14 +10,14 @@ Top Eyeliner in Wilmington, MA costs $350 and defines the upper lash line with a
 
 ## How Much Does Top Eyeliner Cost in Wilmington, MA, and What’s Included?
 
-Top Eyeliner in Wilmington, MA costs $350, a single price that already includes the perfecting session 6 to 8 weeks after the procedure. A separate yearly touch-up, from $300, follows roughly 12 months later. Cherry offers 4 interest-free payments or a longer plan.
+Top Eyeliner in Wilmington, MA costs $350, a single price that already includes the 2nd session 6 to 8 weeks after the procedure. A separate yearly touch-up, from $250, follows roughly 12 months later. Cherry offers 4 interest-free payments or a longer plan.
 
 | Item | Detail |
 | --- | --- |
 | Procedure price | $350 |
 | What’s included | Consultation, mapping, numbing, and the procedure itself |
-| Perfecting session | Included, 6 to 8 weeks after the procedure |
-| Yearly touch-up | From $300, about 12 months later |
+| 2nd Session | Included, 6 to 8 weeks after the procedure |
+| Yearly touch-up | From $250, about 12 months later |
 | Payment plan | 4 interest-free payments or longer, via Cherry; approval not guaranteed |
 
 Want both lines? The [Eyeliner Combo](../../eyeliner-combo/wilmington-ma/) is $500, versus $600 booked separately.
@@ -35,13 +35,13 @@ Top Eyeliner in Wilmington, MA suits first-time eyeliner clients who want lastin
 
 ## How Does a Top Eyeliner Appointment Work at the Wilmington Studio?
 
-A Wilmington top eyeliner appointment starts with a consultation and lash-line mapping, where the line’s thickness is chosen before any pigment goes in, moves into the procedure itself under topical numbing, and ends with written aftercare instructions. The perfecting session follows 6 to 8 weeks later, once healing is complete, at no extra charge.
+A Wilmington top eyeliner appointment starts with a consultation and lash-line mapping, where the line’s thickness is chosen before any pigment goes in, moves into the procedure itself under topical numbing, and ends with written aftercare instructions. The 2nd session follows 6 to 8 weeks later, once healing is complete, at no extra charge.
 
 - Consultation and health-history intake, including contact lens removal
 - Lash-line mapping, where thickness is chosen together, from barely-there to a defined tail
 - The procedure, with a sterile single-use needle
 - Written aftercare instructions to take home
-- Perfecting session, 6 to 8 weeks later, included in the $350
+- 2nd Session, 6 to 8 weeks later, included in the $350
 
 ## Why Book Top Eyeliner at the Wilmington, MA Studio Specifically?
 
@@ -75,11 +75,11 @@ The American Academy of Dermatology documents that eyeliner pigment can rarely r
 
 Top Eyeliner in Wilmington, MA is performed at 211 Lowell Street, Suite F, Wilmington, MA 01887, reached at (781) 853-8063. The studio is open Monday through Saturday, 10 a.m. to 6 p.m., closed Sunday — a different address and phone number than the Salem, NH studio.
 
-Top Eyeliner in Wilmington, MA costs $350, and that price already includes the perfecting session 6 to 8 weeks after the procedure. A yearly touch-up, from $300, follows roughly 12 months later. Cherry offers 4 interest-free payments or a longer plan; approval is not guaranteed.
+Top Eyeliner in Wilmington, MA costs $350, and that price already includes the 2nd session 6 to 8 weeks after the procedure. A yearly touch-up, from $250, follows roughly 12 months later. Cherry offers 4 interest-free payments or a longer plan; approval is not guaranteed.
 
 The thickness is your choice, made together at the mapping appointment before any pigment goes in. Options range from a soft lash enhancement, where pigment sits between the lashes and no line is visible, up to a fully defined line with a winged tail. There is no single standard look — mapping sets it in advance.
 
-Either works. Top Eyeliner alone defines the upper lash line for $350. Adding Bottom Eyeliner brings subtle lower-lash definition, and the two together cost $600 booked separately or $500 as the Eyeliner Combo, a $100 saving and one healing period instead of two.
+Either works. Top Eyeliner alone defines the upper lash line for $350. Adding Bottom Eyeliner brings subtle lower-lash definition, and with Adriana the two together cost $900 booked separately or $800 as the Eyeliner Combo, a $100 saving and one healing period instead of two.
 
 Yes, it is the option most first-time clients choose. The thickness decision happens at mapping, before the procedure starts, so there is no guessing after the fact. Clients who are unsure can start subtle and, at a future appointment, request more definition instead.
 
@@ -87,13 +87,13 @@ Yes. Contact lenses come out for the top eyeliner appointment; the studio says h
 
 Yes. The Wilmington studio offers payment plans for the $350 top eyeliner price through Cherry Technologies, an independent financing provider, not the studio. Options include 4 interest-free payments or a longer plan up to 24 months with interest. Approval is not guaranteed; Cherry sets the terms.
 
-Yes. The Eyeliner Combo costs $500 for both the upper and lower lash line in one Wilmington appointment, while Top Eyeliner at $350 plus Bottom Eyeliner at $250 booked separately add up to $600. Clients who want both lines from the start save $100 by booking the combo up front.
+Yes. The Eyeliner Combo costs $800 for both the upper and lower lash line in one Wilmington appointment, while Adriana&rsquo;s Top Eyeliner at $500 plus Bottom Eyeliner at $400 booked separately add up to $900. Clients who want both lines from the start save $100 by booking the combo up front.
 
 Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent financing provider: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
 
-The perfecting session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
+The 2nd session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
 
-Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
+Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). After that, a yearly touch-up refreshes the colour from $250, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the 2nd session, which is included in the original price and happens in the first weeks.
 
 Yes. Pregnancy, breastfeeding, being under 18, and current isotretinoin use are refused at both studios, with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need clearance from your doctor first. The full list is published in the [contraindications guide](../../../../aftercare/) before you book, not after.
 
@@ -101,7 +101,7 @@ Adriana Souza Santos has performed more than 5,000 procedures across 20+ years a
 
 ## Explore Other Eyeliner Styles at the Wilmington Studio
 
-Top Eyeliner is one of four eyeliner options at the Wilmington studio, priced $250 to $500 depending on the lash line treated and how much shading is added. Every technique includes the perfecting session, with its own page for Wilmington, MA.
+Top Eyeliner is one of four eyeliner options at the Wilmington studio, priced $300 to $800 depending on the lash line treated and how much shading is added. Every technique includes the 2nd session for first-time clients, with its own page for Wilmington, MA.
 
 - [Smokey Eyeliner in Wilmington](../../smokey-eyeliner/wilmington-ma/) — $400
 - [Bottom Eyeliner in Wilmington](../../bottom-eyeliner/wilmington-ma/) — $250

@@ -127,11 +127,11 @@ Color that looks darker, or an itchy scab, in the first week is normal. The AAD 
 
 ## Why Do I Need a Touch-Up Session, and When Is It Scheduled?
 
-A touch-up session exists because the first appointment cannot fully predict how much pigment an individual client's skin will retain during healing. Adriana's Permanent Makeup schedules the perfecting touch-up 6 to 8 weeks after the initial procedure, once the skin has finished its full healing cycle and the true color has settled.
+A touch-up session exists because the first appointment cannot fully predict how much pigment an individual client's skin will retain during healing. Adriana's Permanent Makeup schedules the 2nd session 6 to 8 weeks after the initial procedure, once the skin has finished its full healing cycle and the true color has settled.
 
 During the touch-up, the artist adjusts color, corrects patchy or light spots, and refines shape based on the healed result. The touch-up is included in the original price, not billed separately.
 
-Most clients need a colour refresh every 12 to 24 months, depending on the technique and skin. That refresh is a separate paid service, the [yearly touch-up](../services/touch-ups/yearly-touch-up/) from $300, usually scheduled about 12 months after the original procedure — not the included perfecting touch-up at 6 to 8 weeks above. Waiting past 24 months usually means more correction work.
+Most clients need a colour refresh every 12 to 24 months, depending on the technique and skin. That refresh is a separate paid service, the [yearly touch-up](../services/touch-ups/yearly-touch-up/) from $250, usually scheduled about 12 months after the original procedure — not the included 2nd session at 6 to 8 weeks above. Waiting past 24 months usually means more correction work.
 
 ## What Should I Do Before My Appointment?
 
@@ -157,11 +157,11 @@ Approval and rates subject to eligibility. Cherry is a financial
 
 ## Ready to Book Your Permanent Makeup Appointment?
 
-Every service includes the perfecting touch-up and written aftercare instructions, plus phone access to the studio during healing. Book online for Wilmington, MA or Salem, NH, or call ahead with any pre-care or contraindication question first.
+Every service includes the 2nd session and written aftercare instructions, plus phone access to the studio during healing. Book online for Wilmington, MA or Salem, NH, or call ahead with any pre-care or contraindication question first.
 
 ## Frequently Asked Questions
 
-Surface healing takes about 4 weeks, and the colour keeps settling for a few weeks after that. This is why the perfecting session is scheduled 6 to 8 weeks out rather than sooner: judging the result before the skin has finished healing leads to correcting something that was going to settle on its own.
+Surface healing takes about 4 weeks, and the colour keeps settling for a few weeks after that. This is why the 2nd session is scheduled 6 to 8 weeks out rather than sooner: judging the result before the skin has finished healing leads to correcting something that was going to settle on its own.
 
 Spreading redness, swelling that increases after the first days, pus, fever, or pain that gets worse rather than better are signs for a clinician, not for the studio. The studio handles colour and healing of the pigment; it does not diagnose or treat infection, and will tell you to see a doctor.
 

@@ -1,12 +1,12 @@
 <!-- Yearly PMU Touch-Up | Wilmington MA & Salem NH -->
 <!-- canonical: https://adrianaspmu.com/services/touch-ups/yearly-touch-up/ -->
-> Yearly PMU Touch-Up in Wilmington MA and Salem NH: refresh faded brows, lips or eyeliner from $300, about 12 months after your session.
+> Yearly PMU Touch-Up in Wilmington MA and Salem NH: refresh faded brows, lips or eyeliner from $250, about 12 months after your session.
 
 # Yearly Touch-Up in Wilmington, MA & Salem, NH
 
 Yearly Touch-Up refreshes faded permanent makeup pigment on brows, lips, or eyeliner — typically scheduled about 12 months after your original procedure.
 
-From $300 USD
+From $250 USD
 
 or **4 interest-free payments** with Cherry — [see your options](../../../payment-plan/), no impact on your credit score
 
@@ -20,7 +20,7 @@ Master Permanent Makeup Artist Adriana Souza Santos has over 20 years of experie
 
 ## What Is a Yearly Touch-Up?
 
-A Yearly Touch-Up is a maintenance appointment performed approximately 12 months after your original permanent makeup procedure, once pigment has visibly faded. It is a separate, paid visit — not the perfecting session that is already included in your original price.
+A Yearly Touch-Up is a maintenance appointment performed approximately 12 months after your original permanent makeup procedure, once pigment has visibly faded. It is a separate, paid visit — not the 2nd session that is already included in your original price.
 
 Over time, pigment naturally fades due to factors such as:
 
@@ -31,18 +31,18 @@ Over time, pigment naturally fades due to factors such as:
 - Natural skin regeneration
 A touch-up refreshes the pigment, restores definition, and helps maintain the beautiful results of your original treatment.
 
-## What Is the Difference Between the Perfecting Session and the Yearly Touch-Up?
+## What Is the Difference Between the 2nd Session and the Yearly Touch-Up?
 
-The perfecting session is included in every original price and happens 6 to 8 weeks after your first appointment, correcting patchy or light spots once healing finishes. The Yearly Touch-Up is a separate, later, paid visit at about 12 months, refreshing pigment that has faded through normal wear rather than correcting early healing.
+The 2nd session is included in the price of every first-time procedure and happens 6 to 8 weeks after your first appointment, correcting patchy or light spots once healing finishes. The Yearly Touch-Up is a separate, later, paid visit at about 12 months, refreshing pigment that has faded through normal wear rather than correcting early healing.
 
-| Aspect | Perfecting session | Yearly Touch-Up |
+| Aspect | 2nd Session | Yearly Touch-Up |
 | --- | --- | --- |
 | When | 6–8 weeks after the original procedure | About 12 months after the original procedure |
-| Cost | Included in the original price | Separate charge, from $300 |
+| Cost | Included in the original price | Separate charge, from $250 |
 | Purpose | Corrects patchy or light spots from initial healing | Refreshes pigment faded by sun, skin type, and time |
 | Scheduling | Booked automatically as part of your original service | Booked separately when you are ready |
 
-Clients often confuse the two since both involve revisiting existing work: the perfecting session corrects unpredictable healing, while the Yearly Touch-Up refreshes pigment that has simply faded with time.
+Clients often confuse the two since both involve revisiting existing work: the 2nd session corrects unpredictable healing, while the Yearly Touch-Up refreshes pigment that has simply faded with time.
 
 A Yearly Touch-Up costs less than repeating the full original treatment, since the shape and color are already established.
 
@@ -90,7 +90,7 @@ During your appointment, we will assess your existing results and recommend the 
 
 ## Who Is a Good Candidate for a Yearly Touch-Up?
 
-A good candidate already had the original procedure and is noticing faded color roughly a year later. It is not the right appointment for someone who never had the original service, or whose most recent visit was the perfecting session weeks earlier.
+A good candidate already had the original procedure and is noticing faded color roughly a year later. It is not the right appointment for someone who never had the original service, or whose most recent visit was the 2nd session weeks earlier.
 
 A Yearly Touch-Up may be ideal if:
 
@@ -101,7 +101,7 @@ A Yearly Touch-Up may be ideal if:
 
 ## What Happens During a Yearly Touch-Up Appointment?
 
-A Yearly Touch-Up begins with evaluating how much pigment remains, since that determines the final price starting at $300, followed by color matching, numbing, and the refresh itself.
+A Yearly Touch-Up begins with evaluating how much pigment remains, since that determines the final price starting at $250, followed by color matching, numbing, and the refresh itself.
 
 The process typically includes:
 
@@ -153,15 +153,15 @@ Minor adjustments may be possible depending on your existing permanent makeup an
 
 Results vary by treatment and individual factors, but regular maintenance helps maximize longevity.
 
-No. The perfecting session is included in your original price and happens 6 to 8 weeks after your first appointment. The Yearly Touch-Up is a separate, paid visit about 12 months later.
+No. The 2nd session is included in your original price and happens 6 to 8 weeks after your first appointment. The Yearly Touch-Up is a separate, paid visit about 12 months later.
 
 Yearly Touch-Up is quoted at the consultation rather than listed at a fixed price, because the work needed changes from face to face. Every other service is published openly, from $250 to $850, on the [price list](../../../prices/), so you can see the range the studio works in before you book anything.
 
 Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent financing provider: it sets approval and rates, not the studio. See [how the payment plan works](../../../payment-plan/).
 
-The perfecting session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
+The 2nd session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
 
-Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
+Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). After that, a yearly touch-up refreshes the colour from $250, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the 2nd session, which is included in the original price and happens in the first weeks.
 
 Yes. Pregnancy, breastfeeding, being under 18, and current isotretinoin use are refused at both studios, with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need clearance from your doctor first. The full list is published in the [contraindications guide](../../../aftercare/) before you book, not after.
 
@@ -192,7 +192,7 @@ Six things are worth verifying with any permanent makeup artist before you book:
 | --- | --- | --- |
 | Practitioner licence | Ask for the licence number and check it yourself with the state or the town, instead of taking a badge on a website at face value. | New Hampshire Body Artist licence 4283, valid through 18 July 2028 and searchable at the state’s own public lookup. Town of Salem BODA-10 and BODE-4. Body Art Practitioner licence from the Town of Wilmington Board of Health. |
 | Who trained them | Ask who certified the artist, and whether that credential can be checked with the body that issued it. | AAM Diamond Certified Trainer, the American Academy of Micropigmentation’s highest level of instructor recognition. |
-| What the price includes | Ask whether the perfecting session is included or billed later. This is where quoted prices most often stop matching the final bill. | The perfecting session, 6 to 8 weeks after the appointment, is included in every original price. The yearly touch-up, from $300, is a separate visit about 12 months later. |
+| What the price includes | Ask whether the 2nd session is included or billed later. This is where quoted prices most often stop matching the final bill. | The 2nd session, 6 to 8 weeks after the appointment, is included in the price of every first-time procedure. The yearly touch-up, from $250, is a separate visit about 12 months later. |
 | Whether the price is published at all | Ask for the price before the consultation. A studio that will not name a range before seeing you is not comparable to one that will. | All 13 services are published with their prices, from $250 to $850, on the [price list](../../../prices/). |
 | When they say no | Ask what would make them refuse to perform the procedure. An artist who never refuses is a warning sign. | Pregnancy, breastfeeding, under 18 and isotretinoin are refused at both studios with no exception. The full list is in the [contraindications guide](../../../aftercare/), published before you book rather than after. |
-| Whether the technique fits you | Ask which technique suits your skin type, and what they would recommend if this one does not. | Priced from $300 by how much pigment is left, so the quote depends on a look at your current result, not on a table. This is settled at the consultation, in English, Portuguese or Spanish. |
+| Whether the technique fits you | Ask which technique suits your skin type, and what they would recommend if this one does not. | Priced from $250 by how much pigment is left, so the quote depends on a look at your current result, not on a table. This is settled at the consultation, in English, Portuguese or Spanish. |

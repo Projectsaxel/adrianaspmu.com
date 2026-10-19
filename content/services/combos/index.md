@@ -1,6 +1,6 @@
 <!-- Combo Packages | Adriana's PMU -->
 <!-- canonical: https://adrianaspmu.com/services/combos/ -->
-> Permanent makeup combo packages in Wilmington MA and Salem NH. Pair brows, lips and eyeliner in one plan and save, perfecting session included.
+> Permanent makeup combo packages in Wilmington MA and Salem NH. Pair brows, lips and eyeliner in one plan and save, 2nd session included.
 
 # Combo Packages
 
@@ -18,9 +18,9 @@ This service is quoted at the consultation rather than listed at a fixed price, 
 
 Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent financing provider: it sets approval and rates, not the studio. See [how the payment plan works](../../payment-plan/).
 
-The perfecting session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
+The 2nd session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
 
-Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
+Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). After that, a yearly touch-up refreshes the colour from $250, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the 2nd session, which is included in the original price and happens in the first weeks.
 
 Yes. Pregnancy, breastfeeding, being under 18, and current isotretinoin use are refused at both studios, with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need clearance from your doctor first. The full list is published in the [contraindications guide](../../aftercare/) before you book, not after.
 
@@ -47,11 +47,11 @@ Oily skin blurs fine strokes and holds shading better, so oilier clients often p
 
 ## How Does a Combo Appointment Work?
 
-A combo appointment covers both areas in a single visit: consultation and design for the brows, shade selection for the lips, numbing, and the procedures themselves. One perfecting session, 6 to 8 weeks later, is included and covers both areas, healed together instead of two separate windows.
+A combo appointment covers both areas in a single visit: consultation and design for the brows, shade selection for the lips, numbing, and the procedures themselves. One 2nd session, 6 to 8 weeks later, is included and covers both areas, healed together instead of two separate windows.
 
 ## What Does the $850 Include?
 
-The $850 price includes the brow treatment of your choice, Lip Blush, both consultations, numbing for both areas, and one combined perfecting session 6 to 8 weeks later. It excludes the [Yearly Touch-Up](../touch-ups/), a separate paid visit about 12 months later from $300 per area, and it can be split with Cherry.
+The $850 price includes the brow treatment of your choice, Lip Blush, both consultations, numbing for both areas, and one combined 2nd session 6 to 8 weeks later. It excludes the [Yearly Touch-Up](../touch-ups/), a separate paid visit about 12 months later from $250 per area, and it can be split with Cherry.
 
 ## Who Should Not Book the Combo?
 
@@ -59,7 +59,7 @@ Anyone with a history of cold sores (HSV-1) should talk to a doctor before booki
 
 ## Frequently Asked Questions
 
-The combo includes one eyebrow technique of your choice from the full brow menu, plus Lip Blush, in a single $850 appointment. Both consultations, both numbing steps, and one combined perfecting session 6 to 8 weeks later are included in that price.
+The combo includes one eyebrow technique of your choice from the full brow menu, plus Lip Blush, in a single $850 appointment. Both consultations, both numbing steps, and one combined 2nd session 6 to 8 weeks later are included in that price.
 
 Booking a brow treatment and Lip Blush separately costs between $1,100 and $1,200, depending on exactly which brow technique you choose. The combo bundles both together for $850 instead, saving $250 to $350 and cutting two healing periods down to just one.
 
@@ -69,7 +69,7 @@ Yes. The combo pairs Lip Blush with any technique from the eyebrow menu, from Mi
 
 No. The combo pairs a brow technique with Lip Blush specifically. If your lip tone is dark, cool, or uneven, Dark Lip Neutralization is booked as its own appointment first, with Lip Blush added afterward if you still want more color.
 
-The perfecting session, 6 to 8 weeks after your combo appointment, is included at no extra cost and covers both brows and lips. The Yearly Touch-Up, a separate paid visit about 12 months later starting at $300 per area, is not included.
+The 2nd session, 6 to 8 weeks after your combo appointment, is included at no extra cost and covers both brows and lips. The Yearly Touch-Up, a separate paid visit about 12 months later starting at $250 per area, is not included.
 
 ## Explore More at Adriana's Permanent Makeup
 
@@ -98,7 +98,7 @@ Six things are worth verifying with any permanent makeup artist before you book:
 | --- | --- | --- |
 | Practitioner licence | Ask for the licence number and check it yourself with the state or the town, instead of taking a badge on a website at face value. | New Hampshire Body Artist licence 4283, valid through 18 July 2028 and searchable at the state’s own public lookup. Town of Salem BODA-10 and BODE-4. Body Art Practitioner licence from the Town of Wilmington Board of Health. |
 | Who trained them | Ask who certified the artist, and whether that credential can be checked with the body that issued it. | AAM Diamond Certified Trainer, the American Academy of Micropigmentation’s highest level of instructor recognition. |
-| What the price includes | Ask whether the perfecting session is included or billed later. This is where quoted prices most often stop matching the final bill. | The perfecting session, 6 to 8 weeks after the appointment, is included in every original price. The yearly touch-up, from $300, is a separate visit about 12 months later. |
+| What the price includes | Ask whether the 2nd session is included or billed later. This is where quoted prices most often stop matching the final bill. | The 2nd session, 6 to 8 weeks after the appointment, is included in the price of every first-time procedure. The yearly touch-up, from $250, is a separate visit about 12 months later. |
 | Whether the price is published at all | Ask for the price before the consultation. A studio that will not name a range before seeing you is not comparable to one that will. | All 13 services are published with their prices, from $250 to $850, on the [price list](../../prices/). |
 | When they say no | Ask what would make them refuse to perform the procedure. An artist who never refuses is a warning sign. | Pregnancy, breastfeeding, under 18 and isotretinoin are refused at both studios with no exception. The full list is in the [contraindications guide](../../aftercare/), published before you book rather than after. |
 | Whether the technique fits you | Ask which technique suits your skin type, and what they would recommend if this one does not. | Combining services in one visit costs less than booking them apart. This is settled at the consultation, in English, Portuguese or Spanish. |

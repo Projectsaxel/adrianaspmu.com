@@ -1,23 +1,23 @@
 <!-- Bottom Eyeliner in Wilmington, MA | Adriana's PMU -->
 <!-- canonical: https://adrianaspmu.com/services/eyeliner/bottom-eyeliner/wilmington-ma/ -->
-> Bottom Eyeliner in Wilmington, MA at Adriana's Permanent Makeup, 211 Lowell St, Suite F. $250. Master PMU artist with 20+ years. Call (781) 853-8063 to book.
+> Bottom Eyeliner in Wilmington, MA at Adriana's Permanent Makeup, 211 Lowell St, Suite F. $300. Master PMU artist with 20+ years. Call (781) 853-8063 to book.
 
 # Bottom Eyeliner in Wilmington, MA
 
-Bottom Eyeliner in Wilmington, MA costs $250, the most affordable procedure here, adding a fine line along the lower lash line. It is rarely bold: a heavy line can visually close the eye, so most clients pair it with a top liner. Book at 211 Lowell Street, Suite F.
+Bottom Eyeliner in Wilmington, MA costs $300, the most affordable procedure here, adding a fine line along the lower lash line. It is rarely bold: a heavy line can visually close the eye, so most clients pair it with a top liner. Book at 211 Lowell Street, Suite F.
 
-**Bottom Eyeliner in Wilmington, MA is a $250 procedure at 211 Lowell Street, Suite F, a fine line rather than a bold one.**
+**Bottom Eyeliner in Wilmington, MA is a $300 procedure at 211 Lowell Street, Suite F, a fine line rather than a bold one.**
 
 ## How Much Does Bottom Eyeliner Cost in Wilmington, MA, and What’s Included?
 
-Bottom Eyeliner in Wilmington, MA costs $250, a single price that already includes the perfecting session 6 to 8 weeks after the procedure. A separate yearly touch-up, from $300, follows roughly 12 months later. Cherry offers 4 interest-free payments or a longer plan.
+Bottom Eyeliner in Wilmington, MA costs $300, a single price that already includes the 2nd session 6 to 8 weeks after the procedure. A separate yearly touch-up, from $250, follows roughly 12 months later. Cherry offers 4 interest-free payments or a longer plan.
 
 | Item | Detail |
 | --- | --- |
-| Procedure price | $250 |
+| Procedure price | $300 |
 | What’s included | Consultation, mapping, numbing, and the procedure itself |
-| Perfecting session | Included, 6 to 8 weeks after the procedure |
-| Yearly touch-up | From $300, about 12 months later |
+| 2nd Session | Included, 6 to 8 weeks after the procedure |
+| Yearly touch-up | From $250, about 12 months later |
 | Payment plan | 4 interest-free payments or longer, via Cherry; approval not guaranteed |
 
 Want both lines? The [Eyeliner Combo](../../eyeliner-combo/wilmington-ma/) is $500, versus $600 booked separately.
@@ -36,13 +36,13 @@ Bottom Eyeliner in Wilmington, MA suits clients who already have, or plan to add
 
 ## How Does a Bottom Eyeliner Appointment Work at the Wilmington Studio?
 
-A Wilmington bottom eyeliner appointment is shorter and finer than a top-liner session: consultation, a light lower-lash-line placement under topical numbing, and written aftercare instructions. The perfecting session follows 6 to 8 weeks later, once healing is complete, at no extra charge.
+A Wilmington bottom eyeliner appointment is shorter and finer than a top-liner session: consultation, a light lower-lash-line placement under topical numbing, and written aftercare instructions. The 2nd session follows 6 to 8 weeks later, once healing is complete, at no extra charge.
 
 - Consultation and health-history intake, including contact lens removal
 - A light lower-lash-line placement, deliberately fine rather than bold
 - The procedure, with a sterile single-use needle
 - Written aftercare instructions to take home
-- Perfecting session, 6 to 8 weeks later, included in the $250
+- 2nd Session, 6 to 8 weeks later, included in the $300
 
 ## Why Book Bottom Eyeliner at the Wilmington, MA Studio Specifically?
 
@@ -76,25 +76,25 @@ The American Academy of Dermatology documents that eyeliner pigment can rarely r
 
 Bottom Eyeliner in Wilmington, MA is performed at 211 Lowell Street, Suite F, Wilmington, MA 01887, reached at (781) 853-8063. The studio is open Monday through Saturday, 10 a.m. to 6 p.m., closed Sunday — a different address and phone number than the Salem, NH studio.
 
-Bottom Eyeliner in Wilmington, MA costs $250, and that price already includes the perfecting session 6 to 8 weeks after the procedure. A yearly touch-up, from $300, follows roughly 12 months later. Cherry offers 4 interest-free payments or a longer plan; approval is not guaranteed.
+Bottom Eyeliner in Wilmington, MA costs $300, and that price already includes the 2nd session 6 to 8 weeks after the procedure. A yearly touch-up, from $250, follows roughly 12 months later. Cherry offers 4 interest-free payments or a longer plan; approval is not guaranteed.
 
 This is the most common concern, and it is why the line is kept fine. A heavy line on the lower lash line can visually close the eye, so the studio deliberately restrains the intensity here — it is designed to add a soft finishing touch, not a bold line, so eyes read defined rather than smaller.
 
-Yes, booking Bottom Eyeliner alone is a legitimate choice, though most clients pair it with Top Eyeliner instead. Alone, it costs $250 and adds subtle lower-lash definition. Paired with Top Eyeliner at $350, the two together cost $600 separately, or $500 as the Eyeliner Combo, saving $100.
+Yes, booking Bottom Eyeliner alone is a legitimate choice, though most clients pair it with Top Eyeliner instead. Alone, it costs $300 and adds subtle lower-lash definition. With Adriana, Top and Bottom Eyeliner cost $900 booked separately, or $800 as the Eyeliner Combo, saving $100.
 
 Bottom Eyeliner is the most subtle technique on the menu. Unlike Top Eyeliner, which can be built up to a defined line with a tail, the lower lash line intentionally stays fine, since a bold lower line reads harsh and can visually close the eye rather than open it.
 
 Yes. Contact lenses come out for the bottom eyeliner appointment; the studio says how long to leave them out after. Separately, the AAD documents that eyeliner pigment can rarely react during an MRI with burning, tingling, or swelling; tell the technician beforehand and ask them to stop the scan.
 
-Yes. The Wilmington studio offers payment plans for the $250 bottom eyeliner price through Cherry Technologies, an independent financing provider, not the studio. Options include 4 interest-free payments or a longer plan up to 24 months; approval is not guaranteed; Cherry sets the terms.
+Yes. The Wilmington studio offers payment plans for the $300 bottom eyeliner price through Cherry Technologies, an independent financing provider, not the studio. Options include 4 interest-free payments or a longer plan up to 24 months; approval is not guaranteed; Cherry sets the terms.
 
-Yes. The Eyeliner Combo costs $500 for both the upper and lower lash line in one Wilmington appointment, while Top Eyeliner at $350 plus Bottom Eyeliner at $250 booked separately add up to $600. Clients who want both lines from the start save $100 by booking the combo up front.
+Yes. The Eyeliner Combo costs $800 for both the upper and lower lash line in one Wilmington appointment, while Adriana&rsquo;s Top Eyeliner at $500 plus Bottom Eyeliner at $400 booked separately add up to $900. Clients who want both lines from the start save $100 by booking the combo up front.
 
 Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent financing provider: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
 
-The perfecting session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
+The 2nd session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
 
-Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
+Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). After that, a yearly touch-up refreshes the colour from $250, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the 2nd session, which is included in the original price and happens in the first weeks.
 
 Yes. Pregnancy, breastfeeding, being under 18, and current isotretinoin use are refused at both studios, with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need clearance from your doctor first. The full list is published in the [contraindications guide](../../../../aftercare/) before you book, not after.
 
@@ -102,7 +102,7 @@ Adriana Souza Santos has performed more than 5,000 procedures across 20+ years a
 
 ## Explore Other Eyeliner Styles at the Wilmington Studio
 
-Bottom Eyeliner is one of four eyeliner options at the Wilmington studio, priced $250 to $500 depending on the lash line treated and how much shading is added. Every technique includes the perfecting session, with its own page for Wilmington, MA.
+Bottom Eyeliner is one of four eyeliner options at the Wilmington studio, priced $300 to $800 depending on the lash line treated and how much shading is added. Every technique includes the 2nd session for first-time clients, with its own page for Wilmington, MA.
 
 - [Top Eyeliner in Wilmington](../../top-eyeliner/wilmington-ma/) — $350
 - [Smokey Eyeliner in Wilmington](../../smokey-eyeliner/wilmington-ma/) — $400

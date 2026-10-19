@@ -1,23 +1,23 @@
 <!-- Nano Combo Brows in Wilmington, MA | Adriana's PMU -->
 <!-- canonical: https://adrianaspmu.com/services/eyebrows/nano-combo/wilmington-ma/ -->
-> Nano Combo Brows in Wilmington, MA at Adriana's Permanent Makeup, 211 Lowell St, Suite F. $600. Master PMU artist with 20+ years. Call (781) 853-8063 to book.
+> Nano Combo Brows in Wilmington, MA at Adriana's Permanent Makeup, 211 Lowell St, Suite F. $650. Master PMU artist with 20+ years. Call (781) 853-8063 to book.
 
 # Nano Combo Brows in Wilmington, MA
 
-Nano Combo Brows in Wilmington, MA cost $600, combine ultra-fine nano hair strokes with soft powder shading, and typically last 1 to 3 years. Book with Master Permanent Makeup Artist Adriana Souza Santos at 211 Lowell Street, Suite F, on Route 129.
+Nano Combo Brows in Wilmington, MA cost $650, combine ultra-fine nano hair strokes with soft powder shading, and typically last 1 to 3 years. Book with Master Permanent Makeup Artist Adriana Souza Santos at 211 Lowell Street, Suite F, on Route 129.
 
-**Nano Combo Brows in Wilmington, MA is a $600 procedure at 211 Lowell Street, Suite F, blending machine-drawn nano strokes with soft powder shading for fuller, defined brows.**
+**Nano Combo Brows in Wilmington, MA is a $650 procedure at 211 Lowell Street, Suite F, blending machine-drawn nano strokes with soft powder shading for fuller, defined brows.**
 
 ## How Much Do Nano Combo Brows Cost in Wilmington, MA, and What's Included?
 
-Nano Combo Brows in Wilmington, MA cost $600, already including the perfecting session 6 to 8 weeks after the procedure. A yearly touch-up, from $300, follows about 12 months later. Cherry offers 4 interest-free payments or a longer plan; approval is set by Cherry, not the studio.
+Nano Combo Brows in Wilmington, MA cost $650, already including the 2nd session 6 to 8 weeks after the procedure. A yearly touch-up, from $250, follows about 12 months later. Cherry offers 4 interest-free payments or a longer plan; approval is set by Cherry, not the studio.
 
 | Item | Detail |
 | --- | --- |
-| Procedure price | $600 |
+| Procedure price | $650 |
 | What's included | Consultation, mapping, numbing, and the procedure |
-| Perfecting session | Included, 6 to 8 weeks after the procedure |
-| Yearly touch-up | From $300, about 12 months later |
+| 2nd Session | Included, 6 to 8 weeks after the procedure |
+| Yearly touch-up | From $250, about 12 months later |
 | Payment plan | 4 interest-free payments or longer, via Cherry; approval not guaranteed |
 
 ## Who Should Book Nano Combo Brows in Wilmington, MA, and Who Should Not?
@@ -30,14 +30,14 @@ Nano Combo Brows in Wilmington, MA suit clients near Route 129 who want more den
 
 ## How Does a Nano Combo Brows Appointment Work at the Wilmington Studio?
 
-A Wilmington Nano Combo Brows appointment starts with a consultation and brow mapping, moves through nano strokes and soft powder shading under topical numbing, and ends with written aftercare instructions. The perfecting session follows 6 to 8 weeks later, once healing is complete, at no extra charge.
+A Wilmington Nano Combo Brows appointment starts with a consultation and brow mapping, moves through nano strokes and soft powder shading under topical numbing, and ends with written aftercare instructions. The 2nd session follows 6 to 8 weeks later, once healing is complete, at no extra charge.
 
 - Consultation and health-history intake
 - Brow mapping matched to your face shape
 - Nano hair strokes, drawn with a digital machine
 - Soft powder shading added for depth and fullness
 - Written aftercare instructions to take home
-- Perfecting session, 6 to 8 weeks later, included in the $600
+- 2nd Session, 6 to 8 weeks later, included in the $650
 Full healing detail is in the [aftercare guide](../../../../aftercare/).
 
 ## Why Book Nano Combo Brows at the Wilmington, MA Studio Specifically?
@@ -66,7 +66,7 @@ Written by Adriana Souza Santos, responsible for accuracy. Questions: (781) 853-
 
 ## What If Nano Combo Brows Hurts, Fades Unevenly, or Doesn't Last?
 
-Most clients describe Nano Combo Brows as mild scratching during the stroke work and light vibration during shading, since topical numbing is applied first. Results typically last 1 to 3 years; if any area heals lighter or uneven, the perfecting session 6 to 8 weeks later corrects it at no extra charge.
+Most clients describe Nano Combo Brows as mild scratching during the stroke work and light vibration during shading, since topical numbing is applied first. Results typically last 1 to 3 years; if any area heals lighter or uneven, the 2nd session 6 to 8 weeks later corrects it at no extra charge.
 
 Deposit terms are confirmed by phone at (781) 853-8063. Signs that need a doctor instead of the studio are listed in the [aftercare guide](../../../../aftercare/#infection-signs).
 
@@ -74,7 +74,7 @@ Deposit terms are confirmed by phone at (781) 853-8063. Signs that need a doctor
 
 Nano Combo Brows in Wilmington are performed at 211 Lowell Street, Suite F, Wilmington, MA 01887, reached at (781) 853-8063. Open Monday through Saturday, 10:00 a.m. to 6:00 p.m., closed Sunday — a different address and phone than the Salem, NH studio.
 
-Nano Combo Brows in Wilmington, MA cost $600, and that price already includes the perfecting session scheduled 6 to 8 weeks after the procedure. A separate yearly touch-up, from $300, follows roughly 12 months later. Cherry offers 4 interest-free payments or a longer plan; approval is not guaranteed.
+Nano Combo Brows in Wilmington, MA cost $650, and that price already includes the 2nd session scheduled 6 to 8 weeks after the procedure. A separate yearly touch-up, from $250, follows roughly 12 months later. Cherry offers 4 interest-free payments or a longer plan; approval is not guaranteed.
 
 Yes. Lowell Street in Wilmington is Massachusetts Route 129, and 211 Lowell Street, Suite F sits directly on it. Route 129 crosses Route 38 near the center of town, and the nearest highway access is the I-93 and Route 129 interchange, also in Wilmington.
 
@@ -82,19 +82,19 @@ Wilmington has two MBTA commuter rail stations on two lines. Wilmington station,
 
 Wilmington's Board of Health requires both an establishment permit and an individual practitioner permit for cosmetic tattooing, under M.G.L. Chapter 111, Section 31. The practitioner's application must state the type of body art sought, and a client is entitled to ask to see that permit before booking.
 
-Nano Combo Brows typically last 1 to 3 years before fading. About 12 months after the perfecting session, a yearly touch-up, from $300, refreshes the strokes and shading at the Wilmington studio rather than requiring the full original $600 procedure again from scratch entirely.
+Nano Combo Brows typically last 1 to 3 years before fading. About 12 months after the 2nd session, a yearly touch-up, from $250, refreshes the strokes and shading at the Wilmington studio rather than requiring the full original $650 procedure again from scratch entirely.
 
 Yes. The Wilmington studio offers payment plans through Cherry Technologies, an independent financing provider separate from Adriana's Permanent Makeup. Options include 4 interest-free payments or a longer plan up to 24 months with interest. Approval is not guaranteed; Cherry sets the terms, not the studio.
 
 Yes. Livian Camargo Gomes is a second licensed permanent makeup artist working at the Wilmington studio, alongside Adriana Souza Santos, and can be requested for Nano Combo Brows when booking. This second artist is not currently available at the Salem, New Hampshire studio.
 
-Nano Combo Brows costs $600 at both studios, and that price already includes the perfecting session scheduled 6 to 8 weeks after the appointment. The consultation, the mapping and the topical numbing are part of it as well. A yearly touch-up, from $300, is a separate visit about 12 months later. Every price is published on the [price list](../../../../prices/).
+Nano Combo Brows costs $650 at both studios, and that price already includes the 2nd session scheduled 6 to 8 weeks after the appointment. The consultation, the mapping and the topical numbing are part of it as well. A yearly touch-up, from $250, is a separate visit about 12 months later. Every price is published on the [price list](../../../../prices/).
 
 Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent financing provider: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
 
-The perfecting session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
+The 2nd session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
 
-Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
+Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). After that, a yearly touch-up refreshes the colour from $250, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the 2nd session, which is included in the original price and happens in the first weeks.
 
 Yes. Pregnancy, breastfeeding, being under 18, and current isotretinoin use are refused at both studios, with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need clearance from your doctor first. The full list is published in the [contraindications guide](../../../../aftercare/) before you book, not after.
 
@@ -102,7 +102,7 @@ Adriana Souza Santos has performed more than 5,000 procedures across 20+ years a
 
 ## Explore Other Brow Techniques and the Wilmington Studio
 
-Nano Combo Brows is one of five brow techniques at the Wilmington studio, alongside Microblading, Nano Brows, Powder Brows, and Combination Brows. Every technique includes the perfecting session, and each has its own page with pricing and detail for the Wilmington location.
+Nano Combo Brows is one of five brow techniques at the Wilmington studio, alongside Microblading, Nano Brows, Powder Brows, and Combination Brows. Every technique includes the 2nd session for first-time clients, and each has its own page with pricing and detail for the Wilmington location.
 
 - [Nano Combo Brows overview](../) — full technique guide and healing timeline
 - [Microblading in Wilmington](../../microblading/wilmington-ma/) — $550

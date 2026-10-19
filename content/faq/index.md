@@ -24,11 +24,11 @@ A typical session runs about 2 to 3 hours; combination services take longer. Can
 
 ## How Much Does Permanent Makeup Cost, and What Does the Price Include?
 
-Prices range from $250 for Bottom Eyeliner to $850 for the Brows + Lips Combo, identical at both studios. Every price already includes one perfecting session 6 to 8 weeks later. Cherry payment plans and the yearly touch-up are covered below too.
+Prices range from $300 for Bottom Eyeliner to $850 for the Brows + Lips Combo, identical at both studios. Every price already includes one 2nd session 6 to 8 weeks later. Cherry payment plans and the yearly touch-up are covered below too.
 
 ### How Much Does Each Service Cost?
 
-Prices are identical at both studios, from $250 for Bottom Eyeliner to $850 for the Brows + Lips Combo. Combination Brows is quoted at consultation. The table below lists every service and its price.
+Prices are identical at both studios, from $300 for Bottom Eyeliner to $850 for the Brows + Lips Combo. Combination Brows is quoted at consultation. The table below lists every service and its price.
 
 | Service | Starting price |
 | --- | --- |
@@ -36,19 +36,19 @@ Prices are identical at both studios, from $250 for Bottom Eyeliner to $850 for 
 | Microblading | $550 |
 | Powder Brows | $550 |
 | Combination Brows | Custom quote |
-| Nano Combo | $600 |
+| Nano Combo | $650 |
 | Lip Blush | $550 |
 | Dark Lip Neutralization | $550 |
 | Top Eyeliner | $350 |
-| Smokey Eyeliner | $400 |
-| Bottom Eyeliner | $250 |
-| Eyeliner Combo | $500 |
+| Smokey Eyeliner | $550 |
+| Bottom Eyeliner | $300 |
+| Eyeliner Combo | $800 |
 | Brows + Lips Combo | $850 |
-| Yearly Touch-Up | From $300 |
+| Yearly Touch-Up | From $250 |
 
 ### What's Included, and How Does the Yearly Touch-Up Differ?
 
-Every price includes one perfecting session, 6 to 8 weeks after the first appointment, to adjust color and shape at no extra charge. The yearly touch-up is a separate, later, paid visit, roughly 12 months after, starting at $300. Detail is in the [aftercare guide](../aftercare/#touch-up-timing).
+Every price includes one 2nd session, 6 to 8 weeks after the first appointment, to adjust color and shape at no extra charge. The yearly touch-up is a separate, later, paid visit, roughly 12 months after, starting at $250. Detail is in the [aftercare guide](../aftercare/#touch-up-timing).
 
 ### Does Insurance Cover Permanent Makeup, and Can I Split the Cost?
 
@@ -64,11 +64,11 @@ Stroke techniques, like microblading and nano brows, draw hair-like lines and ho
 
 ### What's the Difference Between Lip Blush and Dark Lip Neutralization?
 
-Lip Blush adds a translucent wash of color and a defined lip line to lips without discoloration. Dark Lip Neutralization corrects a naturally darker lip tone first, before or alongside color. Both are $550 and include the perfecting session. See the [lips service page](../services/lips/) for detail.
+Lip Blush adds a translucent wash of color and a defined lip line to lips without discoloration. Dark Lip Neutralization corrects a naturally darker lip tone first, before or alongside color. Both are $550 and include the 2nd session. See the [lips service page](../services/lips/) for detail.
 
 ### What Eyeliner Options Are Available?
 
-Options include Top Eyeliner ($350), Bottom Eyeliner ($250), Smokey Eyeliner ($400), and an Eyeliner Combo ($500) covering both lash lines in one visit. Top and bottom define the lash line itself; smokey adds soft, shaded diffusion. See the [eyeliner service page](../services/eyeliner/) to compare all four.
+Options include Top Eyeliner ($350), Bottom Eyeliner ($300), Smokey Eyeliner ($550), and an Eyeliner Combo ($800) covering both lash lines in one visit. Top and bottom define the lash line itself; smokey adds soft, shaded diffusion. See the [eyeliner service page](../services/eyeliner/) to compare all four.
 
 ## How Long Does Permanent Makeup Last, and What Does Healing Look Like?
 
@@ -76,7 +76,7 @@ Results generally last 1 to 3 years, depending on the technique, skin type and s
 
 ### How Long Does Permanent Makeup Last?
 
-Results generally last 1 to 3 years, depending on the technique, skin type and sun exposure; microblading sits at the short end, 12 to 24 months. Daily SPF slows fading, since color keeps breaking down under UV light. The yearly touch-up, from $300, restores the color when it's time.
+Results generally last 1 to 3 years, depending on the technique, skin type and sun exposure; microblading sits at the short end, 12 to 24 months. Daily SPF slows fading, since color keeps breaking down under UV light. The yearly touch-up, from $250, restores the color when it's time.
 
 ### What Does Healing Look Like After a Procedure?
 
@@ -84,7 +84,7 @@ Healing runs through swelling and bold color in the first few days, flaking thro
 
 ### When Does the Color Settle Into Its Final Shade?
 
-Color settles into its healed shade over roughly 6 to 8 weeks, when the perfecting session happens. Color often looks darker at first, then patchy, before the true tone re-emerges and the session adjusts anything uneven.
+Color settles into its healed shade over roughly 6 to 8 weeks, when the 2nd session happens. Color often looks darker at first, then patchy, before the true tone re-emerges and the session adjusts anything uneven.
 
 ## Who Performs the Procedures, and What Licenses Cover Them?
 

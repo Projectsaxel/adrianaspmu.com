@@ -1,21 +1,21 @@
 <!-- Yearly Touch-Up in Salem, NH | Adriana's PMU -->
 <!-- canonical: https://adrianaspmu.com/services/touch-ups/yearly-touch-up/salem-nh/ -->
-> Yearly Touch-Up in Salem, NH at Adriana's Permanent Makeup, 117A Main St. from $300. Master PMU artist with 20+ years. Call (978) 223-7496 to book.
+> Yearly Touch-Up in Salem, NH at Adriana's Permanent Makeup, 117A Main St. from $250. Master PMU artist with 20+ years. Call (978) 223-7496 to book.
 
 # Yearly Touch-Up in Salem, NH
 
-Yearly Touch-Up in Salem, NH starts at $300 and refreshes faded permanent makeup pigment on brows, lips, or eyeliner about 12 months after the original procedure — a separate, paid visit from the perfecting session already included 6 to 8 weeks earlier. Book with Master Permanent Makeup Artist Adriana Souza Santos at 117A Main Street, on Route 97.
+Yearly Touch-Up in Salem, NH starts at $250 and refreshes faded permanent makeup pigment on brows, lips, or eyeliner about 12 months after the original procedure — a separate, paid visit from the 2nd session already included 6 to 8 weeks earlier. Book with Master Permanent Makeup Artist Adriana Souza Santos at 117A Main Street, on Route 97.
 
-**Yearly Touch-Up in Salem, NH is a maintenance visit at 117A Main Street, priced from $300 and scheduled about 12 months after your original brow, lip, or eyeliner procedure.**
+**Yearly Touch-Up in Salem, NH is a maintenance visit at 117A Main Street, priced from $250 and scheduled about 12 months after your original brow, lip, or eyeliner procedure.**
 
-## How Much Does a Yearly Touch-Up Cost in Salem, NH, and How Is It Different From the Perfecting Session?
+## How Much Does a Yearly Touch-Up Cost in Salem, NH, and How Is It Different From the 2nd Session?
 
-A Yearly Touch-Up in Salem, NH starts at $300, with the final price set based on how much pigment remains. It is separate and paid, unlike the perfecting session, included in the original price and given only once, 6 to 8 weeks after the first appointment.
+A Yearly Touch-Up in Salem, NH starts at $250, with the final price set based on how much pigment remains. It is separate and paid, unlike the 2nd session, included in the original price and given only once, 6 to 8 weeks after the first appointment.
 
 | Item | Detail |
 | --- | --- |
-| Yearly Touch-Up price | From $300, exact price set at the appointment |
-| Perfecting session (not this visit) | Included in the original price, 6 to 8 weeks after the first procedure, one time only |
+| Yearly Touch-Up price | From $250, exact price set at the appointment |
+| 2nd Session (not this visit) | Included in the original price, 6 to 8 weeks after the first procedure, one time only |
 | Yearly Touch-Up (this visit) | Paid separately, about 12 months after the original procedure |
 | What's included | Reassessment of remaining pigment, numbing, and the refresh procedure |
 | Applies to | Brows, lips, or eyeliner performed at either Adriana's studio |
@@ -23,17 +23,17 @@ A Yearly Touch-Up in Salem, NH starts at $300, with the final price set based on
 
 ## Who Should Book a Yearly Touch-Up in Salem, NH, and Who Should Not?
 
-A Yearly Touch-Up in Salem, NH suits clients near Route 97 whose pigment has visibly faded roughly a year after the original procedure. It is not right for anyone still inside the perfecting-session window, or anyone pregnant, breastfeeding, or currently using isotretinoin.
+A Yearly Touch-Up in Salem, NH suits clients near Route 97 whose pigment has visibly faded roughly a year after the original procedure. It is not right for anyone still inside the 2nd-session window, or anyone pregnant, breastfeeding, or currently using isotretinoin.
 
 - Good fit: Salem, Methuen, or Windham clients whose pigment has faded about 12 months later, including Portuguese and Spanish speakers
 - Not a fit: anyone pregnant, breastfeeding, or under 18, at either studio
-- Not yet: still inside the 6- to 8-week perfecting-session window (call to confirm), or isotretinoin, blood thinners, or autoimmune conditions without clearance — see the [contraindications guide](../../../../aftercare/#who-should-not)
+- Not yet: still inside the 6- to 8-week 2nd-session window (call to confirm), or isotretinoin, blood thinners, or autoimmune conditions without clearance — see the [contraindications guide](../../../../aftercare/#who-should-not)
 
 ## How Does a Yearly Touch-Up Appointment Work at the Salem Studio?
 
 A Yearly Touch-Up appointment at the Salem studio starts with an assessment of how much original pigment remains, sets the final price on that assessment, then refreshes color under topical numbing. At the Salem studio, appointments are typically shorter than the original procedure, since the shape and design already exist and only color needs restoring.
 
-- Reassessment of existing pigment; price confirmed, from $300
+- Reassessment of existing pigment; price confirmed, from $250
 - Color matching to the original or an updated shade
 - Application of topical numbing
 - Pigment refresh procedure
@@ -64,7 +64,7 @@ Written by Adriana Souza Santos, responsible for this page's accuracy. Questions
 
 ## What If My Yearly Touch-Up Price Is Higher Than Expected, or the Color Doesn't Match?
 
-The final Yearly Touch-Up price depends on how much pigment remains at the appointment; more fading generally means more work and a higher price above the $300 starting point, confirmed before the procedure begins. Color adjustments afterward are discussed at the same visit, not assumed automatically.
+The final Yearly Touch-Up price depends on how much pigment remains at the appointment; more fading generally means more work and a higher price above the $250 starting point, confirmed before the procedure begins. Color adjustments afterward are discussed at the same visit, not assumed automatically.
 
 Deposit terms are confirmed by phone at (978) 223-7496. Signs that need a doctor instead of the studio are listed in the [aftercare guide](../../../../aftercare/#infection-signs).
 
@@ -72,9 +72,9 @@ Deposit terms are confirmed by phone at (978) 223-7496. Signs that need a doctor
 
 Yearly Touch-Up in Salem, NH is performed at 117A Main Street, Salem, NH 03079, reached at (978) 223-7496. The studio is open Monday through Saturday, 10:00 a.m. to 6:00 p.m., closed Sunday, a different address than the Wilmington, MA studio.
 
-A Yearly Touch-Up in Salem, NH starts at $300. The exact price depends on how much of the original pigment remains, which the artist assesses at the appointment; there is no fixed ceiling published in advance, since fading varies from client to client.
+A Yearly Touch-Up in Salem, NH starts at $250. The exact price depends on how much of the original pigment remains, which the artist assesses at the appointment; there is no fixed ceiling published in advance, since fading varies from client to client.
 
-The perfecting session is included in the original procedure price and happens once, 6 to 8 weeks after the first appointment, to correct early healing. The Yearly Touch-Up is a separate, paid visit from $300, scheduled about 12 months later to refresh pigment that has naturally faded since then.
+The 2nd session is included in the original procedure price and happens once, 6 to 8 weeks after the first appointment, to correct early healing. The Yearly Touch-Up is a separate, paid visit from $250, scheduled about 12 months later to refresh pigment that has naturally faded since then.
 
 Yes. Main Street in Salem is New Hampshire Route 97 along its entire length, with its western terminus at NH-28, Broadway. The address sits in the Salem Depot area, and the nearest I-93 access is Exit 2, Pelham Road, per the Town of Salem's own transportation plan.
 
@@ -90,9 +90,9 @@ Yearly Touch-Up is quoted at the consultation rather than listed at a fixed pric
 
 Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent financing provider: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
 
-The perfecting session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
+The 2nd session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
 
-Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
+Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). After that, a yearly touch-up refreshes the colour from $250, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the 2nd session, which is included in the original price and happens in the first weeks.
 
 Yes. Pregnancy, breastfeeding, being under 18, and current isotretinoin use are refused at both studios, with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need clearance from your doctor first. The full list is published in the [contraindications guide](../../../../aftercare/) before you book, not after.
 
@@ -100,7 +100,7 @@ Adriana Souza Santos has performed more than 5,000 procedures across 20+ years a
 
 ## What Can Be Refreshed With a Yearly Touch-Up at the Salem Studio
 
-A Yearly Touch-Up at the Salem studio can refresh brow techniques, Lip Blush, or any eyeliner style originally performed there, each assessed and priced individually from $300. The original technique's own Salem page has full pricing and healing detail for that procedure.
+A Yearly Touch-Up at the Salem studio can refresh brow techniques, Lip Blush, or any eyeliner style originally performed there, each assessed and priced individually from $250. The original technique's own Salem page has full pricing and healing detail for that procedure.
 
 - [Yearly Touch-Up overview](../) — full maintenance guide and timing
 - [Microblading in Salem](../../../eyebrows/microblading/salem-nh/) — original $550

@@ -3067,7 +3067,9 @@ p.section-label--light {
      cada card ficava com 552px e a foto 3:4 subia para 734px de altura,
      ocupando a tela inteira por pessoa. Com 360px a foto fica em 480px,
      que e retrato de equipe, nao poster. */
-  grid-template-columns: repeat(auto-fit, minmax(260px, 360px));
+  /* 340, nao 360: com a Thalita (19/10/2026) sao 3 cards; 3 x 360 + gaps
+     passava dos 1140px do container e quebrava em 2 + 1. */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 340px));
   justify-content: center;
 }
 
@@ -5482,6 +5484,8 @@ html { font-size: 112.5%; }
   }
 }
 .team-bio { display: flow-root; }
+/* bio mais curta (Thalita, 19/10) descia ate o pe da faixa: comeca no topo */
+.team-member > .team-bio { align-self: start; margin-top: 0; }
 .team-bio p:last-child { padding-bottom: 1.75rem; }
 
 /* Com 4 pessoas o auto-fit deixaria 3 em cima e 1 sozinha embaixo. Duas
@@ -7006,3 +7010,12 @@ tbody tr:last-child > td { border-bottom: 0; }
     margin: 0.75rem 0 0;
   }
 }
+
+/* texto so para leitor de tela */
+.sr-only {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+}
+/* tabela de precos da home por artista (Livy / Adriana) — 19/10/2026 */
+.table-precos th:nth-child(n+2),
+.table-precos td:nth-child(n+2) { text-align: right; white-space: nowrap; }

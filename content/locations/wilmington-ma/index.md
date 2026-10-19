@@ -4,7 +4,7 @@
 
 # Permanent Makeup in Wilmington, MA
 
-Permanent makeup in Wilmington, MA restores natural-looking brows, lips, and eyeliner definition, with the perfecting touch-up included 6 to 8 weeks after your first visit. Master Permanent Makeup Artist Adriana Souza Santos treats clients at 211 Lowell Street, Suite F, on Route 129 near the I-93 interchange.
+Permanent makeup in Wilmington, MA restores natural-looking brows, lips, and eyeliner definition, with the 2nd session included 6 to 8 weeks after your first visit. Master Permanent Makeup Artist Adriana Souza Santos treats clients at 211 Lowell Street, Suite F, on Route 129 near the I-93 interchange.
 
 **Adriana's Permanent Makeup in Wilmington, MA is a permanent makeup studio at 211 Lowell Street, Suite F, on Route 129 in the center of town, run by Master Permanent Makeup Artist Adriana Souza Santos of Adriana Beauty Services, Inc.**
 
@@ -22,14 +22,14 @@ The Wilmington, MA studio fits residents of Wilmington, Reading, Woburn, Burling
 
 ## How Does a Permanent Makeup Appointment Work at the Wilmington Studio?
 
-A Wilmington, MA appointment starts with a consultation and design mapping, moves into the procedure itself, and ends with written aftercare instructions. The perfecting touch-up is scheduled 6 to 8 weeks later, once healing is complete, and is included in the original price, not billed as a separate visit.
+A Wilmington, MA appointment starts with a consultation and design mapping, moves into the procedure itself, and ends with written aftercare instructions. The 2nd session is scheduled 6 to 8 weeks later, once healing is complete, and is included in the original price, not billed as a separate visit.
 
 - Consultation and health-history intake
 - Brow, lip, or eyeliner mapping matched to your features
 - The procedure itself, using sterile single-use needles opened in front of you
 - Written aftercare instructions to take home
-- Perfecting touch-up, 6 to 8 weeks later, included in the original price
-- Yearly touch-up, from $300, roughly 12 months after that, to refresh faded color
+- 2nd session, 6 to 8 weeks later, included in the original price
+- Yearly touch-up, from $250, roughly 12 months after that, to refresh faded color
 Full healing detail is in the [aftercare guide](../../aftercare/).
 
 ## What Should You Check Before Choosing Any Permanent Makeup Studio?
@@ -47,7 +47,7 @@ Before booking permanent makeup anywhere, a client should verify six things: the
 
 ## How Much Does Permanent Makeup Cost in Wilmington, MA?
 
-Permanent makeup at the Wilmington, MA studio starts at $250 for bottom eyeliner and runs to $850 for a combined brows-and-lips package, with the perfecting touch-up already included in every price. Combination Brows is quoted at consultation, and Cherry offers 4 interest-free payments or plans up to 24 months.
+Permanent makeup at the Wilmington, MA studio starts at $300 for bottom eyeliner and runs to $850 for a combined brows-and-lips package, with the 2nd session already included in every price. Combination Brows is quoted at consultation, and Cherry offers 4 interest-free payments or plans up to 24 months.
 
 | Service | Starting price | What changes the price |
 | --- | --- | --- |
@@ -55,17 +55,17 @@ Permanent makeup at the Wilmington, MA studio starts at $250 for bottom eyeliner
 | Microblading | $550 | — |
 | Powder Brows | $550 | — |
 | Combination Brows | Custom quote | Set at consultation, by technique mix |
-| Nano Combo | $600 | — |
+| Nano Combo | $650 | — |
 | Lip Blush | $550 | Darker natural lip tone may add a session |
 | Dark Lip Neutralization | $550 | Depth of pigment being neutralized |
 | Top Eyeliner | $350 | — |
-| Smokey Eyeliner | $400 | — |
-| Bottom Eyeliner | $250 | — |
-| Eyeliner Combo (top + bottom) | $500 | — |
+| Smokey Eyeliner | $550 | — |
+| Bottom Eyeliner | $300 | — |
+| Eyeliner Combo (top + bottom) | $800 | — |
 | Brows + Lips Combo | $850 | — |
-| Yearly Touch-Up | From $300 | By how much color has faded |
+| Yearly Touch-Up | From $250 | By how much color has faded |
 
-Every price above already includes the perfecting touch-up.
+Every price above already includes the 2nd session.
 
 ## What Experience Backs the Artist at the Wilmington Studio?
 
@@ -111,7 +111,7 @@ The suite sits on the ground floor of a commercial building on Route 129, roughl
 
 ## What Happens if Healing Doesn't Go as Expected in Wilmington?
 
-Every service at the Wilmington studio already includes a perfecting touch-up 6 to 8 weeks after the first visit, so light or uneven color during healing is corrected at that scheduled visit, not billed as an extra. Results then last roughly 12 to 24 months before a separate yearly touch-up, from $300, refreshes the color.
+Every service at the Wilmington studio already includes a 2nd session 6 to 8 weeks after the first visit, so light or uneven color during healing is corrected at that scheduled visit, not billed as an extra. Results then last roughly 12 to 24 months before a separate yearly touch-up, from $250, refreshes the color.
 
 Deposit and rescheduling terms are confirmed by phone at (781) 853-8063, not guessed at here. Signs needing a doctor instead of the studio are listed in the [aftercare guide](../../aftercare/#infection-signs).
 
@@ -127,7 +127,7 @@ Wilmington's Board of Health requires both an establishment permit and an indivi
 
 The Wilmington, MA studio is open Monday through Saturday, 10:00 a.m. to 6:00 p.m., and closed on Sunday. These are the studio's own published hours for this location. Call (781) 853-8063 to confirm availability for a specific date before driving over from a neighboring town.
 
-Prices at the Wilmington studio start at $250 for bottom eyeliner and range up to $850 for a brows-and-lips package. Nano Brows is $650; Microblading, Powder Brows, and Lip Blush are each $550. Combination Brows is quoted at consultation, since the technique blend varies by client.
+Prices at the Wilmington studio start at $300 for bottom eyeliner and range up to $850 for a brows-and-lips package. Nano Brows is $650; Microblading, Powder Brows, and Lip Blush are each $550. Combination Brows is quoted at consultation, since the technique blend varies by client.
 
 Yes. The Wilmington studio offers payment plans through Cherry Technologies, an independent financing provider separate from Adriana's Permanent Makeup. Options include 4 interest-free payments or a longer plan up to 24 months with interest. Approval is not guaranteed; Cherry sets the terms, not the studio.
 
