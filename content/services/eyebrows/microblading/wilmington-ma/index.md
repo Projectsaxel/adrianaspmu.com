@@ -1,28 +1,28 @@
 <!-- Microblading in Wilmington, MA | Adriana's PMU -->
 <!-- canonical: https://adrianaspmu.com/services/eyebrows/microblading/wilmington-ma/ -->
-> Microblading in Wilmington, MA at 211 Lowell Street, Suite F. $550, perfecting session included. Book online or call (781) 853-8063.
+> Microblading in Wilmington, MA at 211 Lowell Street, Suite F. $550, 2nd session included. Book online or call (781) 853-8063.
 
 # Microblading in Wilmington, MA
 
-Microblading in Wilmington, MA costs $550 and includes the perfecting session, creating fine, hair-like strokes that read as natural brows for 12 to 24 months. Book with Master Permanent Makeup Artist Adriana Souza Santos at 211 Lowell Street, Suite F, on Route 129.
+Microblading in Wilmington, MA costs $550 and includes the 2nd session, creating fine, hair-like strokes that read as natural brows for 12 to 24 months. Book with Master Permanent Makeup Artist Adriana Souza Santos at 211 Lowell Street, Suite F, on Route 129.
 
 **Microblading in Wilmington, MA is a $550 procedure at 211 Lowell Street, Suite F, drawing fine, hair-like strokes for natural-looking brows.**
 
 ## How Much Does Microblading Cost in Wilmington, MA, and What's Included?
 
-Microblading in Wilmington, MA costs $550, a single price that already includes the perfecting session scheduled 6 to 8 weeks after the procedure. A separate yearly touch-up, from $300, follows roughly 12 months later. Cherry offers 4 interest-free payments or a longer plan, with approval set by Cherry, not the studio.
+Microblading in Wilmington, MA costs $550, a single price that already includes the 2nd session scheduled 6 to 8 weeks after the procedure. A separate yearly touch-up, from $250, follows roughly 12 months later. Cherry offers 4 interest-free payments or a longer plan, with approval set by Cherry, not the studio.
 
 | Item | Detail |
 | --- | --- |
 | Procedure price | $550 |
 | What's included | Consultation, mapping, numbing, and the procedure itself |
-| Perfecting session | Included, 6 to 8 weeks after the procedure |
-| Yearly touch-up | From $300, about 12 months later |
+| 2nd Session | Included, 6 to 8 weeks after the procedure |
+| Yearly touch-up | From $250, about 12 months later |
 | Payment plan | 4 interest-free payments or longer, via Cherry; approval not guaranteed |
 
 ## Who Should Book Microblading in Wilmington, MA, and Who Should Not?
 
-Microblading in Wilmington, MA suits clients near Route 129 who want fuller-looking brows without daily makeup and can commit to a 6- to 8-week healing period before the perfecting session. It is not appropriate for anyone pregnant, breastfeeding, under 18, or currently using isotretinoin, with no exception at either studio.
+Microblading in Wilmington, MA suits clients near Route 129 who want fuller-looking brows without daily makeup and can commit to a 6- to 8-week healing period before the 2nd session. It is not appropriate for anyone pregnant, breastfeeding, under 18, or currently using isotretinoin, with no exception at either studio.
 
 - Good fit: Wilmington, Reading, or Woburn clients wanting fuller brows without daily filling-in, including Portuguese and Spanish speakers
 - Not a fit: anyone pregnant, breastfeeding, or under 18, at either studio
@@ -30,13 +30,13 @@ Microblading in Wilmington, MA suits clients near Route 129 who want fuller-look
 
 ## How Does a Microblading Appointment Work at the Wilmington Studio?
 
-A Wilmington microblading appointment starts with a consultation and brow mapping matched to your face shape, moves into the procedure itself under topical numbing, and ends with written aftercare instructions. The perfecting session follows 6 to 8 weeks later, once healing is complete, at no extra charge.
+A Wilmington microblading appointment starts with a consultation and brow mapping matched to your face shape, moves into the procedure itself under topical numbing, and ends with written aftercare instructions. The 2nd session follows 6 to 8 weeks later, once healing is complete, at no extra charge.
 
 - Consultation and health-history intake
 - Brow mapping matched to your face shape
 - The procedure, with a sterile single-use blade
 - Written aftercare instructions to take home
-- Perfecting session, 6 to 8 weeks later, included in the $550
+- 2nd Session, 6 to 8 weeks later, included in the $550
 Full healing detail is in the [aftercare guide](../../../../aftercare/).
 
 ## Why Book Microblading at the Wilmington, MA Studio Specifically?
@@ -63,7 +63,7 @@ Written by Adriana Souza Santos, responsible for this page's accuracy. Questions
 
 ## What If Microblading Hurts, Fades Unevenly, or Doesn't Last?
 
-Most clients describe microblading as mild scratching or pressure rather than sharp pain, since topical numbing is applied before the blade touches skin. Results typically last 12 to 24 months before fading evenly; if any area heals lighter than expected, the perfecting session 6 to 8 weeks later corrects it at no extra charge.
+Most clients describe microblading as mild scratching or pressure rather than sharp pain, since topical numbing is applied before the blade touches skin. Results typically last 12 to 24 months before fading evenly; if any area heals lighter than expected, the 2nd session 6 to 8 weeks later corrects it at no extra charge.
 
 Deposit terms are confirmed by phone at (781) 853-8063. Signs that need a doctor instead of the studio are listed in the [aftercare guide](../../../../aftercare/#infection-signs).
 
@@ -71,7 +71,7 @@ Deposit terms are confirmed by phone at (781) 853-8063. Signs that need a doctor
 
 Microblading in Wilmington, MA is performed at 211 Lowell Street, Suite F, Wilmington, MA 01887, reached at (781) 853-8063. The studio is open Monday through Saturday, 10:00 a.m. to 6:00 p.m., closed Sunday — a different address and phone number than the Salem, New Hampshire studio.
 
-Microblading in Wilmington, MA costs $550, and that price already includes the perfecting session scheduled 6 to 8 weeks after the procedure. A separate yearly touch-up, from $300, follows roughly 12 months later. Cherry offers 4 interest-free payments or a longer plan; approval is not guaranteed.
+Microblading in Wilmington, MA costs $550, and that price already includes the 2nd session scheduled 6 to 8 weeks after the procedure. A separate yearly touch-up, from $250, follows roughly 12 months later. Cherry offers 4 interest-free payments or a longer plan; approval is not guaranteed.
 
 Yes. Lowell Street in Wilmington is Massachusetts Route 129, and 211 Lowell Street, Suite F sits directly on it. Route 129 crosses Route 38 near the center of town, and the nearest highway access is the I-93 and Route 129 interchange, also in Wilmington.
 
@@ -79,7 +79,7 @@ Wilmington has two MBTA commuter rail stations on two lines. Wilmington station,
 
 Wilmington's Board of Health requires both an establishment permit and an individual practitioner permit for cosmetic tattooing, under M.G.L. Chapter 111, Section 31. The practitioner's application must state the type of body art sought, and a client is entitled to ask to see that permit before booking.
 
-Microblading results typically last 12 to 24 months before fading. About 12 months after the perfecting session, a yearly touch-up, from $300, refreshes the color at the Wilmington studio rather than requiring the full original $550 procedure again from scratch entirely.
+Microblading results typically last 12 to 24 months before fading. About 12 months after the 2nd session, a yearly touch-up, from $250, refreshes the color at the Wilmington studio rather than requiring the full original $550 procedure again from scratch entirely.
 
 Yes. The Wilmington studio offers payment plans through Cherry Technologies, an independent financing provider separate from Adriana's Permanent Makeup. Options include 4 interest-free payments or a longer plan up to 24 months with interest. Approval is not guaranteed; Cherry sets the terms, not the studio.
 
@@ -87,9 +87,9 @@ Yes. Master Permanent Makeup Artist Adriana Souza Santos consults in English, Po
 
 Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent financing provider: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
 
-The perfecting session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
+The 2nd session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
 
-Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
+Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). After that, a yearly touch-up refreshes the colour from $250, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the 2nd session, which is included in the original price and happens in the first weeks.
 
 Yes. Pregnancy, breastfeeding, being under 18, and current isotretinoin use are refused at both studios, with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need clearance from your doctor first. The full list is published in the [contraindications guide](../../../../aftercare/) before you book, not after.
 
@@ -97,7 +97,7 @@ Adriana Souza Santos has performed more than 5,000 procedures across 20+ years a
 
 ## Explore Other Brow Techniques and the Wilmington Studio
 
-Microblading is one of five brow techniques available at the Wilmington studio, alongside Nano Brows, Powder Brows, Combination Brows, and Nano Combo. Every technique includes the perfecting session, and each has its own page with technique-specific pricing and detail for the Wilmington location.
+Microblading is one of five brow techniques available at the Wilmington studio, alongside Nano Brows, Powder Brows, Combination Brows, and Nano Combo. Every technique includes the 2nd session for first-time clients, and each has its own page with technique-specific pricing and detail for the Wilmington location.
 
 - [Microblading overview](../) — full technique guide and healing timeline
 - [Nano Brows in Wilmington](../../nano-brows/wilmington-ma/) — $650

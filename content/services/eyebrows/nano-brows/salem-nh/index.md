@@ -4,20 +4,20 @@
 
 # Nano Brows in Salem, NH
 
-Nano Brows in Salem, NH costs $650 and includes the perfecting session, using an ultra-fine needle and digital machine to draw realistic, hair-like strokes that last 1 to 3 years. Book with Adriana Souza Santos at 117A Main Street, on Route 97.
+Nano Brows in Salem, NH costs $650 and includes the 2nd session, using an ultra-fine needle and digital machine to draw realistic, hair-like strokes that last 1 to 3 years. Book with Adriana Souza Santos at 117A Main Street, on Route 97.
 
 **Nano Brows in Salem, NH is a $650 procedure at 117A Main Street.**
 
 ## How Much Does Nano Brows Cost in Salem, NH, and What's Included?
 
-Nano Brows in Salem, NH costs $650, a single price that includes the perfecting session 6 to 8 weeks later. A yearly touch-up, from $300, follows roughly 12 months after that, and Cherry offers 4 interest-free payments or a longer plan, approval not guaranteed.
+Nano Brows in Salem, NH costs $650, a single price that includes the 2nd session 6 to 8 weeks later. A yearly touch-up, from $250, follows roughly 12 months after that, and Cherry offers 4 interest-free payments or a longer plan, approval not guaranteed.
 
 | Item | Detail |
 | --- | --- |
 | Procedure price | $650 |
 | What's included | Consultation, mapping, numbing, procedure |
-| Perfecting session | Included, 6 to 8 weeks after |
-| Yearly touch-up | From $300, about 12 months later |
+| 2nd Session | Included, 6 to 8 weeks after |
+| Yearly touch-up | From $250, about 12 months later |
 | Payment plan | 4 interest-free payments or longer via Cherry; approval not guaranteed |
 
 ## Who Should Book Nano Brows in Salem, NH, and Who Should Not?
@@ -31,13 +31,13 @@ Nano Brows in Salem, NH suits clients who want brows that read as individual hai
 
 ## How Does a Nano Brows Appointment Work at the Salem Studio?
 
-A Salem Nano Brows appointment starts with stroke mapping matched to your natural hair growth direction and face shape, moves into stroke-by-stroke work with the digital machine and ultra-fine needle under topical numbing, and ends with written aftercare instructions. The perfecting session follows 6 to 8 weeks later, at no extra charge.
+A Salem Nano Brows appointment starts with stroke mapping matched to your natural hair growth direction and face shape, moves into stroke-by-stroke work with the digital machine and ultra-fine needle under topical numbing, and ends with written aftercare instructions. The 2nd session follows 6 to 8 weeks later, at no extra charge.
 
 - Consultation and health-history intake
 - Stroke mapping matched to your natural hair growth direction and face shape
 - The procedure: stroke-by-stroke work with a digital machine and ultra-fine needle
 - Aftercare instructions to take home
-- Perfecting session at the Salem studio, 6 to 8 weeks later, included
+- 2nd Session at the Salem studio, 6 to 8 weeks later, included
 Full healing detail is in the [aftercare guide](../../../../aftercare/).
 
 ## Why Book Nano Brows at the Salem, NH Studio Specifically?
@@ -64,7 +64,7 @@ Written by Adriana Souza Santos, responsible for this page's accuracy. Questions
 
 ## What If Nano Brows Hurts, Fades Unevenly, or Doesn't Last?
 
-Most Salem clients describe Nano Brows as mild scratching or pressure rather than sharp pain, since numbing is applied first. The honest risk with strokes is softening, not solidity: on oilier skin the fine lines can blur toward a shaded look as they heal, which the perfecting session at the Salem studio addresses at no charge.
+Most Salem clients describe Nano Brows as mild scratching or pressure rather than sharp pain, since numbing is applied first. The honest risk with strokes is softening, not solidity: on oilier skin the fine lines can blur toward a shaded look as they heal, which the 2nd session at the Salem studio addresses at no charge.
 
 Deposit terms are confirmed by phone at (978) 223-7496. Signs that need a doctor instead of the studio are listed in the [aftercare guide](../../../../aftercare/#infection-signs).
 
@@ -72,7 +72,7 @@ Deposit terms are confirmed by phone at (978) 223-7496. Signs that need a doctor
 
 Nano Brows in Salem, NH is performed at 117A Main Street, Salem, NH 03079, reached at (978) 223-7496. The studio is open Monday through Saturday, 10 to 6, closed Sunday — a different address and phone than the Wilmington, Massachusetts studio.
 
-Nano Brows in Salem, NH costs $650, which includes the stroke-mapping consultation and the perfecting session 6 to 8 weeks later. A yearly touch-up, from $300, follows roughly 12 months after that; Cherry offers 4 interest-free payments or a longer plan, approval not guaranteed.
+Nano Brows in Salem, NH costs $650, which includes the stroke-mapping consultation and the 2nd session 6 to 8 weeks later. A yearly touch-up, from $250, follows roughly 12 months after that; Cherry offers 4 interest-free payments or a longer plan, approval not guaranteed.
 
 Not on skin that takes strokes well. Nano Brows uses an ultra-fine needle at a shallow depth, so individual strokes usually stay crisp through healing on normal to dry skin. On oilier skin, strokes can soften toward a shaded look; clients who want a guaranteed crisp result on oily skin often choose Powder Brows or Combination Brows instead.
 
@@ -80,7 +80,7 @@ It can be, but be honest about the tradeoff first: oil moving through the skin d
 
 Nano Brows is not the best match for clients with very oily skin who want a guaranteed crisp, hair-like result, or for anyone who actually wants the soft, filled-in makeup look of Powder Brows. It is also not appropriate for anyone pregnant, breastfeeding, under 18, or using isotretinoin, no exception at either studio.
 
-Nano Brows fades by lightening evenly, with individual strokes staying visible but softer rather than blurring into a single shape. About 12 months after the perfecting session, a yearly touch-up, from $300, redraws the strokes and restores contrast at the Salem studio, rather than requiring the full original $650 procedure again.
+Nano Brows fades by lightening evenly, with individual strokes staying visible but softer rather than blurring into a single shape. About 12 months after the 2nd session, a yearly touch-up, from $250, redraws the strokes and restores contrast at the Salem studio, rather than requiring the full original $650 procedure again.
 
 Yes. The Salem studio offers payment plans through Cherry Technologies, an independent financing provider. Options include 4 interest-free payments, or a longer plan up to 24 months with interest. Approval is not guaranteed; Cherry, not the studio, sets the final terms.
 
@@ -88,9 +88,9 @@ Both create hair-like strokes, but Nano Brows uses a digital machine and needle 
 
 Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent financing provider: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
 
-The perfecting session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
+The 2nd session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
 
-Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
+Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). After that, a yearly touch-up refreshes the colour from $250, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the 2nd session, which is included in the original price and happens in the first weeks.
 
 Yes. Pregnancy, breastfeeding, being under 18, and current isotretinoin use are refused at both studios, with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need clearance from your doctor first. The full list is published in the [contraindications guide](../../../../aftercare/) before you book, not after.
 

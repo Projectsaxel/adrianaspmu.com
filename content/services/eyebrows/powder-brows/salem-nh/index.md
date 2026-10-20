@@ -4,20 +4,20 @@
 
 # Powder Brows in Salem, NH
 
-Powder Brows in Salem, NH costs $550 and includes the perfecting session, using a digital machine to create a soft, shaded brow with a polished makeup-like finish that last 1 to 3 years. Book with Adriana Souza Santos at 117A Main Street, on Route 97.
+Powder Brows in Salem, NH costs $550 and includes the 2nd session, using a digital machine to create a soft, shaded brow with a polished makeup-like finish that last 1 to 3 years. Book with Adriana Souza Santos at 117A Main Street, on Route 97.
 
 **Powder Brows in Salem, NH is a $550 procedure at 117A Main Street.**
 
 ## How Much Does Powder Brows Cost in Salem, NH, and What's Included?
 
-Powder Brows in Salem, NH costs $550, a single price that includes the perfecting session 6 to 8 weeks later. A yearly touch-up, from $300, follows roughly 12 months after that, and Cherry offers 4 interest-free payments or a longer plan, approval not guaranteed.
+Powder Brows in Salem, NH costs $550, a single price that includes the 2nd session 6 to 8 weeks later. A yearly touch-up, from $250, follows roughly 12 months after that, and Cherry offers 4 interest-free payments or a longer plan, approval not guaranteed.
 
 | Item | Detail |
 | --- | --- |
 | Procedure price | $550 |
 | What's included | Consultation, mapping, numbing, procedure |
-| Perfecting session | Included, 6 to 8 weeks after |
-| Yearly touch-up | From $300, about 12 months later |
+| 2nd Session | Included, 6 to 8 weeks after |
+| Yearly touch-up | From $250, about 12 months later |
 | Payment plan | 4 interest-free payments or longer via Cherry; approval not guaranteed |
 
 ## Who Should Book Powder Brows in Salem, NH, and Who Should Not?
@@ -31,13 +31,13 @@ Powder Brows in Salem, NH suits clients who already fill their brows with pencil
 
 ## How Does a Powder Brows Appointment Work at the Salem Studio?
 
-A Salem Powder Brows appointment starts with a consultation on density and gradient, lighter at the front and deeper through the tail, moves into shading with the digital machine built up in light layers under topical numbing, and ends with written aftercare instructions. The perfecting session follows 6 to 8 weeks later, at no extra charge.
+A Salem Powder Brows appointment starts with a consultation on density and gradient, lighter at the front and deeper through the tail, moves into shading with the digital machine built up in light layers under topical numbing, and ends with written aftercare instructions. The 2nd session follows 6 to 8 weeks later, at no extra charge.
 
 - Consultation and health-history intake
 - Density and gradient mapping: lighter at the front, deeper through the tail
 - The procedure: shading built up in light layers with a digital machine
 - Aftercare instructions to take home
-- Perfecting session at the Salem studio, 6 to 8 weeks later, included
+- 2nd Session at the Salem studio, 6 to 8 weeks later, included
 Full healing detail is in the [aftercare guide](../../../../aftercare/).
 
 ## Why Book Powder Brows at the Salem, NH Studio Specifically?
@@ -64,7 +64,7 @@ Written by Adriana Souza Santos, responsible for this page's accuracy. Questions
 
 ## What If Powder Brows Hurts, Fades Unevenly, or Doesn't Last?
 
-Most Salem clients describe Powder Brows as mild pressure or light scratching rather than sharp pain, since numbing is applied first. The honest concern with shading is density, not pain: built up too fast it can read as solid or drawn-on, which is why the Salem studio layers color gradually and adjusts at the perfecting session.
+Most Salem clients describe Powder Brows as mild pressure or light scratching rather than sharp pain, since numbing is applied first. The honest concern with shading is density, not pain: built up too fast it can read as solid or drawn-on, which is why the Salem studio layers color gradually and adjusts at the 2nd session.
 
 Deposit terms are confirmed by phone at (978) 223-7496. Signs that need a doctor instead of the studio are listed in the [aftercare guide](../../../../aftercare/#infection-signs).
 
@@ -72,15 +72,15 @@ Deposit terms are confirmed by phone at (978) 223-7496. Signs that need a doctor
 
 Powder Brows in Salem, NH is performed at 117A Main Street, Salem, NH 03079, reached at (978) 223-7496. The studio is open Monday through Saturday, 10 to 6, closed Sunday — a different address and phone than the Wilmington, Massachusetts studio.
 
-Powder Brows in Salem, NH costs $550, which includes the shading-density consultation and the perfecting session 6 to 8 weeks later. A yearly touch-up, from $300, follows roughly 12 months after that; Cherry offers 4 interest-free payments or a longer plan, approval not guaranteed.
+Powder Brows in Salem, NH costs $550, which includes the shading-density consultation and the 2nd session 6 to 8 weeks later. A yearly touch-up, from $250, follows roughly 12 months after that; Cherry offers 4 interest-free payments or a longer plan, approval not guaranteed.
 
-Not when it is built correctly. Powder Brows is shaded in light layers, usually lighter at the front of the brow and deeper through the tail, so it heals as a soft gradient rather than a flat block. If any area looks too solid after healing, the perfecting session 6 to 8 weeks later softens it at the Salem studio.
+Not when it is built correctly. Powder Brows is shaded in light layers, usually lighter at the front of the brow and deeper through the tail, so it heals as a soft gradient rather than a flat block. If any area looks too solid after healing, the 2nd session 6 to 8 weeks later softens it at the Salem studio.
 
 Yes, more so than Nano Brows. Powder Brows’ shading is designed to be soft and diffused, so it holds up on oilier skin better than individual strokes, which can blur together as oil moves through the skin during healing. That is one reason clients with oilier skin often choose Powder Brows at the Salem studio.
 
 Powder Brows is not the best match for clients who want brows that read as individual hairs rather than a makeup finish, since even healed results look like soft powder shading, not strokes. It is also not appropriate for anyone pregnant, breastfeeding, under 18, or using isotretinoin, no exception at either studio.
 
-Powder Brows fades by lightening evenly across the shaded area, keeping its soft gradient rather than developing visible gaps. About 12 months after the perfecting session, a yearly touch-up, from $300, rebuilds density at the Salem studio, rather than requiring the full original $550 procedure again.
+Powder Brows fades by lightening evenly across the shaded area, keeping its soft gradient rather than developing visible gaps. About 12 months after the 2nd session, a yearly touch-up, from $250, rebuilds density at the Salem studio, rather than requiring the full original $550 procedure again.
 
 Yes. The Salem studio offers payment plans through Cherry Technologies, an independent financing provider. Options include 4 interest-free payments, or a longer plan up to 24 months with interest. Approval is not guaranteed; Cherry, not the studio, sets the final terms.
 
@@ -88,9 +88,9 @@ Microblading, at $550, draws individual strokes by hand, while Powder Brows uses
 
 Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent financing provider: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
 
-The perfecting session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
+The 2nd session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
 
-Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
+Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). After that, a yearly touch-up refreshes the colour from $250, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the 2nd session, which is included in the original price and happens in the first weeks.
 
 Yes. Pregnancy, breastfeeding, being under 18, and current isotretinoin use are refused at both studios, with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need clearance from your doctor first. The full list is published in the [contraindications guide](../../../../aftercare/) before you book, not after.
 

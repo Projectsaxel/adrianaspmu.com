@@ -136,6 +136,18 @@
   .table-scroll td:nth-child(2) { color: var(--ink-muted); }
   .table-scroll td:nth-child(3) { text-align: right; font-weight: 600; }
 }
+/* precos por artista no celular: nome em cima, Livy e Adriana lado a lado,
+   cada valor com o nome da artista (o thead fica oculto nessa largura) */
+@media (max-width: 599.98px) {
+  .table-precos tr { grid-template-columns: 1fr 1fr; }
+  .table-precos td:nth-child(2) { color: var(--ink); font-weight: 600; text-align: left; }
+  .table-precos td:nth-child(3) { text-align: right; }
+  .table-precos td[data-label]::before {
+    content: attr(data-label) " ";
+    font-weight: 400;
+    color: var(--ink-muted);
+  }
+}
 
 /* ---------- galeria "The Work" ----------
    Tres colunas de 104px no celular: a foto do trabalho nao se le.

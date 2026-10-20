@@ -1,6 +1,6 @@
 <!-- Lip Permanent Makeup | Adriana's PMU -->
 <!-- canonical: https://adrianaspmu.com/services/lips/ -->
-> Lip blush and dark lip neutralization in Wilmington MA and Salem NH. Natural color and defined contour, with the perfecting session included.
+> Lip blush and dark lip neutralization in Wilmington MA and Salem NH. Natural color and defined contour, with the 2nd session included.
 
 # Lip Permanent Makeup
 
@@ -22,9 +22,9 @@ This service is quoted at the consultation rather than listed at a fixed price, 
 
 Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent financing provider: it sets approval and rates, not the studio. See [how the payment plan works](../../payment-plan/).
 
-The perfecting session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
+The 2nd session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
 
-Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
+Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). After that, a yearly touch-up refreshes the colour from $250, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the 2nd session, which is included in the original price and happens in the first weeks.
 
 Yes. Pregnancy, breastfeeding, being under 18, and current isotretinoin use are refused at both studios, with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need clearance from your doctor first. The full list is published in the [contraindications guide](../../aftercare/) before you book, not after.
 
@@ -36,7 +36,7 @@ Both lip treatments at Adriana’s cost $550, but they do different jobs: Lip Bl
 
 | Treatment | Price | Job | Best for | Sessions |
 | --- | --- | --- | --- | --- |
-| [Lip Blush](lip-blush/) | $550 | Additive: enhances color, defines the border, corrects mild asymmetry | Lips whose natural tone is already even | Typically one, plus the included perfecting session |
+| [Lip Blush](lip-blush/) | $550 | Additive: enhances color, defines the border, corrects mild asymmetry | Lips whose natural tone is already even | Typically one, plus the included 2nd session |
 | [Dark Lip Neutralization](dark-lip-neutralization/) | $550 | Corrective: neutralizes dark, cool, or uneven pigmentation with warm tones | Dark, cool, blue-grey, or uneven lip tone | Often more than one session |
 
 Dark Lip Neutralization’s first healed result can look warmer than expected before it settles — that shift is expected, not a sign the color is wrong.
@@ -49,13 +49,13 @@ Adriana Souza Santos trained in Brazil, where color-correction work on deeper an
 
 ## How Does a Lip Appointment Work, and Who Needs to Talk to a Doctor First?
 
-A lip appointment includes a consultation and shade selection, numbing, pigment placement, and a perfecting session 6 to 8 weeks later, included in your price. Anyone with a history of cold sores (HSV-1) should speak to a doctor before booking, not after, since needle trauma can trigger an outbreak even years later.
+A lip appointment includes a consultation and shade selection, numbing, pigment placement, and a 2nd session 6 to 8 weeks later, included in your price. Anyone with a history of cold sores (HSV-1) should speak to a doctor before booking, not after, since needle trauma can trigger an outbreak even years later.
 
 Dark Lip Neutralization often needs a second session to fully rebalance the tone, discussed at consultation once your natural pigmentation is assessed. Full pre-appointment guidance, including the cold sore precaution, is on the [aftercare and contraindications guide](../../aftercare/).
 
 ## What Does the Price Include?
 
-Both lip treatments include the consultation, shade selection, numbing, the procedure, and the perfecting session 6 to 8 weeks later. Dark Lip Neutralization's additional sessions, when needed, are priced at consultation; the [Yearly Touch-Up](../touch-ups/) from $300 about 12 months later is separate, and both treatments split with Cherry.
+Both lip treatments include the consultation, shade selection, numbing, the procedure, and the 2nd session 6 to 8 weeks later. Dark Lip Neutralization's additional sessions, when needed, are priced at consultation; the [Yearly Touch-Up](../touch-ups/) from $250 about 12 months later is separate, and both treatments split with Cherry.
 
 ## Who Should Not Book Lip Permanent Makeup?
 
@@ -102,7 +102,7 @@ Six things are worth verifying with any permanent makeup artist before you book:
 | --- | --- | --- |
 | Practitioner licence | Ask for the licence number and check it yourself with the state or the town, instead of taking a badge on a website at face value. | New Hampshire Body Artist licence 4283, valid through 18 July 2028 and searchable at the state’s own public lookup. Town of Salem BODA-10 and BODE-4. Body Art Practitioner licence from the Town of Wilmington Board of Health. |
 | Who trained them | Ask who certified the artist, and whether that credential can be checked with the body that issued it. | AAM Diamond Certified Trainer, the American Academy of Micropigmentation’s highest level of instructor recognition. |
-| What the price includes | Ask whether the perfecting session is included or billed later. This is where quoted prices most often stop matching the final bill. | The perfecting session, 6 to 8 weeks after the appointment, is included in every original price. The yearly touch-up, from $300, is a separate visit about 12 months later. |
+| What the price includes | Ask whether the 2nd session is included or billed later. This is where quoted prices most often stop matching the final bill. | The 2nd session, 6 to 8 weeks after the appointment, is included in the price of every first-time procedure. The yearly touch-up, from $250, is a separate visit about 12 months later. |
 | Whether the price is published at all | Ask for the price before the consultation. A studio that will not name a range before seeing you is not comparable to one that will. | All 13 services are published with their prices, from $250 to $850, on the [price list](../../prices/). |
 | When they say no | Ask what would make them refuse to perform the procedure. An artist who never refuses is a warning sign. | Pregnancy, breastfeeding, under 18 and isotretinoin are refused at both studios with no exception. The full list is in the [contraindications guide](../../aftercare/), published before you book rather than after. |
 | Whether the technique fits you | Ask which technique suits your skin type, and what they would recommend if this one does not. | Additive colour and corrective work are different services with different outcomes. This is settled at the consultation, in English, Portuguese or Spanish. |

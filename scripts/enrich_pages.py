@@ -60,9 +60,9 @@ FRESHA_GENERIC = "https://www.fresha.com/book-now/adrianas-permanent-makeup-zeas
 # Chave: caminho relativo da pagina. Valor: 140-160 chars com servico+cidade+CTA.
 DESCRIPTIONS = {
     "services/eyebrows/index.html": "Microblading, nano brows, powder and combination brows in Wilmington MA and Salem NH. Compare techniques, see prices, and book a consultation.",
-    "services/lips/index.html": "Lip blush and dark lip neutralization in Wilmington MA and Salem NH. Natural color and defined contour, with the perfecting session included.",
+    "services/lips/index.html": "Lip blush and dark lip neutralization in Wilmington MA and Salem NH. Natural color and defined contour, with the 2nd session included.",
     "services/eyeliner/index.html": "Permanent eyeliner in Wilmington MA and Salem NH: top, bottom, smokey effect and combo. Smudge-proof definition that survives the gym, from $250.",
-    "services/combos/index.html": "Permanent makeup combo packages in Wilmington MA and Salem NH. Pair brows, lips and eyeliner in one plan and save, perfecting session included.",
+    "services/combos/index.html": "Permanent makeup combo packages in Wilmington MA and Salem NH. Pair brows, lips and eyeliner in one plan and save, 2nd session included.",
     "services/touch-ups/index.html": "Yearly permanent makeup touch-ups in Wilmington MA and Salem NH. Keep brows, lips and eyeliner fresh with a refresh by the original artist.",
     "portfolio/index.html": "Real before and after photos of microblading, nano brows, lip blush and eyeliner by the Adriana's PMU artists in Wilmington MA and Salem NH.",
     "payment-plan/index.html": "Split your permanent makeup service into easy payments at Adriana's PMU. Flexible payment plans in Wilmington MA and Salem NH, no hidden fees.",
@@ -684,7 +684,7 @@ PROOF = {
  "microblading": {
   "salem-nh": ("Healed microblading brow seen in profile, individual hair strokes following the natural brow direction",
     "Microblading healed: individual strokes, not a solid block of colour.",
-    "The strokes are cut one at a time with a handheld blade, which is why the brow keeps a broken edge instead of a printed outline. This is the result after the perfecting session."),
+    "The strokes are cut one at a time with a handheld blade, which is why the brow keeps a broken edge instead of a printed outline. This is the result after the 2nd session."),
   "wilmington-ma": ("Healed microblading brow in profile with a defined tail and a softer, lighter front",
     "Microblading healed: denser at the tail, deliberately lighter at the front.",
     "The front of the brow is left lighter on purpose so the shape reads as hair rather than as makeup. The density builds toward the arch and tail."), },
@@ -1074,8 +1074,8 @@ def _criteria_rows(fit_text):
          "Ask who certified the artist, and whether that credential can be checked with the body that issued it.",
          "AAM Diamond Certified Trainer, the American Academy of Micropigmentation&rsquo;s highest level of instructor recognition."),
         ("What the price includes",
-         "Ask whether the perfecting session is included or billed later. This is where quoted prices most often stop matching the final bill.",
-         "The perfecting session, 6 to 8 weeks after the appointment, is included in every original price. The yearly touch-up, from $300, is a separate visit about 12 months later."),
+         "Ask whether the 2nd session is included or billed later. This is where quoted prices most often stop matching the final bill.",
+         "The 2nd session, 6 to 8 weeks after the appointment, is included in the price of every first-time procedure. The yearly touch-up, from $300, is a separate visit about 12 months later."),
         ("Whether the price is published at all",
          "Ask for the price before the consultation. A studio that will not name a range before seeing you is not comparable to one that will.",
          "All 13 services are published with their prices, from $250 to $850, on the <a href=\"{up}prices/\">price list</a>."),
@@ -1158,7 +1158,7 @@ def _faq_extra(label, price, up):
         qa.append((
             f"How much does {label} cost, and what is included?",
             f"{label} costs ${price} at both studios, and that price already includes the "
-            f"perfecting session scheduled 6 to 8 weeks after the appointment. The "
+            f"2nd session scheduled 6 to 8 weeks after the appointment. The "
             f"consultation, the mapping and the topical numbing are part of it as well. "
             f"A yearly touch-up, from $300, is a separate visit about 12 months later. "
             f"Every price is published on the <a href=\"{up}prices/\">price list</a>."))
@@ -1181,7 +1181,7 @@ def _faq_extra(label, price, up):
 
     qa.append((
         "What happens if the colour heals unevenly?",
-        "The perfecting session exists for exactly that. It is scheduled 6 to 8 weeks after "
+        "The 2nd session exists for exactly that. It is scheduled 6 to 8 weeks after "
         "the first appointment, once the skin has healed, and it is included in the original "
         "price at no extra charge. Pigment settles differently on different skin, so the "
         "second pass is part of the procedure rather than a repair you pay for."))
@@ -1352,7 +1352,7 @@ FAQ_BY_PAGE = {
     "services/index.html": [
         ("How much do the services cost?",
          "Thirteen services are published with their prices, from $250 for bottom eyeliner to "
-         "$850 for the brows and lips combo. Every original price already includes the perfecting "
+         "$850 for the brows and lips combo. The price of every first-time procedure already includes the perfecting "
          "session 6 to 8 weeks later. The full table is on the price list, and combination brows "
          "is the one service quoted at the consultation."),
         ("Can I pay in installments?",
@@ -1361,7 +1361,7 @@ FAQ_BY_PAGE = {
          "your credit score. Cherry is an independent financing provider: it sets approval and rates, not "
          "the studio."),
         ("What happens if the colour heals unevenly?",
-         "The perfecting session covers it. Scheduled 6 to 8 weeks after the first appointment, "
+         "The 2nd session covers it. Scheduled 6 to 8 weeks after the first appointment, "
          "once the skin has healed, it is included in the original price at no extra charge. "
          "Pigment settles differently on different skin, so a second pass is part of the "
          "procedure rather than a paid repair."),
@@ -1389,7 +1389,7 @@ FAQ_BY_PAGE = {
          "book a brow or lip appointment for Peabody."),
         ("Do the two studios charge the same?",
          "Yes. The same 13 services are published at the same prices at both, from $250 to $850, "
-         "and every original price includes the perfecting session 6 to 8 weeks later. What "
+         "and the price of every first-time procedure includes the 2nd session 6 to 8 weeks later. What "
          "differs between them is the phone number and the licensing regime, not the price list."),
         ("Are the licences different in Massachusetts and New Hampshire?",
          "Yes, and that is worth knowing. Massachusetts has no single state body art licence: each "
@@ -1429,8 +1429,8 @@ FAQ_BY_PAGE = {
          "students and never clients."),
     ],
     "prices/index.html": [
-        ("Is the perfecting session included in these prices?",
-         "Yes, in every original price. It is scheduled 6 to 8 weeks after the first appointment, "
+        ("Is the 2nd session included in these prices?",
+         "Yes, in the price of every first-time procedure. It is scheduled 6 to 8 weeks after the first appointment, "
          "once the skin has healed, and costs nothing extra. The yearly touch-up is the one that "
          "is billed separately, from $300, about 12 months later and priced by how much pigment "
          "is left."),
@@ -1449,14 +1449,14 @@ FAQ_BY_PAGE = {
          "Street, Suite F in Wilmington, MA, and 117A Main Street in Salem, NH. What differs "
          "between them is the phone number and the licensing regime, not the price."),
         ("How long do the results last before I pay again?",
-         "Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). The perfecting session "
+         "Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). The 2nd session "
          "in the first weeks is included; after that, the next paid visit is the yearly touch-up, "
          "from $300, priced by how much pigment remains rather than at a flat rate."),
     ],
     "aftercare/index.html": [
         ("How long does healing actually take?",
          "Surface healing takes about 4 weeks, and the colour keeps settling for a few weeks "
-         "after that. This is why the perfecting session is scheduled 6 to 8 weeks out rather "
+         "after that. This is why the 2nd session is scheduled 6 to 8 weeks out rather "
          "than sooner: judging the result before the skin has finished healing leads to "
          "correcting something that was going to settle on its own."),
         ("What should make me call a doctor instead of the studio?",
@@ -1525,7 +1525,7 @@ AFTERCARE_SECTION_QA = [
         "name": "Why Do I Need a Touch-Up Session, and When Is It Scheduled?",
         "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A touch-up session exists because the first appointment cannot fully predict how much pigment an individual client's skin will retain during healing. Adriana's Permanent Makeup schedules the perfecting touch-up 6 to 8 weeks after the initial procedure, once the skin has finished its full healing cycle and the true color has settled."
+            "text": "A touch-up session exists because the first appointment cannot fully predict how much pigment an individual client's skin will retain during healing. Adriana's Permanent Makeup schedules the 2nd session 6 to 8 weeks after the initial procedure, once the skin has finished its full healing cycle and the true color has settled."
         }
     }
 ]
@@ -1673,7 +1673,7 @@ def add_payment_steps(s, path_rel):
         "the studio.</li>"
         "<li><strong>Book the appointment</strong> at Wilmington or Salem for the service you "
         "chose, from $250 to $850.</li>"
-        "<li><strong>Have the procedure</strong>, perfecting session included in the original "
+        "<li><strong>Have the procedure</strong>, 2nd session included in the original "
         "price, 6 to 8 weeks later at no extra charge.</li>"
         "<li><strong>Pay Cherry on your schedule</strong> over the plan you picked, rather "
         "than the studio.</li>"

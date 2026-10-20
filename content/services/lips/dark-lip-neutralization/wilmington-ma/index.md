@@ -4,20 +4,20 @@
 
 # Dark Lip Neutralization in Wilmington, MA
 
-Dark Lip Neutralization in Wilmington, MA costs $550 and includes the perfecting session, using advanced color correction to neutralize dark, cool, or uneven lip pigmentation before a more balanced tone is built. Book with Master Permanent Makeup Artist Adriana Souza Santos at 211 Lowell Street, Suite F, on Route 129.
+Dark Lip Neutralization in Wilmington, MA costs $550 and includes the 2nd session, using advanced color correction to neutralize dark, cool, or uneven lip pigmentation before a more balanced tone is built. Book with Master Permanent Makeup Artist Adriana Souza Santos at 211 Lowell Street, Suite F, on Route 129.
 
 **Dark Lip Neutralization in Wilmington, MA is a $550 procedure at 211 Lowell Street, Suite F, correcting dark or uneven lip pigmentation before color is built.**
 
 ## How Much Does Dark Lip Neutralization Cost in Wilmington, MA, and What's Included?
 
-Dark Lip Neutralization in Wilmington, MA costs $550, already including the perfecting session 6 to 8 weeks after the procedure. A yearly touch-up, from $300, follows about 12 months later. Cherry offers 4 interest-free payments or a longer plan; approval is set by Cherry, not the studio.
+Dark Lip Neutralization in Wilmington, MA costs $550, already including the 2nd session 6 to 8 weeks after the procedure. A yearly touch-up, from $250, follows about 12 months later. Cherry offers 4 interest-free payments or a longer plan; approval is set by Cherry, not the studio.
 
 | Item | Detail |
 | --- | --- |
 | Procedure price | $550 |
 | What's included | Consultation, pigment analysis, numbing, and the correction |
-| Perfecting session | Included, 6 to 8 weeks after the procedure |
-| Yearly touch-up | From $300, about 12 months later |
+| 2nd Session | Included, 6 to 8 weeks after the procedure |
+| Yearly touch-up | From $250, about 12 months later |
 | Payment plan | 4 interest-free payments or longer, via Cherry; approval not guaranteed |
 
 ## Who Should Book Dark Lip Neutralization in Wilmington, MA, and Who Should Not?
@@ -39,7 +39,7 @@ A Wilmington Dark Lip Neutralization appointment starts with a consultation asse
 - Topical numbing before the corrective pass
 - The procedure: a warm-toned pass neutralizing dark or cool areas
 - Written aftercare instructions to take home
-- Perfecting session, 6 to 8 weeks later, included in the $550
+- 2nd Session, 6 to 8 weeks later, included in the $550
 More than one session is common for deeper starting pigmentation; full healing detail is in the [aftercare guide](../../../../aftercare/).
 
 ## Why Book Dark Lip Neutralization at the Wilmington, MA Studio Specifically?
@@ -82,7 +82,7 @@ It replaces nothing, it prepares the base. Neutralization corrects dark, cool, o
 
 It starts with a consultation assessing your undertone, moves into a corrective pass with warm tones under topical numbing, and ends with written aftercare instructions. Because this is a correction, not a single color choice, more than one session is common.
 
-Dark Lip Neutralization in Wilmington, MA costs $550, including the consultation, pigment analysis, topical numbing, the first corrective pass, and a perfecting session 6 to 8 weeks later. Because more than one session is common for deeper pigmentation, further correction is discussed and priced at consultation.
+Dark Lip Neutralization in Wilmington, MA costs $550, including the consultation, pigment analysis, topical numbing, the first corrective pass, and a 2nd session 6 to 8 weeks later. Because more than one session is common for deeper pigmentation, further correction is discussed and priced at consultation.
 
 Not usually. Wilmington clients with dark, cool, or uneven lip pigmentation book Dark Lip Neutralization first, heal, and return for Lip Blush afterward only if they still want added color. Each procedure is its own $550 visit, sequenced rather than combined in one sitting.
 
@@ -92,9 +92,9 @@ Speak with your physician before booking. Lip tattooing can trigger an HSV-1 rea
 
 Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent financing provider: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
 
-The perfecting session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
+The 2nd session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
 
-Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
+Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). After that, a yearly touch-up refreshes the colour from $250, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the 2nd session, which is included in the original price and happens in the first weeks.
 
 Yes. Pregnancy, breastfeeding, being under 18, and current isotretinoin use are refused at both studios, with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need clearance from your doctor first. The full list is published in the [contraindications guide](../../../../aftercare/) before you book, not after.
 
@@ -102,7 +102,7 @@ Adriana Souza Santos has performed more than 5,000 procedures across 20+ years a
 
 ## Explore Other Lip Work and the Wilmington Studio
 
-Dark Lip Neutralization is one of two lip techniques at the Wilmington studio, alongside Lip Blush for clients ready to add soft color once the base tone is balanced. Both include the perfecting session, with its own page for Wilmington pricing and detail.
+Dark Lip Neutralization is one of two lip techniques at the Wilmington studio, alongside Lip Blush for clients ready to add soft color once the base tone is balanced. Both include the 2nd session, with its own page for Wilmington pricing and detail.
 
 - [Dark Lip Neutralization overview](../) — full technique guide and healing timeline
 - [Lip Blush in Wilmington](../../lip-blush/wilmington-ma/) — $550

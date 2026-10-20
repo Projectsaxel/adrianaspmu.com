@@ -59,17 +59,17 @@ Every service links to its own page with technique details, price, and before-an
 | [Microblading](services/eyebrows/microblading/) | Eyebrows | $550 |
 | [Powder Brows](services/eyebrows/powder-brows/) | Eyebrows | $550 |
 | [Combination Brows](services/eyebrows/combination-brows/) | Eyebrows | Custom, set at consultation |
-| [Nano Combo](services/eyebrows/nano-combo/) | Eyebrows | $600 |
+| [Nano Combo](services/eyebrows/nano-combo/) | Eyebrows | $650 |
 | [Lip Blush](services/lips/lip-blush/) | Lips | $550 |
 | [Dark Lip Neutralization](services/lips/dark-lip-neutralization/) | Lips | $550 |
 | [Top Eyeliner](services/eyeliner/top-eyeliner/) | Eyeliner | $350 |
-| [Smokey Eyeliner](services/eyeliner/smokey-eyeliner/) | Eyeliner | $400 |
-| [Bottom Eyeliner](services/eyeliner/bottom-eyeliner/) | Eyeliner | $250 |
-| [Eyeliner Combo](services/eyeliner/eyeliner-combo/) | Eyeliner | $500 |
+| [Smokey Eyeliner](services/eyeliner/smokey-eyeliner/) | Eyeliner | $550 |
+| [Bottom Eyeliner](services/eyeliner/bottom-eyeliner/) | Eyeliner | $300 |
+| [Eyeliner Combo](services/eyeliner/eyeliner-combo/) | Eyeliner | $800 |
 | [Brows + Lips Combo](services/combos/eyebrows-lips-combo/) | Combos | $850 |
-| [Yearly Touch-Up](services/touch-ups/yearly-touch-up/) | Touch-Ups | from $300 |
+| [Yearly Touch-Up](services/touch-ups/yearly-touch-up/) | Touch-Ups | from $250 |
 
-A perfecting session is included in every original price, scheduled 6 to 8 weeks after the first appointment. The Yearly Touch-Up is a separate paid visit, booked about 12 months later, priced by how much pigment remains. See [the full price list and the real ways to pay less](prices/), including combo packages and payment plans.
+A 2nd session is included in the price of every first-time procedure, scheduled 6 to 8 weeks after the first appointment. The Yearly Touch-Up is a separate paid visit, booked about 12 months later, priced by how much pigment remains. See [the full price list and the real ways to pay less](prices/), including combo packages and payment plans.
 
 Why Adriana's
 
@@ -111,13 +111,13 @@ Your Visit
 
 ## How Does a Permanent Makeup Appointment Work?
 
-A visit starts with a consultation and skin assessment, moves through design approval, numbing, and pigment placement, and finishes with a perfecting session 6 to 8 weeks later, included in your original price. Full healing takes about 4 weeks.
+A visit starts with a consultation and skin assessment, moves through design approval, numbing, and pigment placement, and finishes with a 2nd session 6 to 8 weeks later, included for first-time procedures. Full healing takes about 4 weeks.
 
 - Consultation and mapping, offered in English, Portuguese or Spanish
 - Design approval before any pigment is placed
 - Numbing, then pigment placement with single-use sterile needles
-- Perfecting session 6 to 8 weeks later, included in the original price
-- Yearly Touch-Up about 12 months out, booked separately from $300
+- 2nd session 6 to 8 weeks later, included for first-time procedures
+- Yearly Touch-Up about 12 months out, booked separately from $250
 Full healing timeline, aftercare instructions, and contraindications are covered in the [aftercare guide](aftercare/), which every client reviews before booking.
 
 Testimonials

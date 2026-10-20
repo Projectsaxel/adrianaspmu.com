@@ -4,20 +4,20 @@
 
 # Lip Blush in Salem, NH
 
-Lip Blush in Salem, NH costs $550 and includes the perfecting session, depositing a soft, healthy-looking tint that enhances natural lip color and definition for 2 to 3 years. Book with Master Permanent Makeup Artist Adriana Souza Santos at 117A Main Street, on Route 97.
+Lip Blush in Salem, NH costs $550 and includes the 2nd session, depositing a soft, healthy-looking tint that enhances natural lip color and definition for 2 to 3 years. Book with Master Permanent Makeup Artist Adriana Souza Santos at 117A Main Street, on Route 97.
 
 **Lip Blush in Salem, NH is a $550 procedure at 117A Main Street, depositing a soft tint that enhances natural lip color and shape.**
 
 ## How Much Does Lip Blush Cost in Salem, NH, and What's Included?
 
-Lip Blush in Salem, NH costs $550, already including the perfecting session 6 to 8 weeks after the procedure. A yearly touch-up, from $300, follows about 12 months later. Cherry offers 4 interest-free payments or a longer plan; approval is set by Cherry, not the studio.
+Lip Blush in Salem, NH costs $550, already including the 2nd session 6 to 8 weeks after the procedure. A yearly touch-up, from $250, follows about 12 months later. Cherry offers 4 interest-free payments or a longer plan; approval is set by Cherry, not the studio.
 
 | Item | Detail |
 | --- | --- |
 | Procedure price | $550 |
 | What's included | Consultation, color matching, numbing, and the procedure |
-| Perfecting session | Included, 6 to 8 weeks after the procedure |
-| Yearly touch-up | From $300, about 12 months later |
+| 2nd Session | Included, 6 to 8 weeks after the procedure |
+| Yearly touch-up | From $250, about 12 months later |
 | Payment plan | 4 interest-free payments or longer, via Cherry; approval not guaranteed |
 
 ## Who Should Book Lip Blush in Salem, NH, and Who Should Not?
@@ -32,14 +32,14 @@ Even tone: Lip Blush fits. Dark, cool, or uneven tone: start with [Dark Lip Neut
 
 ## How Does a Lip Blush Appointment Work at the Salem Studio?
 
-A Salem Lip Blush appointment starts with a consultation where you choose your shade, moves into a single pigment build under topical numbing, and ends with written aftercare instructions. Because the starting lip tone is already even, one build is usually enough; the perfecting session 6 to 8 weeks later fine-tunes it, at no extra charge.
+A Salem Lip Blush appointment starts with a consultation where you choose your shade, moves into a single pigment build under topical numbing, and ends with written aftercare instructions. Because the starting lip tone is already even, one build is usually enough; the 2nd session 6 to 8 weeks later fine-tunes it, at no extra charge.
 
 - Consultation and health-history intake
 - Shade selection from a range built for your natural lip tone
 - Topical numbing before the single pigment build
 - The procedure: one build depositing soft, even color
 - Written aftercare instructions to take home
-- Perfecting session, 6 to 8 weeks later, included in the $550
+- 2nd Session, 6 to 8 weeks later, included in the $550
 Full healing detail is in the [aftercare guide](../../../../aftercare/).
 
 ## Why Book Lip Blush at the Salem, NH Studio Specifically?
@@ -70,7 +70,7 @@ Written by Adriana Souza Santos, responsible for accuracy. Questions: (978) 223-
 
 No, intensity is chosen at your consultation, and most Salem clients choose a shade only one or two tones above their natural lip color. Most describe the procedure as mild pressure rather than sharp pain, since topical numbing is applied first. Healed color reads as your own lips on a good day, lasting 2 to 3 years.
 
-Anyone with cold sores should see a physician first, since lip tattooing can trigger HSV-1 reactivation — a question for a doctor, not the studio. The included perfecting session, 6 to 8 weeks later, corrects any uneven healing at no extra charge. Deposit terms: (978) 223-7496; infection signs are in the [aftercare guide](../../../../aftercare/#infection-signs).
+Anyone with cold sores should see a physician first, since lip tattooing can trigger HSV-1 reactivation — a question for a doctor, not the studio. The included 2nd session, 6 to 8 weeks later, corrects any uneven healing at no extra charge. Deposit terms: (978) 223-7496; infection signs are in the [aftercare guide](../../../../aftercare/#infection-signs).
 
 ## Frequently Asked Questions About Lip Blush in Salem, NH
 
@@ -80,21 +80,21 @@ No. Intensity is chosen at your consultation, and most Salem clients pick a shad
 
 Not well on its own. Lip Blush is additive: it layers color onto lips whose tone is already fairly even. Over dark, cool, or blue-grey pigmentation, that added color can shift and look uneven. Salem clients with that starting tone are better served by Dark Lip Neutralization first, then Lip Blush afterward if still wanted.
 
-It starts with a consultation and shade selection, moves into a single pigment build under topical numbing at 117A Main Street, and ends with written aftercare instructions. Because the starting lip tone is already even, one build is usually enough, and the perfecting session 6 to 8 weeks later fine-tunes the color at no extra charge.
+It starts with a consultation and shade selection, moves into a single pigment build under topical numbing at 117A Main Street, and ends with written aftercare instructions. Because the starting lip tone is already even, one build is usually enough, and the 2nd session 6 to 8 weeks later fine-tunes the color at no extra charge.
 
-Lip Blush in Salem, NH costs $550, including the consultation, shade selection, topical numbing, the single-build procedure, and a perfecting session 6 to 8 weeks later. A separate yearly touch-up, from $300, follows about 12 months after that. Cherry offers 4 interest-free payments or a longer plan; approval is not guaranteed.
+Lip Blush in Salem, NH costs $550, including the consultation, shade selection, topical numbing, the single-build procedure, and a 2nd session 6 to 8 weeks later. A separate yearly touch-up, from $250, follows about 12 months after that. Cherry offers 4 interest-free payments or a longer plan; approval is not guaranteed.
 
 Not usually. The two are typically sequenced rather than combined in one sitting: clients with dark, cool, or uneven pigmentation book Dark Lip Neutralization at the Salem studio first, heal, then return for Lip Blush if they still want added color. Each is its own $550 appointment.
 
-That is exactly what the included perfecting session addresses. Because Lip Blush starts from an already-even lip tone, most Salem clients need only that one perfecting visit 6 to 8 weeks later, at no extra charge, unlike Dark Lip Neutralization's multiple passes.
+That is exactly what the included 2nd session addresses. Because Lip Blush starts from an already-even lip tone, most Salem clients need only that one 2nd session 6 to 8 weeks later, at no extra charge, unlike Dark Lip Neutralization's multiple passes.
 
 Speak with your physician before booking. Lip tattooing can trigger an HSV-1 reactivation in people with a cold sore history, and that is a medical question for your doctor, not the studio. The Salem studio does not prescribe or recommend any medication for this.
 
 Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent financing provider: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
 
-The perfecting session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
+The 2nd session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
 
-Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
+Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). After that, a yearly touch-up refreshes the colour from $250, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the 2nd session, which is included in the original price and happens in the first weeks.
 
 Yes. Pregnancy, breastfeeding, being under 18, and current isotretinoin use are refused at both studios, with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need clearance from your doctor first. The full list is published in the [contraindications guide](../../../../aftercare/) before you book, not after.
 
@@ -102,7 +102,7 @@ Adriana Souza Santos has performed more than 5,000 procedures across 20+ years a
 
 ## Explore Other Lip Work and the Salem Studio
 
-Lip Blush is one of two lip techniques at the Salem studio, alongside Dark Lip Neutralization for clients whose starting pigmentation is darker, cooler, or uneven. Both include the perfecting session, with its own page for Salem pricing and detail.
+Lip Blush is one of two lip techniques at the Salem studio, alongside Dark Lip Neutralization for clients whose starting pigmentation is darker, cooler, or uneven. Both include the 2nd session, with its own page for Salem pricing and detail.
 
 - [Lip Blush overview](../) — full technique guide and healing timeline
 - [Dark Lip Neutralization in Salem](../../dark-lip-neutralization/salem-nh/) — $550

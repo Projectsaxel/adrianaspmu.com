@@ -33,7 +33,7 @@ Adriana's Permanent Makeup has three addresses, but only two take client appoint
 | Peabody, MA
 39 Cross St, Suite 206 | Student training only | Enrolled students | [(781) 853-8063](tel:+17818538063) | By class schedule | Rte 114/128, Exit 40 | — |
 
-Both client studios share one menu and one price list, $250 to $850, with the perfecting touch-up included 6 to 8 weeks later either way.
+Both client studios share one menu and one price list, $250 to $850, with the 2nd session included 6 to 8 weeks later either way.
 
 ## What Should I Know About the Wilmington, MA Studio?
 
@@ -116,7 +116,7 @@ Either Wilmington, MA or Salem, NH — they offer the same 13 services at the sa
 
 Because it is the training division. Adriana’s Academy at 39 Cross Street, Suite 206, Peabody, MA serves students only — the 100-hour course, the apprenticeship and the VIP Masterclass are taught there. No client procedures happen at that address, so never book a brow or lip appointment for Peabody.
 
-Yes. The same 13 services are published at the same prices at both, from $250 to $850, and every original price includes the perfecting session 6 to 8 weeks later. What differs between them is the phone number and the licensing regime, not the price list.
+Yes. The same 13 services are published at the same prices at both, from $250 to $850, and the price of every first-time procedure includes the 2nd session 6 to 8 weeks later. What differs between them is the phone number and the licensing regime, not the price list.
 
 Yes, and that is worth knowing. Massachusetts has no single state body art licence: each town’s Board of Health licenses separately, which is why Wilmington issues its own numbers. New Hampshire licenses at state level under RSA 314-A, and the Town of Salem licenses on top of that.
 

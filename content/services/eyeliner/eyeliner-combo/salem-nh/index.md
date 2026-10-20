@@ -1,30 +1,30 @@
 <!-- Eyeliner Combo in Salem, NH | Adriana's PMU -->
 <!-- canonical: https://adrianaspmu.com/services/eyeliner/eyeliner-combo/salem-nh/ -->
-> Eyeliner Combo in Salem, NH at Adriana's Permanent Makeup, 117A Main St. $500. Master PMU artist with 20+ years. Call (978) 223-7496 to book.
+> Eyeliner Combo in Salem, NH at Adriana's Permanent Makeup, 117A Main St. $800. Master PMU artist with 20+ years. Call (978) 223-7496 to book.
 
 # Eyeliner Combo in Salem, NH
 
-Eyeliner Combo in Salem, NH costs $500 and pairs Top and Bottom Eyeliner in one appointment, saving $100 against the $350 and $250 charged when each is booked separately. Book with Master Permanent Makeup Artist Adriana Souza Santos at 117A Main Street, on Route 97.
+Eyeliner Combo in Salem, NH costs $800 and pairs Top and Bottom Eyeliner in one appointment, saving $100 against the $350 and $250 charged when each is booked separately. Book with Master Permanent Makeup Artist Adriana Souza Santos at 117A Main Street, on Route 97.
 
-**Eyeliner Combo in Salem, NH is a $500 procedure at 117A Main Street, combining Top and Bottom Eyeliner into a single appointment instead of two separate visits.**
+**Eyeliner Combo in Salem, NH is a $800 procedure at 117A Main Street, combining Top and Bottom Eyeliner into a single appointment instead of two separate visits.**
 
 ## How Much Does Eyeliner Combo Cost in Salem, NH, and What Do You Save?
 
-Eyeliner Combo in Salem, NH costs $500 for Top and Bottom Eyeliner performed in one session, compared with $350 for Top Eyeliner and $250 for Bottom Eyeliner booked separately, a combined $600. Booking the combo instead saves $100 and eliminates a second appointment, and the price already includes the perfecting session.
+Eyeliner Combo in Salem, NH costs $800 with Adriana for Top and Bottom Eyeliner performed in one session, compared with $500 for her Top Eyeliner and $400 for her Bottom Eyeliner booked separately, a combined $900. Booking the combo instead saves $100 and eliminates a second appointment, and the price already includes the 2nd session.
 
 | Item | Detail |
 | --- | --- |
-| Eyeliner Combo price | $500, one appointment |
-| Booked separately | Top Eyeliner $350 + Bottom Eyeliner $250 = $600 |
+| Eyeliner Combo price | $800, one appointment |
+| Booked separately | Adriana: Top Eyeliner $500 + Bottom Eyeliner $400 = $900 |
 | What the combo saves | $100 and one full appointment |
 | What's included | Consultation, mapping, numbing, and both eyeliner procedures |
-| Perfecting session | Included, 6 to 8 weeks after the procedure |
-| Yearly touch-up | From $300, about 12 months later, booked and paid separately |
+| 2nd Session | Included, 6 to 8 weeks after the procedure |
+| Yearly touch-up | From $250, about 12 months later, booked and paid separately |
 | Payment plan | 4 interest-free payments or longer, via Cherry; approval not guaranteed |
 
 ## Who Should Book Eyeliner Combo in Salem, NH, and Who Should Not?
 
-Eyeliner Combo in Salem, NH suits clients near Route 97 who want both lash lines defined in a single visit and can commit to a 6- to 8-week healing period before the perfecting session. It is not appropriate for anyone pregnant, breastfeeding, under 18, or currently using isotretinoin, with no exception at either studio.
+Eyeliner Combo in Salem, NH suits clients near Route 97 who want both lash lines defined in a single visit and can commit to a 6- to 8-week healing period before the 2nd session. It is not appropriate for anyone pregnant, breastfeeding, under 18, or currently using isotretinoin, with no exception at either studio.
 
 - Good fit: Salem, Methuen, or Windham clients who want upper and lower lash-line definition in one appointment, including Portuguese and Spanish speakers
 - Not a fit: anyone pregnant, breastfeeding, or under 18, at either studio
@@ -32,14 +32,14 @@ Eyeliner Combo in Salem, NH suits clients near Route 97 who want both lash lines
 
 ## How Does an Eyeliner Combo Appointment Work at the Salem Studio?
 
-An Eyeliner Combo appointment at the Salem studio starts with a consultation and eye-shape assessment, moves into pigment along the top lash line, then the bottom lash line, all under topical numbing, and ends with written aftercare instructions. The perfecting session at the Salem studio follows 6 to 8 weeks later at no extra charge.
+An Eyeliner Combo appointment at the Salem studio starts with a consultation and eye-shape assessment, moves into pigment along the top lash line, then the bottom lash line, all under topical numbing, and ends with written aftercare instructions. The 2nd session at the Salem studio follows 6 to 8 weeks later at no extra charge.
 
 - Consultation and health-history intake
 - Eyeliner style planning for both lash lines
 - Top Eyeliner pass, with a sterile single-use needle
 - Bottom Eyeliner pass, in the same appointment
 - Written aftercare instructions to take home
-- Perfecting session, 6 to 8 weeks later, included in the $500
+- 2nd Session, 6 to 8 weeks later, included in the $800
 Full healing detail is in the [aftercare guide](../../../../aftercare/).
 
 ## Why Book Eyeliner Combo at the Salem, NH Studio Specifically?
@@ -66,7 +66,7 @@ Written by Adriana Souza Santos, responsible for this page's accuracy. Questions
 
 ## What If Eyeliner Combo Hurts, Smudges, or Fades Unevenly?
 
-Most Salem clients describe Eyeliner Combo as mild pressure along the lash line rather than sharp pain, since topical numbing is applied before pigment touches either lid. Results are smudge-proof and typically last several years; if any section heals lighter than expected, the perfecting session 6 to 8 weeks later corrects it at no extra charge.
+Most Salem clients describe Eyeliner Combo as mild pressure along the lash line rather than sharp pain, since topical numbing is applied before pigment touches either lid. Results are smudge-proof and typically last several years; if any section heals lighter than expected, the 2nd session 6 to 8 weeks later corrects it at no extra charge.
 
 Deposit terms are confirmed by phone at (978) 223-7496. Signs that need a doctor instead of the studio are listed in the [aftercare guide](../../../../aftercare/#infection-signs).
 
@@ -74,7 +74,7 @@ Deposit terms are confirmed by phone at (978) 223-7496. Signs that need a doctor
 
 Eyeliner Combo in Salem, NH is performed at 117A Main Street, Salem, NH 03079, reached at (978) 223-7496. The studio is open Monday through Saturday, 10:00 a.m. to 6:00 p.m., closed Sunday, a different address than the Wilmington, MA studio.
 
-Eyeliner Combo in Salem, NH costs $500 for both lash lines in one session. Booked separately, Top Eyeliner is $350 and Bottom Eyeliner is $250, a combined $600, so the combo saves $100 and one full appointment while still including the perfecting session 6 to 8 weeks later.
+Eyeliner Combo in Salem, NH costs $800 for both lash lines in one session. Booked separately with Adriana, Top Eyeliner is $500 and Bottom Eyeliner is $400, a combined $900, so the combo saves $100 and one full appointment while still including the 2nd session 6 to 8 weeks later.
 
 Yes. Main Street in Salem is New Hampshire Route 97 along its entire length, with its western terminus at NH-28, Broadway. The address sits in the Salem Depot area, and the nearest I-93 access is Exit 2, Pelham Road, per the Town of Salem's own transportation plan.
 
@@ -82,7 +82,7 @@ No. Salem has no passenger rail station, and MBTA Commuter Rail ends at Lowell a
 
 Yes. New Hampshire licenses body art practitioners at the state level under RSA 314-A. The Town of Salem separately licenses both the studio and the artist under Salem Chapter 433, so two levels of licensing apply here, unlike Wilmington's single town-only permit.
 
-The perfecting session is included in the $500 and happens 6 to 8 weeks after the original Eyeliner Combo appointment, correcting any unevenness while healing is still fresh. The yearly touch-up is a separate, paid visit from $300, scheduled about 12 months later to refresh pigment that has naturally faded.
+The 2nd session is included in the $800 and happens 6 to 8 weeks after the original Eyeliner Combo appointment, correcting any unevenness while healing is still fresh. The yearly touch-up is a separate, paid visit from $250, scheduled about 12 months later to refresh pigment that has naturally faded.
 
 Yes. The Salem studio offers payment plans through Cherry Technologies, an independent financing provider separate from Adriana's Permanent Makeup. Options include 4 interest-free payments or a longer plan up to 24 months with interest. Approval is not guaranteed; Cherry sets the terms, not the studio.
 
@@ -90,9 +90,9 @@ Yes. Master Permanent Makeup Artist Adriana Souza Santos consults in English, Po
 
 Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent financing provider: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
 
-The perfecting session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
+The 2nd session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
 
-Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
+Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). After that, a yearly touch-up refreshes the colour from $250, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the 2nd session, which is included in the original price and happens in the first weeks.
 
 Yes. Pregnancy, breastfeeding, being under 18, and current isotretinoin use are refused at both studios, with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need clearance from your doctor first. The full list is published in the [contraindications guide](../../../../aftercare/) before you book, not after.
 
@@ -100,7 +100,7 @@ Adriana Souza Santos has performed more than 5,000 procedures across 20+ years a
 
 ## Explore Other Eyeliner Styles and the Salem Studio
 
-Eyeliner Combo is one of four eyeliner options at the Salem studio, alongside Top Eyeliner, Bottom Eyeliner, and Smokey Eyeliner. Every technique includes the perfecting session, and each has its own page with technique-specific pricing and detail for the Salem location.
+Eyeliner Combo is one of four eyeliner options at the Salem studio, alongside Top Eyeliner, Bottom Eyeliner, and Smokey Eyeliner. Every technique includes the 2nd session for first-time clients, and each has its own page with technique-specific pricing and detail for the Salem location.
 
 - [Eyeliner Combo overview](../) — full technique guide and healing timeline
 - [Top Eyeliner in Salem](../../top-eyeliner/salem-nh/) — $350

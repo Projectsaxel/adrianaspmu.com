@@ -44,11 +44,11 @@ Natural brow density changes what a technique can do: strokes drawn over existin
 
 Aftercare is the one factor the client controls directly. The full day-by-day routine, what to avoid, and how healing normally looks are covered in the [aftercare guide](../aftercare/); skipping steps there is one of the most common reasons a healed result differs from the fresh photo taken on procedure day.
 
-Every service already includes one perfecting touch-up, scheduled 6 to 8 weeks after the first visit once healing is complete, at no extra charge. A separate [yearly touch-up](../services/touch-ups/yearly-touch-up/), from $300, refreshes color roughly 12 months later, once natural fading begins.
+Every service already includes one 2nd session, scheduled 6 to 8 weeks after the first visit once healing is complete, at no extra charge. A separate [yearly touch-up](../services/touch-ups/yearly-touch-up/), from $250, refreshes color roughly 12 months later, once natural fading begins.
 
 ## Which Technique Produced the Look I'm Looking At, and What Does It Cost?
 
-Twelve named techniques appear across this portfolio's Eyebrows, Lips, and Eyeliner categories, priced from $250 for Bottom Eyeliner to $850 for a Brows + Lips Combo. Each technique below links to its own service page with more detail on how it is performed and how long it typically lasts.
+Twelve named techniques appear across this portfolio's Eyebrows, Lips, and Eyeliner categories, priced from $300 for Bottom Eyeliner to $850 for a Brows + Lips Combo. Each technique below links to its own service page with more detail on how it is performed and how long it typically lasts.
 
 | Technique | Category | Starting price |
 | --- | --- | --- |
@@ -65,7 +65,7 @@ Twelve named techniques appear across this portfolio's Eyebrows, Lips, and Eyeli
 | [Eyeliner Combo](../services/eyeliner/eyeliner-combo/) | Eyeliner | $500 |
 | [Brows + Lips Combo](../services/combos/eyebrows-lips-combo/) | Combo | $850 |
 
-Every price above already includes the perfecting touch-up 6 to 8 weeks later. Combination Brows is quoted at consultation because the exact blend of stroke and shading varies by client.
+Every price above already includes the 2nd session 6 to 8 weeks later. Combination Brows is quoted at consultation because the exact blend of stroke and shading varies by client.
 
 ## Which Artist Performs the Work Shown Here, and Where?
 

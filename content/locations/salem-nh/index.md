@@ -4,13 +4,13 @@
 
 # Permanent Makeup in Salem, New Hampshire
 
-Nano Brows, Microblading, Powder Brows, Lip Blush, and permanent eyeliner at 117A Main Street in Salem, NH — a healed result that typically lasts 1 to 3 years, with a perfecting touch-up included 6 to 8 weeks after your first session.
+Nano Brows, Microblading, Powder Brows, Lip Blush, and permanent eyeliner at 117A Main Street in Salem, NH — a healed result that typically lasts 1 to 3 years, with a 2nd session included 6 to 8 weeks after your first session.
 
 **Permanent makeup in Salem, NH is a cosmetic tattooing service that deposits pigment in the upper layer of skin to fill in eyebrows, define a lip line, or line the eyes, performed at Adriana’s Permanent Makeup’s single Main Street storefront and regulated on two levels at once: a statewide New Hampshire body art license from the state, and a separate Town of Salem license issued under Salem Chapter 433.**
 
 ## Who Is Permanent Makeup in Salem, NH For, and How Does an Appointment Work?
 
-Permanent makeup in Salem, NH suits clients who want low-maintenance brows, a defined lip line, or smudge-proof eyeliner and can commit to a 6- to 8-week healing period before a perfecting touch-up; it is not right for anyone pregnant, under 18, on isotretinoin, or expecting same-day finished color with zero healing time.
+Permanent makeup in Salem, NH suits clients who want low-maintenance brows, a defined lip line, or smudge-proof eyeliner and can commit to a 6- to 8-week healing period before a 2nd session; it is not right for anyone pregnant, under 18, on isotretinoin, or expecting same-day finished color with zero healing time.
 
 Booking runs through four stages: consultation and shape mapping with Adriana Souza Santos, the procedure with topical numbing, healing at home, and the included touch-up once color has settled.
 
@@ -27,7 +27,7 @@ Before booking permanent makeup anywhere near Salem, NH, verify four things rega
 
 ## How Much Does Permanent Makeup Cost in Salem, NH?
 
-Permanent makeup prices at the Salem, NH studio range from $250 for bottom eyeliner to $850 for a brows-and-lips combo, with Nano Brows at $650 and Microblading, Powder Brows, and Lip Blush each at $550; the price mainly moves with technique, treated area, and whether correction of prior work is needed.
+Permanent makeup prices at the Salem, NH studio range from $300 for bottom eyeliner to $850 for a brows-and-lips combo, with Nano Brows at $650 and Microblading, Powder Brows, and Lip Blush each at $550; the price mainly moves with technique, treated area, and whether correction of prior work is needed.
 
 | Service | Price |
 | --- | --- |
@@ -35,17 +35,17 @@ Permanent makeup prices at the Salem, NH studio range from $250 for bottom eyeli
 | Microblading | $550 |
 | Powder Brows | $550 |
 | Combination Brows | Custom, at consultation |
-| Nano Combo | $600 |
+| Nano Combo | $650 |
 | Lip Blush | $550 |
 | Dark Lip Neutralization | $550 |
 | Top Eyeliner | $350 |
-| Smokey Eyeliner | $400 |
-| Bottom Eyeliner | $250 |
-| Eyeliner Combo | $500 |
+| Smokey Eyeliner | $550 |
+| Bottom Eyeliner | $300 |
+| Eyeliner Combo | $800 |
 | Brows + Lips Combo | $850 |
-| Yearly Touch-Up | From $300 |
+| Yearly Touch-Up | From $250 |
 
-The touch-up at 6 to 8 weeks is included above; the yearly touch-up, from $300, is separate. Split any service with Cherry — [see options](../../payment-plan/).
+The touch-up at 6 to 8 weeks is included above; the yearly touch-up, from $250, is separate. Split any service with Cherry — [see options](../../payment-plan/).
 
 ## What Experience Does the Artist at the Salem, NH Studio Have, and Who Wrote This Page?
 
@@ -95,7 +95,7 @@ Massachusetts has no equivalent single state license: Massachusetts General Laws
 
 Salem, NH also sits on NH Route 97, Main Street’s full length; the nearest I-93 access is Exit 2, Pelham Road, per the Town of Salem’s own transportation plan. New Hampshire has no passenger rail at all — MBTA Commuter Rail ends at Lowell and Haverhill, MA — unlike the Wilmington, MA studio’s town, served by two commuter rail stations. Salem has 30,964 residents (Census, ACS 2024) in a state with no general sales tax, a statewide fact, not a discount from this studio.
 
-The most common hesitation about booking anywhere is uncertainty over licensing and healing. The perfecting touch-up is already included in every price above, not billed later; call (978) 223-7496 with healing questions, or read the [aftercare guide](../../aftercare/).
+The most common hesitation about booking anywhere is uncertainty over licensing and healing. The 2nd session is already included in every price above, not billed later; call (978) 223-7496 with healing questions, or read the [aftercare guide](../../aftercare/).
 
 ## Permanent Makeup Services at the Salem, NH Studio
 
@@ -122,7 +122,7 @@ Adriana’s Permanent Makeup in Salem, NH sits on Main Street, also known as NH 
 
 ## Frequently Asked Questions About the Salem, NH Studio
 
-Prices at the Salem, NH studio start at $250 for Bottom Eyeliner and reach $850 for a Brows + Lips Combo. Nano Brows is $650; Microblading, Powder Brows, and Lip Blush are each $550. Services can be split into 4 interest-free payments with Cherry, an independent financing provider; approval is not guaranteed.
+Prices at the Salem, NH studio start at $300 for Bottom Eyeliner and reach $850 for a Brows + Lips Combo. Nano Brows is $650; Microblading, Powder Brows, and Lip Blush are each $550. Services can be split into 4 interest-free payments with Cherry, an independent financing provider; approval is not guaranteed.
 
 The studio is at 117A Main Street, Salem, NH 03079, on NH Route 97, the name Main Street carries along its entire length through town. The nearest I-93 access is Exit 2, Pelham Road, per the Town of Salem’s own transportation plan. Call (978) 223-7496 for directions.
 
@@ -132,7 +132,7 @@ Outside two narrow exceptions in RSA 314-A:4, New Hampshire requires every body 
 
 Yes. Massachusetts General Laws Chapter 111, Section 31 leaves body art regulation to each town’s own Board of Health, so a permit issued in one Massachusetts town does not apply in the next one. A New Hampshire OPLC license, instead, travels with the practitioner across the whole state.
 
-Every service includes the original procedure plus a perfecting touch-up 6 to 8 weeks later, once the skin has fully healed and the true color has settled, at no extra charge. A separate paid yearly touch-up, from $300, follows roughly 12 months after that, once color starts to fade.
+Every service includes the original procedure plus a 2nd session 6 to 8 weeks later, once the skin has fully healed and the true color has settled, at no extra charge. A separate paid yearly touch-up, from $250, follows roughly 12 months after that, once color starts to fade.
 
 Pregnant or breastfeeding clients, anyone under 18, and anyone actively using isotretinoin should not book at all, with no exception. Diabetes, autoimmune disease, and blood-thinning medication need written medical clearance first. See the full aftercare and contraindications guide before scheduling a consultation.
 

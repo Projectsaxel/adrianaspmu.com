@@ -1,12 +1,12 @@
 <!-- Nano Combo Brows | Wilmington MA & Salem NH -->
 <!-- canonical: https://adrianaspmu.com/services/eyebrows/nano-combo/ -->
-> Nano Combo Brows in Wilmington MA and Salem NH: ultra-fine nano strokes with powder shading, $600, lasting 1 to 3 years. Book a consultation.
+> Nano Combo Brows in Wilmington MA and Salem NH: ultra-fine nano strokes with powder shading, $650, lasting 1 to 3 years. Book a consultation.
 
 # Nano Combo Brows in Wilmington, MA & Salem, NH
 
 Nano Combo Brows combine ultra-fine nano hair strokes with soft powder shading for fuller, natural-looking brows that typically last 1 to 3 years.
 
-Starting at $600 USD
+Starting at $650 USD
 
 or **4 interest-free payments** with Cherry — [see your options](../../../payment-plan/), no impact on your credit score
 
@@ -114,13 +114,13 @@ Most clients report minimal discomfort due to the use of topical numbing product
 
 Absolutely. Nano Combo Brows are specifically designed to create realistic hair strokes combined with soft shading for a naturally enhanced appearance.
 
-Nano Combo Brows costs $600 at both studios, and that price already includes the perfecting session scheduled 6 to 8 weeks after the appointment. The consultation, the mapping and the topical numbing are part of it as well. A yearly touch-up, from $300, is a separate visit about 12 months later. Every price is published on the [price list](../../../prices/).
+Nano Combo Brows costs $650 at both studios, and that price already includes the 2nd session scheduled 6 to 8 weeks after the appointment. The consultation, the mapping and the topical numbing are part of it as well. A yearly touch-up, from $250, is a separate visit about 12 months later. Every price is published on the [price list](../../../prices/).
 
 Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent financing provider: it sets approval and rates, not the studio. See [how the payment plan works](../../../payment-plan/).
 
-The perfecting session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
+The 2nd session exists for exactly that. It is scheduled 6 to 8 weeks after the first appointment, once the skin has healed, and it is included in the original price at no extra charge. Pigment settles differently on different skin, so the second pass is part of the procedure rather than a repair you pay for.
 
-Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). After that, a yearly touch-up refreshes the colour from $300, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the perfecting session, which is included in the original price and happens in the first weeks.
+Most clients book a colour refresh every 12 to 24 months; how long the pigment itself lasts depends on the technique and your skin (each service page gives its own range). After that, a yearly touch-up refreshes the colour from $250, priced by how much pigment is left rather than at a flat rate. That is a separate visit from the 2nd session, which is included in the original price and happens in the first weeks.
 
 Yes. Pregnancy, breastfeeding, being under 18, and current isotretinoin use are refused at both studios, with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need clearance from your doctor first. The full list is published in the [contraindications guide](../../../aftercare/) before you book, not after.
 
@@ -171,7 +171,7 @@ Six things are worth verifying with any permanent makeup artist before you book:
 | --- | --- | --- |
 | Practitioner licence | Ask for the licence number and check it yourself with the state or the town, instead of taking a badge on a website at face value. | New Hampshire Body Artist licence 4283, valid through 18 July 2028 and searchable at the state’s own public lookup. Town of Salem BODA-10 and BODE-4. Body Art Practitioner licence from the Town of Wilmington Board of Health. |
 | Who trained them | Ask who certified the artist, and whether that credential can be checked with the body that issued it. | AAM Diamond Certified Trainer, the American Academy of Micropigmentation’s highest level of instructor recognition. |
-| What the price includes | Ask whether the perfecting session is included or billed later. This is where quoted prices most often stop matching the final bill. | The perfecting session, 6 to 8 weeks after the appointment, is included in every original price. The yearly touch-up, from $300, is a separate visit about 12 months later. |
+| What the price includes | Ask whether the 2nd session is included or billed later. This is where quoted prices most often stop matching the final bill. | The 2nd session, 6 to 8 weeks after the appointment, is included in the price of every first-time procedure. The yearly touch-up, from $250, is a separate visit about 12 months later. |
 | Whether the price is published at all | Ask for the price before the consultation. A studio that will not name a range before seeing you is not comparable to one that will. | All 13 services are published with their prices, from $250 to $850, on the [price list](../../../prices/). |
 | When they say no | Ask what would make them refuse to perform the procedure. An artist who never refuses is a warning sign. | Pregnancy, breastfeeding, under 18 and isotretinoin are refused at both studios with no exception. The full list is in the [contraindications guide](../../../aftercare/), published before you book rather than after. |
 | Whether the technique fits you | Ask which technique suits your skin type, and what they would recommend if this one does not. | Nano strokes plus soft shading, for density without a fully powdered look. This is settled at the consultation, in English, Portuguese or Spanish. |

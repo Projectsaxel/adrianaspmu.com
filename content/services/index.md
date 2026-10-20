@@ -100,7 +100,7 @@ $850
 
 Yearly Touch-Up refreshes faded permanent makeup pigment on brows, lips, or eyeliner — typically scheduled about 12 months after your original procedure.
 
-from $300
+from $250
 
 ## How Do the Five Permanent Makeup Categories Compare?
 
@@ -111,8 +111,8 @@ Adriana’s groups thirteen services into five families — eyebrows, lips, eyel
 | [Eyebrows](eyebrows/) | $550–$650, custom for Combination Brows | Sparse or uneven brows, across five techniques from fine strokes to soft shading |
 | [Lips](lips/) | $550 | Faded lip color, or dark, uneven pigment needing neutralization |
 | [Eyeliner](eyeliner/) | $250–$500 | Smudge-proof definition: top lid, bottom lid, smokey, or both combined |
-| [Combos](combos/) | $850 | Brows and lips in one visit, one healing period, one perfecting session |
-| [Touch-Ups](touch-ups/) | from $300 | Refreshing pigment that has genuinely faded, about a year after the original visit |
+| [Combos](combos/) | $850 | Brows and lips in one visit, one healing period, one 2nd session |
+| [Touch-Ups](touch-ups/) | from $250 | Refreshing pigment that has genuinely faded, about a year after the original visit |
 
 ## How Do I Choose the Right Permanent Makeup Service?
 
@@ -122,7 +122,7 @@ Clients who fill in their brows daily usually start with [eyebrows](eyebrows/). 
 
 ## What Does Every Permanent Makeup Price Include?
 
-Every posted price includes the consultation, design and mapping, topical numbing, the procedure itself, and a perfecting session 6 to 8 weeks later at no extra cost. It excludes the Yearly Touch-Up, a separate paid visit about 12 months out that starts at $300 and is priced by how much pigment remains.
+Every posted price includes the consultation, design and mapping, topical numbing, the procedure itself, and a 2nd session 6 to 8 weeks later at no extra cost. It excludes the Yearly Touch-Up, a separate paid visit about 12 months out that starts at $250 and is priced by how much pigment remains.
 
 ## Who Should Not Book Permanent Makeup?
 
@@ -134,23 +134,23 @@ These restrictions apply the same way across every category, since all five use 
 
 These are the questions asked most often about the services above. The [full price list with combo packages and payment plans](../prices/) covers cost in detail, and the [complete permanent makeup FAQ](../faq/) answers pain, healing, duration and aftercare.
 
-Prices range from $250 for Bottom Eyeliner to $850 for the Brows + Lips Combo. Most single-area services fall between $350 and $650. Combination Brows is quoted at consultation, and the Yearly Touch-Up starts at $300.
+Prices range from $300 for Bottom Eyeliner to $850 for the Brows + Lips Combo. Most single-area services fall between $350 and $650. Combination Brows is quoted at consultation, and the Yearly Touch-Up starts at $250.
 
 Most first-time clients start with a single category, eyebrows, lips, or eyeliner, rather than a combo, so they can judge the healed result before adding a second area. A consultation confirms which family matches your skin and goals.
 
-Yes, through the Brows + Lips Combo, priced at $850 for both areas in a single visit with one healing period and one perfecting session. Eyeliner is not currently bundled into that combo and is booked separately as its own service.
+Yes, through the Brows + Lips Combo, priced at $850 for both areas in a single visit with one healing period and one 2nd session. Eyeliner is not currently bundled into that combo and is booked separately as its own service.
 
-Yes. Every category’s posted price includes a perfecting session 6 to 8 weeks after the first appointment, at no extra charge, to correct any patchy healing. The Yearly Touch-Up, about 12 months later, is a separate paid visit starting at $300.
+Yes. Every category’s posted price includes a 2nd session 6 to 8 weeks after the first appointment, at no extra charge, to correct any patchy healing. The Yearly Touch-Up, about 12 months later, is a separate paid visit starting at $250.
 
 No. Both the Wilmington, MA and Salem, NH studios charge the same prices for every service, and both are open Monday through Saturday, 10:00 a.m. to 6:00 p.m., closed Sunday. Choose whichever studio is closer to you.
 
 Yes. Every service can be split into 4 interest-free payments, or a longer plan of up to 24 months with interest, through Cherry Technologies, an independent lending company. Approval is not guaranteed and depends on Cherry’s own criteria, not the studio’s.
 
-Thirteen services are published with their prices, from $250 for bottom eyeliner to $850 for the brows and lips combo. Every original price already includes the perfecting session 6 to 8 weeks later. The full table is on the price list, and combination brows is the one service quoted at the consultation.
+Thirteen services are published with their prices, from $300 for bottom eyeliner to $850 for the brows and lips combo. The price of every first-time procedure already includes the 2nd session 6 to 8 weeks later. The full table is on the price list, and combination brows is the one service quoted at the consultation.
 
 Yes. Cherry offers 4 interest-free payments, or up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent financing provider: it sets approval and rates, not the studio.
 
-The perfecting session covers it. Scheduled 6 to 8 weeks after the first appointment, once the skin has healed, it is included in the original price at no extra charge. Pigment settles differently on different skin, so a second pass is part of the procedure rather than a paid repair.
+The 2nd session covers it. Scheduled 6 to 8 weeks after the first appointment, once the skin has healed, it is included in the original price at no extra charge. Pigment settles differently on different skin, so a second pass is part of the procedure rather than a paid repair.
 
 Pregnancy, breastfeeding, being under 18 and current isotretinoin use are refused at both studios with no exception. Blood thinners, autoimmune conditions and a history of keloid scarring need clearance from a doctor first. The full list is published in the contraindications guide before you book.
 

@@ -16,7 +16,7 @@ Approval and rates subject to eligibility. Checking your options will not affect
 
 Split your service into 4 equal payments, one every two weeks over 6 weeks, with
  **no interest**. Available for purchases from $35 to $3,000 — which covers
- every service on our menu, from $250 eyeliner to $850 combination work.
+ every service on our menu, from $250 touch-ups to $1,380 combo work.
 
 ### Or spread it further
 
@@ -106,6 +106,6 @@ Five steps, from checking your options to the last installment. Checking does no
 - **Check your options** at Cherry. Takes about a minute and uses a soft credit check, so your score is untouched.
 - **See what you qualify for**: 4 interest-free payments, or a longer plan of up to 24 months with interest. Cherry sets the terms and the approval, not the studio.
 - **Book the appointment** at Wilmington or Salem for the service you chose, from $250 to $850.
-- **Have the procedure**, perfecting session included in the original price, 6 to 8 weeks later at no extra charge.
+- **Have the procedure**, 2nd session included in the original price, 6 to 8 weeks later at no extra charge.
 - **Pay Cherry on your schedule** over the plan you picked, rather than the studio.
 Approval and rates are subject to eligibility. Cherry Technologies is a financial technology company, not a bank or a lender, and is independent of Adriana’s Permanent Makeup.
