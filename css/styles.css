@@ -7109,3 +7109,9 @@ tbody tr:last-child > td { border-bottom: 0; }
   }
   .depo { scroll-snap-align: center; }
 }
+
+/* Galeria "The Work" da home com antes/depois (21/10/2026, pedido do Pablo):
+   o .ag-tile vira .ba-frame; as duas fotos ficam absolutas e a moldura 4:5
+   da a altura. O .ag-tile img (height:auto) era mais especifico que .ba-img. */
+.ag-tile.ba-frame .ba-img { position: absolute; inset: 0; height: 100%; }
+.roll-after .ba-pausa { margin: 0 0.75rem 1rem; }
