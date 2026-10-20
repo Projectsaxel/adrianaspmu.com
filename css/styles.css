@@ -7019,3 +7019,55 @@ tbody tr:last-child > td { border-bottom: 0; }
 /* tabela de precos da home por artista (Livy / Adriana) — 19/10/2026 */
 .table-precos th:nth-child(n+2),
 .table-precos td:nth-child(n+2) { text-align: right; white-space: nowrap; }
+
+/* ==========================================================================
+   NOSSOS ESTUDIOS (home) — 19/10/2026, no lugar onde ficava a tabela
+   Dois cards espelhados, cada um com fora + dentro lado a lado (4:5, mesma
+   altura) e o texto centralizado embaixo. Moldura RETANGULAR com canto
+   suave, nao arco: nas fachadas o letreiro fica no alto da foto e o arco
+   comeria os cantos dele.
+   ========================================================================== */
+.studios { background: var(--surface); }
+.studios-intro { max-width: 46rem; margin-inline: auto; text-align: center; border-left: 0; padding-left: 0; }
+.studios-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  margin-top: 2.75rem;
+}
+.studio {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background: var(--surface-alt);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: clamp(0.75rem, 1.6vw, 1.1rem);
+}
+.studio-fotos { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(0.5rem, 1.2vw, 0.85rem); }
+.studio-foto { position: relative; margin: 0; overflow: hidden; border-radius: 12px; aspect-ratio: 4 / 5; background: var(--blush); }
+.studio-foto img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s var(--ease); }
+.studio:hover .studio-foto img { transform: scale(1.03); }
+.studio-foto figcaption {
+  position: absolute;
+  left: 50%;
+  bottom: 0.75rem;
+  transform: translateX(-50%);
+  padding: 0.28rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(251, 246, 243, 0.92);
+  color: var(--ink);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.studio-texto { text-align: center; padding: clamp(1.25rem, 2.6vw, 2rem) 0.75rem clamp(0.75rem, 1.6vw, 1.25rem); display: flex; flex-direction: column; align-items: center; }
+.studio-estado { margin: 0 0 0.5rem; font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brass-text); }
+.studio-texto h3 { margin: 0 0 0.6rem; font-family: var(--font-display); font-weight: 400; font-size: clamp(1.75rem, 2.6vw, 2.25rem); line-height: 1.1; color: var(--ink); }
+.studio-endereco { margin: 0 0 0.9rem; font-size: 0.9375rem; color: var(--ink-muted); line-height: 1.5; }
+.studio-desc { margin: 0 auto 1.25rem; max-width: 30rem; font-size: 0.9375rem; line-height: 1.6; }
+.studio-link { margin-top: auto; font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; padding-bottom: 0.2rem; border-bottom: 1px solid currentColor; }
+@media (max-width: 799.98px) {
+  .studios-grid { grid-template-columns: minmax(0, 1fr); max-width: 34rem; margin-inline: auto; }
+}
+@media (prefers-reduced-motion: reduce) { .studio-foto img { transition: none; } }
