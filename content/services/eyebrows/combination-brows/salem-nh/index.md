@@ -1,10 +1,10 @@
 <!-- Combo Brows in Salem, NH | Adriana's PMU -->
 <!-- canonical: https://adrianaspmu.com/services/eyebrows/combination-brows/salem-nh/ -->
-> Combo Brows in Salem, NH at Adriana's Permanent Makeup, 117A Main St. Custom pricing. Master PMU artist with 20+ years. Call (978) 223-7496 to book.
+> Combo Brows in Salem, NH at Adriana's Permanent Makeup, 117A Main St. From $550. Master PMU artist with 20+ years. Call (978) 223-7496 to book.
 
 # Combo Brows in Salem, NH
 
-Combo Brows in Salem, NH is quoted after a consultation and includes the 2nd session, blending hair-like strokes with soft shading that last 1 to 3 years. Book with Adriana Souza Santos at 117A Main Street, on Route 97.
+Combo Brows in Salem, NH starts at $550 and includes the 2nd session, blending hair-like strokes with soft shading that last 1 to 3 years. Book with Adriana Souza Santos at 117A Main Street, on Route 97.
 
 **Combo Brows in Salem, NH is a custom-quoted procedure at 117A Main Street.**
 

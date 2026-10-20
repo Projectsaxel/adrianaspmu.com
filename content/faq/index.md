@@ -28,7 +28,7 @@ Prices range from $300 for Bottom Eyeliner to $850 for the Brows + Lips Combo, i
 
 ### How Much Does Each Service Cost?
 
-Prices are identical at both studios, from $300 for Bottom Eyeliner to $850 for the Brows + Lips Combo. Combo Brows is quoted at consultation. The table below lists every service and its price.
+Prices are identical at both studios, from $300 for Bottom Eyeliner to $850 for the Brows + Lips Combo. Combo Brows starts at $550. The table below lists every service and its price.
 
 | Service | Starting price |
 | --- | --- |

@@ -134,7 +134,7 @@ These restrictions apply the same way across every category, since all five use 
 
 These are the questions asked most often about the services above. The [full price list with combo packages and payment plans](../prices/) covers cost in detail, and the [complete permanent makeup FAQ](../faq/) answers pain, healing, duration and aftercare.
 
-Prices range from $300 for Bottom Eyeliner to $850 for the Brows + Lips Combo. Most single-area services fall between $350 and $650. Combo Brows is quoted at consultation, and the Yearly Touch-Up starts at $250.
+Prices range from $300 for Bottom Eyeliner to $850 for the Brows + Lips Combo. Most single-area services fall between $350 and $650. Combo Brows starts at $550, and the Yearly Touch-Up starts at $250.
 
 Most first-time clients start with a single category, eyebrows, lips, or eyeliner, rather than a combo, so they can judge the healed result before adding a second area. A consultation confirms which family matches your skin and goals.
 

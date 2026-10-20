@@ -65,7 +65,7 @@ Twelve named techniques appear across this portfolio's Eyebrows, Lips, and Eyeli
 | [Eyeliner Combo](../services/eyeliner/eyeliner-combo/) | Eyeliner | $500 |
 | [Brows + Lips Combo](../services/combos/eyebrows-lips-combo/) | Combo | $850 |
 
-Every price above already includes the 2nd session 6 to 8 weeks later. Combo Brows is quoted at consultation because the exact blend of stroke and shading varies by client.
+Every price above already includes the 2nd session 6 to 8 weeks later. Combo Brows starts at $550 because the exact blend of stroke and shading varies by client.
 
 ## Which Artist Performs the Work Shown Here, and Where?
 

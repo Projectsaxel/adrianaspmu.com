@@ -1,6 +1,6 @@
 <!-- Combo Brows | Wilmington MA & Salem NH -->
 <!-- canonical: https://adrianaspmu.com/services/eyebrows/combination-brows/ -->
-> Combo Brows in Wilmington MA and Salem NH: hair-like strokes plus soft shading, lasting 1 to 3 years. Custom pricing after consultation.
+> Combo Brows in Wilmington MA and Salem NH: hair-like strokes plus soft shading, lasting 1 to 3 years. From $550.
 
 # Combo Brows in Wilmington, MA & Salem, NH
 
