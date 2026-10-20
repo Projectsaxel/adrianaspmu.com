@@ -7071,3 +7071,41 @@ tbody tr:last-child > td { border-bottom: 0; }
   .studios-grid { grid-template-columns: minmax(0, 1fr); max-width: 34rem; margin-inline: auto; }
 }
 @media (prefers-reduced-motion: reduce) { .studio-foto img { transition: none; } }
+
+/* ==========================================================================
+   DEPOIMENTOS EM VIDEO (Academy) — 21/10/2026
+   3 Shorts verticais (9:16) lado a lado, mesmo tamanho. Cada card e um
+   subgrid de 4 faixas (video, frase, nome, info): as frases tem tamanhos
+   diferentes e o nome cai na mesma altura nos 3. O video so carrega no clique
+   (mesmo facade do .video-embed). No celular vira faixa deslizante com snap,
+   para nao empilhar 3 videos altos.
+   ========================================================================== */
+.depo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 17rem));
+  grid-auto-rows: auto;
+  justify-content: center;
+  column-gap: clamp(1.25rem, 3vw, 2.5rem);
+  margin: 2.5rem auto 0;
+}
+.depo { margin: 0; display: grid; grid-template-rows: subgrid; grid-row: span 4; row-gap: 0; text-align: center; }
+.depo-video { aspect-ratio: 9 / 16; border-radius: 18px; }
+.depo-video .video-play-icon { width: 3.75rem; height: 3.75rem; }
+.depo figcaption { display: contents; }
+.depo-quote { margin: 1.1rem 0 0.75rem; font-family: var(--font-display); font-size: 1.125rem; line-height: 1.4; color: var(--ink); }
+.depo-nome { margin: 0; font-weight: 600; font-size: 0.9375rem; color: var(--ink); align-self: end; }
+.depo-info { margin: 0.2rem 0 0; font-size: 0.8125rem; color: var(--ink-muted); }
+.depo-mais { margin: 3rem 0 0; text-align: center; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--brass-text); }
+@media (max-width: 799.98px) {
+  .depo-grid {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 74%;
+    justify-content: start;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 0.75rem;
+    -webkit-overflow-scrolling: touch;
+  }
+  .depo { scroll-snap-align: center; }
+}
