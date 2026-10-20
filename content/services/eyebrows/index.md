@@ -80,7 +80,7 @@ Microblading uses a handheld blade to cut fine strokes by hand. Nano Brows uses 
 
 Choose strokes, like Microblading or Nano Brows, for a hair-like result on normal to dry skin. Choose Powder Brows if your skin is oily, since oil blurs fine strokes but holds soft shading well, or if you already fill your brows in daily.
 
-Combo Brows is priced individually at consultation, since the balance of strokes to shading varies by client, rather than posted as a flat fee. Nano Combo, the machine-driven equivalent of the same idea, has a posted price of $650 instead.
+Combo Brows starts at $550, confirmed at consultation, since the balance of strokes to shading varies by client, rather than posted as a flat fee. Nano Combo, the machine-driven equivalent of the same idea, has a posted price of $650 instead.
 
 Nano Brows, Powder Brows, Combo Brows, and Nano Combo typically last 1 to 3 years. Microblading typically lasts 12 to 24 months, the shortest of the five, since handheld strokes tend to soften faster over time than machine-placed pigment does.
 

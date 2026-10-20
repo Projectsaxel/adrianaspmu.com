@@ -1,10 +1,10 @@
 <!-- Combo Brows in Wilmington, MA | Adriana's PMU -->
 <!-- canonical: https://adrianaspmu.com/services/eyebrows/combination-brows/wilmington-ma/ -->
-> Combo Brows in Wilmington, MA at 211 Lowell St. Custom pricing after consultation. Master PMU artist, 20+ years. Call (781) 853-8063.
+> Combo Brows in Wilmington, MA at 211 Lowell St. From $550. Master PMU artist, 20+ years. Call (781) 853-8063.
 
 # Combo Brows in Wilmington, MA
 
-Combo Brows in Wilmington, MA is quoted after a consultation and includes the 2nd session, blending hair-like strokes with soft shading that last 1 to 3 years. Book with Adriana Souza Santos at 211 Lowell Street, Suite F, on Route 129.
+Combo Brows in Wilmington, MA starts at $550 and includes the 2nd session, blending hair-like strokes with soft shading that last 1 to 3 years. Book with Adriana Souza Santos at 211 Lowell Street, Suite F, on Route 129.
 
 **Combo Brows in Wilmington, MA is a custom-quoted procedure at 211 Lowell Street, Suite F.**
 
