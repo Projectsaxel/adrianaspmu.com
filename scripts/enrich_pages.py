@@ -59,7 +59,7 @@ FRESHA_GENERIC = "https://www.fresha.com/book-now/adrianas-permanent-makeup-zeas
 # Meta descriptions reescritas (auditoria 16/08: fracas, duplicadas ou truncadas).
 # Chave: caminho relativo da pagina. Valor: 140-160 chars com servico+cidade+CTA.
 DESCRIPTIONS = {
-    "services/eyebrows/index.html": "Microblading, nano brows, powder and combination brows in Wilmington MA and Salem NH. Compare techniques, see prices, and book a consultation.",
+    "services/eyebrows/index.html": "Microblading, nano brows, powder and combo brows in Wilmington MA and Salem NH. Compare techniques, see prices, and book a consultation.",
     "services/lips/index.html": "Lip blush and dark lip neutralization in Wilmington MA and Salem NH. Natural color and defined contour, with the 2nd session included.",
     "services/eyeliner/index.html": "Permanent eyeliner in Wilmington MA and Salem NH: top, bottom, smokey effect and combo. Smudge-proof definition that survives the gym, from $250.",
     "services/combos/index.html": "Permanent makeup combo packages in Wilmington MA and Salem NH. Pair brows, lips and eyeliner in one plan and save, 2nd session included.",
@@ -258,7 +258,7 @@ BROW_SERVICES = [
     ("nano-brows", "Nano Brows", "Machine-drawn nano strokes, great for most skin types"),
     ("nano-combo", "Nano Combo", "Nano strokes plus soft shading for extra density"),
     ("powder-brows", "Ombr\u00e9 Powder Brows", "Soft powdered finish, ideal for oily skin"),
-    ("combination-brows", "Combination Brows", "Strokes at the front, shading through the body"),
+    ("combination-brows", "Combo Brows", "Strokes at the front, shading through the body"),
 ]
 EYELINER_SERVICES = [
     ("top-eyeliner", "Top Eyeliner", "Classic or winged definition on the upper lash line"),
@@ -512,7 +512,7 @@ IMG_TEXT = {
     "nano-brows.webp": (None, "Nano Brows: hair-like strokes made with an ultra-fine machine needle"),
     "microblading.webp": (None, "Microblading: hair-like strokes made with a handheld blade"),
     "powder-brows.webp": (None, "Powder Brows: soft shaded finish, like brows filled with powder"),
-    "combination-brows.webp": (None, "Combination Brows: hair-like strokes blended with soft shading"),
+    "combination-brows.webp": (None, "Combo Brows: hair-like strokes blended with soft shading"),
     "nano-combo.webp": (None, "Nano Combo Brows: nano strokes layered with powder shading"),
     "lip-blush.webp": (None, "Lip Blush: a soft tint that enhances natural lip colour and shape"),
     "dark-lip-neutralization.webp": (None, "Dark Lip Neutralization: colour correction that evens out deeper lip tones"),
@@ -1353,7 +1353,7 @@ FAQ_BY_PAGE = {
         ("How much do the services cost?",
          "Thirteen services are published with their prices, from $250 for bottom eyeliner to "
          "$850 for the brows and lips combo. The price of every first-time procedure already includes the perfecting "
-         "session 6 to 8 weeks later. The full table is on the price list, and combination brows "
+         "session 6 to 8 weeks later. The full table is on the price list, and combo brows "
          "is the one service quoted at the consultation."),
         ("Can I pay in installments?",
          "Yes. Cherry offers 4 interest-free payments, or up to 24 months with interest. Checking "
@@ -1439,7 +1439,7 @@ FAQ_BY_PAGE = {
          "interest. Checking your options uses a soft credit check and takes about a minute, so "
          "it does not affect your credit score. Cherry sets approval and rates independently of "
          "the studio."),
-        ("Why is combination brows the only service without a price?",
+        ("Why is combo brows the only service without a price?",
          "Because the mix of strokes and shading changes from face to face, and a single number "
          "would be wrong for most people. It is quoted at the consultation instead. Every other "
          "service is published openly, which is the opposite of the usual practice of hiding all "

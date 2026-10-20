@@ -47,21 +47,21 @@ Before booking permanent makeup anywhere, a client should verify six things: the
 
 ## How Much Does Permanent Makeup Cost in Wilmington, MA?
 
-Permanent makeup at the Wilmington, MA studio starts at $300 for bottom eyeliner and runs to $850 for a combined brows-and-lips package, with the 2nd session already included in every price. Combination Brows is quoted at consultation, and Cherry offers 4 interest-free payments or plans up to 24 months.
+Permanent makeup at the Wilmington, MA studio starts at $300 for bottom eyeliner and runs to $850 for a combined brows-and-lips package, with the 2nd session already included in every price. Combo Brows is quoted at consultation, and Cherry offers 4 interest-free payments or plans up to 24 months.
 
 | Service | Starting price | What changes the price |
 | --- | --- | --- |
 | Nano Brows | $650 | — |
 | Microblading | $550 | — |
 | Powder Brows | $550 | — |
-| Combination Brows | Custom quote | Set at consultation, by technique mix |
+| Combo Brows | Custom quote | Set at consultation, by technique mix |
 | Nano Combo | $650 | — |
 | Lip Blush | $550 | Darker natural lip tone may add a session |
 | Dark Lip Neutralization | $550 | Depth of pigment being neutralized |
 | Top Eyeliner | $350 | — |
-| Smokey Eyeliner | $550 | — |
+| Smokey Eyeliner | $400 | — |
 | Bottom Eyeliner | $300 | — |
-| Eyeliner Combo (top + bottom) | $800 | — |
+| Eyeliner Combo (top + bottom) | $550 | — |
 | Brows + Lips Combo | $850 | — |
 | Yearly Touch-Up | From $250 | By how much color has faded |
 
@@ -127,7 +127,7 @@ Wilmington's Board of Health requires both an establishment permit and an indivi
 
 The Wilmington, MA studio is open Monday through Saturday, 10:00 a.m. to 6:00 p.m., and closed on Sunday. These are the studio's own published hours for this location. Call (781) 853-8063 to confirm availability for a specific date before driving over from a neighboring town.
 
-Prices at the Wilmington studio start at $300 for bottom eyeliner and range up to $850 for a brows-and-lips package. Nano Brows is $650; Microblading, Powder Brows, and Lip Blush are each $550. Combination Brows is quoted at consultation, since the technique blend varies by client.
+Prices at the Wilmington studio start at $300 for bottom eyeliner and range up to $850 for a brows-and-lips package. Nano Brows is $650; Microblading, Powder Brows, and Lip Blush are each $550. Combo Brows is quoted at consultation, since the technique blend varies by client.
 
 Yes. The Wilmington studio offers payment plans through Cherry Technologies, an independent financing provider separate from Adriana's Permanent Makeup. Options include 4 interest-free payments or a longer plan up to 24 months with interest. Approval is not guaranteed; Cherry sets the terms, not the studio.
 

@@ -157,7 +157,7 @@ Machine-drawn nano strokes, great for most skin types
 
 Soft powdered finish, ideal for oily skin
 
-### [Combination Brows](../combination-brows/)
+### [Combo Brows](../combination-brows/)
 
 Strokes at the front, shading through the body
 

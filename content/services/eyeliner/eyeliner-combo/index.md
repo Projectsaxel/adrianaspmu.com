@@ -6,7 +6,7 @@
 
 Eyeliner Combo combines Top and Bottom Eyeliner in one session for complete upper and lower lash line definition that lasts for years.
 
-Starting at $800 USD
+Starting at $550 USD
 
 or **4 interest-free payments** with Cherry — [see your options](../../../payment-plan/), no impact on your credit score
 
@@ -113,7 +113,7 @@ Initial healing usually occurs within one to two weeks, while complete healing m
 
 Results often last several years, depending on skin type, lifestyle, and maintenance.
 
-Eyeliner Combo costs $800 at both studios, and that price already includes the 2nd session scheduled 6 to 8 weeks after the appointment. The consultation, the mapping and the topical numbing are part of it as well. A yearly touch-up, from $250, is a separate visit about 12 months later. Every price is published on the [price list](../../../prices/).
+Eyeliner Combo starts at $550 at both studios, and that price already includes the 2nd session scheduled 6 to 8 weeks after the appointment. The consultation, the mapping and the topical numbing are part of it as well. A yearly touch-up, from $250, is a separate visit about 12 months later. Every price is published on the [price list](../../../prices/).
 
 Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent financing provider: it sets approval and rates, not the studio. See [how the payment plan works](../../../payment-plan/).
 
@@ -169,4 +169,4 @@ Six things are worth verifying with any permanent makeup artist before you book:
 | What the price includes | Ask whether the 2nd session is included or billed later. This is where quoted prices most often stop matching the final bill. | The 2nd session, 6 to 8 weeks after the appointment, is included in the price of every first-time procedure. The yearly touch-up, from $250, is a separate visit about 12 months later. |
 | Whether the price is published at all | Ask for the price before the consultation. A studio that will not name a range before seeing you is not comparable to one that will. | All 13 services are published with their prices, from $250 to $850, on the [price list](../../../prices/). |
 | When they say no | Ask what would make them refuse to perform the procedure. An artist who never refuses is a warning sign. | Pregnancy, breastfeeding, under 18 and isotretinoin are refused at both studios with no exception. The full list is in the [contraindications guide](../../../aftercare/), published before you book rather than after. |
-| Whether the technique fits you | Ask which technique suits your skin type, and what they would recommend if this one does not. | Top and bottom in the same appointment, at $800 instead of $350 plus $250 separately. This is settled at the consultation, in English, Portuguese or Spanish. |
+| Whether the technique fits you | Ask which technique suits your skin type, and what they would recommend if this one does not. | Top and bottom in the same appointment, from $550 instead of $350 plus $300 separately. This is settled at the consultation, in English, Portuguese or Spanish. |

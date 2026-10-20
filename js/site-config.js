@@ -129,7 +129,7 @@ const HERO_SERVICES = [
 
 const ALL_SERVICES = [
   ...HERO_SERVICES,
-  { slug: "combination-brows", category: "eyebrows", name: "Combination Brows", price: null, desc: "Hair strokes plus soft shading in one session." },
+  { slug: "combination-brows", category: "eyebrows", name: "Combo Brows", price: null, desc: "Hair strokes plus soft shading in one session." },
   { slug: "nano-combo", category: "eyebrows", name: "Nano Combo Brows", price: 600, desc: "Nano strokes with soft shading combined." },
   { slug: "dark-lip-neutralization", category: "lips", name: "Dark Lip Neutralization", price: 550, desc: "Color correction for hyperpigmented or dark lips." },
   { slug: "top-eyeliner", category: "eyeliner", name: "Top Eyeliner", price: 350, desc: "Classic definition and cat eye styles." },

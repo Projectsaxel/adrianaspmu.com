@@ -4,11 +4,11 @@
 
 # Permanent Eyeliner
 
-Adriana’s Permanent Makeup offers four permanent eyeliner options in Wilmington, MA and Salem, NH, priced from $300 to $800. Top and Bottom Eyeliner define a single lash line, Smokey Eyeliner adds soft shading above the top line, and the Eyeliner Combo pairs top and bottom in one visit and one healing period.
+Adriana’s Permanent Makeup offers four permanent eyeliner options in Wilmington, MA and Salem, NH, priced from $300 to $550. Top and Bottom Eyeliner define a single lash line, Smokey Eyeliner adds soft shading above the top line, and the Eyeliner Combo pairs top and bottom in one visit and one healing period.
 
 ## Which Permanent Eyeliner Options Are Available?
 
-Adriana’s offers four permanent eyeliner treatments, priced from $300 to $800. They differ by which lash line is treated and how much shading is added, from a subtle lash enhancement to a full smokey effect. All are performed at the Wilmington, MA and Salem, NH studios.
+Adriana’s offers four permanent eyeliner treatments, priced from $300 to $550. They differ by which lash line is treated and how much shading is added, from a subtle lash enhancement to a full smokey effect. All are performed at the Wilmington, MA and Salem, NH studios.
 
 ### [Top Eyeliner](top-eyeliner/)
 
@@ -40,20 +40,20 @@ Adriana Souza Santos has performed more than 5,000 procedures across 20+ years a
 
 ## How Do the Four Eyeliner Options Compare?
 
-Permanent eyeliner at Adriana’s ranges from $300 for the lower lash line to $800 for top and bottom together. Only Smokey Eyeliner adds shading; the rest simply define a line.
+Permanent eyeliner at Adriana’s ranges from $300 for the lower lash line to $550 for top and bottom together. Only Smokey Eyeliner adds shading; the rest simply define a line.
 
 | Option | Price | Area treated | Look | Best for |
 | --- | --- | --- | --- | --- |
 | [Top Eyeliner](top-eyeliner/) | $350 | Upper lash line | Lash enhancement to a defined line with a tail | First-time clients |
 | [Bottom Eyeliner](bottom-eyeliner/) | $300 | Lower lash line | Deliberately fine, so it doesn't close the eye | Adding to a top liner |
-| [Smokey Eyeliner](smokey-eyeliner/) | $550 | Upper lash line | Defined line plus soft shading blended upward | Bolder, less reversible looks |
-| [Eyeliner Combo](eyeliner-combo/) | $800 | Upper and lower | Top and bottom in one session | Both lines, one healing period |
+| [Smokey Eyeliner](smokey-eyeliner/) | $400 | Upper lash line | Defined line plus soft shading blended upward | Bolder, less reversible looks |
+| [Eyeliner Combo](eyeliner-combo/) | $550 | Upper and lower | Top and bottom in one session | Both lines, one healing period |
 
-With Adriana, Top ($500) plus Bottom ($400) total $900 booked separately; her Combo bundles both for $800, saving $100 and one healing period. Smokey, at $550, treats only the upper lid and is not a substitute for the Combo.
+Top ($350) plus Bottom ($300) total $650 booked separately; the Combo bundles both from $550, saving $100 and one healing period. Smokey, at $400, treats only the upper lid and is not a substitute for the Combo.
 
 ## Top, Bottom, Smokey, or the Combo: How Do You Decide?
 
-Most first-time clients start with Top Eyeliner, gauging how they feel before adding more; Bottom is almost always added to a top line rather than booked alone. Smokey is the bolder, less reversible option; anyone unsure should start with Top and add shading later. Wanting both lines makes the Combo, done by Adriana, the better value at $800 versus $900 for her two lines booked separately.
+Most first-time clients start with Top Eyeliner, gauging how they feel before adding more; Bottom is almost always added to a top line rather than booked alone. Smokey is the bolder, less reversible option; anyone unsure should start with Top and add shading later. Wanting both lines makes the Combo the better value, from $550 versus $650 for the two lines booked separately.
 
 ## How Does an Eyeliner Appointment Work, and What Should I Know About Eye Safety?
 
@@ -77,7 +77,7 @@ Bottom Eyeliner is the most subtle and smallest area on the entire menu, reflect
 
 Smokey Eyeliner is less reversible than a simple line because it adds soft shading blended upward, a bolder aesthetic commitment. Clients who are unsure should start with Top Eyeliner instead and add shading later once they know how they feel about the line alone.
 
-With Adriana, Top and Bottom Eyeliner booked separately cost $500 plus $400, or $900 total, across two separate healing periods. The Eyeliner Combo bundles both lash lines into a single $800 appointment, saving $100 and cutting healing down to one period instead.
+Top and Bottom Eyeliner booked separately cost $350 plus $300, or $650 total, across two separate healing periods. The Eyeliner Combo bundles both lash lines into a single appointment from $550, saving $100 and cutting healing down to one period instead.
 
 Yes. Contact lenses come out before any eyeliner appointment, and your artist tells you how long to keep them out afterward, since that depends on your eyes and the technique used. Red, swollen, or watery eyes should be checked by an eye doctor before reinserting lenses.
 

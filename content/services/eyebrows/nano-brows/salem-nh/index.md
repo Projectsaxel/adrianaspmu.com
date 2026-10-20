@@ -74,9 +74,9 @@ Nano Brows in Salem, NH is performed at 117A Main Street, Salem, NH 03079, reach
 
 Nano Brows in Salem, NH costs $650, which includes the stroke-mapping consultation and the 2nd session 6 to 8 weeks later. A yearly touch-up, from $250, follows roughly 12 months after that; Cherry offers 4 interest-free payments or a longer plan, approval not guaranteed.
 
-Not on skin that takes strokes well. Nano Brows uses an ultra-fine needle at a shallow depth, so individual strokes usually stay crisp through healing on normal to dry skin. On oilier skin, strokes can soften toward a shaded look; clients who want a guaranteed crisp result on oily skin often choose Powder Brows or Combination Brows instead.
+Not on skin that takes strokes well. Nano Brows uses an ultra-fine needle at a shallow depth, so individual strokes usually stay crisp through healing on normal to dry skin. On oilier skin, strokes can soften toward a shaded look; clients who want a guaranteed crisp result on oily skin often choose Powder Brows or Combo Brows instead.
 
-It can be, but be honest about the tradeoff first: oil moving through the skin during healing can soften individual strokes toward a shaded look, while Powder Brows’ shading is built to handle that oil better. Clients with oilier skin who still choose Nano Brows here usually accept softer, less defined strokes, or add shading with Combination Brows.
+It can be, but be honest about the tradeoff first: oil moving through the skin during healing can soften individual strokes toward a shaded look, while Powder Brows’ shading is built to handle that oil better. Clients with oilier skin who still choose Nano Brows here usually accept softer, less defined strokes, or add shading with Combo Brows.
 
 Nano Brows is not the best match for clients with very oily skin who want a guaranteed crisp, hair-like result, or for anyone who actually wants the soft, filled-in makeup look of Powder Brows. It is also not appropriate for anyone pregnant, breastfeeding, under 18, or using isotretinoin, no exception at either studio.
 
@@ -103,7 +103,7 @@ Nano Brows draws hair-like strokes with a digital machine and ultra-fine needle,
 - [Nano Brows overview](../) — full guide and healing timeline
 - [Microblading](../../microblading/salem-nh/) — $550
 - [Powder Brows](../../powder-brows/salem-nh/) — $550
-- [Combination Brows](../../combination-brows/salem-nh/) — custom quote
+- [Combo Brows](../../combination-brows/salem-nh/) — custom quote
 - [Nano Combo](../../nano-combo/salem-nh/) — $600
 See the [Salem, NH studio page](../../../../locations/salem-nh/) or the [aftercare guide](../../../../aftercare/).
 

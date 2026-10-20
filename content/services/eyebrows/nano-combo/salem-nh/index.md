@@ -102,13 +102,13 @@ Adriana Souza Santos has performed more than 5,000 procedures across 20+ years a
 
 ## Explore Other Brow Techniques and the Salem Studio
 
-Nano Combo Brows is one of five brow techniques at the Salem studio, alongside Microblading, Nano Brows, Powder Brows, and Combination Brows. Every technique includes the 2nd session for first-time clients, and each has its own page with pricing and detail for the Salem location.
+Nano Combo Brows is one of five brow techniques at the Salem studio, alongside Microblading, Nano Brows, Powder Brows, and Combo Brows. Every technique includes the 2nd session for first-time clients, and each has its own page with pricing and detail for the Salem location.
 
 - [Nano Combo Brows overview](../) — full technique guide and healing timeline
 - [Microblading in Salem](../../microblading/salem-nh/) — $550
 - [Nano Brows in Salem](../../nano-brows/salem-nh/) — $650
 - [Powder Brows in Salem](../../powder-brows/salem-nh/) — $550
-- [Combination Brows in Salem](../../combination-brows/salem-nh/) — custom quote
+- [Combo Brows in Salem](../../combination-brows/salem-nh/) — custom quote
 See the [Salem, NH studio page](../../../../locations/salem-nh/) or the [aftercare guide](../../../../aftercare/).
 
 ## What Nano Combo Brows Look Like Once They Have Healed

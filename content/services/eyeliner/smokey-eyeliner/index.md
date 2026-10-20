@@ -1,12 +1,12 @@
 <!-- Smokey Eyeliner | Wilmington MA & Salem NH PMU -->
 <!-- canonical: https://adrianaspmu.com/services/eyeliner/smokey-eyeliner/ -->
-> Smokey Eyeliner in Wilmington MA and Salem NH: defined upper liner with soft shading, $550, lasting years with proper care. Book online.
+> Smokey Eyeliner in Wilmington MA and Salem NH: defined upper liner with soft shading, $400, lasting years with proper care. Book online.
 
 # Smokey Eyeliner in Wilmington, MA & Salem, NH
 
 Smokey Eyeliner combines defined upper-lid liner with soft shading for a blended, makeup-inspired effect that lasts for years with proper care.
 
-Starting at $550 USD
+Starting at $400 USD
 
 or **4 interest-free payments** with Cherry — [see your options](../../../payment-plan/), no impact on your credit score
 
@@ -116,7 +116,7 @@ Initial healing typically occurs within one to two weeks, while complete healing
 
 Not at all. The treatment is fully customized and can be designed to create either a subtle enhancement or a more glamorous look.
 
-Smokey Eyeliner costs $550 at both studios, and that price already includes the 2nd session scheduled 6 to 8 weeks after the appointment. The consultation, the mapping and the topical numbing are part of it as well. A yearly touch-up, from $250, is a separate visit about 12 months later. Every price is published on the [price list](../../../prices/).
+Smokey Eyeliner costs $400 at both studios, and that price already includes the 2nd session scheduled 6 to 8 weeks after the appointment. The consultation, the mapping and the topical numbing are part of it as well. A yearly touch-up, from $250, is a separate visit about 12 months later. Every price is published on the [price list](../../../prices/).
 
 Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent financing provider: it sets approval and rates, not the studio. See [how the payment plan works](../../../payment-plan/).
 

@@ -1,16 +1,16 @@
-<!-- Combination Brows in Salem, NH | Adriana's PMU -->
+<!-- Combo Brows in Salem, NH | Adriana's PMU -->
 <!-- canonical: https://adrianaspmu.com/services/eyebrows/combination-brows/salem-nh/ -->
-> Combination Brows in Salem, NH at Adriana's Permanent Makeup, 117A Main St. Custom pricing. Master PMU artist with 20+ years. Call (978) 223-7496 to book.
+> Combo Brows in Salem, NH at Adriana's Permanent Makeup, 117A Main St. Custom pricing. Master PMU artist with 20+ years. Call (978) 223-7496 to book.
 
-# Combination Brows in Salem, NH
+# Combo Brows in Salem, NH
 
-Combination Brows in Salem, NH is quoted after a consultation and includes the 2nd session, blending hair-like strokes with soft shading that last 1 to 3 years. Book with Adriana Souza Santos at 117A Main Street, on Route 97.
+Combo Brows in Salem, NH is quoted after a consultation and includes the 2nd session, blending hair-like strokes with soft shading that last 1 to 3 years. Book with Adriana Souza Santos at 117A Main Street, on Route 97.
 
-**Combination Brows in Salem, NH is a custom-quoted procedure at 117A Main Street.**
+**Combo Brows in Salem, NH is a custom-quoted procedure at 117A Main Street.**
 
-## How Much Does Combination Brows Cost in Salem, NH, and What's Included?
+## How Much Does Combo Brows Cost in Salem, NH, and What's Included?
 
-Combination Brows in Salem, NH is priced individually after a consultation, since the strokes-to-shading mix varies brow to brow. The quote includes the 2nd session 6 to 8 weeks later, a $250 yearly touch-up, and Cherry payment plans on the total.
+Combo Brows in Salem, NH is priced individually after a consultation, since the strokes-to-shading mix varies brow to brow. The quote includes the 2nd session 6 to 8 weeks later, a $250 yearly touch-up, and Cherry payment plans on the total.
 
 | Item | Detail |
 | --- | --- |
@@ -20,17 +20,17 @@ Combination Brows in Salem, NH is priced individually after a consultation, sinc
 | Yearly touch-up | From $250, about 12 months later |
 | Payment plan | 4 interest-free payments or longer via Cherry; approval not guaranteed |
 
-## Who Should Book Combination Brows in Salem, NH, and Who Should Not?
+## Who Should Book Combo Brows in Salem, NH, and Who Should Not?
 
-Combination Brows in Salem, NH suits clients near Route 97 who want more brow density than strokes alone and can wait 6 to 8 weeks for the 2nd session. It is not appropriate for anyone pregnant, breastfeeding, under 18, or using isotretinoin, no exception at either studio.
+Combo Brows in Salem, NH suits clients near Route 97 who want more brow density than strokes alone and can wait 6 to 8 weeks for the 2nd session. It is not appropriate for anyone pregnant, breastfeeding, under 18, or using isotretinoin, no exception at either studio.
 
 - Good fit: Salem-area clients wanting more brow density than strokes alone
 - Not a fit: pregnant, breastfeeding, or under 18
 - Not yet: isotretinoin, blood thinners, autoimmune, or keloid history — see the [contraindications guide](../../../../aftercare/#who-should-not)
 
-## How Does a Combination Brows Appointment Work at the Salem Studio?
+## How Does a Combo Brows Appointment Work at the Salem Studio?
 
-A Salem Combination Brows appointment starts with a consultation and brow mapping matched to your face shape, moves into the procedure itself under topical numbing, and ends with written aftercare instructions. The 2nd session follows 6 to 8 weeks later, once healing is complete, at no extra charge.
+A Salem Combo Brows appointment starts with a consultation and brow mapping matched to your face shape, moves into the procedure itself under topical numbing, and ends with written aftercare instructions. The 2nd session follows 6 to 8 weeks later, once healing is complete, at no extra charge.
 
 - Consultation and health-history intake
 - Brow mapping for your face shape
@@ -39,7 +39,7 @@ A Salem Combination Brows appointment starts with a consultation and brow mappin
 - 2nd Session at the Salem studio, 6 to 8 weeks later, included
 Full healing detail is in the [aftercare guide](../../../../aftercare/).
 
-## Why Book Combination Brows at the Salem, NH Studio Specifically?
+## Why Book Combo Brows at the Salem, NH Studio Specifically?
 
 New Hampshire licenses body art at the state level under RSA 314-A, unlike Massachusetts’ town-by-town system, and Salem separately licenses both artist and establishment under Chapter 433. The studio sits on Route 97 near I-93 Exit 2, reachable from Methuen, Windham, Pelham, Haverhill, and North Andover within about 9 miles.
 
@@ -53,25 +53,25 @@ Main Street is Route 97; the address sits in the Salem Depot area, nearest I-93 
 | Haverhill, MA | 8.4 mi |
 | North Andover, MA | 8.7 mi |
 
-## What Backs the Artist Performing Combination Brows in Salem?
+## What Backs the Artist Performing Combo Brows in Salem?
 
-Adriana Souza Santos, who performs Combination Brows at the Salem studio, has completed more than 5,000 procedures and trained more than 300 students over a 20-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in English, Portuguese and Spanish.
+Adriana Souza Santos, who performs Combo Brows at the Salem studio, has completed more than 5,000 procedures and trained more than 300 students over a 20-plus year career, holds an AAM Diamond Certified Trainer credential, and consults in English, Portuguese and Spanish.
 
-*The Salem studio, where Combination Brows appointments begin.*
+*The Salem studio, where Combo Brows appointments begin.*
 
 Written by Adriana Souza Santos, responsible for this page's accuracy. Questions: (978) 223-7496 or the [contact page](../../../../contact/). Last reviewed September 11, 2026.
 
-## What If Combination Brows Hurts, Fades Unevenly, or Doesn't Last?
+## What If Combo Brows Hurts, Fades Unevenly, or Doesn't Last?
 
-Most Salem clients describe Combination Brows as mild scratching and light pressure rather than sharp pain, since numbing is applied first. Results typically last 1 to 3 years before fading; if any area heals lighter than expected, the 2nd session 6 to 8 weeks later fixes it free at the Salem studio.
+Most Salem clients describe Combo Brows as mild scratching and light pressure rather than sharp pain, since numbing is applied first. Results typically last 1 to 3 years before fading; if any area heals lighter than expected, the 2nd session 6 to 8 weeks later fixes it free at the Salem studio.
 
 Deposit terms are confirmed by phone at (978) 223-7496. Signs that need a doctor instead of the studio are listed in the [aftercare guide](../../../../aftercare/#infection-signs).
 
-## Frequently Asked Questions About Combination Brows in Salem, NH
+## Frequently Asked Questions About Combo Brows in Salem, NH
 
-Combination Brows in Salem, NH is performed at 117A Main Street, Salem, NH 03079, reached at (978) 223-7496. The studio is open Monday through Saturday, 10 to 6, closed Sunday — a different address and phone than the Wilmington, Massachusetts studio.
+Combo Brows in Salem, NH is performed at 117A Main Street, Salem, NH 03079, reached at (978) 223-7496. The studio is open Monday through Saturday, 10 to 6, closed Sunday — a different address and phone than the Wilmington, Massachusetts studio.
 
-Combination Brows in Salem, NH is priced after a consultation, since the mix of strokes and shading varies. The quote includes the 2nd session 6 to 8 weeks later; a yearly touch-up, from $250, follows roughly 12 months after that, and Cherry covers the quoted total.
+Combo Brows in Salem, NH is priced after a consultation, since the mix of strokes and shading varies. The quote includes the 2nd session 6 to 8 weeks later; a yearly touch-up, from $250, follows roughly 12 months after that, and Cherry covers the quoted total.
 
 Yes. Main Street in Salem is New Hampshire Route 97 along its entire length, with its western terminus at NH-28, Broadway. The address itself sits in the Salem Depot area, and the nearest I-93 access is Exit 2, Pelham Road.
 
@@ -79,13 +79,13 @@ No. Salem has no passenger rail station, and MBTA Commuter Rail ends at Lowell a
 
 Yes. New Hampshire licenses body art practitioners at the state level under RSA 314-A. The Town of Salem separately licenses both artist and establishment under Salem Chapter 433, so two levels of paperwork apply here, unlike Massachusetts’ single town-level system.
 
-Combination Brows results typically last 1 to 3 years before fading evenly. About 12 months after the 2nd session, a yearly touch-up, from $250, refreshes the color and shading at the Salem studio, rather than the full quoted procedure again.
+Combo Brows results typically last 1 to 3 years before fading evenly. About 12 months after the 2nd session, a yearly touch-up, from $250, refreshes the color and shading at the Salem studio, rather than the full quoted procedure again.
 
 Yes. The Salem studio offers payment plans through Cherry Technologies, an independent financing provider. Options include 4 interest-free payments, or a longer plan up to 24 months with interest. Approval is not guaranteed; Cherry, not the studio, sets the final terms.
 
-Combination Brows blends the hair-like strokes used in Nano Brows, at $650, with the soft shading used in Powder Brows, at $550, in one appointment. Because the stroke-to-shading mix varies by brow, pricing is custom and quoted after the in-person consultation.
+Combo Brows blends the hair-like strokes used in Nano Brows, at $650, with the soft shading used in Powder Brows, at $550, in one appointment. Because the stroke-to-shading mix varies by brow, pricing is custom and quoted after the in-person consultation.
 
-Combination Brows is quoted at the consultation rather than listed at a fixed price, because the work needed changes from face to face. Every other service is published openly, from $250 to $850, on the [price list](../../../../prices/), so you can see the range the studio works in before you book anything.
+Combo Brows is quoted at the consultation rather than listed at a fixed price, because the work needed changes from face to face. Every other service is published openly, from $250 to $850, on the [price list](../../../../prices/), so you can see the range the studio works in before you book anything.
 
 Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent financing provider: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
 
@@ -99,9 +99,9 @@ Adriana Souza Santos has performed more than 5,000 procedures across 20+ years a
 
 ## Explore Other Brow Techniques and the Salem Studio
 
-Combination Brows is one of five brow techniques available at the Salem studio, alongside the other four listed below. Every technique includes the 2nd session for first-time clients, and each has its own page with technique-specific pricing and detail for the Salem location.
+Combo Brows is one of five brow techniques available at the Salem studio, alongside the other four listed below. Every technique includes the 2nd session for first-time clients, and each has its own page with technique-specific pricing and detail for the Salem location.
 
-- [Combination Brows overview](../) — full guide and healing timeline
+- [Combo Brows overview](../) — full guide and healing timeline
 - [Microblading](../../microblading/salem-nh/) — $550
 - [Nano Brows](../../nano-brows/salem-nh/) — $650
 - [Powder Brows](../../powder-brows/salem-nh/) — $550
@@ -122,9 +122,9 @@ Two levels apply in New Hampshire. The state issues Body Artist license 4283 to 
 
 The town license is worth noting: Salem issued BODA-10 specifically as a **Permanent Make-Up Artist** license under Salem Chapter 433, not as a general tattoo license.
 
-## Ready to Book Combination Brows in Salem, NH?
+## Ready to Book Combo Brows in Salem, NH?
 
-Book online at 117A Main Street, or call (978) 223-7496. Prefer Wilmington, MA? See that studio's [Combination Brows page](../wilmington-ma/).
+Book online at 117A Main Street, or call (978) 223-7496. Prefer Wilmington, MA? See that studio's [Combo Brows page](../wilmington-ma/).
 
 ## Pay over time, starting today
 

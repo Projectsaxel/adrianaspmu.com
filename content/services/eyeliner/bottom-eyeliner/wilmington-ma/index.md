@@ -80,7 +80,7 @@ Bottom Eyeliner in Wilmington, MA costs $300, and that price already includes th
 
 This is the most common concern, and it is why the line is kept fine. A heavy line on the lower lash line can visually close the eye, so the studio deliberately restrains the intensity here — it is designed to add a soft finishing touch, not a bold line, so eyes read defined rather than smaller.
 
-Yes, booking Bottom Eyeliner alone is a legitimate choice, though most clients pair it with Top Eyeliner instead. Alone, it costs $300 and adds subtle lower-lash definition. With Adriana, Top and Bottom Eyeliner cost $900 booked separately, or $800 as the Eyeliner Combo, saving $100.
+Yes, booking Bottom Eyeliner alone is a legitimate choice, though most clients pair it with Top Eyeliner instead. Alone, it costs $300 and adds subtle lower-lash definition. Top and Bottom Eyeliner cost from $650 booked separately, or from $550 as the Eyeliner Combo, saving $100.
 
 Bottom Eyeliner is the most subtle technique on the menu. Unlike Top Eyeliner, which can be built up to a defined line with a tail, the lower lash line intentionally stays fine, since a bold lower line reads harsh and can visually close the eye rather than open it.
 
@@ -88,7 +88,7 @@ Yes. Contact lenses come out for the bottom eyeliner appointment; the studio say
 
 Yes. The Wilmington studio offers payment plans for the $300 bottom eyeliner price through Cherry Technologies, an independent financing provider, not the studio. Options include 4 interest-free payments or a longer plan up to 24 months; approval is not guaranteed; Cherry sets the terms.
 
-Yes. The Eyeliner Combo costs $800 for both the upper and lower lash line in one Wilmington appointment, while Adriana&rsquo;s Top Eyeliner at $500 plus Bottom Eyeliner at $400 booked separately add up to $900. Clients who want both lines from the start save $100 by booking the combo up front.
+Yes. The Eyeliner Combo starts at $550 for both the upper and lower lash line in one Wilmington appointment, while Top Eyeliner at $350 plus Bottom Eyeliner at $300 booked separately add up to $650. Clients who want both lines from the start save $100 by booking the combo up front.
 
 Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent financing provider: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
 
@@ -102,7 +102,7 @@ Adriana Souza Santos has performed more than 5,000 procedures across 20+ years a
 
 ## Explore Other Eyeliner Styles at the Wilmington Studio
 
-Bottom Eyeliner is one of four eyeliner options at the Wilmington studio, priced $300 to $800 depending on the lash line treated and how much shading is added. Every technique includes the 2nd session for first-time clients, with its own page for Wilmington, MA.
+Bottom Eyeliner is one of four eyeliner options at the Wilmington studio, priced $300 to $550 depending on the lash line treated and how much shading is added. Every technique includes the 2nd session for first-time clients, with its own page for Wilmington, MA.
 
 - [Top Eyeliner in Wilmington](../../top-eyeliner/wilmington-ma/) — $350
 - [Smokey Eyeliner in Wilmington](../../smokey-eyeliner/wilmington-ma/) — $400
