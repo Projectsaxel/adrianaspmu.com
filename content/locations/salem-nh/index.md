@@ -34,14 +34,14 @@ Permanent makeup prices at the Salem, NH studio range from $300 for bottom eyeli
 | Nano Brows | $650 |
 | Microblading | $550 |
 | Powder Brows | $550 |
-| Combination Brows | Custom, at consultation |
+| Combo Brows | Custom, at consultation |
 | Nano Combo | $650 |
 | Lip Blush | $550 |
 | Dark Lip Neutralization | $550 |
 | Top Eyeliner | $350 |
-| Smokey Eyeliner | $550 |
+| Smokey Eyeliner | $400 |
 | Bottom Eyeliner | $300 |
-| Eyeliner Combo | $800 |
+| Eyeliner Combo | $550 |
 | Brows + Lips Combo | $850 |
 | Yearly Touch-Up | From $250 |
 

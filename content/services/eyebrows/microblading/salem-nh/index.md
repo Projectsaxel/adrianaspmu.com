@@ -97,12 +97,12 @@ Adriana Souza Santos has performed more than 5,000 procedures across 20+ years a
 
 ## Explore Other Brow Techniques and the Salem Studio
 
-Microblading is one of five brow techniques available at the Salem studio, alongside Nano Brows, Powder Brows, Combination Brows, and Nano Combo. Every technique includes the 2nd session for first-time clients, and each has its own page with technique-specific pricing and detail for the Salem location.
+Microblading is one of five brow techniques available at the Salem studio, alongside Nano Brows, Powder Brows, Combo Brows, and Nano Combo. Every technique includes the 2nd session for first-time clients, and each has its own page with technique-specific pricing and detail for the Salem location.
 
 - [Microblading overview](../) — full technique guide and healing timeline
 - [Nano Brows in Salem](../../nano-brows/salem-nh/) — $650
 - [Powder Brows in Salem](../../powder-brows/salem-nh/) — $550
-- [Combination Brows in Salem](../../combination-brows/salem-nh/) — custom quote
+- [Combo Brows in Salem](../../combination-brows/salem-nh/) — custom quote
 - [Nano Combo in Salem](../../nano-combo/salem-nh/) — $600
 See the [Salem, NH studio page](../../../../locations/salem-nh/) or the [aftercare guide](../../../../aftercare/).
 

@@ -102,13 +102,13 @@ Adriana Souza Santos has performed more than 5,000 procedures across 20+ years a
 
 ## Explore Other Brow Techniques and the Wilmington Studio
 
-Nano Combo Brows is one of five brow techniques at the Wilmington studio, alongside Microblading, Nano Brows, Powder Brows, and Combination Brows. Every technique includes the 2nd session for first-time clients, and each has its own page with pricing and detail for the Wilmington location.
+Nano Combo Brows is one of five brow techniques at the Wilmington studio, alongside Microblading, Nano Brows, Powder Brows, and Combo Brows. Every technique includes the 2nd session for first-time clients, and each has its own page with pricing and detail for the Wilmington location.
 
 - [Nano Combo Brows overview](../) — full technique guide and healing timeline
 - [Microblading in Wilmington](../../microblading/wilmington-ma/) — $550
 - [Nano Brows in Wilmington](../../nano-brows/wilmington-ma/) — $650
 - [Powder Brows in Wilmington](../../powder-brows/wilmington-ma/) — $550
-- [Combination Brows in Wilmington](../../combination-brows/wilmington-ma/) — custom quote
+- [Combo Brows in Wilmington](../../combination-brows/wilmington-ma/) — custom quote
 See the [Wilmington, MA studio page](../../../../locations/wilmington-ma/) or the [aftercare guide](../../../../aftercare/).
 
 ## What Nano Combo Brows Look Like Once They Have Healed

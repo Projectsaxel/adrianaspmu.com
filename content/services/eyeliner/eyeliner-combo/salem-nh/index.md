@@ -1,21 +1,21 @@
 <!-- Eyeliner Combo in Salem, NH | Adriana's PMU -->
 <!-- canonical: https://adrianaspmu.com/services/eyeliner/eyeliner-combo/salem-nh/ -->
-> Eyeliner Combo in Salem, NH at Adriana's Permanent Makeup, 117A Main St. $800. Master PMU artist with 20+ years. Call (978) 223-7496 to book.
+> Eyeliner Combo in Salem, NH at Adriana's Permanent Makeup, 117A Main St. $550. Master PMU artist with 20+ years. Call (978) 223-7496 to book.
 
 # Eyeliner Combo in Salem, NH
 
-Eyeliner Combo in Salem, NH costs $800 and pairs Top and Bottom Eyeliner in one appointment, saving $100 against the $350 and $250 charged when each is booked separately. Book with Master Permanent Makeup Artist Adriana Souza Santos at 117A Main Street, on Route 97.
+Eyeliner Combo in Salem, NH costs $550 and pairs Top and Bottom Eyeliner in one appointment, saving $100 against the $350 and $250 charged when each is booked separately. Book with Master Permanent Makeup Artist Adriana Souza Santos at 117A Main Street, on Route 97.
 
-**Eyeliner Combo in Salem, NH is a $800 procedure at 117A Main Street, combining Top and Bottom Eyeliner into a single appointment instead of two separate visits.**
+**Eyeliner Combo in Salem, NH is a $550 procedure at 117A Main Street, combining Top and Bottom Eyeliner into a single appointment instead of two separate visits.**
 
 ## How Much Does Eyeliner Combo Cost in Salem, NH, and What Do You Save?
 
-Eyeliner Combo in Salem, NH costs $800 with Adriana for Top and Bottom Eyeliner performed in one session, compared with $500 for her Top Eyeliner and $400 for her Bottom Eyeliner booked separately, a combined $900. Booking the combo instead saves $100 and eliminates a second appointment, and the price already includes the 2nd session.
+Eyeliner Combo in Salem, NH starts at $550 for Top and Bottom Eyeliner performed in one session, compared with $350 for Top Eyeliner and $300 for Bottom Eyeliner booked separately, a combined $650. Booking the combo instead saves $100 and eliminates a second appointment, and the price already includes the 2nd session.
 
 | Item | Detail |
 | --- | --- |
-| Eyeliner Combo price | $800, one appointment |
-| Booked separately | Adriana: Top Eyeliner $500 + Bottom Eyeliner $400 = $900 |
+| Eyeliner Combo price | $550, one appointment |
+| Booked separately | Top Eyeliner $350 + Bottom Eyeliner $300 = $650 |
 | What the combo saves | $100 and one full appointment |
 | What's included | Consultation, mapping, numbing, and both eyeliner procedures |
 | 2nd Session | Included, 6 to 8 weeks after the procedure |
@@ -39,7 +39,7 @@ An Eyeliner Combo appointment at the Salem studio starts with a consultation and
 - Top Eyeliner pass, with a sterile single-use needle
 - Bottom Eyeliner pass, in the same appointment
 - Written aftercare instructions to take home
-- 2nd Session, 6 to 8 weeks later, included in the $800
+- 2nd Session, 6 to 8 weeks later, included in the $550
 Full healing detail is in the [aftercare guide](../../../../aftercare/).
 
 ## Why Book Eyeliner Combo at the Salem, NH Studio Specifically?
@@ -74,7 +74,7 @@ Deposit terms are confirmed by phone at (978) 223-7496. Signs that need a doctor
 
 Eyeliner Combo in Salem, NH is performed at 117A Main Street, Salem, NH 03079, reached at (978) 223-7496. The studio is open Monday through Saturday, 10:00 a.m. to 6:00 p.m., closed Sunday, a different address than the Wilmington, MA studio.
 
-Eyeliner Combo in Salem, NH costs $800 for both lash lines in one session. Booked separately with Adriana, Top Eyeliner is $500 and Bottom Eyeliner is $400, a combined $900, so the combo saves $100 and one full appointment while still including the 2nd session 6 to 8 weeks later.
+Eyeliner Combo in Salem, NH starts at $550 for both lash lines in one session. Booked separately, Top Eyeliner starts at $350 and Bottom Eyeliner at $300, a combined $650, so the combo saves $100 and one full appointment while still including the 2nd session 6 to 8 weeks later.
 
 Yes. Main Street in Salem is New Hampshire Route 97 along its entire length, with its western terminus at NH-28, Broadway. The address sits in the Salem Depot area, and the nearest I-93 access is Exit 2, Pelham Road, per the Town of Salem's own transportation plan.
 
@@ -82,7 +82,7 @@ No. Salem has no passenger rail station, and MBTA Commuter Rail ends at Lowell a
 
 Yes. New Hampshire licenses body art practitioners at the state level under RSA 314-A. The Town of Salem separately licenses both the studio and the artist under Salem Chapter 433, so two levels of licensing apply here, unlike Wilmington's single town-only permit.
 
-The 2nd session is included in the $800 and happens 6 to 8 weeks after the original Eyeliner Combo appointment, correcting any unevenness while healing is still fresh. The yearly touch-up is a separate, paid visit from $250, scheduled about 12 months later to refresh pigment that has naturally faded.
+The 2nd session is included in the price and happens 6 to 8 weeks after the original Eyeliner Combo appointment, correcting any unevenness while healing is still fresh. The yearly touch-up is a separate, paid visit from $250, scheduled about 12 months later to refresh pigment that has naturally faded.
 
 Yes. The Salem studio offers payment plans through Cherry Technologies, an independent financing provider separate from Adriana's Permanent Makeup. Options include 4 interest-free payments or a longer plan up to 24 months with interest. Approval is not guaranteed; Cherry sets the terms, not the studio.
 

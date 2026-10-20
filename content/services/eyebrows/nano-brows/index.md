@@ -150,7 +150,7 @@ Nano strokes plus soft shading for extra density
 
 Soft powdered finish, ideal for oily skin
 
-### [Combination Brows](../combination-brows/)
+### [Combo Brows](../combination-brows/)
 
 Strokes at the front, shading through the body
 

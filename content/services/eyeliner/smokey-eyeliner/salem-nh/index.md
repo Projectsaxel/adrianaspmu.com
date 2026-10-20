@@ -1,20 +1,20 @@
 <!-- Smokey Eyeliner in Salem, NH | Adriana's PMU -->
 <!-- canonical: https://adrianaspmu.com/services/eyeliner/smokey-eyeliner/salem-nh/ -->
-> Smokey Eyeliner in Salem, NH at Adriana's Permanent Makeup, 117A Main St. $550. Master PMU artist with 20+ years. Call (978) 223-7496 to book.
+> Smokey Eyeliner in Salem, NH at Adriana's Permanent Makeup, 117A Main St. $400. Master PMU artist with 20+ years. Call (978) 223-7496 to book.
 
 # Smokey Eyeliner in Salem, NH
 
-Smokey Eyeliner in Salem, NH costs $550 and pairs a defined upper-lid line with soft shading blended upward and outward, for a permanent smokey-eye look. It is the only technique here with a shading pass. Book at 117A Main Street.
+Smokey Eyeliner in Salem, NH costs $400 and pairs a defined upper-lid line with soft shading blended upward and outward, for a permanent smokey-eye look. It is the only technique here with a shading pass. Book at 117A Main Street.
 
-**Smokey Eyeliner in Salem, NH is a $550 procedure at 117A Main Street, adding a shading pass to the liner.**
+**Smokey Eyeliner in Salem, NH is a $400 procedure at 117A Main Street, adding a shading pass to the liner.**
 
 ## How Much Does Smokey Eyeliner Cost in Salem, NH, and What’s Included?
 
-Smokey Eyeliner in Salem, NH costs $550, a single price that already includes the 2nd session 6 to 8 weeks after the procedure. A separate yearly touch-up, from $250, follows roughly 12 months later. Cherry offers 4 interest-free payments or a longer plan.
+Smokey Eyeliner in Salem, NH costs $400, a single price that already includes the 2nd session 6 to 8 weeks after the procedure. A separate yearly touch-up, from $250, follows roughly 12 months later. Cherry offers 4 interest-free payments or a longer plan.
 
 | Item | Detail |
 | --- | --- |
-| Procedure price | $550 |
+| Procedure price | $400 |
 | What’s included | Consultation, mapping, numbing, and the procedure itself |
 | 2nd Session | Included, 6 to 8 weeks after the procedure |
 | Yearly touch-up | From $250, about 12 months later |
@@ -41,7 +41,7 @@ A Salem smokey eyeliner appointment takes longer than a plain liner: consultatio
 - Lash-line mapping for the upper-lid line and the shading area
 - The upper-lid line, then a separate shading pass blended upward and outward
 - Written aftercare instructions to take home
-- 2nd Session, 6 to 8 weeks later, included in the $550
+- 2nd Session, 6 to 8 weeks later, included in the $400
 
 ## Why Book Smokey Eyeliner at the Salem, NH Studio Specifically?
 
@@ -75,7 +75,7 @@ The American Academy of Dermatology documents that eyeliner pigment can rarely r
 
 Smokey Eyeliner in Salem, NH is performed at 117A Main Street, Salem, NH 03079, reached at (978) 223-7496. The studio is open Monday through Saturday, 10 a.m. to 6 p.m., closed Sunday — a different address and phone number than the Wilmington, MA studio.
 
-Smokey Eyeliner in Salem, NH costs $550, and that price already includes the 2nd session 6 to 8 weeks after the procedure. A yearly touch-up, from $250, follows roughly 12 months later. Cherry offers 4 interest-free payments or a longer plan; approval is not guaranteed.
+Smokey Eyeliner in Salem, NH costs $400, and that price already includes the 2nd session 6 to 8 weeks after the procedure. A yearly touch-up, from $250, follows roughly 12 months later. Cherry offers 4 interest-free payments or a longer plan; approval is not guaranteed.
 
 Top Eyeliner is a defined line only, with intensity chosen at mapping. Smokey Eyeliner starts with that same defined line, then adds a soft shading pass blended upward and outward for a permanent smokey-eye effect. The shading step is what makes Smokey Eyeliner cost more and take longer at the chair.
 
@@ -85,9 +85,9 @@ Smokey Eyeliner suits clients who already wear a smokey eye look regularly and w
 
 Yes. Contact lenses come out for the smokey eyeliner appointment; the studio says how long to leave them out after. Separately, the AAD documents that eyeliner pigment can rarely react during an MRI with burning, tingling, or swelling; tell the technician beforehand and ask them to stop the scan.
 
-Yes. The Salem studio offers payment plans for the $550 smokey eyeliner price, shading pass included, through Cherry Technologies, an independent financing provider. Options include 4 interest-free payments or a longer plan up to 24 months; approval is not guaranteed; Cherry sets the terms.
+Yes. The Salem studio offers payment plans for the $400 smokey eyeliner price, shading pass included, through Cherry Technologies, an independent financing provider. Options include 4 interest-free payments or a longer plan up to 24 months; approval is not guaranteed; Cherry sets the terms.
 
-No. Smokey Eyeliner is its own $550 technique with soft shading blended into the liner, and it is not part of the Eyeliner Combo. The Combo pairs plain Top Eyeliner and Bottom Eyeliner for $800 with Adriana, $100 less than the $900 those two cost with her booked separately, at the Salem studio.
+No. Smokey Eyeliner is its own $400 technique with soft shading blended into the liner, and it is not part of the Eyeliner Combo. The Combo pairs plain Top Eyeliner and Bottom Eyeliner from $400, $100 less than the $650 those two cost booked separately, at the Salem studio.
 
 Yes. Cherry offers 4 interest-free payments, or a longer plan of up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent financing provider: it sets approval and rates, not the studio. See [how the payment plan works](../../../../payment-plan/).
 
@@ -101,7 +101,7 @@ Adriana Souza Santos has performed more than 5,000 procedures across 20+ years a
 
 ## Explore Other Eyeliner Styles at the Salem Studio
 
-Smokey Eyeliner is one of four eyeliner options at the Salem studio, priced $300 to $800 depending on the lash line treated and how much shading is added. Every technique includes the 2nd session for first-time clients, with its own page for Salem, NH.
+Smokey Eyeliner is one of four eyeliner options at the Salem studio, priced $300 to $400 depending on the lash line treated and how much shading is added. Every technique includes the 2nd session for first-time clients, with its own page for Salem, NH.
 
 - [Top Eyeliner in Salem](../../top-eyeliner/salem-nh/) — $350
 - [Bottom Eyeliner in Salem](../../bottom-eyeliner/salem-nh/) — $250

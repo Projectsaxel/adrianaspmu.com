@@ -103,7 +103,7 @@ Powder Brows builds a soft, shaded field of pigment with a digital machine, one 
 - [Powder Brows overview](../) — full guide and healing timeline
 - [Microblading](../../microblading/wilmington-ma/) — $550
 - [Nano Brows](../../nano-brows/wilmington-ma/) — $650
-- [Combination Brows](../../combination-brows/wilmington-ma/) — custom quote
+- [Combo Brows](../../combination-brows/wilmington-ma/) — custom quote
 - [Nano Combo](../../nano-combo/wilmington-ma/) — $600
 See the [Wilmington, MA studio page](../../../../locations/wilmington-ma/) or the [aftercare guide](../../../../aftercare/).
 

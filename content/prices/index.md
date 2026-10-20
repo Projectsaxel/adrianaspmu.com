@@ -14,19 +14,19 @@ More than 5,000 procedures have been performed by Master Permanent Makeup Artist
 
 ## What Does Everything Cost?
 
-Adriana's Permanent Makeup publishes 13 services across brows, lips, eyeliner, combos, and touch-ups, ranging from $300 for Bottom Eyeliner to $1,100–$1,200 for brows and lips booked as two separate procedures. Combination Brows is quoted individually since the technique mix varies by client.
+Adriana's Permanent Makeup publishes 13 services across brows, lips, eyeliner, combos, and touch-ups, ranging from $300 for Bottom Eyeliner to $1,100–$1,200 for brows and lips booked as two separate procedures. Combo Brows is quoted individually since the technique mix varies by client.
 
 | Service | Price |
 | --- | --- |
 | [Nano Brows](../services/eyebrows/nano-brows/) | $650 |
 | [Microblading](../services/eyebrows/microblading/) | $550 |
 | [Powder Brows](../services/eyebrows/powder-brows/) | $550 |
-| [Combination Brows](../services/eyebrows/combination-brows/) | Custom pricing |
+| [Combo Brows](../services/eyebrows/combination-brows/) | Custom pricing |
 | [Nano Combo](../services/eyebrows/nano-combo/) | $600 |
 | [Lip Blush](../services/lips/lip-blush/) | $550 |
 | [Dark Lip Neutralization](../services/lips/dark-lip-neutralization/) | $550 |
 | [Top Eyeliner](../services/eyeliner/top-eyeliner/) | $350 |
-| [Smokey Eyeliner](../services/eyeliner/smokey-eyeliner/) | $550 |
+| [Smokey Eyeliner](../services/eyeliner/smokey-eyeliner/) | $400 |
 | [Bottom Eyeliner](../services/eyeliner/bottom-eyeliner/) | $250 |
 | [Eyeliner Combo](../services/eyeliner/eyeliner-combo/) | $500 |
 | [Brows + Lips Combo](../services/combos/) | $850 |
@@ -34,11 +34,11 @@ Adriana's Permanent Makeup publishes 13 services across brows, lips, eyeliner, c
 
 ## How Can Combo Packages Save Me Money?
 
-Two combo packages cost less than booking the same services separately: the Eyeliner Combo at $800 versus $900 for Adriana&rsquo;s Top and Bottom Eyeliner booked apart, and the Brows + Lips Combo at $850 versus $1,100–$1,200 for the same two procedures booked one at a time. Combos also mean one healing period instead of two.
+Two combo packages cost less than booking the same services separately: the Eyeliner Combo from $550 versus $650 for Top and Bottom Eyeliner booked apart, and the Brows + Lips Combo at $850 versus $1,100–$1,200 for the same two procedures booked one at a time. Combos also mean one healing period instead of two.
 
 | Combo | Combo price | Booked separately | You save |
 | --- | --- | --- | --- |
-| Eyeliner Combo (Top + Bottom) | $800 | $500 + $400 = $900 (with Adriana) | $100, and one healing period |
+| Eyeliner Combo (Top + Bottom) | $550 | $350 + $300 = $650 | $100, and one healing period |
 | Brows + Lips Combo | $850 | $1,100–$1,200 | $250–$350, and one healing period |
 
 The Brows + Lips Combo range depends on which brow technique is paired with which lip service; every pairing still costs less combined than booked apart.

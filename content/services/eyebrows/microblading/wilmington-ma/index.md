@@ -97,12 +97,12 @@ Adriana Souza Santos has performed more than 5,000 procedures across 20+ years a
 
 ## Explore Other Brow Techniques and the Wilmington Studio
 
-Microblading is one of five brow techniques available at the Wilmington studio, alongside Nano Brows, Powder Brows, Combination Brows, and Nano Combo. Every technique includes the 2nd session for first-time clients, and each has its own page with technique-specific pricing and detail for the Wilmington location.
+Microblading is one of five brow techniques available at the Wilmington studio, alongside Nano Brows, Powder Brows, Combo Brows, and Nano Combo. Every technique includes the 2nd session for first-time clients, and each has its own page with technique-specific pricing and detail for the Wilmington location.
 
 - [Microblading overview](../) — full technique guide and healing timeline
 - [Nano Brows in Wilmington](../../nano-brows/wilmington-ma/) — $650
 - [Powder Brows in Wilmington](../../powder-brows/wilmington-ma/) — $550
-- [Combination Brows in Wilmington](../../combination-brows/wilmington-ma/) — custom quote
+- [Combo Brows in Wilmington](../../combination-brows/wilmington-ma/) — custom quote
 - [Nano Combo in Wilmington](../../nano-combo/wilmington-ma/) — $600
 See the [Wilmington, MA studio page](../../../../locations/wilmington-ma/) or the [aftercare guide](../../../../aftercare/).
 

@@ -155,7 +155,7 @@ Machine-drawn nano strokes, great for most skin types
 
 Nano strokes plus soft shading for extra density
 
-### [Combination Brows](../combination-brows/)
+### [Combo Brows](../combination-brows/)
 
 Strokes at the front, shading through the body
 

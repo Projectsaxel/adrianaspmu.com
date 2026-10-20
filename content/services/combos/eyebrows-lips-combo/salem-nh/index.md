@@ -99,7 +99,7 @@ Adriana Souza Santos has performed more than 5,000 procedures across 20+ years a
 
 ## What Makes Up the Brows + Lips Combo at the Salem Studio
 
-The brow half of the combo can be Microblading, Nano Brows, Powder Brows, Combination Brows, or Nano Combo; the lip half is Lip Blush, or Dark Lip Neutralization first if needed. Each technique has its own Salem page with full pricing.
+The brow half of the combo can be Microblading, Nano Brows, Powder Brows, Combo Brows, or Nano Combo; the lip half is Lip Blush, or Dark Lip Neutralization first if needed. Each technique has its own Salem page with full pricing.
 
 - [Brows + Lips Combo overview](../) — full package guide and healing timeline
 - [Microblading in Salem](../../../eyebrows/microblading/salem-nh/) — $550

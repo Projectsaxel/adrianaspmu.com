@@ -28,9 +28,9 @@ Powder Brows uses a digital machine to create a soft, shaded brow effect with a 
 
 $550
 
-### [Combination Brows](eyebrows/combination-brows/)
+### [Combo Brows](eyebrows/combination-brows/)
 
-Combination Brows blends hair-like strokes with soft shading for fuller, natural-looking eyebrows that typically last 1 to 3 years.
+Combo Brows blends hair-like strokes with soft shading for fuller, natural-looking eyebrows that typically last 1 to 3 years.
 
 ### [Nano Combo Brows](eyebrows/nano-combo/)
 
@@ -108,7 +108,7 @@ Adriana’s groups thirteen services into five families — eyebrows, lips, eyel
 
 | Category | Price range | What it solves |
 | --- | --- | --- |
-| [Eyebrows](eyebrows/) | $550–$650, custom for Combination Brows | Sparse or uneven brows, across five techniques from fine strokes to soft shading |
+| [Eyebrows](eyebrows/) | $550–$650, custom for Combo Brows | Sparse or uneven brows, across five techniques from fine strokes to soft shading |
 | [Lips](lips/) | $550 | Faded lip color, or dark, uneven pigment needing neutralization |
 | [Eyeliner](eyeliner/) | $250–$500 | Smudge-proof definition: top lid, bottom lid, smokey, or both combined |
 | [Combos](combos/) | $850 | Brows and lips in one visit, one healing period, one 2nd session |
@@ -134,7 +134,7 @@ These restrictions apply the same way across every category, since all five use 
 
 These are the questions asked most often about the services above. The [full price list with combo packages and payment plans](../prices/) covers cost in detail, and the [complete permanent makeup FAQ](../faq/) answers pain, healing, duration and aftercare.
 
-Prices range from $300 for Bottom Eyeliner to $850 for the Brows + Lips Combo. Most single-area services fall between $350 and $650. Combination Brows is quoted at consultation, and the Yearly Touch-Up starts at $250.
+Prices range from $300 for Bottom Eyeliner to $850 for the Brows + Lips Combo. Most single-area services fall between $350 and $650. Combo Brows is quoted at consultation, and the Yearly Touch-Up starts at $250.
 
 Most first-time clients start with a single category, eyebrows, lips, or eyeliner, rather than a combo, so they can judge the healed result before adding a second area. A consultation confirms which family matches your skin and goals.
 
@@ -146,7 +146,7 @@ No. Both the Wilmington, MA and Salem, NH studios charge the same prices for eve
 
 Yes. Every service can be split into 4 interest-free payments, or a longer plan of up to 24 months with interest, through Cherry Technologies, an independent lending company. Approval is not guaranteed and depends on Cherry’s own criteria, not the studio’s.
 
-Thirteen services are published with their prices, from $300 for bottom eyeliner to $850 for the brows and lips combo. The price of every first-time procedure already includes the 2nd session 6 to 8 weeks later. The full table is on the price list, and combination brows is the one service quoted at the consultation.
+Thirteen services are published with their prices, from $300 for bottom eyeliner to $850 for the brows and lips combo. The price of every first-time procedure already includes the 2nd session 6 to 8 weeks later. The full table is on the price list, and combo brows is the one service quoted at the consultation.
 
 Yes. Cherry offers 4 interest-free payments, or up to 24 months with interest. Checking your options takes about a minute and uses a soft credit check, so it does not affect your credit score. Cherry is an independent financing provider: it sets approval and rates, not the studio.
 

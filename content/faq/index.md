@@ -28,21 +28,21 @@ Prices range from $300 for Bottom Eyeliner to $850 for the Brows + Lips Combo, i
 
 ### How Much Does Each Service Cost?
 
-Prices are identical at both studios, from $300 for Bottom Eyeliner to $850 for the Brows + Lips Combo. Combination Brows is quoted at consultation. The table below lists every service and its price.
+Prices are identical at both studios, from $300 for Bottom Eyeliner to $850 for the Brows + Lips Combo. Combo Brows is quoted at consultation. The table below lists every service and its price.
 
 | Service | Starting price |
 | --- | --- |
 | Nano Brows | $650 |
 | Microblading | $550 |
 | Powder Brows | $550 |
-| Combination Brows | Custom quote |
+| Combo Brows | Custom quote |
 | Nano Combo | $650 |
 | Lip Blush | $550 |
 | Dark Lip Neutralization | $550 |
 | Top Eyeliner | $350 |
-| Smokey Eyeliner | $550 |
+| Smokey Eyeliner | $400 |
 | Bottom Eyeliner | $300 |
-| Eyeliner Combo | $800 |
+| Eyeliner Combo | $550 |
 | Brows + Lips Combo | $850 |
 | Yearly Touch-Up | From $250 |
 
@@ -60,7 +60,7 @@ Technique depends on skin type, how much definition you want, and how the area i
 
 ### What's the Difference Between Strokes and Shading, and Which Suits My Skin?
 
-Stroke techniques, like microblading and nano brows, draw hair-like lines and hold their shape best on normal to dry skin. Shading techniques, like powder brows, deposit soft, diffused pigment that holds up better on oily skin. Combination brows blend both. See the [eyebrow services page](../services/eyebrows/) for detail.
+Stroke techniques, like microblading and nano brows, draw hair-like lines and hold their shape best on normal to dry skin. Shading techniques, like powder brows, deposit soft, diffused pigment that holds up better on oily skin. Combo brows blend both. See the [eyebrow services page](../services/eyebrows/) for detail.
 
 ### What's the Difference Between Lip Blush and Dark Lip Neutralization?
 
@@ -68,7 +68,7 @@ Lip Blush adds a translucent wash of color and a defined lip line to lips withou
 
 ### What Eyeliner Options Are Available?
 
-Options include Top Eyeliner ($350), Bottom Eyeliner ($300), Smokey Eyeliner ($550), and an Eyeliner Combo ($800) covering both lash lines in one visit. Top and bottom define the lash line itself; smokey adds soft, shaded diffusion. See the [eyeliner service page](../services/eyeliner/) to compare all four.
+Options include Top Eyeliner ($350), Bottom Eyeliner ($300), Smokey Eyeliner ($400), and an Eyeliner Combo ($550) covering both lash lines in one visit. Top and bottom define the lash line itself; smokey adds soft, shaded diffusion. See the [eyeliner service page](../services/eyeliner/) to compare all four.
 
 ## How Long Does Permanent Makeup Last, and What Does Healing Look Like?
 

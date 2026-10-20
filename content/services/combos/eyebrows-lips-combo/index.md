@@ -25,7 +25,7 @@ Depending on your goals, your brow treatment may include:
 - [Nano Brows](../../../services/eyebrows/nano-brows/)
 - [Microblading](../../../services/eyebrows/microblading/)
 - [Powder Brows](../../../services/eyebrows/powder-brows/)
-- [Combination Brows](../../../services/eyebrows/combination-brows/)
+- [Combo Brows](../../../services/eyebrows/combination-brows/)
 - [Nano Combo Brows](../../../services/eyebrows/nano-combo/)
 Your lip treatment may include:
 

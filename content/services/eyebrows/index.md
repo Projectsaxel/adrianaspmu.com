@@ -1,6 +1,6 @@
 <!-- Eyebrow Permanent Makeup | Adriana's PMU -->
 <!-- canonical: https://adrianaspmu.com/services/eyebrows/ -->
-> Microblading, nano brows, powder and combination brows in Wilmington MA and Salem NH. Compare techniques, see prices, and book a consultation.
+> Microblading, nano brows, powder and combo brows in Wilmington MA and Salem NH. Compare techniques, see prices, and book a consultation.
 
 # Eyebrow Permanent Makeup
 
@@ -22,9 +22,9 @@ Microblading uses a handheld tool to create fine, hair-like strokes for fuller, 
 
 Powder Brows uses a digital machine to create a soft, shaded brow effect with a polished makeup-like finish that typically lasts 1 to 3 years.
 
-### [Combination Brows](combination-brows/)
+### [Combo Brows](combination-brows/)
 
-Combination Brows blends hair-like strokes with soft shading for fuller, natural-looking eyebrows that typically last 1 to 3 years.
+Combo Brows blends hair-like strokes with soft shading for fuller, natural-looking eyebrows that typically last 1 to 3 years.
 
 ### [Nano Combo Brows](nano-combo/)
 
@@ -51,14 +51,14 @@ Eyebrow permanent makeup at Adriana’s ranges from $550 to $650, falling into t
 | [Nano Brows](nano-brows/) | $650 | Ultra-fine needle, digital machine | Individual hair-like strokes | 1–3 years |
 | [Microblading](microblading/) | $550 | Handheld blade | Fine hair-like strokes | 12–24 months |
 | [Powder Brows](powder-brows/) | $550 | Digital machine, shading motion | Soft, diffused powder-makeup look | 1–3 years |
-| [Combination Brows](combination-brows/) | Custom, set at consultation | Blade strokes plus machine shading | Strokes at the front, shading through the body | 1–3 years |
+| [Combo Brows](combination-brows/) | Custom, set at consultation | Blade strokes plus machine shading | Strokes at the front, shading through the body | 1–3 years |
 | [Nano Combo](nano-combo/) | $650 | Digital machine, strokes plus shading motion | Nano strokes plus soft powder shading | 1–3 years |
 
-Nano Brows and Combination Brows both use strokes, but Nano Brows’ machine-driven needle is generally better tolerated on skin that bleeds or scars easily than Combination Brows’ handheld blade.
+Nano Brows and Combo Brows both use strokes, but Nano Brows’ machine-driven needle is generally better tolerated on skin that bleeds or scars easily than Combo Brows’ handheld blade.
 
 ## Strokes or Shading: How Do You Choose?
 
-The real decision is whether your skin and morning routine call for strokes or shading. Oily skin blurs fine strokes as they heal and holds powder shading better, while drier skin keeps a crisp stroke line longer. Combination Brows and Nano Combo suit clients who want both, confirmed at your consultation.
+The real decision is whether your skin and morning routine call for strokes or shading. Oily skin blurs fine strokes as they heal and holds powder shading better, while drier skin keeps a crisp stroke line longer. Combo Brows and Nano Combo suit clients who want both, confirmed at your consultation.
 
 ## How Does a Brow Appointment Work?
 
@@ -80,9 +80,9 @@ Microblading uses a handheld blade to cut fine strokes by hand. Nano Brows uses 
 
 Choose strokes, like Microblading or Nano Brows, for a hair-like result on normal to dry skin. Choose Powder Brows if your skin is oily, since oil blurs fine strokes but holds soft shading well, or if you already fill your brows in daily.
 
-Combination Brows is priced individually at consultation, since the balance of strokes to shading varies by client, rather than posted as a flat fee. Nano Combo, the machine-driven equivalent of the same idea, has a posted price of $650 instead.
+Combo Brows is priced individually at consultation, since the balance of strokes to shading varies by client, rather than posted as a flat fee. Nano Combo, the machine-driven equivalent of the same idea, has a posted price of $650 instead.
 
-Nano Brows, Powder Brows, Combination Brows, and Nano Combo typically last 1 to 3 years. Microblading typically lasts 12 to 24 months, the shortest of the five, since handheld strokes tend to soften faster over time than machine-placed pigment does.
+Nano Brows, Powder Brows, Combo Brows, and Nano Combo typically last 1 to 3 years. Microblading typically lasts 12 to 24 months, the shortest of the five, since handheld strokes tend to soften faster over time than machine-placed pigment does.
 
 Yes. The [Brows + Lips Combo](../combos/) pairs a customized brow technique with Lip Blush for $850 in one appointment, saving money over booking each treatment separately and cutting two healing periods and two 2nd sessions down to just one, instead.
 

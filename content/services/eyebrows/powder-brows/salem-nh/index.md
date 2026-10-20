@@ -103,7 +103,7 @@ Powder Brows builds a soft, shaded field of pigment with a digital machine, one 
 - [Powder Brows overview](../) — full guide and healing timeline
 - [Microblading](../../microblading/salem-nh/) — $550
 - [Nano Brows](../../nano-brows/salem-nh/) — $650
-- [Combination Brows](../../combination-brows/salem-nh/) — custom quote
+- [Combo Brows](../../combination-brows/salem-nh/) — custom quote
 - [Nano Combo](../../nano-combo/salem-nh/) — $600
 See the [Salem, NH studio page](../../../../locations/salem-nh/) or the [aftercare guide](../../../../aftercare/).
 

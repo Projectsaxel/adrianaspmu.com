@@ -1,21 +1,21 @@
 <!-- Eyeliner Combo in Wilmington, MA | Adriana's PMU -->
 <!-- canonical: https://adrianaspmu.com/services/eyeliner/eyeliner-combo/wilmington-ma/ -->
-> Eyeliner Combo in Wilmington, MA at Adriana's Permanent Makeup, 211 Lowell St, Suite F. $800. Master PMU artist with 20+ years. Call (781) 853-8063 to book.
+> Eyeliner Combo in Wilmington, MA at Adriana's Permanent Makeup, 211 Lowell St, Suite F. $550. Master PMU artist with 20+ years. Call (781) 853-8063 to book.
 
 # Eyeliner Combo in Wilmington, MA
 
-Eyeliner Combo in Wilmington, MA costs $800 and pairs Top and Bottom Eyeliner in one appointment, saving $100 against the $350 and $250 charged when each is booked separately. Book with Master Permanent Makeup Artist Adriana Souza Santos at 211 Lowell Street, Suite F, on Route 129.
+Eyeliner Combo in Wilmington, MA costs $550 and pairs Top and Bottom Eyeliner in one appointment, saving $100 against the $350 and $250 charged when each is booked separately. Book with Master Permanent Makeup Artist Adriana Souza Santos at 211 Lowell Street, Suite F, on Route 129.
 
-**Eyeliner Combo in Wilmington, MA is a $800 procedure at 211 Lowell Street, Suite F, combining Top and Bottom Eyeliner into a single appointment instead of two separate visits.**
+**Eyeliner Combo in Wilmington, MA is a $550 procedure at 211 Lowell Street, Suite F, combining Top and Bottom Eyeliner into a single appointment instead of two separate visits.**
 
 ## How Much Does Eyeliner Combo Cost in Wilmington, MA, and What Do You Save?
 
-Eyeliner Combo in Wilmington, MA costs $800 with Adriana for Top and Bottom Eyeliner performed in one session, compared with $500 for her Top Eyeliner and $400 for her Bottom Eyeliner booked separately, a combined $900. Booking the combo instead saves $100 and eliminates a second appointment, and the price already includes the 2nd session.
+Eyeliner Combo in Wilmington, MA starts at $550 for Top and Bottom Eyeliner performed in one session, compared with $350 for Top Eyeliner and $300 for Bottom Eyeliner booked separately, a combined $650. Booking the combo instead saves $100 and eliminates a second appointment, and the price already includes the 2nd session.
 
 | Item | Detail |
 | --- | --- |
-| Eyeliner Combo price | $800, one appointment |
-| Booked separately | Adriana: Top Eyeliner $500 + Bottom Eyeliner $400 = $900 |
+| Eyeliner Combo price | $550, one appointment |
+| Booked separately | Top Eyeliner $350 + Bottom Eyeliner $300 = $650 |
 | What the combo saves | $100 and one full appointment |
 | What's included | Consultation, mapping, numbing, and both eyeliner procedures |
 | 2nd Session | Included, 6 to 8 weeks after the procedure |
@@ -39,7 +39,7 @@ An Eyeliner Combo appointment at the Wilmington studio starts with a consultatio
 - Top Eyeliner pass, with a sterile single-use needle
 - Bottom Eyeliner pass, in the same appointment
 - Written aftercare instructions to take home
-- 2nd Session, 6 to 8 weeks later, included in the $800
+- 2nd Session, 6 to 8 weeks later, included in the $550
 Full healing detail is in the [aftercare guide](../../../../aftercare/).
 
 ## Why Book Eyeliner Combo at the Wilmington, MA Studio Specifically?
@@ -74,7 +74,7 @@ Deposit terms are confirmed by phone at (781) 853-8063. Signs needing a doctor a
 
 Eyeliner Combo in Wilmington, MA is performed at 211 Lowell Street, Suite F, Wilmington, MA 01887, reached at (781) 853-8063. The studio is open Monday through Saturday, 10:00 a.m. to 6:00 p.m., closed Sunday, a different address than the Salem, NH studio.
 
-Eyeliner Combo in Wilmington, MA costs $800 for both lash lines in one session. Booked separately with Adriana, Top Eyeliner is $500 and Bottom Eyeliner is $400, a combined $900, so the combo saves $100 and one full appointment while still including the 2nd session 6 to 8 weeks later.
+Eyeliner Combo in Wilmington, MA starts at $550 for both lash lines in one session. Booked separately, Top Eyeliner starts at $350 and Bottom Eyeliner at $300, a combined $650, so the combo saves $100 and one full appointment while still including the 2nd session 6 to 8 weeks later.
 
 Yes. Lowell Street in Wilmington is Massachusetts Route 129, and 211 Lowell Street, Suite F sits directly on it. Route 129 crosses Route 38 near the center of town, and the nearest highway access is the I-93 and Route 129 interchange, also in Wilmington.
 
@@ -82,7 +82,7 @@ Wilmington has two MBTA commuter rail stations on two lines. Wilmington station,
 
 Wilmington's Board of Health requires both an establishment permit and an individual practitioner permit for cosmetic tattooing, under M.G.L. Chapter 111, Section 31. The application must state the type of body art sought, and clients may ask to see the Wilmington permit before booking.
 
-The 2nd session is included in the $800 and happens 6 to 8 weeks after the original Eyeliner Combo appointment, correcting any unevenness while healing is still fresh. The yearly touch-up is a separate, paid visit from $250, scheduled about 12 months later to refresh pigment that has naturally faded.
+The 2nd session is included in the price and happens 6 to 8 weeks after the original Eyeliner Combo appointment, correcting any unevenness while healing is still fresh. The yearly touch-up is a separate, paid visit from $250, scheduled about 12 months later to refresh pigment that has naturally faded.
 
 Yes. The Wilmington studio offers payment plans through Cherry Technologies, an independent financing provider separate from Adriana's Permanent Makeup. Options include 4 interest-free payments or a longer plan up to 24 months with interest. Approval is not guaranteed; Cherry sets the terms, not the studio.
 

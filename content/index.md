@@ -58,14 +58,14 @@ Every service links to its own page with technique details, price, and before-an
 | [Nano Brows](services/eyebrows/nano-brows/) | Eyebrows | $650 |
 | [Microblading](services/eyebrows/microblading/) | Eyebrows | $550 |
 | [Powder Brows](services/eyebrows/powder-brows/) | Eyebrows | $550 |
-| [Combination Brows](services/eyebrows/combination-brows/) | Eyebrows | Custom, set at consultation |
+| [Combo Brows](services/eyebrows/combination-brows/) | Eyebrows | Custom, set at consultation |
 | [Nano Combo](services/eyebrows/nano-combo/) | Eyebrows | $650 |
 | [Lip Blush](services/lips/lip-blush/) | Lips | $550 |
 | [Dark Lip Neutralization](services/lips/dark-lip-neutralization/) | Lips | $550 |
 | [Top Eyeliner](services/eyeliner/top-eyeliner/) | Eyeliner | $350 |
-| [Smokey Eyeliner](services/eyeliner/smokey-eyeliner/) | Eyeliner | $550 |
+| [Smokey Eyeliner](services/eyeliner/smokey-eyeliner/) | Eyeliner | $400 |
 | [Bottom Eyeliner](services/eyeliner/bottom-eyeliner/) | Eyeliner | $300 |
-| [Eyeliner Combo](services/eyeliner/eyeliner-combo/) | Eyeliner | $800 |
+| [Eyeliner Combo](services/eyeliner/eyeliner-combo/) | Eyeliner | $550 |
 | [Brows + Lips Combo](services/combos/eyebrows-lips-combo/) | Combos | $850 |
 | [Yearly Touch-Up](services/touch-ups/yearly-touch-up/) | Touch-Ups | from $250 |
 

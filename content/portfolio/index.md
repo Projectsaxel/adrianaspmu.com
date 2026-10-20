@@ -38,7 +38,7 @@ The photos in this gallery are not individually labeled as fresh or healed. Anyo
 
 A permanent makeup result depends on four factors that vary from client to client: the client's skin type, the natural density of the brow or lip tissue being worked on, how closely aftercare instructions are followed, and how many sessions the plan includes. No photo in this gallery can substitute for a consultation that looks at these four factors on your own skin.
 
-Oilier skin tends to hold powder and shading techniques better than fine hairstroke work, since oil can blur a crisp line over time; drier skin generally holds a fine stroke longer. Adriana Souza Santos assesses skin type at consultation before recommending Nano Brows, Microblading, Powder Brows, or Combination Brows.
+Oilier skin tends to hold powder and shading techniques better than fine hairstroke work, since oil can blur a crisp line over time; drier skin generally holds a fine stroke longer. Adriana Souza Santos assesses skin type at consultation before recommending Nano Brows, Microblading, Powder Brows, or Combo Brows.
 
 Natural brow density changes what a technique can do: strokes drawn over existing hair blend differently than strokes drawn over sparse or absent hair. The same applies to lip tissue — naturally darker lip pigment may need the [dark lip neutralization](../services/lips/dark-lip-neutralization/) step before a [lip blush](../services/lips/lip-blush/) color can show true.
 
@@ -55,7 +55,7 @@ Twelve named techniques appear across this portfolio's Eyebrows, Lips, and Eyeli
 | [Nano Brows](../services/eyebrows/nano-brows/) | Eyebrows | $650 |
 | [Microblading](../services/eyebrows/microblading/) | Eyebrows | $550 |
 | [Powder Brows](../services/eyebrows/powder-brows/) | Eyebrows | $550 |
-| [Combination Brows](../services/eyebrows/combination-brows/) | Eyebrows | Custom quote |
+| [Combo Brows](../services/eyebrows/combination-brows/) | Eyebrows | Custom quote |
 | [Nano Combo](../services/eyebrows/nano-combo/) | Eyebrows | $600 |
 | [Lip Blush](../services/lips/lip-blush/) | Lips | $550 |
 | [Dark Lip Neutralization](../services/lips/dark-lip-neutralization/) | Lips | $550 |
@@ -65,7 +65,7 @@ Twelve named techniques appear across this portfolio's Eyebrows, Lips, and Eyeli
 | [Eyeliner Combo](../services/eyeliner/eyeliner-combo/) | Eyeliner | $500 |
 | [Brows + Lips Combo](../services/combos/eyebrows-lips-combo/) | Combo | $850 |
 
-Every price above already includes the 2nd session 6 to 8 weeks later. Combination Brows is quoted at consultation because the exact blend of stroke and shading varies by client.
+Every price above already includes the 2nd session 6 to 8 weeks later. Combo Brows is quoted at consultation because the exact blend of stroke and shading varies by client.
 
 ## Which Artist Performs the Work Shown Here, and Where?
 
