@@ -1205,7 +1205,7 @@
       stage.addEventListener("pointercancel", function () { x0 = null; });
 
       /* --- passagem automatica ---------------------------------
-         Pedido da Rachel (25/09/2026): troca a cada 1s, para a visitante
+         Pedido da Rachel (25/09/2026): troca a cada 1s (22/10: passou a 2,5s), para a visitante
          perceber que ha muitas fotos. Movimento chama atencao. As setas,
          o arrasto e o teclado continuam funcionando.
 
@@ -1220,7 +1220,7 @@
             Rachel), mas sem animacao: o CSS zera a transicao
          O hover NAO pausa mais: no desktop o cursor quase sempre esta
          em cima da galeria e ela parecia parada. */
-      const INTERVALO = 1000;
+      const INTERVALO = 2500;      // 22/10/2026: era 1000; a Rachel achou rapido demais
       const RETOMA = 4000;
       const semMovimento = window.matchMedia("(prefers-reduced-motion: reduce)");
       let timer = null;
