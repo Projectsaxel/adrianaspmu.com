@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19T16:59:05Z",
+ "updated": "2026-10-22T15:17:05Z",
  "units": {
   "wilmington": {
    "label": "Wilmington, MA",
@@ -10,8 +10,8 @@
   "salem": {
    "label": "Salem, NH",
    "maps": "https://maps.google.com/?cid=8332848331847351639",
-   "rating": 4.5,
-   "total": 8
+   "rating": 4.6,
+   "total": 9
   }
  },
  "reviews": {
@@ -1347,6 +1347,15 @@
    "date": "2023-05-05",
    "month": "May 2023"
   },
+  "AbFvOqmK9YASA6EyKdOVGEEPzzpIIFFAu4BCxlCp7_ajFihpov1QXpDeKFRyvGCIg4vTu0oCb__rvA": {
+   "id": "AbFvOqmK9YASA6EyKdOVGEEPzzpIIFFAu4BCxlCp7_ajFihpov1QXpDeKFRyvGCIg4vTu0oCb__rvA",
+   "unit": "salem",
+   "name": "Carolina S.",
+   "rating": 5,
+   "text": "Adriana is a true professional in every sense of the word. She doesn't just do her job because it's a job; she loves what she does, and that's reflected in the satisfaction she feels when she sees the finished product, making sure the client is happy with the result. Adriana asks several times if I like how my eyebrows turned out and if there's anything else she could improve. In all the years I've gone to her for appointments, she's always treated me with the same care and dedication to what she loves most. It's a really lovely environment, her team is very friendly, and it's easy to get to her. Thank you, Adriana, for making me feel beautiful.",
+   "date": "2026-10-19",
+   "month": "October 2026"
+  },
   "AbFvOqlHJ8AyBQFHtjI6ZP71C1yTH2IzUVSJh3c35RQBEWrFdk8yif5SA_fBAAtKz6uIXvLZcKwuOg": {
    "id": "AbFvOqlHJ8AyBQFHtjI6ZP71C1yTH2IzUVSJh3c35RQBEWrFdk8yif5SA_fBAAtKz6uIXvLZcKwuOg",
    "unit": "salem",
@@ -1490,9 +1499,9 @@
   },
   "eyebrows": {
    "all": [
+    "AbFvOqmK9YASA6EyKdOVGEEPzzpIIFFAu4BCxlCp7_ajFihpov1QXpDeKFRyvGCIg4vTu0oCb__rvA",
     "AbFvOqm-3hcZsn3j-obtHCW9_J0LeIFOrRDIaFT8qAvmVFNnWb8bK5At63Zt3-qbwOBhTgbJWMEGcQ",
-    "AbFvOqkwaaR5O0qHzHNmviLuro48FJHb65Flmn1CBIyO4hB71gjC7SnHIlXJSI6KWsNBg6fhcjG0",
-    "AbFvOqnv9WlfDzQLnTgxhh2bAPGXGwKDr10FSkOMLc61f91SeMGcf8BXD6VFVdEM00lu8xNqIZ8FfQ"
+    "AbFvOqkwaaR5O0qHzHNmviLuro48FJHb65Flmn1CBIyO4hB71gjC7SnHIlXJSI6KWsNBg6fhcjG0"
    ],
    "wilmington": [
     "AbFvOqkwaaR5O0qHzHNmviLuro48FJHb65Flmn1CBIyO4hB71gjC7SnHIlXJSI6KWsNBg6fhcjG0",
@@ -1500,9 +1509,9 @@
     "AbFvOqmOPn2FUv0AlOwm8KC67W-TfGjvF5BPQF_KgcI78i47ZfYlopmR36_-hWRvvYFLSImTB5zA"
    ],
    "salem": [
+    "AbFvOqmK9YASA6EyKdOVGEEPzzpIIFFAu4BCxlCp7_ajFihpov1QXpDeKFRyvGCIg4vTu0oCb__rvA",
     "AbFvOqm-3hcZsn3j-obtHCW9_J0LeIFOrRDIaFT8qAvmVFNnWb8bK5At63Zt3-qbwOBhTgbJWMEGcQ",
-    "AbFvOqlyWdBDeVbVN6pynarRh8kYSv6DckulnzqY6-2D6VWsmack_39-7L0oQxWuA-np1JzOwgkXDA",
-    "AbFvOqkoBFqchXaydumpYX6eatYchN6JDeWoTXMqZiRy3RS2upjem9l3uhiU5HKYlQb9pY9bAHuo"
+    "AbFvOqlyWdBDeVbVN6pynarRh8kYSv6DckulnzqY6-2D6VWsmack_39-7L0oQxWuA-np1JzOwgkXDA"
    ]
   },
   "lip-blush": {
@@ -1708,9 +1717,9 @@
   },
   "_any": {
    "all": [
+    "AbFvOqmK9YASA6EyKdOVGEEPzzpIIFFAu4BCxlCp7_ajFihpov1QXpDeKFRyvGCIg4vTu0oCb__rvA",
     "AbFvOqlHJ8AyBQFHtjI6ZP71C1yTH2IzUVSJh3c35RQBEWrFdk8yif5SA_fBAAtKz6uIXvLZcKwuOg",
-    "AbFvOqmJASxDKrGn5b8tCVkPPaB5k37K2RRYxjt5NNvpp9pEWghxKGXzsXDSrKdYGmaktIihX19iDA",
-    "AbFvOqlzEm8rKobLvWfXlHtRlCv8zY-YJ1oURQ1WKDtdRbrUp1m1xa04yKPHMK1PMRuADDcbQG-jlg"
+    "AbFvOqmJASxDKrGn5b8tCVkPPaB5k37K2RRYxjt5NNvpp9pEWghxKGXzsXDSrKdYGmaktIihX19iDA"
    ],
    "wilmington": [
     "AbFvOqmJASxDKrGn5b8tCVkPPaB5k37K2RRYxjt5NNvpp9pEWghxKGXzsXDSrKdYGmaktIihX19iDA",
@@ -1718,9 +1727,9 @@
     "AbFvOqni9oDEQDs4Ttkj8lPVu0fkKu0nIe8FTaJxAT-W9MkGOR06GqSjHzIWVVBcldaEtNMXa68q"
    ],
    "salem": [
+    "AbFvOqmK9YASA6EyKdOVGEEPzzpIIFFAu4BCxlCp7_ajFihpov1QXpDeKFRyvGCIg4vTu0oCb__rvA",
     "AbFvOqlHJ8AyBQFHtjI6ZP71C1yTH2IzUVSJh3c35RQBEWrFdk8yif5SA_fBAAtKz6uIXvLZcKwuOg",
-    "AbFvOqm-3hcZsn3j-obtHCW9_J0LeIFOrRDIaFT8qAvmVFNnWb8bK5At63Zt3-qbwOBhTgbJWMEGcQ",
-    "AbFvOqmHpjiDbb81OJ8soeeu1voLQUgiJbUMQQ3bj89MmgIUYY7nErglT5AtEXb7hX6HqQAoDB0hqg"
+    "AbFvOqm-3hcZsn3j-obtHCW9_J0LeIFOrRDIaFT8qAvmVFNnWb8bK5At63Zt3-qbwOBhTgbJWMEGcQ"
    ]
   }
  }
