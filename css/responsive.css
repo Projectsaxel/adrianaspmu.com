@@ -19,7 +19,7 @@
   .hero-shot[data-shot="3"] { --rx: .223; --rw: .509; --fy: .22; }
   .hero-shot[data-shot="4"] { --rx: .148; --rw: .626; --fy: .19; }
   .hero-shot[data-shot="5"] { --rx: .143; --rw: .624; --fy: .10; }
-  .hero-shot[data-shot="6"] { --rx: .178; --rw: .589; --fy: .179; }
+  .hero-shot[data-shot="6"] { --rx: .178; --rw: .589; --fy: .034; }
 }
 @media (min-width: 430px) and (max-width: 519.98px) {
   .hero-shot[data-shot="0"] { --fy: .22; }
@@ -28,7 +28,7 @@
   .hero-shot[data-shot="3"] { --rx: .197; --rw: .558; --fy: .21; }
   .hero-shot[data-shot="4"] { --rx: .117; --rw: .681; --fy: .17; }
   .hero-shot[data-shot="5"] { --rx: .112; --rw: .682; --fy: .09; }
-  .hero-shot[data-shot="6"] { --rx: .144; --rw: .633; --fy: .179; }
+  .hero-shot[data-shot="6"] { --rx: .144; --rw: .633; --fy: .031; }
 }
 @media (min-width: 520px) and (max-width: 767.98px) {
   /* aqui a composicao inteira cobre a caixa (a foto nitida fica no centro,
@@ -38,7 +38,7 @@
   .hero-shot[data-shot="2"] { --py: 42%; }
   .hero-shot[data-shot="3"] { --py: 55%; }
   .hero-shot[data-shot="4"] { --py: 30%; }
-  .hero-shot[data-shot="6"] { --py: 49%; }
+  .hero-shot[data-shot="6"] { --py: 50%; }
 }
 
 @media (max-width: 767.98px) {
