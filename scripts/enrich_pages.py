@@ -45,7 +45,7 @@ SALEM_NODE = {
     },
     "geo": {"@type": "GeoCoordinates", "latitude": 42.782612, "longitude": -71.228213},
     "image": f"{BASE}/assets/images/locations/adrianas-permanent-makeup-salem-nh-storefront.webp",
-    "priceRange": "$250-$850",
+    "priceRange": "$250-$1,380",
 }
 
 
@@ -257,7 +257,7 @@ BROW_SERVICES = [
     ("microblading", "Microblading", "Fios desenhados um a um" and "Hair-like strokes drawn one by one for natural fill"),
     ("nano-brows", "Nano Brows", "Machine-drawn nano strokes, great for most skin types"),
     ("nano-combo", "Nano Combo", "Nano strokes plus soft shading for extra density"),
-    ("powder-brows", "Ombr\u00e9 Powder Brows", "Soft powdered finish, ideal for oily skin"),
+    ("ombre-shading", "Ombr\u00e9 Shading", "Soft powdered finish, ideal for oily skin"),
     ("combination-brows", "Combo Brows", "Strokes at the front, shading through the body"),
 ]
 EYELINER_SERVICES = [
@@ -511,7 +511,7 @@ IMG_TEXT = {
     # servicos: o alt e o nome da tecnica, o title diz o resultado
     "nano-brows.webp": (None, "Nano Brows: hair-like strokes made with an ultra-fine machine needle"),
     "microblading.webp": (None, "Microblading: hair-like strokes made with a handheld blade"),
-    "powder-brows.webp": (None, "Powder Brows: soft shaded finish, like brows filled with powder"),
+    "powder-brows.webp": (None, "Ombré Shading: soft shaded finish, like brows filled with powder"),
     "combination-brows.webp": (None, "Combo Brows: hair-like strokes blended with soft shading"),
     "nano-combo.webp": (None, "Nano Combo Brows: nano strokes layered with powder shading"),
     "lip-blush.webp": (None, "Lip Blush: a soft tint that enhances natural lip colour and shape"),
@@ -587,7 +587,7 @@ def add_img_text(s, path_rel):
 ORG_EXTRA = {
     "description": (
         "Permanent makeup studio and training academy serving Wilmington, Massachusetts "
-        "and Salem, New Hampshire. Nano brows, microblading, powder brows, lip blush, "
+        "and Salem, New Hampshire. Nano brows, microblading, ombré shading, lip blush, "
         "dark lip neutralization and permanent eyeliner, performed by licensed artists. "
         "Consultations in English, Portuguese and Spanish."
     ),
@@ -702,12 +702,12 @@ PROOF = {
   "wilmington-ma": ("Healed nano combo brows seen straight on, with visible strokes over a light shaded base",
     "Nano combo healed: strokes sitting over a light shaded base.",
     "The shading is kept light enough that the strokes stay legible through it. Pushed darker, the two techniques collapse into one flat brow."), },
- "powder-brows": {
-  "salem-nh": ("Healed powder brows with a soft shaded fill and a defined tail, no visible hair strokes",
-    "Powder brows healed: shaded fill, no strokes.",
+ "ombre-shading": {
+  "salem-nh": ("Healed ombré shading with a soft shaded fill and a defined tail, no visible hair strokes",
+    "Ombré shading healed: shaded fill, no strokes.",
     "There are no hair strokes in this technique at all. The pigment is built in fine dots, densest at the tail and faded toward the front, which is what gives the makeup-like finish."),
-  "wilmington-ma": ("Healed powder brows with a softly graded fill that is lightest at the inner corner",
-    "Powder brows healed: lightest at the inner corner.",
+  "wilmington-ma": ("Healed ombré shading with a softly graded fill that is lightest at the inner corner",
+    "Ombré shading healed: lightest at the inner corner.",
     "The gradient runs front to tail. Keeping the inner corner light is what stops a shaded brow from reading as a block."), },
  "eyeliner-combo": {
   "salem-nh": ("Healed eyeliner combo on a closed eye, pigment along both the upper and the lower lash line",
@@ -1031,12 +1031,12 @@ SERVICE_FIT = {
     "nano-brows": (
         "Nano strokes are machine-drawn and suit most skin types, which is why they "
         "cost more than microblading here ($650 against $550)."),
-    "powder-brows": (
+    "ombre-shading": (
         "Powder shading is the technique that holds best on oily skin, where "
         "hair-stroke work tends to blur."),
     "combination-brows": (
         "Strokes at the front and shading through the body. Because the mix changes "
-        "per face, this is the one service quoted at the consultation, not price-listed."),
+        "per face, the artist confirms the plan at the consultation; it starts at $550 with Livy and $790 with Adriana."),
     "nano-combo": (
         "Nano strokes plus soft shading, for density without a fully powdered look."),
     "lip-blush": (
@@ -1049,7 +1049,7 @@ SERVICE_FIT = {
     "bottom-eyeliner": "Lower lash line only, the most subtle of the eyeliner options at $250.",
     "smokey-eyeliner": "A shaded, diffused finish rather than a defined line.",
     "eyeliner-combo": "Top and bottom in the same appointment, at $500 instead of $350 plus $250 separately.",
-    "eyebrows-lips-combo": "Brows and lips in one visit at $850, against $1,100 booked separately.",
+    "eyebrows-lips-combo": "Brows and lips in one visit at $850 with Livy ($1,380 with Adriana), against $1,100 booked separately.",
     "yearly-touch-up": (
         "Priced from $300 by how much pigment is left, so the quote depends on a look "
         "at your current result, not on a table."),
@@ -1078,7 +1078,7 @@ def _criteria_rows(fit_text):
          "The 2nd session, 6 to 8 weeks after the appointment, is included in the price of every first-time procedure. The yearly touch-up, from $300, is a separate visit about 12 months later."),
         ("Whether the price is published at all",
          "Ask for the price before the consultation. A studio that will not name a range before seeing you is not comparable to one that will.",
-         "All 13 services are published with their prices, from $250 to $850, on the <a href=\"{up}prices/\">price list</a>."),
+         "All 13 services are published with their prices, from $300 to $1,380, on the <a href=\"{up}prices/\">price list</a>."),
         ("When they say no",
          "Ask what would make them refuse to perform the procedure. An artist who never refuses is a warning sign.",
          "Pregnancy, breastfeeding, under 18 and isotretinoin are refused at both studios with no exception. The full list is in the <a href=\"{up}aftercare/\">contraindications guide</a>, published before you book rather than after."),
@@ -1143,7 +1143,7 @@ def add_criteria(s, path_rel):
 # ====================================================================
 
 FAQ_PRICES = {
-    "microblading": "550", "nano-brows": "650", "powder-brows": "550",
+    "microblading": "550", "nano-brows": "650", "ombre-shading": "550",
     "nano-combo": "600", "lip-blush": "550", "dark-lip-neutralization": "550",
     "top-eyeliner": "350", "smokey-eyeliner": "400", "bottom-eyeliner": "250",
     "eyeliner-combo": "500", "eyebrows-lips-combo": "850",
@@ -1167,7 +1167,7 @@ def _faq_extra(label, price, up):
             f"How is {label} priced?",
             f"{label} is quoted at the consultation rather than listed at a fixed price, "
             f"because the work needed changes from face to face. Every other service is "
-            f"published openly, from $250 to $850, on the "
+            f"published openly, from $300 to $1,380, on the "
             f"<a href=\"{up}prices/\">price list</a>, so you can see the range the studio "
             f"works in before you book anything."))
 
@@ -1351,10 +1351,10 @@ FAQ_BY_PAGE = {
     ],
     "services/index.html": [
         ("How much do the services cost?",
-         "Thirteen services are published with their prices, from $250 for bottom eyeliner to "
-         "$850 for the brows and lips combo. The price of every first-time procedure already includes the perfecting "
-         "session 6 to 8 weeks later. The full table is on the price list, and combo brows "
-         "is the one service quoted at the consultation."),
+         "Thirteen services are published with their prices, from $300 for bottom eyeliner to "
+         "$1,380 for the brows and lips combo with Adriana. The price of every first-time procedure already includes the perfecting "
+         "session 6 to 8 weeks later. The full table, with Livy's and Adriana's "
+         "prices, is on the price list."),
         ("Can I pay in installments?",
          "Yes. Cherry offers 4 interest-free payments, or up to 24 months with interest. Checking "
          "your options takes about a minute and uses a soft credit check, so it does not affect "
@@ -1388,7 +1388,7 @@ FAQ_BY_PAGE = {
          "VIP Masterclass are taught there. No client procedures happen at that address, so never "
          "book a brow or lip appointment for Peabody."),
         ("Do the two studios charge the same?",
-         "Yes. The same 13 services are published at the same prices at both, from $250 to $850, "
+         "Yes. The same 13 services are published at the same prices at both, from $300 to $1,380, "
          "and the price of every first-time procedure includes the 2nd session 6 to 8 weeks later. What "
          "differs between them is the phone number and the licensing regime, not the price list."),
         ("Are the licences different in Massachusetts and New Hampshire?",
@@ -1672,7 +1672,7 @@ def add_payment_steps(s, path_rel):
         "plan of up to 24 months with interest. Cherry sets the terms and the approval, not "
         "the studio.</li>"
         "<li><strong>Book the appointment</strong> at Wilmington or Salem for the service you "
-        "chose, from $250 to $850.</li>"
+        "chose, from $300 to $1,380.</li>"
         "<li><strong>Have the procedure</strong>, 2nd session included in the original "
         "price, 6 to 8 weeks later at no extra charge.</li>"
         "<li><strong>Pay Cherry on your schedule</strong> over the plan you picked, rather "
@@ -2022,7 +2022,7 @@ LOCATION_FIELDS = {
         "url": f"{BASE}/locations/wilmington-ma/",
         "image": f"{BASE}/assets/images/locations/wilmington-ma-studio-entrance.webp",
         "parentOrganization": {"@id": f"{BASE}/#organization"},
-        "priceRange": "$250-$850",
+        "priceRange": "$250-$1,380",
         "openingHoursSpecification": HOURS,
         "hasMap": "https://maps.google.com/?cid=16715673055892397510",
         "name": "Adriana's Permanent Makeup",
@@ -2031,7 +2031,7 @@ LOCATION_FIELDS = {
     f"{BASE}/#salem": {
         "url": f"{BASE}/locations/salem-nh/",
         "parentOrganization": {"@id": f"{BASE}/#organization"},
-        "priceRange": "$250-$850",
+        "priceRange": "$250-$1,380",
         "openingHoursSpecification": HOURS,
         "hasMap": "https://maps.google.com/?cid=8332848331847351639",
         "name": "Adriana's Permanent Makeup",

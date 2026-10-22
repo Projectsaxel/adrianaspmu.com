@@ -101,7 +101,7 @@ Microblading is one of five brow techniques available at the Wilmington studio, 
 
 - [Microblading overview](../) — full technique guide and healing timeline
 - [Nano Brows in Wilmington](../../nano-brows/wilmington-ma/) — $650
-- [Powder Brows in Wilmington](../../powder-brows/wilmington-ma/) — $550
+- [Powder Brows in Wilmington](../../ombre-shading/wilmington-ma/) — $550
 - [Combo Brows in Wilmington](../../combination-brows/wilmington-ma/) — custom quote
 - [Nano Combo in Wilmington](../../nano-combo/wilmington-ma/) — $600
 See the [Wilmington, MA studio page](../../../../locations/wilmington-ma/) or the [aftercare guide](../../../../aftercare/).

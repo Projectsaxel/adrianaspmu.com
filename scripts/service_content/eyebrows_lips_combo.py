@@ -19,7 +19,7 @@ def eyebrows_lips_combo_sections(base: str) -> str:
     <ul class="service-list">
       <li><a href="{base}services/eyebrows/nano-brows/">Nano Brows</a></li>
       <li><a href="{base}services/eyebrows/microblading/">Microblading</a></li>
-      <li><a href="{base}services/eyebrows/powder-brows/">Powder Brows</a></li>
+      <li><a href="{base}services/eyebrows/ombre-shading/">Ombré Shading</a></li>
       <li><a href="{base}services/eyebrows/combination-brows/">Combination Brows</a></li>
       <li><a href="{base}services/eyebrows/nano-combo/">Nano Combo Brows</a></li>
     </ul>

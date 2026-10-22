@@ -57,7 +57,7 @@ Every service links to its own page with technique details, price, and before-an
 | --- | --- | --- |
 | [Nano Brows](services/eyebrows/nano-brows/) | Eyebrows | $650 |
 | [Microblading](services/eyebrows/microblading/) | Eyebrows | $550 |
-| [Powder Brows](services/eyebrows/powder-brows/) | Eyebrows | $550 |
+| [Powder Brows](services/eyebrows/ombre-shading/) | Eyebrows | $550 |
 | [Combo Brows](services/eyebrows/combination-brows/) | Eyebrows | Custom, set at consultation |
 | [Nano Combo](services/eyebrows/nano-combo/) | Eyebrows | $650 |
 | [Lip Blush](services/lips/lip-blush/) | Lips | $550 |

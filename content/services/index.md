@@ -22,7 +22,7 @@ Microblading uses a handheld tool to create fine, hair-like strokes for fuller, 
 
 $550
 
-### [Powder Brows](eyebrows/powder-brows/)
+### [Powder Brows](eyebrows/ombre-shading/)
 
 Powder Brows uses a digital machine to create a soft, shaded brow effect with a polished makeup-like finish that typically lasts 1 to 3 years.
 

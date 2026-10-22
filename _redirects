@@ -45,7 +45,7 @@
 /microblading/                  /services/eyebrows/microblading/          301
 /nano-brows-3d/                 /services/eyebrows/nano-brows/            301
 /nano-brows-combo/              /services/eyebrows/nano-combo/            301
-/ombre-shading-powder-brows/    /services/eyebrows/powder-brows/          301
+/ombre-shading-powder-brows/    /services/eyebrows/ombre-shading/          301
 /microshading/                  /services/eyebrows/combination-brows/     301
 
 # Servicos: labios
@@ -111,7 +111,7 @@
 /microblading                /services/eyebrows/microblading/          301
 /nano-brows-3d               /services/eyebrows/nano-brows/            301
 /nano-brows-combo            /services/eyebrows/nano-combo/            301
-/ombre-shading-powder-brows  /services/eyebrows/powder-brows/          301
+/ombre-shading-powder-brows  /services/eyebrows/ombre-shading/          301
 /microshading                /services/eyebrows/combination-brows/     301
 /lip-blush                   /services/lips/lip-blush/                 301
 /dark-lip-neutralization     /services/lips/dark-lip-neutralization/   301
@@ -528,9 +528,19 @@
 /services/eyebrows/nano-combo/index.html                         /services/eyebrows/nano-combo/                         301
 /services/eyebrows/nano-combo/salem-nh/index.html                /services/eyebrows/nano-combo/salem-nh/                301
 /services/eyebrows/nano-combo/wilmington-ma/index.html           /services/eyebrows/nano-combo/wilmington-ma/           301
-/services/eyebrows/powder-brows/index.html                       /services/eyebrows/powder-brows/                       301
-/services/eyebrows/powder-brows/salem-nh/index.html              /services/eyebrows/powder-brows/salem-nh/              301
-/services/eyebrows/powder-brows/wilmington-ma/index.html         /services/eyebrows/powder-brows/wilmington-ma/         301
+/services/eyebrows/ombre-shading/index.html                      /services/eyebrows/ombre-shading/                      301
+/services/eyebrows/ombre-shading/salem-nh/index.html             /services/eyebrows/ombre-shading/salem-nh/             301
+/services/eyebrows/ombre-shading/wilmington-ma/index.html        /services/eyebrows/ombre-shading/wilmington-ma/        301
+# Powder Brows virou Ombre Shading (22/10/2026): endereco antigo -> novo, permanente
+/services/eyebrows/powder-brows/index.html                       /services/eyebrows/ombre-shading/                      301
+/services/eyebrows/powder-brows/salem-nh/index.html              /services/eyebrows/ombre-shading/salem-nh/             301
+/services/eyebrows/powder-brows/wilmington-ma/index.html         /services/eyebrows/ombre-shading/wilmington-ma/        301
+/services/eyebrows/powder-brows/salem-nh/                        /services/eyebrows/ombre-shading/salem-nh/             301
+/services/eyebrows/powder-brows/salem-nh                         /services/eyebrows/ombre-shading/salem-nh/             301
+/services/eyebrows/powder-brows/wilmington-ma/                   /services/eyebrows/ombre-shading/wilmington-ma/        301
+/services/eyebrows/powder-brows/wilmington-ma                    /services/eyebrows/ombre-shading/wilmington-ma/        301
+/services/eyebrows/powder-brows/                                 /services/eyebrows/ombre-shading/                      301
+/services/eyebrows/powder-brows                                  /services/eyebrows/ombre-shading/                      301
 /services/eyeliner/index.html                                    /services/eyeliner/                                    301
 /services/eyeliner/bottom-eyeliner/index.html                    /services/eyeliner/bottom-eyeliner/                    301
 /services/eyeliner/bottom-eyeliner/salem-nh/index.html           /services/eyeliner/bottom-eyeliner/salem-nh/           301

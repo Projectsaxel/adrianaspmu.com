@@ -58,7 +58,7 @@ from service_content.yearly_touch_up import yearly_touch_up_sections  # noqa: E4
 RICH_SERVICE_SECTIONS = {
     "nano-brows": nano_brows_sections,
     "microblading": microblading_sections,
-    "powder-brows": powder_brows_sections,
+    "ombre-shading": powder_brows_sections,
     "lip-blush": lip_blush_sections,
     "dark-lip-neutralization": dark_lip_neutralization_sections,
     "combination-brows": combination_brows_sections,
@@ -505,18 +505,18 @@ SERVICES = {
             ("Can I wear makeup after Microblading?", "You should avoid applying makeup directly on the treated area until the healing process is complete."),
             ("Will my brows look natural?", "Yes. Our goal is to create realistic hair strokes that blend seamlessly with your natural brows."),
         ]},
-    "powder-brows": {"cat": "eyebrows", "name": "Powder Brows", "price": 550,
-        "title": "Powder Brows in Wilmington MA & Salem NH | Soft Shaded Brows",
-        "h1": "Powder Brows in Wilmington, MA & Salem, NH",
-        "desc": "Get beautifully defined Powder Brows in Wilmington, MA and Salem, NH. Enjoy soft, long-lasting, makeup-inspired eyebrows customized for your unique look.",
-        "answer": "Powder Brows uses a digital machine to create a soft, shaded brow effect with a polished makeup-like finish that typically lasts 1 to 3 years.",
+    "ombre-shading": {"cat": "eyebrows", "name": "Ombré Shading", "price": 550,
+        "title": "Ombré Shading in Wilmington MA & Salem NH | Soft Shaded Brows",
+        "h1": "Ombré Shading in Wilmington, MA & Salem, NH",
+        "desc": "Get beautifully defined Ombré Shading in Wilmington, MA and Salem, NH. Enjoy soft, long-lasting, makeup-inspired eyebrows customized for your unique look.",
+        "answer": "Ombré Shading uses a digital machine to create a soft, shaded brow effect with a polished makeup-like finish that typically lasts 1 to 3 years.",
         "rich_content": True,
-        "cta_heading": "Schedule Your Powder Brows Appointment",
+        "cta_heading": "Schedule Your Ombré Shading Appointment",
         "cta_lead": "Ready to enjoy beautifully defined brows with a soft makeup finish?",
-        "cta_body": "Book your Powder Brows consultation with Adriana Beauty Services – Permanent Makeup and discover how effortless beautiful brows can be.",
+        "cta_body": "Book your Ombré Shading consultation with Adriana Beauty Services – Permanent Makeup and discover how effortless beautiful brows can be.",
         "faqs": [
-            ("Are Powder Brows painful?", "Most clients experience minimal discomfort thanks to topical numbing products used during the procedure."),
-            ("Are Powder Brows better for oily skin?", "Yes. Powder Brows are often recommended for clients with oily skin because the shading technique tends to heal beautifully and retain pigment well."),
+            ("Are Ombré Shading painful?", "Most clients experience minimal discomfort thanks to topical numbing products used during the procedure."),
+            ("Are Ombré Shading better for oily skin?", "Yes. Ombré Shading is often recommended for clients with oily skin because the shading technique tends to heal beautifully and retain pigment well."),
             ("How long does the appointment take?", "Most sessions take approximately 2 to 3 hours."),
             ("How long is the healing process?", "Initial healing typically occurs within 1 to 2 weeks, while complete healing may take up to 8 weeks."),
             ("Will my brows look too dark?", "No. Brows will initially appear darker and gradually soften as they heal, resulting in a natural and balanced appearance."),
@@ -540,7 +540,7 @@ SERVICES = {
     "combination-brows": {"cat": "eyebrows", "name": "Combo Brows", "price": None,
         "title": "Combo Brows in Wilmington MA & Salem NH | Full Natural Brows",
         "h1": "Combo Brows in Wilmington, MA & Salem, NH",
-        "desc": "Get the best of Microblading and Powder Brows with Combo Brows in Wilmington, MA and Salem, NH. Enjoy natural-looking, fuller, beautifully defined eyebrows.",
+        "desc": "Get the best of Microblading and Ombré Shading with Combo Brows in Wilmington, MA and Salem, NH. Enjoy natural-looking, fuller, beautifully defined eyebrows.",
         "answer": "Combo Brows blends hair-like strokes with soft shading for fuller, natural-looking eyebrows that typically last 1 to 3 years.",
         "rich_content": True,
         "cta_heading": "Schedule Your Combo Brows Consultation",
@@ -710,7 +710,7 @@ def fresha_book_btn(slug, label="Book Now", css_class="btn btn-primary"):
     )
 
 CATEGORY_ORDER = [
-    ("eyebrows", "Eyebrow Permanent Makeup", ["nano-brows", "microblading", "powder-brows", "combination-brows", "nano-combo"]),
+    ("eyebrows", "Eyebrow Permanent Makeup", ["nano-brows", "microblading", "ombre-shading", "combination-brows", "nano-combo"]),
     ("lips", "Lip Permanent Makeup", ["lip-blush", "dark-lip-neutralization"]),
     ("eyeliner", "Permanent Eyeliner", ["top-eyeliner", "smokey-eyeliner", "bottom-eyeliner", "eyeliner-combo"]),
     ("combos", "Combo Packages", ["eyebrows-lips-combo"]),
@@ -744,7 +744,7 @@ def home_service_card(slug):
 
 CATEGORY_CARDS = {
     "eyebrows": ("Eyebrows", "nano-brows",
-                 "Nano Brows, Microblading, Powder Brows and combination techniques, shaped to your natural features."),
+                 "Nano Brows, Microblading, Ombré Shading and Combo Brows, shaped to your natural features."),
     "lips": ("Lips", "lip-blush",
              "Lip Blush and dark lip neutralization for soft, natural color and definition."),
     "eyeliner": ("Eyeliner", "top-eyeliner",
@@ -917,7 +917,7 @@ for city_file, h1, street, phone, area, tag in [
 ]:
     svc_links = "".join(
         f'<li><a href="../../services/{SERVICES[s]["cat"]}/{s}/{city_file}/">{SERVICES[s]["name"]} in {city_file.replace("-", " ").title().replace("Ma", "MA").replace("Nh", "NH")}</a></li>'
-        for s in ["nano-brows", "microblading", "powder-brows", "lip-blush"])
+        for s in ["nano-brows", "microblading", "ombre-shading", "lip-blush"])
     body = f'<section class="page-hero"><div class="container">{tag}<h1>{h1}</h1><p>{street}<br><a href="tel:{phone.replace("(","").replace(")","").replace(" ","").replace("-","")}">{phone}</a></p><p>Serving {area}.</p><ul>{svc_links}</ul></div></section>'
     write(f"locations/{city_file}/index.html", shell(h1, h1, h1, body, 2))
 
@@ -957,7 +957,7 @@ write("training/index.html", shell(
 ))
 
 for course, title, price, desc in [
-    ("pmu-100h-fundamental", "100-Hour Fundamental Permanent Makeup Training", "$7,000", "100 hours in-person covering Nano Brows, Microblading, Powder Brows, Lip Blush, and Eyeliner."),
+    ("pmu-100h-fundamental", "100-Hour Fundamental Permanent Makeup Training", "$7,000", "100 hours in-person covering Nano Brows, Microblading, Ombré Shading, Lip Blush, and Eyeliner."),
     ("pmu-apprenticeship", "Permanent Makeup Apprenticeship", "$700/month", "Hands-on apprenticeship at Wilmington MA studio."),
     ("vip-masterclass", "VIP Permanent Makeup Masterclass", "Contact for pricing", "Custom advanced training for experienced artists."),
 ]:
@@ -1005,7 +1005,7 @@ write("faq/index.html", shell(
     "Permanent Makeup FAQ",
     """<section class="page-hero"><div class="container"><h1>Permanent Makeup FAQ</h1></div></section>
     <section class="section"><div class="container"><div class="faq-list">
-    <div class="faq-item"><button type="button">How much does permanent makeup cost?</button><div class="faq-answer"><p>Nano Brows from $650, Microblading and Powder Brows from $550, Lip Blush from $550. See individual service pages for details.</p></div></div>
+    <div class="faq-item"><button type="button">How much does permanent makeup cost?</button><div class="faq-answer"><p>Nano Brows from $650, Microblading and Ombré Shading from $550, Lip Blush from $550. See individual service pages for details.</p></div></div>
     <div class="faq-item"><button type="button">Do you offer payment plans?</button><div class="faq-answer"><p>Yes. You can split any service into 4 interest-free payments with Cherry, or choose a longer plan of up to 24 months. Applying uses a soft credit check that does not affect your credit score. See <a href="../payment-plan/">payment plans</a> for details.</p></div></div>
     <div class="faq-item"><button type="button">Does insurance cover PMU?</button><div class="faq-answer"><p>Permanent makeup is cosmetic and not covered by insurance.</p></div></div>
     <div class="faq-item"><button type="button">Is permanent makeup safe?</button><div class="faq-answer"><p>Yes, when performed by a licensed Master Artist using sterile single-use needles in a compliant studio.</p></div></div>
@@ -1321,7 +1321,7 @@ def flash_sale_body(depth=1):
     <div class="card-grid">
       <article class="card">
         <h3>Eyebrows</h3>
-        <p>Nano Brows, Microblading, Powder Brows, and combination techniques.</p>
+        <p>Nano Brows, Microblading, Ombré Shading, and combination techniques.</p>
         <a class="btn btn-secondary" href="{base}services/eyebrows/">Explore Brow Services</a>
       </article>
       <article class="card">

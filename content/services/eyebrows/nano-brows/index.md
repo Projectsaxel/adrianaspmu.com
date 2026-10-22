@@ -146,7 +146,7 @@ Hair-like strokes drawn one by one for natural fill
 
 Nano strokes plus soft shading for extra density
 
-### [Ombré Powder Brows](../powder-brows/)
+### [Ombré Powder Brows](../ombre-shading/)
 
 Soft powdered finish, ideal for oily skin
 

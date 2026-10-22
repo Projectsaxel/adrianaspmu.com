@@ -102,7 +102,7 @@ Nano Brows draws hair-like strokes with a digital machine and ultra-fine needle,
 
 - [Nano Brows overview](../) — full guide and healing timeline
 - [Microblading](../../microblading/salem-nh/) — $550
-- [Powder Brows](../../powder-brows/salem-nh/) — $550
+- [Powder Brows](../../ombre-shading/salem-nh/) — $550
 - [Combo Brows](../../combination-brows/salem-nh/) — custom quote
 - [Nano Combo](../../nano-combo/salem-nh/) — $600
 See the [Salem, NH studio page](../../../../locations/salem-nh/) or the [aftercare guide](../../../../aftercare/).
