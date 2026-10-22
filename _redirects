@@ -56,7 +56,7 @@
 /top-eyeliner-classic/          /services/eyeliner/top-eyeliner/          301
 /top-eyeliner-cat-eye/          /services/eyeliner/top-eyeliner/          301
 /bottom-eyeliner/               /services/eyeliner/bottom-eyeliner/       301
-/eyeliner-smokey-effect/        /services/eyeliner/smokey-eyeliner/       301
+/eyeliner-smokey-effect/        /services/eyeliner/top-eyeliner/          301
 /eyeliner-combo/                /services/eyeliner/eyeliner-combo/        301
 
 # Servicos: combos
@@ -118,7 +118,7 @@
 /top-eyeliner-classic        /services/eyeliner/top-eyeliner/          301
 /top-eyeliner-cat-eye        /services/eyeliner/top-eyeliner/          301
 /bottom-eyeliner             /services/eyeliner/bottom-eyeliner/       301
-/eyeliner-smokey-effect      /services/eyeliner/smokey-eyeliner/       301
+/eyeliner-smokey-effect      /services/eyeliner/top-eyeliner/          301
 /eyeliner-combo              /services/eyeliner/eyeliner-combo/        301
 /eyebrows-lips-combo         /services/combos/eyebrows-lips-combo/     301
 /full-face                   /services/combos/                         301
@@ -548,9 +548,16 @@
 /services/eyeliner/eyeliner-combo/index.html                     /services/eyeliner/eyeliner-combo/                     301
 /services/eyeliner/eyeliner-combo/salem-nh/index.html            /services/eyeliner/eyeliner-combo/salem-nh/            301
 /services/eyeliner/eyeliner-combo/wilmington-ma/index.html       /services/eyeliner/eyeliner-combo/wilmington-ma/       301
-/services/eyeliner/smokey-eyeliner/index.html                    /services/eyeliner/smokey-eyeliner/                    301
-/services/eyeliner/smokey-eyeliner/salem-nh/index.html           /services/eyeliner/smokey-eyeliner/salem-nh/           301
-/services/eyeliner/smokey-eyeliner/wilmington-ma/index.html      /services/eyeliner/smokey-eyeliner/wilmington-ma/      301
+# Smokey Eyeliner virou um estilo do Top Eyeliner (22/10/2026, Pablo/Fresha): endereco antigo -> Top, permanente
+/services/eyeliner/smokey-eyeliner/index.html                    /services/eyeliner/top-eyeliner/                       301
+/services/eyeliner/smokey-eyeliner/salem-nh/index.html           /services/eyeliner/top-eyeliner/salem-nh/              301
+/services/eyeliner/smokey-eyeliner/wilmington-ma/index.html      /services/eyeliner/top-eyeliner/wilmington-ma/         301
+/services/eyeliner/smokey-eyeliner/salem-nh/                     /services/eyeliner/top-eyeliner/salem-nh/              301
+/services/eyeliner/smokey-eyeliner/salem-nh                      /services/eyeliner/top-eyeliner/salem-nh/              301
+/services/eyeliner/smokey-eyeliner/wilmington-ma/                /services/eyeliner/top-eyeliner/wilmington-ma/         301
+/services/eyeliner/smokey-eyeliner/wilmington-ma                 /services/eyeliner/top-eyeliner/wilmington-ma/         301
+/services/eyeliner/smokey-eyeliner/                              /services/eyeliner/top-eyeliner/                       301
+/services/eyeliner/smokey-eyeliner                               /services/eyeliner/top-eyeliner/                       301
 /services/eyeliner/top-eyeliner/index.html                       /services/eyeliner/top-eyeliner/                       301
 /services/eyeliner/top-eyeliner/salem-nh/index.html              /services/eyeliner/top-eyeliner/salem-nh/              301
 /services/eyeliner/top-eyeliner/wilmington-ma/index.html         /services/eyeliner/top-eyeliner/wilmington-ma/         301

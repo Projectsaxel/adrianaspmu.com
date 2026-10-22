@@ -133,7 +133,6 @@ const ALL_SERVICES = [
   { slug: "nano-combo", category: "eyebrows", name: "Nano Combo Brows", price: 650, desc: "Nano strokes with soft shading combined." },
   { slug: "dark-lip-neutralization", category: "lips", name: "Dark Lip Neutralization", price: 550, desc: "Color correction for hyperpigmented or dark lips." },
   { slug: "top-eyeliner", category: "eyeliner", name: "Top Eyeliner", price: 350, desc: "Classic definition and cat eye styles." },
-  { slug: "smokey-eyeliner", category: "eyeliner", name: "Smokey Eyeliner", price: 400, desc: "Soft diffused shadow effect on the upper lid." },
   { slug: "bottom-eyeliner", category: "eyeliner", name: "Bottom Eyeliner", price: 300, desc: "Subtle lower lash line definition." },
   { slug: "eyeliner-combo", category: "eyeliner", name: "Eyeliner Combo", price: 550, desc: "Top and bottom permanent eyeliner together." },
   { slug: "eyebrows-lips-combo", category: "combos", name: "Brows + Lips Combo", price: 850, desc: "Eyebrow PMU and lip blush in one session." },

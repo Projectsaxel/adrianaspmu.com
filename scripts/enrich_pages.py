@@ -61,7 +61,7 @@ FRESHA_GENERIC = "https://www.fresha.com/book-now/adrianas-permanent-makeup-zeas
 DESCRIPTIONS = {
     "services/eyebrows/index.html": "Microblading, nano brows, powder and combo brows in Wilmington MA and Salem NH. Compare techniques, see prices, and book a consultation.",
     "services/lips/index.html": "Lip blush and dark lip neutralization in Wilmington MA and Salem NH. Natural color and defined contour, with the 2nd session included.",
-    "services/eyeliner/index.html": "Permanent eyeliner in Wilmington MA and Salem NH: top, bottom, smokey effect and combo. Smudge-proof definition that survives the gym, from $250.",
+    "services/eyeliner/index.html": "Permanent eyeliner in Wilmington MA and Salem NH: top (classic, cat-eye or smoky), bottom and combo. Smudge-proof definition that survives the gym, from $300.",
     "services/combos/index.html": "Permanent makeup combo packages in Wilmington MA and Salem NH. Pair brows, lips and eyeliner in one plan and save, 2nd session included.",
     "services/touch-ups/index.html": "Yearly permanent makeup touch-ups in Wilmington MA and Salem NH. Keep brows, lips and eyeliner fresh with a refresh by the original artist.",
     "portfolio/index.html": "Real before and after photos of microblading, nano brows, lip blush and eyeliner by the Adriana's PMU artists in Wilmington MA and Salem NH.",
@@ -144,6 +144,7 @@ def classify(path_rel):
 # window.PMU_PAGE continua sendo definido sempre (o main.js le a unidade
 # dele), e o stub gtag/dataLayer tambem, para nenhum codigo quebrar.
 GA_HOST = "adrianaspmu.com"
+ADS_ID = "AW-10903727189"   # conta "Adrianas EUA" no Google Ads
 GA_GATE_MARK = "/*ga4-so-em-producao-v2*/"
 # O <script src=gtag.js> continua ESTATICO no <head>: o Search Console desta
 # propriedade e verificado pela tag do GA (nao ha meta, arquivo nem TXT de
@@ -177,6 +178,10 @@ def add_analytics(s, path_rel):
         # contexto e nao daria para comparar visita com conversao.
         f"gtag('config','{GA4_ID}',{{page_type:'{c['page_type']}',"
         f"service:'{c['service'] or '(none)'}',city:'{c['city'] or '(none)'}'}});"
+        # Google Ads (22/10/2026): mesma gtag.js, so mais um destino. Sem ela
+        # o Tag coverage do Ads acusava "Not tagged" e nao havia publico de
+        # remarketing (regra 1 da Axel). Tambem so em producao.
+        f"gtag('config','{ADS_ID}');"
         # IIFE: sem ela d/g/a virariam variaveis globais da pagina
         # analytics.js injetado fica async (defer nao vale para script
         # dinamico); ele ja trata DOM ainda carregando (readyState).
@@ -263,7 +268,6 @@ BROW_SERVICES = [
 EYELINER_SERVICES = [
     ("top-eyeliner", "Top Eyeliner", "Classic or winged definition on the upper lash line"),
     ("bottom-eyeliner", "Bottom Eyeliner", "Subtle lower lash line definition"),
-    ("smokey-eyeliner", "Smokey Eyeliner", "Soft shaded effect that never smudges"),
     ("eyeliner-combo", "Eyeliner Combo", "Top and bottom in one appointment"),
 ]
 LIP_SERVICES = [
@@ -1078,7 +1082,7 @@ def _criteria_rows(fit_text):
          "The 2nd session, 6 to 8 weeks after the appointment, is included in the price of every first-time procedure. The yearly touch-up, from $300, is a separate visit about 12 months later."),
         ("Whether the price is published at all",
          "Ask for the price before the consultation. A studio that will not name a range before seeing you is not comparable to one that will.",
-         "All 13 services are published with their prices, from $300 to $1,380, on the <a href=\"{up}prices/\">price list</a>."),
+         "All 12 services are published with their prices, from $300 to $1,380, on the <a href=\"{up}prices/\">price list</a>."),
         ("When they say no",
          "Ask what would make them refuse to perform the procedure. An artist who never refuses is a warning sign.",
          "Pregnancy, breastfeeding, under 18 and isotretinoin are refused at both studios with no exception. The full list is in the <a href=\"{up}aftercare/\">contraindications guide</a>, published before you book rather than after."),
@@ -1351,7 +1355,7 @@ FAQ_BY_PAGE = {
     ],
     "services/index.html": [
         ("How much do the services cost?",
-         "Thirteen services are published with their prices, from $300 for bottom eyeliner to "
+         "Twelve services are published with their prices, from $300 for bottom eyeliner to "
          "$1,380 for the brows and lips combo with Adriana. The price of every first-time procedure already includes the perfecting "
          "session 6 to 8 weeks later. The full table, with Livy's and Adriana's "
          "prices, is on the price list."),
@@ -1378,7 +1382,7 @@ FAQ_BY_PAGE = {
     ],
     "locations/index.html": [
         ("Which studio should I book for a procedure?",
-         "Either Wilmington, MA or Salem, NH &mdash; they offer the same 13 services at the same "
+         "Either Wilmington, MA or Salem, NH &mdash; they offer the same 12 services at the same "
          "prices. Pick by distance and by phone number: Wilmington is 211 Lowell Street, Suite F, "
          "(781) 853-8063; Salem is 117A Main Street, (978) 223-7496. The Peabody address is the "
          "academy and treats no clients."),
@@ -1388,7 +1392,7 @@ FAQ_BY_PAGE = {
          "VIP Masterclass are taught there. No client procedures happen at that address, so never "
          "book a brow or lip appointment for Peabody."),
         ("Do the two studios charge the same?",
-         "Yes. The same 13 services are published at the same prices at both, from $300 to $1,380, "
+         "Yes. The same 12 services are published at the same prices at both, from $300 to $1,380, "
          "and the price of every first-time procedure includes the 2nd session 6 to 8 weeks later. What "
          "differs between them is the phone number and the licensing regime, not the price list."),
         ("Are the licences different in Massachusetts and New Hampshire?",
@@ -1445,7 +1449,7 @@ FAQ_BY_PAGE = {
          "service is published openly, which is the opposite of the usual practice of hiding all "
          "prices behind a form."),
         ("Do prices differ between the Wilmington and Salem studios?",
-         "No. The same 13 services are published at the same prices at both addresses: 211 Lowell "
+         "No. The same 12 services are published at the same prices at both addresses: 211 Lowell "
          "Street, Suite F in Wilmington, MA, and 117A Main Street in Salem, NH. What differs "
          "between them is the phone number and the licensing regime, not the price."),
         ("How long do the results last before I pay again?",
@@ -2463,6 +2467,19 @@ def add_reviews(s, path_rel):
                    f'<dd data-gbp-count="wilmington" data-gbp-suffix=" Google reviews">{w["total"]} Google reviews</dd>', s)
         s = re.sub(r'<span class="trust-value"(?: data-gbp-rating="wilmington"(?: data-gbp-suffix="[^"]*")?)?>[\d.]+★</span>',
                    f'<span class="trust-value" data-gbp-rating="wilmington" data-gbp-suffix="★">{w["rating"]}★</span>', s)
+    # Home (22/10/2026): o widget do Trustindex repetia a mesma avaliacao
+    # tres vezes. A secao #reviews agora usa os mesmos dados automaticos
+    # (Local Falcon -> reviews-data, a cada 3 dias): o build grava os
+    # cartoes e o main.js atualiza no navegador.
+    if path_rel == "index.html" and 'class="reviews-home"' in s:
+        sel = REVIEWS.get("selection", {}).get("_any", {})
+        ids = sel.get("all") or []
+        cards = [REVIEWS["reviews"][i] for i in ids if i in REVIEWS.get("reviews", {})]
+        if cards:
+            s = re.sub(r'(<div class="reviews-home"[^>]*>\s*<div class="reviews-live-grid" data-reviews-grid>).*?(</div>\s*</div>)',
+                       lambda m: m.group(1) + "".join(_review_card(r, units) for r in cards) + m.group(2),
+                       s, count=1, flags=re.S)
+        return s
     tgt = _review_target(path_rel)
     if not tgt:
         return s
