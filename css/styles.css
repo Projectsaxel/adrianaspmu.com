@@ -3700,6 +3700,9 @@ main:has(.service-prose) {
   white-space: nowrap;
 }
 .table-note { font-size: 0.8125rem; color: var(--ink-muted); margin-top: var(--space-3); }
+/* celular: o espacamento entre letras do cabecalho empurrava a 3a coluna
+   para fora da tela (tabela de touch-up Livy/Adriana, 24/10/2026) */
+@media (max-width: 480px) { .data-table thead th { letter-spacing: 0.04em; } }
 
 /* --- Bloco 8: prova ------------------------------------------- */
 .proof-grid {
@@ -6788,9 +6791,10 @@ tbody tr:last-child > td { border-bottom: 0; }
      Combos e Touch-Ups viraram uma categoria so (1 + 1 = 2).
    - O que sobra da linha vira um bloco de orientacao (.hub-tile) que ocupa
      exatamente as colunas livres: toda linha fica retangular e completa.
-       desktop 5 col: brows 5 | lips 2+3 | eyeliner 4+1 | combos 2+3
-       tablet  3 col: brows 5+1 | lips 2+1 | eyeliner 4+2 | combos 2+1
-       celular 2 col: brows 5+1 | lips 2+2 | eyeliner 4+2 | combos 2+2
+       desktop 5 col: brows 5 | lips 2+3 | eyeliner 4+1 | combos 1+4
+       tablet  3 col: brows 5+1 | lips 2+1 | eyeliner 4+2 | combos 1+2
+       celular 2 col: brows 5+1 | lips 2+2 | eyeliner 4+2 | combos 1+1
+     (24/10/2026: card do Yearly Touch-Up saiu do hub, pedido do Pablo.)
      O span de cada bloco vem inline (--span-d/-t/-m); 0 = escondido.
    - Card enxuto: foto, nome, uma frase, preco. Os links de cidade sairam
      do card (continuam na pagina de cada servico). */
