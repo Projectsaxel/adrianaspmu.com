@@ -95,6 +95,7 @@ def normalize(unit, raw):
         "text": text,
         "date": date,
         "month": month,
+        "source": "google",
     }
 
 
@@ -156,7 +157,7 @@ def pick(reviews, service, unit=None, n=PER_PAGE):
     return [r["id"] for r in ok[:n]]
 
 
-def build(units_raw, updated_iso):
+def build(units_raw, updated_iso, fresha_raw=None):
     """units_raw: {"wilmington": {"total":..,"average":..,"reviews":[raw,..]}, ...}"""
     out = {"updated": updated_iso, "units": {}, "reviews": {}, "selection": {}}
     allr = []
@@ -186,4 +187,143 @@ def build(units_raw, updated_iso):
         "wilmington": pick(allr, "_any", "wilmington"),
         "salem": pick(allr, "_any", "salem"),
     }
+    fr = []
+    for unit, html in (fresha_raw or {}).items():
+        for r in fresha_reviews(unit, html):
+            out["reviews"][r["id"]] = r
+            fr.append(r)
+    out["selection"]["_home"] = {"all": pick_home([r for r in allr if publishable(r)], fr)}
     return out
+
+# ---------------------------------------------------------------------------
+# Fresha (24/10/2026, pedido do Pablo): a home mostra as avaliacoes mais
+# recentes do Google E do Fresha num carrossel. O Fresha publica as avaliacoes
+# da pagina de cada unidade como JSON-LD (schema.org Review) no proprio HTML:
+# autor, data, texto e nota. So entram 5 estrelas, em ingles, com as mesmas
+# regras do Google (MIN_CHARS, EX_TEAM).
+# ---------------------------------------------------------------------------
+FRESHA_URLS = {
+    "wilmington": "https://www.fresha.com/a/adrianas-permanent-makeup-wilmington-ma-wilmington-211-lowell-street-jalpqett",
+    "salem": "https://www.fresha.com/a/adrianas-permanent-makeup-salem-nh-salem-eua-117a-main-street-w0he16uu",
+}
+HOME_N = 12
+
+_EN = re.compile(r"\b(the|and|is|was|my|she|her|very|with|to|for|so|i|it|this|of|love|great|amazing)\b", re.I)
+_NOT_EN = re.compile(r"\b(que|muy|es|ella|una|el|los|las|muito|ela|uma|não|com|para|excelente|todo|mis|meu|minha)\b", re.I)
+
+
+def is_english(text):
+    return len(_EN.findall(text)) > 2 * len(_NOT_EN.findall(text))
+
+
+def fresha_reviews(unit, html):
+    """HTML da pagina da unidade no Fresha -> registros publicaveis."""
+    import hashlib
+    import json as _json
+    out = []
+    for blob in re.findall(r'<script[^>]*type="application/ld\+json"[^>]*>(.*?)</script>', html, re.S):
+        try:
+            data = _json.loads(blob)
+        except ValueError:
+            continue
+        stack = [data]
+        while stack:
+            x = stack.pop()
+            if isinstance(x, list):
+                stack.extend(x)
+            elif isinstance(x, dict):
+                if x.get("@type") == "Review" and x.get("reviewBody"):
+                    text = re.sub(r"\s+", " ", x["reviewBody"]).strip()
+                    date = (x.get("datePublished") or "")[:10]
+                    try:
+                        month = datetime.strptime(date, "%Y-%m-%d").strftime("%B %Y")
+                    except ValueError:
+                        month = ""
+                    name = ((x.get("author") or {}).get("name") or "").strip()
+                    out.append({
+                        "id": "fresha-" + hashlib.sha1((name + date + text).encode()).hexdigest()[:16],
+                        "unit": unit,
+                        "name": short_name(name) if name else "Fresha client",
+                        "rating": int(float((x.get("reviewRating") or {}).get("ratingValue") or 0)),
+                        "text": text,
+                        "date": date,
+                        "month": month,
+                        "source": "fresha",
+                    })
+                else:
+                    stack.extend(x.values())
+    return [r for r in out if publishable(r) and is_english(r["text"])]
+
+
+def _key(r):
+    return re.sub(r"[^a-z]", "", r["text"].lower())[:40]
+
+
+def pick_home(google, fresha, n=HOME_N):
+    """As mais recentes de cada fonte, metade e metade, intercaladas por data.
+    Sem repetir a mesma avaliacao publicada nas duas fontes."""
+    seen, g, f = set(), [], []
+    for src, dst in ((sorted(google, key=lambda r: r["date"], reverse=True), g),
+                     (sorted(fresha, key=lambda r: r["date"], reverse=True), f)):
+        for r in src:
+            if _key(r) in seen:
+                continue
+            seen.add(_key(r))
+            dst.append(r)
+    # a mesma cliente costuma avaliar nas duas com textos diferentes:
+    # mesmo nome com ate 7 dias de diferenca conta como a mesma avaliacao
+    def _d(x):
+        try:
+            return datetime.strptime(x, "%Y-%m-%d")
+        except ValueError:
+            return None
+    gd = [(r["name"], _d(r["date"])) for r in g]
+    f = [r for r in f if not any(nm == r["name"] and dt and _d(r["date"]) and abs((dt - _d(r["date"])).days) <= 7
+                                for nm, dt in gd)]
+    # Rachel (24/10): sempre alternado, um do Google e um do Fresha, 6 de cada.
+    # Comeca pela fonte da avaliacao mais recente. Se uma fonte tiver menos
+    # de n/2, a outra completa no fim.
+    half = n // 2
+    g, f = g[:half], f[:half]
+    ordem = [g, f] if (g and (not f or g[0]["date"] >= f[0]["date"])) else [f, g]
+    out = []
+    for i in range(half):
+        for fonte in ordem:
+            if i < len(fonte):
+                out.append(fonte[i])
+    return [r["id"] for r in out[:n]]
+
+
+
+# Card da home no formato da "caixinha" do Google (pedido do Pablo, 24/10):
+# avatar colorido com a inicial, nome e data em cima, o simbolo da origem no
+# canto, estrelas amarelas. O main.js monta exatamente o mesmo HTML.
+AVATAR = ["#1a73e8", "#e8710a", "#188038", "#d93025", "#9334e6", "#12b5cb", "#c5221f", "#b06000"]
+G_SVG = ('<svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>'
+         '<path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>'
+         '<path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>'
+         '<path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>')
+
+
+def _esc(t):
+    return (str(t).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;"))
+
+
+def home_card_html(r, units, clone=False):
+    name = r.get("name") or "Client"
+    color = AVATAR[sum(map(ord, name)) % len(AVATAR)]
+    try:
+        nice = datetime.strptime(r.get("date", ""), "%Y-%m-%d").strftime("%b %d, %Y").replace(" 0", " ")
+    except ValueError:
+        nice = r.get("month", "")
+    src = r.get("source", "google")
+    badge = (f'<span class="rv-src rv-src--google" title="Google review">{G_SVG}</span>' if src == "google"
+             else '<span class="rv-src rv-src--fresha" title="Fresha review">fresha</span>')
+    where = (units.get(r.get("unit"), {}) or {}).get("label", "")
+    hid = ' aria-hidden="true"' if clone else ""
+    return (f'<figure class="rv-card" data-source="{src}"{hid}>'
+            f'<div class="rv-head"><span class="rv-avatar" style="background:{color}">{_esc(name[:1].upper())}</span>'
+            f'<span class="rv-who"><strong>{_esc(name)}</strong><time datetime="{_esc(r.get("date", ""))}">{_esc(nice)}</time></span>{badge}</div>'
+            f'<p class="rv-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>'
+            f'<blockquote><p>{_esc(r.get("text", ""))}</p></blockquote>'
+            f'<figcaption>{"Google" if src == "google" else "Fresha"} review &middot; {_esc(where)}</figcaption></figure>')

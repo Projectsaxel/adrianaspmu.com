@@ -1403,7 +1403,64 @@
      pagina busca /api/reviews, que o GitHub Actions atualiza a cada 3 dias
      pelo Local Falcon, e troca pelo mais recente sem precisar de deploy.
      Se a busca falhar, fica o que veio no HTML. */
+  /* Carrossel de avaliacoes da home (24/10/2026, pedido do Pablo): as 12
+     mais recentes do Google e do Fresha, no formato da caixinha do Google,
+     passando o tempo todo. Mesmo HTML do reviews_lib.home_card_html. */
+  const AVATAR = ["#1a73e8", "#e8710a", "#188038", "#d93025", "#9334e6", "#12b5cb", "#c5221f", "#b06000"];
+  const G_SVG = '<svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>' +
+    '<path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>' +
+    '<path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>' +
+    '<path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>';
+  const escH = (t) => String(t).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+  function homeCard(r, units) {
+    const name = r.name || "Client";
+    let soma = 0;
+    for (const ch of name) soma += ch.codePointAt(0);
+    const color = AVATAR[soma % AVATAR.length];
+    let nice = r.month || "";
+    const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(r.date || "");
+    if (m) {
+      const mes = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][Number(m[2]) - 1];
+      nice = mes + " " + Number(m[3]) + ", " + m[1];
+    }
+    const src = r.source || "google";
+    const badge = src === "google"
+      ? '<span class="rv-src rv-src--google" title="Google review">' + G_SVG + "</span>"
+      : '<span class="rv-src rv-src--fresha" title="Fresha review">fresha</span>';
+    const where = ((units || {})[r.unit] || {}).label || "";
+    return '<figure class="rv-card" data-source="' + src + '"><div class="rv-head"><span class="rv-avatar" style="background:' + color + '">' +
+      escH(name.slice(0, 1).toUpperCase()) + '</span><span class="rv-who"><strong>' + escH(name) + '</strong><time datetime="' + escH(r.date || "") + '">' +
+      escH(nice) + "</time></span>" + badge + '</div><p class="rv-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>' +
+      "<blockquote><p>" + escH(r.text || "") + "</p></blockquote><figcaption>" + (src === "google" ? "Google" : "Fresha") +
+      " review &middot; " + escH(where) + "</figcaption></figure>";
+  }
+  function initReviewsMarquee(bloco) {
+    const track = bloco.querySelector(".rv-track");
+    if (!track) return;
+    track.querySelectorAll("[data-rv-clone]").forEach((c) => c.remove());
+    const originais = Array.prototype.slice.call(track.children);
+    if (!originais.length) return;
+    // segunda copia para o laco nao ter emenda; fora da leitura de tela
+    originais.forEach((c) => {
+      const k = c.cloneNode(true);
+      k.setAttribute("aria-hidden", "true");
+      k.setAttribute("data-rv-clone", "");
+      track.appendChild(k);
+    });
+    track.style.setProperty("--rv-dur", originais.length * 6 + "s");
+    const btn = bloco.querySelector("[data-rv-pause]");
+    if (btn && !btn.dataset.ligado) {
+      btn.dataset.ligado = "1";
+      btn.addEventListener("click", () => {
+        const parado = bloco.classList.toggle("is-paused");
+        btn.setAttribute("aria-pressed", String(parado));
+        btn.textContent = parado ? "Play reviews" : "Pause reviews";
+      });
+    }
+  }
+
   function initReviews() {
+    document.querySelectorAll('[data-reviews][data-service="_home"]').forEach(initReviewsMarquee);
     const blocos = document.querySelectorAll("[data-reviews]");
     const notas = document.querySelectorAll("[data-gbp-rating], [data-gbp-count]");
     if (!blocos.length && !notas.length) return;
@@ -1419,6 +1476,19 @@
         });
         const esc = (t) => String(t).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
         blocos.forEach((b) => {
+          if (b.getAttribute("data-service") === "_home") {
+            const grid = b.querySelector("[data-reviews-grid]");
+            const ids = ((d.selection || {})._home || {}).all;
+            // dados sem _home (antes da rotina rodar com o Fresha): fica o
+            // carrossel gravado no build, que ja vem alternado
+            if (!ids || !ids.length) return;
+            const cards = ids.map((i) => d.reviews[i]).filter(Boolean);
+            if (grid && cards.length) {
+              grid.innerHTML = cards.map((r) => homeCard(r, d.units)).join("");
+              initReviewsMarquee(b);
+            }
+            return;
+          }
           const sel = (d.selection || {})[b.getAttribute("data-service")] || (d.selection || {})._any;
           if (!sel) return;
           const ids = sel[b.getAttribute("data-unit")] || sel.all || [];
