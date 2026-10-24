@@ -1478,11 +1478,10 @@
         blocos.forEach((b) => {
           if (b.getAttribute("data-service") === "_home") {
             const grid = b.querySelector("[data-reviews-grid]");
-            let ids = ((d.selection || {})._home || {}).all;
-            if (!ids || !ids.length) {
-              // dados antigos sem _home: as 12 mais recentes que existirem
-              ids = Object.keys(d.reviews).sort((a, c) => (d.reviews[c].date || "").localeCompare(d.reviews[a].date || "")).slice(0, 12);
-            }
+            const ids = ((d.selection || {})._home || {}).all;
+            // dados sem _home (antes da rotina rodar com o Fresha): fica o
+            // carrossel gravado no build, que ja vem alternado
+            if (!ids || !ids.length) return;
             const cards = ids.map((i) => d.reviews[i]).filter(Boolean);
             if (grid && cards.length) {
               grid.innerHTML = cards.map((r) => homeCard(r, d.units)).join("");

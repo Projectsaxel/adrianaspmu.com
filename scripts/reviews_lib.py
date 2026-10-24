@@ -280,13 +280,18 @@ def pick_home(google, fresha, n=HOME_N):
     gd = [(r["name"], _d(r["date"])) for r in g]
     f = [r for r in f if not any(nm == r["name"] and dt and _d(r["date"]) and abs((dt - _d(r["date"])).days) <= 7
                                 for nm, dt in gd)]
+    # Rachel (24/10): sempre alternado, um do Google e um do Fresha, 6 de cada.
+    # Comeca pela fonte da avaliacao mais recente. Se uma fonte tiver menos
+    # de n/2, a outra completa no fim.
     half = n // 2
-    take_f = f[:half]
-    take_g = g[:n - len(take_f)]
-    if len(take_g) < n - len(take_f):
-        take_f = f[:n - len(take_g)]
-    both = sorted(take_g + take_f, key=lambda r: r["date"], reverse=True)
-    return [r["id"] for r in both]
+    g, f = g[:half], f[:half]
+    ordem = [g, f] if (g and (not f or g[0]["date"] >= f[0]["date"])) else [f, g]
+    out = []
+    for i in range(half):
+        for fonte in ordem:
+            if i < len(fonte):
+                out.append(fonte[i])
+    return [r["id"] for r in out[:n]]
 
 
 
