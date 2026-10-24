@@ -948,10 +948,12 @@
     });
   }
 
-  function initPortfolioLightbox() {
-    const triggers = document.querySelectorAll(".portfolio-item");
-    if (!triggers.length) return;
-
+  /* Lightbox unico do site (portfolio, turmas da Academy e as galerias
+     coverflow dos servicos). abrir(lista, i, aoFechar): lista de
+     {src, alt}; aoFechar roda quando fecha (o coverflow volta a girar). */
+  let lightboxApi = null;
+  function lightbox() {
+    if (lightboxApi) return lightboxApi;
     let overlay = document.getElementById("portfolio-lightbox");
     if (!overlay) {
       overlay = document.createElement("div");
@@ -960,7 +962,7 @@
       overlay.hidden = true;
       overlay.innerHTML = `
         <div class="portfolio-lightbox-backdrop" data-lightbox-close></div>
-        <div class="portfolio-lightbox-dialog" role="dialog" aria-modal="true" aria-label="Portfolio image preview">
+        <div class="portfolio-lightbox-dialog" role="dialog" aria-modal="true" aria-label="Image preview">
           <button type="button" class="portfolio-lightbox-close" aria-label="Close">&times;</button>
           <button type="button" class="portfolio-lightbox-nav portfolio-lightbox-prev" aria-label="Previous image">&#8249;</button>
           <figure class="portfolio-lightbox-figure">
@@ -974,26 +976,10 @@
 
     const lightboxImg = overlay.querySelector(".portfolio-lightbox-img");
     const caption = overlay.querySelector(".portfolio-lightbox-caption");
-    const items = [];
-
-    triggers.forEach((item) => {
-      const thumb = item.querySelector("img");
-      if (!thumb) return;
-      const idx = items.length;
-      items.push({ src: thumb.src, alt: thumb.alt, el: item });
-      item.addEventListener("click", () => openAt(idx));
-    });
-
-    if (!items.length) return;
-
+    let items = [];
     let index = 0;
     let lastFocus = null;
-
-    function openAt(i) {
-      index = i;
-      lastFocus = document.activeElement;
-      show();
-    }
+    let aoFechar = null;
 
     function show() {
       const current = items[index];
@@ -1010,10 +996,13 @@
       document.body.classList.remove("portfolio-lightbox-open");
       lightboxImg.removeAttribute("src");
       lastFocus?.focus();
+      const cb = aoFechar;
+      aoFechar = null;
+      cb?.();
     }
 
     function step(delta) {
-      const visible = items.map((it, i) => (it.el.hidden ? -1 : i)).filter((i) => i >= 0);
+      const visible = items.map((it, i) => (it.el && it.el.hidden ? -1 : i)).filter((i) => i >= 0);
       if (!visible.length) return;
       const pos = visible.indexOf(index);
       index = visible[pos === -1 ? 0 : (pos + delta + visible.length) % visible.length];
@@ -1030,6 +1019,31 @@
       if (e.key === "Escape") close();
       if (e.key === "ArrowLeft") step(-1);
       if (e.key === "ArrowRight") step(1);
+    });
+
+    lightboxApi = {
+      abrir(lista, i, cb) {
+        items = lista;
+        index = i;
+        aoFechar = cb || null;
+        lastFocus = document.activeElement;
+        show();
+      },
+    };
+    return lightboxApi;
+  }
+
+  function initPortfolioLightbox() {
+    const triggers = document.querySelectorAll(".portfolio-item");
+    if (!triggers.length) return;
+    const items = [];
+    triggers.forEach((item) => {
+      const thumb = item.querySelector("img");
+      if (!thumb) return;
+      const idx = items.length;
+      // data-full: versao grande para ampliar (carrossel das turmas)
+      items.push({ src: item.dataset.full || thumb.src, alt: thumb.alt, el: item });
+      item.addEventListener("click", () => lightbox().abrir(items, idx));
     });
   }
 
@@ -1148,8 +1162,23 @@
       cf.querySelector("[data-cf-next]")?.addEventListener("click", function () { pararDeVez(); ir(1); });
 
       /* clicar num slide lateral traz ele para o centro */
+      /* clicar na foto do CENTRO amplia (pedido do Pablo, 21/10/2026: as
+         clientes querem ver a foto grande e o giro nao deixava). Com a
+         foto aberta o automatico para; ao fechar, volta sozinho. */
+      const fotos = slides.map(function (s) {
+        const img = s.querySelector("img");
+        return { src: img ? img.currentSrc || img.src : "", alt: img ? img.alt : "" };
+      });
       slides.forEach(function (s, i) {
-        s.addEventListener("click", function () { if (i !== ativo) { pararDeVez(); ativo = i; posicionar(); } });
+        s.style.cursor = "zoom-in";
+        s.addEventListener("click", function () {
+          if (arrastou) { arrastou = false; return; }
+          if (i !== ativo) { pararDeVez(); ativo = i; posicionar(); return; }
+          pausar();
+          clearTimeout(retomar);
+          aberta = true;
+          lightbox().abrir(fotos, i, function () { aberta = false; tocar(); });
+        });
       });
 
       /* teclado: a cena inteira e focavel e responde as setas */
@@ -1165,17 +1194,18 @@
 
       /* arrastar com o dedo ou com o mouse */
       let x0 = null;
-      stage.addEventListener("pointerdown", function (e) { x0 = e.clientX; });
+      let arrastou = false;          // arrasto nao e clique: nao amplia
+      stage.addEventListener("pointerdown", function (e) { x0 = e.clientX; arrastou = false; });
       stage.addEventListener("pointerup", function (e) {
         if (x0 === null) return;
         const dx = e.clientX - x0;
-        if (Math.abs(dx) > 40) { pararDeVez(); ir(dx < 0 ? 1 : -1); }
+        if (Math.abs(dx) > 40) { pararDeVez(); ir(dx < 0 ? 1 : -1); arrastou = true; }
         x0 = null;
       });
       stage.addEventListener("pointercancel", function () { x0 = null; });
 
       /* --- passagem automatica ---------------------------------
-         Pedido da Rachel (25/09/2026): troca a cada 1s, para a visitante
+         Pedido da Rachel (25/09/2026): troca a cada 1s (22/10: passou a 2,5s), para a visitante
          perceber que ha muitas fotos. Movimento chama atencao. As setas,
          o arrasto e o teclado continuam funcionando.
 
@@ -1190,7 +1220,7 @@
             Rachel), mas sem animacao: o CSS zera a transicao
          O hover NAO pausa mais: no desktop o cursor quase sempre esta
          em cima da galeria e ela parecia parada. */
-      const INTERVALO = 1000;
+      const INTERVALO = 2500;      // 22/10/2026: era 1000; a Rachel achou rapido demais
       const RETOMA = 4000;
       const semMovimento = window.matchMedia("(prefers-reduced-motion: reduce)");
       let timer = null;
@@ -1198,6 +1228,7 @@
       let naTela = !("IntersectionObserver" in window);
       let pausadoPeloBotao = false;
       let focoTeclado = false;
+      let aberta = false;           // foto ampliada no lightbox
 
       const controles = cf.querySelector(".cf-controls");
       const btnPlay = document.createElement("button");
@@ -1217,7 +1248,7 @@
       }
 
       function podeTocar() {
-        return naTela && !pausadoPeloBotao && !focoTeclado;
+        return naTela && !pausadoPeloBotao && !focoTeclado && !aberta;
       }
       function tocar() {
         if (timer || !podeTocar()) return;
@@ -1675,6 +1706,19 @@ function initVideo() {
       const pausado = document.body.classList.toggle("ba-pausado");
       botao.setAttribute("aria-pressed", String(pausado));
       botao.textContent = pausado ? "Play before & after" : "Pause before & after";
+    });
+  }
+}
+
+/* Academy: pausa do carrossel das turmas (WCAG 2.2.2). */
+{
+  const botao = document.querySelector("[data-turmas-pausa]");
+  const secao = botao?.closest(".turmas");
+  if (botao && secao) {
+    botao.addEventListener("click", () => {
+      const pausado = secao.classList.toggle("turmas-pausado");
+      botao.setAttribute("aria-pressed", String(pausado));
+      botao.textContent = pausado ? "Play photos" : "Pause photos";
     });
   }
 }

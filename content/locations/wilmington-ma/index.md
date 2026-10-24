@@ -143,7 +143,7 @@ Every technique available at the Wilmington studio has its own page with techniq
 
 - [Nano Brows in Wilmington](../../services/eyebrows/nano-brows/wilmington-ma/)
 - [Microblading in Wilmington](../../services/eyebrows/microblading/wilmington-ma/)
-- [Powder Brows in Wilmington](../../services/eyebrows/powder-brows/wilmington-ma/)
+- [Powder Brows in Wilmington](../../services/eyebrows/ombre-shading/wilmington-ma/)
 - [Lip Blush in Wilmington](../../services/lips/lip-blush/wilmington-ma/)
 - [Top Eyeliner in Wilmington](../../services/eyeliner/top-eyeliner/wilmington-ma/)
 - [Smokey Eyeliner in Wilmington](../../services/eyeliner/smokey-eyeliner/wilmington-ma/)

@@ -26,7 +26,9 @@ def minifica(t: str) -> str:
     # content: nesta folha, entao o regex e seguro aqui.
     t = re.sub(r"/\*.*?\*/", "", t, flags=re.S)
     t = re.sub(r"\s+", " ", t)
-    t = re.sub(r"\s*([{}:;,>~+])\s*", r"\1", t)
+    # "+" fica de fora: dentro de calc() o espaco em volta do + e obrigatorio
+    # (calc(76px+env(...)) e invalido e o navegador descarta a regra).
+    t = re.sub(r"\s*([{}:;,>~])\s*", r"\1", t)
     t = re.sub(r";}", "}", t)
     # o combinador ~ tambem aparece em seletor de atributo [x~="y"]: ali o
     # espaco ja foi removido e nao faz falta, mas a barra de media query sim

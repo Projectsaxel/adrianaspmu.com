@@ -6,7 +6,7 @@ def combination_brows_sections(base: str) -> str:
 <section class="section section--elegant">
   <div class="container service-prose">
     <h2>The Perfect Blend of Natural Hair Strokes and Soft Shading</h2>
-    <p>If you love the natural appearance of Microblading but also want the added fullness of Powder Brows, Combination Brows may be the perfect solution. At Adriana Beauty Services – Permanent Makeup, we combine both techniques to create beautifully balanced eyebrows with realistic hair strokes and soft shading.</p>
+    <p>If you love the natural appearance of Microblading but also want the added fullness of Ombré Shading, Combination Brows may be the perfect solution. At Adriana Beauty Services – Permanent Makeup, we combine both techniques to create beautifully balanced eyebrows with realistic hair strokes and soft shading.</p>
     <p>Since 2017, we have helped clients in Wilmington, MA and now Salem, NH achieve customized brows that enhance their natural beauty and boost their confidence.</p>
   </div>
 </section>

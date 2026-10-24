@@ -14,7 +14,7 @@ def nano_combo_brows_sections(base: str) -> str:
 <section class="section section-alt">
   <div class="container service-prose">
     <h2>What Are Nano Combo Brows?</h2>
-    <p>Nano Combo Brows combine the precision of Nano Brows with the fullness of Powder Brows. Using a digital machine, ultra-fine hair-like strokes are created throughout the brow, while soft shading is added to provide depth, definition, and a polished finish.</p>
+    <p>Nano Combo Brows combine the precision of Nano Brows with the fullness of Ombré Shading. Using a digital machine, ultra-fine hair-like strokes are created throughout the brow, while soft shading is added to provide depth, definition, and a polished finish.</p>
     <p>This technique creates a realistic appearance while offering more density and structure than Nano Brows alone.</p>
     <p>The result is beautifully balanced eyebrows that look natural from every angle.</p>
   </div>

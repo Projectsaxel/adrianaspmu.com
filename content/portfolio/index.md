@@ -54,7 +54,7 @@ Twelve named techniques appear across this portfolio's Eyebrows, Lips, and Eyeli
 | --- | --- | --- |
 | [Nano Brows](../services/eyebrows/nano-brows/) | Eyebrows | $650 |
 | [Microblading](../services/eyebrows/microblading/) | Eyebrows | $550 |
-| [Powder Brows](../services/eyebrows/powder-brows/) | Eyebrows | $550 |
+| [Powder Brows](../services/eyebrows/ombre-shading/) | Eyebrows | $550 |
 | [Combo Brows](../services/eyebrows/combination-brows/) | Eyebrows | Custom quote |
 | [Nano Combo](../services/eyebrows/nano-combo/) | Eyebrows | $600 |
 | [Lip Blush](../services/lips/lip-blush/) | Lips | $550 |

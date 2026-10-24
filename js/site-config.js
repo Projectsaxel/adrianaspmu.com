@@ -110,9 +110,9 @@ const HERO_SERVICES = [
     hero: true,
   },
   {
-    slug: "powder-brows",
+    slug: "ombre-shading",
     category: "eyebrows",
-    name: "Powder Brows",
+    name: "Ombré Shading",
     price: 550,
     desc: "Soft ombre shading for defined, makeup-ready brows. Includes microshading.",
     hero: true,
@@ -129,13 +129,12 @@ const HERO_SERVICES = [
 
 const ALL_SERVICES = [
   ...HERO_SERVICES,
-  { slug: "combination-brows", category: "eyebrows", name: "Combo Brows", price: null, desc: "Hair strokes plus soft shading in one session." },
-  { slug: "nano-combo", category: "eyebrows", name: "Nano Combo Brows", price: 600, desc: "Nano strokes with soft shading combined." },
+  { slug: "combination-brows", category: "eyebrows", name: "Combo Brows", price: 550, desc: "Hair strokes plus soft shading in one session." },
+  { slug: "nano-combo", category: "eyebrows", name: "Nano Combo Brows", price: 650, desc: "Nano strokes with soft shading combined." },
   { slug: "dark-lip-neutralization", category: "lips", name: "Dark Lip Neutralization", price: 550, desc: "Color correction for hyperpigmented or dark lips." },
   { slug: "top-eyeliner", category: "eyeliner", name: "Top Eyeliner", price: 350, desc: "Classic definition and cat eye styles." },
-  { slug: "smokey-eyeliner", category: "eyeliner", name: "Smokey Eyeliner", price: 400, desc: "Soft diffused shadow effect on the upper lid." },
-  { slug: "bottom-eyeliner", category: "eyeliner", name: "Bottom Eyeliner", price: 250, desc: "Subtle lower lash line definition." },
-  { slug: "eyeliner-combo", category: "eyeliner", name: "Eyeliner Combo", price: 500, desc: "Top and bottom permanent eyeliner together." },
+  { slug: "bottom-eyeliner", category: "eyeliner", name: "Bottom Eyeliner", price: 300, desc: "Subtle lower lash line definition." },
+  { slug: "eyeliner-combo", category: "eyeliner", name: "Eyeliner Combo", price: 550, desc: "Top and bottom permanent eyeliner together." },
   { slug: "eyebrows-lips-combo", category: "combos", name: "Brows + Lips Combo", price: 850, desc: "Eyebrow PMU and lip blush in one session." },
-  { slug: "yearly-touch-up", category: "touch-ups", name: "Yearly Touch-Up", price: 300, desc: "Color refresh for existing brow clients.", priceNote: "from" },
+  { slug: "yearly-touch-up", category: "touch-ups", name: "Yearly Touch-Up", price: 250, desc: "Color refresh for existing brow clients.", priceNote: "from" },
 ];

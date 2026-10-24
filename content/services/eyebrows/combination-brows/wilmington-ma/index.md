@@ -104,7 +104,7 @@ Combo Brows is one of five brow techniques available at the Wilmington studio, a
 - [Combo Brows overview](../) — full guide and healing timeline
 - [Microblading](../../microblading/wilmington-ma/) — $550
 - [Nano Brows](../../nano-brows/wilmington-ma/) — $650
-- [Powder Brows](../../powder-brows/wilmington-ma/) — $550
+- [Powder Brows](../../ombre-shading/wilmington-ma/) — $550
 - [Nano Combo](../../nano-combo/wilmington-ma/) — $600
 See the [Wilmington, MA studio page](../../../../locations/wilmington-ma/) or the [aftercare guide](../../../../aftercare/).
 

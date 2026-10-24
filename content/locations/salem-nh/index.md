@@ -101,7 +101,7 @@ The most common hesitation about booking anywhere is uncertainty over licensing 
 
 - [Nano Brows in Salem, NH](../../services/eyebrows/nano-brows/salem-nh/) — $650
 - [Microblading in Salem, NH](../../services/eyebrows/microblading/salem-nh/) — $550
-- [Powder Brows in Salem, NH](../../services/eyebrows/powder-brows/salem-nh/) — $550
+- [Powder Brows in Salem, NH](../../services/eyebrows/ombre-shading/salem-nh/) — $550
 - [Lip Blush in Salem, NH](../../services/lips/lip-blush/salem-nh/) — $550
 - [Top Eyeliner in Salem, NH](../../services/eyeliner/top-eyeliner/salem-nh/) — $350
 - [Brows + Lips Combo in Salem, NH](../../services/combos/eyebrows-lips-combo/salem-nh/) — $850

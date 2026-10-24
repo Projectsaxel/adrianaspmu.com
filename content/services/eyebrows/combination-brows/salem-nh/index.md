@@ -104,7 +104,7 @@ Combo Brows is one of five brow techniques available at the Salem studio, alongs
 - [Combo Brows overview](../) — full guide and healing timeline
 - [Microblading](../../microblading/salem-nh/) — $550
 - [Nano Brows](../../nano-brows/salem-nh/) — $650
-- [Powder Brows](../../powder-brows/salem-nh/) — $550
+- [Powder Brows](../../ombre-shading/salem-nh/) — $550
 - [Nano Combo](../../nano-combo/salem-nh/) — $600
 See the [Salem, NH studio page](../../../../locations/salem-nh/) or the [aftercare guide](../../../../aftercare/).
 

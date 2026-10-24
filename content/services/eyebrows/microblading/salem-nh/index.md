@@ -101,7 +101,7 @@ Microblading is one of five brow techniques available at the Salem studio, along
 
 - [Microblading overview](../) — full technique guide and healing timeline
 - [Nano Brows in Salem](../../nano-brows/salem-nh/) — $650
-- [Powder Brows in Salem](../../powder-brows/salem-nh/) — $550
+- [Powder Brows in Salem](../../ombre-shading/salem-nh/) — $550
 - [Combo Brows in Salem](../../combination-brows/salem-nh/) — custom quote
 - [Nano Combo in Salem](../../nano-combo/salem-nh/) — $600
 See the [Salem, NH studio page](../../../../locations/salem-nh/) or the [aftercare guide](../../../../aftercare/).

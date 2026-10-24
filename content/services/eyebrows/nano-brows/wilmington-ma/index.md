@@ -102,7 +102,7 @@ Nano Brows draws hair-like strokes with a digital machine and ultra-fine needle,
 
 - [Nano Brows overview](../) — full guide and healing timeline
 - [Microblading](../../microblading/wilmington-ma/) — $550
-- [Powder Brows](../../powder-brows/wilmington-ma/) — $550
+- [Powder Brows](../../ombre-shading/wilmington-ma/) — $550
 - [Combo Brows](../../combination-brows/wilmington-ma/) — custom quote
 - [Nano Combo](../../nano-combo/wilmington-ma/) — $600
 See the [Wilmington, MA studio page](../../../../locations/wilmington-ma/) or the [aftercare guide](../../../../aftercare/).
