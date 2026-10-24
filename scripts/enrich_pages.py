@@ -45,7 +45,7 @@ SALEM_NODE = {
     },
     "geo": {"@type": "GeoCoordinates", "latitude": 42.782612, "longitude": -71.228213},
     "image": f"{BASE}/assets/images/locations/adrianas-permanent-makeup-salem-nh-storefront.webp",
-    "priceRange": "$250-$850",
+    "priceRange": "$300-$1,380",
 }
 
 
@@ -61,7 +61,7 @@ FRESHA_GENERIC = "https://www.fresha.com/book-now/adrianas-permanent-makeup-zeas
 DESCRIPTIONS = {
     "services/eyebrows/index.html": "Microblading, nano brows, powder and combo brows in Wilmington MA and Salem NH. Compare techniques, see prices, and book a consultation.",
     "services/lips/index.html": "Lip blush and dark lip neutralization in Wilmington MA and Salem NH. Natural color and defined contour, with the 2nd session included.",
-    "services/eyeliner/index.html": "Permanent eyeliner in Wilmington MA and Salem NH: top, bottom, smokey effect and combo. Smudge-proof definition that survives the gym, from $250.",
+    "services/eyeliner/index.html": "Permanent eyeliner in Wilmington MA and Salem NH: top, bottom, smokey effect and combo. Smudge-proof definition that survives the gym, from $300.",
     "services/combos/index.html": "Permanent makeup combo packages in Wilmington MA and Salem NH. Pair brows, lips and eyeliner in one plan and save, 2nd session included.",
     "services/touch-ups/index.html": "Yearly permanent makeup touch-ups in Wilmington MA and Salem NH. Keep brows, lips and eyeliner fresh with a refresh by the original artist.",
     "portfolio/index.html": "Real before and after photos of microblading, nano brows, lip blush and eyeliner by the Adriana's PMU artists in Wilmington MA and Salem NH.",
@@ -1046,9 +1046,9 @@ SERVICE_FIT = {
         "This is corrective work on existing pigment, so it is quoted per case and "
         "may need more than one session."),
     "top-eyeliner": "Upper lash line only. Ask what happens to the line as it heals and softens.",
-    "bottom-eyeliner": "Lower lash line only, the most subtle of the eyeliner options at $250.",
+    "bottom-eyeliner": "Lower lash line only, the most subtle of the eyeliner options at $300.",
     "smokey-eyeliner": "A shaded, diffused finish rather than a defined line.",
-    "eyeliner-combo": "Top and bottom in the same appointment, at $500 instead of $350 plus $250 separately.",
+    "eyeliner-combo": "Top and bottom in the same appointment, at $550 instead of $350 plus $300 separately.",
     "eyebrows-lips-combo": "Brows and lips in one visit at $850, against $1,100 booked separately.",
     "yearly-touch-up": (
         "Priced from $300 by how much pigment is left, so the quote depends on a look "
@@ -1061,7 +1061,7 @@ CATEGORY_FIT = {
     "eyeliner": "Four eyeliner options, from a subtle lower line to a full shaded finish.",
     "lips": "Additive colour and corrective work are different services with different outcomes.",
     "combos": "Combining services in one visit costs less than booking them apart.",
-    "touch-ups": "Maintenance of existing permanent makeup, priced by how much pigment remains.",
+    "touch-ups": "Maintenance of existing permanent makeup, priced by area and artist.",
 }
 
 
@@ -1078,7 +1078,7 @@ def _criteria_rows(fit_text):
          "The 2nd session, 6 to 8 weeks after the appointment, is included in the price of every first-time procedure. The yearly touch-up, from $300, is a separate visit about 12 months later."),
         ("Whether the price is published at all",
          "Ask for the price before the consultation. A studio that will not name a range before seeing you is not comparable to one that will.",
-         "All 13 services are published with their prices, from $250 to $850, on the <a href=\"{up}prices/\">price list</a>."),
+         "All 13 services are published with their prices, from $300 to $1,380, on the <a href=\"{up}prices/\">price list</a>."),
         ("When they say no",
          "Ask what would make them refuse to perform the procedure. An artist who never refuses is a warning sign.",
          "Pregnancy, breastfeeding, under 18 and isotretinoin are refused at both studios with no exception. The full list is in the <a href=\"{up}aftercare/\">contraindications guide</a>, published before you book rather than after."),
@@ -1167,7 +1167,7 @@ def _faq_extra(label, price, up):
             f"How is {label} priced?",
             f"{label} is quoted at the consultation rather than listed at a fixed price, "
             f"because the work needed changes from face to face. Every other service is "
-            f"published openly, from $250 to $850, on the "
+            f"published openly, from $300 to $1,380, on the "
             f"<a href=\"{up}prices/\">price list</a>, so you can see the range the studio "
             f"works in before you book anything."))
 
@@ -1351,7 +1351,7 @@ FAQ_BY_PAGE = {
     ],
     "services/index.html": [
         ("How much do the services cost?",
-         "Thirteen services are published with their prices, from $250 for bottom eyeliner to "
+         "Thirteen services are published with their prices, from $300 for bottom eyeliner to "
          "$850 for the brows and lips combo. The price of every first-time procedure already includes the perfecting "
          "session 6 to 8 weeks later. The full table is on the price list, and combo brows "
          "is the one service quoted at the consultation."),
@@ -1388,7 +1388,7 @@ FAQ_BY_PAGE = {
          "VIP Masterclass are taught there. No client procedures happen at that address, so never "
          "book a brow or lip appointment for Peabody."),
         ("Do the two studios charge the same?",
-         "Yes. The same 13 services are published at the same prices at both, from $250 to $850, "
+         "Yes. The same 13 services are published at the same prices at both, from $300 to $1,380, "
          "and the price of every first-time procedure includes the 2nd session 6 to 8 weeks later. What "
          "differs between them is the phone number and the licensing regime, not the price list."),
         ("Are the licences different in Massachusetts and New Hampshire?",
@@ -1672,7 +1672,7 @@ def add_payment_steps(s, path_rel):
         "plan of up to 24 months with interest. Cherry sets the terms and the approval, not "
         "the studio.</li>"
         "<li><strong>Book the appointment</strong> at Wilmington or Salem for the service you "
-        "chose, from $250 to $850.</li>"
+        "chose, from $300 to $1,380.</li>"
         "<li><strong>Have the procedure</strong>, 2nd session included in the original "
         "price, 6 to 8 weeks later at no extra charge.</li>"
         "<li><strong>Pay Cherry on your schedule</strong> over the plan you picked, rather "
@@ -2022,7 +2022,7 @@ LOCATION_FIELDS = {
         "url": f"{BASE}/locations/wilmington-ma/",
         "image": f"{BASE}/assets/images/locations/wilmington-ma-studio-entrance.webp",
         "parentOrganization": {"@id": f"{BASE}/#organization"},
-        "priceRange": "$250-$850",
+        "priceRange": "$300-$1,380",
         "openingHoursSpecification": HOURS,
         "hasMap": "https://maps.google.com/?cid=16715673055892397510",
         "name": "Adriana's Permanent Makeup",
@@ -2031,7 +2031,7 @@ LOCATION_FIELDS = {
     f"{BASE}/#salem": {
         "url": f"{BASE}/locations/salem-nh/",
         "parentOrganization": {"@id": f"{BASE}/#organization"},
-        "priceRange": "$250-$850",
+        "priceRange": "$300-$1,380",
         "openingHoursSpecification": HOURS,
         "hasMap": "https://maps.google.com/?cid=8332848331847351639",
         "name": "Adriana's Permanent Makeup",

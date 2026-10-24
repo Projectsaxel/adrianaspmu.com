@@ -1188,7 +1188,7 @@ def payment_plan_body(depth=1):
         <h3>4 payments, no interest</h3>
         <p>Split your service into 4 equal payments, one every two weeks over 6 weeks, with
         <strong>no interest</strong>. Available for purchases from $35 to $3,000 &mdash; which covers
-        every service on our menu, from $250 eyeliner to $850 combination work.</p>
+        every service on our menu, from $300 eyeliner to $1,380 combo work.</p>
       </div>
       <div class="finance-fact">
         <h3>Or spread it further</h3>
