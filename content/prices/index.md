@@ -20,7 +20,7 @@ Adriana's Permanent Makeup publishes 13 services across brows, lips, eyeliner, c
 | --- | --- |
 | [Nano Brows](../services/eyebrows/nano-brows/) | $650 |
 | [Microblading](../services/eyebrows/microblading/) | $550 |
-| [Powder Brows](../services/eyebrows/powder-brows/) | $550 |
+| [Powder Brows](../services/eyebrows/ombre-shading/) | $550 |
 | [Combo Brows](../services/eyebrows/combination-brows/) | Custom pricing |
 | [Nano Combo](../services/eyebrows/nano-combo/) | $600 |
 | [Lip Blush](../services/lips/lip-blush/) | $550 |

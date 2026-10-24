@@ -18,7 +18,7 @@ Nano Brows uses an ultra-fine needle and digital machine to create realistic, ha
 
 Microblading uses a handheld tool to create fine, hair-like strokes for fuller, natural-looking brows that typically last 12 to 24 months.
 
-### [Powder Brows](powder-brows/)
+### [Powder Brows](ombre-shading/)
 
 Powder Brows uses a digital machine to create a soft, shaded brow effect with a polished makeup-like finish that typically lasts 1 to 3 years.
 
@@ -50,7 +50,7 @@ Eyebrow permanent makeup at Adriana’s ranges from $550 to $650, falling into t
 | --- | --- | --- | --- | --- |
 | [Nano Brows](nano-brows/) | $650 | Ultra-fine needle, digital machine | Individual hair-like strokes | 1–3 years |
 | [Microblading](microblading/) | $550 | Handheld blade | Fine hair-like strokes | 12–24 months |
-| [Powder Brows](powder-brows/) | $550 | Digital machine, shading motion | Soft, diffused powder-makeup look | 1–3 years |
+| [Powder Brows](ombre-shading/) | $550 | Digital machine, shading motion | Soft, diffused powder-makeup look | 1–3 years |
 | [Combo Brows](combination-brows/) | Custom, set at consultation | Blade strokes plus machine shading | Strokes at the front, shading through the body | 1–3 years |
 | [Nano Combo](nano-combo/) | $650 | Digital machine, strokes plus shading motion | Nano strokes plus soft powder shading | 1–3 years |
 

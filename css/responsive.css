@@ -16,17 +16,19 @@
   .hero-shot[data-shot="0"] { --rx: 0;    --rw: .828; --fy: .22; }
   .hero-shot[data-shot="1"] { --rx: .203; --rw: .549; --fy: .12; }
   .hero-shot[data-shot="2"] { --rx: .216; --rw: .522; --fy: .17; }
-  .hero-shot[data-shot="3"] { --rx: .223; --rw: .509; --fy: .22; }
+  .hero-shot[data-shot="3"] { --rx: .178; --rw: .589; --fy: .034; }
   .hero-shot[data-shot="4"] { --rx: .148; --rw: .626; --fy: .19; }
   .hero-shot[data-shot="5"] { --rx: .143; --rw: .624; --fy: .10; }
+  .hero-shot[data-shot="6"] { --rx: .178; --rw: .589; --fy: .034; }
 }
 @media (min-width: 430px) and (max-width: 519.98px) {
   .hero-shot[data-shot="0"] { --fy: .22; }
   .hero-shot[data-shot="1"] { --rx: .177; --rw: .598; --fy: .11; }
   .hero-shot[data-shot="2"] { --rx: .189; --rw: .570; --fy: .16; }
-  .hero-shot[data-shot="3"] { --rx: .197; --rw: .558; --fy: .21; }
+  .hero-shot[data-shot="3"] { --rx: .144; --rw: .633; --fy: .031; }
   .hero-shot[data-shot="4"] { --rx: .117; --rw: .681; --fy: .17; }
   .hero-shot[data-shot="5"] { --rx: .112; --rw: .682; --fy: .09; }
+  .hero-shot[data-shot="6"] { --rx: .144; --rw: .633; --fy: .031; }
 }
 @media (min-width: 520px) and (max-width: 767.98px) {
   /* aqui a composicao inteira cobre a caixa (a foto nitida fica no centro,
@@ -34,8 +36,9 @@
   .hero-shot { --py: 30%; }
   .hero-shot[data-shot="0"] { --py: 55%; }
   .hero-shot[data-shot="2"] { --py: 42%; }
-  .hero-shot[data-shot="3"] { --py: 55%; }
+  .hero-shot[data-shot="3"] { --py: 50%; }
   .hero-shot[data-shot="4"] { --py: 30%; }
+  .hero-shot[data-shot="6"] { --py: 50%; }
 }
 
 @media (max-width: 767.98px) {
@@ -76,7 +79,6 @@
        (hover: none) and (pointer: coarse) and (min-width: 1024px) and (max-width: 1366px) {
   .hero-shot { --tx: 73%; }
   .hero-shot[data-shot="2"] { --tx: 90%; }
-  .hero-shot[data-shot="3"] { --tx: 84%; }
   .hero-editorial {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     grid-template-rows: auto 1fr auto;

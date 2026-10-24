@@ -704,6 +704,10 @@ p {
   box-shadow: var(--shadow-card);
 }
 
+/* Fotos de sala de aula (3:2) nas paginas dos cursos: a moldura segue a
+   foto em vez de forcar 4:5, que cortava a Adriana na borda (24/10/2026). */
+.hero-visual--paisagem { aspect-ratio: 3 / 2; align-self: center; }
+
 .hero-visual .hero-img,
 .hero-visual .service-hero-img {
   width: 100%;
@@ -1879,6 +1883,7 @@ body.portfolio-lightbox-open {
     aspect-ratio: 3/4;
     max-height: 480px;
   }
+  .hero-visual--paisagem { aspect-ratio: 3 / 2; }
 }
 
 @media (min-width: 1100px) {
@@ -3356,7 +3361,7 @@ picture { display: contents; }
 .hero-index { padding-bottom: clamp(4.5rem, 8vh, 5.5rem); }
 
 @media (min-width: 900px) {
-  .hero-index ol { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .hero-index ol { grid-template-columns: repeat(7, minmax(0, 1fr)); }
 }
 
 .hero-index ol {
@@ -3364,7 +3369,7 @@ picture { display: contents; }
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   gap: clamp(.5rem, 1.5vw, 1.5rem);
   border-top: 1px solid rgba(251, 246, 243, .18);
 }
@@ -7119,3 +7124,52 @@ tbody tr:last-child > td { border-bottom: 0; }
    da a altura. O .ag-tile img (height:auto) era mais especifico que .ba-img. */
 .ag-tile.ba-frame .ba-img { position: absolute; inset: 0; height: 100%; }
 .roll-after .ba-pausa { margin: 0 0.75rem 1rem; }
+
+/* Academy: carrossel das turmas (21/10/2026).
+   Duas faixas em sentidos opostos, fotos quadradas de 1:1 vindas do
+   Instagram. O trilho tem o conjunto duas vezes (a copia e aria-hidden)
+   e anda -50%, por isso o laco nao tem emenda. Para no hover, no foco
+   e no botao (WCAG 2.2.2); clicar abre a foto grande no lightbox. */
+.turmas { overflow: hidden; }
+.turmas-lead { max-width: 34rem; margin: 0 auto 2rem; text-align: center; color: var(--ink-muted); }
+.turmas-faixa {
+  --turma: clamp(180px, 22vw, 280px);
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+.turmas-faixa + .turmas-faixa { margin-top: 1rem; }
+.turmas-trilho {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+  animation: turmas-anda 90s linear infinite;
+}
+.turmas-faixa--volta .turmas-trilho { animation-direction: reverse; animation-duration: 100s; }
+.turmas-faixa:hover .turmas-trilho,
+.turmas-faixa:focus-within .turmas-trilho,
+.turmas-pausado .turmas-trilho { animation-play-state: paused; }
+@keyframes turmas-anda { to { transform: translateX(calc(-50% - 0.5rem)); } }
+.turma-item {
+  flex: 0 0 var(--turma);
+  padding: 0;
+  border: 0;
+  background: none;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  cursor: zoom-in;
+}
+.turma-item img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  transition: transform 0.5s var(--ease);
+}
+.turma-item:hover img { transform: scale(1.04); }
+.turma-item:focus-visible { outline: 2px solid var(--brand-deep); outline-offset: -2px; }
+.turmas .portfolio-item { box-shadow: none; width: auto; }
+@media (prefers-reduced-motion: reduce) {
+  .turmas-trilho { animation: none; }
+  .turmas-faixa { overflow-x: auto; mask-image: none; }
+  .turma-item[aria-hidden="true"] { display: none; }
+}
