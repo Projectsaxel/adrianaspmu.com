@@ -18,7 +18,7 @@ import urllib.request
 from datetime import datetime, timezone
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from reviews_lib import UNITS, build  # noqa: E402
+from reviews_lib import FRESHA_URLS, UNITS, build  # noqa: E402
 
 API = "https://api.localfalcon.com/v2/gbp/reviews/"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -47,6 +47,22 @@ def fetch_unit(key, place_id):
     return {"total": total, "average": average, "reviews": reviews}
 
 
+def fetch_fresha():
+    """Paginas publicas das unidades no Fresha (avaliacoes em JSON-LD). Se
+    falhar, a home segue so com o Google: o Fresha nunca derruba a rotina."""
+    out = {}
+    ua = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36"
+    for unit, url in FRESHA_URLS.items():
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": ua, "Accept-Language": "en-US,en;q=0.9"})
+            with urllib.request.urlopen(req, timeout=60) as r:
+                out[unit] = r.read().decode("utf-8", "ignore")
+        except Exception as e:  # noqa: BLE001
+            print(f"::warning::Fresha ({unit}) indisponivel: {e}")
+        time.sleep(1)
+    return out
+
+
 def main():
     key = os.environ.get("LOCALFALCON_API_KEY", "").strip()
     if not key:
@@ -54,7 +70,7 @@ def main():
         return 0
     out_path = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "data", "reviews.json")
     units_raw = {u: fetch_unit(key, m["place_id"]) for u, m in UNITS.items()}
-    data = build(units_raw, datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"))
+    data = build(units_raw, datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), fetch_fresha())
     # trava de seguranca: se a API vier vazia, nao apaga o que o site ja mostra
     if sum(len(v["reviews"]) for v in units_raw.values()) == 0:
         raise RuntimeError("Local Falcon devolveu 0 avaliacoes; arquivo mantido.")
@@ -62,7 +78,8 @@ def main():
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=1)
     u = data["units"]
-    print(f"fetch_reviews: {len(data['reviews'])} publicaveis | "
+    print(f"fetch_reviews: {len(data['reviews'])} publicaveis "
+          f"({sum(1 for r in data['reviews'].values() if r.get('source') == 'fresha')} do Fresha) | "
           + " | ".join(f"{k} {v['rating']} ({v['total']})" for k, v in u.items()))
     return 0
 

@@ -2472,13 +2472,15 @@ def add_reviews(s, path_rel):
     # (Local Falcon -> reviews-data, a cada 3 dias): o build grava os
     # cartoes e o main.js atualiza no navegador.
     if path_rel == "index.html" and 'class="reviews-home"' in s:
-        sel = REVIEWS.get("selection", {}).get("_any", {})
+        # 24/10/2026: carrossel com as 12 mais recentes (Google + Fresha)
+        from reviews_lib import home_card_html
+        sel = REVIEWS.get("selection", {}).get("_home") or REVIEWS.get("selection", {}).get("_any", {})
         ids = sel.get("all") or []
         cards = [REVIEWS["reviews"][i] for i in ids if i in REVIEWS.get("reviews", {})]
         if cards:
-            s = re.sub(r'(<div class="reviews-home"[^>]*>\s*<div class="reviews-live-grid" data-reviews-grid>).*?(</div>\s*</div>)',
-                       lambda m: m.group(1) + "".join(_review_card(r, units) for r in cards) + m.group(2),
-                       s, count=1, flags=re.S)
+            html = "".join(home_card_html(r, units) for r in cards)
+            s = re.sub(r'(<div class="rv-track" data-reviews-grid>).*?(</div>\s*</div>\s*<button class="rv-pause")',
+                       lambda m: m.group(1) + html + m.group(2), s, count=1, flags=re.S)
         return s
     tgt = _review_target(path_rel)
     if not tgt:
