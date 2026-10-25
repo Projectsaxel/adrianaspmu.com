@@ -1117,6 +1117,11 @@
           const ad = Math.abs(d);
           if (ad > VISIVEIS) { s.hidden = true; return; }
           s.hidden = false;
+          /* As fotos da galeria sao lazy (auditoria 24/10/2026: as 34
+             baixavam junto com o hero). Ao entrar no leque, a foto pede
+             o download na hora, antes de chegar ao centro. */
+          const foto = s.querySelector("img[loading=lazy]");
+          if (foto) foto.loading = "eager";
           /* Passo em PIXELS, medido na largura real do slide: em
              porcentagem ele variava com cada foto e o espacamento
              ficava irregular. */
@@ -1167,7 +1172,9 @@
          foto aberta o automatico para; ao fechar, volta sozinho. */
       const fotos = slides.map(function (s) {
         const img = s.querySelector("img");
-        return { src: img ? img.currentSrc || img.src : "", alt: img ? img.alt : "" };
+        // img.src (o arquivo original), nao currentSrc: com srcset o
+        // slide carrega a versao reduzida, e a foto ampliada tem de ser a grande.
+        return { src: img ? img.src : "", alt: img ? img.alt : "" };
       });
       slides.forEach(function (s, i) {
         s.style.cursor = "zoom-in";
