@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-24T15:06:23Z",
+ "updated": "2026-10-25T14:22:30Z",
  "units": {
   "wilmington": {
    "label": "Wilmington, MA",
@@ -1605,6 +1605,16 @@
    "month": "October 2026",
    "source": "fresha"
   },
+  "fresha-1abb6c1cdb0a2b45": {
+   "id": "fresha-1abb6c1cdb0a2b45",
+   "unit": "wilmington",
+   "name": "Olivia H.",
+   "rating": 5,
+   "text": "Inhave been going to Adriana&apos;s for 3 years now. This place is always clean; .always improving. Andriana and Sofia are very professional. You will leave the place always looking beautiful - just like the place and people behind this Salon.",
+   "date": "2026-10-24",
+   "month": "October 2026",
+   "source": "fresha"
+  },
   "fresha-18a74af61fc4f23a": {
    "id": "fresha-18a74af61fc4f23a",
    "unit": "salem",
@@ -1979,17 +1989,17 @@
   },
   "_home": {
    "all": [
-    "fresha-9fbacafac7704bab",
+    "fresha-1abb6c1cdb0a2b45",
     "AbFvOqkoI5YyMqi_hoYce7XXjPW4WV8NeT2nCNPOYYP0Ib1m1hkJ-ApLoHkXDvLXkdjz_j2ARBqFAg",
-    "fresha-f7f4214d3ce90a31",
+    "fresha-9fbacafac7704bab",
     "AbFvOqmK9YASA6EyKdOVGEEPzzpIIFFAu4BCxlCp7_ajFihpov1QXpDeKFRyvGCIg4vTu0oCb__rvA",
-    "fresha-f2adfa56423af8a8",
+    "fresha-f7f4214d3ce90a31",
     "AbFvOqlHJ8AyBQFHtjI6ZP71C1yTH2IzUVSJh3c35RQBEWrFdk8yif5SA_fBAAtKz6uIXvLZcKwuOg",
-    "fresha-86980d39e27b23a8",
+    "fresha-f2adfa56423af8a8",
     "AbFvOqmJASxDKrGn5b8tCVkPPaB5k37K2RRYxjt5NNvpp9pEWghxKGXzsXDSrKdYGmaktIihX19iDA",
-    "fresha-b016c170323c3c4f",
+    "fresha-86980d39e27b23a8",
     "AbFvOqlzEm8rKobLvWfXlHtRlCv8zY-YJ1oURQ1WKDtdRbrUp1m1xa04yKPHMK1PMRuADDcbQG-jlg",
-    "fresha-503478483a049d50",
+    "fresha-b016c170323c3c4f",
     "AbFvOqni9oDEQDs4Ttkj8lPVu0fkKu0nIe8FTaJxAT-W9MkGOR06GqSjHzIWVVBcldaEtNMXa68q"
    ]
   }
