@@ -1146,11 +1146,13 @@ def add_criteria(s, path_rel):
 # politica comercial (Regra 1). Esta em pendencias-cliente.
 # ====================================================================
 
+# Preco por artista, (Livy, Adriana): auditoria 24/10/2026. Antes era um
+# numero so (o da Livy) e tres deles estavam desatualizados.
 FAQ_PRICES = {
-    "microblading": "550", "nano-brows": "650", "ombre-shading": "550",
-    "nano-combo": "600", "lip-blush": "550", "dark-lip-neutralization": "550",
-    "top-eyeliner": "350", "smokey-eyeliner": "400", "bottom-eyeliner": "250",
-    "eyeliner-combo": "500", "eyebrows-lips-combo": "850",
+    "microblading": (550, 790), "nano-brows": (650, 990), "ombre-shading": (550, 790),
+    "nano-combo": (650, 990), "lip-blush": (550, 790), "dark-lip-neutralization": (550, 790),
+    "top-eyeliner": (350, 500), "bottom-eyeliner": (300, 400),
+    "eyeliner-combo": (550, 800), "eyebrows-lips-combo": (850, 1380),
 }
 
 
@@ -1161,7 +1163,8 @@ def _faq_extra(label, price, up):
     if price:
         qa.append((
             f"How much does {label} cost, and what is included?",
-            f"{label} costs ${price} at both studios, and that price already includes the "
+            f"{label} costs ${price[0]:,} with Livy or ${price[1]:,} with Adriana at both "
+            f"studios, and either price already includes the "
             f"2nd session scheduled 6 to 8 weeks after the appointment. The "
             f"consultation, the mapping and the topical numbing are part of it as well. "
             f"A yearly touch-up, from $300, is a separate visit about 12 months later. "
@@ -2135,6 +2138,34 @@ ACADEMY_NODE = {
 FROM_PRICE_SERVICES = ("services/touch-ups/yearly-touch-up/",)
 
 
+def price_by_artist(graph, s):
+    """Auditoria 24/10/2026: o Offer tinha um so "price", o da Livy, e a
+    pagina mostra dois ("$650 with Livy · $990 with Adriana"). Schema que
+    afirma um preco unico quando a pagina mostra dois e a IA que cita
+    "$650" para quem vai agendar com a Adriana. Vira faixa minPrice/maxPrice
+    lida do selo visivel da propria pagina."""
+    body = re.sub(r"<[^>]+>", " ", s.split("</head>", 1)[-1]).replace("&middot;", "·")
+    m = re.search(r"\$([\d,]+) with Livy\s*(?:·|or)\s*\$([\d,]+) with Adriana", body)
+    if not m:
+        return graph
+    lo, hi = (int(x.replace(",", "")) for x in m.groups())
+    for n in graph:
+        if not (isinstance(n, dict) and n.get("@type") == "Service"):
+            continue
+        offer = n.get("offers")
+        if not isinstance(offer, dict):
+            continue
+        offer.pop("price", None)
+        cur = offer.pop("priceCurrency", "USD")
+        offer["priceSpecification"] = {
+            "@type": "PriceSpecification",
+            "minPrice": lo,
+            "maxPrice": hi,
+            "priceCurrency": cur,
+        }
+    return graph
+
+
 def fix_schema_2026_09(graph, s, path_rel, canonical):
     """Auditoria SEO de 25/09/2026, itens 5.7 a, b e c.
 
@@ -2345,6 +2376,9 @@ def enrich_schema(s, path_rel):
 
     # 9. Correcoes da auditoria SEO de 25/09/2026 (5.7 a, b, c)
     graph = fix_schema_2026_09(graph, s, path_rel, canonical)
+
+    # 10. Preco por artista (auditoria 24/10/2026)
+    graph = price_by_artist(graph, s)
 
     data["@graph"] = normalize_graph(graph)
     out = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
