@@ -153,8 +153,37 @@ def pick(reviews, service, unit=None, n=PER_PAGE):
     if unit:
         own = [r for r in ok if r["unit"] == unit]
         other = [r for r in ok if r["unit"] != unit]
+        # Auditoria 25/10/2026: Salem quase nunca tem avaliacao citando o
+        # servico pelo nome, e a pagina de Salem mostrava as MESMAS 3 de
+        # Wilmington da pagina irma (18% do texto do par era esse bloco).
+        # Antes de recorrer a outra unidade, completa com avaliacoes da
+        # PROPRIA unidade sobre a mesma categoria e, por ultimo, sobre
+        # qualquer servico.
+        if len(own) < n and service != "_any":
+            vistos = {r["id"] for r in own}
+            for alvo in (CATEGORY.get(service), "_any"):
+                if not alvo or len(own) >= n:
+                    continue
+                extra = pick(reviews, alvo, None, n=10 ** 6)
+                extra = [r for r in reviews if r["id"] in extra]
+                extra.sort(key=lambda r: r["date"], reverse=True)
+                for r in extra:
+                    if r["unit"] == unit and r["id"] not in vistos and publishable(r):
+                        own.append(r)
+                        vistos.add(r["id"])
         ok = own + other
     return [r["id"] for r in ok[:n]]
+
+
+# Categoria de cada servico, para completar a pagina de cidade com
+# avaliacoes da propria unidade antes de usar as da outra.
+CATEGORY = {
+    "nano-brows": "eyebrows", "nano-combo": "eyebrows", "microblading": "eyebrows",
+    "powder-brows": "eyebrows", "combination-brows": "eyebrows",
+    "lip-blush": "lips", "dark-lip-neutralization": "lips",
+    "top-eyeliner": "eyeliner", "bottom-eyeliner": "eyeliner", "smokey-eyeliner": "eyeliner",
+    "eyeliner-combo": "eyeliner", "eyebrows-lips-combo": "_any", "yearly-touch-up": "_any",
+}
 
 
 def build(units_raw, updated_iso, fresha_raw=None):
