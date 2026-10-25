@@ -937,7 +937,7 @@ def _up(path_rel):
 # <lastmod> do sitemap (auditoria de SEO 25/09/2026, achado 4.1). Antes
 # vinha do sitemap.xml editado a mao, e 57 paginas diziam 2026-09-08.
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from sitemap_lastmod import lastmod_for_url  # noqa: E402
+from sitemap_lastmod import lastmod_for_url, lastmod_for_file  # noqa: E402
 
 
 
@@ -1762,6 +1762,21 @@ def add_byline(s, path_rel):
         "</div></section>"
     )
     return s.replace("</main>", block + "\n</main>", 1)
+
+
+def sync_byline_date(s, path_rel):
+    """A data visivel do byline passa a ser a mesma do dateModified e do
+    <lastmod> (auditoria 24/10/2026): eram tres datas diferentes, o texto
+    dizia "Last reviewed September 21" e o schema e o sitemap, 24/10."""
+    mod = lastmod_for_file(path_rel)
+    if not mod:
+        return s
+    y, m, d = (int(x) for x in mod.split("-"))
+    meses = ["January", "February", "March", "April", "May", "June", "July",
+             "August", "September", "October", "November", "December"]
+    humano = f"{meses[m - 1]} {d}, {y}"
+    return re.sub(r"Last reviewed [A-Z][a-z]+ \d{1,2}, \d{4}\.",
+                  f"Last updated {humano}.", s)
 
 
 # Hubs que declaram um cluster. O ItemList e montado a partir dos links
@@ -2656,6 +2671,7 @@ def main():
                 s = add_payment_steps(s, rel)
                 s = add_breadcrumb_nav(s, rel)
                 s = add_byline(s, rel)
+                s = sync_byline_date(s, rel)
                 s = fix_descriptions(s, rel)
                 s = fix_fresha(s, rel)
                 s = add_og(s, dirpath)
@@ -2675,8 +2691,34 @@ def main():
                     f.write(s)
                 changed += 1
     sync_404_chrome()
+    sync_llms_reviews()
     print(f"enrich_pages: {changed} paginas enriquecidas")
     return 0
+
+
+def sync_llms_reviews():
+    """Nota e contagem do Google no llms.txt vindas do mesmo reviews.json
+    que alimenta as paginas. Auditoria 24/10/2026: o llms.txt dizia 220
+    avaliacoes e 4,3 em Salem enquanto o site mostrava 225 e 4,6; numero
+    escrito a mao envelhece a cada 3 dias, quando o Actions atualiza."""
+    units = (REVIEWS or {}).get("units") or {}
+    w, sa = units.get("wilmington"), units.get("salem")
+    if not (w and sa):
+        return
+    fp = os.path.join(ROOT, "llms.txt")
+    try:
+        with open(fp, encoding="utf-8") as f:
+            t = f.read()
+    except OSError:
+        return
+    novo = re.sub(
+        r"^- [\d.]+ stars, [\d,]+ Google reviews \(Wilmington\); [\d.]+ stars, [\d,]+ reviews \(Salem\)",
+        f"- {w['rating']} stars, {w['total']} Google reviews (Wilmington); "
+        f"{sa['rating']} stars, {sa['total']} reviews (Salem)",
+        t, count=1, flags=re.M)
+    if novo != t:
+        with open(fp, "w", encoding="utf-8") as f:
+            f.write(novo)
 
 
 def _bloco(html, div_id):

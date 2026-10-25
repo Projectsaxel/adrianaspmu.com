@@ -91,13 +91,37 @@ def file_to_url(rel):
     return f"{BASE}/{path}"
 
 
+def _conteudo(html):
+    """O que conta como alteracao da pagina: o <main>.
+
+    Auditoria 24/10/2026: as 60 URLs saiam com o mesmo lastmod porque
+    trocar o ?v= do CSS ou o cabecalho toca o HTML de todas as paginas.
+    Para o Google isso nao e mudanca de conteudo, e lastmod que muda junto
+    em tudo vira sinal que ele ignora."""
+    if html is None:
+        return None
+    # So o <main>: o JSON-LD carrega nos comuns a todas as paginas
+    # (Organization, BeautySalon), e mudar o priceRange de uma unidade nao
+    # e mudanca de conteudo de cada pagina do site.
+    partes = re.findall(r"<main\b.*?</main>", html, re.S)
+    return re.sub(r"\s+", " ", " ".join(partes)).strip()
+
+
 @lru_cache(maxsize=None)
 def lastmod_for_file(rel):
-    """Data do ultimo commit que tocou o arquivo, ou None."""
+    """Data do ultimo commit que mudou o CONTEUDO do arquivo, ou None."""
     if git_usable():
-        d = _git("log", "-1", "--format=%cs", "--", rel)
-        if d and re.fullmatch(r"\d{4}-\d{2}-\d{2}", d):
-            return d
+        log = _git("log", "--format=%H %cs", "-n", "60", "--", rel) or ""
+        linhas = [l.split() for l in log.splitlines() if len(l.split()) == 2]
+        for sha, data in linhas:
+            if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", data):
+                continue
+            atual = _conteudo(_git("show", f"{sha}:{rel}"))
+            antes = _conteudo(_git("show", f"{sha}^:{rel}"))
+            if atual != antes:
+                return data
+        if linhas:
+            return linhas[-1][1]
     return _committed_lastmod().get(file_to_url(rel))
 
 
