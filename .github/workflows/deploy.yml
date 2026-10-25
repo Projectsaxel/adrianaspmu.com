@@ -68,6 +68,12 @@ jobs:
           pip install --quiet html5lib
           python3 tests/check_html.py
 
+      # Paginas servico x cidade reescritas (data-city-v2) nao podem passar
+      # de 30% de texto igual a pagina irma. Acima disso e doorway para o
+      # Google, e o deploy para aqui. Ver tests/check_city_pairs.py.
+      - name: Checagem das paginas de cidade (texto duplicado)
+        run: python3 tests/check_city_pairs.py
+
       - name: Deploy com Wrangler
         uses: cloudflare/wrangler-action@v3
         with:

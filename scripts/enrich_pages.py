@@ -1222,6 +1222,11 @@ def add_faq_items(s, path_rel):
     """Completa a FAQ ate cobrir as categorias obrigatorias do B12."""
     if "faq-list" not in s or "faq-b12" in s:
         return s
+    # Paginas de cidade reescritas (data-city-v2): as perguntas genericas do
+    # B12 sao iguais em Salem e Wilmington e vivem na pagina base do servico.
+    # Repeti-las aqui e o texto duplicado que tirou 7 paginas do indice.
+    if "data-city-v2" in s:
+        return s
     # aria-expanded e OPCIONAL: as 26 paginas servico-cidade usam
     # <button type="button"> puro, e exigi-lo fazia o contador achar zero
     # pergunta justamente nas paginas que mais precisavam do bloco.
@@ -2310,7 +2315,13 @@ def enrich_schema(s, path_rel):
         # FAQPage caiu de 6 para 4. Perguntas antigas cujo texto ainda aparece
         # na pagina sao preservadas; as que sumiram do HTML saem, que era o
         # objetivo original da regeneracao.
-        visible_text = re.sub(r"<[^>]+>", " ", s)
+        # So o corpo, sem <script>: o proprio JSON-LD do <head> contem as
+        # perguntas antigas, e procurar nele mantinha no FAQPage perguntas
+        # que ja tinham saido da pagina (auditoria 25/10/2026: 18 no schema,
+        # 5 visiveis).
+        corpo = s.split("</head>", 1)[-1]
+        corpo = re.sub(r"<script\b.*?</script>", " ", corpo, flags=re.S)
+        visible_text = re.sub(r"<[^>]+>", " ", corpo)
         kept = []
         for n in graph:
             if isinstance(n, dict) and n.get("@type") == "FAQPage":
