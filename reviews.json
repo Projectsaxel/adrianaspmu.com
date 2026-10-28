@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-25T14:22:30Z",
+ "updated": "2026-10-28T16:38:15Z",
  "units": {
   "wilmington": {
    "label": "Wilmington, MA",
@@ -1575,16 +1575,6 @@
    "month": "July 2026",
    "source": "google"
   },
-  "fresha-f2adfa56423af8a8": {
-   "id": "fresha-f2adfa56423af8a8",
-   "unit": "wilmington",
-   "name": "Karen G.",
-   "rating": 5,
-   "text": "Adriana is so talented! I stocked her instagram account for months before I made an appointment! Now I have gotten my brows done multiple times and had my lips shaded and I love her work! Just leave it to her she know what will look best!!",
-   "date": "2026-10-14",
-   "month": "October 2026",
-   "source": "fresha"
-  },
   "fresha-f7f4214d3ce90a31": {
    "id": "fresha-f7f4214d3ce90a31",
    "unit": "wilmington",
@@ -1615,14 +1605,14 @@
    "month": "October 2026",
    "source": "fresha"
   },
-  "fresha-18a74af61fc4f23a": {
-   "id": "fresha-18a74af61fc4f23a",
-   "unit": "salem",
-   "name": "Millie D.",
+  "fresha-ad0e1ce35e4daf5b": {
+   "id": "fresha-ad0e1ce35e4daf5b",
+   "unit": "wilmington",
+   "name": "Diane M.",
    "rating": 5,
-   "text": "Liv was gentle and listened to my requests and how I wanted my lids should look. Very happy with the results of my eyelids.",
-   "date": "2026-09-18",
-   "month": "September 2026",
+   "text": "Was my yearly brow touch up; Livy took time to figure out what would work best for me. Once decided only took a half hour. Everyone there is friendly and very professional! So glad I found Adrianna&apos;s!",
+   "date": "2026-10-27",
+   "month": "October 2026",
    "source": "fresha"
   },
   "fresha-503478483a049d50": {
@@ -1662,6 +1652,16 @@
    "rating": 5,
    "text": "Amazing Service 👏 So So happy, the staff was professional, friendly and made me feel comfortable i love the lip and eyebrows results,would definitely recommend this place to anyone looking to get their lips and eyebrows done.thankyou for the wonderful experience ADRIANA P. MEKEUP is the Best",
    "date": "2026-10-14",
+   "month": "October 2026",
+   "source": "fresha"
+  },
+  "fresha-e57a17ec47ccf82b": {
+   "id": "fresha-e57a17ec47ccf82b",
+   "unit": "salem",
+   "name": "Kholoud A.",
+   "rating": 5,
+   "text": "I like the work she done She’s very fast u feel comfortable with her The work very professional well done 👍",
+   "date": "2026-10-27",
    "month": "October 2026",
    "source": "fresha"
   }
@@ -1989,17 +1989,17 @@
   },
   "_home": {
    "all": [
-    "fresha-1abb6c1cdb0a2b45",
+    "fresha-ad0e1ce35e4daf5b",
     "AbFvOqkoI5YyMqi_hoYce7XXjPW4WV8NeT2nCNPOYYP0Ib1m1hkJ-ApLoHkXDvLXkdjz_j2ARBqFAg",
-    "fresha-9fbacafac7704bab",
+    "fresha-e57a17ec47ccf82b",
     "AbFvOqmK9YASA6EyKdOVGEEPzzpIIFFAu4BCxlCp7_ajFihpov1QXpDeKFRyvGCIg4vTu0oCb__rvA",
-    "fresha-f7f4214d3ce90a31",
+    "fresha-1abb6c1cdb0a2b45",
     "AbFvOqlHJ8AyBQFHtjI6ZP71C1yTH2IzUVSJh3c35RQBEWrFdk8yif5SA_fBAAtKz6uIXvLZcKwuOg",
-    "fresha-f2adfa56423af8a8",
+    "fresha-9fbacafac7704bab",
     "AbFvOqmJASxDKrGn5b8tCVkPPaB5k37K2RRYxjt5NNvpp9pEWghxKGXzsXDSrKdYGmaktIihX19iDA",
-    "fresha-86980d39e27b23a8",
+    "fresha-f7f4214d3ce90a31",
     "AbFvOqlzEm8rKobLvWfXlHtRlCv8zY-YJ1oURQ1WKDtdRbrUp1m1xa04yKPHMK1PMRuADDcbQG-jlg",
-    "fresha-b016c170323c3c4f",
+    "fresha-86980d39e27b23a8",
     "AbFvOqni9oDEQDs4Ttkj8lPVu0fkKu0nIe8FTaJxAT-W9MkGOR06GqSjHzIWVVBcldaEtNMXa68q"
    ]
   }
