@@ -1,11 +1,11 @@
 {
- "updated": "2026-10-28T16:38:15Z",
+ "updated": "2026-10-31T15:44:39Z",
  "units": {
   "wilmington": {
    "label": "Wilmington, MA",
    "maps": "https://maps.google.com/?cid=16715673055892397510",
    "rating": 4.9,
-   "total": 225
+   "total": 226
   },
   "salem": {
    "label": "Salem, NH",
@@ -15,6 +15,16 @@
   }
  },
  "reviews": {
+  "AbFvOqk22w12Qt31LORLRSnajqtVS-B_xyfBLOK1Ygfc0kDV4hx622t-i65nEo2dTVAoDysL_VExuw": {
+   "id": "AbFvOqk22w12Qt31LORLRSnajqtVS-B_xyfBLOK1Ygfc0kDV4hx622t-i65nEo2dTVAoDysL_VExuw",
+   "unit": "wilmington",
+   "name": "Diana M.",
+   "rating": 5,
+   "text": "Amazing! Adriana is an artist, I am beyond happy with my results. Entire staff are amazing and supportive Adriana well. I highly recommend. Thank you all so much! 🙏❤️🙏",
+   "date": "2026-09-30",
+   "month": "September 2026",
+   "source": "google"
+  },
   "AbFvOqkoI5YyMqi_hoYce7XXjPW4WV8NeT2nCNPOYYP0Ib1m1hkJ-ApLoHkXDvLXkdjz_j2ARBqFAg": {
    "id": "AbFvOqkoI5YyMqi_hoYce7XXjPW4WV8NeT2nCNPOYYP0Ib1m1hkJ-ApLoHkXDvLXkdjz_j2ARBqFAg",
    "unit": "wilmington",
@@ -53,16 +63,6 @@
    "text": "I was very happy with the service everything was on time everything professional I loved the place very clean I will recommend it to anybody",
    "date": "2026-10-01",
    "month": "October 2026",
-   "source": "google"
-  },
-  "AbFvOqk22w12Qt31LORLRSnajqtVS-B_xyfBLOK1Ygfc0kDV4hx622t-i65nEo2dTVAoDysL_VExuw": {
-   "id": "AbFvOqk22w12Qt31LORLRSnajqtVS-B_xyfBLOK1Ygfc0kDV4hx622t-i65nEo2dTVAoDysL_VExuw",
-   "unit": "wilmington",
-   "name": "Diana M.",
-   "rating": 5,
-   "text": "Amazing! Adriana is an artist, I am beyond happy with my results. Entire staff are amazing and supportive Adriana well. I highly recommend. Thank you all so much! 🙏❤️🙏",
-   "date": "2026-09-30",
-   "month": "September 2026",
    "source": "google"
   },
   "AbFvOqkwaaR5O0qHzHNmviLuro48FJHb65Flmn1CBIyO4hB71gjC7SnHIlXJSI6KWsNBg6fhcjG0": {
@@ -568,7 +568,7 @@
   "AbFvOqnWAPvoQk6uQwBQCbakVj32MjtO0ops1Fe3hZjZtqznbcDiTrV76O0s8v3kBr1_F0dXJF8s": {
    "id": "AbFvOqnWAPvoQk6uQwBQCbakVj32MjtO0ops1Fe3hZjZtqznbcDiTrV76O0s8v3kBr1_F0dXJF8s",
    "unit": "wilmington",
-   "name": "Nakiganda M.",
+   "name": "Matthew K.",
    "rating": 5,
    "text": "Best Service!!!My third year having my eyebrows done by Adriana. SHE IS THE 👌",
    "date": "2026-03-26",
@@ -1400,7 +1400,7 @@
    "unit": "wilmington",
    "name": "Erika M.",
    "rating": 5,
-   "text": "I had the pleasure of getting microblading done by Adriana, and it was one of the best experiences. The workspace was super clean and comfortable, and the service, from scheduling the appointment to receiving the treatment, was excellent. Best of all, you feel comfortable and at ease, and they speak both Spanish and English. Adriana and her colleagues are excellent with anyone who chooses to have the procedure done.",
+   "text": "I had the pleasure of getting microblading done by Adriana, and it was one of the best experiences. The workspace was super clean and comfortable, and the service, from scheduling the appointment to receiving the treatment itself, was excellent. Best of all, you feel comfortable and at ease, and they speak both Spanish and English. Adriana and her colleagues are excellent with anyone who chooses to have the procedure done.",
    "date": "2024-06-28",
    "month": "June 2024",
    "source": "google"
@@ -1505,6 +1505,16 @@
    "month": "May 2023",
    "source": "google"
   },
+  "AbFvOqmHpjiDbb81OJ8soeeu1voLQUgiJbUMQQ3bj89MmgIUYY7nErglT5AtEXb7hX6HqQAoDB0hqg": {
+   "id": "AbFvOqmHpjiDbb81OJ8soeeu1voLQUgiJbUMQQ3bj89MmgIUYY7nErglT5AtEXb7hX6HqQAoDB0hqg",
+   "unit": "salem",
+   "name": "Ebimartinez",
+   "rating": 5,
+   "text": "I’m so happy with my eyeliner tattoo results! The whole experience was amazing from start to finish. Adrianna was professional, gentle, and really took the time to understand the look I wanted. Everything was explained clearly, and I felt comfortable and cared for throughout the appointment. The results are beautiful, natural-looking, I’m very pleased with the attention to detail and the overall service. I would definitely recommend Adrianna to anyone considering cosmetic tattooing!",
+   "date": "2026-09-22",
+   "month": "September 2026",
+   "source": "google"
+  },
   "AbFvOqmK9YASA6EyKdOVGEEPzzpIIFFAu4BCxlCp7_ajFihpov1QXpDeKFRyvGCIg4vTu0oCb__rvA": {
    "id": "AbFvOqmK9YASA6EyKdOVGEEPzzpIIFFAu4BCxlCp7_ajFihpov1QXpDeKFRyvGCIg4vTu0oCb__rvA",
    "unit": "salem",
@@ -1532,16 +1542,6 @@
    "rating": 5,
    "text": "I am absolutely obsessed with my Nano Combo Brows! Adriana did an amazing job and completely nailed the natural, polished look I wanted. She really listened to what I was looking for, paid attention to every little detail, and made sure I was completely happy with the shape. My favorite part is waking up every morning and my brows already look DONE. It honestly feels like I wake up with part of my makeup already on, and it makes getting ready so much easier. Adriana is incredibly talented, patient, and professional. I couldn’t be happier and would recommend her to anyone!",
    "date": "2026-09-25",
-   "month": "September 2026",
-   "source": "google"
-  },
-  "AbFvOqmHpjiDbb81OJ8soeeu1voLQUgiJbUMQQ3bj89MmgIUYY7nErglT5AtEXb7hX6HqQAoDB0hqg": {
-   "id": "AbFvOqmHpjiDbb81OJ8soeeu1voLQUgiJbUMQQ3bj89MmgIUYY7nErglT5AtEXb7hX6HqQAoDB0hqg",
-   "unit": "salem",
-   "name": "Ebimartinez",
-   "rating": 5,
-   "text": "I’m so happy with my eyeliner tattoo results! The whole experience was amazing from start to finish. Adrianna was professional, gentle, and really took the time to understand the look I wanted. Everything was explained clearly, and I felt comfortable and cared for throughout the appointment. The results are beautiful, natural-looking, I’m very pleased with the attention to detail and the overall service. I would definitely recommend Adrianna to anyone considering cosmetic tattooing!",
-   "date": "2026-09-22",
    "month": "September 2026",
    "source": "google"
   },
@@ -1575,26 +1575,6 @@
    "month": "July 2026",
    "source": "google"
   },
-  "fresha-f7f4214d3ce90a31": {
-   "id": "fresha-f7f4214d3ce90a31",
-   "unit": "wilmington",
-   "name": "Marilyn R.",
-   "rating": 5,
-   "text": "I just got my new Nanobrows yesterday and love them already. It will be so easy to get up every day and have them look the same. Adriana is amazing, warm and welcoming. And she explains everything! She is definitely an artist. I will have to tell my friends (because my brows look so natural they may not notice!) and will be very happy to recommend Adriana!!",
-   "date": "2026-10-17",
-   "month": "October 2026",
-   "source": "fresha"
-  },
-  "fresha-9fbacafac7704bab": {
-   "id": "fresha-9fbacafac7704bab",
-   "unit": "wilmington",
-   "name": "Nella I.",
-   "rating": 5,
-   "text": "My experience with Livy was very positive and pleasant! ! I would definitely recommend it to anyone that they may be interested!!! Thank you Livy for your expertise!",
-   "date": "2026-10-23",
-   "month": "October 2026",
-   "source": "fresha"
-  },
   "fresha-1abb6c1cdb0a2b45": {
    "id": "fresha-1abb6c1cdb0a2b45",
    "unit": "wilmington",
@@ -1612,6 +1592,26 @@
    "rating": 5,
    "text": "Was my yearly brow touch up; Livy took time to figure out what would work best for me. Once decided only took a half hour. Everyone there is friendly and very professional! So glad I found Adrianna&apos;s!",
    "date": "2026-10-27",
+   "month": "October 2026",
+   "source": "fresha"
+  },
+  "fresha-93886726fa04a70b": {
+   "id": "fresha-93886726fa04a70b",
+   "unit": "wilmington",
+   "name": "Diane H.",
+   "rating": 5,
+   "text": "Adriana takes her time, recommends what she thinks is best, and I trust her to do it! She&apos;s great!",
+   "date": "2026-10-28",
+   "month": "October 2026",
+   "source": "fresha"
+  },
+  "fresha-f76761c6785a7e4f": {
+   "id": "fresha-f76761c6785a7e4f",
+   "unit": "wilmington",
+   "name": "Diana M.",
+   "rating": 5,
+   "text": "Adrianna is a eyebrow artist ans professional. She sees a vision, listens, and the just amazing!!! Words cannot express how happy I am with her services. Book with adriana!! 👍♥️",
+   "date": "2026-10-30",
    "month": "October 2026",
    "source": "fresha"
   },
@@ -1989,15 +1989,15 @@
   },
   "_home": {
    "all": [
-    "fresha-ad0e1ce35e4daf5b",
+    "fresha-f76761c6785a7e4f",
     "AbFvOqkoI5YyMqi_hoYce7XXjPW4WV8NeT2nCNPOYYP0Ib1m1hkJ-ApLoHkXDvLXkdjz_j2ARBqFAg",
-    "fresha-e57a17ec47ccf82b",
+    "fresha-93886726fa04a70b",
     "AbFvOqmK9YASA6EyKdOVGEEPzzpIIFFAu4BCxlCp7_ajFihpov1QXpDeKFRyvGCIg4vTu0oCb__rvA",
-    "fresha-1abb6c1cdb0a2b45",
+    "fresha-ad0e1ce35e4daf5b",
     "AbFvOqlHJ8AyBQFHtjI6ZP71C1yTH2IzUVSJh3c35RQBEWrFdk8yif5SA_fBAAtKz6uIXvLZcKwuOg",
-    "fresha-9fbacafac7704bab",
+    "fresha-e57a17ec47ccf82b",
     "AbFvOqmJASxDKrGn5b8tCVkPPaB5k37K2RRYxjt5NNvpp9pEWghxKGXzsXDSrKdYGmaktIihX19iDA",
-    "fresha-f7f4214d3ce90a31",
+    "fresha-1abb6c1cdb0a2b45",
     "AbFvOqlzEm8rKobLvWfXlHtRlCv8zY-YJ1oURQ1WKDtdRbrUp1m1xa04yKPHMK1PMRuADDcbQG-jlg",
     "fresha-86980d39e27b23a8",
     "AbFvOqni9oDEQDs4Ttkj8lPVu0fkKu0nIe8FTaJxAT-W9MkGOR06GqSjHzIWVVBcldaEtNMXa68q"
