@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T15:44:39Z",
+ "updated": "2026-11-01T16:49:28Z",
  "units": {
   "wilmington": {
    "label": "Wilmington, MA",
@@ -10,8 +10,8 @@
   "salem": {
    "label": "Salem, NH",
    "maps": "https://maps.google.com/?cid=8332848331847351639",
-   "rating": 4.6,
-   "total": 9
+   "rating": 4.3,
+   "total": 10
   }
  },
  "reviews": {
