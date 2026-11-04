@@ -1,20 +1,30 @@
 {
- "updated": "2026-11-01T16:49:28Z",
+ "updated": "2026-11-04T17:59:25Z",
  "units": {
   "wilmington": {
    "label": "Wilmington, MA",
    "maps": "https://maps.google.com/?cid=16715673055892397510",
    "rating": 4.9,
-   "total": 226
+   "total": 227
   },
   "salem": {
    "label": "Salem, NH",
    "maps": "https://maps.google.com/?cid=8332848331847351639",
-   "rating": 4.3,
-   "total": 10
+   "rating": 4.4,
+   "total": 11
   }
  },
  "reviews": {
+  "AbFvOqk4VnbcH9jSDLJRXcqdrOrcHHpqLx1Lsv2gMbKyh3JYLDn7odEtFh7ZoWFrTdqsOpGkaGEfNQ": {
+   "id": "AbFvOqk4VnbcH9jSDLJRXcqdrOrcHHpqLx1Lsv2gMbKyh3JYLDn7odEtFh7ZoWFrTdqsOpGkaGEfNQ",
+   "unit": "wilmington",
+   "name": "Mary D.",
+   "rating": 5,
+   "text": "Great place, my brows look so good. I’ve had so many compliments already and it’s only day 1. Very professional, lovely shop that has amazingly sweet employees 😊❤️",
+   "date": "2026-11-03",
+   "month": "November 2026",
+   "source": "google"
+  },
   "AbFvOqk22w12Qt31LORLRSnajqtVS-B_xyfBLOK1Ygfc0kDV4hx622t-i65nEo2dTVAoDysL_VExuw": {
    "id": "AbFvOqk22w12Qt31LORLRSnajqtVS-B_xyfBLOK1Ygfc0kDV4hx622t-i65nEo2dTVAoDysL_VExuw",
    "unit": "wilmington",
@@ -1400,7 +1410,7 @@
    "unit": "wilmington",
    "name": "Erika M.",
    "rating": 5,
-   "text": "I had the pleasure of getting microblading done by Adriana, and it was one of the best experiences. The workspace was super clean and comfortable, and the service, from scheduling the appointment to receiving the treatment itself, was excellent. Best of all, you feel comfortable and at ease, and they speak both Spanish and English. Adriana and her colleagues are excellent with anyone who chooses to have the procedure done.",
+   "text": "I had the pleasure of getting microblading done by Adriana, and it was one of the best experiences. The workspace was super clean and comfortable, and the service, from scheduling the appointment to receiving the treatment, was excellent. Best of all, you feel comfortable and at ease, and they speak both Spanish and English. Adriana and her colleagues are excellent with anyone who chooses to have the procedure done.",
    "date": "2024-06-28",
    "month": "June 2024",
    "source": "google"
@@ -1503,6 +1513,16 @@
    "text": "I am thrilled to write a glowing review for Adriana's microblading services. As someone who has experienced her work firsthand, I can confidently say that she is one of the best in the business. Last year, Adriana did my initial microblading procedure and I was blown away by the results. Not only did she take the time to understand my desired outcome, but she also made sure that I was comfortable throughout the entire process. Her attention to detail was impeccable, and she truly has an artist's eye for shaping eyebrows. Today, I went back to Adriana for my one-year touch-up and once again, she did not disappoint. Her expertise in microblading was evident as she made minor adjustments to my brows, ensuring that they still looked natural and full. She also took the time to educate me on how to maintain my new look and provided valuable advice on how to care for my brows post-treatment. What sets Adriana apart is not only her technical skill but also her dedication to providing exceptional customer service. She is kind, patient, and attentive to her clients' needs, which makes the experience all the more enjoyable. I left feeling confident and beautiful, thanks to her exceptional work. Overall, I cannot recommend Adriana enough. Her microblading services are top-notch, and she is truly one of the best in the industry. If you're looking for natural-looking, expertly-shaped eyebrows, Adriana is the person to see.",
    "date": "2023-05-05",
    "month": "May 2023",
+   "source": "google"
+  },
+  "AbFvOqlTho0EVsQtnFXrJo-AEhnLWvrP6azujQra5AulXlrIYP617FVnl7-XjfYIJZ4xKJ4uLVQpdA": {
+   "id": "AbFvOqlTho0EVsQtnFXrJo-AEhnLWvrP6azujQra5AulXlrIYP617FVnl7-XjfYIJZ4xKJ4uLVQpdA",
+   "unit": "salem",
+   "name": "Carol L.",
+   "rating": 5,
+   "text": "After my consultation with Adriana I felt confident to go ahead with Nano Brows. She gave me the exact shape and color that we had discussed and I'm so pleased with the results. I would highly recommend her, totally professional.",
+   "date": "2026-11-01",
+   "month": "November 2026",
    "source": "google"
   },
   "AbFvOqmHpjiDbb81OJ8soeeu1voLQUgiJbUMQQ3bj89MmgIUYY7nErglT5AtEXb7hX6HqQAoDB0hqg": {
@@ -1669,9 +1689,9 @@
  "selection": {
   "nano-brows": {
    "all": [
+    "AbFvOqlTho0EVsQtnFXrJo-AEhnLWvrP6azujQra5AulXlrIYP617FVnl7-XjfYIJZ4xKJ4uLVQpdA",
     "AbFvOqndaD2h-KmzYD92AulCH-bMw7QB56FoHvPtadXhXS1P8k3m_1JjAYKG502OyhqLuYOD6VU1cw",
-    "AbFvOqkx-pRPDSAjZMRL9lCpjIkB0-RmBb_uOSxkOo0UbBaApbqdtuQ0DgDUeWIGmUzw1pfQBB5Z5A",
-    "AbFvOqkkMa6WnMPf1k3twz7OFEeju0PSPcqHTmN-uHaYUPhPCiHl_-1O2Q9jvWhpTJDH1pl3CSZF"
+    "AbFvOqkx-pRPDSAjZMRL9lCpjIkB0-RmBb_uOSxkOo0UbBaApbqdtuQ0DgDUeWIGmUzw1pfQBB5Z5A"
    ],
    "wilmington": [
     "AbFvOqndaD2h-KmzYD92AulCH-bMw7QB56FoHvPtadXhXS1P8k3m_1JjAYKG502OyhqLuYOD6VU1cw",
@@ -1679,9 +1699,9 @@
     "AbFvOqkkMa6WnMPf1k3twz7OFEeju0PSPcqHTmN-uHaYUPhPCiHl_-1O2Q9jvWhpTJDH1pl3CSZF"
    ],
    "salem": [
+    "AbFvOqlTho0EVsQtnFXrJo-AEhnLWvrP6azujQra5AulXlrIYP617FVnl7-XjfYIJZ4xKJ4uLVQpdA",
     "AbFvOqndaD2h-KmzYD92AulCH-bMw7QB56FoHvPtadXhXS1P8k3m_1JjAYKG502OyhqLuYOD6VU1cw",
-    "AbFvOqkx-pRPDSAjZMRL9lCpjIkB0-RmBb_uOSxkOo0UbBaApbqdtuQ0DgDUeWIGmUzw1pfQBB5Z5A",
-    "AbFvOqkkMa6WnMPf1k3twz7OFEeju0PSPcqHTmN-uHaYUPhPCiHl_-1O2Q9jvWhpTJDH1pl3CSZF"
+    "AbFvOqkx-pRPDSAjZMRL9lCpjIkB0-RmBb_uOSxkOo0UbBaApbqdtuQ0DgDUeWIGmUzw1pfQBB5Z5A"
    ]
   },
   "nano-combo": {
@@ -1754,19 +1774,19 @@
   },
   "eyebrows": {
    "all": [
-    "AbFvOqkoI5YyMqi_hoYce7XXjPW4WV8NeT2nCNPOYYP0Ib1m1hkJ-ApLoHkXDvLXkdjz_j2ARBqFAg",
-    "AbFvOqmK9YASA6EyKdOVGEEPzzpIIFFAu4BCxlCp7_ajFihpov1QXpDeKFRyvGCIg4vTu0oCb__rvA",
-    "AbFvOqm-3hcZsn3j-obtHCW9_J0LeIFOrRDIaFT8qAvmVFNnWb8bK5At63Zt3-qbwOBhTgbJWMEGcQ"
+    "AbFvOqk4VnbcH9jSDLJRXcqdrOrcHHpqLx1Lsv2gMbKyh3JYLDn7odEtFh7ZoWFrTdqsOpGkaGEfNQ",
+    "AbFvOqlTho0EVsQtnFXrJo-AEhnLWvrP6azujQra5AulXlrIYP617FVnl7-XjfYIJZ4xKJ4uLVQpdA",
+    "AbFvOqkoI5YyMqi_hoYce7XXjPW4WV8NeT2nCNPOYYP0Ib1m1hkJ-ApLoHkXDvLXkdjz_j2ARBqFAg"
    ],
    "wilmington": [
+    "AbFvOqk4VnbcH9jSDLJRXcqdrOrcHHpqLx1Lsv2gMbKyh3JYLDn7odEtFh7ZoWFrTdqsOpGkaGEfNQ",
     "AbFvOqkoI5YyMqi_hoYce7XXjPW4WV8NeT2nCNPOYYP0Ib1m1hkJ-ApLoHkXDvLXkdjz_j2ARBqFAg",
-    "AbFvOqkwaaR5O0qHzHNmviLuro48FJHb65Flmn1CBIyO4hB71gjC7SnHIlXJSI6KWsNBg6fhcjG0",
-    "AbFvOqnv9WlfDzQLnTgxhh2bAPGXGwKDr10FSkOMLc61f91SeMGcf8BXD6VFVdEM00lu8xNqIZ8FfQ"
+    "AbFvOqkwaaR5O0qHzHNmviLuro48FJHb65Flmn1CBIyO4hB71gjC7SnHIlXJSI6KWsNBg6fhcjG0"
    ],
    "salem": [
+    "AbFvOqlTho0EVsQtnFXrJo-AEhnLWvrP6azujQra5AulXlrIYP617FVnl7-XjfYIJZ4xKJ4uLVQpdA",
     "AbFvOqmK9YASA6EyKdOVGEEPzzpIIFFAu4BCxlCp7_ajFihpov1QXpDeKFRyvGCIg4vTu0oCb__rvA",
-    "AbFvOqm-3hcZsn3j-obtHCW9_J0LeIFOrRDIaFT8qAvmVFNnWb8bK5At63Zt3-qbwOBhTgbJWMEGcQ",
-    "AbFvOqlyWdBDeVbVN6pynarRh8kYSv6DckulnzqY6-2D6VWsmack_39-7L0oQxWuA-np1JzOwgkXDA"
+    "AbFvOqm-3hcZsn3j-obtHCW9_J0LeIFOrRDIaFT8qAvmVFNnWb8bK5At63Zt3-qbwOBhTgbJWMEGcQ"
    ]
   },
   "lip-blush": {
@@ -1972,35 +1992,35 @@
   },
   "_any": {
    "all": [
-    "AbFvOqkoI5YyMqi_hoYce7XXjPW4WV8NeT2nCNPOYYP0Ib1m1hkJ-ApLoHkXDvLXkdjz_j2ARBqFAg",
-    "AbFvOqmK9YASA6EyKdOVGEEPzzpIIFFAu4BCxlCp7_ajFihpov1QXpDeKFRyvGCIg4vTu0oCb__rvA",
-    "AbFvOqlHJ8AyBQFHtjI6ZP71C1yTH2IzUVSJh3c35RQBEWrFdk8yif5SA_fBAAtKz6uIXvLZcKwuOg"
+    "AbFvOqk4VnbcH9jSDLJRXcqdrOrcHHpqLx1Lsv2gMbKyh3JYLDn7odEtFh7ZoWFrTdqsOpGkaGEfNQ",
+    "AbFvOqlTho0EVsQtnFXrJo-AEhnLWvrP6azujQra5AulXlrIYP617FVnl7-XjfYIJZ4xKJ4uLVQpdA",
+    "AbFvOqkoI5YyMqi_hoYce7XXjPW4WV8NeT2nCNPOYYP0Ib1m1hkJ-ApLoHkXDvLXkdjz_j2ARBqFAg"
    ],
    "wilmington": [
+    "AbFvOqk4VnbcH9jSDLJRXcqdrOrcHHpqLx1Lsv2gMbKyh3JYLDn7odEtFh7ZoWFrTdqsOpGkaGEfNQ",
     "AbFvOqkoI5YyMqi_hoYce7XXjPW4WV8NeT2nCNPOYYP0Ib1m1hkJ-ApLoHkXDvLXkdjz_j2ARBqFAg",
-    "AbFvOqmJASxDKrGn5b8tCVkPPaB5k37K2RRYxjt5NNvpp9pEWghxKGXzsXDSrKdYGmaktIihX19iDA",
-    "AbFvOqlzEm8rKobLvWfXlHtRlCv8zY-YJ1oURQ1WKDtdRbrUp1m1xa04yKPHMK1PMRuADDcbQG-jlg"
+    "AbFvOqmJASxDKrGn5b8tCVkPPaB5k37K2RRYxjt5NNvpp9pEWghxKGXzsXDSrKdYGmaktIihX19iDA"
    ],
    "salem": [
+    "AbFvOqlTho0EVsQtnFXrJo-AEhnLWvrP6azujQra5AulXlrIYP617FVnl7-XjfYIJZ4xKJ4uLVQpdA",
     "AbFvOqmK9YASA6EyKdOVGEEPzzpIIFFAu4BCxlCp7_ajFihpov1QXpDeKFRyvGCIg4vTu0oCb__rvA",
-    "AbFvOqlHJ8AyBQFHtjI6ZP71C1yTH2IzUVSJh3c35RQBEWrFdk8yif5SA_fBAAtKz6uIXvLZcKwuOg",
-    "AbFvOqm-3hcZsn3j-obtHCW9_J0LeIFOrRDIaFT8qAvmVFNnWb8bK5At63Zt3-qbwOBhTgbJWMEGcQ"
+    "AbFvOqlHJ8AyBQFHtjI6ZP71C1yTH2IzUVSJh3c35RQBEWrFdk8yif5SA_fBAAtKz6uIXvLZcKwuOg"
    ]
   },
   "_home": {
    "all": [
+    "AbFvOqk4VnbcH9jSDLJRXcqdrOrcHHpqLx1Lsv2gMbKyh3JYLDn7odEtFh7ZoWFrTdqsOpGkaGEfNQ",
     "fresha-f76761c6785a7e4f",
-    "AbFvOqkoI5YyMqi_hoYce7XXjPW4WV8NeT2nCNPOYYP0Ib1m1hkJ-ApLoHkXDvLXkdjz_j2ARBqFAg",
+    "AbFvOqlTho0EVsQtnFXrJo-AEhnLWvrP6azujQra5AulXlrIYP617FVnl7-XjfYIJZ4xKJ4uLVQpdA",
     "fresha-93886726fa04a70b",
-    "AbFvOqmK9YASA6EyKdOVGEEPzzpIIFFAu4BCxlCp7_ajFihpov1QXpDeKFRyvGCIg4vTu0oCb__rvA",
+    "AbFvOqkoI5YyMqi_hoYce7XXjPW4WV8NeT2nCNPOYYP0Ib1m1hkJ-ApLoHkXDvLXkdjz_j2ARBqFAg",
     "fresha-ad0e1ce35e4daf5b",
-    "AbFvOqlHJ8AyBQFHtjI6ZP71C1yTH2IzUVSJh3c35RQBEWrFdk8yif5SA_fBAAtKz6uIXvLZcKwuOg",
+    "AbFvOqmK9YASA6EyKdOVGEEPzzpIIFFAu4BCxlCp7_ajFihpov1QXpDeKFRyvGCIg4vTu0oCb__rvA",
     "fresha-e57a17ec47ccf82b",
-    "AbFvOqmJASxDKrGn5b8tCVkPPaB5k37K2RRYxjt5NNvpp9pEWghxKGXzsXDSrKdYGmaktIihX19iDA",
+    "AbFvOqlHJ8AyBQFHtjI6ZP71C1yTH2IzUVSJh3c35RQBEWrFdk8yif5SA_fBAAtKz6uIXvLZcKwuOg",
     "fresha-1abb6c1cdb0a2b45",
-    "AbFvOqlzEm8rKobLvWfXlHtRlCv8zY-YJ1oURQ1WKDtdRbrUp1m1xa04yKPHMK1PMRuADDcbQG-jlg",
-    "fresha-86980d39e27b23a8",
-    "AbFvOqni9oDEQDs4Ttkj8lPVu0fkKu0nIe8FTaJxAT-W9MkGOR06GqSjHzIWVVBcldaEtNMXa68q"
+    "AbFvOqmJASxDKrGn5b8tCVkPPaB5k37K2RRYxjt5NNvpp9pEWghxKGXzsXDSrKdYGmaktIihX19iDA",
+    "fresha-86980d39e27b23a8"
    ]
   }
  }
