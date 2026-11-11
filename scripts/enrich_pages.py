@@ -145,7 +145,21 @@ def classify(path_rel):
 # dele), e o stub gtag/dataLayer tambem, para nenhum codigo quebrar.
 GA_HOST = "adrianaspmu.com"
 ADS_ID = "AW-10903727189"   # conta "Adrianas EUA" no Google Ads
-GA_GATE_MARK = "/*ga4-so-em-producao-v2*/"
+GA_GATE_MARK = "/*ga4-so-em-producao-v3*/"
+_GA_V2_MARK = "/*ga4-so-em-producao-v2*/"
+# Google Ads adiado (11/11/2026): o gtag('config', AW-...) baixa um SEGUNDO
+# container (~870 ms de JavaScript no celular, Lighthouse). Ele so serve para
+# remarketing e para o "Tag coverage" do Ads; nao ha conversao enviada por ele.
+# Agora carrega no primeiro toque, rolagem ou tecla, ou 4 s depois do load,
+# o que vier primeiro. O gtag.js do GA4 continua estatico no <head> porque
+# o Search Console e verificado por ele (ver comentario abaixo).
+ADS_DEFER = (
+    "(function(w){var f=0;function go(){if(f)return;f=1;"
+    f"gtag('config','{ADS_ID}');}}"
+    "['pointerdown','keydown','scroll','touchstart'].forEach(function(e){"
+    "w.addEventListener(e,go,{once:true,passive:true});});"
+    "w.addEventListener('load',function(){setTimeout(go,4000);});})(window);"
+)
 # O <script src=gtag.js> continua ESTATICO no <head>: o Search Console desta
 # propriedade e verificado pela tag do GA (nao ha meta, arquivo nem TXT de
 # verificacao), e o Google procura o snippet no HTML. Sem gtag('config') o
@@ -165,6 +179,10 @@ _GA_OLD = re.compile(
 def add_analytics(s, path_rel):
     if GA_GATE_MARK in s:
         return s
+    # HTML ja commitado com o bloco v2: so troca a linha do Ads e a marca
+    ads_now = f"gtag('config','{ADS_ID}');"
+    if _GA_V2_MARK in s and ads_now in s:
+        return s.replace(ads_now, ADS_DEFER, 1).replace(_GA_V2_MARK, GA_GATE_MARK, 1)
     c = classify(path_rel)
     page_json = json.dumps(c, separators=(",", ":"))
     snippet = (
@@ -181,7 +199,7 @@ def add_analytics(s, path_rel):
         # Google Ads (22/10/2026): mesma gtag.js, so mais um destino. Sem ela
         # o Tag coverage do Ads acusava "Not tagged" e nao havia publico de
         # remarketing (regra 1 da Axel). Tambem so em producao.
-        f"gtag('config','{ADS_ID}');"
+        + ADS_DEFER +
         # IIFE: sem ela d/g/a virariam variaveis globais da pagina
         # analytics.js injetado fica async (defer nao vale para script
         # dinamico); ele ja trata DOM ainda carregando (readyState).
@@ -1228,6 +1246,12 @@ def add_faq_items(s, path_rel):
     existing = re.findall(r'class="faq-item[^"]*"><button[^>]*>(.*?)</button>', s, re.S)
     existing_l = [re.sub(r"<[^>]+>", "", q).strip().lower() for q in existing]
     if len(existing_l) >= 10:
+        return s
+
+    # Paginas servico-cidade (11/11/2026): as perguntas genericas do B12 ficam
+    # so na pagina-mae do servico. Repeti-las nas 24 paginas de cidade deixava
+    # cada par Salem x Wilmington 78-86% igual (risco de doorway page).
+    if re.match(r"services/[a-z-]+/[a-z0-9-]+/(salem-nh|wilmington-ma)/", path_rel):
         return s
 
     m = re.match(r"services/([a-z-]+)/([a-z0-9-]+)/", path_rel)
@@ -2310,7 +2334,9 @@ def enrich_schema(s, path_rel):
         # FAQPage caiu de 6 para 4. Perguntas antigas cujo texto ainda aparece
         # na pagina sao preservadas; as que sumiram do HTML saem, que era o
         # objetivo original da regeneracao.
-        visible_text = re.sub(r"<[^>]+>", " ", s)
+        # Sem <script>/<style>: o proprio JSON-LD antigo contava como texto
+        # "visivel" e a pergunta removida da pagina nunca saia do schema.
+        visible_text = re.sub(r"<[^>]+>", " ", re.sub(r"<(script|style)[^>]*>.*?</\1>", " ", s, flags=re.S))
         kept = []
         for n in graph:
             if isinstance(n, dict) and n.get("@type") == "FAQPage":
