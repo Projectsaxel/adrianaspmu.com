@@ -689,6 +689,57 @@ def add_licenca(s, path_rel):
 
 
 
+# --- Estudio da cidade nas paginas servico-cidade (16/11/2026) ----------
+# Salem x Wilmington ainda ~75% iguais e o Google tirou do indice duas
+# paginas do par (combination-brows/wilmington, dark-lip/salem). O que de
+# fato muda entre as cidades e a sala: Salem tem varias estacoes com
+# cortina, Wilmington e uma suite fechada. Fatos copiados das paginas das
+# unidades (/locations/), nada novo. Entra no fim da secao "Why Book ...
+# Specifically?".
+STUDIO_CITY = {
+    "salem-nh": (
+        "What Is the Salem Studio Like for a {svc} Appointment?",
+        "Your {svc} appointment happens at one of several curtained treatment stations at "
+        "117A Main Street, each with its own adjustable procedure bed, arc lamp and mirror, "
+        "and the curtains close for privacy while you are worked on.",
+        "Because the Salem studio can run more than one appointment at a time, a Salem client "
+        "often finds {svc} availability on a date the Wilmington suite is already booked. "
+        'More on the room on the <a href="../../../../locations/salem-nh/">Salem, NH studio page</a>.',
+    ),
+    "wilmington-ma": (
+        "What Is the Wilmington Studio Like for a {svc} Appointment?",
+        "Your {svc} appointment happens in Suite F at 211 Lowell Street, a private suite on the "
+        "ground floor of a commercial building on Route 129, not a chair rented inside a larger "
+        "salon, so the work is done in a closed room rather than on an open floor shared with other services.",
+        "{svc} means lying still under a fixed light while the artist works, so the lighting, "
+        "seating and privacy of the room shape the visit more than they would for a haircut. "
+        'More on the suite on the <a href="../../../../locations/wilmington-ma/">Wilmington, MA studio page</a>.',
+    ),
+}
+
+
+def add_city_studio(s, path_rel):
+    if 'id="city-studio"' in s or not path_rel.startswith("services/"):
+        return s
+    city = path_rel.split("/")[-2]
+    if city not in STUDIO_CITY or path_rel.count("/") != 4:
+        return s
+    m = re.search(r"<h1[^>]*>(.*?)</h1>", s, re.S)
+    if not m:
+        return s
+    svc = re.sub(r"<[^>]+>", "", m.group(1)).split(" in ")[0].strip()
+    h3, p1, p2 = (t.format(svc=svc) for t in STUDIO_CITY[city])
+    why = re.search(r"<h2[^>]*>Why Book [^<]*Specifically\?</h2>", s)
+    if not why:
+        return s
+    fim = s.find("</div></section>", why.end())
+    if fim < 0:
+        return s
+    bloco = (f'\n  <h3 id="city-studio">{h3}</h3>\n  <p>{p1}</p>\n  <p>{p2}</p>\n')
+    return s[:fim] + bloco + s[fim:]
+
+
+
 # --- B08: foto de RESULTADO nas paginas servico-cidade (22/09/2026) ------
 # As 26 paginas servico-cidade tinham UMA foto so, e era a mesma em todas:
 # a sala de Salem nas 13 de Salem, a recepcao de Wilmington nas 13 de
@@ -2688,6 +2739,7 @@ def main():
                 s = add_aftercare_link(s, rel)
                 s = add_proof(s, rel)
                 s = add_licenca(s, rel)
+                s = add_city_studio(s, rel)
                 s = add_img_text(s, rel)
                 s = add_financing(s, rel)
                 s = add_faq_items(s, rel)
