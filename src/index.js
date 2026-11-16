@@ -32,6 +32,7 @@ const SOURCES = {
   "contact-page": "Contact page",
   "floating-button": "Floating button",
   "academy-class": "Home announcement (Academy enrollment)",
+  "black-friday-popup": "Black Friday popup (code BLACK20)",
 };
 const SOURCE_DEFAULT = "contact-page";
 
