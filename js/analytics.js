@@ -465,6 +465,26 @@
      * chegam nos mesmos tres e-mails, mas vem de contextos diferentes
      * e precisam ser comparaveis no relatorio.
      */
+    /** Pop-up de promocao apareceu (trigger = auto | offer-link). Alcance. */
+    promoView: function (campaign, trigger) {
+      gtagSafe("promo_view", { campaign: campaign, trigger: trigger || "auto", form_source: "promo-popup" });
+    },
+    /** Saiu da arte para o formulario do pop-up. Intencao, nao lead. */
+    promoFormOpen: function (campaign) {
+      gtagSafe("promo_form_open", { campaign: campaign, form_source: "promo-popup" });
+    },
+    /**
+     * Lead do pop-up, so depois de ok:true do Worker. Sai como
+     * form_submit_contact (a conversao de formulario importada no Ads),
+     * separado pelo form_source e pela campaign.
+     */
+    promoLead: function (campaign, location) {
+      gtagSafe("form_submit_contact", {
+        location: location || PAGE.city || "(not set)",
+        form_source: "black-friday-popup",
+        campaign: campaign,
+      });
+    },
     formSubmitFloating: function () {
       gtagSafe("form_submit_floating", {
         form_source: "floating-button",

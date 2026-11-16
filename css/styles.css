@@ -2887,6 +2887,61 @@ th.col-recommended { color: var(--rose-deep); }
   color: var(--brand-deep);
 }
 
+/* Pop-up de promocao (Black Friday 2026). Passo 1 e a arte inteira,
+   clicavel; passo 2 e o formulario no mesmo painel do botao flutuante. */
+.promo-panel {
+  width: min(420px, 100%);
+}
+
+.promo-step[hidden] {
+  display: none;
+}
+
+.promo-step-art {
+  display: grid;
+  gap: 0.875rem;
+}
+
+.promo-art {
+  display: block;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-lg);
+  background: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.promo-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: calc(100vh - 9.5rem);
+  object-fit: contain;
+}
+
+.promo-art:focus-visible {
+  outline: 2px solid var(--brand-deep);
+  outline-offset: 2px;
+}
+
+.promo-panel:has(.promo-step-art:not([hidden])) {
+  padding: 1rem;
+}
+
+.promo-panel:has(.promo-step-art:not([hidden])) .float-modal-close {
+  background: rgba(255, 255, 255, 0.85);
+  z-index: 1;
+}
+
+.promo-step-art .promo-go {
+  width: 100%;
+}
+
+.promo-label {
+  margin: 0 0 0.375rem;
+}
+
 /* Honeypot: fora da tela, nunca display:none (bot ignora display:none) */
 .float-hp {
   position: absolute;

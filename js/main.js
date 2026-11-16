@@ -718,6 +718,282 @@
     });
   }
 
+  /*
+   * Pop-up da promocao de Black Friday 2026 (codigo BLACK20, 20% off em
+   * servicos selecionados, ate 30/11/2026). Pedido da Rachel em 16/11/2026.
+   *
+   * Passo 1: a arte da promocao. Clicar na arte ou no botao abre o passo 2,
+   * um formulario curto (nome, telefone, e-mail, unidade e servico) que vai
+   * para o MESMO /api/contact, com source "black-friday-popup" (o assunto do
+   * e-mail diz que o lead veio da promocao).
+   *
+   * Quando abre sozinho: 8s na pagina ou metade da rolagem, no maximo uma
+   * vez por dia por navegador; quem ja enviou nao ve de novo. Com
+   * ?promo=black20 na URL (link da oferta na ficha do Google) abre na hora,
+   * direto no formulario. Fora das paginas da Academy (publico de aluna).
+   * Sai do ar sozinho depois de 30/11/2026 (meia-noite em Boston).
+   *
+   * Medicao: promo_view (abriu), promo_form_open (foi pro formulario) e,
+   * so com ok:true do Worker, form_submit_contact com form_source
+   * "black-friday-popup" (conta como a conversao de formulario do Ads).
+   */
+  const PROMO = {
+    id: "bf2026",
+    code: "BLACK20",
+    campaign: "black-friday-2026",
+    endsAt: Date.UTC(2026, 11, 1, 5, 0, 0), // 01/12/2026 00:00 em Boston
+    img: "/assets/images/promo/black-friday-2026",
+  };
+
+  function initPromoPopup() {
+    if (Date.now() >= PROMO.endsAt) return;
+    if (/^\/academy(\/|$)/.test(window.location.pathname)) return;
+
+    const KEY = "pmu_promo_" + PROMO.id;
+    const ler = () => {
+      try {
+        return JSON.parse(localStorage.getItem(KEY) || "{}");
+      } catch (err) {
+        return {};
+      }
+    };
+    const gravar = (v) => {
+      try {
+        localStorage.setItem(KEY, JSON.stringify(Object.assign(ler(), v)));
+      } catch (err) {
+        /* storage bloqueado: o pop-up so aparece mais vezes */
+      }
+    };
+
+    const viaLink = (new URLSearchParams(window.location.search).get("promo") || "").toLowerCase() === "black20";
+    const estado = ler();
+    if (!viaLink && (estado.sent || (estado.seen && Date.now() - estado.seen < 24 * 3600 * 1000))) return;
+
+    const pageCity = (window.PMU_PAGE && window.PMU_PAGE.city) || "";
+    const utm = (new URLSearchParams(window.location.search).get("utm_content") || "").toLowerCase();
+    const cidade = pageCity || (utm.includes("salem") ? "salem" : utm.includes("wilmington") ? "wilmington" : "");
+
+    const modal = document.createElement("div");
+    modal.className = "float-modal promo-modal";
+    modal.hidden = true;
+    modal.innerHTML = `
+      <div class="float-modal-panel promo-panel" role="dialog" aria-modal="true" aria-labelledby="promo-title">
+        <button type="button" class="float-modal-close" aria-label="Close">&times;</button>
+        <div class="promo-step promo-step-art">
+          <button type="button" class="promo-art" data-promo-go aria-label="Black Friday: 20% off selected services with code BLACK20. Request your appointment.">
+            <picture>
+              <source srcset="${PROMO.img}.webp" type="image/webp">
+              <img src="${PROMO.img}.jpg" width="600" height="800" alt="Black Friday: 20% off selected permanent makeup services with promo code BLACK20, valid through November 30, 2026">
+            </picture>
+          </button>
+          <button type="button" class="btn btn-primary promo-go" data-promo-go>Claim My 20% Off</button>
+        </div>
+        <div class="promo-step promo-step-form" hidden>
+          <p class="section-label promo-label">Black Friday &middot; Code ${PROMO.code}</p>
+          <h2 class="float-modal-title" id="promo-title">Book With 20% Off</h2>
+          <p class="float-modal-sub">Send your request and our team will contact you to confirm your date with code ${PROMO.code} applied. Valid on selected services through November 30, 2026.</p>
+          <form novalidate>
+            <div class="float-hp" aria-hidden="true">
+              <label>Do not fill this<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+            </div>
+            <div class="form-group">
+              <label for="promo-name">Name <span aria-hidden="true">*</span></label>
+              <input id="promo-name" name="name" type="text" required autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="promo-phone">Phone <span aria-hidden="true">*</span></label>
+              <input id="promo-phone" name="phone" type="tel" required autocomplete="tel">
+            </div>
+            <div class="form-group">
+              <label for="promo-email">Email <span aria-hidden="true">*</span></label>
+              <input id="promo-email" name="email" type="email" required autocomplete="email">
+            </div>
+            <div class="form-group">
+              <label for="promo-location">Studio <span aria-hidden="true">*</span></label>
+              <select id="promo-location" name="location" required>
+                <option value="">Choose a studio</option>
+                <option value="Wilmington, MA">Wilmington, MA</option>
+                <option value="Salem, NH">Salem, NH</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="promo-service">Service you want</label>
+              <select id="promo-service" name="service">
+                <option value="Not sure yet">Not sure yet</option>
+                <option value="Nano Brows">Nano Brows</option>
+                <option value="Microblading">Microblading</option>
+                <option value="Powder / Ombre Brows">Powder / Ombre Brows</option>
+                <option value="Lip Blush">Lip Blush</option>
+                <option value="Eyeliner">Eyeliner</option>
+              </select>
+            </div>
+            <p class="form-message" hidden role="status" aria-live="polite"></p>
+            <button type="submit" class="btn btn-primary">Request My Appointment</button>
+          </form>
+        </div>
+      </div>`;
+    document.body.append(modal);
+
+    const panel = modal.querySelector(".promo-panel");
+    const passoArte = modal.querySelector(".promo-step-art");
+    const passoForm = modal.querySelector(".promo-step-form");
+    const form = modal.querySelector("form");
+    const msg = modal.querySelector(".form-message");
+    const submit = modal.querySelector('button[type="submit"]');
+    const submitLabel = submit.textContent;
+    const loc = modal.querySelector("#promo-location");
+    if (cidade === "salem") loc.value = "Salem, NH";
+    else if (cidade === "wilmington") loc.value = "Wilmington, MA";
+    let openedAt = 0;
+    let lastFocus = null;
+    let restore = null;
+    let aberto = false;
+
+    function show(text, ok) {
+      msg.textContent = text;
+      msg.hidden = false;
+      msg.classList.toggle("form-message--ok", !!ok);
+      msg.classList.toggle("form-message--error", !ok);
+    }
+
+    function irProForm() {
+      passoArte.hidden = true;
+      passoForm.hidden = false;
+      openedAt = Date.now();
+      modal.querySelector("#promo-name").focus();
+      pmuTrack("promoFormOpen", PROMO.campaign);
+    }
+
+    function open(direto) {
+      // Nao abre por cima de outra janela (botao flutuante, turma).
+      if (aberto || document.querySelector(".float-modal:not([hidden]):not(.promo-modal)")) return;
+      aberto = true;
+      lastFocus = document.activeElement;
+      modal.hidden = false;
+      document.body.style.overflow = "hidden";
+      gravar({ seen: Date.now() });
+      pmuTrack("promoView", PROMO.campaign, direto ? "offer-link" : "auto");
+      if (direto) irProForm();
+      else modal.querySelector(".promo-go").focus();
+    }
+
+    function close() {
+      if (restore) {
+        restore();
+        restore = null;
+      }
+      modal.hidden = true;
+      document.body.style.overflow = "";
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+
+    modal.querySelectorAll("[data-promo-go]").forEach((b) => b.addEventListener("click", irProForm));
+    modal.querySelector(".float-modal-close").addEventListener("click", close);
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) close();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (modal.hidden) return;
+      if (e.key === "Escape") {
+        close();
+        return;
+      }
+      if (e.key === "Tab") {
+        const lista = [...panel.querySelectorAll("button, [href], input, select")].filter(
+          (el) => el.offsetParent !== null,
+        );
+        if (!lista.length) return;
+        const primeiro = lista[0];
+        const ultimo = lista[lista.length - 1];
+        if (e.shiftKey && document.activeElement === primeiro) {
+          e.preventDefault();
+          ultimo.focus();
+        } else if (!e.shiftKey && document.activeElement === ultimo) {
+          e.preventDefault();
+          primeiro.focus();
+        }
+      }
+    });
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const payload = Object.fromEntries(new FormData(form).entries());
+      const faltando = ["name", "phone", "email", "location"].filter((k) => !String(payload[k] || "").trim());
+      if (faltando.length) {
+        show("Please fill in your name, phone, email and studio.", false);
+        form.querySelector(`[name="${faltando[0]}"]`)?.focus();
+        return;
+      }
+
+      submit.disabled = true;
+      submit.textContent = "Sending...";
+      show("Sending...", true);
+
+      await waitMinFill(openedAt);
+      payload.elapsed = Date.now() - openedAt;
+      payload.page = window.location.pathname;
+      if (window.PMU_leadSource) payload.attribution = window.PMU_leadSource();
+      payload.source = "black-friday-popup";
+      payload.interest = "service";
+      payload.message =
+        "Black Friday promo code " + PROMO.code + " (20% off selected services). Wants to book: " +
+        (payload.service || "Not sure yet") + " at " + payload.location + ".";
+      delete payload.service;
+
+      let ok = false;
+      let filtered = false;
+      let text = "We could not send your request. Please try again in a moment.";
+      try {
+        const res = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+        const body = await res.json().catch(() => ({}));
+        if (res.ok && body.ok) {
+          ok = true;
+          filtered = body.filtered === true;
+        } else if (res.status === 422 && body.error) {
+          text = body.error;
+        }
+      } catch (err) {
+        text = "Network error. Please try again in a moment.";
+      }
+
+      if (!ok) show(text, false);
+      if (ok) {
+        msg.hidden = true;
+        gravar({ sent: Date.now() });
+        restore = showSent(form, {
+          name: payload.name,
+          text:
+            "Your Black Friday request was sent with code " + PROMO.code + ". Our team will contact you as soon as possible to confirm your appointment.",
+          hide: [".promo-label", "#promo-title", ".promo-step-form .float-modal-sub"].map((s) => modal.querySelector(s)),
+          onClose: close,
+        });
+        if (!filtered) pmuTrack("promoLead", PROMO.campaign, payload.location);
+        form.reset();
+      }
+      submit.disabled = false;
+      submit.textContent = submitLabel;
+    });
+
+    if (viaLink) {
+      open(true);
+      return;
+    }
+    let timer = setTimeout(() => open(false), 8000);
+    const aoRolar = () => {
+      const h = document.documentElement;
+      if (h.scrollTop / Math.max(1, h.scrollHeight - h.clientHeight) >= 0.5) {
+        window.removeEventListener("scroll", aoRolar);
+        clearTimeout(timer);
+        open(false);
+      }
+    };
+    window.addEventListener("scroll", aoRolar, { passive: true });
+  }
+
   function initFloatingCta() {
     if (document.querySelector(".float-cta")) return;
 
@@ -1396,6 +1672,7 @@
     initContactForm();
     initFloatingCta();
     initClassLead();
+    initPromoPopup();
     initBookRail();
     initCoverflow();
     initGaleria();
