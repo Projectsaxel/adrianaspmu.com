@@ -728,7 +728,7 @@
    * e-mail diz que o lead veio da promocao).
    *
    * Quando abre sozinho: 8s na pagina ou metade da rolagem, no maximo uma
-   * vez por dia por navegador; quem ja enviou nao ve de novo. Com
+   * vez por dia por navegador (quem ja enviou tambem ve, para novo pedido). Com
    * ?promo=black20 na URL (link da oferta na ficha do Google) abre na hora,
    * direto no formulario. Fora das paginas da Academy (publico de aluna).
    * Sai do ar sozinho depois de 30/11/2026 (meia-noite em Boston).
@@ -767,7 +767,7 @@
 
     const viaLink = (new URLSearchParams(window.location.search).get("promo") || "").toLowerCase() === "black20";
     const estado = ler();
-    if (!viaLink && (estado.sent || (estado.seen && Date.now() - estado.seen < 24 * 3600 * 1000))) return;
+    if (!viaLink && estado.seen && Date.now() - estado.seen < 24 * 3600 * 1000) return;
 
     const pageCity = (window.PMU_PAGE && window.PMU_PAGE.city) || "";
     const utm = (new URLSearchParams(window.location.search).get("utm_content") || "").toLowerCase();
@@ -963,7 +963,6 @@
       if (!ok) show(text, false);
       if (ok) {
         msg.hidden = true;
-        gravar({ sent: Date.now() });
         restore = showSent(form, {
           name: payload.name,
           text:
