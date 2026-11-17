@@ -298,15 +298,22 @@ function leadOrigin(raw) {
     if (main.c && main.c !== "(not set)") rows.push(["Ad campaign", main.c]);
     if (main.t) rows.push(["Ad keyword", main.t]);
   }
+  // Primeiro toque com tipo diferente do ultimo (ex.: achou no organico,
+  // voltou pelo anuncio). Pedido da Rachel 17/11/2026: o assunto mostra os
+  // dois, "ORGANIC → PAID", para o relatorio contar o lead que o organico
+  // trouxe primeiro. Direto no primeiro toque nao conta (nao diz nada).
+  let firstType = "";
   if (first && last && (first.s !== last.s || first.m !== last.m || first.c !== last.c)) {
     const fc = classifyTouch(first);
+    if (fc.type !== cls.type && fc.type !== "DIRECT") firstType = fc.type;
     rows.push([
       "First found us",
       `${fc.channel} (${TYPE_LABEL[fc.type]})` + (first.lp ? ` on ${first.lp}` : "") + (first.ts ? `, ${fmtDate(first.ts)}` : ""),
     ]);
   }
   rows.push(["Raw source / medium", `${main.s} / ${main.m || "(none)"}` + (main.c && main.c !== "(not set)" ? ` / ${main.c}` : "")]);
-  return { known: true, type: cls.type, channel: cls.channel, rows: rows.filter(([, v]) => v), path };
+  const journey = firstType ? `${firstType} \u2192 ${cls.type}` : cls.type;
+  return { known: true, type: cls.type, firstType, journey, channel: cls.channel, rows: rows.filter(([, v]) => v), path };
 }
 
 async function handleContact(request, env, ctx) {
@@ -450,7 +457,7 @@ ${meta.map(([k, v]) => `<tr><td><strong>${esc(k)}</strong></td><td>${esc(v)}</td
 </table>
 <h3 style="margin:20px 0 6px">How this person found Adriana's</h3>
 ${origin.known
-    ? `<p style="margin:0 0 8px"><span style="display:inline-block;padding:3px 10px;border-radius:4px;color:#fff;font-weight:700;background:${TYPE_COLOR[origin.type]}">${esc(origin.type)}</span> <strong>${esc(origin.channel)}</strong></p>
+    ? `<p style="margin:0 0 8px">${origin.firstType ? `<span style="display:inline-block;padding:3px 10px;border-radius:4px;color:#fff;font-weight:700;background:${TYPE_COLOR[origin.firstType]}">${esc(origin.firstType)}</span> &rarr; ` : ""}<span style="display:inline-block;padding:3px 10px;border-radius:4px;color:#fff;font-weight:700;background:${TYPE_COLOR[origin.type]}">${esc(origin.type)}</span> <strong>${esc(origin.channel)}</strong></p>
 <table cellpadding="6" style="border-collapse:collapse;font-size:15px">
 ${origin.rows.slice(1).map(([k, v]) => `<tr><td><strong>${esc(k)}</strong></td><td>${esc(v)}</td></tr>`).join("")}
 ${origin.path.length ? `<tr><td><strong>Pages viewed before contacting</strong></td><td>${origin.path.map(esc).join(" &rarr; ")}</td></tr>` : ""}
@@ -489,7 +496,7 @@ ${origin.path.length ? `<tr><td><strong>Pages viewed before contacting</strong><
         to: rcpt,
         from: env.CONTACT_FROM,
         reply_to: email,
-        subject: `${check.spam ? "[FILTERED] " : ""}[${!origin.known ? sourceLabel : origin.type === "DIRECT" ? "DIRECT" : `${origin.type} - ${origin.channel}`}] New website inquiry: ${name}`,
+        subject: `${check.spam ? "[FILTERED] " : ""}[${!origin.known ? sourceLabel : origin.type === "DIRECT" ? origin.journey : `${origin.journey} - ${origin.channel}`}] New website inquiry: ${name}`,
         html,
         text,
       }),
@@ -508,7 +515,7 @@ ${origin.path.length ? `<tr><td><strong>Pages viewed before contacting</strong><
     return json({ ok: false, error: FALLBACK }, 502);
   }
 
-  console.log(JSON.stringify({ event: "contact_sent", delivered, of: to.length, location, lead_type: origin.type, channel: origin.channel, filtered: check.spam, spam_score: check.score }));
+  console.log(JSON.stringify({ event: "contact_sent", delivered, of: to.length, location, lead_type: origin.type, first_type: origin.firstType || null, channel: origin.channel, filtered: check.spam, spam_score: check.score }));
   return json(check.spam ? { ok: true, filtered: true } : { ok: true });
 }
 
