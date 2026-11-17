@@ -727,7 +727,7 @@
    * para o MESMO /api/contact, com source "black-friday-popup" (o assunto do
    * e-mail diz que o lead veio da promocao).
    *
-   * Quando abre sozinho: 8s na pagina ou metade da rolagem, em TODA visita
+   * Quando abre sozinho: 2s na pagina (pedido da Rachel 17/11/2026), em TODA visita
    * ao site (pedido da Rachel 17/11/2026: quem volta pode converter de novo).
    * Dentro da mesma visita (aba), depois de fechar, nao reabre a cada pagina. Com
    * ?promo=black20 na URL (link da oferta na ficha do Google) abre na hora,
@@ -982,7 +982,7 @@
       open(true);
       return;
     }
-    let timer = setTimeout(() => open(false), 8000);
+    let timer = setTimeout(() => open(false), 2000);
     const aoRolar = () => {
       const h = document.documentElement;
       if (h.scrollTop / Math.max(1, h.scrollHeight - h.clientHeight) >= 0.5) {
