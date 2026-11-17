@@ -2888,9 +2888,35 @@ th.col-recommended { color: var(--rose-deep); }
 }
 
 /* Pop-up de promocao (Black Friday 2026). Passo 1 e a arte inteira,
-   clicavel; passo 2 e o formulario no mesmo painel do botao flutuante. */
+   clicavel; passo 2 e o formulario no mesmo painel do botao flutuante.
+   Pedido da Rachel 17/11/2026: maior, fundo escuro e INTEIRO na primeira
+   dobra em celular, iPad e computador. A largura sai da altura da tela:
+   arte 3:4 + botao de 52px + folgas = 100dvh, sem rolagem. */
+.promo-modal {
+  padding: 1rem;
+  background: rgba(24, 12, 18, 0.78);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+
 .promo-panel {
-  width: min(420px, 100%);
+  --promo-w: min(560px, calc(100vw - 2rem), calc((100vh - 128px) * 0.75 + 24px));
+  width: var(--promo-w);
+  max-height: calc(100vh - 2rem);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.55);
+}
+
+@supports (height: 100dvh) {
+  .promo-panel {
+    --promo-w: min(560px, calc(100vw - 2rem), calc((100dvh - 128px) * 0.75 + 24px));
+    max-height: calc(100dvh - 2rem);
+  }
+}
+
+/* O formulario precisa de largura minima para ler bem, mesmo em tela baixa
+   (celular deitado): ai o painel rola por dentro. */
+.promo-panel:has(.promo-step-form:not([hidden])) {
+  width: min(460px, calc(100vw - 2rem));
 }
 
 .promo-step[hidden] {
@@ -2899,7 +2925,7 @@ th.col-recommended { color: var(--rose-deep); }
 
 .promo-step-art {
   display: grid;
-  gap: 0.875rem;
+  gap: 12px;
 }
 
 .promo-art {
@@ -2912,12 +2938,15 @@ th.col-recommended { color: var(--rose-deep); }
   overflow: hidden;
 }
 
+.promo-art picture {
+  display: block;
+}
+
 .promo-art img {
   display: block;
   width: 100%;
   height: auto;
-  max-height: calc(100vh - 9.5rem);
-  object-fit: contain;
+  aspect-ratio: 3 / 4;
 }
 
 .promo-art:focus-visible {
@@ -2926,16 +2955,23 @@ th.col-recommended { color: var(--rose-deep); }
 }
 
 .promo-panel:has(.promo-step-art:not([hidden])) {
-  padding: 1rem;
+  padding: 12px;
 }
 
 .promo-panel:has(.promo-step-art:not([hidden])) .float-modal-close {
-  background: rgba(255, 255, 255, 0.85);
+  top: 1.1rem;
+  right: 1.1rem;
+  background: rgba(255, 255, 255, 0.9);
   z-index: 1;
 }
 
 .promo-step-art .promo-go {
   width: 100%;
+  height: 52px;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0;
+  font-size: 1rem;
 }
 
 .promo-label {
