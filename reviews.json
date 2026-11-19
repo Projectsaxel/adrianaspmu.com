@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T20:29:12Z",
+ "updated": "2026-11-19T18:59:05Z",
  "units": {
   "wilmington": {
    "label": "Wilmington, MA",
@@ -1615,26 +1615,6 @@
    "month": "July 2026",
    "source": "google"
   },
-  "fresha-ad0e1ce35e4daf5b": {
-   "id": "fresha-ad0e1ce35e4daf5b",
-   "unit": "wilmington",
-   "name": "Diane M.",
-   "rating": 5,
-   "text": "Was my yearly brow touch up; Livy took time to figure out what would work best for me. Once decided only took a half hour. Everyone there is friendly and very professional! So glad I found Adrianna&apos;s!",
-   "date": "2026-10-27",
-   "month": "October 2026",
-   "source": "fresha"
-  },
-  "fresha-93886726fa04a70b": {
-   "id": "fresha-93886726fa04a70b",
-   "unit": "wilmington",
-   "name": "Diane H.",
-   "rating": 5,
-   "text": "Adriana takes her time, recommends what she thinks is best, and I trust her to do it! She&apos;s great!",
-   "date": "2026-10-28",
-   "month": "October 2026",
-   "source": "fresha"
-  },
   "fresha-f76761c6785a7e4f": {
    "id": "fresha-f76761c6785a7e4f",
    "unit": "wilmington",
@@ -1652,6 +1632,26 @@
    "rating": 5,
    "text": "From the moment you step in, you are treated like royalty. The atmosphere is so relaxing. I honestly wanted to just be allowed to hang out there. The procedure was done by Miss Adriana herself while she was instructing two students. I had my lips color corrected and blushed to look whole again as well as my eyebrows microbladed. I couldn&apos;t be happier with the results. The pictures I&apos;m attaching are VERY swollen, but you can see the precision in the procedure.",
    "date": "2026-11-13",
+   "month": "November 2026",
+   "source": "fresha"
+  },
+  "fresha-2e997125fa98dbfb": {
+   "id": "fresha-2e997125fa98dbfb",
+   "unit": "wilmington",
+   "name": "Mary D.",
+   "rating": 5,
+   "text": "Wonderful office- friendly, clean and calming! Adriana listens to your “wants” and acheives them! Awesome detail, happy client!",
+   "date": "2026-11-17",
+   "month": "November 2026",
+   "source": "fresha"
+  },
+  "fresha-981b1bec65ff6f90": {
+   "id": "fresha-981b1bec65ff6f90",
+   "unit": "wilmington",
+   "name": "Jennifer L.",
+   "rating": 5,
+   "text": "I’m so happy I finally got permanent eyeliner. Livy is amazing and truly knowledgeable. Thank you Livy I’ll see you in December to get my eyebrows down.",
+   "date": "2026-11-18",
    "month": "November 2026",
    "source": "fresha"
   },
@@ -2029,18 +2029,18 @@
   },
   "_home": {
    "all": [
+    "fresha-981b1bec65ff6f90",
     "AbFvOqklEG5XEUgLfn_xJlw_9asCZRtzxkSLeNAzQdohRJsvrXbv6srQ26tG2I0HW82Bg62sobLVzw",
-    "fresha-f76761c6785a7e4f",
+    "fresha-2e997125fa98dbfb",
     "AbFvOqn7FLBq-UwIXy1bE9PZb97t1QW1nsz-1XjgIxfG0QCe2BKlXojGx7ukOsHflcNDieLTJEWZ",
-    "fresha-93886726fa04a70b",
+    "fresha-f76761c6785a7e4f",
     "AbFvOqk4VnbcH9jSDLJRXcqdrOrcHHpqLx1Lsv2gMbKyh3JYLDn7odEtFh7ZoWFrTdqsOpGkaGEfNQ",
-    "fresha-ad0e1ce35e4daf5b",
-    "AbFvOqlTho0EVsQtnFXrJo-AEhnLWvrP6azujQra5AulXlrIYP617FVnl7-XjfYIJZ4xKJ4uLVQpdA",
     "fresha-e57a17ec47ccf82b",
-    "AbFvOqkoI5YyMqi_hoYce7XXjPW4WV8NeT2nCNPOYYP0Ib1m1hkJ-ApLoHkXDvLXkdjz_j2ARBqFAg",
+    "AbFvOqlTho0EVsQtnFXrJo-AEhnLWvrP6azujQra5AulXlrIYP617FVnl7-XjfYIJZ4xKJ4uLVQpdA",
     "fresha-86980d39e27b23a8",
-    "AbFvOqmK9YASA6EyKdOVGEEPzzpIIFFAu4BCxlCp7_ajFihpov1QXpDeKFRyvGCIg4vTu0oCb__rvA",
-    "fresha-b016c170323c3c4f"
+    "AbFvOqkoI5YyMqi_hoYce7XXjPW4WV8NeT2nCNPOYYP0Ib1m1hkJ-ApLoHkXDvLXkdjz_j2ARBqFAg",
+    "fresha-b016c170323c3c4f",
+    "AbFvOqmK9YASA6EyKdOVGEEPzzpIIFFAu4BCxlCp7_ajFihpov1QXpDeKFRyvGCIg4vTu0oCb__rvA"
    ]
   }
  }
